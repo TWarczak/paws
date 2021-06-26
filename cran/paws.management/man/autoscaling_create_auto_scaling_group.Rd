@@ -2,9 +2,9 @@
 % Please edit documentation in R/autoscaling_operations.R
 \name{autoscaling_create_auto_scaling_group}
 \alias{autoscaling_create_auto_scaling_group}
-\title{We strongly recommend using a launch template when calling this
-operation to ensure full functionality for Amazon EC2 Auto Scaling and
-Amazon EC2}
+\title{WE STRONGLY RECOMMEND USING A LAUNCH TEMPLATE WHEN CALLING THIS
+OPERATION TO ENSURE FULL FUNCTIONALITY FOR AMAZON EC2 AUTO SCALING AND
+AMAZON EC2}
 \usage{
 autoscaling_create_auto_scaling_group(AutoScalingGroupName,
   LaunchConfigurationName, LaunchTemplate, MixedInstancesPolicy,

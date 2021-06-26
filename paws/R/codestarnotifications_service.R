@@ -12,53 +12,53 @@ NULL
 #' 
 #' Notification rules, by calling the following:
 #' 
-#' -   [`create_notification_rule`][codestarnotifications_create_notification_rule],
+#'   - [`create_notification_rule`][codestarnotifications_create_notification_rule],
 #'     which creates a notification rule for a resource in your account.
 #' 
-#' -   [`delete_notification_rule`][codestarnotifications_delete_notification_rule],
+#'   - [`delete_notification_rule`][codestarnotifications_delete_notification_rule],
 #'     which deletes a notification rule.
 #' 
-#' -   [`describe_notification_rule`][codestarnotifications_describe_notification_rule],
+#'   - [`describe_notification_rule`][codestarnotifications_describe_notification_rule],
 #'     which provides information about a notification rule.
 #' 
-#' -   [`list_notification_rules`][codestarnotifications_list_notification_rules],
+#'   - [`list_notification_rules`][codestarnotifications_list_notification_rules],
 #'     which lists the notification rules associated with your account.
 #' 
-#' -   [`update_notification_rule`][codestarnotifications_update_notification_rule],
+#'   - [`update_notification_rule`][codestarnotifications_update_notification_rule],
 #'     which changes the name, events, or targets associated with a
 #'     notification rule.
 #' 
-#' -   [`subscribe`][codestarnotifications_subscribe], which subscribes a
+#'   - [`subscribe`][codestarnotifications_subscribe], which subscribes a
 #'     target to a notification rule.
 #' 
-#' -   [`unsubscribe`][codestarnotifications_unsubscribe], which removes a
+#'   - [`unsubscribe`][codestarnotifications_unsubscribe], which removes a
 #'     target from a notification rule.
 #' 
 #' Targets, by calling the following:
 #' 
-#' -   [`delete_target`][codestarnotifications_delete_target], which
+#'   - [`delete_target`][codestarnotifications_delete_target], which
 #'     removes a notification rule target (SNS topic) from a notification
 #'     rule.
 #' 
-#' -   [`list_targets`][codestarnotifications_list_targets], which lists
+#'   - [`list_targets`][codestarnotifications_list_targets], which lists
 #'     the targets associated with a notification rule.
 #' 
 #' Events, by calling the following:
 #' 
-#' -   [`list_event_types`][codestarnotifications_list_event_types], which
+#'   - [`list_event_types`][codestarnotifications_list_event_types], which
 #'     lists the event types you can include in a notification rule.
 #' 
 #' Tags, by calling the following:
 #' 
-#' -   [`list_tags_for_resource`][codestarnotifications_list_tags_for_resource],
+#'   - [`list_tags_for_resource`][codestarnotifications_list_tags_for_resource],
 #'     which lists the tags already associated with a notification rule in
 #'     your account.
 #' 
-#' -   [`tag_resource`][codestarnotifications_tag_resource], which
+#'   - [`tag_resource`][codestarnotifications_tag_resource], which
 #'     associates a tag you provide with a notification rule in your
 #'     account.
 #' 
-#' -   [`untag_resource`][codestarnotifications_untag_resource], which
+#'   - [`untag_resource`][codestarnotifications_untag_resource], which
 #'     removes a tag from a notification rule in your account.
 #' 
 #' For information about how to use AWS CodeStar Notifications, see link in
@@ -110,6 +110,12 @@ NULL
 #'  \link[=codestarnotifications_untag_resource]{untag_resource} \tab Removes the association between one or more provided tags and a notification rule\cr
 #'  \link[=codestarnotifications_update_notification_rule]{update_notification_rule} \tab Updates a notification rule for a resource
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname codestarnotifications
 #' @export

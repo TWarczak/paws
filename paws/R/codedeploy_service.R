@@ -28,13 +28,13 @@ NULL
 #' Use the information in this guide to help you work with the following
 #' AWS CodeDeploy components:
 #' 
-#' -   **Application**: A name that uniquely identifies the application you
+#'   - **Application**: A name that uniquely identifies the application you
 #'     want to deploy. AWS CodeDeploy uses this name, which functions as a
 #'     container, to ensure the correct combination of revision, deployment
 #'     configuration, and deployment group are referenced during a
 #'     deployment.
 #' 
-#' -   **Deployment group**: A set of individual instances, CodeDeploy
+#'   - **Deployment group**: A set of individual instances, CodeDeploy
 #'     Lambda deployment configuration settings, or an Amazon ECS service
 #'     and network details. A Lambda deployment group specifies how to
 #'     route traffic to a new version of a Lambda function. An Amazon ECS
@@ -45,15 +45,15 @@ NULL
 #'     instances in Amazon EC2 Auto Scaling groups, or both. All deployment
 #'     groups can specify optional trigger, alarm, and rollback settings.
 #' 
-#' -   **Deployment configuration**: A set of deployment rules and
+#'   - **Deployment configuration**: A set of deployment rules and
 #'     deployment success and failure conditions used by AWS CodeDeploy
 #'     during a deployment.
 #' 
-#' -   **Deployment**: The process and the components used when updating a
+#'   - **Deployment**: The process and the components used when updating a
 #'     Lambda function, a containerized application in an Amazon ECS
 #'     service, or of installing content on one or more instances.
 #' 
-#' -   **Application revisions**: For an AWS Lambda deployment, this is an
+#'   - **Application revisions**: For an AWS Lambda deployment, this is an
 #'     AppSpec file that specifies the Lambda function to be updated and
 #'     one or more functions to validate deployment lifecycle events. For
 #'     an Amazon ECS deployment, this is an AppSpec file that specifies the
@@ -73,16 +73,16 @@ NULL
 #' 
 #' **AWS CodeDeploy Information Resources**
 #' 
-#' -   [AWS CodeDeploy User
+#'   - [AWS CodeDeploy User
 #'     Guide](https://docs.aws.amazon.com/codedeploy/latest/userguide/)
 #' 
-#' -   [AWS CodeDeploy API Reference
+#'   - [AWS CodeDeploy API Reference
 #'     Guide](https://docs.aws.amazon.com/codedeploy/latest/APIReference/)
 #' 
-#' -   [AWS CLI Reference for AWS
+#'   - [AWS CLI Reference for AWS
 #'     CodeDeploy](https://docs.aws.amazon.com/cli/latest/reference/deploy/index.html)
 #' 
-#' -   [AWS CodeDeploy Developer
+#'   - [AWS CodeDeploy Developer
 #'     Forum](https://forums.aws.amazon.com/forum.jspa?forumID=179)
 #'
 #' @param
@@ -166,6 +166,12 @@ NULL
 #'  \link[=codedeploy_update_deployment_group]{update_deployment_group} \tab Changes information about a deployment group
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname codedeploy
 #' @export
 codedeploy <- function(config = list()) {
@@ -184,7 +190,7 @@ codedeploy <- function(config = list()) {
   endpoints = list("*" = list(endpoint = "codedeploy.{region}.amazonaws.com", global = FALSE), "cn-*" = list(endpoint = "codedeploy.{region}.amazonaws.com.cn", global = FALSE), "us-iso-*" = list(endpoint = "codedeploy.{region}.c2s.ic.gov", global = FALSE), "us-isob-*" = list(endpoint = "codedeploy.{region}.sc2s.sgov.gov", global = FALSE)),
   service_id = "CodeDeploy",
   api_version = "2014-10-06",
-  signing_name = NULL,
+  signing_name = "codedeploy",
   json_version = "1.1",
   target_prefix = "CodeDeploy_20141006"
 )

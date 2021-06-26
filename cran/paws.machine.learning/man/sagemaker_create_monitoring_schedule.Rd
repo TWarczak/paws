@@ -15,9 +15,9 @@ AWS Region within an AWS account.}
 \item{MonitoringScheduleConfig}{[required] The configuration object that specifies the monitoring schedule and
 defines the monitoring job.}
 
-\item{Tags}{(Optional) An array of key-value pairs. For more information, see Using
-Cost Allocation Tags in the \emph{AWS Billing and Cost Management User
-Guide}.}
+\item{Tags}{(Optional) An array of key-value pairs. For more information, see
+<span>Using Cost Allocation Tags</span> in the \emph{AWS Billing and Cost
+Management User Guide}.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

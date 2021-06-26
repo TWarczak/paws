@@ -8,8 +8,9 @@ clouddirectory_update_object_attributes(DirectoryArn, ObjectReference,
   AttributeUpdates)
 }
 \arguments{
-\item{DirectoryArn}{[required] The Amazon Resource Name (ARN) that is associated with the Directory
-where the object resides. For more information, see arns.}
+\item{DirectoryArn}{[required] The Amazon Resource Name (ARN) that is associated with the
+<span>Directory</span> where the object resides. For more information,
+see <span>arns</span>.}
 
 \item{ObjectReference}{[required] The reference that identifies the object.}
 

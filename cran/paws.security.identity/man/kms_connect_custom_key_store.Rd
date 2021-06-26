@@ -52,7 +52,7 @@ The \code{\link[=kms_connect_custom_key_store]{connect_custom_key_store}} operat
 might fail for various reasons. To find the reason, use the
 \code{\link[=kms_describe_custom_key_stores]{describe_custom_key_stores}} operation
 and see the \code{ConnectionErrorCode} in the response. For help interpreting
-the \code{ConnectionErrorCode}, see CustomKeyStoresListEntry.
+the \code{ConnectionErrorCode}, see <span>CustomKeyStoresListEntry</span>.
 
 To fix the failure, use the
 \code{\link[=kms_disconnect_custom_key_store]{disconnect_custom_key_store}}

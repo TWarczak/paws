@@ -27,29 +27,29 @@ NULL
 #' 
 #' Region name: US West (Oregon)
 #' 
-#' -   Region: `us-west-2`
+#'   - Region: `us-west-2`
 #' 
-#' -   Endpoint: `ivs.us-west-2.amazonaws.com`
+#'   - Endpoint: `ivs.us-west-2.amazonaws.com`
 #' 
 #' Region name: US East (Virginia)
 #' 
-#' -   Region: `us-east-1`
+#'   - Region: `us-east-1`
 #' 
-#' -   Endpoint: `ivs.us-east-1.amazonaws.com`
+#'   - Endpoint: `ivs.us-east-1.amazonaws.com`
 #' 
 #' Region name: EU West (Dublin)
 #' 
-#' -   Region: `eu-west-1`
+#'   - Region: `eu-west-1`
 #' 
-#' -   Endpoint: `ivs.eu-west-1.amazonaws.com`
+#'   - Endpoint: `ivs.eu-west-1.amazonaws.com`
 #' 
 #' **Allowed Header Values**
 #' 
-#' -   ` Accept: ` application/json
+#'   - `  Accept:  ` application/json
 #' 
-#' -   ` Accept-Encoding: ` gzip, deflate
+#'   - `  Accept-Encoding:  ` gzip, deflate
 #' 
-#' -   ` Content-Type: `application/json
+#'   - `  Content-Type:  `application/json
 #' 
 #' **Resources**
 #' 
@@ -57,17 +57,17 @@ NULL
 #' (see [Getting Started with Amazon
 #' IVS](https://docs.aws.amazon.com/ivs/latest/userguide/getting-started.html)):
 #' 
-#' -   Channel — Stores configuration data related to your live stream. You
+#'   - Channel — Stores configuration data related to your live stream. You
 #'     first create a channel and then use the channel’s stream key to
 #'     start your live stream. See the Channel endpoints for more
 #'     information.
 #' 
-#' -   Stream key — An identifier assigned by Amazon IVS when you create a
+#'   - Stream key — An identifier assigned by Amazon IVS when you create a
 #'     channel, which is then used to authorize streaming. See the
 #'     StreamKey endpoints for more information. ***Treat the stream key
 #'     like a secret, since it allows anyone to stream to the channel.***
 #' 
-#' -   Playback key pair — Video playback may be restricted using
+#'   - Playback key pair — Video playback may be restricted using
 #'     playback-authorization tokens, which use public-key encryption. A
 #'     playback key pair is the public-private pair of keys used to sign
 #'     and validate the playback-authorization token. See the
@@ -96,94 +96,94 @@ NULL
 #' 
 #' **Channel Endpoints**
 #' 
-#' -   [`create_channel`][ivs_create_channel] — Creates a new channel and
+#'   - [`create_channel`][ivs_create_channel] — Creates a new channel and
 #'     an associated stream key to start streaming.
 #' 
-#' -   [`get_channel`][ivs_get_channel] — Gets the channel configuration
+#'   - [`get_channel`][ivs_get_channel] — Gets the channel configuration
 #'     for the specified channel ARN (Amazon Resource Name).
 #' 
-#' -   [`batch_get_channel`][ivs_batch_get_channel] — Performs
+#'   - [`batch_get_channel`][ivs_batch_get_channel] — Performs
 #'     [`get_channel`][ivs_get_channel] on multiple ARNs simultaneously.
 #' 
-#' -   [`list_channels`][ivs_list_channels] — Gets summary information
+#'   - [`list_channels`][ivs_list_channels] — Gets summary information
 #'     about all channels in your account, in the AWS region where the API
 #'     request is processed. This list can be filtered to match a specified
 #'     string.
 #' 
-#' -   [`update_channel`][ivs_update_channel] — Updates a channel's
+#'   - [`update_channel`][ivs_update_channel] — Updates a channel's
 #'     configuration. This does not affect an ongoing stream of this
 #'     channel. You must stop and restart the stream for the changes to
 #'     take effect.
 #' 
-#' -   [`delete_channel`][ivs_delete_channel] — Deletes the specified
+#'   - [`delete_channel`][ivs_delete_channel] — Deletes the specified
 #'     channel.
 #' 
 #' **StreamKey Endpoints**
 #' 
-#' -   [`create_stream_key`][ivs_create_stream_key] — Creates a stream key,
+#'   - [`create_stream_key`][ivs_create_stream_key] — Creates a stream key,
 #'     used to initiate a stream, for the specified channel ARN.
 #' 
-#' -   [`get_stream_key`][ivs_get_stream_key] — Gets stream key information
+#'   - [`get_stream_key`][ivs_get_stream_key] — Gets stream key information
 #'     for the specified ARN.
 #' 
-#' -   [`batch_get_stream_key`][ivs_batch_get_stream_key] — Performs
+#'   - [`batch_get_stream_key`][ivs_batch_get_stream_key] — Performs
 #'     [`get_stream_key`][ivs_get_stream_key] on multiple ARNs
 #'     simultaneously.
 #' 
-#' -   [`list_stream_keys`][ivs_list_stream_keys] — Gets summary
+#'   - [`list_stream_keys`][ivs_list_stream_keys] — Gets summary
 #'     information about stream keys for the specified channel.
 #' 
-#' -   [`delete_stream_key`][ivs_delete_stream_key] — Deletes the stream
+#'   - [`delete_stream_key`][ivs_delete_stream_key] — Deletes the stream
 #'     key for the specified ARN, so it can no longer be used to stream.
 #' 
 #' **Stream Endpoints**
 #' 
-#' -   [`get_stream`][ivs_get_stream] — Gets information about the active
+#'   - [`get_stream`][ivs_get_stream] — Gets information about the active
 #'     (live) stream on a specified channel.
 #' 
-#' -   [`list_streams`][ivs_list_streams] — Gets summary information about
+#'   - [`list_streams`][ivs_list_streams] — Gets summary information about
 #'     live streams in your account, in the AWS region where the API
 #'     request is processed.
 #' 
-#' -   [`stop_stream`][ivs_stop_stream] — Disconnects the incoming RTMPS
+#'   - [`stop_stream`][ivs_stop_stream] — Disconnects the incoming RTMPS
 #'     stream for the specified channel. Can be used in conjunction with
 #'     [`delete_stream_key`][ivs_delete_stream_key] to prevent further
 #'     streaming to a channel.
 #' 
-#' -   [`put_metadata`][ivs_put_metadata] — Inserts metadata into an RTMPS
+#'   - [`put_metadata`][ivs_put_metadata] — Inserts metadata into an RTMPS
 #'     stream for the specified channel. A maximum of 5 requests per second
 #'     per channel is allowed, each with a maximum 1KB payload.
 #' 
 #' **PlaybackKeyPair Endpoints**
 #' 
-#' -   [`import_playback_key_pair`][ivs_import_playback_key_pair] — Imports
+#'   - [`import_playback_key_pair`][ivs_import_playback_key_pair] — Imports
 #'     the public portion of a new key pair and returns its `arn` and
 #'     `fingerprint`. The `privateKey` can then be used to generate viewer
 #'     authorization tokens, to grant viewers access to authorized
 #'     channels.
 #' 
-#' -   [`get_playback_key_pair`][ivs_get_playback_key_pair] — Gets a
+#'   - [`get_playback_key_pair`][ivs_get_playback_key_pair] — Gets a
 #'     specified playback authorization key pair and returns the `arn` and
 #'     `fingerprint`. The `privateKey` held by the caller can be used to
 #'     generate viewer authorization tokens, to grant viewers access to
 #'     authorized channels.
 #' 
-#' -   [`list_playback_key_pairs`][ivs_list_playback_key_pairs] — Gets
+#'   - [`list_playback_key_pairs`][ivs_list_playback_key_pairs] — Gets
 #'     summary information about playback key pairs.
 #' 
-#' -   [`delete_playback_key_pair`][ivs_delete_playback_key_pair] — Deletes
+#'   - [`delete_playback_key_pair`][ivs_delete_playback_key_pair] — Deletes
 #'     a specified authorization key pair. This invalidates future viewer
 #'     tokens generated using the key pair’s `privateKey`.
 #' 
 #' **AWS Tags Endpoints**
 #' 
-#' -   [`tag_resource`][ivs_tag_resource] — Adds or updates tags for the
+#'   - [`tag_resource`][ivs_tag_resource] — Adds or updates tags for the
 #'     AWS resource with the specified ARN.
 #' 
-#' -   [`untag_resource`][ivs_untag_resource] — Removes tags from the
+#'   - [`untag_resource`][ivs_untag_resource] — Removes tags from the
 #'     resource with the specified ARN.
 #' 
-#' -   [`list_tags_for_resource`][ivs_list_tags_for_resource] — Gets
+#'   - [`list_tags_for_resource`][ivs_list_tags_for_resource] — Gets
 #'     information about AWS tags for the specified ARN.
 #'
 #' @param
@@ -241,6 +241,12 @@ NULL
 #'  \link[=ivs_untag_resource]{untag_resource} \tab Removes tags from the resource with the specified ARN\cr
 #'  \link[=ivs_update_channel]{update_channel} \tab Updates a channel's configuration
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname ivs
 #' @export

@@ -62,8 +62,7 @@ that the encryption key was transmitted without error.}
 \item{RequestPayer}{}
 
 \item{ExpectedBucketOwner}{The account id of the expected bucket owner. If the bucket is owned by a
-different account, the request will fail with an HTTP
-\verb{403 (Access Denied)} error.}
+different account, the request will fail with an HTTP \verb{403 (Access Denied)} error.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

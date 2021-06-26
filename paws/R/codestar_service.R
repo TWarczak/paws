@@ -13,60 +13,60 @@ NULL
 #' 
 #' Projects and their resources, by calling the following:
 #' 
-#' -   [`delete_project`][codestar_delete_project], which deletes a
+#'   - [`delete_project`][codestar_delete_project], which deletes a
 #'     project.
 #' 
-#' -   [`describe_project`][codestar_describe_project], which lists the
+#'   - [`describe_project`][codestar_describe_project], which lists the
 #'     attributes of a project.
 #' 
-#' -   [`list_projects`][codestar_list_projects], which lists all projects
+#'   - [`list_projects`][codestar_list_projects], which lists all projects
 #'     associated with your AWS account.
 #' 
-#' -   [`list_resources`][codestar_list_resources], which lists the
+#'   - [`list_resources`][codestar_list_resources], which lists the
 #'     resources associated with a project.
 #' 
-#' -   [`list_tags_for_project`][codestar_list_tags_for_project], which
+#'   - [`list_tags_for_project`][codestar_list_tags_for_project], which
 #'     lists the tags associated with a project.
 #' 
-#' -   [`tag_project`][codestar_tag_project], which adds tags to a project.
+#'   - [`tag_project`][codestar_tag_project], which adds tags to a project.
 #' 
-#' -   [`untag_project`][codestar_untag_project], which removes tags from a
+#'   - [`untag_project`][codestar_untag_project], which removes tags from a
 #'     project.
 #' 
-#' -   [`update_project`][codestar_update_project], which updates the
+#'   - [`update_project`][codestar_update_project], which updates the
 #'     attributes of a project.
 #' 
 #' Teams and team members, by calling the following:
 #' 
-#' -   [`associate_team_member`][codestar_associate_team_member], which
+#'   - [`associate_team_member`][codestar_associate_team_member], which
 #'     adds an IAM user to the team for a project.
 #' 
-#' -   [`disassociate_team_member`][codestar_disassociate_team_member],
+#'   - [`disassociate_team_member`][codestar_disassociate_team_member],
 #'     which removes an IAM user from the team for a project.
 #' 
-#' -   [`list_team_members`][codestar_list_team_members], which lists all
+#'   - [`list_team_members`][codestar_list_team_members], which lists all
 #'     the IAM users in the team for a project, including their roles and
 #'     attributes.
 #' 
-#' -   [`update_team_member`][codestar_update_team_member], which updates a
+#'   - [`update_team_member`][codestar_update_team_member], which updates a
 #'     team member's attributes in a project.
 #' 
 #' Users, by calling the following:
 #' 
-#' -   [`create_user_profile`][codestar_create_user_profile], which creates
+#'   - [`create_user_profile`][codestar_create_user_profile], which creates
 #'     a user profile that contains data associated with the user across
 #'     all projects.
 #' 
-#' -   [`delete_user_profile`][codestar_delete_user_profile], which deletes
+#'   - [`delete_user_profile`][codestar_delete_user_profile], which deletes
 #'     all user profile information across all projects.
 #' 
-#' -   [`describe_user_profile`][codestar_describe_user_profile], which
+#'   - [`describe_user_profile`][codestar_describe_user_profile], which
 #'     describes the profile of a user.
 #' 
-#' -   [`list_user_profiles`][codestar_list_user_profiles], which lists all
+#'   - [`list_user_profiles`][codestar_list_user_profiles], which lists all
 #'     user profiles.
 #' 
-#' -   [`update_user_profile`][codestar_update_user_profile], which updates
+#'   - [`update_user_profile`][codestar_update_user_profile], which updates
 #'     the profile for a user.
 #'
 #' @param
@@ -121,6 +121,12 @@ NULL
 #'  \link[=codestar_update_user_profile]{update_user_profile} \tab Updates a user's profile in AWS CodeStar
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname codestar
 #' @export
 codestar <- function(config = list()) {
@@ -139,7 +145,7 @@ codestar <- function(config = list()) {
   endpoints = list("*" = list(endpoint = "codestar.{region}.amazonaws.com", global = FALSE), "cn-*" = list(endpoint = "codestar.{region}.amazonaws.com.cn", global = FALSE), "us-iso-*" = list(endpoint = "codestar.{region}.c2s.ic.gov", global = FALSE), "us-isob-*" = list(endpoint = "codestar.{region}.sc2s.sgov.gov", global = FALSE)),
   service_id = "CodeStar",
   api_version = "2017-04-19",
-  signing_name = NULL,
+  signing_name = "codestar",
   json_version = "1.1",
   target_prefix = "CodeStar_20170419"
 )

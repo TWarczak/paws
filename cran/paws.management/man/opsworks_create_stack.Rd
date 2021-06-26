@@ -24,15 +24,13 @@ are set to the same value, the stack uses a \emph{regional} endpoint. If the
 parameter is, this also results in a stack with a \emph{regional} endpoint.
 However, if the \code{--region} parameter is set to \code{us-east-1}, and the
 \code{--stack-region} parameter is set to one of the following, then the
-stack uses a legacy or \emph{classic} region:
-\verb{us-west-1, us-west-2, sa-east-1, eu-central-1, eu-west-1, ap-northeast-1, ap-southeast-1, ap-southeast-2}.
-In this case, the actual API endpoint of the stack is in \code{us-east-1}.
-Only the preceding regions are supported as classic regions in the
-\code{us-east-1} API endpoint. Because it is a best practice to choose the
-regional endpoint that is closest to where you manage AWS, we recommend
-that you use regional endpoints for new stacks. The AWS CLI common
-\code{--region} parameter always specifies a regional API endpoint; it cannot
-be used to specify a classic AWS OpsWorks Stacks region.}
+stack uses a legacy or \emph{classic} region: \verb{us-west-1, us-west-2, sa-east-1, eu-central-1, eu-west-1, ap-northeast-1, ap-southeast-1, ap-southeast-2}. In this case, the actual API endpoint of the stack is
+in \code{us-east-1}. Only the preceding regions are supported as classic
+regions in the \code{us-east-1} API endpoint. Because it is a best practice
+to choose the regional endpoint that is closest to where you manage AWS,
+we recommend that you use regional endpoints for new stacks. The AWS CLI
+common \code{--region} parameter always specifies a regional API endpoint; it
+cannot be used to specify a classic AWS OpsWorks Stacks region.}
 
 \item{VpcId}{The ID of the VPC that the stack is to be launched into. The VPC must be
 in the stack's region. All instances are launched into this VPC. You
@@ -78,19 +76,13 @@ instance unless you specify a different operating system when you create
 the instance. You can specify one of the following.
 \itemize{
 \item A supported Linux operating system: An Amazon Linux version, such as
-\verb{Amazon Linux 2018.03}, \verb{Amazon Linux 2017.09},
-\verb{Amazon Linux 2017.03}, \verb{Amazon Linux 2016.09},
-\verb{Amazon Linux 2016.03}, \verb{Amazon Linux 2015.09}, or
-\verb{Amazon Linux 2015.03}.
+\verb{Amazon Linux 2018.03}, \verb{Amazon Linux 2017.09}, \verb{Amazon Linux 2017.03}, \verb{Amazon Linux 2016.09}, \verb{Amazon Linux 2016.03},
+\verb{Amazon Linux 2015.09}, or \verb{Amazon Linux 2015.03}.
 \item A supported Ubuntu operating system, such as \verb{Ubuntu 16.04 LTS},
 \verb{Ubuntu 14.04 LTS}, or \verb{Ubuntu 12.04 LTS}.
 \item \verb{CentOS Linux 7}
 \item \verb{Red Hat Enterprise Linux 7}
-\item A supported Windows operating system, such as
-\verb{Microsoft Windows Server 2012 R2 Base},
-\verb{Microsoft Windows Server 2012 R2 with SQL Server Express},
-\verb{Microsoft Windows Server 2012 R2 with SQL Server Standard}, or
-\verb{Microsoft Windows Server 2012 R2 with SQL Server Web}.
+\item A supported Windows operating system, such as \verb{Microsoft Windows Server 2012 R2 Base}, \verb{Microsoft Windows Server 2012 R2 with SQL Server Express}, \verb{Microsoft Windows Server 2012 R2 with SQL Server Standard}, or \verb{Microsoft Windows Server 2012 R2 with SQL Server Web}.
 \item A custom AMI: \code{Custom}. You specify the custom AMI you want to use
 when you create instances. For more information, see \href{https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-custom-ami.html}{Using Custom AMIs}.
 }

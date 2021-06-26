@@ -31,8 +31,8 @@ NULL
 #' 
 #' The following limitations are enforced for this operation:
 #' 
-#' -   1 MB request size
-#' -   25 item limit per BatchDeleteAttributes operation
+#'   - 1 MB request size
+#'   - 25 item limit per BatchDeleteAttributes operation
 #'
 #' @usage
 #' simpledb_batch_delete_attributes(DomainName, Items)
@@ -87,10 +87,10 @@ simpledb_batch_delete_attributes <- function(DomainName, Items) {
 #' @description
 #' The [`batch_put_attributes`][simpledb_batch_put_attributes] operation
 #' creates or replaces attributes within one or more items. By using this
-#' operation, the client can perform multiple PutAttribute operation with a
-#' single call. This helps yield savings in round trips and latencies,
-#' enabling Amazon SimpleDB to optimize requests and generally produce
-#' better throughput.
+#' operation, the client can perform multiple <span>PutAttribute</span>
+#' operation with a single call. This helps yield savings in round trips
+#' and latencies, enabling Amazon SimpleDB to optimize requests and
+#' generally produce better throughput.
 #' 
 #' The client may specify the item name with the `Item.X.ItemName`
 #' parameter. The client may specify new attributes using a combination of
@@ -101,20 +101,19 @@ simpledb_batch_delete_attributes <- function(DomainName, Items) {
 #' `Item.0.Attribute.1.Name` and `Item.0.Attribute.1.Value`, and so on.
 #' 
 #' Attributes are uniquely identified within an item by their name/value
-#' combination. For example, a single item can have the attributes
-#' `{ "first_name", "first_value" }` and
-#' `{ "first_name", "second_value" }`. However, it cannot have two
-#' attribute instances where both the `Item.X.Attribute.Y.Name` and
-#' `Item.X.Attribute.Y.Value` are the same.
+#' combination. For example, a single item can have the attributes `{
+#' "first_name", "first_value" }` and `{ "first_name", "second_value" }`.
+#' However, it cannot have two attribute instances where both the
+#' `Item.X.Attribute.Y.Name` and `Item.X.Attribute.Y.Value` are the same.
 #' 
 #' Optionally, the requester can supply the `Replace` parameter for each
 #' individual value. Setting this value to `true` will cause the new
 #' attribute values to replace the existing attribute values. For example,
-#' if an item `I` has the attributes `{ 'a', '1' }, { 'b', '2'}` and
-#' `{ 'b', '3' }` and the requester does a BatchPutAttributes of
-#' `{'I', 'b', '4' }` with the Replace parameter set to true, the final
-#' attributes of the item will be `{ 'a', '1' }` and `{ 'b', '4' }`,
-#' replacing the previous values of the 'b' attribute with the new value.
+#' if an item `I` has the attributes `{ 'a', '1' }, { 'b', '2'}` and `{
+#' 'b', '3' }` and the requester does a BatchPutAttributes of `{'I', 'b',
+#' '4' }` with the Replace parameter set to true, the final attributes of
+#' the item will be `{ 'a', '1' }` and `{ 'b', '4' }`, replacing the
+#' previous values of the 'b' attribute with the new value.
 #' 
 #' You cannot specify an empty string as an item or as an attribute name.
 #' The [`batch_put_attributes`][simpledb_batch_put_attributes] operation
@@ -133,11 +132,11 @@ simpledb_batch_delete_attributes <- function(DomainName, Items) {
 #' 
 #' The following limitations are enforced for this operation:
 #' 
-#' -   256 attribute name-value pairs per item
-#' -   1 MB request size
-#' -   1 billion attributes per domain
-#' -   10 GB of total user data storage per domain
-#' -   25 item limit per
+#'   - 256 attribute name-value pairs per item
+#'   - 1 MB request size
+#'   - 1 billion attributes per domain
+#'   - 10 GB of total user data storage per domain
+#'   - 25 item limit per
 #'     [`batch_put_attributes`][simpledb_batch_put_attributes] operation
 #'
 #' @usage
@@ -203,7 +202,7 @@ simpledb_batch_put_attributes <- function(DomainName, Items) {
 #' The client can create up to 100 domains per account.
 #' 
 #' If the client requires additional domains, go to
-#' http://aws.amazon.com/contact-us/simpledb-limit-request/.
+#' <span>http://aws.amazon.com/contact-us/simpledb-limit-request/</span>.
 #'
 #' @usage
 #' simpledb_create_domain(DomainName)
@@ -501,8 +500,8 @@ simpledb_get_attributes <- function(DomainName, ItemName, AttributeNames = NULL,
 #' @description
 #' The [`list_domains`][simpledb_list_domains] operation lists all domains
 #' associated with the Access Key ID. It returns domain names up to the
-#' limit set by MaxNumberOfDomains. A NextToken is returned if there are
-#' more than `MaxNumberOfDomains` domains. Calling
+#' limit set by <span>MaxNumberOfDomains</span>. A <span>NextToken</span>
+#' is returned if there are more than `MaxNumberOfDomains` domains. Calling
 #' [`list_domains`][simpledb_list_domains] successive times with the
 #' `NextToken` provided by the operation returns up to `MaxNumberOfDomains`
 #' more domain names with each successive operation call.
@@ -565,22 +564,20 @@ simpledb_list_domains <- function(MaxNumberOfDomains = NULL, NextToken = NULL) {
 #' `Attribute.1.Name` and `Attribute.1.Value`, and so on.
 #' 
 #' Attributes are uniquely identified in an item by their name/value
-#' combination. For example, a single item can have the attributes
-#' `{ "first_name", "first_value" }` and
-#' `{ \"first_name\", second_value\" }`. However, it cannot have two
-#' attribute instances where both the `Attribute.X.Name` and
-#' `Attribute.X.Value` are the same.
+#' combination. For example, a single item can have the attributes `{
+#' "first_name", "first_value" }` and `{ \"first_name\", second_value\" }`.
+#' However, it cannot have two attribute instances where both the
+#' `Attribute.X.Name` and `Attribute.X.Value` are the same.
 #' 
 #' Optionally, the requestor can supply the `Replace` parameter for each
 #' individual attribute. Setting this value to `true` causes the new
 #' attribute value to replace the existing attribute value(s). For example,
-#' if an item has the attributes `{ 'a', '1' }`, `{ 'b', '2'}` and
-#' `{ 'b', '3' }` and the requestor calls
-#' [`put_attributes`][simpledb_put_attributes] using the attributes
-#' `{ 'b', '4' }` with the `Replace` parameter set to true, the final
-#' attributes of the item are changed to `{ 'a', '1' }` and `{ 'b', '4' }`,
-#' which replaces the previous values of the 'b' attribute with the new
-#' value.
+#' if an item has the attributes `{ 'a', '1' }`, `{ 'b', '2'}` and `{ 'b',
+#' '3' }` and the requestor calls
+#' [`put_attributes`][simpledb_put_attributes] using the attributes `{ 'b',
+#' '4' }` with the `Replace` parameter set to true, the final attributes of
+#' the item are changed to `{ 'a', '1' }` and `{ 'b', '4' }`, which
+#' replaces the previous values of the 'b' attribute with the new value.
 #' 
 #' Using [`put_attributes`][simpledb_put_attributes] to replace attribute
 #' values that do not exist will not result in an error response.
@@ -597,9 +594,9 @@ simpledb_list_domains <- function(MaxNumberOfDomains = NULL, NextToken = NULL) {
 #' 
 #' The following limitations are enforced for this operation:
 #' 
-#' -   256 total attribute name-value pairs per item
-#' -   One billion attributes per domain
-#' -   10 GB of total user data storage per domain
+#'   - 256 total attribute name-value pairs per item
+#'   - One billion attributes per domain
+#'   - 10 GB of total user data storage per domain
 #'
 #' @usage
 #' simpledb_put_attributes(DomainName, ItemName, Attributes, Expected)

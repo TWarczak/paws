@@ -8,9 +8,9 @@ NULL
 #' AWS Price List Service API (AWS Price List Service) is a centralized and
 #' convenient way to programmatically query Amazon Web Services for
 #' services, products, and pricing information. The AWS Price List Service
-#' uses standardized product attributes such as `Location`,
-#' `Storage Class`, and `Operating System`, and provides prices at the SKU
-#' level. You can use the AWS Price List Service to build cost control and
+#' uses standardized product attributes such as `Location`, `Storage
+#' Class`, and `Operating System`, and provides prices at the SKU level.
+#' You can use the AWS Price List Service to build cost control and
 #' scenario planning tools, reconcile billing data, forecast future spend
 #' for budgeting purposes, and provide cost benefit analysis that compare
 #' your internal workloads with AWS.
@@ -30,9 +30,9 @@ NULL
 #' 
 #' AWS Price List Service API provides the following two endpoints:
 #' 
-#' -   https://api.pricing.us-east-1.amazonaws.com
+#'   - https://api.pricing.us-east-1.amazonaws.com
 #' 
-#' -   https://api.pricing.ap-south-1.amazonaws.com
+#'   - https://api.pricing.ap-south-1.amazonaws.com
 #'
 #' @param
 #' config
@@ -72,6 +72,12 @@ NULL
 #'  \link[=pricing_get_attribute_values]{get_attribute_values} \tab Returns a list of attribute values\cr
 #'  \link[=pricing_get_products]{get_products} \tab Returns a list of all products that match the filter criteria
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname pricing
 #' @export

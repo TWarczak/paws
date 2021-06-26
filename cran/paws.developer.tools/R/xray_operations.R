@@ -85,10 +85,10 @@ xray_batch_get_traces <- function(TraceIds, NextToken = NULL) {
 #' @param FilterExpression The filter expression defining criteria by which to group traces.
 #' @param InsightsConfiguration The structure containing configurations related to insights.
 #' 
-#' -   The InsightsEnabled boolean can be set to true to enable insights
+#'   - The InsightsEnabled boolean can be set to true to enable insights
 #'     for the new group or false to disable insights for the new group.
 #' 
-#' -   The NotifcationsEnabled boolean can be set to true to enable
+#'   - The NotifcationsEnabled boolean can be set to true to enable
 #'     insights notifications for the new group. Notifications may only be
 #'     enabled on a group with InsightsEnabled set to true.
 #' @param Tags A map that contains one or more tag keys and tag values to attach to an
@@ -99,18 +99,18 @@ xray_batch_get_traces <- function(TraceIds, NextToken = NULL) {
 #' 
 #' The following restrictions apply to tags:
 #' 
-#' -   Maximum number of user-applied tags per resource: 50
+#'   - Maximum number of user-applied tags per resource: 50
 #' 
-#' -   Maximum tag key length: 128 Unicode characters
+#'   - Maximum tag key length: 128 Unicode characters
 #' 
-#' -   Maximum tag value length: 256 Unicode characters
+#'   - Maximum tag value length: 256 Unicode characters
 #' 
-#' -   Valid values for key and value: a-z, A-Z, 0-9, space, and the
+#'   - Valid values for key and value: a-z, A-Z, 0-9, space, and the
 #'     following characters: _ . : / = + - and @@
 #' 
-#' -   Tag keys and values are case sensitive.
+#'   - Tag keys and values are case sensitive.
 #' 
-#' -   Don't use `aws:` as a prefix for keys; it's reserved for AWS use.
+#'   - Don't use `aws:` as a prefix for keys; it's reserved for AWS use.
 #'
 #' @return
 #' A list with the following syntax:
@@ -192,18 +192,18 @@ xray_create_group <- function(GroupName, FilterExpression = NULL, InsightsConfig
 #' 
 #' The following restrictions apply to tags:
 #' 
-#' -   Maximum number of user-applied tags per resource: 50
+#'   - Maximum number of user-applied tags per resource: 50
 #' 
-#' -   Maximum tag key length: 128 Unicode characters
+#'   - Maximum tag key length: 128 Unicode characters
 #' 
-#' -   Maximum tag value length: 256 Unicode characters
+#'   - Maximum tag value length: 256 Unicode characters
 #' 
-#' -   Valid values for key and value: a-z, A-Z, 0-9, space, and the
+#'   - Valid values for key and value: a-z, A-Z, 0-9, space, and the
 #'     following characters: _ . : / = + - and @@
 #' 
-#' -   Tag keys and values are case sensitive.
+#'   - Tag keys and values are case sensitive.
 #' 
-#' -   Don't use `aws:` as a prefix for keys; it's reserved for AWS use.
+#'   - Don't use `aws:` as a prefix for keys; it's reserved for AWS use.
 #'
 #' @return
 #' A list with the following syntax:
@@ -1894,13 +1894,13 @@ xray_list_tags_for_resource <- function(ResourceARN, NextToken = NULL) {
 #'
 #' @param KeyId An AWS KMS customer master key (CMK) in one of the following formats:
 #' 
-#' -   **Alias** - The name of the key. For example, `alias/MyKey`.
+#'   - **Alias** - The name of the key. For example, `alias/MyKey`.
 #' 
-#' -   **Key ID** - The KMS key ID of the key. For example,
+#'   - **Key ID** - The KMS key ID of the key. For example,
 #'     `ae4aa6d49-a4d8-9df9-a475-4ff6d7898456`. AWS X-Ray does not support
 #'     asymmetric CMKs.
 #' 
-#' -   **ARN** - The full Amazon Resource Name of the key ID or alias. For
+#'   - **ARN** - The full Amazon Resource Name of the key ID or alias. For
 #'     example,
 #'     `arn:aws:kms:us-east-2:123456789012:key/ae4aa6d49-a4d8-9df9-a475-4ff6d7898456`.
 #'     Use this format to specify a key in a different account.
@@ -2030,23 +2030,23 @@ xray_put_telemetry_records <- function(TelemetryRecords, EC2InstanceId = NULL, H
 #' 
 #' **Required segment document fields**
 #' 
-#' -   `name` - The name of the service that handled the request.
+#'   - `name` - The name of the service that handled the request.
 #' 
-#' -   `id` - A 64-bit identifier for the segment, unique among segments in
+#'   - `id` - A 64-bit identifier for the segment, unique among segments in
 #'     the same trace, in 16 hexadecimal digits.
 #' 
-#' -   `trace_id` - A unique identifier that connects all segments and
+#'   - `trace_id` - A unique identifier that connects all segments and
 #'     subsegments originating from a single client request.
 #' 
-#' -   `start_time` - Time the segment or subsegment was created, in
+#'   - `start_time` - Time the segment or subsegment was created, in
 #'     floating point seconds in epoch time, accurate to milliseconds. For
 #'     example, `1480615200.010` or `1.480615200010E9`.
 #' 
-#' -   `end_time` - Time the segment or subsegment was closed. For example,
+#'   - `end_time` - Time the segment or subsegment was closed. For example,
 #'     `1480615200.090` or `1.480615200090E9`. Specify either an `end_time`
 #'     or `in_progress`.
 #' 
-#' -   `in_progress` - Set to `true` instead of specifying an `end_time` to
+#'   - `in_progress` - Set to `true` instead of specifying an `end_time` to
 #'     record that a segment has been started, but is not complete. Send an
 #'     in-progress segment when your application receives a request that
 #'     will take a long time to serve, to trace that the request was
@@ -2058,13 +2058,13 @@ xray_put_telemetry_records <- function(TelemetryRecords, EC2InstanceId = NULL, H
 #' 
 #' **Trace ID Format**
 #' 
-#' -   The version number, for instance, `1`.
+#'   - The version number, for instance, `1`.
 #' 
-#' -   The time of the original request, in Unix epoch time, in 8
+#'   - The time of the original request, in Unix epoch time, in 8
 #'     hexadecimal digits. For example, 10:00AM December 2nd, 2016 PST in
 #'     epoch time is `1480615200` seconds, or `58406520` in hexadecimal.
 #' 
-#' -   A 96-bit identifier for the trace, globally unique, in 24
+#'   - A 96-bit identifier for the trace, globally unique, in 24
 #'     hexadecimal digits.
 #'
 #' @usage
@@ -2133,18 +2133,18 @@ xray_put_trace_segments <- function(TraceSegmentDocuments) {
 #' 
 #' The following restrictions apply to tags:
 #' 
-#' -   Maximum number of user-applied tags per resource: 50
+#'   - Maximum number of user-applied tags per resource: 50
 #' 
-#' -   Maximum tag key length: 128 Unicode characters
+#'   - Maximum tag key length: 128 Unicode characters
 #' 
-#' -   Maximum tag value length: 256 Unicode characters
+#'   - Maximum tag value length: 256 Unicode characters
 #' 
-#' -   Valid values for key and value: a-z, A-Z, 0-9, space, and the
+#'   - Valid values for key and value: a-z, A-Z, 0-9, space, and the
 #'     following characters: _ . : / = + - and @@
 #' 
-#' -   Tag keys and values are case sensitive.
+#'   - Tag keys and values are case sensitive.
 #' 
-#' -   Don't use `aws:` as a prefix for keys; it's reserved for AWS use.
+#'   - Don't use `aws:` as a prefix for keys; it's reserved for AWS use.
 #'     You cannot edit or delete system tags.
 #'
 #' @return
@@ -2244,10 +2244,10 @@ xray_untag_resource <- function(ResourceARN, TagKeys) {
 #' traces.
 #' @param InsightsConfiguration The structure containing configurations related to insights.
 #' 
-#' -   The InsightsEnabled boolean can be set to true to enable insights
+#'   - The InsightsEnabled boolean can be set to true to enable insights
 #'     for the group or false to disable insights for the group.
 #' 
-#' -   The NotifcationsEnabled boolean can be set to true to enable
+#'   - The NotifcationsEnabled boolean can be set to true to enable
 #'     insights notifications for the group. Notifications can only be
 #'     enabled on a group with InsightsEnabled set to true.
 #'

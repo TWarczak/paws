@@ -7,17 +7,19 @@
 apigateway_delete_method(restApiId, resourceId, httpMethod)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
-\item{resourceId}{[required] [Required] The Resource identifier for the Method resource.}
+\item{resourceId}{[required] [Required] The <span>Resource</span> identifier for the
+<span>Method</span> resource.}
 
-\item{httpMethod}{[required] [Required] The HTTP verb of the Method resource.}
+\item{httpMethod}{[required] [Required] The HTTP verb of the <span>Method</span> resource.}
 }
 \value{
 An empty list.
 }
 \description{
-Deletes an existing Method resource.
+Deletes an existing <span>Method</span> resource.
 }
 \section{Request syntax}{
 \preformatted{svc$delete_method(

@@ -8,7 +8,7 @@ clouddirectory_update_schema(SchemaArn, Name)
 }
 \arguments{
 \item{SchemaArn}{[required] The Amazon Resource Name (ARN) of the development schema. For more
-information, see arns.}
+information, see <span>arns</span>.}
 
 \item{Name}{[required] The name of the schema.}
 }

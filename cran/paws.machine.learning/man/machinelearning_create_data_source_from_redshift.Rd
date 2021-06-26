@@ -36,8 +36,7 @@ required if \code{DataSchemaUri} is specified.
 \item DataRearrangement - A JSON string that represents the splitting and
 rearrangement requirements for the \code{DataSource}.
 
-Sample -
-\verb{ "\{\\"splitting\\":\{\\"percentBegin\\":10,\\"percentEnd\\":60\}\}"}
+Sample - \verb{ "\{\\"splitting\\":\{\\"percentBegin\\":10,\\"percentEnd\\":60\}\}"}
 }}
 
 \item{RoleARN}{[required] A fully specified role Amazon Resource Name (ARN). Amazon ML assumes the

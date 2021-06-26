@@ -8,13 +8,16 @@ apigateway_update_method_response(restApiId, resourceId, httpMethod,
   statusCode, patchOperations)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
-\item{resourceId}{[required] [Required] The Resource identifier for the MethodResponse resource.}
+\item{resourceId}{[required] [Required] The <span>Resource</span> identifier for the
+<span>MethodResponse</span> resource.}
 
-\item{httpMethod}{[required] [Required] The HTTP verb of the Method resource.}
+\item{httpMethod}{[required] [Required] The HTTP verb of the <span>Method</span> resource.}
 
-\item{statusCode}{[required] [Required] The status code for the MethodResponse resource.}
+\item{statusCode}{[required] [Required] The status code for the <span>MethodResponse</span>
+resource.}
 
 \item{patchOperations}{A list of update operations to be applied to the specified resource and
 in the order specified in this list.}
@@ -32,7 +35,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Updates an existing MethodResponse resource.
+Updates an existing <span>MethodResponse</span> resource.
 }
 \section{Request syntax}{
 \preformatted{svc$update_method_response(

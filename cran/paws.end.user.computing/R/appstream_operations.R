@@ -321,69 +321,69 @@ appstream_create_directory_config <- function(DirectoryName, OrganizationalUnitD
 #' @param InstanceType &#91;required&#93; The instance type to use when launching fleet instances. The following
 #' instance types are available:
 #' 
-#' -   stream.standard.medium
+#'   - stream.standard.medium
 #' 
-#' -   stream.standard.large
+#'   - stream.standard.large
 #' 
-#' -   stream.compute.large
+#'   - stream.compute.large
 #' 
-#' -   stream.compute.xlarge
+#'   - stream.compute.xlarge
 #' 
-#' -   stream.compute.2xlarge
+#'   - stream.compute.2xlarge
 #' 
-#' -   stream.compute.4xlarge
+#'   - stream.compute.4xlarge
 #' 
-#' -   stream.compute.8xlarge
+#'   - stream.compute.8xlarge
 #' 
-#' -   stream.memory.large
+#'   - stream.memory.large
 #' 
-#' -   stream.memory.xlarge
+#'   - stream.memory.xlarge
 #' 
-#' -   stream.memory.2xlarge
+#'   - stream.memory.2xlarge
 #' 
-#' -   stream.memory.4xlarge
+#'   - stream.memory.4xlarge
 #' 
-#' -   stream.memory.8xlarge
+#'   - stream.memory.8xlarge
 #' 
-#' -   stream.memory.z1d.large
+#'   - stream.memory.z1d.large
 #' 
-#' -   stream.memory.z1d.xlarge
+#'   - stream.memory.z1d.xlarge
 #' 
-#' -   stream.memory.z1d.2xlarge
+#'   - stream.memory.z1d.2xlarge
 #' 
-#' -   stream.memory.z1d.3xlarge
+#'   - stream.memory.z1d.3xlarge
 #' 
-#' -   stream.memory.z1d.6xlarge
+#'   - stream.memory.z1d.6xlarge
 #' 
-#' -   stream.memory.z1d.12xlarge
+#'   - stream.memory.z1d.12xlarge
 #' 
-#' -   stream.graphics-design.large
+#'   - stream.graphics-design.large
 #' 
-#' -   stream.graphics-design.xlarge
+#'   - stream.graphics-design.xlarge
 #' 
-#' -   stream.graphics-design.2xlarge
+#'   - stream.graphics-design.2xlarge
 #' 
-#' -   stream.graphics-design.4xlarge
+#'   - stream.graphics-design.4xlarge
 #' 
-#' -   stream.graphics-desktop.2xlarge
+#'   - stream.graphics-desktop.2xlarge
 #' 
-#' -   stream.graphics.g4dn.xlarge
+#'   - stream.graphics.g4dn.xlarge
 #' 
-#' -   stream.graphics.g4dn.2xlarge
+#'   - stream.graphics.g4dn.2xlarge
 #' 
-#' -   stream.graphics.g4dn.4xlarge
+#'   - stream.graphics.g4dn.4xlarge
 #' 
-#' -   stream.graphics.g4dn.8xlarge
+#'   - stream.graphics.g4dn.8xlarge
 #' 
-#' -   stream.graphics.g4dn.12xlarge
+#'   - stream.graphics.g4dn.12xlarge
 #' 
-#' -   stream.graphics.g4dn.16xlarge
+#'   - stream.graphics.g4dn.16xlarge
 #' 
-#' -   stream.graphics-pro.4xlarge
+#'   - stream.graphics-pro.4xlarge
 #' 
-#' -   stream.graphics-pro.8xlarge
+#'   - stream.graphics-pro.8xlarge
 #' 
-#' -   stream.graphics-pro.16xlarge
+#'   - stream.graphics-pro.16xlarge
 #' @param FleetType The fleet type.
 #' 
 #' ### ALWAYS_ON
@@ -604,69 +604,69 @@ appstream_create_fleet <- function(Name, ImageName = NULL, ImageArn = NULL, Inst
 #' @param InstanceType &#91;required&#93; The instance type to use when launching the image builder. The following
 #' instance types are available:
 #' 
-#' -   stream.standard.medium
+#'   - stream.standard.medium
 #' 
-#' -   stream.standard.large
+#'   - stream.standard.large
 #' 
-#' -   stream.compute.large
+#'   - stream.compute.large
 #' 
-#' -   stream.compute.xlarge
+#'   - stream.compute.xlarge
 #' 
-#' -   stream.compute.2xlarge
+#'   - stream.compute.2xlarge
 #' 
-#' -   stream.compute.4xlarge
+#'   - stream.compute.4xlarge
 #' 
-#' -   stream.compute.8xlarge
+#'   - stream.compute.8xlarge
 #' 
-#' -   stream.memory.large
+#'   - stream.memory.large
 #' 
-#' -   stream.memory.xlarge
+#'   - stream.memory.xlarge
 #' 
-#' -   stream.memory.2xlarge
+#'   - stream.memory.2xlarge
 #' 
-#' -   stream.memory.4xlarge
+#'   - stream.memory.4xlarge
 #' 
-#' -   stream.memory.8xlarge
+#'   - stream.memory.8xlarge
 #' 
-#' -   stream.memory.z1d.large
+#'   - stream.memory.z1d.large
 #' 
-#' -   stream.memory.z1d.xlarge
+#'   - stream.memory.z1d.xlarge
 #' 
-#' -   stream.memory.z1d.2xlarge
+#'   - stream.memory.z1d.2xlarge
 #' 
-#' -   stream.memory.z1d.3xlarge
+#'   - stream.memory.z1d.3xlarge
 #' 
-#' -   stream.memory.z1d.6xlarge
+#'   - stream.memory.z1d.6xlarge
 #' 
-#' -   stream.memory.z1d.12xlarge
+#'   - stream.memory.z1d.12xlarge
 #' 
-#' -   stream.graphics-design.large
+#'   - stream.graphics-design.large
 #' 
-#' -   stream.graphics-design.xlarge
+#'   - stream.graphics-design.xlarge
 #' 
-#' -   stream.graphics-design.2xlarge
+#'   - stream.graphics-design.2xlarge
 #' 
-#' -   stream.graphics-design.4xlarge
+#'   - stream.graphics-design.4xlarge
 #' 
-#' -   stream.graphics-desktop.2xlarge
+#'   - stream.graphics-desktop.2xlarge
 #' 
-#' -   stream.graphics.g4dn.xlarge
+#'   - stream.graphics.g4dn.xlarge
 #' 
-#' -   stream.graphics.g4dn.2xlarge
+#'   - stream.graphics.g4dn.2xlarge
 #' 
-#' -   stream.graphics.g4dn.4xlarge
+#'   - stream.graphics.g4dn.4xlarge
 #' 
-#' -   stream.graphics.g4dn.8xlarge
+#'   - stream.graphics.g4dn.8xlarge
 #' 
-#' -   stream.graphics.g4dn.12xlarge
+#'   - stream.graphics.g4dn.12xlarge
 #' 
-#' -   stream.graphics.g4dn.16xlarge
+#'   - stream.graphics.g4dn.16xlarge
 #' 
-#' -   stream.graphics-pro.4xlarge
+#'   - stream.graphics-pro.4xlarge
 #' 
-#' -   stream.graphics-pro.8xlarge
+#'   - stream.graphics-pro.8xlarge
 #' 
-#' -   stream.graphics-pro.16xlarge
+#'   - stream.graphics-pro.16xlarge
 #' @param Description The description to display.
 #' @param DisplayName The image builder name to display.
 #' @param VpcConfig The VPC configuration for the image builder. You can specify only one
@@ -2343,9 +2343,9 @@ appstream_describe_usage_report_subscriptions <- function(MaxResults = NULL, Nex
 #' Retrieves a list that describes the UserStackAssociation objects. You
 #' must specify either or both of the following:
 #' 
-#' -   The stack name
+#'   - The stack name
 #' 
-#' -   The user name (email address of the user associated with the stack)
+#'   - The user name (email address of the user associated with the stack)
 #'     and the authentication type for the user
 #'
 #' @usage
@@ -3300,69 +3300,69 @@ appstream_update_directory_config <- function(DirectoryName, OrganizationalUnitD
 #' @param InstanceType The instance type to use when launching fleet instances. The following
 #' instance types are available:
 #' 
-#' -   stream.standard.medium
+#'   - stream.standard.medium
 #' 
-#' -   stream.standard.large
+#'   - stream.standard.large
 #' 
-#' -   stream.compute.large
+#'   - stream.compute.large
 #' 
-#' -   stream.compute.xlarge
+#'   - stream.compute.xlarge
 #' 
-#' -   stream.compute.2xlarge
+#'   - stream.compute.2xlarge
 #' 
-#' -   stream.compute.4xlarge
+#'   - stream.compute.4xlarge
 #' 
-#' -   stream.compute.8xlarge
+#'   - stream.compute.8xlarge
 #' 
-#' -   stream.memory.large
+#'   - stream.memory.large
 #' 
-#' -   stream.memory.xlarge
+#'   - stream.memory.xlarge
 #' 
-#' -   stream.memory.2xlarge
+#'   - stream.memory.2xlarge
 #' 
-#' -   stream.memory.4xlarge
+#'   - stream.memory.4xlarge
 #' 
-#' -   stream.memory.8xlarge
+#'   - stream.memory.8xlarge
 #' 
-#' -   stream.memory.z1d.large
+#'   - stream.memory.z1d.large
 #' 
-#' -   stream.memory.z1d.xlarge
+#'   - stream.memory.z1d.xlarge
 #' 
-#' -   stream.memory.z1d.2xlarge
+#'   - stream.memory.z1d.2xlarge
 #' 
-#' -   stream.memory.z1d.3xlarge
+#'   - stream.memory.z1d.3xlarge
 #' 
-#' -   stream.memory.z1d.6xlarge
+#'   - stream.memory.z1d.6xlarge
 #' 
-#' -   stream.memory.z1d.12xlarge
+#'   - stream.memory.z1d.12xlarge
 #' 
-#' -   stream.graphics-design.large
+#'   - stream.graphics-design.large
 #' 
-#' -   stream.graphics-design.xlarge
+#'   - stream.graphics-design.xlarge
 #' 
-#' -   stream.graphics-design.2xlarge
+#'   - stream.graphics-design.2xlarge
 #' 
-#' -   stream.graphics-design.4xlarge
+#'   - stream.graphics-design.4xlarge
 #' 
-#' -   stream.graphics-desktop.2xlarge
+#'   - stream.graphics-desktop.2xlarge
 #' 
-#' -   stream.graphics.g4dn.xlarge
+#'   - stream.graphics.g4dn.xlarge
 #' 
-#' -   stream.graphics.g4dn.2xlarge
+#'   - stream.graphics.g4dn.2xlarge
 #' 
-#' -   stream.graphics.g4dn.4xlarge
+#'   - stream.graphics.g4dn.4xlarge
 #' 
-#' -   stream.graphics.g4dn.8xlarge
+#'   - stream.graphics.g4dn.8xlarge
 #' 
-#' -   stream.graphics.g4dn.12xlarge
+#'   - stream.graphics.g4dn.12xlarge
 #' 
-#' -   stream.graphics.g4dn.16xlarge
+#'   - stream.graphics.g4dn.16xlarge
 #' 
-#' -   stream.graphics-pro.4xlarge
+#'   - stream.graphics-pro.4xlarge
 #' 
-#' -   stream.graphics-pro.8xlarge
+#'   - stream.graphics-pro.8xlarge
 #' 
-#' -   stream.graphics-pro.16xlarge
+#'   - stream.graphics-pro.16xlarge
 #' @param ComputeCapacity The desired capacity for the fleet.
 #' @param VpcConfig The VPC configuration for the fleet.
 #' @param MaxUserDurationInSeconds The maximum amount of time that a streaming session can remain active,

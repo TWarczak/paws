@@ -1010,21 +1010,21 @@ signer_revoke_signing_profile <- function(profileName, profileVersion, reason, e
 #' operation for two years after they are performed. Note the following
 #' requirements:
 #' 
-#' -   You must create an Amazon S3 source bucket. For more information,
+#'   - You must create an Amazon S3 source bucket. For more information,
 #'     see [Create a
 #'     Bucket](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html)
 #'     in the *Amazon S3 Getting Started Guide*.
 #' 
-#' -   Your S3 source bucket must be version enabled.
+#'   - Your S3 source bucket must be version enabled.
 #' 
-#' -   You must create an S3 destination bucket. Code signing uses your S3
+#'   - You must create an S3 destination bucket. Code signing uses your S3
 #'     destination bucket to write your signed code.
 #' 
-#' -   You specify the name of the source and destination buckets when
+#'   - You specify the name of the source and destination buckets when
 #'     calling the [`start_signing_job`][signer_start_signing_job]
 #'     operation.
 #' 
-#' -   You must also specify a request token that identifies your request
+#'   - You must also specify a request token that identifies your request
 #'     to code signing.
 #' 
 #' You can call the [`describe_signing_job`][signer_describe_signing_job]

@@ -41,7 +41,8 @@ check IDs that you specified. You can get the check IDs by calling the
 \code{\link[=support_describe_trusted_advisor_checks]{describe_trusted_advisor_checks}}
 operation.
 
-The response contains an array of TrustedAdvisorCheckSummary objects.
+The response contains an array of
+<span>TrustedAdvisorCheckSummary</span> objects.
 \itemize{
 \item You must have a Business or Enterprise support plan to use the AWS
 Support API.

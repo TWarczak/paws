@@ -7,13 +7,14 @@
 apigateway_delete_domain_name(domainName)
 }
 \arguments{
-\item{domainName}{[required] [Required] The name of the DomainName resource to be deleted.}
+\item{domainName}{[required] [Required] The name of the <span>DomainName</span> resource to be
+deleted.}
 }
 \value{
 An empty list.
 }
 \description{
-Deletes the DomainName resource.
+Deletes the <span>DomainName</span> resource.
 }
 \section{Request syntax}{
 \preformatted{svc$delete_domain_name(

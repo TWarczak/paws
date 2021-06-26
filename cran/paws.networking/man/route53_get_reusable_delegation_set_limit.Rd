@@ -31,7 +31,7 @@ specified reusable delegation set.
 For the default limit, see
 \href{https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html}{Limits}
 in the \emph{Amazon Route 53 Developer Guide}. To request a higher limit,
-open a case.
+<span>open a case</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$get_reusable_delegation_set_limit(

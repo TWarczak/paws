@@ -7,11 +7,13 @@
 apigateway_get_gateway_response(restApiId, responseType)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
 \item{responseType}{[required] [Required]
 
-The response type of the associated GatewayResponse. Valid values are
+The response type of the associated <span>GatewayResponse</span>. Valid
+values are
 \itemize{
 \item ACCESS_DENIED
 \item API_CONFIGURATION_ERROR
@@ -50,8 +52,8 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Gets a GatewayResponse of a specified response type on the given
-RestApi.
+Gets a <span>GatewayResponse</span> of a specified response type on the
+given <span>RestApi</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$get_gateway_response(

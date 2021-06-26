@@ -2,23 +2,24 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_update_ip_set}
 \alias{waf_update_ip_set}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_update_ip_set(IPSetId, ChangeToken, Updates)
 }
 \arguments{
-\item{IPSetId}{[required] The \code{IPSetId} of the IPSet that you want to update. \code{IPSetId} is
-returned by \code{\link[=waf_create_ip_set]{create_ip_set}} and by
+\item{IPSetId}{[required] The \code{IPSetId} of the <span>IPSet</span> that you want to update.
+\code{IPSetId} is returned by \code{\link[=waf_create_ip_set]{create_ip_set}} and by
 \code{\link[=waf_list_ip_sets]{list_ip_sets}}.}
 
 \item{ChangeToken}{[required] The value returned by the most recent call to
 \code{\link[=waf_get_change_token]{get_change_token}}.}
 
 \item{Updates}{[required] An array of \code{IPSetUpdate} objects that you want to insert into or delete
-from an IPSet. For more information, see the applicable data types:
+from an <span>IPSet</span>. For more information, see the applicable
+data types:
 \itemize{
-\item IPSetUpdate: Contains \code{Action} and \code{IPSetDescriptor}
-\item IPSetDescriptor: Contains \code{Type} and \code{Value}
+\item <span>IPSetUpdate</span>: Contains \code{Action} and \code{IPSetDescriptor}
+\item <span>IPSetDescriptor</span>: Contains \code{Type} and \code{Value}
 }
 
 You can insert a maximum of 1000 addresses in a single request.}
@@ -39,8 +40,8 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Inserts or deletes IPSetDescriptor objects in an \code{IPSet}. For each
-\code{IPSetDescriptor} object, you specify the following values:
+Inserts or deletes <span>IPSetDescriptor</span> objects in an \code{IPSet}.
+For each \code{IPSetDescriptor} object, you specify the following values:
 \itemize{
 \item Whether to insert or delete the object from the array. If you want
 to change an \code{IPSetDescriptor} object, you delete the existing

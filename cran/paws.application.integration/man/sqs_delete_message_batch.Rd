@@ -33,8 +33,8 @@ A list with the following syntax:\preformatted{list(
 }
 \description{
 Deletes up to ten messages from the specified queue. This is a batch
-version of \code{ DeleteMessage.} The result of the action on each message is
-reported individually in the response.
+version of \code{ DeleteMessage.} The result of the action on each message
+is reported individually in the response.
 
 Because the batch request can result in a combination of successful and
 unsuccessful actions, you should check for batch errors even when the

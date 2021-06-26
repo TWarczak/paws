@@ -52,8 +52,7 @@ on them.
 
 When you call \code{\link[=sagemaker_create_endpoint]{create_endpoint}}, a load
 call is made to DynamoDB to verify that your endpoint configuration
-exists. When you read data from a DynamoDB table supporting
-\href{https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html}{\verb{Eventually Consistent Reads}}
+exists. When you read data from a DynamoDB table supporting \href{https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html}{\verb{Eventually Consistent Reads}}
 , the response might not reflect the results of a recently completed
 write operation. The response might include some stale data. If the
 dependent entities are not yet in DynamoDB, this causes a validation
@@ -78,9 +77,9 @@ deactivated AWS STS for a region, you need to reactivate AWS STS for
 that region. For more information, see \href{https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html}{Activating and Deactivating AWS STS in an AWS Region}
 in the \emph{AWS Identity and Access Management User Guide}.
 
-To add the IAM role policies for using this API operation, go to the IAM
-console, and choose Roles in the left navigation pane. Search the IAM
-role that you want to grant access to use the
+To add the IAM role policies for using this API operation, go to the
+<span>IAM console</span>, and choose Roles in the left navigation pane.
+Search the IAM role that you want to grant access to use the
 \code{\link[=sagemaker_create_endpoint]{create_endpoint}} and
 \code{\link[=sagemaker_create_endpoint_config]{create_endpoint_config}} API
 operations, add the following policies to the role.
@@ -108,7 +107,7 @@ For more information, see \href{https://docs.aws.amazon.com/sagemaker/latest/dg/
 
 `"arn:aws:sagemaker:region:account-id:endpoint-config/endpointConfigName"`
 
-`]: R:\%60\%0A\%0A\%20\%20\%20\%20\%60\%22arn:aws:sagemaker:region:account-id:endpoint/endpointName\%22\%60\%0A\%0A\%20\%20\%20\%20\%60\%22arn:aws:sagemaker:region:account-id:endpoint-config/endpointConfigName\%22\%60\%0A\%0A\%20\%20\%20\%20\%60
+`]: R:\%60\%0A\%20\%20\%20\%20\%0A\%20\%20\%20\%20\%60\%22arn:aws:sagemaker:region:account-id:endpoint/endpointName\%22\%60\%0A\%20\%20\%20\%20\%0A\%20\%20\%20\%20\%60\%22arn:aws:sagemaker:region:account-id:endpoint-config/endpointConfigName\%22\%60\%0A\%20\%20\%20\%20\%0A\%20\%20\%20\%20\%60
 }
 }
 \section{Request syntax}{

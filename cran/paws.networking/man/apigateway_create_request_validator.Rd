@@ -8,9 +8,10 @@ apigateway_create_request_validator(restApiId, name,
   validateRequestBody, validateRequestParameters)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
-\item{name}{The name of the to-be-created RequestValidator.}
+\item{name}{The name of the to-be-created <span>RequestValidator</span>.}
 
 \item{validateRequestBody}{A Boolean flag to indicate whether to validate request body according to
 the configured model schema for the method (\code{true}) or not (\code{false}).}
@@ -28,7 +29,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Creates a ReqeustValidator of a given RestApi.
+Creates a <span>ReqeustValidator</span> of a given <span>RestApi</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$create_request_validator(

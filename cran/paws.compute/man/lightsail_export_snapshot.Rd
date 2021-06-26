@@ -41,9 +41,7 @@ A list with the following syntax:\preformatted{list(
 \description{
 Exports an Amazon Lightsail instance or block storage disk snapshot to
 Amazon Elastic Compute Cloud (Amazon EC2). This operation results in an
-export snapshot record that can be used with the
-\verb{create cloud formation stack} operation to create new Amazon EC2
-instances.
+export snapshot record that can be used with the \verb{create cloud formation stack} operation to create new Amazon EC2 instances.
 
 Exported instance snapshots appear in Amazon EC2 as Amazon Machine
 Images (AMIs), and the instance system disk appears as an Amazon Elastic
@@ -53,9 +51,7 @@ Amazon Web Services Region in Amazon EC2 as the source Lightsail
 snapshot.
 
 The \verb{export snapshot} operation supports tag-based access control via
-resource tags applied to the resource identified by
-\verb{source snapshot name}. For more information, see the Lightsail Dev
-Guide.
+resource tags applied to the resource identified by \verb{source snapshot name}. For more information, see the <span>Lightsail Dev Guide</span>.
 
 Use the \verb{get instance snapshots} or \verb{get disk snapshots} operations to
 get a list of snapshots that you can export to Amazon EC2.

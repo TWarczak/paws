@@ -8,7 +8,8 @@ apigateway_update_documentation_part(restApiId, documentationPartId,
   patchOperations)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
 \item{documentationPartId}{[required] [Required] The identifier of the to-be-updated documentation part.}
 

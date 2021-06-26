@@ -40,8 +40,9 @@ A list with the following syntax:\preformatted{list(
 Returns the DNS aliases that are associated with the specified Amazon
 FSx for Windows File Server file system. A history of all DNS aliases
 that have been associated with and disassociated from the file system is
-available in the list of AdministrativeAction provided in the
-\code{\link[=fsx_describe_file_systems]{describe_file_systems}} operation response.
+available in the list of <span>AdministrativeAction</span> provided in
+the \code{\link[=fsx_describe_file_systems]{describe_file_systems}} operation
+response.
 }
 \section{Request syntax}{
 \preformatted{svc$describe_file_system_aliases(

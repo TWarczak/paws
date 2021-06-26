@@ -21,13 +21,13 @@ NULL
 #' Balancers, and Classic Load Balancers. This reference covers the
 #' following load balancer types:
 #' 
-#' -   Application Load Balancer - Operates at the application layer
-#'     (layer 7) and supports HTTP and HTTPS.
+#'   - Application Load Balancer - Operates at the application layer (layer
+#'     7) and supports HTTP and HTTPS.
 #' 
-#' -   Network Load Balancer - Operates at the transport layer (layer 4)
+#'   - Network Load Balancer - Operates at the transport layer (layer 4)
 #'     and supports TCP, TLS, and UDP.
 #' 
-#' -   Gateway Load Balancer - Operates at the network layer (layer 3).
+#'   - Gateway Load Balancer - Operates at the network layer (layer 3).
 #' 
 #' For more information, see the [Elastic Load Balancing User
 #' Guide](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/).
@@ -116,6 +116,12 @@ NULL
 #'  \link[=elbv2_set_subnets]{set_subnets} \tab Enables the Availability Zones for the specified public subnets for the specified Application Load Balancer or Network Load Balancer
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname elbv2
 #' @export
 elbv2 <- function(config = list()) {
@@ -134,7 +140,7 @@ elbv2 <- function(config = list()) {
   endpoints = list("*" = list(endpoint = "elasticloadbalancing.{region}.amazonaws.com", global = FALSE), "cn-*" = list(endpoint = "elasticloadbalancing.{region}.amazonaws.com.cn", global = FALSE), "us-iso-*" = list(endpoint = "elasticloadbalancing.{region}.c2s.ic.gov", global = FALSE), "us-isob-*" = list(endpoint = "elasticloadbalancing.{region}.sc2s.sgov.gov", global = FALSE)),
   service_id = "Elastic Load Balancing v2",
   api_version = "2015-12-01",
-  signing_name = NULL,
+  signing_name = "elasticloadbalancing",
   json_version = "",
   target_prefix = ""
 )

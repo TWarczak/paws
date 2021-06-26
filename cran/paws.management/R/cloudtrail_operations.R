@@ -75,17 +75,17 @@ cloudtrail_add_tags <- function(ResourceId, TagsList = NULL) {
 #' @param Name &#91;required&#93; Specifies the name of the trail. The name must meet the following
 #' requirements:
 #' 
-#' -   Contain only ASCII letters (a-z, A-Z), numbers (0-9), periods (.),
+#'   - Contain only ASCII letters (a-z, A-Z), numbers (0-9), periods (.),
 #'     underscores (_), or dashes (-)
 #' 
-#' -   Start with a letter or number, and end with a letter or number
+#'   - Start with a letter or number, and end with a letter or number
 #' 
-#' -   Be between 3 and 128 characters
+#'   - Be between 3 and 128 characters
 #' 
-#' -   Have no adjacent periods, underscores or dashes. Names like
+#'   - Have no adjacent periods, underscores or dashes. Names like
 #'     `my-_namespace` and `my--namespace` are invalid.
 #' 
-#' -   Not be in IP address format (for example, 192.168.5.4)
+#'   - Not be in IP address format (for example, 192.168.5.4)
 #' @param S3BucketName &#91;required&#93; Specifies the name of the Amazon S3 bucket designated for publishing log
 #' files. See [Amazon S3 Bucket Naming
 #' Requirements](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-s3-bucket-naming-requirements.html).
@@ -126,13 +126,13 @@ cloudtrail_add_tags <- function(ResourceId, TagsList = NULL) {
 #' 
 #' Examples:
 #' 
-#' -   alias/MyAliasName
+#'   - alias/MyAliasName
 #' 
-#' -   arn:aws:kms:us-east-2:123456789012:alias/MyAliasName
+#'   - arn:aws:kms:us-east-2:123456789012:alias/MyAliasName
 #' 
-#' -   arn:aws:kms:us-east-2:123456789012:key/12345678-1234-1234-1234-123456789012
+#'   - arn:aws:kms:us-east-2:123456789012:key/12345678-1234-1234-1234-123456789012
 #' 
-#' -   12345678-1234-1234-1234-123456789012
+#'   - 12345678-1234-1234-1234-123456789012
 #' @param IsOrganizationTrail Specifies whether the trail is created for all accounts in an
 #' organization in AWS Organizations, or only for the current AWS account.
 #' The default is false, and cannot be true unless the call is made on
@@ -266,10 +266,10 @@ cloudtrail_delete_trail <- function(Name) {
 #' If an empty list is specified, information for the trail in the current
 #' region is returned.
 #' 
-#' -   If an empty list is specified and `IncludeShadowTrails` is false,
+#'   - If an empty list is specified and `IncludeShadowTrails` is false,
 #'     then information for all trails in the current region is returned.
 #' 
-#' -   If an empty list is specified and IncludeShadowTrails is null or
+#'   - If an empty list is specified and IncludeShadowTrails is null or
 #'     true, then information for all trails in the current region and any
 #'     associated shadow trails in other regions is returned.
 #' 
@@ -349,13 +349,13 @@ cloudtrail_describe_trails <- function(trailNameList = NULL, includeShadowTrails
 #' your trail. The information returned for your event selectors includes
 #' the following:
 #' 
-#' -   If your event selector includes read-only events, write-only events,
+#'   - If your event selector includes read-only events, write-only events,
 #'     or all events. This applies to both management events and data
 #'     events.
 #' 
-#' -   If your event selector includes management events.
+#'   - If your event selector includes management events.
 #' 
-#' -   If your event selector includes data events, the Amazon S3 objects
+#'   - If your event selector includes data events, the Amazon S3 objects
 #'     or AWS Lambda functions that you are logging for data events.
 #' 
 #' For more information, see [Logging Data and Management Events for
@@ -368,17 +368,17 @@ cloudtrail_describe_trails <- function(trailNameList = NULL, includeShadowTrails
 #' @param TrailName &#91;required&#93; Specifies the name of the trail or trail ARN. If you specify a trail
 #' name, the string must meet the following requirements:
 #' 
-#' -   Contain only ASCII letters (a-z, A-Z), numbers (0-9), periods (.),
+#'   - Contain only ASCII letters (a-z, A-Z), numbers (0-9), periods (.),
 #'     underscores (_), or dashes (-)
 #' 
-#' -   Start with a letter or number, and end with a letter or number
+#'   - Start with a letter or number, and end with a letter or number
 #' 
-#' -   Be between 3 and 128 characters
+#'   - Be between 3 and 128 characters
 #' 
-#' -   Have no adjacent periods, underscores or dashes. Names like
+#'   - Have no adjacent periods, underscores or dashes. Names like
 #'     `my-_namespace` and `my--namespace` are not valid.
 #' 
-#' -   Not be in IP address format (for example, 192.168.5.4)
+#'   - Not be in IP address format (for example, 192.168.5.4)
 #' 
 #' If you specify a trail ARN, it must be in the format:
 #' 
@@ -487,17 +487,17 @@ cloudtrail_get_event_selectors <- function(TrailName) {
 #' @param TrailName &#91;required&#93; Specifies the name of the trail or trail ARN. If you specify a trail
 #' name, the string must meet the following requirements:
 #' 
-#' -   Contain only ASCII letters (a-z, A-Z), numbers (0-9), periods (.),
+#'   - Contain only ASCII letters (a-z, A-Z), numbers (0-9), periods (.),
 #'     underscores (_), or dashes (-)
 #' 
-#' -   Start with a letter or number, and end with a letter or number
+#'   - Start with a letter or number, and end with a letter or number
 #' 
-#' -   Be between 3 and 128 characters
+#'   - Be between 3 and 128 characters
 #' 
-#' -   Have no adjacent periods, underscores or dashes. Names like
+#'   - Have no adjacent periods, underscores or dashes. Names like
 #'     `my-_namespace` and `my--namespace` are not valid.
 #' 
-#' -   Not be in IP address format (for example, 192.168.5.4)
+#'   - Not be in IP address format (for example, 192.168.5.4)
 #' 
 #' If you specify a trail ARN, it must be in the format:
 #' 
@@ -897,29 +897,29 @@ cloudtrail_list_trails <- function(NextToken = NULL) {
 #' a region within the last 90 days. Lookup supports the following
 #' attributes for management events:
 #' 
-#' -   AWS access key
+#'   - AWS access key
 #' 
-#' -   Event ID
+#'   - Event ID
 #' 
-#' -   Event name
+#'   - Event name
 #' 
-#' -   Event source
+#'   - Event source
 #' 
-#' -   Read only
+#'   - Read only
 #' 
-#' -   Resource name
+#'   - Resource name
 #' 
-#' -   Resource type
+#'   - Resource type
 #' 
-#' -   User name
+#'   - User name
 #' 
 #' Lookup supports the following attributes for Insights events:
 #' 
-#' -   Event ID
+#'   - Event ID
 #' 
-#' -   Event name
+#'   - Event name
 #' 
-#' -   Event source
+#'   - Event source
 #' 
 #' All attributes are optional. The default number of results returned is
 #' 50, with a maximum of 50 possible. The response includes a token that
@@ -1079,17 +1079,17 @@ cloudtrail_lookup_events <- function(LookupAttributes = NULL, StartTime = NULL, 
 #' @param TrailName &#91;required&#93; Specifies the name of the trail or trail ARN. If you specify a trail
 #' name, the string must meet the following requirements:
 #' 
-#' -   Contain only ASCII letters (a-z, A-Z), numbers (0-9), periods (.),
+#'   - Contain only ASCII letters (a-z, A-Z), numbers (0-9), periods (.),
 #'     underscores (_), or dashes (-)
 #' 
-#' -   Start with a letter or number, and end with a letter or number
+#'   - Start with a letter or number, and end with a letter or number
 #' 
-#' -   Be between 3 and 128 characters
+#'   - Be between 3 and 128 characters
 #' 
-#' -   Have no adjacent periods, underscores or dashes. Names like
+#'   - Have no adjacent periods, underscores or dashes. Names like
 #'     `my-_namespace` and `my--namespace` are invalid.
 #' 
-#' -   Not be in IP address format (for example, 192.168.5.4)
+#'   - Not be in IP address format (for example, 192.168.5.4)
 #' 
 #' If you specify a trail ARN, it must be in the format:
 #' 
@@ -1469,17 +1469,17 @@ cloudtrail_stop_logging <- function(Name) {
 #' @param Name &#91;required&#93; Specifies the name of the trail or trail ARN. If `Name` is a trail name,
 #' the string must meet the following requirements:
 #' 
-#' -   Contain only ASCII letters (a-z, A-Z), numbers (0-9), periods (.),
+#'   - Contain only ASCII letters (a-z, A-Z), numbers (0-9), periods (.),
 #'     underscores (_), or dashes (-)
 #' 
-#' -   Start with a letter or number, and end with a letter or number
+#'   - Start with a letter or number, and end with a letter or number
 #' 
-#' -   Be between 3 and 128 characters
+#'   - Be between 3 and 128 characters
 #' 
-#' -   Have no adjacent periods, underscores or dashes. Names like
+#'   - Have no adjacent periods, underscores or dashes. Names like
 #'     `my-_namespace` and `my--namespace` are invalid.
 #' 
-#' -   Not be in IP address format (for example, 192.168.5.4)
+#'   - Not be in IP address format (for example, 192.168.5.4)
 #' 
 #' If `Name` is a trail ARN, it must be in the format:
 #' 
@@ -1527,13 +1527,13 @@ cloudtrail_stop_logging <- function(Name) {
 #' 
 #' Examples:
 #' 
-#' -   alias/MyAliasName
+#'   - alias/MyAliasName
 #' 
-#' -   arn:aws:kms:us-east-2:123456789012:alias/MyAliasName
+#'   - arn:aws:kms:us-east-2:123456789012:alias/MyAliasName
 #' 
-#' -   arn:aws:kms:us-east-2:123456789012:key/12345678-1234-1234-1234-123456789012
+#'   - arn:aws:kms:us-east-2:123456789012:key/12345678-1234-1234-1234-123456789012
 #' 
-#' -   12345678-1234-1234-1234-123456789012
+#'   - 12345678-1234-1234-1234-123456789012
 #' @param IsOrganizationTrail Specifies whether the trail is applied to all accounts in an
 #' organization in AWS Organizations, or only for the current AWS account.
 #' The default is false, and cannot be true unless the call is made on

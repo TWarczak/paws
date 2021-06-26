@@ -11,8 +11,8 @@ shield_list_protection_groups(NextToken, MaxResults)
 \code{\link[=shield_list_protection_groups]{list_protection_groups}}. Pass null if
 this is the first call.}
 
-\item{MaxResults}{The maximum number of ProtectionGroup objects to return. If you leave
-this blank, Shield Advanced returns the first 20 results.
+\item{MaxResults}{The maximum number of <span>ProtectionGroup</span> objects to return. If
+you leave this blank, Shield Advanced returns the first 20 results.
 
 This is a maximum value. Shield Advanced might return the results in
 smaller batches. That is, the number of objects returned could be less
@@ -39,7 +39,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Retrieves the ProtectionGroup objects for the account.
+Retrieves the <span>ProtectionGroup</span> objects for the account.
 }
 \section{Request syntax}{
 \preformatted{svc$list_protection_groups(

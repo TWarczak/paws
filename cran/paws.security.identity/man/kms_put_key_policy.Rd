@@ -73,7 +73,7 @@ Attaches a key policy to the specified customer master key (CMK).
 For more information about key policies, see \href{https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html}{Key Policies}
 in the \emph{AWS Key Management Service Developer Guide}. For help writing
 and formatting a JSON policy document, see the \href{https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html}{IAM JSON Policy Reference}
-in the \strong{IAM User Guide} . For examples of adding a key policy in
+in the \emph{\emph{IAM User Guide}} . For examples of adding a key policy in
 multiple programming languages, see \href{https://docs.aws.amazon.com/kms/latest/developerguide/programming-key-policies.html#put-policy}{Setting a key policy}
 in the \emph{AWS Key Management Service Developer Guide}.
 

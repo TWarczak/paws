@@ -21,44 +21,44 @@ NULL
 #' 
 #' You can work with pipelines by calling:
 #' 
-#' -   [`create_pipeline`][codepipeline_create_pipeline], which creates a
+#'   - [`create_pipeline`][codepipeline_create_pipeline], which creates a
 #'     uniquely named pipeline.
 #' 
-#' -   [`delete_pipeline`][codepipeline_delete_pipeline], which deletes the
+#'   - [`delete_pipeline`][codepipeline_delete_pipeline], which deletes the
 #'     specified pipeline.
 #' 
-#' -   [`get_pipeline`][codepipeline_get_pipeline], which returns
+#'   - [`get_pipeline`][codepipeline_get_pipeline], which returns
 #'     information about the pipeline structure and pipeline metadata,
 #'     including the pipeline Amazon Resource Name (ARN).
 #' 
-#' -   [`get_pipeline_execution`][codepipeline_get_pipeline_execution],
+#'   - [`get_pipeline_execution`][codepipeline_get_pipeline_execution],
 #'     which returns information about a specific execution of a pipeline.
 #' 
-#' -   [`get_pipeline_state`][codepipeline_get_pipeline_state], which
+#'   - [`get_pipeline_state`][codepipeline_get_pipeline_state], which
 #'     returns information about the current state of the stages and
 #'     actions of a pipeline.
 #' 
-#' -   [`list_action_executions`][codepipeline_list_action_executions],
+#'   - [`list_action_executions`][codepipeline_list_action_executions],
 #'     which returns action-level details for past executions. The details
 #'     include full stage and action-level details, including individual
 #'     action duration, status, any errors that occurred during the
 #'     execution, and input and output artifact location details.
 #' 
-#' -   [`list_pipelines`][codepipeline_list_pipelines], which gets a
+#'   - [`list_pipelines`][codepipeline_list_pipelines], which gets a
 #'     summary of all of the pipelines associated with your account.
 #' 
-#' -   [`list_pipeline_executions`][codepipeline_list_pipeline_executions],
+#'   - [`list_pipeline_executions`][codepipeline_list_pipeline_executions],
 #'     which gets a summary of the most recent executions for a pipeline.
 #' 
-#' -   [`start_pipeline_execution`][codepipeline_start_pipeline_execution],
+#'   - [`start_pipeline_execution`][codepipeline_start_pipeline_execution],
 #'     which runs the most recent revision of an artifact through the
 #'     pipeline.
 #' 
-#' -   [`stop_pipeline_execution`][codepipeline_stop_pipeline_execution],
+#'   - [`stop_pipeline_execution`][codepipeline_stop_pipeline_execution],
 #'     which stops the specified pipeline execution from continuing through
 #'     the pipeline.
 #' 
-#' -   [`update_pipeline`][codepipeline_update_pipeline], which updates a
+#'   - [`update_pipeline`][codepipeline_update_pipeline], which updates a
 #'     pipeline with edits or changes to the structure of the pipeline.
 #' 
 #' Pipelines include *stages*. Each stage contains one or more actions that
@@ -85,17 +85,17 @@ NULL
 #' [`get_pipeline_state`][codepipeline_get_pipeline_state]. Valid action
 #' categories are:
 #' 
-#' -   Source
+#'   - Source
 #' 
-#' -   Build
+#'   - Build
 #' 
-#' -   Test
+#'   - Test
 #' 
-#' -   Deploy
+#'   - Deploy
 #' 
-#' -   Approval
+#'   - Approval
 #' 
-#' -   Invoke
+#'   - Invoke
 #' 
 #' Pipelines also include *transitions*, which allow the transition of
 #' artifacts from one stage to the next in a pipeline after the actions in
@@ -103,11 +103,11 @@ NULL
 #' 
 #' You can work with transitions by calling:
 #' 
-#' -   [`disable_stage_transition`][codepipeline_disable_stage_transition],
+#'   - [`disable_stage_transition`][codepipeline_disable_stage_transition],
 #'     which prevents artifacts from transitioning to the next stage in a
 #'     pipeline.
 #' 
-#' -   [`enable_stage_transition`][codepipeline_enable_stage_transition],
+#'   - [`enable_stage_transition`][codepipeline_enable_stage_transition],
 #'     which enables transition of artifacts between stages in a pipeline.
 #' 
 #' **Using the API to integrate with AWS CodePipeline**
@@ -122,19 +122,19 @@ NULL
 #' 
 #' You can work with jobs by calling:
 #' 
-#' -   [`acknowledge_job`][codepipeline_acknowledge_job], which confirms
+#'   - [`acknowledge_job`][codepipeline_acknowledge_job], which confirms
 #'     whether a job worker has received the specified job.
 #' 
-#' -   [`get_job_details`][codepipeline_get_job_details], which returns the
+#'   - [`get_job_details`][codepipeline_get_job_details], which returns the
 #'     details of a job.
 #' 
-#' -   [`poll_for_jobs`][codepipeline_poll_for_jobs], which determines
+#'   - [`poll_for_jobs`][codepipeline_poll_for_jobs], which determines
 #'     whether there are any jobs to act on.
 #' 
-#' -   [`put_job_failure_result`][codepipeline_put_job_failure_result],
+#'   - [`put_job_failure_result`][codepipeline_put_job_failure_result],
 #'     which provides details of a job failure.
 #' 
-#' -   [`put_job_success_result`][codepipeline_put_job_success_result],
+#'   - [`put_job_success_result`][codepipeline_put_job_success_result],
 #'     which provides details of a job success.
 #' 
 #' **Third party jobs**, which are instances of an action created by a
@@ -143,19 +143,19 @@ NULL
 #' 
 #' You can work with third party jobs by calling:
 #' 
-#' -   [`acknowledge_third_party_job`][codepipeline_acknowledge_third_party_job],
+#'   - [`acknowledge_third_party_job`][codepipeline_acknowledge_third_party_job],
 #'     which confirms whether a job worker has received the specified job.
 #' 
-#' -   [`get_third_party_job_details`][codepipeline_get_third_party_job_details],
+#'   - [`get_third_party_job_details`][codepipeline_get_third_party_job_details],
 #'     which requests the details of a job for a partner action.
 #' 
-#' -   [`poll_for_third_party_jobs`][codepipeline_poll_for_third_party_jobs],
+#'   - [`poll_for_third_party_jobs`][codepipeline_poll_for_third_party_jobs],
 #'     which determines whether there are any jobs to act on.
 #' 
-#' -   [`put_third_party_job_failure_result`][codepipeline_put_third_party_job_failure_result],
+#'   - [`put_third_party_job_failure_result`][codepipeline_put_third_party_job_failure_result],
 #'     which provides details of a job failure.
 #' 
-#' -   [`put_third_party_job_success_result`][codepipeline_put_third_party_job_success_result],
+#'   - [`put_third_party_job_success_result`][codepipeline_put_third_party_job_success_result],
 #'     which provides details of a job success.
 #'
 #' @param
@@ -229,6 +229,12 @@ NULL
 #'  \link[=codepipeline_update_pipeline]{update_pipeline} \tab Updates a specified pipeline with edits or changes to its structure
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname codepipeline
 #' @export
 codepipeline <- function(config = list()) {
@@ -247,7 +253,7 @@ codepipeline <- function(config = list()) {
   endpoints = list("*" = list(endpoint = "codepipeline.{region}.amazonaws.com", global = FALSE), "cn-*" = list(endpoint = "codepipeline.{region}.amazonaws.com.cn", global = FALSE), "us-iso-*" = list(endpoint = "codepipeline.{region}.c2s.ic.gov", global = FALSE), "us-isob-*" = list(endpoint = "codepipeline.{region}.sc2s.sgov.gov", global = FALSE)),
   service_id = "CodePipeline",
   api_version = "2015-07-09",
-  signing_name = NULL,
+  signing_name = "codepipeline",
   json_version = "1.1",
   target_prefix = "CodePipeline_20150709"
 )

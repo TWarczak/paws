@@ -19,7 +19,7 @@ NULL
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   `resource-groups:CreateGroup`
+#'   - `resource-groups:CreateGroup`
 #'
 #' @usage
 #' resourcegroups_create_group(Name, Description, ResourceQuery, Tags,
@@ -43,9 +43,9 @@ NULL
 #' @param Tags The tags to add to the group. A tag is key-value pair string.
 #' @param Configuration A configuration associates the resource group with an AWS service and
 #' specifies how the service can interact with the resources in the group.
-#' A configuration is an array of GroupConfigurationItem elements. For
-#' details about the syntax of service configurations, see [Service
-#' configurations for resource
+#' A configuration is an array of <span>GroupConfigurationItem</span>
+#' elements. For details about the syntax of service configurations, see
+#' [Service configurations for resource
 #' groups](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html).
 #' 
 #' A resource group can contain either a `Configuration` or a
@@ -159,7 +159,7 @@ resourcegroups_create_group <- function(Name, Description = NULL, ResourceQuery 
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   `resource-groups:DeleteGroup`
+#'   - `resource-groups:DeleteGroup`
 #'
 #' @usage
 #' resourcegroups_delete_group(GroupName, Group)
@@ -216,7 +216,7 @@ resourcegroups_delete_group <- function(GroupName = NULL, Group = NULL) {
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   `resource-groups:GetGroup`
+#'   - `resource-groups:GetGroup`
 #'
 #' @usage
 #' resourcegroups_get_group(GroupName, Group)
@@ -277,7 +277,7 @@ resourcegroups_get_group <- function(GroupName = NULL, Group = NULL) {
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   `resource-groups:GetGroupConfiguration`
+#'   - `resource-groups:GetGroupConfiguration`
 #'
 #' @usage
 #' resourcegroups_get_group_configuration(Group)
@@ -361,7 +361,7 @@ resourcegroups_get_group_configuration <- function(Group = NULL) {
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   `resource-groups:GetGroupQuery`
+#'   - `resource-groups:GetGroupQuery`
 #'
 #' @usage
 #' resourcegroups_get_group_query(GroupName, Group)
@@ -422,7 +422,7 @@ resourcegroups_get_group_query <- function(GroupName = NULL, Group = NULL) {
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   `resource-groups:GetTags`
+#'   - `resource-groups:GetTags`
 #'
 #' @usage
 #' resourcegroups_get_tags(Arn)
@@ -476,7 +476,7 @@ resourcegroups_get_tags <- function(Arn) {
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   `resource-groups:GroupResources`
+#'   - `resource-groups:GroupResources`
 #'
 #' @usage
 #' resourcegroups_group_resources(Group, ResourceArns)
@@ -547,7 +547,7 @@ resourcegroups_group_resources <- function(Group, ResourceArns) {
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   `resource-groups:ListGroupResources`
+#'   - `resource-groups:ListGroupResources`
 #'
 #' @usage
 #' resourcegroups_list_group_resources(GroupName, Group, Filters,
@@ -556,12 +556,13 @@ resourcegroups_group_resources <- function(Group, ResourceArns) {
 #' @param GroupName ***Deprecated - don't use this parameter. Use the `Group` request field
 #' instead.***
 #' @param Group The name or the ARN of the resource group
-#' @param Filters Filters, formatted as ResourceFilter objects, that you want to apply to
-#' a [`list_group_resources`][resourcegroups_list_group_resources]
-#' operation. Filters the results to include only those of the specified
-#' resource types.
+#' @param Filters Filters, formatted as <span>ResourceFilter</span> objects, that you want
+#' to apply to a
+#' [`list_group_resources`][resourcegroups_list_group_resources] operation.
+#' Filters the results to include only those of the specified resource
+#' types.
 #' 
-#' -   `resource-type` - Filter resources by their type. Specify up to five
+#'   - `resource-type` - Filter resources by their type. Specify up to five
 #'     resource types in the format `AWS::ServiceCode::ResourceType`. For
 #'     example, `AWS::EC2::Instance`, or `AWS::S3::Bucket`.
 #' 
@@ -678,26 +679,26 @@ resourcegroups_list_group_resources <- function(GroupName = NULL, Group = NULL, 
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   `resource-groups:ListGroups`
+#'   - `resource-groups:ListGroups`
 #'
 #' @usage
 #' resourcegroups_list_groups(Filters, MaxResults, NextToken)
 #'
-#' @param Filters Filters, formatted as GroupFilter objects, that you want to apply to a
-#' [`list_groups`][resourcegroups_list_groups] operation.
+#' @param Filters Filters, formatted as <span>GroupFilter</span> objects, that you want to
+#' apply to a [`list_groups`][resourcegroups_list_groups] operation.
 #' 
-#' -   `resource-type` - Filter the results to include only those of the
+#'   - `resource-type` - Filter the results to include only those of the
 #'     specified resource types. Specify up to five resource types in the
-#'     format `AWS::ServiceCode::ResourceType `. For example,
+#'     format ` AWS::ServiceCode::ResourceType  `. For example,
 #'     `AWS::EC2::Instance`, or `AWS::S3::Bucket`.
 #' 
-#' -   `configuration-type` - Filter the results to include only those
+#'   - `configuration-type` - Filter the results to include only those
 #'     groups that have the specified configuration types attached. The
 #'     current supported values are:
-#' 
-#'     -   `AWS:EC2::CapacityReservationPool`
-#' 
-#'     -   `AWS:EC2::HostManagement`
+#'     
+#'       - `AWS:EC2::CapacityReservationPool`
+#'     
+#'       - `AWS:EC2::HostManagement`
 #' @param MaxResults The total number of results that you want included on each page of the
 #' response. If you do not include this parameter, it defaults to a value
 #' that is specific to the operation. If additional items exist beyond the
@@ -783,7 +784,7 @@ resourcegroups_list_groups <- function(Filters = NULL, MaxResults = NULL, NextTo
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   `resource-groups:PutGroupConfiguration`
+#'   - `resource-groups:PutGroupConfiguration`
 #'
 #' @usage
 #' resourcegroups_put_group_configuration(Group, Configuration)
@@ -793,7 +794,8 @@ resourcegroups_list_groups <- function(Filters = NULL, MaxResults = NULL, NextTo
 #' @param Configuration The new configuration to associate with the specified group. A
 #' configuration associates the resource group with an AWS service and
 #' specifies how the service can interact with the resources in the group.
-#' A configuration is an array of GroupConfigurationItem elements.
+#' A configuration is an array of <span>GroupConfigurationItem</span>
+#' elements.
 #' 
 #' For information about the syntax of a service configuration, see
 #' [Service configurations for resource
@@ -857,7 +859,7 @@ resourcegroups_put_group_configuration <- function(Group = NULL, Configuration =
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   `resource-groups:SearchResources`
+#'   - `resource-groups:SearchResources`
 #'
 #' @usage
 #' resourcegroups_search_resources(ResourceQuery, MaxResults, NextToken)
@@ -949,7 +951,7 @@ resourcegroups_search_resources <- function(ResourceQuery, MaxResults = NULL, Ne
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   `resource-groups:Tag`
+#'   - `resource-groups:Tag`
 #'
 #' @usage
 #' resourcegroups_tag(Arn, Tags)
@@ -1008,7 +1010,7 @@ resourcegroups_tag <- function(Arn, Tags) {
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   `resource-groups:UngroupResources`
+#'   - `resource-groups:UngroupResources`
 #'
 #' @usage
 #' resourcegroups_ungroup_resources(Group, ResourceArns)
@@ -1078,7 +1080,7 @@ resourcegroups_ungroup_resources <- function(Group, ResourceArns) {
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   `resource-groups:Untag`
+#'   - `resource-groups:Untag`
 #'
 #' @usage
 #' resourcegroups_untag(Arn, Keys)
@@ -1139,7 +1141,7 @@ resourcegroups_untag <- function(Arn, Keys) {
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   `resource-groups:UpdateGroup`
+#'   - `resource-groups:UpdateGroup`
 #'
 #' @usage
 #' resourcegroups_update_group(GroupName, Group, Description)
@@ -1202,7 +1204,7 @@ resourcegroups_update_group <- function(GroupName = NULL, Group = NULL, Descript
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   `resource-groups:UpdateGroupQuery`
+#'   - `resource-groups:UpdateGroupQuery`
 #'
 #' @usage
 #' resourcegroups_update_group_query(GroupName, Group, ResourceQuery)

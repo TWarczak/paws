@@ -12,8 +12,7 @@ quicksight_search_dashboards(AwsAccountId, Filters, NextToken,
 searching for.}
 
 \item{Filters}{[required] The filters to apply to the search. Currently, you can search only by
-user name, for example,
-\verb{"Filters": [ \{ "Name": "QUICKSIGHT_USER", "Operator": "StringEquals", "Value": "arn:aws:quicksight:us-east-1:1:user/default/UserName1" \} ]}}
+user name, for example, \verb{"Filters": [ \{ "Name": "QUICKSIGHT_USER", "Operator": "StringEquals", "Value": "arn:aws:quicksight:us-east-1:1:user/default/UserName1" \} ]}}
 
 \item{NextToken}{The token for the next set of results, or null if there are no more
 results.}

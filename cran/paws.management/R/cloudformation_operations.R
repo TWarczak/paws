@@ -239,54 +239,55 @@ cloudformation_continue_update_rollback <- function(StackName, RoleARN = NULL, R
 #' @param UsePreviousTemplate Whether to reuse the template that is associated with the stack to
 #' create the change set.
 #' @param Parameters A list of `Parameter` structures that specify input parameters for the
-#' change set. For more information, see the Parameter data type.
+#' change set. For more information, see the <span>Parameter</span> data
+#' type.
 #' @param Capabilities In some cases, you must explicitly acknowledge that your stack template
 #' contains certain capabilities in order for AWS CloudFormation to create
 #' the stack.
 #' 
-#' -   `CAPABILITY_IAM` and `CAPABILITY_NAMED_IAM`
-#' 
+#'   - `CAPABILITY_IAM` and `CAPABILITY_NAMED_IAM`
+#'     
 #'     Some stack templates might include resources that can affect
 #'     permissions in your AWS account; for example, by creating new AWS
 #'     Identity and Access Management (IAM) users. For those stacks, you
 #'     must explicitly acknowledge this by specifying one of these
 #'     capabilities.
-#' 
+#'     
 #'     The following IAM resources require you to specify either the
 #'     `CAPABILITY_IAM` or `CAPABILITY_NAMED_IAM` capability.
-#' 
-#'     -   If you have IAM resources, you can specify either capability.
-#' 
-#'     -   If you have IAM resources with custom names, you *must* specify
+#'     
+#'       - If you have IAM resources, you can specify either capability.
+#'     
+#'       - If you have IAM resources with custom names, you *must* specify
 #'         `CAPABILITY_NAMED_IAM`.
-#' 
-#'     -   If you don't specify either of these capabilities, AWS
+#'     
+#'       - If you don't specify either of these capabilities, AWS
 #'         CloudFormation returns an `InsufficientCapabilities` error.
-#' 
+#'     
 #'     If your stack template contains these resources, we recommend that
 #'     you review all permissions associated with them and edit their
 #'     permissions if necessary.
-#' 
-#'     -   [AWS::IAM::AccessKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html)
-#' 
-#'     -   [AWS::IAM::Group](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html)
-#' 
-#'     -   [AWS::IAM::InstanceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html)
-#' 
-#'     -   [AWS::IAM::Policy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html)
-#' 
-#'     -   [AWS::IAM::Role](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html)
-#' 
-#'     -   [AWS::IAM::User](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html)
-#' 
-#'     -   [AWS::IAM::UserToGroupAddition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html)
-#' 
+#'     
+#'       - [AWS::IAM::AccessKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html)
+#'     
+#'       - [AWS::IAM::Group](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html)
+#'     
+#'       - [AWS::IAM::InstanceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html)
+#'     
+#'       - [AWS::IAM::Policy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html)
+#'     
+#'       - [AWS::IAM::Role](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html)
+#'     
+#'       - [AWS::IAM::User](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html)
+#'     
+#'       - [AWS::IAM::UserToGroupAddition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html)
+#'     
 #'     For more information, see [Acknowledging IAM Resources in AWS
 #'     CloudFormation
 #'     Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities).
 #' 
-#' -   `CAPABILITY_AUTO_EXPAND`
-#' 
+#'   - `CAPABILITY_AUTO_EXPAND`
+#'     
 #'     Some template contain macros. Macros perform custom processing on
 #'     templates; this can include simple actions like find-and-replace
 #'     operations, all the way to extensive transformations of entire
@@ -301,17 +302,17 @@ cloudformation_continue_update_rollback <- function(StackName, RoleARN = NULL, R
 #'     and
 #'     [AWS::Serverless](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html)
 #'     transforms, which are macros hosted by AWS CloudFormation.
-#' 
+#'     
 #'     This capacity does not apply to creating change sets, and specifying
 #'     it when creating change sets has no effect.
-#' 
+#'     
 #'     If you want to create a stack from a stack template that contains
 #'     macros *and* nested stacks, you must create or update the stack
 #'     directly from the template using the
 #'     [`create_stack`][cloudformation_create_stack] or
 #'     [`update_stack`][cloudformation_update_stack] action, and specifying
 #'     this capability.
-#' 
+#'     
 #'     For more information on macros, see [Using AWS CloudFormation Macros
 #'     to Perform Custom Processing on
 #'     Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html).
@@ -524,49 +525,49 @@ cloudformation_create_change_set <- function(StackName, TemplateBody = NULL, Tem
 #' contains certain capabilities in order for AWS CloudFormation to create
 #' the stack.
 #' 
-#' -   `CAPABILITY_IAM` and `CAPABILITY_NAMED_IAM`
-#' 
+#'   - `CAPABILITY_IAM` and `CAPABILITY_NAMED_IAM`
+#'     
 #'     Some stack templates might include resources that can affect
 #'     permissions in your AWS account; for example, by creating new AWS
 #'     Identity and Access Management (IAM) users. For those stacks, you
 #'     must explicitly acknowledge this by specifying one of these
 #'     capabilities.
-#' 
+#'     
 #'     The following IAM resources require you to specify either the
 #'     `CAPABILITY_IAM` or `CAPABILITY_NAMED_IAM` capability.
-#' 
-#'     -   If you have IAM resources, you can specify either capability.
-#' 
-#'     -   If you have IAM resources with custom names, you *must* specify
+#'     
+#'       - If you have IAM resources, you can specify either capability.
+#'     
+#'       - If you have IAM resources with custom names, you *must* specify
 #'         `CAPABILITY_NAMED_IAM`.
-#' 
-#'     -   If you don't specify either of these capabilities, AWS
+#'     
+#'       - If you don't specify either of these capabilities, AWS
 #'         CloudFormation returns an `InsufficientCapabilities` error.
-#' 
+#'     
 #'     If your stack template contains these resources, we recommend that
 #'     you review all permissions associated with them and edit their
 #'     permissions if necessary.
-#' 
-#'     -   [AWS::IAM::AccessKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html)
-#' 
-#'     -   [AWS::IAM::Group](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html)
-#' 
-#'     -   [AWS::IAM::InstanceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html)
-#' 
-#'     -   [AWS::IAM::Policy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html)
-#' 
-#'     -   [AWS::IAM::Role](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html)
-#' 
-#'     -   [AWS::IAM::User](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html)
-#' 
-#'     -   [AWS::IAM::UserToGroupAddition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html)
-#' 
+#'     
+#'       - [AWS::IAM::AccessKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html)
+#'     
+#'       - [AWS::IAM::Group](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html)
+#'     
+#'       - [AWS::IAM::InstanceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html)
+#'     
+#'       - [AWS::IAM::Policy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html)
+#'     
+#'       - [AWS::IAM::Role](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html)
+#'     
+#'       - [AWS::IAM::User](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html)
+#'     
+#'       - [AWS::IAM::UserToGroupAddition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html)
+#'     
 #'     For more information, see [Acknowledging IAM Resources in AWS
 #'     CloudFormation
 #'     Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities).
 #' 
-#' -   `CAPABILITY_AUTO_EXPAND`
-#' 
+#'   - `CAPABILITY_AUTO_EXPAND`
+#'     
 #'     Some template contain macros. Macros perform custom processing on
 #'     templates; this can include simple actions like find-and-replace
 #'     operations, all the way to extensive transformations of entire
@@ -581,19 +582,19 @@ cloudformation_create_change_set <- function(StackName, TemplateBody = NULL, Tem
 #'     and
 #'     [AWS::Serverless](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html)
 #'     transforms, which are macros hosted by AWS CloudFormation.
-#' 
+#'     
 #'     If you want to create a stack from a stack template that contains
 #'     macros *and* nested stacks, you must create the stack directly from
 #'     the template using this capability.
-#' 
+#'     
 #'     You should only create stacks directly from a stack template that
 #'     contains macros if you know what processing the macro performs.
-#' 
+#'     
 #'     Each macro relies on an underlying Lambda service function for
 #'     processing stack templates. Be aware that the Lambda function owner
 #'     can update the function operation without AWS CloudFormation being
 #'     notified.
-#' 
+#'     
 #'     For more information, see [Using AWS CloudFormation Macros to
 #'     Perform Custom Processing on
 #'     Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html).
@@ -601,10 +602,10 @@ cloudformation_create_change_set <- function(StackName, TemplateBody = NULL, Tem
 #' this create stack action, such as `AWS::EC2::Instance`, `AWS::EC2::*`,
 #' or `Custom::MyCustomInstance`. Use the following syntax to describe
 #' template resource types: `AWS::*` (for all AWS resource), `Custom::*`
-#' (for all custom resources), `Custom::logical_ID ` (for a specific custom
-#' resource), `AWS::service_name::*` (for all resources of a particular AWS
-#' service), and `AWS::service_name::resource_logical_ID ` (for a specific
-#' AWS resource).
+#' (for all custom resources), ` Custom::logical_ID  ` (for a specific
+#' custom resource), `AWS::service_name::*` (for all resources of a
+#' particular AWS service), and ` AWS::service_name::resource_logical_ID  `
+#' (for a specific AWS resource).
 #' 
 #' If the list of resource types doesn't include a resource that you're
 #' creating, the stack creation fails. By default, AWS CloudFormation
@@ -787,23 +788,23 @@ cloudformation_create_stack <- function(StackName, TemplateBody = NULL, Template
 #' their values, be aware of how AWS CloudFormation sets parameter values
 #' during stack instance operations:
 #' 
-#' -   To override the current value for a parameter, include the parameter
+#'   - To override the current value for a parameter, include the parameter
 #'     and specify its value.
 #' 
-#' -   To leave a parameter set to its present value, you can do one of the
+#'   - To leave a parameter set to its present value, you can do one of the
 #'     following:
-#' 
-#'     -   Do not include the parameter in the list.
-#' 
-#'     -   Include the parameter and specify `UsePreviousValue` as `true`.
+#'     
+#'       - Do not include the parameter in the list.
+#'     
+#'       - Include the parameter and specify `UsePreviousValue` as `true`.
 #'         (You cannot specify both a value and set `UsePreviousValue` to
 #'         `true`.)
 #' 
-#' -   To set all overridden parameter back to the values specified in the
+#'   - To set all overridden parameter back to the values specified in the
 #'     stack set, specify a parameter list but do not include any
 #'     parameters.
 #' 
-#' -   To leave all parameters set to their present values, do not specify
+#'   - To leave all parameters set to their present values, do not specify
 #'     this property at all.
 #' 
 #' During stack set updates, any parameter values overridden for a stack
@@ -935,49 +936,49 @@ cloudformation_create_stack_instances <- function(StackSetName, Accounts = NULL,
 #' template contains certain capabilities in order for AWS CloudFormation
 #' to create the stack set and related stack instances.
 #' 
-#' -   `CAPABILITY_IAM` and `CAPABILITY_NAMED_IAM`
-#' 
+#'   - `CAPABILITY_IAM` and `CAPABILITY_NAMED_IAM`
+#'     
 #'     Some stack templates might include resources that can affect
 #'     permissions in your AWS account; for example, by creating new AWS
 #'     Identity and Access Management (IAM) users. For those stack sets,
 #'     you must explicitly acknowledge this by specifying one of these
 #'     capabilities.
-#' 
+#'     
 #'     The following IAM resources require you to specify either the
 #'     `CAPABILITY_IAM` or `CAPABILITY_NAMED_IAM` capability.
-#' 
-#'     -   If you have IAM resources, you can specify either capability.
-#' 
-#'     -   If you have IAM resources with custom names, you *must* specify
+#'     
+#'       - If you have IAM resources, you can specify either capability.
+#'     
+#'       - If you have IAM resources with custom names, you *must* specify
 #'         `CAPABILITY_NAMED_IAM`.
-#' 
-#'     -   If you don't specify either of these capabilities, AWS
+#'     
+#'       - If you don't specify either of these capabilities, AWS
 #'         CloudFormation returns an `InsufficientCapabilities` error.
-#' 
+#'     
 #'     If your stack template contains these resources, we recommend that
 #'     you review all permissions associated with them and edit their
 #'     permissions if necessary.
-#' 
-#'     -   [AWS::IAM::AccessKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html)
-#' 
-#'     -   [AWS::IAM::Group](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html)
-#' 
-#'     -   [AWS::IAM::InstanceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html)
-#' 
-#'     -   [AWS::IAM::Policy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html)
-#' 
-#'     -   [AWS::IAM::Role](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html)
-#' 
-#'     -   [AWS::IAM::User](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html)
-#' 
-#'     -   [AWS::IAM::UserToGroupAddition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html)
-#' 
+#'     
+#'       - [AWS::IAM::AccessKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html)
+#'     
+#'       - [AWS::IAM::Group](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html)
+#'     
+#'       - [AWS::IAM::InstanceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html)
+#'     
+#'       - [AWS::IAM::Policy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html)
+#'     
+#'       - [AWS::IAM::Role](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html)
+#'     
+#'       - [AWS::IAM::User](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html)
+#'     
+#'       - [AWS::IAM::UserToGroupAddition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html)
+#'     
 #'     For more information, see [Acknowledging IAM Resources in AWS
 #'     CloudFormation
 #'     Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities).
 #' 
-#' -   `CAPABILITY_AUTO_EXPAND`
-#' 
+#'   - `CAPABILITY_AUTO_EXPAND`
+#'     
 #'     Some templates contain macros. If your stack template contains one
 #'     or more macros, and you choose to create a stack directly from the
 #'     processed template, without first reviewing the resulting changes in
@@ -985,7 +986,7 @@ cloudformation_create_stack_instances <- function(StackSetName, Accounts = NULL,
 #'     information, see [Using AWS CloudFormation Macros to Perform Custom
 #'     Processing on
 #'     Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html).
-#' 
+#'     
 #'     Stack sets do not currently support macros in stack templates. (This
 #'     includes the
 #'     [AWS::Include](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html)
@@ -1025,12 +1026,12 @@ cloudformation_create_stack_instances <- function(StackSetName, Accounts = NULL,
 #' @param PermissionModel Describes how the IAM roles required for stack set operations are
 #' created. By default, `SELF-MANAGED` is specified.
 #' 
-#' -   With `self-managed` permissions, you must create the administrator
+#'   - With `self-managed` permissions, you must create the administrator
 #'     and execution roles required to deploy to target accounts. For more
 #'     information, see [Grant Self-Managed Stack Set
 #'     Permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-self-managed.html).
 #' 
-#' -   With `service-managed` permissions, StackSets automatically creates
+#'   - With `service-managed` permissions, StackSets automatically creates
 #'     the IAM roles required to deploy to accounts managed by AWS
 #'     Organizations. For more information, see [Grant Service-Managed
 #'     Stack Set
@@ -1753,10 +1754,10 @@ cloudformation_describe_stack_drift_detection_status <- function(StackDriftDetec
 #' @param StackName The name or the unique stack ID that is associated with the stack, which
 #' are not always interchangeable:
 #' 
-#' -   Running stacks: You can specify either the stack's name or its
+#'   - Running stacks: You can specify either the stack's name or its
 #'     unique stack ID.
 #' 
-#' -   Deleted stacks: You must specify the unique stack ID.
+#'   - Deleted stacks: You must specify the unique stack ID.
 #' 
 #' Default: There is no default value.
 #' @param NextToken A string that identifies the next page of events that you want to
@@ -1908,10 +1909,10 @@ cloudformation_describe_stack_instance <- function(StackSetName, StackInstanceAc
 #' @param StackName &#91;required&#93; The name or the unique stack ID that is associated with the stack, which
 #' are not always interchangeable:
 #' 
-#' -   Running stacks: You can specify either the stack's name or its
+#'   - Running stacks: You can specify either the stack's name or its
 #'     unique stack ID.
 #' 
-#' -   Deleted stacks: You must specify the unique stack ID.
+#'   - Deleted stacks: You must specify the unique stack ID.
 #' 
 #' Default: There is no default value.
 #' @param LogicalResourceId &#91;required&#93; The logical name of the resource as specified in the template.
@@ -2008,16 +2009,16 @@ cloudformation_describe_stack_resource <- function(StackName, LogicalResourceId)
 #' @param StackResourceDriftStatusFilters The resource drift status values to use as filters for the resource
 #' drift results returned.
 #' 
-#' -   `DELETED`: The resource differs from its expected template
+#'   - `DELETED`: The resource differs from its expected template
 #'     configuration in that the resource has been deleted.
 #' 
-#' -   `MODIFIED`: One or more resource properties differ from their
+#'   - `MODIFIED`: One or more resource properties differ from their
 #'     expected template values.
 #' 
-#' -   `IN_SYNC`: The resources's actual configuration matches its expected
+#'   - `IN_SYNC`: The resources's actual configuration matches its expected
 #'     template configuration.
 #' 
-#' -   `NOT_CHECKED`: AWS CloudFormation does not currently return this
+#'   - `NOT_CHECKED`: AWS CloudFormation does not currently return this
 #'     value.
 #' @param NextToken A string that identifies the next page of stack resource drift results.
 #' @param MaxResults The maximum number of results to be returned with a single call. If the
@@ -2132,10 +2133,10 @@ cloudformation_describe_stack_resource_drifts <- function(StackName, StackResour
 #' @param StackName The name or the unique stack ID that is associated with the stack, which
 #' are not always interchangeable:
 #' 
-#' -   Running stacks: You can specify either the stack's name or its
+#'   - Running stacks: You can specify either the stack's name or its
 #'     unique stack ID.
 #' 
-#' -   Deleted stacks: You must specify the unique stack ID.
+#'   - Deleted stacks: You must specify the unique stack ID.
 #' 
 #' Default: There is no default value.
 #' 
@@ -2418,10 +2419,10 @@ cloudformation_describe_stack_set_operation <- function(StackSetName, OperationI
 #' @param StackName The name or the unique stack ID that is associated with the stack, which
 #' are not always interchangeable:
 #' 
-#' -   Running stacks: You can specify either the stack's name or its
+#'   - Running stacks: You can specify either the stack's name or its
 #'     unique stack ID.
 #' 
-#' -   Deleted stacks: You must specify the unique stack ID.
+#'   - Deleted stacks: You must specify the unique stack ID.
 #' 
 #' Default: There is no default value.
 #' @param NextToken A string that identifies the next page of stacks that you want to
@@ -2687,9 +2688,9 @@ cloudformation_describe_type_registration <- function(RegistrationToken) {
 }
 .cloudformation$operations$describe_type_registration <- cloudformation_describe_type_registration
 
-#' Detects whether a stack's actual configuration differs, or has drifted,
-#' from it's expected configuration, as defined in the stack template and
-#' any values specified as template parameters
+#' Detects whether a stack's actual configuration differs, or has
+#' _drifted_, from it's expected configuration, as defined in the stack
+#' template and any values specified as template parameters
 #'
 #' @description
 #' Detects whether a stack's actual configuration differs, or has
@@ -2772,8 +2773,8 @@ cloudformation_detect_stack_drift <- function(StackName, LogicalResourceIds = NU
 .cloudformation$operations$detect_stack_drift <- cloudformation_detect_stack_drift
 
 #' Returns information about whether a resource's actual configuration
-#' differs, or has drifted, from it's expected configuration, as defined in
-#' the stack template and any values specified as template parameters
+#' differs, or has _drifted_, from it's expected configuration, as defined
+#' in the stack template and any values specified as template parameters
 #'
 #' @description
 #' Returns information about whether a resource's actual configuration
@@ -2889,18 +2890,18 @@ cloudformation_detect_stack_resource_drift <- function(StackName, LogicalResourc
 #' Once the operation has completed, use the following actions to return
 #' drift information:
 #' 
-#' -   Use [`describe_stack_set`][cloudformation_describe_stack_set] to
+#'   - Use [`describe_stack_set`][cloudformation_describe_stack_set] to
 #'     return detailed informaiton about the stack set, including detailed
 #'     information about the last *completed* drift operation performed on
 #'     the stack set. (Information about drift operations that are in
 #'     progress is not included.)
 #' 
-#' -   Use [`list_stack_instances`][cloudformation_list_stack_instances] to
+#'   - Use [`list_stack_instances`][cloudformation_list_stack_instances] to
 #'     return a list of stack instances belonging to the stack set,
 #'     including the drift status and last drift time checked of each
 #'     instance.
 #' 
-#' -   Use
+#'   - Use
 #'     [`describe_stack_instance`][cloudformation_describe_stack_instance]
 #'     to return detailed information about a specific stack instance,
 #'     including its drift status and last drift time checked.
@@ -3175,10 +3176,10 @@ cloudformation_get_stack_policy <- function(StackName) {
 #' @param StackName The name or the unique stack ID that is associated with the stack, which
 #' are not always interchangeable:
 #' 
-#' -   Running stacks: You can specify either the stack's name or its
+#'   - Running stacks: You can specify either the stack's name or its
 #'     unique stack ID.
 #' 
-#' -   Deleted stacks: You must specify the unique stack ID.
+#'   - Deleted stacks: You must specify the unique stack ID.
 #' 
 #' Default: There is no default value.
 #' @param ChangeSetName The name or Amazon Resource Name (ARN) of a change set for which AWS
@@ -3659,10 +3660,10 @@ cloudformation_list_stack_instances <- function(StackSetName, NextToken = NULL, 
 #' @param StackName &#91;required&#93; The name or the unique stack ID that is associated with the stack, which
 #' are not always interchangeable:
 #' 
-#' -   Running stacks: You can specify either the stack's name or its
+#'   - Running stacks: You can specify either the stack's name or its
 #'     unique stack ID.
 #' 
-#' -   Deleted stacks: You must specify the unique stack ID.
+#'   - Deleted stacks: You must specify the unique stack ID.
 #' 
 #' Default: There is no default value.
 #' @param NextToken A string that identifies the next page of stack resources that you want
@@ -3969,8 +3970,8 @@ cloudformation_list_stack_sets <- function(NextToken = NULL, MaxResults = NULL, 
 #' retrieve.
 #' @param StackStatusFilter Stack status to use as a filter. Specify one or more stack status codes
 #' to list only stacks with the specified status codes. For a complete list
-#' of stack status codes, see the `StackStatus` parameter of the Stack data
-#' type.
+#' of stack status codes, see the `StackStatus` parameter of the
+#' <span>Stack</span> data type.
 #'
 #' @return
 #' A list with the following syntax:
@@ -4149,11 +4150,11 @@ cloudformation_list_type_registrations <- function(Type = NULL, TypeName = NULL,
 #' 
 #' Valid values include:
 #' 
-#' -   `LIVE`: The type version is registered and can be used in
+#'   - `LIVE`: The type version is registered and can be used in
 #'     CloudFormation operations, dependent on its provisioning behavior
 #'     and visibility scope.
 #' 
-#' -   `DEPRECATED`: The type version has been deregistered and can no
+#'   - `DEPRECATED`: The type version has been deregistered and can no
 #'     longer be used in CloudFormation operations.
 #' 
 #' The default is `LIVE`.
@@ -4227,11 +4228,11 @@ cloudformation_list_type_versions <- function(Type = NULL, TypeName = NULL, Arn 
 #' 
 #' Valid values include:
 #' 
-#' -   `PRIVATE`: The type is only visible and usable within the account in
+#'   - `PRIVATE`: The type is only visible and usable within the account in
 #'     which it is registered. Currently, AWS CloudFormation marks any
 #'     types you create as `PRIVATE`.
 #' 
-#' -   `PUBLIC`: The type is publically visible and usable within any
+#'   - `PUBLIC`: The type is publically visible and usable within any
 #'     Amazon account.
 #' 
 #' The default is `PRIVATE`.
@@ -4241,23 +4242,23 @@ cloudformation_list_type_versions <- function(Type = NULL, TypeName = NULL, Arn 
 #' 
 #' Valid values include:
 #' 
-#' -   `FULLY_MUTABLE`: The type includes an update handler to process
+#'   - `FULLY_MUTABLE`: The type includes an update handler to process
 #'     updates to the type during stack update operations.
 #' 
-#' -   `IMMUTABLE`: The type does not include an update handler, so the
+#'   - `IMMUTABLE`: The type does not include an update handler, so the
 #'     type cannot be updated and must instead be replaced during stack
 #'     update operations.
 #' 
-#' -   `NON_PROVISIONABLE`: The type does not include create, read, and
+#'   - `NON_PROVISIONABLE`: The type does not include create, read, and
 #'     delete handlers, and therefore cannot actually be provisioned.
 #' @param DeprecatedStatus The deprecation status of the types that you want to get summary
 #' information about.
 #' 
 #' Valid values include:
 #' 
-#' -   `LIVE`: The type is registered for use in CloudFormation operations.
+#'   - `LIVE`: The type is registered for use in CloudFormation operations.
 #' 
-#' -   `DEPRECATED`: The type has been deregistered and can no longer be
+#'   - `DEPRECATED`: The type has been deregistered and can no longer be
 #'     used in CloudFormation operations.
 #' @param Type The type of extension.
 #' @param MaxResults The maximum number of results to be returned with a single call. If the
@@ -4395,11 +4396,11 @@ cloudformation_record_handler_progress <- function(BearerToken, OperationStatus,
 #' makes it available for use in CloudFormation templates in your AWS
 #' account, and includes:
 #' 
-#' -   Validating the resource schema
+#'   - Validating the resource schema
 #' 
-#' -   Determining which handlers have been specified for the resource
+#'   - Determining which handlers have been specified for the resource
 #' 
-#' -   Making the resource type available for use in your account
+#'   - Making the resource type available for use in your account
 #' 
 #' For more information on how to develop types and ready them for
 #' registeration, see [Creating Resource
@@ -4431,17 +4432,17 @@ cloudformation_record_handler_progress <- function(BearerToken, OperationStatus,
 #' The following organization namespaces are reserved and cannot be used in
 #' your resource type names:
 #' 
-#' -   `Alexa`
+#'   - `Alexa`
 #' 
-#' -   `AMZN`
+#'   - `AMZN`
 #' 
-#' -   `Amazon`
+#'   - `Amazon`
 #' 
-#' -   `AWS`
+#'   - `AWS`
 #' 
-#' -   `Custom`
+#'   - `Custom`
 #' 
-#' -   `Dev`
+#'   - `Dev`
 #' @param SchemaHandlerPackage &#91;required&#93; A url to the S3 bucket containing the schema handler package that
 #' contains the schema, event handlers, and associated files for the type
 #' you want to register.
@@ -4806,49 +4807,49 @@ cloudformation_stop_stack_set_operation <- function(StackSetName, OperationId) {
 #' contains certain capabilities in order for AWS CloudFormation to update
 #' the stack.
 #' 
-#' -   `CAPABILITY_IAM` and `CAPABILITY_NAMED_IAM`
-#' 
+#'   - `CAPABILITY_IAM` and `CAPABILITY_NAMED_IAM`
+#'     
 #'     Some stack templates might include resources that can affect
 #'     permissions in your AWS account; for example, by creating new AWS
 #'     Identity and Access Management (IAM) users. For those stacks, you
 #'     must explicitly acknowledge this by specifying one of these
 #'     capabilities.
-#' 
+#'     
 #'     The following IAM resources require you to specify either the
 #'     `CAPABILITY_IAM` or `CAPABILITY_NAMED_IAM` capability.
-#' 
-#'     -   If you have IAM resources, you can specify either capability.
-#' 
-#'     -   If you have IAM resources with custom names, you *must* specify
+#'     
+#'       - If you have IAM resources, you can specify either capability.
+#'     
+#'       - If you have IAM resources with custom names, you *must* specify
 #'         `CAPABILITY_NAMED_IAM`.
-#' 
-#'     -   If you don't specify either of these capabilities, AWS
+#'     
+#'       - If you don't specify either of these capabilities, AWS
 #'         CloudFormation returns an `InsufficientCapabilities` error.
-#' 
+#'     
 #'     If your stack template contains these resources, we recommend that
 #'     you review all permissions associated with them and edit their
 #'     permissions if necessary.
-#' 
-#'     -   [AWS::IAM::AccessKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html)
-#' 
-#'     -   [AWS::IAM::Group](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html)
-#' 
-#'     -   [AWS::IAM::InstanceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html)
-#' 
-#'     -   [AWS::IAM::Policy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html)
-#' 
-#'     -   [AWS::IAM::Role](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html)
-#' 
-#'     -   [AWS::IAM::User](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html)
-#' 
-#'     -   [AWS::IAM::UserToGroupAddition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html)
-#' 
+#'     
+#'       - [AWS::IAM::AccessKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html)
+#'     
+#'       - [AWS::IAM::Group](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html)
+#'     
+#'       - [AWS::IAM::InstanceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html)
+#'     
+#'       - [AWS::IAM::Policy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html)
+#'     
+#'       - [AWS::IAM::Role](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html)
+#'     
+#'       - [AWS::IAM::User](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html)
+#'     
+#'       - [AWS::IAM::UserToGroupAddition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html)
+#'     
 #'     For more information, see [Acknowledging IAM Resources in AWS
 #'     CloudFormation
 #'     Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities).
 #' 
-#' -   `CAPABILITY_AUTO_EXPAND`
-#' 
+#'   - `CAPABILITY_AUTO_EXPAND`
+#'     
 #'     Some template contain macros. Macros perform custom processing on
 #'     templates; this can include simple actions like find-and-replace
 #'     operations, all the way to extensive transformations of entire
@@ -4863,19 +4864,19 @@ cloudformation_stop_stack_set_operation <- function(StackSetName, OperationId) {
 #'     and
 #'     [AWS::Serverless](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html)
 #'     transforms, which are macros hosted by AWS CloudFormation.
-#' 
+#'     
 #'     If you want to update a stack from a stack template that contains
 #'     macros *and* nested stacks, you must update the stack directly from
 #'     the template using this capability.
-#' 
+#'     
 #'     You should only update stacks directly from a stack template that
 #'     contains macros if you know what processing the macro performs.
-#' 
+#'     
 #'     Each macro relies on an underlying Lambda service function for
 #'     processing stack templates. Be aware that the Lambda function owner
 #'     can update the function operation without AWS CloudFormation being
 #'     notified.
-#' 
+#'     
 #'     For more information, see [Using AWS CloudFormation Macros to
 #'     Perform Custom Processing on
 #'     Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html).
@@ -5086,23 +5087,23 @@ cloudformation_update_stack <- function(StackName, TemplateBody = NULL, Template
 #' their values, be aware of how AWS CloudFormation sets parameter values
 #' during stack instance update operations:
 #' 
-#' -   To override the current value for a parameter, include the parameter
+#'   - To override the current value for a parameter, include the parameter
 #'     and specify its value.
 #' 
-#' -   To leave a parameter set to its present value, you can do one of the
+#'   - To leave a parameter set to its present value, you can do one of the
 #'     following:
-#' 
-#'     -   Do not include the parameter in the list.
-#' 
-#'     -   Include the parameter and specify `UsePreviousValue` as `true`.
+#'     
+#'       - Do not include the parameter in the list.
+#'     
+#'       - Include the parameter and specify `UsePreviousValue` as `true`.
 #'         (You cannot specify both a value and set `UsePreviousValue` to
 #'         `true`.)
 #' 
-#' -   To set all overridden parameter back to the values specified in the
+#'   - To set all overridden parameter back to the values specified in the
 #'     stack set, specify a parameter list but do not include any
 #'     parameters.
 #' 
-#' -   To leave all parameters set to their present values, do not specify
+#'   - To leave all parameters set to their present values, do not specify
 #'     this property at all.
 #' 
 #' During stack set updates, any parameter values overridden for a stack
@@ -5246,49 +5247,49 @@ cloudformation_update_stack_instances <- function(StackSetName, Accounts = NULL,
 #' contains certain capabilities in order for AWS CloudFormation to update
 #' the stack set and its associated stack instances.
 #' 
-#' -   `CAPABILITY_IAM` and `CAPABILITY_NAMED_IAM`
-#' 
+#'   - `CAPABILITY_IAM` and `CAPABILITY_NAMED_IAM`
+#'     
 #'     Some stack templates might include resources that can affect
 #'     permissions in your AWS account; for example, by creating new AWS
 #'     Identity and Access Management (IAM) users. For those stacks sets,
 #'     you must explicitly acknowledge this by specifying one of these
 #'     capabilities.
-#' 
+#'     
 #'     The following IAM resources require you to specify either the
 #'     `CAPABILITY_IAM` or `CAPABILITY_NAMED_IAM` capability.
-#' 
-#'     -   If you have IAM resources, you can specify either capability.
-#' 
-#'     -   If you have IAM resources with custom names, you *must* specify
+#'     
+#'       - If you have IAM resources, you can specify either capability.
+#'     
+#'       - If you have IAM resources with custom names, you *must* specify
 #'         `CAPABILITY_NAMED_IAM`.
-#' 
-#'     -   If you don't specify either of these capabilities, AWS
+#'     
+#'       - If you don't specify either of these capabilities, AWS
 #'         CloudFormation returns an `InsufficientCapabilities` error.
-#' 
+#'     
 #'     If your stack template contains these resources, we recommend that
 #'     you review all permissions associated with them and edit their
 #'     permissions if necessary.
-#' 
-#'     -   [AWS::IAM::AccessKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html)
-#' 
-#'     -   [AWS::IAM::Group](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html)
-#' 
-#'     -   [AWS::IAM::InstanceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html)
-#' 
-#'     -   [AWS::IAM::Policy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html)
-#' 
-#'     -   [AWS::IAM::Role](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html)
-#' 
-#'     -   [AWS::IAM::User](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html)
-#' 
-#'     -   [AWS::IAM::UserToGroupAddition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html)
-#' 
+#'     
+#'       - [AWS::IAM::AccessKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html)
+#'     
+#'       - [AWS::IAM::Group](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html)
+#'     
+#'       - [AWS::IAM::InstanceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html)
+#'     
+#'       - [AWS::IAM::Policy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html)
+#'     
+#'       - [AWS::IAM::Role](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html)
+#'     
+#'       - [AWS::IAM::User](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html)
+#'     
+#'       - [AWS::IAM::UserToGroupAddition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html)
+#'     
 #'     For more information, see [Acknowledging IAM Resources in AWS
 #'     CloudFormation
 #'     Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities).
 #' 
-#' -   `CAPABILITY_AUTO_EXPAND`
-#' 
+#'   - `CAPABILITY_AUTO_EXPAND`
+#'     
 #'     Some templates contain macros. If your stack template contains one
 #'     or more macros, and you choose to update a stack directly from the
 #'     processed template, without first reviewing the resulting changes in
@@ -5296,7 +5297,7 @@ cloudformation_update_stack_instances <- function(StackSetName, Accounts = NULL,
 #'     information, see [Using AWS CloudFormation Macros to Perform Custom
 #'     Processing on
 #'     Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html).
-#' 
+#'     
 #'     Stack sets do not currently support macros in stack templates. (This
 #'     includes the
 #'     [AWS::Include](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html)
@@ -5313,17 +5314,17 @@ cloudformation_update_stack_instances <- function(StackSetName, Accounts = NULL,
 #' If you specify tags for this parameter, those tags replace any list of
 #' tags that are currently associated with this stack set. This means:
 #' 
-#' -   If you don't specify this parameter, AWS CloudFormation doesn't
+#'   - If you don't specify this parameter, AWS CloudFormation doesn't
 #'     modify the stack's tags.
 #' 
-#' -   If you specify *any* tags using this parameter, you must specify
+#'   - If you specify *any* tags using this parameter, you must specify
 #'     *all* the tags that you want associated with this stack set, even
 #'     tags you've specifed before (for example, when creating the stack
 #'     set or during a previous update of the stack set.). Any tags that
 #'     you don't include in the updated list of tags are removed from the
 #'     stack set, and therefore from the stacks and resources as well.
 #' 
-#' -   If you specify an empty value, AWS CloudFormation removes all
+#'   - If you specify an empty value, AWS CloudFormation removes all
 #'     currently associated tags.
 #' 
 #' If you specify new tags as part of an
@@ -5384,12 +5385,12 @@ cloudformation_update_stack_instances <- function(StackSetName, Accounts = NULL,
 #' created. You cannot modify `PermissionModel` if there are stack
 #' instances associated with your stack set.
 #' 
-#' -   With `self-managed` permissions, you must create the administrator
+#'   - With `self-managed` permissions, you must create the administrator
 #'     and execution roles required to deploy to target accounts. For more
 #'     information, see [Grant Self-Managed Stack Set
 #'     Permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-self-managed.html).
 #' 
-#' -   With `service-managed` permissions, StackSets automatically creates
+#'   - With `service-managed` permissions, StackSets automatically creates
 #'     the IAM roles required to deploy to accounts managed by AWS
 #'     Organizations. For more information, see [Grant Service-Managed
 #'     Stack Set

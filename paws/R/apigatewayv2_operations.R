@@ -631,11 +631,10 @@ apigatewayv2_create_domain_name <- function(DomainName, DomainNameConfigurations
 #' For HTTP API integrations without a specified integrationSubtype request
 #' parameters are a key-value map specifying how to transform HTTP requests
 #' before sending them to the backend. The key should follow the pattern
-#' &lt;action&gt;:&lt;header|querystring|path&gt;.&lt;location&gt; where
-#' action can be append, overwrite or remove. For values, you can provide
-#' static values, or map request data, stage variables, or context
-#' variables that are evaluated at runtime. To learn more, see
-#' [Transforming API requests and
+#' \<action\>:\<header|querystring|path\>.\<location\> where action can be
+#' append, overwrite or remove. For values, you can provide static values,
+#' or map request data, stage variables, or context variables that are
+#' evaluated at runtime. To learn more, see [Transforming API requests and
 #' responses](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html).
 #' @param RequestTemplates Represents a map of Velocity templates that are applied on the request
 #' payload based on the value of the Content-Type header sent by the
@@ -646,12 +645,11 @@ apigatewayv2_create_domain_name <- function(DomainName, DomainNameConfigurations
 #' response to clients. Specify a key-value map from a selection key to
 #' response parameters. The selection key must be a valid HTTP status code
 #' within the range of 200-599. Response parameters are a key-value map.
-#' The key must match pattern
-#' &lt;action&gt;:&lt;header&gt;.&lt;location&gt; or overwrite.statuscode.
-#' The action can be append, overwrite or remove. The value can be a static
-#' value, or map to response data, stage variables, or context variables
-#' that are evaluated at runtime. To learn more, see [Transforming API
-#' requests and
+#' The key must match pattern \<action\>:\<header\>.\<location\> or
+#' overwrite.statuscode. The action can be append, overwrite or remove. The
+#' value can be a static value, or map to response data, stage variables,
+#' or context variables that are evaluated at runtime. To learn more, see
+#' [Transforming API requests and
 #' responses](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html).
 #' @param TemplateSelectionExpression The template selection expression for the integration.
 #' @param TimeoutInMillis Custom timeout between 50 and 29,000 milliseconds for WebSocket APIs and
@@ -1111,7 +1109,7 @@ apigatewayv2_create_route_response <- function(ApiId, ModelSelectionExpression =
 #' @param StageName &#91;required&#93; The name of the stage.
 #' @param StageVariables A map that defines the stage variables for a Stage. Variable names can
 #' have alphanumeric and underscore characters, and the values must match
-#' \[A-Za-z0-9-._~:/?\#&=,\]+.
+#' \[A-Za-z0-9-._\~:/?\#&=,\]+.
 #' @param Tags The collection of tags. Each tag element is associated with a given
 #' resource.
 #'
@@ -4729,11 +4727,11 @@ apigatewayv2_update_domain_name <- function(DomainName, DomainNameConfigurations
 #' For HTTP API integrations, without a specified integrationSubtype
 #' request parameters are a key-value map specifying how to transform HTTP
 #' requests before sending them to the backend. The key should follow the
-#' pattern &lt;action&gt;:&lt;header|querystring|path&gt;.&lt;location&gt;
-#' where action can be append, overwrite or remove. For values, you can
-#' provide static values, or map request data, stage variables, or context
-#' variables that are evaluated at runtime. To learn more, see Transforming
-#' API requests and responses.
+#' pattern \<action\>:\<header|querystring|path\>.\<location\> where action
+#' can be append, overwrite or remove. For values, you can provide static
+#' values, or map request data, stage variables, or context variables that
+#' are evaluated at runtime. To learn more, see <span>Transforming API
+#' requests and responses</span>.
 #' @param RequestTemplates Represents a map of Velocity templates that are applied on the request
 #' payload based on the value of the Content-Type header sent by the
 #' client. The content type value is the key in this map, and the template
@@ -4743,12 +4741,11 @@ apigatewayv2_update_domain_name <- function(DomainName, DomainNameConfigurations
 #' response to clients. Specify a key-value map from a selection key to
 #' response parameters. The selection key must be a valid HTTP status code
 #' within the range of 200-599. Response parameters are a key-value map.
-#' The key must match pattern
-#' &lt;action&gt;:&lt;header&gt;.&lt;location&gt; or overwrite.statuscode.
-#' The action can be append, overwrite or remove. The value can be a static
-#' value, or map to response data, stage variables, or context variables
-#' that are evaluated at runtime. To learn more, see [Transforming API
-#' requests and
+#' The key must match pattern \<action\>:\<header\>.\<location\> or
+#' overwrite.statuscode. The action can be append, overwrite or remove. The
+#' value can be a static value, or map to response data, stage variables,
+#' or context variables that are evaluated at runtime. To learn more, see
+#' [Transforming API requests and
 #' responses](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html).
 #' @param TemplateSelectionExpression The template selection expression for the integration.
 #' @param TimeoutInMillis Custom timeout between 50 and 29,000 milliseconds for WebSocket APIs and
@@ -5221,7 +5218,7 @@ apigatewayv2_update_route_response <- function(ApiId, ModelSelectionExpression =
 #' characters.
 #' @param StageVariables A map that defines the stage variables for a Stage. Variable names can
 #' have alphanumeric and underscore characters, and the values must match
-#' \[A-Za-z0-9-._~:/?\#&=,\]+.
+#' \[A-Za-z0-9-._\~:/?\#&=,\]+.
 #'
 #' @return
 #' A list with the following syntax:

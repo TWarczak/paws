@@ -47,7 +47,7 @@ Systems Manager User Guide}:
 task when it runs, instead use the \code{Parameters} option in the
 \code{TaskInvocationParameters} structure. For information about how Systems
 Manager handles these options for the supported maintenance window task
-types, see MaintenanceWindowTaskInvocationParameters.
+types, see <span>MaintenanceWindowTaskInvocationParameters</span>.
 
 The map has the following format:
 
@@ -96,7 +96,7 @@ logs, instead use the \code{OutputS3BucketName} and \code{OutputS3KeyPrefix}
 options in the \code{TaskInvocationParameters} structure. For information
 about how Systems Manager handles these options for the supported
 maintenance window task types, see
-MaintenanceWindowTaskInvocationParameters.}
+<span>MaintenanceWindowTaskInvocationParameters</span>.}
 
 \item{Name}{The new task name to specify.}
 

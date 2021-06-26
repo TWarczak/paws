@@ -75,7 +75,7 @@ specify a maximum of 5 tags. You can list workflow executions with a
 specific tag by calling
 \code{\link[=swf_list_open_workflow_executions]{list_open_workflow_executions}} or
 \code{\link[=swf_list_closed_workflow_executions]{list_closed_workflow_executions}}
-and specifying a TagFilter.}
+and specifying a <span>TagFilter</span>.}
 
 \item{taskStartToCloseTimeout}{Specifies the maximum duration of decision tasks for this workflow
 execution. This parameter overrides the \code{defaultTaskStartToCloseTimout}

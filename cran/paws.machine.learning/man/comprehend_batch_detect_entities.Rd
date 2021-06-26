@@ -45,7 +45,7 @@ A list with the following syntax:\preformatted{list(
 \description{
 Inspects the text of a batch of documents for named entities and returns
 information about them. For more information about named entities, see
-how-entities
+<span>how-entities</span>
 }
 \section{Request syntax}{
 \preformatted{svc$batch_detect_entities(

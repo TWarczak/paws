@@ -89,9 +89,9 @@ pass the job identifier (\code{JobId}) from the initial call of
 \code{\link[=rekognition_start_segment_detection]{start_segment_detection}}.
 
 \code{\link[=rekognition_get_segment_detection]{get_segment_detection}} returns
-detected segments in an array (\code{Segments}) of SegmentDetection objects.
-\code{Segments} is sorted by the segment types specified in the
-\code{SegmentTypes} input parameter of
+detected segments in an array (\code{Segments}) of
+<span>SegmentDetection</span> objects. \code{Segments} is sorted by the
+segment types specified in the \code{SegmentTypes} input parameter of
 \code{\link[=rekognition_start_segment_detection]{start_segment_detection}}. Each
 element of the array includes the detected segment, the precentage
 confidence in the acuracy of the detected segment, the type of the

@@ -78,7 +78,7 @@ Memcached, this value must be between 1 and 20.
 
 If you need more than 20 nodes for your Memcached cluster, please fill
 out the ElastiCache Limit Increase Request form at
-http://aws.amazon.com/contact-us/elasticache-node-limit-request/.}
+<span>http://aws.amazon.com/contact-us/elasticache-node-limit-request/</span>.}
 
 \item{CacheNodeType}{The compute and memory capacity of the nodes in the node group (shard).
 
@@ -288,12 +288,12 @@ Password constraints:
 \item Must be only printable ASCII characters.
 \item Must be at least 16 characters and no more than 128 characters in
 length.
-\item The only permitted printable special characters are !, &, \#, $, ^,
-<, >, and -. Other printable special characters cannot be used
-in the AUTH token.
+\item The only permitted printable special characters are \!, &, \#, $, ^,
+\<, \>, and -. Other printable special characters cannot be used in
+the AUTH token.
 }
 
-For more information, see AUTH password at
+For more information, see <span>AUTH password</span> at
 http://redis.io/commands/AUTH.}
 
 \item{OutpostMode}{Specifies whether the nodes in the cluster are created in a single

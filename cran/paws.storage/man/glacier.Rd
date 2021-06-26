@@ -9,6 +9,12 @@ glacier(config = list())
 \arguments{
 \item{config}{Optional configuration of credentials, endpoint, and/or region.}
 }
+\value{
+A client for the service. You can call the service's operations using
+syntax like \code{svc$operation(...)}, where \code{svc} is the name you've assigned
+to the client. The available operations are listed in the
+Operations section.
+}
 \description{
 Amazon S3 Glacier (Glacier) is a storage solution for "cold data."
 
@@ -33,14 +39,18 @@ If you are a first-time user of Glacier, we recommend that you begin by
 reading the following sections in the \emph{Amazon S3 Glacier Developer
 Guide}:
 \itemize{
-\item \href{https://docs.aws.amazon.com/amazonglacier/latest/dev/introduction.html}{What is Amazon S3 Glacier} -
-This section of the Developer Guide describes the underlying data
+\item \href{https://docs.aws.amazon.com/amazonglacier/latest/dev/introduction.html}{What is Amazon S3 Glacier}
+\itemize{
+\item This section of the Developer Guide describes the underlying data
 model, the operations it supports, and the AWS SDKs that you can use
 to interact with the service.
-\item \href{https://docs.aws.amazon.com/amazonglacier/latest/dev/amazon-glacier-getting-started.html}{Getting Started with Amazon S3 Glacier} -
-The Getting Started section walks you through the process of
+}
+\item \href{https://docs.aws.amazon.com/amazonglacier/latest/dev/amazon-glacier-getting-started.html}{Getting Started with Amazon S3 Glacier}
+\itemize{
+\item The Getting Started section walks you through the process of
 creating a vault, uploading archives, creating jobs to download
 archives, retrieving the job output, and deleting archives.
+}
 }
 }
 \section{Service syntax}{

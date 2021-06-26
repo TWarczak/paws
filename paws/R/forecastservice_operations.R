@@ -10,22 +10,23 @@ NULL
 #' that you provide helps Forecast understand how to consume the data for
 #' model training. This includes the following:
 #' 
-#' -   *`DataFrequency`* - How frequently your historical time-series data
+#'   - *`DataFrequency`* - How frequently your historical time-series data
 #'     is collected.
 #' 
-#' -   *`Domain`* and *`DatasetType`* - Each dataset has an associated
+#'   - *`Domain`* and *`DatasetType`* - Each dataset has an associated
 #'     dataset domain and a type within the domain. Amazon Forecast
 #'     provides a list of predefined domains and types within each domain.
 #'     For each unique dataset domain and type within the domain, Amazon
 #'     Forecast requires your data to include a minimum set of predefined
 #'     fields.
 #' 
-#' -   *`Schema`* - A schema specifies the fields in the dataset, including
+#'   - *`Schema`* - A schema specifies the fields in the dataset, including
 #'     the field name and data type.
 #' 
 #' After creating a dataset, you import your training data into it and add
 #' the dataset to a dataset group. You use the dataset group to create a
-#' predictor. For more information, see howitworks-datasets-groups.
+#' predictor. For more information, see
+#' <span>howitworks-datasets-groups</span>.
 #' 
 #' To get a list of all your datasets, use the
 #' [`list_datasets`][forecastservice_list_datasets] operation.
@@ -54,7 +55,7 @@ NULL
 #' example, if you choose the `RETAIL` domain and `TARGET_TIME_SERIES` as
 #' the `DatasetType`, Amazon Forecast requires `item_id`, `timestamp`, and
 #' `demand` fields to be present in your data. For more information, see
-#' howitworks-datasets-groups.
+#' <span>howitworks-datasets-groups</span>.
 #' @param DatasetType &#91;required&#93; The dataset type. Valid values depend on the chosen `Domain`.
 #' @param DataFrequency The frequency of data collection. This parameter is required for
 #' RELATED_TIME_SERIES datasets.
@@ -67,7 +68,7 @@ NULL
 #' match the fields in your data. The dataset `Domain` and `DatasetType`
 #' that you choose determine the minimum required fields in your training
 #' data. For information about the required fields for a specific dataset
-#' domain and type, see howitworks-domains-ds-types.
+#' domain and type, see <span>howitworks-domains-ds-types</span>.
 #' @param EncryptionConfig An AWS Key Management Service (KMS) key and the AWS Identity and Access
 #' Management (IAM) role that Amazon Forecast can assume to access the key.
 #' @param Tags The optional metadata that you apply to the dataset to help you
@@ -76,24 +77,24 @@ NULL
 #' 
 #' The following basic restrictions apply to tags:
 #' 
-#' -   Maximum number of tags per resource - 50.
+#'   - Maximum number of tags per resource - 50.
 #' 
-#' -   For each resource, each tag key must be unique, and each tag key can
+#'   - For each resource, each tag key must be unique, and each tag key can
 #'     have only one value.
 #' 
-#' -   Maximum key length - 128 Unicode characters in UTF-8.
+#'   - Maximum key length - 128 Unicode characters in UTF-8.
 #' 
-#' -   Maximum value length - 256 Unicode characters in UTF-8.
+#'   - Maximum value length - 256 Unicode characters in UTF-8.
 #' 
-#' -   If your tagging schema is used across multiple services and
+#'   - If your tagging schema is used across multiple services and
 #'     resources, remember that other services may have restrictions on
 #'     allowed characters. Generally allowed characters are: letters,
 #'     numbers, and spaces representable in UTF-8, and the following
 #'     characters: + - = . _ : / @@.
 #' 
-#' -   Tag keys and values are case sensitive.
+#'   - Tag keys and values are case sensitive.
 #' 
-#' -   Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
+#'   - Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
 #'     such as a prefix for keys as it is reserved for AWS use. You cannot
 #'     edit or delete tag keys with this prefix. Values can have this
 #'     prefix. If a tag value has `aws` as its prefix but the key does not,
@@ -168,7 +169,7 @@ forecastservice_create_dataset <- function(DatasetName, Domain, DatasetType, Dat
 #' 
 #' After creating a dataset group and adding datasets, you use the dataset
 #' group when you create a predictor. For more information, see
-#' howitworks-datasets-groups.
+#' <span>howitworks-datasets-groups</span>.
 #' 
 #' To get a list of all your datasets groups, use the
 #' [`list_dataset_groups`][forecastservice_list_dataset_groups] operation.
@@ -193,7 +194,7 @@ forecastservice_create_dataset <- function(DatasetName, Domain, DatasetType, Dat
 #' example, if you choose the `RETAIL` domain and `TARGET_TIME_SERIES` as
 #' the `DatasetType`, Amazon Forecast requires that `item_id`, `timestamp`,
 #' and `demand` fields are present in your data. For more information, see
-#' howitworks-datasets-groups.
+#' <span>howitworks-datasets-groups</span>.
 #' @param DatasetArns An array of Amazon Resource Names (ARNs) of the datasets that you want
 #' to include in the dataset group.
 #' @param Tags The optional metadata that you apply to the dataset group to help you
@@ -202,24 +203,24 @@ forecastservice_create_dataset <- function(DatasetName, Domain, DatasetType, Dat
 #' 
 #' The following basic restrictions apply to tags:
 #' 
-#' -   Maximum number of tags per resource - 50.
+#'   - Maximum number of tags per resource - 50.
 #' 
-#' -   For each resource, each tag key must be unique, and each tag key can
+#'   - For each resource, each tag key must be unique, and each tag key can
 #'     have only one value.
 #' 
-#' -   Maximum key length - 128 Unicode characters in UTF-8.
+#'   - Maximum key length - 128 Unicode characters in UTF-8.
 #' 
-#' -   Maximum value length - 256 Unicode characters in UTF-8.
+#'   - Maximum value length - 256 Unicode characters in UTF-8.
 #' 
-#' -   If your tagging schema is used across multiple services and
+#'   - If your tagging schema is used across multiple services and
 #'     resources, remember that other services may have restrictions on
 #'     allowed characters. Generally allowed characters are: letters,
 #'     numbers, and spaces representable in UTF-8, and the following
 #'     characters: + - = . _ : / @@.
 #' 
-#' -   Tag keys and values are case sensitive.
+#'   - Tag keys and values are case sensitive.
 #' 
-#' -   Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
+#'   - Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
 #'     such as a prefix for keys as it is reserved for AWS use. You cannot
 #'     edit or delete tag keys with this prefix. Values can have this
 #'     prefix. If a tag value has `aws` as its prefix but the key does not,
@@ -280,11 +281,11 @@ forecastservice_create_dataset_group <- function(DatasetGroupName, Domain, Datas
 #' (Amazon S3) bucket and the Amazon Resource Name (ARN) of the dataset
 #' that you want to import the data to.
 #' 
-#' You must specify a DataSource object that includes an AWS Identity and
-#' Access Management (IAM) role that Amazon Forecast can assume to access
-#' the data, as Amazon Forecast makes a copy of your data and processes it
-#' in an internal AWS system. For more information, see
-#' aws-forecast-iam-roles.
+#' You must specify a <span>DataSource</span> object that includes an AWS
+#' Identity and Access Management (IAM) role that Amazon Forecast can
+#' assume to access the data, as Amazon Forecast makes a copy of your data
+#' and processes it in an internal AWS system. For more information, see
+#' <span>aws-forecast-iam-roles</span>.
 #' 
 #' The training data must be in CSV format. The delimiter must be a comma
 #' (,).
@@ -327,12 +328,12 @@ forecastservice_create_dataset_group <- function(DatasetGroupName, Domain, Datas
 #' depends on the `DataFrequency` specified when the dataset was created.
 #' The following formats are supported
 #' 
-#' -   "yyyy-MM-dd"
-#' 
+#'   - "yyyy-MM-dd"
+#'     
 #'     For the following data frequencies: Y, M, W, and D
 #' 
-#' -   "yyyy-MM-dd HH:mm:ss"
-#' 
+#'   - "yyyy-MM-dd HH:mm:ss"
+#'     
 #'     For the following data frequencies: H, 30min, 15min, and 1min; and
 #'     optionally, for: Y, M, W, and D
 #' 
@@ -351,10 +352,10 @@ forecastservice_create_dataset_group <- function(DatasetGroupName, Domain, Datas
 #' @param GeolocationFormat The format of the geolocation attribute. The geolocation attribute can
 #' be formatted in one of two ways:
 #' 
-#' -   `LAT_LONG` - the latitude and longitude in decimal format (Example:
+#'   - `LAT_LONG` - the latitude and longitude in decimal format (Example:
 #'     47.61_-122.33).
 #' 
-#' -   `CC_POSTALCODE` (US Only) - the country code (US), followed by the
+#'   - `CC_POSTALCODE` (US Only) - the country code (US), followed by the
 #'     5-digit ZIP code (Example: US_98121).
 #' @param Tags The optional metadata that you apply to the dataset import job to help
 #' you categorize and organize them. Each tag consists of a key and an
@@ -362,24 +363,24 @@ forecastservice_create_dataset_group <- function(DatasetGroupName, Domain, Datas
 #' 
 #' The following basic restrictions apply to tags:
 #' 
-#' -   Maximum number of tags per resource - 50.
+#'   - Maximum number of tags per resource - 50.
 #' 
-#' -   For each resource, each tag key must be unique, and each tag key can
+#'   - For each resource, each tag key must be unique, and each tag key can
 #'     have only one value.
 #' 
-#' -   Maximum key length - 128 Unicode characters in UTF-8.
+#'   - Maximum key length - 128 Unicode characters in UTF-8.
 #' 
-#' -   Maximum value length - 256 Unicode characters in UTF-8.
+#'   - Maximum value length - 256 Unicode characters in UTF-8.
 #' 
-#' -   If your tagging schema is used across multiple services and
+#'   - If your tagging schema is used across multiple services and
 #'     resources, remember that other services may have restrictions on
 #'     allowed characters. Generally allowed characters are: letters,
 #'     numbers, and spaces representable in UTF-8, and the following
 #'     characters: + - = . _ : / @@.
 #' 
-#' -   Tag keys and values are case sensitive.
+#'   - Tag keys and values are case sensitive.
 #' 
-#' -   Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
+#'   - Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
 #'     such as a prefix for keys as it is reserved for AWS use. You cannot
 #'     edit or delete tag keys with this prefix. Values can have this
 #'     prefix. If a tag value has `aws` as its prefix but the key does not,
@@ -464,7 +465,7 @@ forecastservice_create_dataset_import_job <- function(DatasetImportJobName, Data
 #' The forecasts generated by Amazon Forecast are in the same time zone as
 #' the dataset that was used to create the predictor.
 #' 
-#' For more information, see howitworks-forecast.
+#' For more information, see <span>howitworks-forecast</span>.
 #' 
 #' The `Status` of the forecast must be `ACTIVE` before you can query or
 #' export the forecast. Use the
@@ -490,24 +491,24 @@ forecastservice_create_dataset_import_job <- function(DatasetImportJobName, Data
 #' 
 #' The following basic restrictions apply to tags:
 #' 
-#' -   Maximum number of tags per resource - 50.
+#'   - Maximum number of tags per resource - 50.
 #' 
-#' -   For each resource, each tag key must be unique, and each tag key can
+#'   - For each resource, each tag key must be unique, and each tag key can
 #'     have only one value.
 #' 
-#' -   Maximum key length - 128 Unicode characters in UTF-8.
+#'   - Maximum key length - 128 Unicode characters in UTF-8.
 #' 
-#' -   Maximum value length - 256 Unicode characters in UTF-8.
+#'   - Maximum value length - 256 Unicode characters in UTF-8.
 #' 
-#' -   If your tagging schema is used across multiple services and
+#'   - If your tagging schema is used across multiple services and
 #'     resources, remember that other services may have restrictions on
 #'     allowed characters. Generally allowed characters are: letters,
 #'     numbers, and spaces representable in UTF-8, and the following
 #'     characters: + - = . _ : / @@.
 #' 
-#' -   Tag keys and values are case sensitive.
+#'   - Tag keys and values are case sensitive.
 #' 
-#' -   Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
+#'   - Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
 #'     such as a prefix for keys as it is reserved for AWS use. You cannot
 #'     edit or delete tag keys with this prefix. Values can have this
 #'     prefix. If a tag value has `aws` as its prefix but the key does not,
@@ -569,17 +570,17 @@ forecastservice_create_forecast <- function(ForecastName, PredictorArn, Forecast
 #' Amazon Simple Storage Service (Amazon S3) bucket. The forecast file name
 #' will match the following conventions:
 #' 
-#' &lt;ForecastExportJobName&gt;_&lt;ExportTimestamp&gt;_&lt;PartNumber&gt;
+#' \<ForecastExportJobName\>_\<ExportTimestamp\>_\<PartNumber\>
 #' 
-#' where the &lt;ExportTimestamp&gt; component is in Java SimpleDateFormat
+#' where the \<ExportTimestamp\> component is in Java SimpleDateFormat
 #' (yyyy-MM-ddTHH-mm-ssZ).
 #' 
-#' You must specify a DataDestination object that includes an AWS Identity
-#' and Access Management (IAM) role that Amazon Forecast can assume to
-#' access the Amazon S3 bucket. For more information, see
-#' aws-forecast-iam-roles.
+#' You must specify a <span>DataDestination</span> object that includes an
+#' AWS Identity and Access Management (IAM) role that Amazon Forecast can
+#' assume to access the Amazon S3 bucket. For more information, see
+#' <span>aws-forecast-iam-roles</span>.
 #' 
-#' For more information, see howitworks-forecast.
+#' For more information, see <span>howitworks-forecast</span>.
 #' 
 #' To get a list of all your forecast export jobs, use the
 #' [`list_forecast_export_jobs`][forecastservice_list_forecast_export_jobs]
@@ -609,24 +610,24 @@ forecastservice_create_forecast <- function(ForecastName, PredictorArn, Forecast
 #' 
 #' The following basic restrictions apply to tags:
 #' 
-#' -   Maximum number of tags per resource - 50.
+#'   - Maximum number of tags per resource - 50.
 #' 
-#' -   For each resource, each tag key must be unique, and each tag key can
+#'   - For each resource, each tag key must be unique, and each tag key can
 #'     have only one value.
 #' 
-#' -   Maximum key length - 128 Unicode characters in UTF-8.
+#'   - Maximum key length - 128 Unicode characters in UTF-8.
 #' 
-#' -   Maximum value length - 256 Unicode characters in UTF-8.
+#'   - Maximum value length - 256 Unicode characters in UTF-8.
 #' 
-#' -   If your tagging schema is used across multiple services and
+#'   - If your tagging schema is used across multiple services and
 #'     resources, remember that other services may have restrictions on
 #'     allowed characters. Generally allowed characters are: letters,
 #'     numbers, and spaces representable in UTF-8, and the following
 #'     characters: + - = . _ : / @@.
 #' 
-#' -   Tag keys and values are case sensitive.
+#'   - Tag keys and values are case sensitive.
 #' 
-#' -   Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
+#'   - Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
 #'     such as a prefix for keys as it is reserved for AWS use. You cannot
 #'     edit or delete tag keys with this prefix. Values can have this
 #'     prefix. If a tag value has `aws` as its prefix but the key does not,
@@ -704,14 +705,15 @@ forecastservice_create_forecast_export_job <- function(ForecastExportJobName, Fo
 #' 
 #' You can specify a featurization configuration to fill and aggregate the
 #' data fields in the `TARGET_TIME_SERIES` dataset to improve model
-#' training. For more information, see FeaturizationConfig.
+#' training. For more information, see <span>FeaturizationConfig</span>.
 #' 
 #' For RELATED_TIME_SERIES datasets,
 #' [`create_predictor`][forecastservice_create_predictor] verifies that the
 #' `DataFrequency` specified when the dataset was created matches the
 #' `ForecastFrequency`. TARGET_TIME_SERIES datasets don't have this
 #' restriction. Amazon Forecast also verifies the delimiter and timestamp
-#' format. For more information, see howitworks-datasets-groups.
+#' format. For more information, see
+#' <span>howitworks-datasets-groups</span>.
 #' 
 #' By default, predictors are trained and evaluated at the 0.1 (P10), 0.5
 #' (P50), and 0.9 (P90) quantiles. You can choose custom forecast types to
@@ -723,17 +725,18 @@ forecastservice_create_forecast_export_job <- function(ForecastExportJobName, Fo
 #' one that minimizes the `objective function`, set `PerformAutoML` to
 #' `true`. The `objective function` is defined as the mean of the weighted
 #' losses over the forecast types. By default, these are the p10, p50, and
-#' p90 quantile losses. For more information, see EvaluationResult.
+#' p90 quantile losses. For more information, see
+#' <span>EvaluationResult</span>.
 #' 
 #' When AutoML is enabled, the following properties are disallowed:
 #' 
-#' -   `AlgorithmArn`
+#'   - `AlgorithmArn`
 #' 
-#' -   `HPOConfig`
+#'   - `HPOConfig`
 #' 
-#' -   `PerformHPO`
+#'   - `PerformHPO`
 #' 
-#' -   `TrainingParameters`
+#'   - `TrainingParameters`
 #' 
 #' To get a list of all of your predictors, use the
 #' [`list_predictors`][forecastservice_list_predictors] operation.
@@ -755,17 +758,17 @@ forecastservice_create_forecast_export_job <- function(ForecastExportJobName, Fo
 #' 
 #' **Supported algorithms:**
 #' 
-#' -   `arn:aws:forecast:::algorithm/ARIMA`
+#'   - `arn:aws:forecast:::algorithm/ARIMA`
 #' 
-#' -   `arn:aws:forecast:::algorithm/CNN-QR`
+#'   - `arn:aws:forecast:::algorithm/CNN-QR`
 #' 
-#' -   `arn:aws:forecast:::algorithm/Deep_AR_Plus`
+#'   - `arn:aws:forecast:::algorithm/Deep_AR_Plus`
 #' 
-#' -   `arn:aws:forecast:::algorithm/ETS`
+#'   - `arn:aws:forecast:::algorithm/ETS`
 #' 
-#' -   `arn:aws:forecast:::algorithm/NPTS`
+#'   - `arn:aws:forecast:::algorithm/NPTS`
 #' 
-#' -   `arn:aws:forecast:::algorithm/Prophet`
+#'   - `arn:aws:forecast:::algorithm/Prophet`
 #' @param ForecastHorizon &#91;required&#93; Specifies the number of time-steps that the model is trained to predict.
 #' The forecast horizon is also called the prediction length.
 #' 
@@ -800,20 +803,21 @@ forecastservice_create_forecast_export_job <- function(ForecastExportJobName, Fo
 #' hyperparameter values from the chosen algorithm.
 #' 
 #' To override the default values, set `PerformHPO` to `true` and,
-#' optionally, supply the HyperParameterTuningJobConfig object. The tuning
-#' job specifies a metric to optimize, which hyperparameters participate in
-#' tuning, and the valid range for each tunable hyperparameter. In this
-#' case, you are required to specify an algorithm and `PerformAutoML` must
-#' be false.
+#' optionally, supply the <span>HyperParameterTuningJobConfig</span>
+#' object. The tuning job specifies a metric to optimize, which
+#' hyperparameters participate in tuning, and the valid range for each
+#' tunable hyperparameter. In this case, you are required to specify an
+#' algorithm and `PerformAutoML` must be false.
 #' 
 #' The following algorithms support HPO:
 #' 
-#' -   DeepAR+
+#'   - DeepAR+
 #' 
-#' -   CNN-QR
+#'   - CNN-QR
 #' @param TrainingParameters The hyperparameters to override for model training. The hyperparameters
 #' that you can override are listed in the individual algorithms. For the
-#' list of supported algorithms, see aws-forecast-choosing-recipes.
+#' list of supported algorithms, see
+#' <span>aws-forecast-choosing-recipes</span>.
 #' @param EvaluationParameters Used to override the default evaluation parameters of the specified
 #' algorithm. Amazon Forecast evaluates a predictor by splitting a dataset
 #' into training data and testing data. The evaluation parameters define
@@ -822,7 +826,7 @@ forecastservice_create_forecast_export_job <- function(ForecastExportJobName, Fo
 #' provide this parameter, Amazon Forecast uses default values. The
 #' individual algorithms specify which hyperparameters support
 #' hyperparameter optimization (HPO). For more information, see
-#' aws-forecast-choosing-recipes.
+#' <span>aws-forecast-choosing-recipes</span>.
 #' 
 #' If you included the `HPOConfig` object, you must set `PerformHPO` to
 #' true.
@@ -837,24 +841,24 @@ forecastservice_create_forecast_export_job <- function(ForecastExportJobName, Fo
 #' 
 #' The following basic restrictions apply to tags:
 #' 
-#' -   Maximum number of tags per resource - 50.
+#'   - Maximum number of tags per resource - 50.
 #' 
-#' -   For each resource, each tag key must be unique, and each tag key can
+#'   - For each resource, each tag key must be unique, and each tag key can
 #'     have only one value.
 #' 
-#' -   Maximum key length - 128 Unicode characters in UTF-8.
+#'   - Maximum key length - 128 Unicode characters in UTF-8.
 #' 
-#' -   Maximum value length - 256 Unicode characters in UTF-8.
+#'   - Maximum value length - 256 Unicode characters in UTF-8.
 #' 
-#' -   If your tagging schema is used across multiple services and
+#'   - If your tagging schema is used across multiple services and
 #'     resources, remember that other services may have restrictions on
 #'     allowed characters. Generally allowed characters are: letters,
 #'     numbers, and spaces representable in UTF-8, and the following
 #'     characters: + - = . _ : / @@.
 #' 
-#' -   Tag keys and values are case sensitive.
+#'   - Tag keys and values are case sensitive.
 #' 
-#' -   Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
+#'   - Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
 #'     such as a prefix for keys as it is reserved for AWS use. You cannot
 #'     edit or delete tag keys with this prefix. Values can have this
 #'     prefix. If a tag value has `aws` as its prefix but the key does not,
@@ -989,13 +993,13 @@ forecastservice_create_predictor <- function(PredictorName, AlgorithmArn = NULL,
 #' 
 #' `<ExportJobName>_<ExportTimestamp>_<PartNumber>.csv`
 #' 
-#' The &lt;ExportTimestamp&gt; component is in Java SimpleDate format
+#' The \<ExportTimestamp\> component is in Java SimpleDate format
 #' (yyyy-MM-ddTHH-mm-ssZ).
 #' 
-#' You must specify a DataDestination object that includes an Amazon S3
-#' bucket and an AWS Identity and Access Management (IAM) role that Amazon
-#' Forecast can assume to access the Amazon S3 bucket. For more
-#' information, see aws-forecast-iam-roles.
+#' You must specify a <span>DataDestination</span> object that includes an
+#' Amazon S3 bucket and an AWS Identity and Access Management (IAM) role
+#' that Amazon Forecast can assume to access the Amazon S3 bucket. For more
+#' information, see <span>aws-forecast-iam-roles</span>.
 #' 
 #' The `Status` of the export job must be `ACTIVE` before you can access
 #' the export in your Amazon S3 bucket. To get the status, use the
@@ -1015,21 +1019,21 @@ forecastservice_create_predictor <- function(PredictorName, AlgorithmArn = NULL,
 #' 
 #' The following restrictions apply to tags:
 #' 
-#' -   For each resource, each tag key must be unique and each tag key must
+#'   - For each resource, each tag key must be unique and each tag key must
 #'     have one value.
 #' 
-#' -   Maximum number of tags per resource: 50.
+#'   - Maximum number of tags per resource: 50.
 #' 
-#' -   Maximum key length: 128 Unicode characters in UTF-8.
+#'   - Maximum key length: 128 Unicode characters in UTF-8.
 #' 
-#' -   Maximum value length: 256 Unicode characters in UTF-8.
+#'   - Maximum value length: 256 Unicode characters in UTF-8.
 #' 
-#' -   Accepted characters: all letters and numbers, spaces representable
+#'   - Accepted characters: all letters and numbers, spaces representable
 #'     in UTF-8, and + - = . _ : / @@. If your tagging schema is used
 #'     across other services and resources, the character restrictions of
 #'     those services also apply.
 #' 
-#' -   Key prefixes cannot include any upper or lowercase combination of
+#'   - Key prefixes cannot include any upper or lowercase combination of
 #'     `aws:` or `AWS:`. Values can have this prefix. If a tag value has
 #'     `aws` as its prefix but the key does not, Forecast considers it to
 #'     be a user tag and will count against the limit of 50 tags. Tags with
@@ -1418,11 +1422,11 @@ forecastservice_delete_predictor_backtest_export_job <- function(PredictorBackte
 #' [`create_dataset`][forecastservice_create_dataset] request, this
 #' operation includes the following dataset properties:
 #' 
-#' -   `CreationTime`
+#'   - `CreationTime`
 #' 
-#' -   `LastModificationTime`
+#'   - `LastModificationTime`
 #' 
-#' -   `Status`
+#'   - `Status`
 #'
 #' @usage
 #' forecastservice_describe_dataset(DatasetArn)
@@ -1498,13 +1502,13 @@ forecastservice_describe_dataset <- function(DatasetArn) {
 #' [`create_dataset_group`][forecastservice_create_dataset_group] request,
 #' this operation includes the following properties:
 #' 
-#' -   `DatasetArns` - The datasets belonging to the group.
+#'   - `DatasetArns` - The datasets belonging to the group.
 #' 
-#' -   `CreationTime`
+#'   - `CreationTime`
 #' 
-#' -   `LastModificationTime`
+#'   - `LastModificationTime`
 #' 
-#' -   `Status`
+#'   - `Status`
 #'
 #' @usage
 #' forecastservice_describe_dataset_group(DatasetGroupArn)
@@ -1570,17 +1574,17 @@ forecastservice_describe_dataset_group <- function(DatasetGroupArn) {
 #' [`create_dataset_import_job`][forecastservice_create_dataset_import_job]
 #' request, this operation includes the following properties:
 #' 
-#' -   `CreationTime`
+#'   - `CreationTime`
 #' 
-#' -   `LastModificationTime`
+#'   - `LastModificationTime`
 #' 
-#' -   `DataSize`
+#'   - `DataSize`
 #' 
-#' -   `FieldStatistics`
+#'   - `FieldStatistics`
 #' 
-#' -   `Status`
+#'   - `Status`
 #' 
-#' -   `Message` - If an error occurred, information about the error.
+#'   - `Message` - If an error occurred, information about the error.
 #'
 #' @usage
 #' forecastservice_describe_dataset_import_job(DatasetImportJobArn)
@@ -1666,16 +1670,16 @@ forecastservice_describe_dataset_import_job <- function(DatasetImportJobArn) {
 #' [`create_forecast`][forecastservice_create_forecast] request, this
 #' operation lists the following properties:
 #' 
-#' -   `DatasetGroupArn` - The dataset group that provided the training
+#'   - `DatasetGroupArn` - The dataset group that provided the training
 #'     data.
 #' 
-#' -   `CreationTime`
+#'   - `CreationTime`
 #' 
-#' -   `LastModificationTime`
+#'   - `LastModificationTime`
 #' 
-#' -   `Status`
+#'   - `Status`
 #' 
-#' -   `Message` - If an error occurred, information about the error.
+#'   - `Message` - If an error occurred, information about the error.
 #'
 #' @usage
 #' forecastservice_describe_forecast(ForecastArn)
@@ -1743,13 +1747,13 @@ forecastservice_describe_forecast <- function(ForecastArn) {
 #' [`create_forecast_export_job`][forecastservice_create_forecast_export_job]
 #' request, this operation lists the following properties:
 #' 
-#' -   `CreationTime`
+#'   - `CreationTime`
 #' 
-#' -   `LastModificationTime`
+#'   - `LastModificationTime`
 #' 
-#' -   `Status`
+#'   - `Status`
 #' 
-#' -   `Message` - If an error occurred, information about the error.
+#'   - `Message` - If an error occurred, information about the error.
 #'
 #' @usage
 #' forecastservice_describe_forecast_export_job(ForecastExportJobArn)
@@ -1818,19 +1822,19 @@ forecastservice_describe_forecast_export_job <- function(ForecastExportJobArn) {
 #' [`create_predictor`][forecastservice_create_predictor] request, this
 #' operation lists the following properties:
 #' 
-#' -   `DatasetImportJobArns` - The dataset import jobs used to import
+#'   - `DatasetImportJobArns` - The dataset import jobs used to import
 #'     training data.
 #' 
-#' -   `AutoMLAlgorithmArns` - If AutoML is performed, the algorithms that
+#'   - `AutoMLAlgorithmArns` - If AutoML is performed, the algorithms that
 #'     were evaluated.
 #' 
-#' -   `CreationTime`
+#'   - `CreationTime`
 #' 
-#' -   `LastModificationTime`
+#'   - `LastModificationTime`
 #' 
-#' -   `Status`
+#'   - `Status`
 #' 
-#' -   `Message` - If an error occurred, information about the error.
+#'   - `Message` - If an error occurred, information about the error.
 #'
 #' @usage
 #' forecastservice_describe_predictor(PredictorArn)
@@ -1993,13 +1997,13 @@ forecastservice_describe_predictor <- function(PredictorArn) {
 #' [`create_predictor_backtest_export_job`][forecastservice_create_predictor_backtest_export_job]
 #' request, this operation lists the following properties:
 #' 
-#' -   `CreationTime`
+#'   - `CreationTime`
 #' 
-#' -   `LastModificationTime`
+#'   - `LastModificationTime`
 #' 
-#' -   `Status`
+#'   - `Status`
 #' 
-#' -   `Message` (if an error occurred)
+#'   - `Message` (if an error occurred)
 #'
 #' @usage
 #' forecastservice_describe_predictor_backtest_export_job(
@@ -2072,16 +2076,16 @@ forecastservice_describe_predictor_backtest_export_job <- function(PredictorBack
 #' 
 #' This operation generates metrics for each backtest window that was
 #' evaluated. The number of backtest windows (`NumberOfBacktestWindows`) is
-#' specified using the EvaluationParameters object, which is optionally
-#' included in the [`create_predictor`][forecastservice_create_predictor]
-#' request. If `NumberOfBacktestWindows` isn't specified, the number
-#' defaults to one.
+#' specified using the <span>EvaluationParameters</span> object, which is
+#' optionally included in the
+#' [`create_predictor`][forecastservice_create_predictor] request. If
+#' `NumberOfBacktestWindows` isn't specified, the number defaults to one.
 #' 
 #' The parameters of the `filling` method determine which items contribute
 #' to the metrics. If you want all items to contribute, specify `zero`. If
 #' you want only those items that have complete data in the range being
 #' evaluated to contribute, specify `nan`. For more information, see
-#' FeaturizationMethod.
+#' <span>FeaturizationMethod</span>.
 #' 
 #' Before you can get accuracy metrics, the `Status` of the predictor must
 #' be `ACTIVE`, signifying that training has completed. To get the status,
@@ -2239,8 +2243,8 @@ forecastservice_list_dataset_groups <- function(NextToken = NULL, MaxResults = N
 #' properties, including its Amazon Resource Name (ARN). You can retrieve
 #' the complete set of properties by using the ARN with the
 #' [`describe_dataset_import_job`][forecastservice_describe_dataset_import_job]
-#' operation. You can filter the list by providing an array of Filter
-#' objects.
+#' operation. You can filter the list by providing an array of
+#' <span>Filter</span> objects.
 #'
 #' @usage
 #' forecastservice_list_dataset_import_jobs(NextToken, MaxResults, Filters)
@@ -2257,19 +2261,20 @@ forecastservice_list_dataset_groups <- function(NextToken = NULL, MaxResults = N
 #' 
 #' **Filter properties**
 #' 
-#' -   `Condition` - The condition to apply. Valid values are `IS` and
+#'   - `Condition` - The condition to apply. Valid values are `IS` and
 #'     `IS_NOT`. To include the datasets that match the statement, specify
 #'     `IS`. To exclude matching datasets, specify `IS_NOT`.
 #' 
-#' -   `Key` - The name of the parameter to filter on. Valid values are
+#'   - `Key` - The name of the parameter to filter on. Valid values are
 #'     `DatasetArn` and `Status`.
 #' 
-#' -   `Value` - The value to match.
+#'   - `Value` - The value to match.
 #' 
 #' For example, to list all dataset import jobs whose status is ACTIVE, you
 #' specify the following filter:
 #' 
-#' `"Filters": [ { "Condition": "IS", "Key": "Status", "Value": "ACTIVE" } ]`
+#' `"Filters": [ { "Condition": "IS", "Key": "Status", "Value": "ACTIVE" }
+#' ]`
 #'
 #' @return
 #' A list with the following syntax:
@@ -2413,7 +2418,8 @@ forecastservice_list_datasets <- function(NextToken = NULL, MaxResults = NULL) {
 #' summary of its properties, including its Amazon Resource Name (ARN). To
 #' retrieve the complete set of properties, use the ARN with the
 #' [`describe_forecast_export_job`][forecastservice_describe_forecast_export_job]
-#' operation. You can filter the list using an array of Filter objects.
+#' operation. You can filter the list using an array of <span>Filter</span>
+#' objects.
 #'
 #' @usage
 #' forecastservice_list_forecast_export_jobs(NextToken, MaxResults,
@@ -2431,20 +2437,21 @@ forecastservice_list_datasets <- function(NextToken = NULL, MaxResults = NULL) {
 #' 
 #' **Filter properties**
 #' 
-#' -   `Condition` - The condition to apply. Valid values are `IS` and
+#'   - `Condition` - The condition to apply. Valid values are `IS` and
 #'     `IS_NOT`. To include the forecast export jobs that match the
 #'     statement, specify `IS`. To exclude matching forecast export jobs,
 #'     specify `IS_NOT`.
 #' 
-#' -   `Key` - The name of the parameter to filter on. Valid values are
+#'   - `Key` - The name of the parameter to filter on. Valid values are
 #'     `ForecastArn` and `Status`.
 #' 
-#' -   `Value` - The value to match.
+#'   - `Value` - The value to match.
 #' 
 #' For example, to list all jobs that export a forecast named
 #' *electricityforecast*, specify the following filter:
 #' 
-#' `"Filters": [ { "Condition": "IS", "Key": "ForecastArn", "Value": "arn:aws:forecast:us-west-2:<acct-id>:forecast/electricityforecast" } ]`
+#' `"Filters": [ { "Condition": "IS", "Key": "ForecastArn", "Value":
+#' "arn:aws:forecast:us-west-2:<acct-id>:forecast/electricityforecast" } ]`
 #'
 #' @return
 #' A list with the following syntax:
@@ -2519,7 +2526,7 @@ forecastservice_list_forecast_export_jobs <- function(NextToken = NULL, MaxResul
 #' its Amazon Resource Name (ARN). To retrieve the complete set of
 #' properties, specify the ARN with the
 #' [`describe_forecast`][forecastservice_describe_forecast] operation. You
-#' can filter the list using an array of Filter objects.
+#' can filter the list using an array of <span>Filter</span> objects.
 #'
 #' @usage
 #' forecastservice_list_forecasts(NextToken, MaxResults, Filters)
@@ -2536,19 +2543,20 @@ forecastservice_list_forecast_export_jobs <- function(NextToken = NULL, MaxResul
 #' 
 #' **Filter properties**
 #' 
-#' -   `Condition` - The condition to apply. Valid values are `IS` and
+#'   - `Condition` - The condition to apply. Valid values are `IS` and
 #'     `IS_NOT`. To include the forecasts that match the statement, specify
 #'     `IS`. To exclude matching forecasts, specify `IS_NOT`.
 #' 
-#' -   `Key` - The name of the parameter to filter on. Valid values are
+#'   - `Key` - The name of the parameter to filter on. Valid values are
 #'     `DatasetGroupArn`, `PredictorArn`, and `Status`.
 #' 
-#' -   `Value` - The value to match.
+#'   - `Value` - The value to match.
 #' 
 #' For example, to list all forecasts whose status is not ACTIVE, you would
 #' specify:
 #' 
-#' `"Filters": [ { "Condition": "IS_NOT", "Key": "Status", "Value": "ACTIVE" } ]`
+#' `"Filters": [ { "Condition": "IS_NOT", "Key": "Status", "Value":
+#' "ACTIVE" } ]`
 #'
 #' @return
 #' A list with the following syntax:
@@ -2616,7 +2624,8 @@ forecastservice_list_forecasts <- function(NextToken = NULL, MaxResults = NULL, 
 #' Returns a list of predictor backtest export jobs created using the
 #' [`create_predictor_backtest_export_job`][forecastservice_create_predictor_backtest_export_job]
 #' operation. This operation returns a summary for each backtest export
-#' job. You can filter the list using an array of Filter objects.
+#' job. You can filter the list using an array of <span>Filter</span>
+#' objects.
 #' 
 #' To retrieve the complete set of properties for a particular backtest
 #' export job, use the ARN with the
@@ -2639,15 +2648,15 @@ forecastservice_list_forecasts <- function(NextToken = NULL, MaxResults = NULL, 
 #' 
 #' **Filter properties**
 #' 
-#' -   `Condition` - The condition to apply. Valid values are `IS` and
+#'   - `Condition` - The condition to apply. Valid values are `IS` and
 #'     `IS_NOT`. To include the predictor backtest export jobs that match
 #'     the statement, specify `IS`. To exclude matching predictor backtest
 #'     export jobs, specify `IS_NOT`.
 #' 
-#' -   `Key` - The name of the parameter to filter on. Valid values are
+#'   - `Key` - The name of the parameter to filter on. Valid values are
 #'     `PredictorBacktestExportJobArn` and `Status`.
 #' 
-#' -   `Value` - The value to match.
+#'   - `Value` - The value to match.
 #'
 #' @return
 #' A list with the following syntax:
@@ -2722,7 +2731,7 @@ forecastservice_list_predictor_backtest_export_jobs <- function(NextToken = NULL
 #' including its Amazon Resource Name (ARN). You can retrieve the complete
 #' set of properties by using the ARN with the
 #' [`describe_predictor`][forecastservice_describe_predictor] operation.
-#' You can filter the list using an array of Filter objects.
+#' You can filter the list using an array of <span>Filter</span> objects.
 #'
 #' @usage
 #' forecastservice_list_predictors(NextToken, MaxResults, Filters)
@@ -2739,19 +2748,20 @@ forecastservice_list_predictor_backtest_export_jobs <- function(NextToken = NULL
 #' 
 #' **Filter properties**
 #' 
-#' -   `Condition` - The condition to apply. Valid values are `IS` and
+#'   - `Condition` - The condition to apply. Valid values are `IS` and
 #'     `IS_NOT`. To include the predictors that match the statement,
 #'     specify `IS`. To exclude matching predictors, specify `IS_NOT`.
 #' 
-#' -   `Key` - The name of the parameter to filter on. Valid values are
+#'   - `Key` - The name of the parameter to filter on. Valid values are
 #'     `DatasetGroupArn` and `Status`.
 #' 
-#' -   `Value` - The value to match.
+#'   - `Value` - The value to match.
 #' 
 #' For example, to list all predictors whose status is ACTIVE, you would
 #' specify:
 #' 
-#' `"Filters": [ { "Condition": "IS", "Key": "Status", "Value": "ACTIVE" } ]`
+#' `"Filters": [ { "Condition": "IS", "Key": "Status", "Value": "ACTIVE" }
+#' ]`
 #'
 #' @return
 #' A list with the following syntax:
@@ -2884,24 +2894,24 @@ forecastservice_list_tags_for_resource <- function(ResourceArn) {
 #' 
 #' The following basic restrictions apply to tags:
 #' 
-#' -   Maximum number of tags per resource - 50.
+#'   - Maximum number of tags per resource - 50.
 #' 
-#' -   For each resource, each tag key must be unique, and each tag key can
+#'   - For each resource, each tag key must be unique, and each tag key can
 #'     have only one value.
 #' 
-#' -   Maximum key length - 128 Unicode characters in UTF-8.
+#'   - Maximum key length - 128 Unicode characters in UTF-8.
 #' 
-#' -   Maximum value length - 256 Unicode characters in UTF-8.
+#'   - Maximum value length - 256 Unicode characters in UTF-8.
 #' 
-#' -   If your tagging schema is used across multiple services and
+#'   - If your tagging schema is used across multiple services and
 #'     resources, remember that other services may have restrictions on
 #'     allowed characters. Generally allowed characters are: letters,
 #'     numbers, and spaces representable in UTF-8, and the following
 #'     characters: + - = . _ : / @@.
 #' 
-#' -   Tag keys and values are case sensitive.
+#'   - Tag keys and values are case sensitive.
 #' 
-#' -   Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
+#'   - Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
 #'     such as a prefix for keys as it is reserved for AWS use. You cannot
 #'     edit or delete tag keys with this prefix. Values can have this
 #'     prefix. If a tag value has `aws` as its prefix but the key does not,

@@ -7,15 +7,16 @@
 apigateway_delete_resource(restApiId, resourceId)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
-\item{resourceId}{[required] [Required] The identifier of the Resource resource.}
+\item{resourceId}{[required] [Required] The identifier of the <span>Resource</span> resource.}
 }
 \value{
 An empty list.
 }
 \description{
-Deletes a Resource resource.
+Deletes a <span>Resource</span> resource.
 }
 \section{Request syntax}{
 \preformatted{svc$delete_resource(

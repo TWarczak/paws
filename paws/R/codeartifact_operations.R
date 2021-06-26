@@ -23,19 +23,19 @@ NULL
 #' @param externalConnection &#91;required&#93; The name of the external connection to add to the repository. The
 #' following values are supported:
 #' 
-#' -   `public:npmjs` - for the npm public repository.
+#'   - `public:npmjs` - for the npm public repository.
 #' 
-#' -   `public:pypi` - for the Python Package Index.
+#'   - `public:pypi` - for the Python Package Index.
 #' 
-#' -   `public:maven-central` - for Maven Central.
+#'   - `public:maven-central` - for Maven Central.
 #' 
-#' -   `public:maven-googleandroid` - for the Google Android repository.
+#'   - `public:maven-googleandroid` - for the Google Android repository.
 #' 
-#' -   `public:maven-gradleplugins` - for the Gradle plugins repository.
+#'   - `public:maven-gradleplugins` - for the Gradle plugins repository.
 #' 
-#' -   `public:maven-commonsware` - for the CommonsWare Android repository.
+#'   - `public:maven-commonsware` - for the CommonsWare Android repository.
 #' 
-#' -   `public:nuget-org` - for the NuGet Gallery.
+#'   - `public:nuget-org` - for the NuGet Gallery.
 #'
 #' @return
 #' A list with the following syntax:
@@ -117,25 +117,25 @@ codeartifact_associate_external_connection <- function(domain, domainOwner = NUL
 #' @param destinationRepository &#91;required&#93; The name of the repository into which package versions are copied.
 #' @param format &#91;required&#93; The format of the package that is copied. The valid package types are:
 #' 
-#' -   `npm`: A Node Package Manager (npm) package.
+#'   - `npm`: A Node Package Manager (npm) package.
 #' 
-#' -   `pypi`: A Python Package Index (PyPI) package.
+#'   - `pypi`: A Python Package Index (PyPI) package.
 #' 
-#' -   `maven`: A Maven package that contains compiled code in a
+#'   - `maven`: A Maven package that contains compiled code in a
 #'     distributable format, such as a JAR file.
 #' 
-#' -   `nuget`: A NuGet package.
+#'   - `nuget`: A NuGet package.
 #' @param namespace The namespace of the package. The package component that specifies its
 #' namespace depends on its type. For example:
 #' 
-#' -   The namespace of a Maven package is its `groupId`.
+#'   - The namespace of a Maven package is its `groupId`.
 #' 
-#' -   The namespace of an npm package is its `scope`.
+#'   - The namespace of an npm package is its `scope`.
 #' 
-#' -   A Python package does not contain a corresponding component, so
+#'   - A Python package does not contain a corresponding component, so
 #'     Python packages do not have a namespace.
 #' 
-#' -   A NuGet package does not contain a corresponding component, so NuGet
+#'   - A NuGet package does not contain a corresponding component, so NuGet
 #'     packages do not have a namespace.
 #' @param package &#91;required&#93; The name of the package that is copied.
 #' @param versions The versions of the package to copy.
@@ -529,8 +529,8 @@ codeartifact_delete_domain_permissions_policy <- function(domain, domainOwner = 
 #' cannot be restored in your repository. If you want to remove a package
 #' version from your repository and be able to restore it later, set its
 #' status to `Archived`. Archived packages cannot be downloaded from a
-#' repository and don't show up with list package APIs (for example,
-#' ` ListackageVersions `), but you can restore them using
+#' repository and don't show up with list package APIs (for example, ` 
+#' ListackageVersions  `), but you can restore them using
 #' [`update_package_versions_status`][codeartifact_update_package_versions_status].
 #'
 #' @usage
@@ -543,38 +543,38 @@ codeartifact_delete_domain_permissions_policy <- function(domain, domainOwner = 
 #' @param repository &#91;required&#93; The name of the repository that contains the package versions to delete.
 #' @param format &#91;required&#93; The format of the package versions to delete. The valid values are:
 #' 
-#' -   `npm`
+#'   - `npm`
 #' 
-#' -   `pypi`
+#'   - `pypi`
 #' 
-#' -   `maven`
+#'   - `maven`
 #' 
-#' -   `nuget`
+#'   - `nuget`
 #' @param namespace The namespace of the package. The package component that specifies its
 #' namespace depends on its type. For example:
 #' 
-#' -   The namespace of a Maven package is its `groupId`.
+#'   - The namespace of a Maven package is its `groupId`.
 #' 
-#' -   The namespace of an npm package is its `scope`.
+#'   - The namespace of an npm package is its `scope`.
 #' 
-#' -   A Python package does not contain a corresponding component, so
+#'   - A Python package does not contain a corresponding component, so
 #'     Python packages do not have a namespace.
 #' 
-#' -   A NuGet package does not contain a corresponding component, so NuGet
+#'   - A NuGet package does not contain a corresponding component, so NuGet
 #'     packages do not have a namespace.
 #' @param package &#91;required&#93; The name of the package with the versions to delete.
 #' @param versions &#91;required&#93; An array of strings that specify the versions of the package to delete.
 #' @param expectedStatus The expected status of the package version to delete. Valid values are:
 #' 
-#' -   `Published`
+#'   - `Published`
 #' 
-#' -   `Unfinished`
+#'   - `Unfinished`
 #' 
-#' -   `Unlisted`
+#'   - `Unlisted`
 #' 
-#' -   `Archived`
+#'   - `Archived`
 #' 
-#' -   `Disposed`
+#'   - `Disposed`
 #'
 #' @return
 #' A list with the following syntax:
@@ -854,24 +854,24 @@ codeartifact_describe_domain <- function(domain, domainOwner = NULL) {
 #' @param format &#91;required&#93; A format that specifies the type of the requested package version. The
 #' valid values are:
 #' 
-#' -   `npm`
+#'   - `npm`
 #' 
-#' -   `pypi`
+#'   - `pypi`
 #' 
-#' -   `maven`
+#'   - `maven`
 #' 
-#' -   `nuget`
+#'   - `nuget`
 #' @param namespace The namespace of the package. The package component that specifies its
 #' namespace depends on its type. For example:
 #' 
-#' -   The namespace of a Maven package is its `groupId`.
+#'   - The namespace of a Maven package is its `groupId`.
 #' 
-#' -   The namespace of an npm package is its `scope`.
+#'   - The namespace of an npm package is its `scope`.
 #' 
-#' -   A Python package does not contain a corresponding component, so
+#'   - A Python package does not contain a corresponding component, so
 #'     Python packages do not have a namespace.
 #' 
-#' -   A NuGet package does not contain a corresponding component, so NuGet
+#'   - A NuGet package does not contain a corresponding component, so NuGet
 #'     packages do not have a namespace.
 #' @param package &#91;required&#93; The name of the requested package version.
 #' @param packageVersion &#91;required&#93; A string that contains the package version (for example, `3.5.2`).
@@ -1112,39 +1112,39 @@ codeartifact_disassociate_external_connection <- function(domain, domainOwner = 
 #' @param format &#91;required&#93; A format that specifies the type of package versions you want to
 #' dispose. The valid values are:
 #' 
-#' -   `npm`
+#'   - `npm`
 #' 
-#' -   `pypi`
+#'   - `pypi`
 #' 
-#' -   `maven`
+#'   - `maven`
 #' 
-#' -   `nuget`
+#'   - `nuget`
 #' @param namespace The namespace of the package. The package component that specifies its
 #' namespace depends on its type. For example:
 #' 
-#' -   The namespace of a Maven package is its `groupId`.
+#'   - The namespace of a Maven package is its `groupId`.
 #' 
-#' -   The namespace of an npm package is its `scope`.
+#'   - The namespace of an npm package is its `scope`.
 #' 
-#' -   A Python package does not contain a corresponding component, so
+#'   - A Python package does not contain a corresponding component, so
 #'     Python packages do not have a namespace.
 #' 
-#' -   A NuGet package does not contain a corresponding component, so NuGet
+#'   - A NuGet package does not contain a corresponding component, so NuGet
 #'     packages do not have a namespace.
 #' @param package &#91;required&#93; The name of the package with the versions you want to dispose.
 #' @param versions &#91;required&#93; The versions of the package you want to dispose.
 #' @param versionRevisions The revisions of the package versions you want to dispose.
 #' @param expectedStatus The expected status of the package version to dispose. Valid values are:
 #' 
-#' -   `Published`
+#'   - `Published`
 #' 
-#' -   `Unfinished`
+#'   - `Unfinished`
 #' 
-#' -   `Unlisted`
+#'   - `Unlisted`
 #' 
-#' -   `Archived`
+#'   - `Archived`
 #' 
-#' -   `Disposed`
+#'   - `Disposed`
 #'
 #' @return
 #' A list with the following syntax:
@@ -1226,11 +1226,11 @@ codeartifact_dispose_package_versions <- function(domain, domainOwner = NULL, re
 #' called. If `login` or
 #' [`get_authorization_token`][codeartifact_get_authorization_token] is
 #' called while assuming a role, the token lifetime is independent of the
-#' maximum session duration of the role. For example, if you call
-#' `sts assume-role` and specify a session duration of 15 minutes, then
-#' generate a CodeArtifact authorization token, the token will be valid for
-#' the full authorization period even though this is longer than the
-#' 15-minute session duration.
+#' maximum session duration of the role. For example, if you call `sts
+#' assume-role` and specify a session duration of 15 minutes, then generate
+#' a CodeArtifact authorization token, the token will be valid for the full
+#' authorization period even though this is longer than the 15-minute
+#' session duration.
 #' 
 #' See [Using IAM
 #' Roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use.html)
@@ -1370,24 +1370,24 @@ codeartifact_get_domain_permissions_policy <- function(domain, domainOwner = NUL
 #' @param format &#91;required&#93; A format that specifies the type of the package version with the
 #' requested asset file. The valid values are:
 #' 
-#' -   `npm`
+#'   - `npm`
 #' 
-#' -   `pypi`
+#'   - `pypi`
 #' 
-#' -   `maven`
+#'   - `maven`
 #' 
-#' -   `nuget`
+#'   - `nuget`
 #' @param namespace The namespace of the package. The package component that specifies its
 #' namespace depends on its type. For example:
 #' 
-#' -   The namespace of a Maven package is its `groupId`.
+#'   - The namespace of a Maven package is its `groupId`.
 #' 
-#' -   The namespace of an npm package is its `scope`.
+#'   - The namespace of an npm package is its `scope`.
 #' 
-#' -   A Python package does not contain a corresponding component, so
+#'   - A Python package does not contain a corresponding component, so
 #'     Python packages do not have a namespace.
 #' 
-#' -   A NuGet package does not contain a corresponding component, so NuGet
+#'   - A NuGet package does not contain a corresponding component, so NuGet
 #'     packages do not have a namespace.
 #' @param package &#91;required&#93; The name of the package that contains the requested asset.
 #' @param packageVersion &#91;required&#93; A string that contains the package version (for example, `3.5.2`).
@@ -1464,24 +1464,24 @@ codeartifact_get_package_version_asset <- function(domain, domainOwner = NULL, r
 #' @param format &#91;required&#93; A format that specifies the type of the package version with the
 #' requested readme file. The valid values are:
 #' 
-#' -   `npm`
+#'   - `npm`
 #' 
-#' -   `pypi`
+#'   - `pypi`
 #' 
-#' -   `maven`
+#'   - `maven`
 #' 
-#' -   `nuget`
+#'   - `nuget`
 #' @param namespace The namespace of the package. The package component that specifies its
 #' namespace depends on its type. For example:
 #' 
-#' -   The namespace of a Maven package is its `groupId`.
+#'   - The namespace of a Maven package is its `groupId`.
 #' 
-#' -   The namespace of an npm package is its `scope`.
+#'   - The namespace of an npm package is its `scope`.
 #' 
-#' -   A Python package does not contain a corresponding component, so
+#'   - A Python package does not contain a corresponding component, so
 #'     Python packages do not have a namespace.
 #' 
-#' -   A NuGet package does not contain a corresponding component, so NuGet
+#'   - A NuGet package does not contain a corresponding component, so NuGet
 #'     packages do not have a namespace.
 #' @param package &#91;required&#93; The name of the package version that contains the requested readme file.
 #' @param packageVersion &#91;required&#93; A string that contains the package version (for example, `3.5.2`).
@@ -1538,13 +1538,13 @@ codeartifact_get_package_version_readme <- function(domain, domainOwner = NULL, 
 #' Returns the endpoint of a repository for a specific package format. A
 #' repository has one endpoint for each package format:
 #' 
-#' -   `npm`
+#'   - `npm`
 #' 
-#' -   `pypi`
+#'   - `pypi`
 #' 
-#' -   `maven`
+#'   - `maven`
 #' 
-#' -   `nuget`
+#'   - `nuget`
 #'
 #' @usage
 #' codeartifact_get_repository_endpoint(domain, domainOwner, repository,
@@ -1557,13 +1557,13 @@ codeartifact_get_package_version_readme <- function(domain, domainOwner = NULL, 
 #' @param format &#91;required&#93; Returns which endpoint of a repository to return. A repository has one
 #' endpoint for each package format:
 #' 
-#' -   `npm`
+#'   - `npm`
 #' 
-#' -   `pypi`
+#'   - `pypi`
 #' 
-#' -   `maven`
+#'   - `maven`
 #' 
-#' -   `nuget`
+#'   - `nuget`
 #'
 #' @return
 #' A list with the following syntax:
@@ -1664,9 +1664,9 @@ codeartifact_get_repository_permissions_policy <- function(domain, domainOwner =
 #' account that makes this call
 #'
 #' @description
-#' Returns a list of ` DomainSummary ` objects for all domains owned by the
-#' AWS account that makes this call. Each returned `DomainSummary` object
-#' contains information about a domain.
+#' Returns a list of `  DomainSummary  ` objects for all domains owned by
+#' the AWS account that makes this call. Each returned `DomainSummary`
+#' object contains information about a domain.
 #'
 #' @usage
 #' codeartifact_list_domains(maxResults, nextToken)
@@ -1745,25 +1745,25 @@ codeartifact_list_domains <- function(maxResults = NULL, nextToken = NULL) {
 #' @param format &#91;required&#93; The format of the package that contains the returned package version
 #' assets. The valid package types are:
 #' 
-#' -   `npm`: A Node Package Manager (npm) package.
+#'   - `npm`: A Node Package Manager (npm) package.
 #' 
-#' -   `pypi`: A Python Package Index (PyPI) package.
+#'   - `pypi`: A Python Package Index (PyPI) package.
 #' 
-#' -   `maven`: A Maven package that contains compiled code in a
+#'   - `maven`: A Maven package that contains compiled code in a
 #'     distributable format, such as a JAR file.
 #' 
-#' -   `nuget`: A NuGet package.
+#'   - `nuget`: A NuGet package.
 #' @param namespace The namespace of the package. The package component that specifies its
 #' namespace depends on its type. For example:
 #' 
-#' -   The namespace of a Maven package is its `groupId`.
+#'   - The namespace of a Maven package is its `groupId`.
 #' 
-#' -   The namespace of an npm package is its `scope`.
+#'   - The namespace of an npm package is its `scope`.
 #' 
-#' -   A Python package does not contain a corresponding component, so
+#'   - A Python package does not contain a corresponding component, so
 #'     Python packages do not have a namespace.
 #' 
-#' -   A NuGet package does not contain a corresponding component, so NuGet
+#'   - A NuGet package does not contain a corresponding component, so NuGet
 #'     packages do not have a namespace.
 #' @param package &#91;required&#93; The name of the package that contains the returned package version
 #' assets.
@@ -1854,25 +1854,25 @@ codeartifact_list_package_version_assets <- function(domain, domainOwner = NULL,
 #' @param format &#91;required&#93; The format of the package with the requested dependencies. The valid
 #' package types are:
 #' 
-#' -   `npm`: A Node Package Manager (npm) package.
+#'   - `npm`: A Node Package Manager (npm) package.
 #' 
-#' -   `pypi`: A Python Package Index (PyPI) package.
+#'   - `pypi`: A Python Package Index (PyPI) package.
 #' 
-#' -   `maven`: A Maven package that contains compiled code in a
+#'   - `maven`: A Maven package that contains compiled code in a
 #'     distributable format, such as a JAR file.
 #' 
-#' -   `nuget`: A NuGet package.
+#'   - `nuget`: A NuGet package.
 #' @param namespace The namespace of the package. The package component that specifies its
 #' namespace depends on its type. For example:
 #' 
-#' -   The namespace of a Maven package is its `groupId`.
+#'   - The namespace of a Maven package is its `groupId`.
 #' 
-#' -   The namespace of an npm package is its `scope`.
+#'   - The namespace of an npm package is its `scope`.
 #' 
-#' -   A Python package does not contain a corresponding component, so
+#'   - A Python package does not contain a corresponding component, so
 #'     Python packages do not have a namespace.
 #' 
-#' -   A NuGet package does not contain a corresponding component, so NuGet
+#'   - A NuGet package does not contain a corresponding component, so NuGet
 #'     packages do not have a namespace.
 #' @param package &#91;required&#93; The name of the package versions' package.
 #' @param packageVersion &#91;required&#93; A string that contains the package version (for example, `3.5.2`).
@@ -1955,40 +1955,40 @@ codeartifact_list_package_version_dependencies <- function(domain, domainOwner =
 #' @param repository &#91;required&#93; The name of the repository that contains the package.
 #' @param format &#91;required&#93; The format of the returned packages. The valid package types are:
 #' 
-#' -   `npm`: A Node Package Manager (npm) package.
+#'   - `npm`: A Node Package Manager (npm) package.
 #' 
-#' -   `pypi`: A Python Package Index (PyPI) package.
+#'   - `pypi`: A Python Package Index (PyPI) package.
 #' 
-#' -   `maven`: A Maven package that contains compiled code in a
+#'   - `maven`: A Maven package that contains compiled code in a
 #'     distributable format, such as a JAR file.
 #' 
-#' -   `nuget`: A NuGet package.
+#'   - `nuget`: A NuGet package.
 #' @param namespace The namespace of the package. The package component that specifies its
 #' namespace depends on its type. For example:
 #' 
-#' -   The namespace of a Maven package is its `groupId`.
+#'   - The namespace of a Maven package is its `groupId`.
 #' 
-#' -   The namespace of an npm package is its `scope`.
+#'   - The namespace of an npm package is its `scope`.
 #' 
-#' -   A Python package does not contain a corresponding component, so
+#'   - A Python package does not contain a corresponding component, so
 #'     Python packages do not have a namespace.
 #' 
-#' -   A NuGet package does not contain a corresponding component, so NuGet
+#'   - A NuGet package does not contain a corresponding component, so NuGet
 #'     packages do not have a namespace.
 #' @param package &#91;required&#93; The name of the package for which you want to return a list of package
 #' versions.
 #' @param status A string that specifies the status of the package versions to include in
 #' the returned list. It can be one of the following:
 #' 
-#' -   `Published`
+#'   - `Published`
 #' 
-#' -   `Unfinished`
+#'   - `Unfinished`
 #' 
-#' -   `Unlisted`
+#'   - `Unlisted`
 #' 
-#' -   `Archived`
+#'   - `Archived`
 #' 
-#' -   `Disposed`
+#'   - `Disposed`
 #' @param sortBy How to sort the returned list of package versions.
 #' @param maxResults The maximum number of results to return per page.
 #' @param nextToken The token for the next set of results. Use the value returned in the
@@ -2069,25 +2069,25 @@ codeartifact_list_package_versions <- function(domain, domainOwner = NULL, repos
 #' @param repository &#91;required&#93; The name of the repository from which packages are to be listed.
 #' @param format The format of the packages. The valid package types are:
 #' 
-#' -   `npm`: A Node Package Manager (npm) package.
+#'   - `npm`: A Node Package Manager (npm) package.
 #' 
-#' -   `pypi`: A Python Package Index (PyPI) package.
+#'   - `pypi`: A Python Package Index (PyPI) package.
 #' 
-#' -   `maven`: A Maven package that contains compiled code in a
+#'   - `maven`: A Maven package that contains compiled code in a
 #'     distributable format, such as a JAR file.
 #' 
-#' -   `nuget`: A NuGet package.
+#'   - `nuget`: A NuGet package.
 #' @param namespace The namespace of the package. The package component that specifies its
 #' namespace depends on its type. For example:
 #' 
-#' -   The namespace of a Maven package is its `groupId`.
+#'   - The namespace of a Maven package is its `groupId`.
 #' 
-#' -   The namespace of an npm package is its `scope`.
+#'   - The namespace of an npm package is its `scope`.
 #' 
-#' -   A Python package does not contain a corresponding component, so
+#'   - A Python package does not contain a corresponding component, so
 #'     Python packages do not have a namespace.
 #' 
-#' -   A NuGet package does not contain a corresponding component, so NuGet
+#'   - A NuGet package does not contain a corresponding component, so NuGet
 #'     packages do not have a namespace.
 #' @param packagePrefix A prefix used to filter returned packages. Only packages with names that
 #' start with `packagePrefix` are returned.
@@ -2592,24 +2592,24 @@ codeartifact_untag_resource <- function(resourceArn, tagKeys) {
 #' @param format &#91;required&#93; A format that specifies the type of the package with the statuses to
 #' update. The valid values are:
 #' 
-#' -   `npm`
+#'   - `npm`
 #' 
-#' -   `pypi`
+#'   - `pypi`
 #' 
-#' -   `maven`
+#'   - `maven`
 #' 
-#' -   `nuget`
+#'   - `nuget`
 #' @param namespace The namespace of the package. The package component that specifies its
 #' namespace depends on its type. For example:
 #' 
-#' -   The namespace of a Maven package is its `groupId`.
+#'   - The namespace of a Maven package is its `groupId`.
 #' 
-#' -   The namespace of an npm package is its `scope`.
+#'   - The namespace of an npm package is its `scope`.
 #' 
-#' -   A Python package does not contain a corresponding component, so
+#'   - A Python package does not contain a corresponding component, so
 #'     Python packages do not have a namespace.
 #' 
-#' -   A NuGet package does not contain a corresponding component, so NuGet
+#'   - A NuGet package does not contain a corresponding component, so NuGet
 #'     packages do not have a namespace.
 #' @param package &#91;required&#93; The name of the package with the version statuses to update.
 #' @param versions &#91;required&#93; An array of strings that specify the versions of the package with the

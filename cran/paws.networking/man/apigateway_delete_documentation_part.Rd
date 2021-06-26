@@ -7,7 +7,8 @@
 apigateway_delete_documentation_part(restApiId, documentationPartId)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
 \item{documentationPartId}{[required] [Required] The identifier of the to-be-deleted documentation part.}
 }

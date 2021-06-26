@@ -7,7 +7,8 @@
 apigateway_create_documentation_part(restApiId, location, properties)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
 \item{location}{[required] [Required] The location of the targeted API entity of the
 to-be-created documentation part.}

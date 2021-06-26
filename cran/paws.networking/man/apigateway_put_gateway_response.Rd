@@ -9,11 +9,13 @@ apigateway_put_gateway_response(restApiId, responseType, statusCode,
   responseParameters, responseTemplates)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
 \item{responseType}{[required] [Required]
 
-The response type of the associated GatewayResponse. Valid values are
+The response type of the associated <span>GatewayResponse</span>. Valid
+values are
 \itemize{
 \item ACCESS_DENIED
 \item API_CONFIGURATION_ERROR
@@ -37,13 +39,14 @@ The response type of the associated GatewayResponse. Valid values are
 \item UNSUPPORTED_MEDIA_TYPE
 }}
 
-\item{statusCode}{The HTTP status code of the GatewayResponse.}
+\item{statusCode}{The HTTP status code of the <span>GatewayResponse</span>.}
 
 \item{responseParameters}{Response parameters (paths, query strings and headers) of the
-GatewayResponse as a string-to-string map of key-value pairs.}
+<span>GatewayResponse</span> as a string-to-string map of key-value
+pairs.}
 
-\item{responseTemplates}{Response templates of the GatewayResponse as a string-to-string map of
-key-value pairs.}
+\item{responseTemplates}{Response templates of the <span>GatewayResponse</span> as a
+string-to-string map of key-value pairs.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -60,8 +63,8 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Creates a customization of a GatewayResponse of a specified response
-type and status code on the given RestApi.
+Creates a customization of a <span>GatewayResponse</span> of a specified
+response type and status code on the given <span>RestApi</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$put_gateway_response(

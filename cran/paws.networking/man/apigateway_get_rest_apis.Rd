@@ -51,7 +51,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Lists the RestApis resources for your collection.
+Lists the <span>RestApis</span> resources for your collection.
 }
 \section{Request syntax}{
 \preformatted{svc$get_rest_apis(

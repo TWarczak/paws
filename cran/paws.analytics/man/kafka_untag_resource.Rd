@@ -20,8 +20,13 @@ for use by AWS. AWS creates tags that begin with this prefix on your
 behalf, but you can't edit or delete them.
 \item Tag keys must be between 1 and 128 Unicode characters in length.
 \item Tag keys must consist of the following characters: Unicode letters,
-digits, white space, and the following special characters: _ . /
-= + - @.
+digits, white space, and the following special characters: _ . / =
+\itemize{
+\item 
+\itemize{
+\item @.
+}
+}
 }}
 }
 \value{

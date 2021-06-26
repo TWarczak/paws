@@ -80,7 +80,7 @@ you to specify:
 \code{OfflineStore}.
 }
 
-To learn more about this parameter, see OfflineStoreConfig.}
+To learn more about this parameter, see <span>OfflineStoreConfig</span>.}
 
 \item{RoleArn}{The Amazon Resource Name (ARN) of the IAM execution role used to persist
 data into the \code{OfflineStore} if an \code{OfflineStoreConfig} is provided.}

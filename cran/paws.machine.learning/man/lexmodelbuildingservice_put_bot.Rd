@@ -17,7 +17,7 @@ lexmodelbuildingservice_put_bot(name, description, intents,
 
 \item{intents}{An array of \code{Intent} objects. Each intent represents a command that a
 user can express. For example, a pizza ordering bot might support an
-OrderPizza intent. For more information, see how-it-works.}
+OrderPizza intent. For more information, see <span>how-it-works</span>.}
 
 \item{enableModelImprovements}{Set to \code{true} to enable access to natural language understanding
 improvements.
@@ -280,9 +280,9 @@ When you create or update a bot you are only required to specify a name,
 a locale, and whether the bot is directed toward children under age 13.
 You can use this to add intents later, or to remove intents from an
 existing bot. When you create a bot with the minimum information, the
-bot is created or updated but Amazon Lex returns the `` response
+bot is created or updated but Amazon Lex returns the \verb{} response
 \code{FAILED}. You can build the bot after you add one or more intents. For
-more information about Amazon Lex bots, see how-it-works.
+more information about Amazon Lex bots, see <span>how-it-works</span>.
 
 If you specify the name of an existing bot, the fields in the request
 replace the existing values in the \verb{$LATEST} version of the bot. Amazon
@@ -292,7 +292,7 @@ are set to their default values. If you don't specify values for
 required fields, Amazon Lex throws an exception.
 
 This operation requires permissions for the \code{lex:PutBot} action. For
-more information, see security-iam.
+more information, see <span>security-iam</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$put_bot(

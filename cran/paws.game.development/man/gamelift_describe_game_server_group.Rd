@@ -2,14 +2,14 @@
 % Please edit documentation in R/gamelift_operations.R
 \name{gamelift_describe_game_server_group}
 \alias{gamelift_describe_game_server_group}
-\title{This operation is used with the Amazon GameLift FleetIQ solution and
-game server groups}
+\title{THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND
+GAME SERVER GROUPS}
 \usage{
 gamelift_describe_game_server_group(GameServerGroupName)
 }
 \arguments{
 \item{GameServerGroupName}{[required] A unique identifier for the game server group. Use either the
-GameServerGroup name or ARN value.}
+<span>GameServerGroup</span> name or ARN value.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -52,7 +52,7 @@ template, auto scaling policies, and maximum/minimum group size, access
 the Auto Scaling group directly.
 
 To get attributes for a game server group, provide a group name or ARN
-value. If successful, a GameServerGroup object is returned.
+value. If successful, a <span>GameServerGroup</span> object is returned.
 
 \strong{Learn more}
 

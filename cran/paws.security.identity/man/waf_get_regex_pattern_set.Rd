@@ -2,13 +2,13 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_get_regex_pattern_set}
 \alias{waf_get_regex_pattern_set}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_get_regex_pattern_set(RegexPatternSetId)
 }
 \arguments{
-\item{RegexPatternSetId}{[required] The \code{RegexPatternSetId} of the RegexPatternSet that you want to get.
-\code{RegexPatternSetId} is returned by
+\item{RegexPatternSetId}{[required] The \code{RegexPatternSetId} of the <span>RegexPatternSet</span> that you
+want to get. \code{RegexPatternSetId} is returned by
 \code{\link[=waf_create_regex_pattern_set]{create_regex_pattern_set}} and by
 \code{\link[=waf_list_regex_pattern_sets]{list_regex_pattern_sets}}.}
 }
@@ -34,7 +34,8 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Returns the RegexPatternSet specified by \code{RegexPatternSetId}.
+Returns the <span>RegexPatternSet</span> specified by
+\code{RegexPatternSetId}.
 }
 \section{Request syntax}{
 \preformatted{svc$get_regex_pattern_set(

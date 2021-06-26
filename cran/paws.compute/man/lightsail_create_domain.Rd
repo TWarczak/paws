@@ -49,7 +49,8 @@ A list with the following syntax:\preformatted{list(
 Creates a domain resource for the specified domain (e.g., example.com).
 
 The \verb{create domain} operation supports tag-based access control via
-request tags. For more information, see the Lightsail Dev Guide.
+request tags. For more information, see the <span>Lightsail Dev
+Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$create_domain(

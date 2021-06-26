@@ -19,8 +19,8 @@ your solution version instead of creating an entirely new one.
 
 The \code{UPDATE} option can only be used when you already have an active
 solution version created from the input solution using the \code{FULL} option
-and the input solution was trained with the native-recipe-hrnn-coldstart
-recipe.}
+and the input solution was trained with the
+<span>native-recipe-hrnn-coldstart</span> recipe.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -39,8 +39,7 @@ version of the solution is created every time you call this operation.
 
 A solution version can be in one of the following states:
 \itemize{
-\item CREATE PENDING > CREATE IN_PROGRESS > ACTIVE -or- CREATE
-FAILED
+\item CREATE PENDING \> CREATE IN_PROGRESS \> ACTIVE -or- CREATE FAILED
 }
 
 To get the status of the version, call
@@ -55,6 +54,9 @@ If the status shows as CREATE FAILED, the response includes a
 \itemize{
 \item \code{\link[=personalize_list_solution_versions]{list_solution_versions}}
 \item \code{\link[=personalize_describe_solution_version]{describe_solution_version}}
+}<!-- end list -->
+
+\itemize{
 \item \code{\link[=personalize_list_solutions]{list_solutions}}
 \item \code{\link[=personalize_create_solution]{create_solution}}
 \item \code{\link[=personalize_describe_solution]{describe_solution}}

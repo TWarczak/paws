@@ -61,7 +61,7 @@ NULL
 #'  \link[=autoscaling_batch_put_scheduled_update_group_action]{batch_put_scheduled_update_group_action} \tab Creates or updates one or more scheduled scaling actions for an Auto Scaling group\cr
 #'  \link[=autoscaling_cancel_instance_refresh]{cancel_instance_refresh} \tab Cancels an instance refresh operation in progress\cr
 #'  \link[=autoscaling_complete_lifecycle_action]{complete_lifecycle_action} \tab Completes the lifecycle action for the specified token or instance with the specified result\cr
-#'  \link[=autoscaling_create_auto_scaling_group]{create_auto_scaling_group} \tab We strongly recommend using a launch template when calling this operation to ensure full functionality for Amazon EC2 Auto Scaling and Amazon EC2\cr
+#'  \link[=autoscaling_create_auto_scaling_group]{create_auto_scaling_group} \tab WE STRONGLY RECOMMEND USING A LAUNCH TEMPLATE WHEN CALLING THIS OPERATION TO ENSURE FULL FUNCTIONALITY FOR AMAZON EC2 AUTO SCALING AND AMAZON EC2\cr
 #'  \link[=autoscaling_create_launch_configuration]{create_launch_configuration} \tab Creates a launch configuration\cr
 #'  \link[=autoscaling_create_or_update_tags]{create_or_update_tags} \tab Creates or updates tags for the specified Auto Scaling group\cr
 #'  \link[=autoscaling_delete_auto_scaling_group]{delete_auto_scaling_group} \tab Deletes the specified Auto Scaling group\cr
@@ -110,8 +110,14 @@ NULL
 #'  \link[=autoscaling_start_instance_refresh]{start_instance_refresh} \tab Starts a new instance refresh operation, which triggers a rolling replacement of all previously launched instances in the Auto Scaling group with a new group of instances\cr
 #'  \link[=autoscaling_suspend_processes]{suspend_processes} \tab Suspends the specified auto scaling processes, or all processes, for the specified Auto Scaling group\cr
 #'  \link[=autoscaling_terminate_instance_in_auto_scaling_group]{terminate_instance_in_auto_scaling_group} \tab Terminates the specified instance and optionally adjusts the desired group size\cr
-#'  \link[=autoscaling_update_auto_scaling_group]{update_auto_scaling_group} \tab We strongly recommend that all Auto Scaling groups use launch templates to ensure full functionality for Amazon EC2 Auto Scaling and Amazon EC2
+#'  \link[=autoscaling_update_auto_scaling_group]{update_auto_scaling_group} \tab WE STRONGLY RECOMMEND THAT ALL AUTO SCALING GROUPS USE LAUNCH TEMPLATES TO ENSURE FULL FUNCTIONALITY FOR AMAZON EC2 AUTO SCALING AND AMAZON EC2
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname autoscaling
 #' @export
@@ -131,7 +137,7 @@ autoscaling <- function(config = list()) {
   endpoints = list("*" = list(endpoint = "autoscaling.{region}.amazonaws.com", global = FALSE), "cn-*" = list(endpoint = "autoscaling.{region}.amazonaws.com.cn", global = FALSE), "us-iso-*" = list(endpoint = "autoscaling.{region}.c2s.ic.gov", global = FALSE), "us-isob-*" = list(endpoint = "autoscaling.{region}.sc2s.sgov.gov", global = FALSE)),
   service_id = "Auto Scaling",
   api_version = "2011-01-01",
-  signing_name = NULL,
+  signing_name = "autoscaling",
   json_version = "",
   target_prefix = ""
 )

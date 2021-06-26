@@ -45,9 +45,7 @@ A list with the following syntax:\preformatted{list(
 Creates an AWS CloudFormation stack, which creates a new Amazon EC2
 instance from an exported Amazon Lightsail snapshot. This operation
 results in a CloudFormation stack record that can be used to track the
-AWS CloudFormation stack created. Use the
-\verb{get cloud formation stack records} operation to get a list of the
-CloudFormation stacks created.
+AWS CloudFormation stack created. Use the \verb{get cloud formation stack records} operation to get a list of the CloudFormation stacks created.
 
 Wait until after your new Amazon EC2 instance is created before running
 the \verb{create cloud formation stack} operation again with the same export

@@ -10,29 +10,33 @@ apigateway_create_deployment(restApiId, stageName, stageDescription,
   canarySettings, tracingEnabled)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
-\item{stageName}{The name of the Stage resource for the Deployment resource to create.}
+\item{stageName}{The name of the <span>Stage</span> resource for the
+<span>Deployment</span> resource to create.}
 
-\item{stageDescription}{The description of the Stage resource for the Deployment resource to
-create.}
+\item{stageDescription}{The description of the <span>Stage</span> resource for the
+<span>Deployment</span> resource to create.}
 
-\item{description}{The description for the Deployment resource to create.}
+\item{description}{The description for the <span>Deployment</span> resource to create.}
 
-\item{cacheClusterEnabled}{Enables a cache cluster for the Stage resource specified in the input.}
+\item{cacheClusterEnabled}{Enables a cache cluster for the <span>Stage</span> resource specified in
+the input.}
 
-\item{cacheClusterSize}{Specifies the cache cluster size for the Stage resource specified in the
-input, if a cache cluster is enabled.}
+\item{cacheClusterSize}{Specifies the cache cluster size for the <span>Stage</span> resource
+specified in the input, if a cache cluster is enabled.}
 
-\item{variables}{A map that defines the stage variables for the Stage resource that is
-associated with the new deployment. Variable names can have alphanumeric
-and underscore characters, and the values must match
+\item{variables}{A map that defines the stage variables for the <span>Stage</span>
+resource that is associated with the new deployment. Variable names can
+have alphanumeric and underscore characters, and the values must match
 \verb{[A-Za-z0-9-._~:/?#&=,]+}.}
 
 \item{canarySettings}{The input configuration for the canary deployment when the deployment is
 a canary release deployment.}
 
-\item{tracingEnabled}{Specifies whether active tracing with X-ray is enabled for the Stage.}
+\item{tracingEnabled}{Specifies whether active tracing with X-ray is enabled for the
+<span>Stage</span>.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -53,8 +57,8 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Creates a Deployment resource, which makes a specified RestApi callable
-over the internet.
+Creates a <span>Deployment</span> resource, which makes a specified
+<span>RestApi</span> callable over the internet.
 }
 \section{Request syntax}{
 \preformatted{svc$create_deployment(

@@ -19,7 +19,7 @@ can contain a maximum of 256 terms.}
 
 \item{SourceLanguageCode}{[required] The language code for the language of the source text. The language must
 be a language supported by Amazon Translate. For a list of language
-codes, see what-is-languages.
+codes, see <span>what-is-languages</span>.
 
 To have Amazon Translate determine the source language of your text, you
 can specify \code{auto} in the \code{SourceLanguageCode} field. If you specify
@@ -51,7 +51,7 @@ A list with the following syntax:\preformatted{list(
 \description{
 Translates input text from the source language to the target language.
 For a list of available languages and language codes, see
-what-is-languages.
+<span>what-is-languages</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$translate_text(

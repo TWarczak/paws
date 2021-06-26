@@ -7,7 +7,8 @@
 apigateway_get_model(restApiId, modelName, flatten)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The RestApi identifier under which the Model exists.}
+\item{restApiId}{[required] [Required] The <span>RestApi</span> identifier under which the
+<span>Model</span> exists.}
 
 \item{modelName}{[required] [Required] The name of the model as an identifier.}
 
@@ -26,7 +27,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Describes an existing model defined for a RestApi resource.
+Describes an existing model defined for a <span>RestApi</span> resource.
 }
 \section{Request syntax}{
 \preformatted{svc$get_model(

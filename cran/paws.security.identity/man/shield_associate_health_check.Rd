@@ -8,8 +8,8 @@ resource}
 shield_associate_health_check(ProtectionId, HealthCheckArn)
 }
 \arguments{
-\item{ProtectionId}{[required] The unique identifier (ID) for the Protection object to add the health
-check association to.}
+\item{ProtectionId}{[required] The unique identifier (ID) for the <span>Protection</span> object to add
+the health check association to.}
 
 \item{HealthCheckArn}{[required] The Amazon Resource Name (ARN) of the health check to associate with the
 protection.}

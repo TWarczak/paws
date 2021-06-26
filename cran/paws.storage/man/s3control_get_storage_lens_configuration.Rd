@@ -77,8 +77,8 @@ A list with the following syntax:\preformatted{list(
 }
 \description{
 Gets the Amazon S3 Storage Lens configuration. For more information, see
-Working with Amazon S3 Storage Lens in the \emph{Amazon Simple Storage
-Service Developer Guide}.
+<span>Working with Amazon S3 Storage Lens</span> in the \emph{Amazon Simple
+Storage Service Developer Guide}.
 
 To use this action, you must have permission to perform the
 \code{s3:GetStorageLensConfiguration} action. For more information, see

@@ -9,6 +9,12 @@ elbv2(config = list())
 \arguments{
 \item{config}{Optional configuration of credentials, endpoint, and/or region.}
 }
+\value{
+A client for the service. You can call the service's operations using
+syntax like \code{svc$operation(...)}, where \code{svc} is the name you've assigned
+to the client. The available operations are listed in the
+Operations section.
+}
 \description{
 A load balancer distributes incoming traffic across targets, such as
 your EC2 instances. This enables you to increase the availability of
@@ -26,8 +32,8 @@ Application Load Balancers, Network Load Balancers, Gateway Load
 Balancers, and Classic Load Balancers. This reference covers the
 following load balancer types:
 \itemize{
-\item Application Load Balancer - Operates at the application layer
-(layer 7) and supports HTTP and HTTPS.
+\item Application Load Balancer - Operates at the application layer (layer
+7) and supports HTTP and HTTPS.
 \item Network Load Balancer - Operates at the transport layer (layer 4)
 and supports TCP, TLS, and UDP.
 \item Gateway Load Balancer - Operates at the network layer (layer 3).

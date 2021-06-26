@@ -7,7 +7,8 @@
 apigateway_get_request_validators(restApiId, position, limit)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
 \item{position}{The current pagination position in the paged result set.}
 
@@ -29,7 +30,8 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Gets the RequestValidators collection of a given RestApi.
+Gets the <span>RequestValidators</span> collection of a given
+<span>RestApi</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$get_request_validators(

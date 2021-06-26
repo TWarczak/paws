@@ -2,7 +2,7 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_get_change_token_status}
 \alias{wafregional_get_change_token_status}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 wafregional_get_change_token_status(ChangeToken)
 }

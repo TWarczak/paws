@@ -29,8 +29,7 @@ Use either \code{\link[=route53domains_list_operations]{list_operations}} or
 \code{\link[=route53domains_get_operation_detail]{get_operation_detail}} to
 determine whether the operation succeeded.
 \code{\link[=route53domains_get_operation_detail]{get_operation_detail}} provides
-additional information, for example,
-\verb{Domain Transfer from Aws Account 111122223333 has been cancelled}.
+additional information, for example, \verb{Domain Transfer from Aws Account 111122223333 has been cancelled}.
 }
 \section{Request syntax}{
 \preformatted{svc$reject_domain_transfer_from_another_aws_account(

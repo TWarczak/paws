@@ -3,7 +3,7 @@
 #' @include sagemaker_service.R
 NULL
 
-#' Creates an association between the source and the destination
+#' Creates an _association_ between the source and the destination
 #'
 #' @description
 #' Creates an *association* between the source and the destination. A
@@ -20,18 +20,18 @@ NULL
 #' @param AssociationType The type of association. The following are suggested uses for each type.
 #' Amazon SageMaker places no restrictions on their use.
 #' 
-#' -   ContributedTo - The source contributed to the destination or had a
+#'   - ContributedTo - The source contributed to the destination or had a
 #'     part in enabling the destination. For example, the training data
 #'     contributed to the training job.
 #' 
-#' -   AssociatedWith - The source is connected to the destination. For
+#'   - AssociatedWith - The source is connected to the destination. For
 #'     example, an approval workflow is associated with a model deployment.
 #' 
-#' -   DerivedFrom - The destination is a modification of the source. For
+#'   - DerivedFrom - The destination is a modification of the source. For
 #'     example, a digest output of a channel input for a processing job is
 #'     derived from the original inputs.
 #' 
-#' -   Produced - The source generated the destination. For example, a
+#'   - Produced - The source generated the destination. For example, a
 #'     training job produced a model artifact.
 #'
 #' @return
@@ -203,7 +203,7 @@ sagemaker_associate_trial_component <- function(TrialComponentName, TrialName) {
 }
 .sagemaker$operations$associate_trial_component <- sagemaker_associate_trial_component
 
-#' Creates an action
+#' Creates an _action_
 #'
 #' @description
 #' Creates an *action*. An action is a lineage tracking entity that
@@ -300,33 +300,33 @@ sagemaker_create_action <- function(ActionName, Source, ActionType, Description 
 #' @param TrainingSpecification &#91;required&#93; Specifies details about training jobs run by this algorithm, including
 #' the following:
 #' 
-#' -   The Amazon ECR path of the container and the version digest of the
+#'   - The Amazon ECR path of the container and the version digest of the
 #'     algorithm.
 #' 
-#' -   The hyperparameters that the algorithm supports.
+#'   - The hyperparameters that the algorithm supports.
 #' 
-#' -   The instance types that the algorithm supports for training.
+#'   - The instance types that the algorithm supports for training.
 #' 
-#' -   Whether the algorithm supports distributed training.
+#'   - Whether the algorithm supports distributed training.
 #' 
-#' -   The metrics that the algorithm emits to Amazon CloudWatch.
+#'   - The metrics that the algorithm emits to Amazon CloudWatch.
 #' 
-#' -   Which metrics that the algorithm emits can be used as the objective
+#'   - Which metrics that the algorithm emits can be used as the objective
 #'     metric for hyperparameter tuning jobs.
 #' 
-#' -   The input channels that the algorithm supports for training data.
+#'   - The input channels that the algorithm supports for training data.
 #'     For example, an algorithm might support `train`, `validation`, and
 #'     `test` channels.
 #' @param InferenceSpecification Specifies details about inference jobs that the algorithm runs,
 #' including the following:
 #' 
-#' -   The Amazon ECR paths of containers that contain the inference code
+#'   - The Amazon ECR paths of containers that contain the inference code
 #'     and model artifacts.
 #' 
-#' -   The instance types that the algorithm supports for transform jobs
+#'   - The instance types that the algorithm supports for transform jobs
 #'     and real-time endpoints used for inference.
 #' 
-#' -   The input and output content formats that the algorithm supports for
+#'   - The input and output content formats that the algorithm supports for
 #'     inference.
 #' @param ValidationSpecification Specifies configurations for one or more training jobs and that Amazon
 #' SageMaker runs to test the algorithm's training code and, optionally,
@@ -693,7 +693,7 @@ sagemaker_create_app_image_config <- function(AppImageConfigName, Tags = NULL, K
 }
 .sagemaker$operations$create_app_image_config <- sagemaker_create_app_image_config
 
-#' Creates an artifact
+#' Creates an _artifact_
 #'
 #' @description
 #' Creates an *artifact*. An artifact is a lineage tracking entity that
@@ -803,9 +803,9 @@ sagemaker_create_artifact <- function(ArtifactName = NULL, Source, ArtifactType,
 #' candidates. Options include: BinaryClassification,
 #' MulticlassClassification, and Regression.
 #' @param AutoMLJobObjective Defines the objective of a an AutoML job. You provide a
-#' AutoMLJobObjective$MetricName and Autopilot infers whether to minimize
-#' or maximize it. If a metric is not specified, the most commonly used
-#' ObjectiveMetric for problem type is automaically selected.
+#' <span>AutoMLJobObjective$MetricName</span> and Autopilot infers whether
+#' to minimize or maximize it. If a metric is not specified, the most
+#' commonly used ObjectiveMetric for problem type is automaically selected.
 #' @param AutoMLJobConfig Contains CompletionCriteria and SecurityConfig.
 #' @param RoleArn &#91;required&#93; The ARN of the role that is used to access the data.
 #' @param GenerateCandidateDefinitionsOnly Generates possible candidates without training a model. A candidate is a
@@ -983,14 +983,14 @@ sagemaker_create_code_repository <- function(CodeRepositoryName, GitConfig, Tags
 #' 
 #' In the request body, you provide the following:
 #' 
-#' -   A name for the compilation job
+#'   - A name for the compilation job
 #' 
-#' -   Information about the input model artifacts
+#'   - Information about the input model artifacts
 #' 
-#' -   The output location for the compiled model and the device (target)
+#'   - The output location for the compiled model and the device (target)
 #'     that the model runs on
 #' 
-#' -   The Amazon Resource Name (ARN) of the IAM role that Amazon SageMaker
+#'   - The Amazon Resource Name (ARN) of the IAM role that Amazon SageMaker
 #'     assumes to perform the model compilation job.
 #' 
 #' You can also provide a `Tag` to track the model compilation job's
@@ -1015,13 +1015,13 @@ sagemaker_create_code_repository <- function(CodeRepositoryName, GitConfig, Tags
 #' 
 #' During model compilation, Amazon SageMaker needs your permission to:
 #' 
-#' -   Read input data from an S3 bucket
+#'   - Read input data from an S3 bucket
 #' 
-#' -   Write model artifacts to an S3 bucket
+#'   - Write model artifacts to an S3 bucket
 #' 
-#' -   Write logs to Amazon CloudWatch Logs
+#'   - Write logs to Amazon CloudWatch Logs
 #' 
-#' -   Publish metrics to Amazon CloudWatch
+#'   - Publish metrics to Amazon CloudWatch
 #' 
 #' You grant permissions for all of these tasks to an IAM role. To pass
 #' this role to Amazon SageMaker, the caller of this API must have the
@@ -1102,7 +1102,7 @@ sagemaker_create_compilation_job <- function(CompilationJobName, RoleArn, InputC
 }
 .sagemaker$operations$create_compilation_job <- sagemaker_create_compilation_job
 
-#' Creates a context
+#' Creates a _context_
 #'
 #' @description
 #' Creates a *context*. A context is a lineage tracking entity that
@@ -1405,14 +1405,14 @@ sagemaker_create_device_fleet <- function(DeviceFleetName, RoleArn = NULL, Descr
 #' corresponds to the network access type that you choose when you onboard
 #' to Studio. The following options are available:
 #' 
-#' -   `PublicInternetOnly` - Non-EFS traffic goes through a VPC managed by
+#'   - `PublicInternetOnly` - Non-EFS traffic goes through a VPC managed by
 #'     Amazon SageMaker, which allows internet access. This is the default
 #'     value.
 #' 
-#' -   `VpcOnly` - All Studio traffic is through the specified VPC and
+#'   - `VpcOnly` - All Studio traffic is through the specified VPC and
 #'     subnets. Internet access is disabled by default. To allow internet
 #'     access, you must specify a NAT gateway.
-#' 
+#'     
 #'     When internet access is disabled, you won't be able to run a Studio
 #'     notebook or to train or host models unless your VPC has an interface
 #'     endpoint to the SageMaker API and runtime or a NAT gateway and your
@@ -1439,10 +1439,10 @@ sagemaker_create_device_fleet <- function(DeviceFleetName, RoleArn = NULL, Descr
 #' @param AppNetworkAccessType Specifies the VPC used for non-EFS traffic. The default value is
 #' `PublicInternetOnly`.
 #' 
-#' -   `PublicInternetOnly` - Non-EFS traffic is through a VPC managed by
+#'   - `PublicInternetOnly` - Non-EFS traffic is through a VPC managed by
 #'     Amazon SageMaker, which allows direct internet access
 #' 
-#' -   `VpcOnly` - All Studio traffic is through the specified VPC and
+#'   - `VpcOnly` - All Studio traffic is through the specified VPC and
 #'     subnets
 #' @param HomeEfsFileSystemKmsKeyId This member is deprecated and replaced with `KmsKeyId`.
 #' @param KmsKeyId SageMaker uses AWS KMS to encrypt the EFS volume attached to the domain
@@ -1622,8 +1622,8 @@ sagemaker_create_edge_packaging_job <- function(EdgePackagingJobName, Compilatio
 #' 
 #' For an example that calls this method when deploying a model to Amazon
 #' SageMaker hosting services, see [Deploy the Model to Amazon SageMaker
-#' Hosting Services (AWS SDK for Python (Boto
-#' 3)).](https://docs.aws.amazon.com/sagemaker/latest/dg/#ex1-deploy-model-boto)
+#' Hosting Services (AWS SDK for Python
+#' (Boto 3)).](https://docs.aws.amazon.com/sagemaker/latest/dg/#ex1-deploy-model-boto)
 #' 
 #' You must not delete an `EndpointConfig` that is in use by an endpoint
 #' that is live or while the [`update_endpoint`][sagemaker_update_endpoint]
@@ -1640,8 +1640,9 @@ sagemaker_create_edge_packaging_job <- function(EdgePackagingJobName, Compilatio
 #' 
 #' When you call [`create_endpoint`][sagemaker_create_endpoint], a load
 #' call is made to DynamoDB to verify that your endpoint configuration
-#' exists. When you read data from a DynamoDB table supporting
-#' [`Eventually Consistent Reads`](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html)
+#' exists. When you read data from a DynamoDB table supporting [`Eventually
+#' Consistent
+#' Reads`](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html)
 #' , the response might not reflect the results of a recently completed
 #' write operation. The response might include some stale data. If the
 #' dependent entities are not yet in DynamoDB, this causes a validation
@@ -1668,30 +1669,31 @@ sagemaker_create_edge_packaging_job <- function(EdgePackagingJobName, Compilatio
 #' Region](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html)
 #' in the *AWS Identity and Access Management User Guide*.
 #' 
-#' To add the IAM role policies for using this API operation, go to the IAM
-#' console, and choose Roles in the left navigation pane. Search the IAM
-#' role that you want to grant access to use the
+#' To add the IAM role policies for using this API operation, go to the
+#' <span>IAM console</span>, and choose Roles in the left navigation pane.
+#' Search the IAM role that you want to grant access to use the
 #' [`create_endpoint`][sagemaker_create_endpoint] and
 #' [`create_endpoint_config`][sagemaker_create_endpoint_config] API
 #' operations, add the following policies to the role.
 #' 
-#' -   Option 1: For a full Amazon SageMaker access, search and attach the
+#'   - Option 1: For a full Amazon SageMaker access, search and attach the
 #'     `AmazonSageMakerFullAccess` policy.
 #' 
-#' -   Option 2: For granting a limited access to an IAM role, paste the
+#'   - Option 2: For granting a limited access to an IAM role, paste the
 #'     following Action elements manually into the JSON file of the IAM
 #'     role:
-#' 
-#'     `"Action": ["sagemaker:CreateEndpoint", "sagemaker:CreateEndpointConfig"]`
-#' 
+#'     
+#'     `"Action": ["sagemaker:CreateEndpoint",
+#'     "sagemaker:CreateEndpointConfig"]`
+#'     
 #'     `"Resource": [`
-#' 
+#'     
 #'     `"arn:aws:sagemaker:region:account-id:endpoint/endpointName"`
-#' 
+#'     
 #'     `"arn:aws:sagemaker:region:account-id:endpoint-config/endpointConfigName"`
-#' 
+#'     
 #'     `]`
-#' 
+#'     
 #'     For more information, see [Amazon SageMaker API Permissions:
 #'     Actions, Permissions, and Resources
 #'     Reference](https://docs.aws.amazon.com/sagemaker/latest/dg/api-permissions-reference.html).
@@ -1779,13 +1781,14 @@ sagemaker_create_endpoint <- function(EndpointName, EndpointConfigName, Tags = N
 #' 
 #' For an example that calls this method when deploying a model to Amazon
 #' SageMaker hosting services, see [Deploy the Model to Amazon SageMaker
-#' Hosting Services (AWS SDK for Python (Boto
-#' 3)).](https://docs.aws.amazon.com/sagemaker/latest/dg/#ex1-deploy-model-boto)
+#' Hosting Services (AWS SDK for Python
+#' (Boto 3)).](https://docs.aws.amazon.com/sagemaker/latest/dg/#ex1-deploy-model-boto)
 #' 
 #' When you call [`create_endpoint`][sagemaker_create_endpoint], a load
 #' call is made to DynamoDB to verify that your endpoint configuration
-#' exists. When you read data from a DynamoDB table supporting
-#' [`Eventually Consistent Reads`](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html)
+#' exists. When you read data from a DynamoDB table supporting [`Eventually
+#' Consistent
+#' Reads`](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html)
 #' , the response might not reflect the results of a recently completed
 #' write operation. The response might include some stale data. If the
 #' dependent entities are not yet in DynamoDB, this causes a validation
@@ -1815,14 +1818,14 @@ sagemaker_create_endpoint <- function(EndpointName, EndpointConfigName, Tags = N
 #' 
 #' The KmsKeyId can be any of the following formats:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Alias name: `alias/ExampleAlias`
+#'   - Alias name: `alias/ExampleAlias`
 #' 
-#' -   Alias name ARN:
+#'   - Alias name ARN:
 #'     `arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias`
 #' 
 #' The KMS key policy must grant permission to the IAM role that you
@@ -1921,7 +1924,7 @@ sagemaker_create_endpoint_config <- function(EndpointConfigName, ProductionVaria
 }
 .sagemaker$operations$create_endpoint_config <- sagemaker_create_endpoint_config
 
-#' Creates an SageMaker experiment
+#' Creates an SageMaker _experiment_
 #'
 #' @description
 #' Creates an SageMaker *experiment*. An experiment is a collection of
@@ -2036,9 +2039,9 @@ sagemaker_create_experiment <- function(ExperimentName, DisplayName = NULL, Desc
 #' @param FeatureGroupName &#91;required&#93; The name of the `FeatureGroup`. The name must be unique within an AWS
 #' Region in an AWS account. The name:
 #' 
-#' -   Must start and end with an alphanumeric character.
+#'   - Must start and end with an alphanumeric character.
 #' 
-#' -   Can only contain alphanumeric character and hyphens. Spaces are not
+#'   - Can only contain alphanumeric character and hyphens. Spaces are not
 #'     allowed.
 #' @param RecordIdentifierFeatureName &#91;required&#93; The name of the `Feature` whose value uniquely identifies a `Record`
 #' defined in the `FeatureStore`. Only the latest record per identifier
@@ -2050,9 +2053,9 @@ sagemaker_create_experiment <- function(ExperimentName, DisplayName = NULL, Desc
 #' 
 #' This name:
 #' 
-#' -   Must start and end with an alphanumeric character.
+#'   - Must start and end with an alphanumeric character.
 #' 
-#' -   Can only contains alphanumeric characters, hyphens, underscores.
+#'   - Can only contains alphanumeric characters, hyphens, underscores.
 #'     Spaces are not allowed.
 #' @param EventTimeFeatureName &#91;required&#93; The name of the feature that stores the `EventTime` of a `Record` in a
 #' `FeatureGroup`.
@@ -2064,10 +2067,10 @@ sagemaker_create_experiment <- function(ExperimentName, DisplayName = NULL, Desc
 #' 
 #' An `EventTime` can be a `String` or `Fractional`.
 #' 
-#' -   `Fractional`: `EventTime` feature values must be a Unix timestamp in
+#'   - `Fractional`: `EventTime` feature values must be a Unix timestamp in
 #'     seconds.
 #' 
-#' -   `String`: `EventTime` feature values must be an ISO-8601 string in
+#'   - `String`: `EventTime` feature values must be an ISO-8601 string in
 #'     the format. The following formats are supported
 #'     `yyyy-MM-dd'T'HH:mm:ssZ` and `yyyy-MM-dd'T'HH:mm:ss.SSSZ` where
 #'     `yyyy`, `MM`, and `dd` represent the year, month, and day
@@ -2092,15 +2095,15 @@ sagemaker_create_experiment <- function(ExperimentName, DisplayName = NULL, Desc
 #' @param OfflineStoreConfig Use this to configure an `OfflineFeatureStore`. This parameter allows
 #' you to specify:
 #' 
-#' -   The Amazon Simple Storage Service (Amazon S3) location of an
+#'   - The Amazon Simple Storage Service (Amazon S3) location of an
 #'     `OfflineStore`.
 #' 
-#' -   A configuration for an AWS Glue or AWS Hive data cataolgue.
+#'   - A configuration for an AWS Glue or AWS Hive data cataolgue.
 #' 
-#' -   An KMS encryption key to encrypt the Amazon S3 location used for
+#'   - An KMS encryption key to encrypt the Amazon S3 location used for
 #'     `OfflineStore`.
 #' 
-#' To learn more about this parameter, see OfflineStoreConfig.
+#' To learn more about this parameter, see <span>OfflineStoreConfig</span>.
 #' @param RoleArn The Amazon Resource Name (ARN) of the IAM execution role used to persist
 #' data into the `OfflineStore` if an `OfflineStoreConfig` is provided.
 #' @param Description A free-form description of a `FeatureGroup`.
@@ -2356,17 +2359,18 @@ sagemaker_create_human_task_ui <- function(HumanTaskUiName, UiTemplate, Tags = N
 #' within the same AWS account and AWS Region. The name must have 1 to 32
 #' characters. Valid characters are a-z, A-Z, 0-9, and : + = @@ _ % -
 #' (hyphen). The name is not case sensitive.
-#' @param HyperParameterTuningJobConfig &#91;required&#93; The HyperParameterTuningJobConfig object that describes the tuning job,
-#' including the search strategy, the objective metric used to evaluate
-#' training jobs, ranges of parameters to search, and resource limits for
-#' the tuning job. For more information, see [How Hyperparameter Tuning
+#' @param HyperParameterTuningJobConfig &#91;required&#93; The <span>HyperParameterTuningJobConfig</span> object that describes the
+#' tuning job, including the search strategy, the objective metric used to
+#' evaluate training jobs, ranges of parameters to search, and resource
+#' limits for the tuning job. For more information, see [How Hyperparameter
+#' Tuning
 #' Works](https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning-how-it-works.html).
-#' @param TrainingJobDefinition The HyperParameterTrainingJobDefinition object that describes the
-#' training jobs that this tuning job launches, including static
-#' hyperparameters, input data configuration, output data configuration,
-#' resource configuration, and stopping condition.
-#' @param TrainingJobDefinitions A list of the HyperParameterTrainingJobDefinition objects launched for
-#' this tuning job.
+#' @param TrainingJobDefinition The <span>HyperParameterTrainingJobDefinition</span> object that
+#' describes the training jobs that this tuning job launches, including
+#' static hyperparameters, input data configuration, output data
+#' configuration, resource configuration, and stopping condition.
+#' @param TrainingJobDefinitions A list of the <span>HyperParameterTrainingJobDefinition</span> objects
+#' launched for this tuning job.
 #' @param WarmStartConfig Specifies the configuration for starting the hyperparameter tuning job
 #' using one or more previous tuning jobs as a starting point. The results
 #' of previous tuning jobs are used to inform which combinations of
@@ -2772,7 +2776,8 @@ sagemaker_create_image <- function(Description = NULL, DisplayName = NULL, Image
 #' for this version. The path is an Amazon Container Registry (ECR) URI in
 #' the following format:
 #' 
-#' `<acct-id>.dkr.ecr.<region>.amazonaws.com/<repo-name[:tag] or [@@digest]>`
+#' `<acct-id>.dkr.ecr.<region>.amazonaws.com/<repo-name[:tag] or
+#' [@@digest]>`
 #' @param ClientToken &#91;required&#93; A unique ID. If not specified, the AWS CLI and AWS SDKs, such as the SDK
 #' for Python (Boto3), add a unique value to the call.
 #' @param ImageName &#91;required&#93; The `ImageName` of the `Image` to create a version of.
@@ -2823,15 +2828,15 @@ sagemaker_create_image_version <- function(BaseImage, ClientToken, ImageName) {
 #' 
 #' You can select your workforce from one of three providers:
 #' 
-#' -   A private workforce that you create. It can include employees,
+#'   - A private workforce that you create. It can include employees,
 #'     contractors, and outside experts. Use a private workforce when want
 #'     the data to stay within your organization or when a specific set of
 #'     skills is required.
 #' 
-#' -   One or more vendors that you select from the AWS Marketplace.
+#'   - One or more vendors that you select from the AWS Marketplace.
 #'     Vendors provide expertise in specific areas.
 #' 
-#' -   The Amazon Mechanical Turk workforce. This is the largest workforce,
+#'   - The Amazon Mechanical Turk workforce. This is the largest workforce,
 #'     but it should only be used for public data or data that has been
 #'     stripped of any personally identifiable information.
 #' 
@@ -2889,31 +2894,31 @@ sagemaker_create_image_version <- function(BaseImage, ClientToken, ImageName) {
 #' 
 #' `\{`
 #' 
-#' ` "document-version": "2018-11-28"`
+#' `  "document-version": "2018-11-28" `
 #' 
-#' ` "labels": [`
+#' `  "labels": [ `
 #' 
-#' ` \{`
+#' `  \{ `
 #' 
-#' ` "label": "label_1"`
+#' `  "label": "label_1" `
 #' 
-#' ` \},`
+#' `  \}, `
 #' 
-#' ` \{`
+#' `  \{ `
 #' 
-#' ` "label": "label_2"`
+#' `  "label": "label_2" `
 #' 
-#' ` \},`
+#' `  \}, `
 #' 
-#' ` ...`
+#' `  ... `
 #' 
-#' ` \{`
+#' `  \{ `
 #' 
-#' ` "label": "label_n"`
+#' `  "label": "label_n" `
 #' 
-#' ` \}`
+#' `  \} `
 #' 
-#' ` ]`
+#' `  ] `
 #' 
 #' `\}`
 #' @param StoppingConditions A set of conditions for stopping the labeling job. If any of the
@@ -3051,8 +3056,8 @@ sagemaker_create_labeling_job <- function(LabelingJobName, LabelAttributeName, I
 #' 
 #' For an example that calls this method when deploying a model to Amazon
 #' SageMaker hosting services, see [Deploy the Model to Amazon SageMaker
-#' Hosting Services (AWS SDK for Python (Boto
-#' 3)).](https://docs.aws.amazon.com/sagemaker/latest/dg/#ex1-deploy-model-boto)
+#' Hosting Services (AWS SDK for Python
+#' (Boto 3)).](https://docs.aws.amazon.com/sagemaker/latest/dg/#ex1-deploy-model-boto)
 #' 
 #' To run a batch transform using your model, you start a job with the
 #' [`create_transform_job`][sagemaker_create_transform_job] API. Amazon
@@ -3091,11 +3096,11 @@ sagemaker_create_labeling_job <- function(LabelingJobName, LabelAttributeName, I
 #' resources in different ways, for example, by purpose, owner, or
 #' environment. For more information, see [Tagging AWS
 #' Resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html).
-#' @param VpcConfig A VpcConfig object that specifies the VPC that you want your model to
-#' connect to. Control access to and from your model container by
-#' configuring the VPC. `VpcConfig` is used in hosting services and in
-#' batch transform. For more information, see [Protect Endpoints by Using
-#' an Amazon Virtual Private
+#' @param VpcConfig A <span>VpcConfig</span> object that specifies the VPC that you want
+#' your model to connect to. Control access to and from your model
+#' container by configuring the VPC. `VpcConfig` is used in hosting
+#' services and in batch transform. For more information, see [Protect
+#' Endpoints by Using an Amazon Virtual Private
 #' Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/host-vpc.html)
 #' and [Protect Data in Batch Transform Jobs by Using an Amazon Virtual
 #' Private
@@ -3466,10 +3471,10 @@ sagemaker_create_model_explainability_job_definition <- function(JobDefinitionNa
 #' 
 #' There are two types of model packages:
 #' 
-#' -   Versioned - a model that is part of a model group in the model
+#'   - Versioned - a model that is part of a model group in the model
 #'     registry.
 #' 
-#' -   Unversioned - a model package that is not part of a model group.
+#'   - Unversioned - a model package that is not part of a model group.
 #'
 #' @usage
 #' sagemaker_create_model_package(ModelPackageName, ModelPackageGroupName,
@@ -3491,13 +3496,13 @@ sagemaker_create_model_explainability_job_definition <- function(JobDefinitionNa
 #' @param InferenceSpecification Specifies details about inference jobs that can be run with models based
 #' on this model package, including the following:
 #' 
-#' -   The Amazon ECR paths of containers that contain the inference code
+#'   - The Amazon ECR paths of containers that contain the inference code
 #'     and model artifacts.
 #' 
-#' -   The instance types that the model package supports for transform
+#'   - The instance types that the model package supports for transform
 #'     jobs and real-time endpoints used for inference.
 #' 
-#' -   The input and output content formats that the model package supports
+#'   - The input and output content formats that the model package supports
 #'     for inference.
 #' @param ValidationSpecification Specifies configurations for one or more transform jobs that Amazon
 #' SageMaker runs to test the model package.
@@ -3899,9 +3904,9 @@ sagemaker_create_model_quality_job_definition <- function(JobDefinitionName, Mod
 #' AWS Region within an AWS account.
 #' @param MonitoringScheduleConfig &#91;required&#93; The configuration object that specifies the monitoring schedule and
 #' defines the monitoring job.
-#' @param Tags (Optional) An array of key-value pairs. For more information, see Using
-#' Cost Allocation Tags in the *AWS Billing and Cost Management User
-#' Guide*.
+#' @param Tags (Optional) An array of key-value pairs. For more information, see
+#' <span>Using Cost Allocation Tags</span> in the *AWS Billing and Cost
+#' Management User Guide*.
 #'
 #' @return
 #' A list with the following syntax:
@@ -4118,7 +4123,7 @@ sagemaker_create_monitoring_schedule <- function(MonitoringScheduleName, Monitor
 #' configure a NAT Gateway in your VPC.
 #' 
 #' For more information, see [Notebook Instances Are Internet-Enabled by
-#' Default](https://docs.aws.amazon.com/sagemaker/latest/dg/#appendix-notebook-and-internet-access).
+#' Default](https://docs.aws.amazon.com/sagemaker/latest/dg/notebook-interface-endpoint.html#appendix-notebook-and-internet-access).
 #' You can set the value of this parameter to `Disabled` only if you set a
 #' value for the `SubnetId` parameter.
 #' @param VolumeSizeInGB The size, in GB, of the ML storage volume to attach to the notebook
@@ -4756,36 +4761,36 @@ sagemaker_create_project <- function(ProjectName, ProjectDescription = NULL, Ser
 #' 
 #' In the request body, you provide the following:
 #' 
-#' -   `AlgorithmSpecification` - Identifies the training algorithm to use.
+#'   - `AlgorithmSpecification` - Identifies the training algorithm to use.
 #' 
-#' -   `HyperParameters` - Specify these algorithm-specific parameters to
+#'   - `HyperParameters` - Specify these algorithm-specific parameters to
 #'     enable the estimation of model parameters during training.
 #'     Hyperparameters can be tuned to optimize this learning process. For
 #'     a list of hyperparameters for each training algorithm provided by
 #'     Amazon SageMaker, see
 #'     [Algorithms](https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html).
 #' 
-#' -   `InputDataConfig` - Describes the training dataset and the Amazon
+#'   - `InputDataConfig` - Describes the training dataset and the Amazon
 #'     S3, EFS, or FSx location where it is stored.
 #' 
-#' -   `OutputDataConfig` - Identifies the Amazon S3 bucket where you want
+#'   - `OutputDataConfig` - Identifies the Amazon S3 bucket where you want
 #'     Amazon SageMaker to save the results of model training.
 #' 
-#' -   `ResourceConfig` - Identifies the resources, ML compute instances,
+#'   - `ResourceConfig` - Identifies the resources, ML compute instances,
 #'     and ML storage volumes to deploy for model training. In distributed
 #'     training, you specify more than one instance.
 #' 
-#' -   `EnableManagedSpotTraining` - Optimize the cost of training machine
+#'   - `EnableManagedSpotTraining` - Optimize the cost of training machine
 #'     learning models by up to 80% by using Amazon EC2 Spot instances. For
 #'     more information, see [Managed Spot
 #'     Training](https://docs.aws.amazon.com/sagemaker/latest/dg/model-managed-spot-training.html).
 #' 
-#' -   `RoleArn` - The Amazon Resource Number (ARN) that Amazon SageMaker
+#'   - `RoleArn` - The Amazon Resource Number (ARN) that Amazon SageMaker
 #'     assumes to perform tasks on your behalf during model training. You
 #'     must grant this role the necessary permissions so that Amazon
 #'     SageMaker can successfully complete model training.
 #' 
-#' -   `StoppingCondition` - To help cap training costs, use
+#'   - `StoppingCondition` - To help cap training costs, use
 #'     `MaxRuntimeInSeconds` to set a time limit for training. Use
 #'     `MaxWaitTimeInSeconds` to specify how long you are willing to wait
 #'     for a managed spot training job to complete.
@@ -4860,10 +4865,10 @@ sagemaker_create_project <- function(ProjectName, ProjectDescription = NULL, Ser
 #' training data, choose `File` as the `TrainingInputMode` in the algorithm
 #' specification. For distributed training algorithms, specify an instance
 #' count greater than 1.
-#' @param VpcConfig A VpcConfig object that specifies the VPC that you want your training
-#' job to connect to. Control access to and from your training container by
-#' configuring the VPC. For more information, see [Protect Training Jobs by
-#' Using an Amazon Virtual Private
+#' @param VpcConfig A <span>VpcConfig</span> object that specifies the VPC that you want
+#' your training job to connect to. Control access to and from your
+#' training container by configuring the VPC. For more information, see
+#' [Protect Training Jobs by Using an Amazon Virtual Private
 #' Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html).
 #' @param StoppingCondition &#91;required&#93; Specifies a limit to how long a model training job can run. When the job
 #' reaches the time limit, Amazon SageMaker ends the training job. Use this
@@ -5096,21 +5101,21 @@ sagemaker_create_training_job <- function(TrainingJobName, HyperParameters = NUL
 #' 
 #' In the request body, you provide the following:
 #' 
-#' -   `TransformJobName` - Identifies the transform job. The name must be
+#'   - `TransformJobName` - Identifies the transform job. The name must be
 #'     unique within an AWS Region in an AWS account.
 #' 
-#' -   `ModelName` - Identifies the model to use. `ModelName` must be the
+#'   - `ModelName` - Identifies the model to use. `ModelName` must be the
 #'     name of an existing Amazon SageMaker model in the same AWS Region
 #'     and AWS account. For information on creating a model, see
 #'     [`create_model`][sagemaker_create_model].
 #' 
-#' -   `TransformInput` - Describes the dataset to be transformed and the
+#'   - `TransformInput` - Describes the dataset to be transformed and the
 #'     Amazon S3 location where it is stored.
 #' 
-#' -   `TransformOutput` - Identifies the Amazon S3 location where you want
+#'   - `TransformOutput` - Identifies the Amazon S3 location where you want
 #'     Amazon SageMaker to save the results from the transform job.
 #' 
-#' -   `TransformResources` - Identifies the ML compute instances for the
+#'   - `TransformResources` - Identifies the ML compute instances for the
 #'     transform job.
 #' 
 #' For more information about how batch transformation works, see [Batch
@@ -5151,7 +5156,7 @@ sagemaker_create_training_job <- function(TrainingJobName, HyperParameters = NUL
 #' feature works only in supported algorithms. Currently, Amazon SageMaker
 #' built-in algorithms do not support HTTP chunked encoding.
 #' @param BatchStrategy Specifies the number of records to include in a mini-batch for an HTTP
-#' inference request. A *record* is a single unit of input data that
+#' inference request. A *record* ** is a single unit of input data that
 #' inference can be made on. For example, a single line in a CSV file is a
 #' record.
 #' 
@@ -5270,7 +5275,7 @@ sagemaker_create_transform_job <- function(TransformJobName, ModelName, MaxConcu
 }
 .sagemaker$operations$create_transform_job <- sagemaker_create_transform_job
 
-#' Creates an Amazon SageMaker trial
+#' Creates an Amazon SageMaker _trial_
 #'
 #' @description
 #' Creates an Amazon SageMaker *trial*. A trial is a set of steps called
@@ -5353,7 +5358,8 @@ sagemaker_create_trial <- function(TrialName, DisplayName = NULL, ExperimentName
 }
 .sagemaker$operations$create_trial <- sagemaker_create_trial
 
-#' Creates a trial component, which is a stage of a machine learning trial
+#' Creates a _trial component_, which is a stage of a machine learning
+#' _trial_
 #'
 #' @description
 #' Creates a *trial component*, which is a stage of a machine learning
@@ -5390,11 +5396,11 @@ sagemaker_create_trial <- function(TrialName, DisplayName = NULL, ExperimentName
 #' displayed.
 #' @param Status The status of the component. States include:
 #' 
-#' -   InProgress
+#'   - InProgress
 #' 
-#' -   Completed
+#'   - Completed
 #' 
-#' -   Failed
+#'   - Failed
 #' @param StartTime When the component started.
 #' @param EndTime When the component ended.
 #' @param Parameters The hyperparameters for the component.
@@ -5729,8 +5735,8 @@ sagemaker_create_workforce <- function(CognitoConfig = NULL, OidcConfig = NULL, 
 #' create a workforce. All of the `CognitoMemberDefinition` objects that
 #' make up the member definition must have the same `ClientId` and
 #' `UserPool` values. To add a Amazon Cognito user group to an existing
-#' worker pool, see Adding groups to a User Pool. For more information
-#' about user pools, see [Amazon Cognito User
+#' worker pool, see <span>Adding groups to a User Pool</span>. For more
+#' information about user pools, see [Amazon Cognito User
 #' Pools](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html).
 #' 
 #' For workforces created using your own OIDC IdP, specify the user groups
@@ -13416,7 +13422,7 @@ sagemaker_list_code_repositories <- function(CreationTimeAfter = NULL, CreationT
 #' @param NameContains A filter that returns the model compilation jobs whose name contains a
 #' specified string.
 #' @param StatusEquals A filter that retrieves model compilation jobs with a specific
-#' DescribeCompilationJobResponse$CompilationJobStatus status.
+#' <span>DescribeCompilationJobResponse$CompilationJobStatus</span> status.
 #' @param SortBy The field by which to sort results. The default is `CreationTime`.
 #' @param SortOrder The sort order for results. The default is `Ascending`.
 #'
@@ -13599,7 +13605,7 @@ sagemaker_list_contexts <- function(SourceUri = NULL, ContextType = NULL, Create
 #' @param NextToken If the result of the previous
 #' [`list_data_quality_job_definitions`][sagemaker_list_data_quality_job_definitions]
 #' request was truncated, the response includes a `NextToken`. To retrieve
-#' the next set of transform jobs, use the token in the next request.&gt;
+#' the next set of transform jobs, use the token in the next request.\>
 #' @param MaxResults The maximum number of data quality monitoring job definitions to return
 #' in the response.
 #' @param NameContains A string in the data quality monitoring job definition name. This filter
@@ -14477,8 +14483,8 @@ sagemaker_list_human_task_uis <- function(CreationTimeAfter = NULL, CreationTime
 #' hyperparameter tuning jobs launched in your account
 #'
 #' @description
-#' Gets a list of HyperParameterTuningJobSummary objects that describe the
-#' hyperparameter tuning jobs launched in your account.
+#' Gets a list of <span>HyperParameterTuningJobSummary</span> objects that
+#' describe the hyperparameter tuning jobs launched in your account.
 #'
 #' @usage
 #' sagemaker_list_hyper_parameter_tuning_jobs(NextToken, MaxResults,
@@ -15262,11 +15268,11 @@ sagemaker_list_model_package_groups <- function(CreationTimeAfter = NULL, Creati
 #' @param ModelPackageType A filter that returns onlyl the model packages of the specified type.
 #' This can be one of the following values.
 #' 
-#' -   `VERSIONED` - List only versioned models.
+#'   - `VERSIONED` - List only versioned models.
 #' 
-#' -   `UNVERSIONED` - List only unversioined models.
+#'   - `UNVERSIONED` - List only unversioined models.
 #' 
-#' -   `BOTH` - List both versioned and unversioned models.
+#'   - `BOTH` - List both versioned and unversioned models.
 #' @param NextToken If the response to a previous
 #' [`list_model_packages`][sagemaker_list_model_packages] request was
 #' truncated, the response includes a `NextToken`. To retrieve the next set
@@ -16657,8 +16663,8 @@ sagemaker_list_training_jobs <- function(NextToken = NULL, MaxResults = NULL, Cr
 #' jobs that a hyperparameter tuning job launched
 #'
 #' @description
-#' Gets a list of TrainingJobSummary objects that describe the training
-#' jobs that a hyperparameter tuning job launched.
+#' Gets a list of <span>TrainingJobSummary</span> objects that describe the
+#' training jobs that a hyperparameter tuning job launched.
 #'
 #' @usage
 #' sagemaker_list_training_jobs_for_hyper_parameter_tuning_job(
@@ -16853,11 +16859,11 @@ sagemaker_list_transform_jobs <- function(CreationTimeAfter = NULL, CreationTime
 #' only components that were created in a specific time range. You can also
 #' filter on one of the following:
 #' 
-#' -   `ExperimentName`
+#'   - `ExperimentName`
 #' 
-#' -   `SourceArn`
+#'   - `SourceArn`
 #' 
-#' -   `TrialName`
+#'   - `TrialName`
 #'
 #' @usage
 #' sagemaker_list_trial_components(ExperimentName, TrialName, SourceArn,
@@ -17435,7 +17441,7 @@ sagemaker_register_devices <- function(DeviceFleetName, Devices, Tags = NULL) {
 #' provide a `HumanTaskUiArn` if you use the `UiTemplate` parameter.
 #' 
 #' See a list of available Human Ui Amazon Resource Names (ARNs) in
-#' UiConfig.
+#' <span>UiConfig</span>.
 #'
 #' @return
 #' A list with the following syntax:
@@ -18965,9 +18971,10 @@ sagemaker_stop_auto_ml_job <- function(AutoMLJobName) {
 #' 
 #' When it receives a
 #' [`stop_compilation_job`][sagemaker_stop_compilation_job] request, Amazon
-#' SageMaker changes the CompilationJobSummary$CompilationJobStatus of the
-#' job to `Stopping`. After Amazon SageMaker stops the job, it sets the
-#' CompilationJobSummary$CompilationJobStatus to `Stopped`.
+#' SageMaker changes the
+#' <span>CompilationJobSummary$CompilationJobStatus</span> of the job to
+#' `Stopping`. After Amazon SageMaker stops the job, it sets the
+#' <span>CompilationJobSummary$CompilationJobStatus</span> to `Stopped`.
 #'
 #' @usage
 #' sagemaker_stop_compilation_job(CompilationJobName)
@@ -19920,10 +19927,10 @@ sagemaker_update_domain <- function(DomainId, DefaultUserSettings = NULL) {
 #' specified in a new `EndpointConfig` call when updating an endpoint, set
 #' `RetainAllVariantProperties` to `false`. The default is `false`.
 #' @param ExcludeRetainedVariantProperties When you are updating endpoint resources with
-#' UpdateEndpointInput$RetainAllVariantProperties, whose value is set to
-#' `true`, `ExcludeRetainedVariantProperties` specifies the list of type
-#' VariantProperty to override with the values provided by
-#' `EndpointConfig`. If you don't specify a value for
+#' <span>UpdateEndpointInput$RetainAllVariantProperties</span>, whose value
+#' is set to `true`, `ExcludeRetainedVariantProperties` specifies the list
+#' of type <span>VariantProperty</span> to override with the values
+#' provided by `EndpointConfig`. If you don't specify a value for
 #' `ExcludeAllVariantProperties`, no variant properties are overridden.
 #' @param DeploymentConfig The deployment configuration for the endpoint to be updated.
 #'
@@ -21093,8 +21100,8 @@ sagemaker_update_workforce <- function(WorkforceName, SourceIpConfig = NULL, Oid
 #' create a workforce. All of the `CognitoMemberDefinition` objects that
 #' make up the member definition must have the same `ClientId` and
 #' `UserPool` values. To add a Amazon Cognito user group to an existing
-#' worker pool, see Adding groups to a User Pool. For more information
-#' about user pools, see [Amazon Cognito User
+#' worker pool, see <span>Adding groups to a User Pool</span>. For more
+#' information about user pools, see [Amazon Cognito User
 #' Pools](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html).
 #' 
 #' For workforces created using your own OIDC IdP, specify the user groups

@@ -16,14 +16,14 @@ in the \emph{Amazon Simple Storage Service Developer Guide}.}
 
 \item{ContentMD5}{The base64-encoded 128-bit MD5 digest of the data. This header must be
 used as a message integrity check to verify that the request body was
-not corrupted in transit. For more information, go to \href{https://www.ietf.org/rfc/rfc1864.txt}{RFC 1864.}
+not corrupted in transit. For more information, go to
+\href{https://www.ietf.org/rfc/rfc1864.txt}{RFC 1864.}
 
 For requests made using the AWS Command Line Interface (CLI) or AWS
 SDKs, this field is calculated automatically.}
 
 \item{ExpectedBucketOwner}{The account id of the expected bucket owner. If the bucket is owned by a
-different account, the request will fail with an HTTP
-\verb{403 (Access Denied)} error.}
+different account, the request will fail with an HTTP \verb{403 (Access Denied)} error.}
 }
 \value{
 An empty list.

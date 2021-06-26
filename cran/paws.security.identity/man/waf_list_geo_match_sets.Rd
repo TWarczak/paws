@@ -2,7 +2,7 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_list_geo_match_sets}
 \alias{waf_list_geo_match_sets}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_list_geo_match_sets(NextMarker, Limit)
 }
@@ -42,7 +42,8 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Returns an array of GeoMatchSetSummary objects in the response.
+Returns an array of <span>GeoMatchSetSummary</span> objects in the
+response.
 }
 \section{Request syntax}{
 \preformatted{svc$list_geo_match_sets(

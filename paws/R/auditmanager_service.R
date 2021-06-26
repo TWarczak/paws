@@ -24,18 +24,18 @@ NULL
 #' 
 #' Use the following links to get started with the AWS Audit Manager API:
 #' 
-#' -   [Actions](https://docs.aws.amazon.com/audit-manager/latest/APIReference/API_Operations.html):
+#'   - [Actions](https://docs.aws.amazon.com/audit-manager/latest/APIReference/API_Operations.html):
 #'     An alphabetical list of all AWS Audit Manager API operations.
 #' 
-#' -   [Data
+#'   - [Data
 #'     types](https://docs.aws.amazon.com/audit-manager/latest/APIReference/API_Types.html):
 #'     An alphabetical list of all AWS Audit Manager data types.
 #' 
-#' -   [Common
+#'   - [Common
 #'     parameters](https://docs.aws.amazon.com/audit-manager/latest/APIReference/CommonParameters.html):
 #'     Parameters that all Query operations can use.
 #' 
-#' -   [Common
+#'   - [Common
 #'     errors](https://docs.aws.amazon.com/audit-manager/latest/APIReference/CommonErrors.html):
 #'     Client and server errors that all operations can return.
 #' 
@@ -127,6 +127,12 @@ NULL
 #'  \link[=auditmanager_update_settings]{update_settings} \tab Updates AWS Audit Manager settings for the current user account\cr
 #'  \link[=auditmanager_validate_assessment_report_integrity]{validate_assessment_report_integrity} \tab Validates the integrity of an assessment report in AWS Audit Manager
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname auditmanager
 #' @export

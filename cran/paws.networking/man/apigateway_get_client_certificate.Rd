@@ -7,8 +7,8 @@
 apigateway_get_client_certificate(clientCertificateId)
 }
 \arguments{
-\item{clientCertificateId}{[required] [Required] The identifier of the ClientCertificate resource to be
-described.}
+\item{clientCertificateId}{[required] [Required] The identifier of the <span>ClientCertificate</span>
+resource to be described.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -28,7 +28,8 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Gets information about the current ClientCertificate resource.
+Gets information about the current <span>ClientCertificate</span>
+resource.
 }
 \section{Request syntax}{
 \preformatted{svc$get_client_certificate(

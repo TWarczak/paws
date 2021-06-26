@@ -21,12 +21,12 @@ NULL
 #'
 #' @param RuleSetName &#91;required&#93; The name of the rule set to create. The name must:
 #' 
-#' -   This value can only contain ASCII letters (a-z, A-Z), numbers (0-9),
+#'   - This value can only contain ASCII letters (a-z, A-Z), numbers (0-9),
 #'     underscores (_), or dashes (-).
 #' 
-#' -   Start and end with a letter or number.
+#'   - Start and end with a letter or number.
 #' 
-#' -   Contain less than 64 characters.
+#'   - Contain less than 64 characters.
 #' @param OriginalRuleSetName &#91;required&#93; The name of the rule set to clone.
 #'
 #' @return
@@ -524,12 +524,12 @@ ses_create_receipt_rule <- function(RuleSetName, After = NULL, Rule) {
 #'
 #' @param RuleSetName &#91;required&#93; The name of the rule set to create. The name must:
 #' 
-#' -   This value can only contain ASCII letters (a-z, A-Z), numbers (0-9),
+#'   - This value can only contain ASCII letters (a-z, A-Z), numbers (0-9),
 #'     underscores (_), or dashes (-).
 #' 
-#' -   Start and end with a letter or number.
+#'   - Start and end with a letter or number.
 #' 
-#' -   Contain less than 64 characters.
+#'   - Contain less than 64 characters.
 #'
 #' @return
 #' An empty list.
@@ -1750,12 +1750,12 @@ ses_get_custom_verification_email_template <- function(TemplateName) {
 #' This operation takes a list of identities as input and returns the
 #' following information for each:
 #' 
-#' -   Whether Easy DKIM signing is enabled or disabled.
+#'   - Whether Easy DKIM signing is enabled or disabled.
 #' 
-#' -   A set of DKIM tokens that represent the identity. If the identity is
+#'   - A set of DKIM tokens that represent the identity. If the identity is
 #'     an email address, the tokens represent the domain of that address.
 #' 
-#' -   Whether Amazon SES has successfully verified the DKIM tokens
+#'   - Whether Amazon SES has successfully verified the DKIM tokens
 #'     published in the domain's DNS. This information is only returned for
 #'     domain name identities, not for email addresses.
 #' 
@@ -3170,22 +3170,22 @@ ses_send_bounce <- function(OriginalMessageId, BounceSender, Explanation = NULL,
 #' [`send_bulk_templated_email`][ses_send_bulk_templated_email] operation,
 #' your call to the API must meet the following requirements:
 #' 
-#' -   The call must refer to an existing email template. You can create
+#'   - The call must refer to an existing email template. You can create
 #'     email templates using the [`create_template`][ses_create_template]
 #'     operation.
 #' 
-#' -   The message must be sent from a verified email address or domain.
+#'   - The message must be sent from a verified email address or domain.
 #' 
-#' -   If your account is still in the Amazon SES sandbox, you may only
+#'   - If your account is still in the Amazon SES sandbox, you may only
 #'     send to verified addresses or domains, or to email addresses
 #'     associated with the Amazon SES Mailbox Simulator. For more
 #'     information, see [Verifying Email Addresses and
 #'     Domains](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-addresses-and-domains.html)
 #'     in the *Amazon SES Developer Guide.*
 #' 
-#' -   The maximum message size is 10 MB.
+#'   - The maximum message size is 10 MB.
 #' 
-#' -   Each `Destination` parameter must include at least one recipient
+#'   - Each `Destination` parameter must include at least one recipient
 #'     email address. The recipient address can be a To: address, a CC:
 #'     address, or a BCC: address. If a recipient email address is invalid
 #'     (that is, it is not in the format
@@ -3193,14 +3193,14 @@ ses_send_bounce <- function(OriginalMessageId, BounceSender, Explanation = NULL,
 #'     will be rejected, even if the message contains other recipients that
 #'     are valid.
 #' 
-#' -   The message may not include more than 50 recipients, across the To:,
+#'   - The message may not include more than 50 recipients, across the To:,
 #'     CC: and BCC: fields. If you need to send an email message to a
 #'     larger audience, you can divide your recipient list into groups of
 #'     50 or fewer, and then call the
 #'     [`send_bulk_templated_email`][ses_send_bulk_templated_email]
 #'     operation several times to send the message to each group.
 #' 
-#' -   The number of destinations you can contact in a single call to the
+#'   - The number of destinations you can contact in a single call to the
 #'     API may be limited by your account's maximum sending rate.
 #'
 #' @usage
@@ -3221,16 +3221,17 @@ ses_send_bounce <- function(OriginalMessageId, BounceSender, Explanation = NULL,
 #' Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization.html).
 #' 
 #' Amazon SES does not support the SMTPUTF8 extension, as described in
-#' [RFC6531](https://tools.ietf.org/html/rfc6531). For this reason, the
-#' *local part* of a source email address (the part of the email address
-#' that precedes the @@ sign) may only contain [7-bit ASCII
+#' [RFC6531](https://datatracker.ietf.org/doc/html/rfc6531). For this
+#' reason, the *local part* of a source email address (the part of the
+#' email address that precedes the @@ sign) may only contain [7-bit ASCII
 #' characters](https://en.wikipedia.org/wiki/Email_address#Local-part). If
 #' the *domain part* of an address (the part after the @@ sign) contains
 #' non-ASCII characters, they must be encoded using Punycode, as described
-#' in [RFC3492](https://tools.ietf.org/html/rfc3492.html). The sender name
-#' (also known as the *friendly name*) may contain non-ASCII characters.
-#' These characters must be encoded using MIME encoded-word syntax, as
-#' described in [RFC 2047](https://tools.ietf.org/html/rfc2047). MIME
+#' in [RFC3492](https://datatracker.ietf.org/doc/html/rfc3492.html). The
+#' sender name (also known as the *friendly name*) may contain non-ASCII
+#' characters. These characters must be encoded using MIME encoded-word
+#' syntax, as described in
+#' [RFC 2047](https://datatracker.ietf.org/doc/html/rfc2047). MIME
 #' encoded-word syntax uses the following form:
 #' `=?charset?encoding?encoded-text?=`.
 #' @param SourceArn This parameter is used only for sending authorization. It is the ARN of
@@ -3440,27 +3441,27 @@ ses_send_custom_verification_email <- function(EmailAddress, TemplateName, Confi
 #' order to send email using the [`send_email`][ses_send_email] operation,
 #' your message must meet the following requirements:
 #' 
-#' -   The message must be sent from a verified email address or domain. If
+#'   - The message must be sent from a verified email address or domain. If
 #'     you attempt to send email using a non-verified address or domain,
 #'     the operation will result in an "Email address not verified" error.
 #' 
-#' -   If your account is still in the Amazon SES sandbox, you may only
+#'   - If your account is still in the Amazon SES sandbox, you may only
 #'     send to verified addresses or domains, or to email addresses
 #'     associated with the Amazon SES Mailbox Simulator. For more
 #'     information, see [Verifying Email Addresses and
 #'     Domains](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-addresses-and-domains.html)
 #'     in the *Amazon SES Developer Guide.*
 #' 
-#' -   The maximum message size is 10 MB.
+#'   - The maximum message size is 10 MB.
 #' 
-#' -   The message must include at least one recipient email address. The
+#'   - The message must include at least one recipient email address. The
 #'     recipient address can be a To: address, a CC: address, or a BCC:
 #'     address. If a recipient email address is invalid (that is, it is not
 #'     in the format *UserName@@\[SubDomain.\]Domain.TopLevelDomain*), the
 #'     entire message will be rejected, even if the message contains other
 #'     recipients that are valid.
 #' 
-#' -   The message may not include more than 50 recipients, across the To:,
+#'   - The message may not include more than 50 recipients, across the To:,
 #'     CC: and BCC: fields. If you need to send an email message to a
 #'     larger audience, you can divide your recipient list into groups of
 #'     50 or fewer, and then call the [`send_email`][ses_send_email]
@@ -3491,16 +3492,17 @@ ses_send_custom_verification_email <- function(EmailAddress, TemplateName, Confi
 #' Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization.html).
 #' 
 #' Amazon SES does not support the SMTPUTF8 extension, as described in
-#' [RFC6531](https://tools.ietf.org/html/rfc6531). For this reason, the
-#' *local part* of a source email address (the part of the email address
-#' that precedes the @@ sign) may only contain [7-bit ASCII
+#' [RFC6531](https://datatracker.ietf.org/doc/html/rfc6531). For this
+#' reason, the *local part* of a source email address (the part of the
+#' email address that precedes the @@ sign) may only contain [7-bit ASCII
 #' characters](https://en.wikipedia.org/wiki/Email_address#Local-part). If
 #' the *domain part* of an address (the part after the @@ sign) contains
 #' non-ASCII characters, they must be encoded using Punycode, as described
-#' in [RFC3492](https://tools.ietf.org/html/rfc3492.html). The sender name
-#' (also known as the *friendly name*) may contain non-ASCII characters.
-#' These characters must be encoded using MIME encoded-word syntax, as
-#' described in [RFC 2047](https://tools.ietf.org/html/rfc2047). MIME
+#' in [RFC3492](https://datatracker.ietf.org/doc/html/rfc3492.html). The
+#' sender name (also known as the *friendly name*) may contain non-ASCII
+#' characters. These characters must be encoded using MIME encoded-word
+#' syntax, as described in
+#' [RFC 2047](https://datatracker.ietf.org/doc/html/rfc2047). MIME
 #' encoded-word syntax uses the following form:
 #' `=?charset?encoding?encoded-text?=`.
 #' @param Destination &#91;required&#93; The destination for this email, composed of To:, CC:, and BCC: fields.
@@ -3681,36 +3683,36 @@ ses_send_email <- function(Source, Destination, Message, ReplyToAddresses = NULL
 #' The [`send_raw_email`][ses_send_raw_email] operation has the following
 #' requirements:
 #' 
-#' -   You can only send email from [verified email addresses or
+#'   - You can only send email from [verified email addresses or
 #'     domains](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-addresses-and-domains.html).
 #'     If you try to send email from an address that isn't verified, the
 #'     operation results in an "Email address not verified" error.
 #' 
-#' -   If your account is still in the [Amazon SES
+#'   - If your account is still in the [Amazon SES
 #'     sandbox](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/request-production-access.html),
 #'     you can only send email to other verified addresses in your account,
 #'     or to addresses that are associated with the [Amazon SES mailbox
 #'     simulator](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-simulator.html).
 #' 
-#' -   The maximum message size, including attachments, is 10 MB.
+#'   - The maximum message size, including attachments, is 10 MB.
 #' 
-#' -   Each message has to include at least one recipient address. A
+#'   - Each message has to include at least one recipient address. A
 #'     recipient address includes any address on the To:, CC:, or BCC:
 #'     lines.
 #' 
-#' -   If you send a single message to more than one recipient address, and
+#'   - If you send a single message to more than one recipient address, and
 #'     one of the recipient addresses isn't in a valid format (that is,
 #'     it's not in the format
 #'     *UserName@@\[SubDomain.\]Domain.TopLevelDomain*), Amazon SES rejects
 #'     the entire message, even if the other addresses are valid.
 #' 
-#' -   Each message can include up to 50 recipient addresses across the
+#'   - Each message can include up to 50 recipient addresses across the
 #'     To:, CC:, or BCC: lines. If you need to send a single message to
 #'     more than 50 recipients, you have to split the list of recipient
 #'     addresses into groups of less than 50 recipients, and send separate
 #'     messages to each group.
 #' 
-#' -   Amazon SES allows you to specify 8-bit Content-Transfer-Encoding for
+#'   - Amazon SES allows you to specify 8-bit Content-Transfer-Encoding for
 #'     MIME message parts. However, if Amazon SES has to modify the
 #'     contents of your message (for example, if you use open and click
 #'     tracking), 8-bit content isn't preserved. For this reason, we highly
@@ -3722,39 +3724,39 @@ ses_send_email <- function(Source, Destination, Message, ReplyToAddresses = NULL
 #' Additionally, keep the following considerations in mind when using the
 #' [`send_raw_email`][ses_send_raw_email] operation:
 #' 
-#' -   Although you can customize the message headers when using the
+#'   - Although you can customize the message headers when using the
 #'     [`send_raw_email`][ses_send_raw_email] operation, Amazon SES will
 #'     automatically apply its own `Message-ID` and `Date` headers; if you
 #'     passed these headers when creating the message, they will be
 #'     overwritten by the values that Amazon SES provides.
 #' 
-#' -   If you are using sending authorization to send on behalf of another
+#'   - If you are using sending authorization to send on behalf of another
 #'     user, [`send_raw_email`][ses_send_raw_email] enables you to specify
 #'     the cross-account identity for the email's Source, From, and
 #'     Return-Path parameters in one of two ways: you can pass optional
 #'     parameters `SourceArn`, `FromArn`, and/or `ReturnPathArn` to the
 #'     API, or you can include the following X-headers in the header of
 #'     your raw email:
-#' 
-#'     -   `X-SES-SOURCE-ARN`
-#' 
-#'     -   `X-SES-FROM-ARN`
-#' 
-#'     -   `X-SES-RETURN-PATH-ARN`
-#' 
+#'     
+#'       - `X-SES-SOURCE-ARN`
+#'     
+#'       - `X-SES-FROM-ARN`
+#'     
+#'       - `X-SES-RETURN-PATH-ARN`
+#'     
 #'     Don't include these X-headers in the DKIM signature. Amazon SES
 #'     removes these before it sends the email.
-#' 
+#'     
 #'     If you only specify the `SourceIdentityArn` parameter, Amazon SES
 #'     sets the From and Return-Path addresses to the same identity that
 #'     you specified.
-#' 
+#'     
 #'     For more information about sending authorization, see the [Using
 #'     Sending Authorization with Amazon
 #'     SES](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization.html)
 #'     in the *Amazon SES Developer Guide.*
 #' 
-#' -   For every message that you send, the total number of recipients
+#'   - For every message that you send, the total number of recipients
 #'     (including each recipient in the To:, CC: and BCC: fields) is
 #'     counted against the maximum number of emails you can send in a
 #'     24-hour period (your *sending quota*). For more information about
@@ -3771,16 +3773,17 @@ ses_send_email <- function(Source, Destination, Message, ReplyToAddresses = NULL
 #' message. (You can also specify both.)
 #' 
 #' Amazon SES does not support the SMTPUTF8 extension, as described
-#' in[RFC6531](https://tools.ietf.org/html/rfc6531). For this reason, the
-#' *local part* of a source email address (the part of the email address
-#' that precedes the @@ sign) may only contain [7-bit ASCII
+#' in[RFC6531](https://datatracker.ietf.org/doc/html/rfc6531). For this
+#' reason, the *local part* of a source email address (the part of the
+#' email address that precedes the @@ sign) may only contain [7-bit ASCII
 #' characters](https://en.wikipedia.org/wiki/Email_address#Local-part). If
 #' the *domain part* of an address (the part after the @@ sign) contains
 #' non-ASCII characters, they must be encoded using Punycode, as described
-#' in [RFC3492](https://tools.ietf.org/html/rfc3492.html). The sender name
-#' (also known as the *friendly name*) may contain non-ASCII characters.
-#' These characters must be encoded using MIME encoded-word syntax, as
-#' described in [RFC 2047](https://tools.ietf.org/html/rfc2047). MIME
+#' in [RFC3492](https://datatracker.ietf.org/doc/html/rfc3492.html). The
+#' sender name (also known as the *friendly name*) may contain non-ASCII
+#' characters. These characters must be encoded using MIME encoded-word
+#' syntax, as described in
+#' [RFC 2047](https://datatracker.ietf.org/doc/html/rfc2047). MIME
 #' encoded-word syntax uses the following form:
 #' `=?charset?encoding?encoded-text?=`.
 #' 
@@ -3793,29 +3796,29 @@ ses_send_email <- function(Source, Destination, Message, ReplyToAddresses = NULL
 #' @param RawMessage &#91;required&#93; The raw email message itself. The message has to meet the following
 #' criteria:
 #' 
-#' -   The message has to contain a header and a body, separated by a blank
+#'   - The message has to contain a header and a body, separated by a blank
 #'     line.
 #' 
-#' -   All of the required header fields must be present in the message.
+#'   - All of the required header fields must be present in the message.
 #' 
-#' -   Each part of a multipart MIME message must be formatted properly.
+#'   - Each part of a multipart MIME message must be formatted properly.
 #' 
-#' -   Attachments must be of a content type that Amazon SES supports. For
+#'   - Attachments must be of a content type that Amazon SES supports. For
 #'     a list on unsupported content types, see [Unsupported Attachment
 #'     Types](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-raw.html#send-email-raw-mime)
 #'     in the *Amazon SES Developer Guide*.
 #' 
-#' -   The entire message must be base64-encoded.
+#'   - The entire message must be base64-encoded.
 #' 
-#' -   If any of the MIME parts in your message contain content that is
+#'   - If any of the MIME parts in your message contain content that is
 #'     outside of the 7-bit ASCII character range, we highly recommend that
 #'     you encode that content. For more information, see [Sending Raw
 #'     Email](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-raw.html)
 #'     in the *Amazon SES Developer Guide*.
 #' 
-#' -   Per [RFC
-#'     5321](https://tools.ietf.org/html/rfc5321#section-4.5.3.1.6), the
-#'     maximum length of each line of text, including the &lt;CRLF&gt;,
+#'   - Per
+#'     [RFC 5321](https://datatracker.ietf.org/doc/html/rfc5321#section-4.5.3.1.6),
+#'     the maximum length of each line of text, including the \<CRLF\>,
 #'     must not exceed 1,000 characters.
 #' @param FromArn This parameter is used only for sending authorization. It is the ARN of
 #' the identity that is associated with the sending authorization policy
@@ -3957,28 +3960,28 @@ ses_send_raw_email <- function(Source = NULL, Destinations = NULL, RawMessage, F
 #' [`send_templated_email`][ses_send_templated_email] operation, your call
 #' to the API must meet the following requirements:
 #' 
-#' -   The call must refer to an existing email template. You can create
+#'   - The call must refer to an existing email template. You can create
 #'     email templates using the [`create_template`][ses_create_template]
 #'     operation.
 #' 
-#' -   The message must be sent from a verified email address or domain.
+#'   - The message must be sent from a verified email address or domain.
 #' 
-#' -   If your account is still in the Amazon SES sandbox, you may only
+#'   - If your account is still in the Amazon SES sandbox, you may only
 #'     send to verified addresses or domains, or to email addresses
 #'     associated with the Amazon SES Mailbox Simulator. For more
 #'     information, see [Verifying Email Addresses and
 #'     Domains](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-addresses-and-domains.html)
 #'     in the *Amazon SES Developer Guide.*
 #' 
-#' -   The maximum message size is 10 MB.
+#'   - The maximum message size is 10 MB.
 #' 
-#' -   Calls to the [`send_templated_email`][ses_send_templated_email]
+#'   - Calls to the [`send_templated_email`][ses_send_templated_email]
 #'     operation may only include one `Destination` parameter. A
 #'     destination is a set of recipients who will receive the same version
 #'     of the email. The `Destination` parameter can include up to 50
 #'     recipients, across the To:, CC: and BCC: fields.
 #' 
-#' -   The `Destination` parameter must include at least one recipient
+#'   - The `Destination` parameter must include at least one recipient
 #'     email address. The recipient address can be a To: address, a CC:
 #'     address, or a BCC: address. If a recipient email address is invalid
 #'     (that is, it is not in the format
@@ -4017,16 +4020,17 @@ ses_send_raw_email <- function(Source = NULL, Destinations = NULL, RawMessage, F
 #' Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization.html).
 #' 
 #' Amazon SES does not support the SMTPUTF8 extension, as described in
-#' [RFC6531](https://tools.ietf.org/html/rfc6531). For this reason, the
-#' *local part* of a source email address (the part of the email address
-#' that precedes the @@ sign) may only contain [7-bit ASCII
+#' [RFC6531](https://datatracker.ietf.org/doc/html/rfc6531). For this
+#' reason, the *local part* of a source email address (the part of the
+#' email address that precedes the @@ sign) may only contain [7-bit ASCII
 #' characters](https://en.wikipedia.org/wiki/Email_address#Local-part). If
 #' the *domain part* of an address (the part after the @@ sign) contains
 #' non-ASCII characters, they must be encoded using Punycode, as described
-#' in [RFC3492](https://tools.ietf.org/html/rfc3492.html). The sender name
-#' (also known as the *friendly name*) may contain non-ASCII characters.
-#' These characters must be encoded using MIME encoded-word syntax, as
-#' described in[RFC 2047](https://tools.ietf.org/html/rfc2047). MIME
+#' in [RFC3492](https://datatracker.ietf.org/doc/html/rfc3492.html). The
+#' sender name (also known as the *friendly name*) may contain non-ASCII
+#' characters. These characters must be encoded using MIME encoded-word
+#' syntax, as described
+#' in[RFC 2047](https://datatracker.ietf.org/doc/html/rfc2047). MIME
 #' encoded-word syntax uses the following form:
 #' `=?charset?encoding?encoded-text?=`.
 #' @param Destination &#91;required&#93; The destination for this email, composed of To:, CC:, and BCC: fields. A
@@ -5275,11 +5279,11 @@ ses_update_template <- function(Template) {
 #' To create the CNAME records for DKIM authentication, use the following
 #' values:
 #' 
-#' -   **Name**: *token*._domainkey.*example.com*
+#'   - **Name**: *token*._domainkey.*example.com*
 #' 
-#' -   **Type**: CNAME
+#'   - **Type**: CNAME
 #' 
-#' -   **Value**: *token*.dkim.amazonses.com
+#'   - **Value**: *token*.dkim.amazonses.com
 #' 
 #' In the preceding example, replace *token* with one of the tokens that
 #' are generated when you execute this operation. Replace *example.com*

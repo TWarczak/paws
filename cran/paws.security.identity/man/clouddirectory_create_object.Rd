@@ -8,11 +8,12 @@ clouddirectory_create_object(DirectoryArn, SchemaFacets,
   ObjectAttributeList, ParentReference, LinkName)
 }
 \arguments{
-\item{DirectoryArn}{[required] The Amazon Resource Name (ARN) that is associated with the Directory in
-which the object will be created. For more information, see arns.}
+\item{DirectoryArn}{[required] The Amazon Resource Name (ARN) that is associated with the
+<span>Directory</span> in which the object will be created. For more
+information, see <span>arns</span>.}
 
 \item{SchemaFacets}{[required] A list of schema facets to be associated with the object. Do not provide
-minor version components. See SchemaFacet for details.}
+minor version components. See <span>SchemaFacet</span> for details.}
 
 \item{ObjectAttributeList}{The attribute map whose attribute ARN contains the key and attribute
 value as the map value.}
@@ -29,11 +30,11 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Creates an object in a Directory. Additionally attaches the object to a
-parent, if a parent reference and \code{LinkName} is specified. An object is
-simply a collection of Facet attributes. You can also use this API call
-to create a policy object, if the facet from which you create the object
-is a policy facet.
+Creates an object in a <span>Directory</span>. Additionally attaches the
+object to a parent, if a parent reference and \code{LinkName} is specified.
+An object is simply a collection of <span>Facet</span> attributes. You
+can also use this API call to create a policy object, if the facet from
+which you create the object is a policy facet.
 }
 \section{Request syntax}{
 \preformatted{svc$create_object(

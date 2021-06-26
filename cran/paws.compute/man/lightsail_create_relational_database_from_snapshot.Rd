@@ -24,9 +24,7 @@ Constraints:
 \verb{us-east-2a} case-sensitive format.
 
 You can get a list of Availability Zones by using the \verb{get regions}
-operation. Be sure to add the
-\verb{include relational database Availability Zones} parameter to your
-request.}
+operation. Be sure to add the \verb{include relational database Availability Zones} parameter to your request.}
 
 \item{publiclyAccessible}{Specifies the accessibility options for your new database. A value of
 \code{true} specifies a database that is available to resources outside of
@@ -40,8 +38,7 @@ database.}
 \item{relationalDatabaseBundleId}{The bundle ID for your new database. A bundle describes the performance
 specifications for your database.
 
-You can get a list of database bundle IDs by using the
-\verb{get relational database bundles} operation.
+You can get a list of database bundle IDs by using the \verb{get relational database bundles} operation.
 
 When creating a new database from a snapshot, you cannot choose a bundle
 that is smaller than the bundle of the source database.}
@@ -114,7 +111,7 @@ as a high availability or standard plan.
 The \verb{create relational database from snapshot} operation supports
 tag-based access control via request tags and resource tags applied to
 the resource identified by relationalDatabaseSnapshotName. For more
-information, see the Lightsail Dev Guide.
+information, see the <span>Lightsail Dev Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$create_relational_database_from_snapshot(

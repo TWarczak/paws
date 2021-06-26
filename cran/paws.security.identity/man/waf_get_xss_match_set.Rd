@@ -2,13 +2,13 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_get_xss_match_set}
 \alias{waf_get_xss_match_set}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_get_xss_match_set(XssMatchSetId)
 }
 \arguments{
-\item{XssMatchSetId}{[required] The \code{XssMatchSetId} of the XssMatchSet that you want to get.
-\code{XssMatchSetId} is returned by
+\item{XssMatchSetId}{[required] The \code{XssMatchSetId} of the <span>XssMatchSet</span> that you want to
+get. \code{XssMatchSetId} is returned by
 \code{\link[=waf_create_xss_match_set]{create_xss_match_set}} and by
 \code{\link[=waf_list_xss_match_sets]{list_xss_match_sets}}.}
 }
@@ -40,7 +40,8 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Returns the XssMatchSet that is specified by \code{XssMatchSetId}.
+Returns the <span>XssMatchSet</span> that is specified by
+\code{XssMatchSetId}.
 }
 \section{Request syntax}{
 \preformatted{svc$get_xss_match_set(

@@ -8,14 +8,16 @@ apigateway_create_base_path_mapping(domainName, basePath, restApiId,
   stage)
 }
 \arguments{
-\item{domainName}{[required] [Required] The domain name of the BasePathMapping resource to create.}
+\item{domainName}{[required] [Required] The domain name of the <span>BasePathMapping</span>
+resource to create.}
 
 \item{basePath}{The base path name that callers of the API must provide as part of the
 URL after the domain name. This value must be unique for all of the
 mappings across a single API. Specify '(none)' if you do not want
 callers to specify a base path name after the domain name.}
 
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
 \item{stage}{The name of the API's stage that you want to use for this mapping.
 Specify '(none)' if you want callers to explicitly specify the stage
@@ -30,7 +32,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Creates a new BasePathMapping resource.
+Creates a new <span>BasePathMapping</span> resource.
 }
 \section{Request syntax}{
 \preformatted{svc$create_base_path_mapping(

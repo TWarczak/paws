@@ -2,7 +2,7 @@
 % Please edit documentation in R/chime_operations.R
 \name{chime_batch_delete_phone_number}
 \alias{chime_batch_delete_phone_number}
-\title{Moves phone numbers into the Deletion queue}
+\title{Moves phone numbers into the DELETION QUEUE}
 \usage{
 chime_batch_delete_phone_number(PhoneNumberIds)
 }

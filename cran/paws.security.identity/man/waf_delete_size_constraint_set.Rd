@@ -2,13 +2,13 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_delete_size_constraint_set}
 \alias{waf_delete_size_constraint_set}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_delete_size_constraint_set(SizeConstraintSetId, ChangeToken)
 }
 \arguments{
-\item{SizeConstraintSetId}{[required] The \code{SizeConstraintSetId} of the SizeConstraintSet that you want to
-delete. \code{SizeConstraintSetId} is returned by
+\item{SizeConstraintSetId}{[required] The \code{SizeConstraintSetId} of the <span>SizeConstraintSet</span> that you
+want to delete. \code{SizeConstraintSetId} is returned by
 \code{\link[=waf_create_size_constraint_set]{create_size_constraint_set}} and by
 \code{\link[=waf_list_size_constraint_sets]{list_size_constraint_sets}}.}
 
@@ -31,9 +31,9 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Permanently deletes a SizeConstraintSet. You can't delete a
+Permanently deletes a <span>SizeConstraintSet</span>. You can't delete a
 \code{SizeConstraintSet} if it's still used in any \code{Rules} or if it still
-includes any SizeConstraint objects (any filters).
+includes any <span>SizeConstraint</span> objects (any filters).
 
 If you just want to remove a \code{SizeConstraintSet} from a \code{Rule}, use
 \code{\link[=waf_update_rule]{update_rule}}.

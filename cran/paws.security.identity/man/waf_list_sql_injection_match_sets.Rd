@@ -2,23 +2,24 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_list_sql_injection_match_sets}
 \alias{waf_list_sql_injection_match_sets}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_list_sql_injection_match_sets(NextMarker, Limit)
 }
 \arguments{
 \item{NextMarker}{If you specify a value for \code{Limit} and you have more
-SqlInjectionMatchSet objects than the value of \code{Limit}, AWS WAF returns
-a \code{NextMarker} value in the response that allows you to list another
-group of \code{SqlInjectionMatchSets}. For the second and subsequent
+<span>SqlInjectionMatchSet</span> objects than the value of \code{Limit}, AWS
+WAF returns a \code{NextMarker} value in the response that allows you to list
+another group of \code{SqlInjectionMatchSets}. For the second and subsequent
 \code{\link[=waf_list_sql_injection_match_sets]{list_sql_injection_match_sets}}
 requests, specify the value of \code{NextMarker} from the previous response
 to get information about another batch of \code{SqlInjectionMatchSets}.}
 
-\item{Limit}{Specifies the number of SqlInjectionMatchSet objects that you want AWS
-WAF to return for this request. If you have more \code{SqlInjectionMatchSet}
-objects than the number you specify for \code{Limit}, the response includes a
-\code{NextMarker} value that you can use to get another batch of \code{Rules}.}
+\item{Limit}{Specifies the number of <span>SqlInjectionMatchSet</span> objects that
+you want AWS WAF to return for this request. If you have more
+\code{SqlInjectionMatchSet} objects than the number you specify for \code{Limit},
+the response includes a \code{NextMarker} value that you can use to get
+another batch of \code{Rules}.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -42,7 +43,7 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Returns an array of SqlInjectionMatchSet objects.
+Returns an array of <span>SqlInjectionMatchSet</span> objects.
 }
 \section{Request syntax}{
 \preformatted{svc$list_sql_injection_match_sets(

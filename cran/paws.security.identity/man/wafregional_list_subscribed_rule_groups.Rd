@@ -2,7 +2,7 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_list_subscribed_rule_groups}
 \alias{wafregional_list_subscribed_rule_groups}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 wafregional_list_subscribed_rule_groups(NextMarker, Limit)
 }
@@ -43,7 +43,8 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Returns an array of RuleGroup objects that you are subscribed to.
+Returns an array of <span>RuleGroup</span> objects that you are
+subscribed to.
 }
 \section{Request syntax}{
 \preformatted{svc$list_subscribed_rule_groups(

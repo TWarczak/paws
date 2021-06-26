@@ -21,7 +21,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Gets information about the current Account resource.
+Gets information about the current <span>Account</span> resource.
 }
 \section{Request syntax}{
 \preformatted{svc$get_account()

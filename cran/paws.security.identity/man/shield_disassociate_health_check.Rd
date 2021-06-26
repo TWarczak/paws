@@ -8,8 +8,8 @@ resource}
 shield_disassociate_health_check(ProtectionId, HealthCheckArn)
 }
 \arguments{
-\item{ProtectionId}{[required] The unique identifier (ID) for the Protection object to remove the
-health check association from.}
+\item{ProtectionId}{[required] The unique identifier (ID) for the <span>Protection</span> object to
+remove the health check association from.}
 
 \item{HealthCheckArn}{[required] The Amazon Resource Name (ARN) of the health check that is associated
 with the protection.}

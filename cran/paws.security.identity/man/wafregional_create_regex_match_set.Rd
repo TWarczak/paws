@@ -2,13 +2,13 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_create_regex_match_set}
 \alias{wafregional_create_regex_match_set}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 wafregional_create_regex_match_set(Name, ChangeToken)
 }
 \arguments{
-\item{Name}{[required] A friendly name or description of the RegexMatchSet. You can't change
-\code{Name} after you create a \code{RegexMatchSet}.}
+\item{Name}{[required] A friendly name or description of the <span>RegexMatchSet</span>. You
+can't change \code{Name} after you create a \code{RegexMatchSet}.}
 
 \item{ChangeToken}{[required] The value returned by the most recent call to
 \code{\link[=wafregional_get_change_token]{get_change_token}}.}
@@ -43,7 +43,7 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Creates a RegexMatchSet. You then use
+Creates a <span>RegexMatchSet</span>. You then use
 \code{\link[=wafregional_update_regex_match_set]{update_regex_match_set}} to
 identify the part of a web request that you want AWS WAF to inspect,
 such as the values of the \code{User-Agent} header or the query string. For

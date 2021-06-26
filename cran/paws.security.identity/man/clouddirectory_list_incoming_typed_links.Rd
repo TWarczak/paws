@@ -64,9 +64,10 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Returns a paginated list of all the incoming TypedLinkSpecifier
-information for an object. It also supports filtering by typed link
-facet and identity attributes. For more information, see \href{https://docs.aws.amazon.com/clouddirectory/latest/developerguide/directory_objects_links.html#directory_objects_links_typedlink}{Typed Links}.
+Returns a paginated list of all the incoming
+<span>TypedLinkSpecifier</span> information for an object. It also
+supports filtering by typed link facet and identity attributes. For more
+information, see \href{https://docs.aws.amazon.com/clouddirectory/latest/developerguide/directory_objects_links.html#directory_objects_links_typedlink}{Typed Links}.
 }
 \section{Request syntax}{
 \preformatted{svc$list_incoming_typed_links(

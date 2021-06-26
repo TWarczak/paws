@@ -8,8 +8,9 @@ clouddirectory_attach_object(DirectoryArn, ParentReference,
   ChildReference, LinkName)
 }
 \arguments{
-\item{DirectoryArn}{[required] Amazon Resource Name (ARN) that is associated with the Directory where
-both objects reside. For more information, see arns.}
+\item{DirectoryArn}{[required] Amazon Resource Name (ARN) that is associated with the
+<span>Directory</span> where both objects reside. For more information,
+see <span>arns</span>.}
 
 \item{ParentReference}{[required] The parent object reference.}
 

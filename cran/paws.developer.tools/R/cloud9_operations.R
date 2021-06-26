@@ -117,9 +117,9 @@ cloud9_create_environment_ec2 <- function(name, description = NULL, clientReques
 #' @param permissions &#91;required&#93; The type of environment member permissions you want to associate with
 #' this environment member. Available values include:
 #' 
-#' -   `read-only`: Has read-only access to the environment.
+#'   - `read-only`: Has read-only access to the environment.
 #' 
-#' -   `read-write`: Has read-write access to the environment.
+#'   - `read-write`: Has read-write access to the environment.
 #'
 #' @return
 #' A list with the following syntax:
@@ -296,11 +296,11 @@ cloud9_delete_environment_membership <- function(environmentId, userArn) {
 #' @param permissions The type of environment member permissions to get information about.
 #' Available values include:
 #' 
-#' -   `owner`: Owns the environment.
+#'   - `owner`: Owns the environment.
 #' 
-#' -   `read-only`: Has read-only access to the environment.
+#'   - `read-only`: Has read-only access to the environment.
 #' 
-#' -   `read-write`: Has read-write access to the environment.
+#'   - `read-write`: Has read-write access to the environment.
 #' 
 #' If no value is specified, information about all environment members are
 #' returned.
@@ -798,9 +798,9 @@ cloud9_update_environment <- function(environmentId, name = NULL, description = 
 #' @param permissions &#91;required&#93; The replacement type of environment member permissions you want to
 #' associate with this environment member. Available values include:
 #' 
-#' -   `read-only`: Has read-only access to the environment.
+#'   - `read-only`: Has read-only access to the environment.
 #' 
-#' -   `read-write`: Has read-write access to the environment.
+#'   - `read-write`: Has read-write access to the environment.
 #'
 #' @return
 #' A list with the following syntax:

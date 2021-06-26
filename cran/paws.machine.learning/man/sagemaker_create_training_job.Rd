@@ -75,9 +75,10 @@ training data, choose \code{File} as the \code{TrainingInputMode} in the algorit
 specification. For distributed training algorithms, specify an instance
 count greater than 1.}
 
-\item{VpcConfig}{A VpcConfig object that specifies the VPC that you want your training
-job to connect to. Control access to and from your training container by
-configuring the VPC. For more information, see \href{https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html}{Protect Training Jobs by Using an Amazon Virtual Private Cloud}.}
+\item{VpcConfig}{A <span>VpcConfig</span> object that specifies the VPC that you want
+your training job to connect to. Control access to and from your
+training container by configuring the VPC. For more information, see
+\href{https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html}{Protect Training Jobs by Using an Amazon Virtual Private Cloud}.}
 
 \item{StoppingCondition}{[required] Specifies a limit to how long a model training job can run. When the job
 reaches the time limit, Amazon SageMaker ends the training job. Use this

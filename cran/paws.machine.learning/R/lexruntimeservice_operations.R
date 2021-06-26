@@ -166,15 +166,15 @@ lexruntimeservice_get_session <- function(botName, botAlias, userId, checkpointL
 #' In response, Amazon Lex returns the next message to convey to the user.
 #' Consider the following example messages:
 #' 
-#' -   For a user input "I would like a pizza," Amazon Lex might return a
+#'   - For a user input "I would like a pizza," Amazon Lex might return a
 #'     response with a message eliciting slot data (for example,
 #'     `PizzaSize`): "What size pizza would you like?".
 #' 
-#' -   After the user provides all of the pizza order information, Amazon
+#'   - After the user provides all of the pizza order information, Amazon
 #'     Lex might return a response with a message to get user confirmation:
 #'     "Order the pizza?".
 #' 
-#' -   After the user replies "Yes" to the confirmation prompt, Amazon Lex
+#'   - After the user replies "Yes" to the confirmation prompt, Amazon Lex
 #'     might return a conclusion statement: "Thank you, your cheese pizza
 #'     has been ordered.".
 #' 
@@ -185,25 +185,25 @@ lexruntimeservice_get_session <- function(botName, botAlias, userId, checkpointL
 #' you can use to enhance client behavior, such as displaying the
 #' appropriate client user interface. Consider the following examples:
 #' 
-#' -   If the message is to elicit slot data, Amazon Lex returns the
+#'   - If the message is to elicit slot data, Amazon Lex returns the
 #'     following context information:
-#' 
-#'     -   `x-amz-lex-dialog-state` header set to `ElicitSlot`
-#' 
-#'     -   `x-amz-lex-intent-name` header set to the intent name in the
+#'     
+#'       - `x-amz-lex-dialog-state` header set to `ElicitSlot`
+#'     
+#'       - `x-amz-lex-intent-name` header set to the intent name in the
 #'         current context
-#' 
-#'     -   `x-amz-lex-slot-to-elicit` header set to the slot name for which
+#'     
+#'       - `x-amz-lex-slot-to-elicit` header set to the slot name for which
 #'         the `message` is eliciting information
-#' 
-#'     -   `x-amz-lex-slots` header set to a map of slots configured for
+#'     
+#'       - `x-amz-lex-slots` header set to a map of slots configured for
 #'         the intent with their current values
 #' 
-#' -   If the message is a confirmation prompt, the
+#'   - If the message is a confirmation prompt, the
 #'     `x-amz-lex-dialog-state` header is set to `Confirmation` and the
 #'     `x-amz-lex-slot-to-elicit` header is omitted.
 #' 
-#' -   If the message is a clarification prompt configured for the intent,
+#'   - If the message is a clarification prompt configured for the intent,
 #'     indicating that the user intent is not understood, the
 #'     `x-amz-dialog-state` header is set to `ElicitIntent` and the
 #'     `x-amz-slot-to-elicit` header is omitted.
@@ -226,18 +226,18 @@ lexruntimeservice_get_session <- function(botName, botAlias, userId, checkpointL
 #' To decide the user ID to use for your application, consider the
 #' following factors.
 #' 
-#' -   The `userID` field must not contain any personally identifiable
+#'   - The `userID` field must not contain any personally identifiable
 #'     information of the user, for example, name, personal identification
 #'     numbers, or other end user personal information.
 #' 
-#' -   If you want a user to start a conversation on one device and
+#'   - If you want a user to start a conversation on one device and
 #'     continue on another device, use a user-specific identifier.
 #' 
-#' -   If you want the same user to be able to have two independent
+#'   - If you want the same user to be able to have two independent
 #'     conversations on two different devices, choose a device-specific
 #'     identifier.
 #' 
-#' -   A user can't have two independent conversations with two different
+#'   - A user can't have two independent conversations with two different
 #'     versions of the same bot. For example, a user can't have a
 #'     conversation with the PROD and BETA versions of the same bot. If you
 #'     anticipate that a user will need to have conversation with two
@@ -269,51 +269,51 @@ lexruntimeservice_get_session <- function(botName, botAlias, userId, checkpointL
 #' Indicates the audio format or text. The header value must start with one
 #' of the following prefixes:
 #' 
-#' -   PCM format, audio data must be in little-endian byte order.
-#' 
-#'     -   audio/l16; rate=16000; channels=1
-#' 
-#'     -   audio/x-l16; sample-rate=16000; channel-count=1
-#' 
-#'     -   audio/lpcm; sample-rate=8000; sample-size-bits=16;
+#'   - PCM format, audio data must be in little-endian byte order.
+#'     
+#'       - audio/l16; rate=16000; channels=1
+#'     
+#'       - audio/x-l16; sample-rate=16000; channel-count=1
+#'     
+#'       - audio/lpcm; sample-rate=8000; sample-size-bits=16;
 #'         channel-count=1; is-big-endian=false
 #' 
-#' -   Opus format
-#' 
-#'     -   audio/x-cbr-opus-with-preamble; preamble-size=0;
+#'   - Opus format
+#'     
+#'       - audio/x-cbr-opus-with-preamble; preamble-size=0;
 #'         bit-rate=256000; frame-size-milliseconds=4
 #' 
-#' -   Text format
-#' 
-#'     -   text/plain; charset=utf-8
+#'   - Text format
+#'     
+#'       - text/plain; charset=utf-8
 #' @param accept You pass this value as the `Accept` HTTP header.
 #' 
 #' The message Amazon Lex returns in the response can be either text or
 #' speech based on the `Accept` HTTP header value in the request.
 #' 
-#' -   If the value is `text/plain; charset=utf-8`, Amazon Lex returns text
+#'   - If the value is `text/plain; charset=utf-8`, Amazon Lex returns text
 #'     in the response.
 #' 
-#' -   If the value begins with `audio/`, Amazon Lex returns speech in the
+#'   - If the value begins with `audio/`, Amazon Lex returns speech in the
 #'     response. Amazon Lex uses Amazon Polly to generate the speech (using
 #'     the configuration you specified in the `Accept` header). For
 #'     example, if you specify `audio/mpeg` as the value, Amazon Lex
 #'     returns speech in the MPEG format.
 #' 
-#' -   If the value is `audio/pcm`, the speech returned is `audio/pcm` in
+#'   - If the value is `audio/pcm`, the speech returned is `audio/pcm` in
 #'     16-bit, little endian format.
 #' 
-#' -   The following are the accepted values:
-#' 
-#'     -   audio/mpeg
-#' 
-#'     -   audio/ogg
-#' 
-#'     -   audio/pcm
-#' 
-#'     -   text/plain; charset=utf-8
-#' 
-#'     -   audio/* (defaults to mpeg)
+#'   - The following are the accepted values:
+#'     
+#'       - audio/mpeg
+#'     
+#'       - audio/ogg
+#'     
+#'       - audio/pcm
+#'     
+#'       - text/plain; charset=utf-8
+#'     
+#'       - audio/* (defaults to mpeg)
 #' @param inputStream &#91;required&#93; User input in PCM or Opus audio format or text format as described in
 #' the `Content-Type` HTTP header.
 #' 
@@ -398,15 +398,15 @@ lexruntimeservice_post_content <- function(botName, botAlias, userId, sessionAtt
 #' an optional `responseCard` to display. Consider the following example
 #' messages:
 #' 
-#' -   For a user input "I would like a pizza", Amazon Lex might return a
+#'   - For a user input "I would like a pizza", Amazon Lex might return a
 #'     response with a message eliciting slot data (for example,
 #'     PizzaSize): "What size pizza would you like?"
 #' 
-#' -   After the user provides all of the pizza order information, Amazon
+#'   - After the user provides all of the pizza order information, Amazon
 #'     Lex might return a response with a message to obtain user
 #'     confirmation "Proceed with the pizza order?".
 #' 
-#' -   After the user replies to a confirmation prompt with a "yes", Amazon
+#'   - After the user replies to a confirmation prompt with a "yes", Amazon
 #'     Lex might return a conclusion statement: "Thank you, your cheese
 #'     pizza has been ordered.".
 #' 
@@ -419,23 +419,23 @@ lexruntimeservice_post_content <- function(botName, botAlias, userId, sessionAtt
 #' `dialogState`, `intentName`, and `slots` fields in the response.
 #' Consider the following examples:
 #' 
-#' -   If the message is to elicit slot data, Amazon Lex returns the
+#'   - If the message is to elicit slot data, Amazon Lex returns the
 #'     following context information:
-#' 
-#'     -   `dialogState` set to ElicitSlot
-#' 
-#'     -   `intentName` set to the intent name in the current context
-#' 
-#'     -   `slotToElicit` set to the slot name for which the `message` is
+#'     
+#'       - `dialogState` set to ElicitSlot
+#'     
+#'       - `intentName` set to the intent name in the current context
+#'     
+#'       - `slotToElicit` set to the slot name for which the `message` is
 #'         eliciting information
-#' 
-#'     -   `slots` set to a map of slots, configured for the intent, with
+#'     
+#'       - `slots` set to a map of slots, configured for the intent, with
 #'         currently known values
 #' 
-#' -   If the message is a confirmation prompt, the `dialogState` is set to
+#'   - If the message is a confirmation prompt, the `dialogState` is set to
 #'     ConfirmIntent and `SlotToElicit` is set to null.
 #' 
-#' -   If the message is a clarification prompt (configured for the intent)
+#'   - If the message is a clarification prompt (configured for the intent)
 #'     that indicates that user intent is not understood, the `dialogState`
 #'     is set to ElicitIntent and `slotToElicit` is set to null.
 #' 
@@ -456,18 +456,18 @@ lexruntimeservice_post_content <- function(botName, botAlias, userId, sessionAtt
 #' To decide the user ID to use for your application, consider the
 #' following factors.
 #' 
-#' -   The `userID` field must not contain any personally identifiable
+#'   - The `userID` field must not contain any personally identifiable
 #'     information of the user, for example, name, personal identification
 #'     numbers, or other end user personal information.
 #' 
-#' -   If you want a user to start a conversation on one device and
+#'   - If you want a user to start a conversation on one device and
 #'     continue on another device, use a user-specific identifier.
 #' 
-#' -   If you want the same user to be able to have two independent
+#'   - If you want the same user to be able to have two independent
 #'     conversations on two different devices, choose a device-specific
 #'     identifier.
 #' 
-#' -   A user can't have two independent conversations with two different
+#'   - A user can't have two independent conversations with two different
 #'     versions of the same bot. For example, a user can't have a
 #'     conversation with the PROD and BETA versions of the same bot. If you
 #'     anticipate that a user will need to have conversation with two
@@ -645,11 +645,11 @@ lexruntimeservice_post_text <- function(botName, botAlias, userId, sessionAttrib
 #' bot. For example, the intent name must be valid for the bot. You must
 #' provide valid values for:
 #' 
-#' -   `intentName`
+#'   - `intentName`
 #' 
-#' -   slot names
+#'   - slot names
 #' 
-#' -   `slotToElict`
+#'   - `slotToElict`
 #' 
 #' If you send the `recentIntentSummaryView` parameter in a
 #' [`put_session`][lexruntimeservice_put_session] request, the contents of
@@ -663,29 +663,29 @@ lexruntimeservice_post_text <- function(botName, botAlias, userId, sessionAttrib
 #' @param accept The message that Amazon Lex returns in the response can be either text
 #' or speech based depending on the value of this field.
 #' 
-#' -   If the value is `text/plain; charset=utf-8`, Amazon Lex returns text
+#'   - If the value is `text/plain; charset=utf-8`, Amazon Lex returns text
 #'     in the response.
 #' 
-#' -   If the value begins with `audio/`, Amazon Lex returns speech in the
+#'   - If the value begins with `audio/`, Amazon Lex returns speech in the
 #'     response. Amazon Lex uses Amazon Polly to generate the speech in the
 #'     configuration that you specify. For example, if you specify
 #'     `audio/mpeg` as the value, Amazon Lex returns speech in the MPEG
 #'     format.
 #' 
-#' -   If the value is `audio/pcm`, the speech is returned as `audio/pcm`
+#'   - If the value is `audio/pcm`, the speech is returned as `audio/pcm`
 #'     in 16-bit, little endian format.
 #' 
-#' -   The following are the accepted values:
-#' 
-#'     -   `audio/mpeg`
-#' 
-#'     -   `audio/ogg`
-#' 
-#'     -   `audio/pcm`
-#' 
-#'     -   `audio/*` (defaults to mpeg)
-#' 
-#'     -   `text/plain; charset=utf-8`
+#'   - The following are the accepted values:
+#'     
+#'       - `audio/mpeg`
+#'     
+#'       - `audio/ogg`
+#'     
+#'       - `audio/pcm`
+#'     
+#'       - `audio/*` (defaults to mpeg)
+#'     
+#'       - `text/plain; charset=utf-8`
 #' @param activeContexts A list of contexts active for the request. A context can be activated
 #' when a previous intent is fulfilled, or by including the context in the
 #' request,

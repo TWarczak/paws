@@ -1529,11 +1529,11 @@ batch_describe_jobs <- function(jobs) {
 #' 
 #' You must specify only one of the following items:
 #' 
-#' -   A job queue ID to return a list of jobs in that job queue
+#'   - A job queue ID to return a list of jobs in that job queue
 #' 
-#' -   A multi-node parallel job ID to return a list of that job's nodes
+#'   - A multi-node parallel job ID to return a list of that job's nodes
 #' 
-#' -   An array job ID to return a list of that job's children
+#'   - An array job ID to return a list of that job's children
 #' 
 #' You can filter the results by job status with the `jobStatus` parameter.
 #' If you don't specify a status, only `RUNNING` jobs are returned.

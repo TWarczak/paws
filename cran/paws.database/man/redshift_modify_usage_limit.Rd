@@ -10,10 +10,10 @@ redshift_modify_usage_limit(UsageLimitId, Amount, BreachAction)
 \item{UsageLimitId}{[required] The identifier of the usage limit to modify.}
 
 \item{Amount}{The new limit amount. For more information about this parameter, see
-UsageLimit.}
+<span>UsageLimit</span>.}
 
 \item{BreachAction}{The new action that Amazon Redshift takes when the limit is reached. For
-more information about this parameter, see UsageLimit.}
+more information about this parameter, see <span>UsageLimit</span>.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

@@ -14,8 +14,7 @@ applicationinsights_update_application(ResourceGroupName,
 application.}
 
 \item{CWEMonitorEnabled}{Indicates whether Application Insights can listen to CloudWatch events
-for the application resources, such as \verb{instance terminated},
-\verb{failed deployment}, and others.}
+for the application resources, such as \verb{instance terminated}, \verb{failed deployment}, and others.}
 
 \item{OpsItemSNSTopicArn}{The SNS topic provided to Application Insights that is associated to the
 created opsItem. Allows you to receive notifications for updates to the

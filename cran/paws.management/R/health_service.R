@@ -40,12 +40,12 @@ NULL
 #' When you use the AWS Health API operations to return AWS Health events,
 #' see the following recommendations:
 #' 
-#' -   Use the
+#'   - Use the
 #'     [eventScopeCode](https://docs.aws.amazon.com/health/latest/APIReference/API_Event.html#AWSHealth-Type-Event-eventScopeCode)
 #'     parameter to specify whether to return AWS Health events that are
 #'     public or account-specific.
 #' 
-#' -   Use pagination to view all events from the response. For example, if
+#'   - Use pagination to view all events from the response. For example, if
 #'     you call the
 #'     [`describe_events_for_organization`][health_describe_events_for_organization]
 #'     operation to get all events in your organization, you might receive
@@ -99,6 +99,12 @@ NULL
 #'  \link[=health_enable_health_service_access_for_organization]{enable_health_service_access_for_organization} \tab Calling this operation enables AWS Health to work with AWS Organizations
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname health
 #' @export
 health <- function(config = list()) {
@@ -117,7 +123,7 @@ health <- function(config = list()) {
   endpoints = list("*" = list(endpoint = "health.{region}.amazonaws.com", global = FALSE), "cn-*" = list(endpoint = "health.{region}.amazonaws.com.cn", global = FALSE), "us-iso-*" = list(endpoint = "health.{region}.c2s.ic.gov", global = FALSE), "us-isob-*" = list(endpoint = "health.{region}.sc2s.sgov.gov", global = FALSE)),
   service_id = "Health",
   api_version = "2016-08-04",
-  signing_name = NULL,
+  signing_name = "health",
   json_version = "1.1",
   target_prefix = "AWSHealth_20160804"
 )

@@ -2,7 +2,8 @@
 % Please edit documentation in R/sagemaker_operations.R
 \name{sagemaker_create_trial_component}
 \alias{sagemaker_create_trial_component}
-\title{Creates a trial component, which is a stage of a machine learning trial}
+\title{Creates a \emph{trial component}, which is a stage of a machine learning
+\emph{trial}}
 \usage{
 sagemaker_create_trial_component(TrialComponentName, DisplayName,
   Status, StartTime, EndTime, Parameters, InputArtifacts, OutputArtifacts,

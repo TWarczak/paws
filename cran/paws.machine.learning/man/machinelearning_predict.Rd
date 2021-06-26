@@ -29,8 +29,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Generates a prediction for the observation using the specified
-\verb{ML Model}.
+Generates a prediction for the observation using the specified \verb{ML Model}.
 
 Note
 

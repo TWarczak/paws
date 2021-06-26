@@ -335,14 +335,14 @@ timestreamwrite_describe_database <- function(DatabaseName) {
 #' service’s architecture, including the management and mapping of the
 #' service endpoints, *it is not recommended that you use this API unless*:
 #' 
-#' -   Your application uses a programming language that does not yet have
+#'   - Your application uses a programming language that does not yet have
 #'     SDK support
 #' 
-#' -   You require better control over the client-side implementation
+#'   - You require better control over the client-side implementation
 #' 
 #' For detailed information on how to use DescribeEndpoints, see [The
 #' Endpoint Discovery Pattern and REST
-#' APIs](https://docs.aws.amazon.com/timestream/latest/developerguide/Using-API.endpoint-discovery.html).
+#' APIs](https://docs.aws.amazon.com/timestream/latest/developerguide/).
 #'
 #' @usage
 #' timestreamwrite_describe_endpoints()
@@ -760,14 +760,14 @@ timestreamwrite_untag_resource <- function(ResourceARN, TagKeys) {
 #' 
 #' You can specify the `KmsKeyId` using any of the following:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Alias name: `alias/ExampleAlias`
+#'   - Alias name: `alias/ExampleAlias`
 #' 
-#' -   Alias ARN: `arn:aws:kms:us-east-1:111122223333:alias/ExampleAlias`
+#'   - Alias ARN: `arn:aws:kms:us-east-1:111122223333:alias/ExampleAlias`
 #'
 #' @return
 #' A list with the following syntax:

@@ -50,8 +50,8 @@ To request access to a specific instance, specify the IDs of both the
 instance and the fleet it belongs to. You can retrieve a fleet's
 instance IDs by calling
 \code{\link[=gamelift_describe_instances]{describe_instances}}. If successful, an
-InstanceAccess object is returned that contains the instance's IP
-address and a set of credentials.
+<span>InstanceAccess</span> object is returned that contains the
+instance's IP address and a set of credentials.
 
 \strong{Learn more}
 

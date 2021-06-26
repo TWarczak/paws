@@ -79,8 +79,7 @@ don't use it to leave the files uncompressed.
 Shorthand syntax for these settings is as follows:
 \verb{ServiceAccessRoleArn=string ,BucketName=string,CompressionType=string}
 
-JSON syntax for these settings is as follows:
-\verb{\{ "ServiceAccessRoleArn": "string", "BucketName": "string", "CompressionType": "none"|"gzip" \} }}
+JSON syntax for these settings is as follows: \verb{\{ "ServiceAccessRoleArn": "string", "BucketName": "string", "CompressionType": "none"|"gzip" \} }}
 
 \item{MongoDbSettings}{Settings in JSON format for the source MongoDB endpoint. For more
 information about the available settings, see the configuration
@@ -106,38 +105,41 @@ in the \emph{AWS Database Migration Service User Guide.}}
 \item{RedshiftSettings}{}
 
 \item{PostgreSQLSettings}{Settings in JSON format for the source and target PostgreSQL endpoint.
-For information about other available settings, see Extra connection
-attributes when using PostgreSQL as a source for AWS DMS and Extra
-connection attributes when using PostgreSQL as a target for AWS DMS in
-the \emph{AWS Database Migration Service User Guide.}}
+For information about other available settings, see <span>Extra
+connection attributes when using PostgreSQL as a source for AWS
+DMS</span> and <span>Extra connection attributes when using PostgreSQL
+as a target for AWS DMS</span> in the \emph{AWS Database Migration Service
+User Guide.}}
 
 \item{MySQLSettings}{Settings in JSON format for the source and target MySQL endpoint. For
-information about other available settings, see Extra connection
-attributes when using MySQL as a source for AWS DMS and Extra connection
-attributes when using a MySQL-compatible database as a target for AWS
-DMS in the \emph{AWS Database Migration Service User Guide.}}
+information about other available settings, see <span>Extra connection
+attributes when using MySQL as a source for AWS DMS</span> and
+<span>Extra connection attributes when using a MySQL-compatible database
+as a target for AWS DMS</span> in the \emph{AWS Database Migration Service
+User Guide.}}
 
 \item{OracleSettings}{Settings in JSON format for the source and target Oracle endpoint. For
-information about other available settings, see Extra connection
-attributes when using Oracle as a source for AWS DMS and Extra
-connection attributes when using Oracle as a target for AWS DMS in the
-\emph{AWS Database Migration Service User Guide.}}
+information about other available settings, see <span>Extra connection
+attributes when using Oracle as a source for AWS DMS</span> and
+<span>Extra connection attributes when using Oracle as a target for AWS
+DMS</span> in the \emph{AWS Database Migration Service User Guide.}}
 
 \item{SybaseSettings}{Settings in JSON format for the source and target SAP ASE endpoint. For
-information about other available settings, see Extra connection
-attributes when using SAP ASE as a source for AWS DMS and Extra
-connection attributes when using SAP ASE as a target for AWS DMS in the
-\emph{AWS Database Migration Service User Guide.}}
+information about other available settings, see <span>Extra connection
+attributes when using SAP ASE as a source for AWS DMS</span> and
+<span>Extra connection attributes when using SAP ASE as a target for AWS
+DMS</span> in the \emph{AWS Database Migration Service User Guide.}}
 
 \item{MicrosoftSQLServerSettings}{Settings in JSON format for the source and target Microsoft SQL Server
-endpoint. For information about other available settings, see Extra
-connection attributes when using SQL Server as a source for AWS DMS and
-Extra connection attributes when using SQL Server as a target for AWS
-DMS in the \emph{AWS Database Migration Service User Guide.}}
+endpoint. For information about other available settings, see
+<span>Extra connection attributes when using SQL Server as a source for
+AWS DMS</span> and <span>Extra connection attributes when using SQL
+Server as a target for AWS DMS</span> in the \emph{AWS Database Migration
+Service User Guide.}}
 
 \item{IBMDb2Settings}{Settings in JSON format for the source IBM Db2 LUW endpoint. For
-information about other available settings, see Extra connection
-attributes when using Db2 LUW as a source for AWS DMS in the \emph{AWS
+information about other available settings, see <span>Extra connection
+attributes when using Db2 LUW as a source for AWS DMS</span> in the \emph{AWS
 Database Migration Service User Guide.}}
 
 \item{DocDbSettings}{Settings in JSON format for the source DocumentDB endpoint. For more

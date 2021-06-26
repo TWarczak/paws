@@ -90,8 +90,7 @@ default). To keep the files uncompressed, don't use this value.
 Shorthand syntax for these settings is as follows:
 \verb{ServiceAccessRoleArn=string,BucketName=string,CompressionType=string}
 
-JSON syntax for these settings is as follows:
-\verb{\{ "ServiceAccessRoleArn": "string", "BucketName": "string", "CompressionType": "none"|"gzip" \} }}
+JSON syntax for these settings is as follows: \verb{\{ "ServiceAccessRoleArn": "string", "BucketName": "string", "CompressionType": "none"|"gzip" \} }}
 
 \item{MongoDbSettings}{Settings in JSON format for the source MongoDB endpoint. For more
 information about the available settings, see \href{https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html#CHAP_Source.MongoDB.Configuration}{Using MongoDB as a Target for AWS Database Migration Service}

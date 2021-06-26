@@ -24,8 +24,7 @@ SDKs, this field is calculated automatically.}
 \item{ServerSideEncryptionConfiguration}{[required]}
 
 \item{ExpectedBucketOwner}{The account id of the expected bucket owner. If the bucket is owned by a
-different account, the request will fail with an HTTP
-\verb{403 (Access Denied)} error.}
+different account, the request will fail with an HTTP \verb{403 (Access Denied)} error.}
 }
 \value{
 An empty list.
@@ -44,7 +43,7 @@ information about S3 Bucket Keys, see \href{https://docs.aws.amazon.com/AmazonS3
 in the \emph{Amazon Simple Storage Service Developer Guide}.
 
 This operation requires AWS Signature Version 4. For more information,
-see Authenticating Requests (AWS Signature Version 4).
+see <span>Authenticating Requests (AWS Signature Version 4)</span>.
 
 To use this operation, you must have permissions to perform the
 \code{s3:PutEncryptionConfiguration} action. The bucket owner has this

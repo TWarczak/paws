@@ -27,8 +27,8 @@ is allowed.}
 \item{NextToken}{The \code{ListAttacksRequest.NextMarker} value from a previous call to
 \code{ListAttacksRequest}. Pass null if this is the first call.}
 
-\item{MaxResults}{The maximum number of AttackSummary objects to return. If you leave this
-blank, Shield Advanced returns the first 20 results.
+\item{MaxResults}{The maximum number of <span>AttackSummary</span> objects to return. If
+you leave this blank, Shield Advanced returns the first 20 results.
 
 This is a maximum value. Shield Advanced might return the results in
 smaller batches. That is, the number of objects returned could be less

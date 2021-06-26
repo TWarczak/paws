@@ -43,8 +43,8 @@ restart a database, use the \verb{reboot relational database} operation.
 
 The \verb{start relational database} operation supports tag-based access
 control via resource tags applied to the resource identified by
-relationalDatabaseName. For more information, see the Lightsail Dev
-Guide.
+relationalDatabaseName. For more information, see the <span>Lightsail
+Dev Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$start_relational_database(

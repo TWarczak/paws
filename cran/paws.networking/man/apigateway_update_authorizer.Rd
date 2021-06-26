@@ -7,9 +7,10 @@
 apigateway_update_authorizer(restApiId, authorizerId, patchOperations)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
-\item{authorizerId}{[required] [Required] The identifier of the Authorizer resource.}
+\item{authorizerId}{[required] [Required] The identifier of the <span>Authorizer</span> resource.}
 
 \item{patchOperations}{A list of update operations to be applied to the specified resource and
 in the order specified in this list.}
@@ -32,7 +33,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Updates an existing Authorizer resource.<div class="seeAlso">
+Updates an existing <span>Authorizer</span> resource.<div class="seeAlso">
 
 
 \href{https://docs.aws.amazon.com/cli/latest/reference/apigateway/update-authorizer.html}{AWS CLI}</div>

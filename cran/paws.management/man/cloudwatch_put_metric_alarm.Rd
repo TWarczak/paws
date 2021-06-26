@@ -29,7 +29,7 @@ Valid Values: \code{arn:aws:automate:region:ec2:stop} |
 \code{arn:aws:automate:region:ec2:recover} |
 \code{arn:aws:automate:region:ec2:reboot} |
 \code{arn:aws:sns:region:account-id:sns-topic-name } |
-\code{arn:aws:autoscaling:region:account-id:scalingPolicy:policy-id:autoScalingGroupName/group-friendly-name:policyName/policy-friendly-name }
+\code{arn:aws:autoscaling:region:account-id:scalingPolicy:policy-id:autoScalingGroupName/group-friendly-name:policyName/policy-friendly-name}
 
 Valid Values (for use with IAM roles):
 \code{arn:aws:swf:region:account-id:action/actions/AWS_EC2.InstanceId.Stop/1.0}
@@ -47,8 +47,7 @@ Valid Values: \code{arn:aws:automate:region:ec2:stop} |
 \code{arn:aws:automate:region:ec2:recover} |
 \code{arn:aws:automate:region:ec2:reboot} |
 \code{arn:aws:sns:region:account-id:sns-topic-name } |
-\code{arn:aws:autoscaling:region:account-id:scalingPolicy:policy-id:autoScalingGroupName/group-friendly-name:policyName/policy-friendly-name }
-| \code{arn:aws:ssm:region:account-id:opsitem:severity }
+\code{arn:aws:autoscaling:region:account-id:scalingPolicy:policy-id:autoScalingGroupName/group-friendly-name:policyName/policy-friendly-name} | \code{arn:aws:ssm:region:account-id:opsitem:severity }
 
 Valid Values (for use with IAM roles):
 \code{arn:aws:swf:region:account-id:action/actions/AWS_EC2.InstanceId.Stop/1.0}
@@ -66,7 +65,7 @@ Valid Values: \code{arn:aws:automate:region:ec2:stop} |
 \code{arn:aws:automate:region:ec2:recover} |
 \code{arn:aws:automate:region:ec2:reboot} |
 \code{arn:aws:sns:region:account-id:sns-topic-name } |
-\code{arn:aws:autoscaling:region:account-id:scalingPolicy:policy-id:autoScalingGroupName/group-friendly-name:policyName/policy-friendly-name }
+\code{arn:aws:autoscaling:region:account-id:scalingPolicy:policy-id:autoScalingGroupName/group-friendly-name:policyName/policy-friendly-name}
 
 Valid Values (for use with IAM roles):
 \verb{>arn:aws:swf:region:account-id:action/actions/AWS_EC2.InstanceId.Stop/1.0}

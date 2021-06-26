@@ -11,8 +11,7 @@ s3_delete_bucket_policy(Bucket, ExpectedBucketOwner)
 \item{Bucket}{[required] The bucket name.}
 
 \item{ExpectedBucketOwner}{The account id of the expected bucket owner. If the bucket is owned by a
-different account, the request will fail with an HTTP
-\verb{403 (Access Denied)} error.}
+different account, the request will fail with an HTTP \verb{403 (Access Denied)} error.}
 }
 \value{
 An empty list.
@@ -29,15 +28,14 @@ operation.
 If you don't have \code{\link[=s3_delete_bucket_policy]{delete_bucket_policy}}
 permissions, Amazon S3 returns a \verb{403 Access Denied} error. If you have
 the correct permissions, but you're not using an identity that belongs
-to the bucket owner's account, Amazon S3 returns a
-\verb{405 Method Not Allowed} error.
+to the bucket owner's account, Amazon S3 returns a \verb{405 Method Not Allowed} error.
 
 As a security precaution, the root user of the AWS account that owns a
 bucket can always use this operation, even if the policy explicitly
 denies the root user the ability to perform this action.
 
-For more information about bucket policies, see Using Bucket Policies
-and UserPolicies.
+For more information about bucket policies, see <span>Using Bucket
+Policies and UserPolicies</span>.
 
 The following operations are related to
 \code{\link[=s3_delete_bucket_policy]{delete_bucket_policy}}

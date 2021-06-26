@@ -106,9 +106,9 @@ personalizeruntime_get_personalized_ranking <- function(campaignArn, inputList, 
 #' recipe type used to create the solution backing the campaign, as
 #' follows:
 #' 
-#' -   RELATED_ITEMS - `itemId` required, `userId` not used
+#'   - RELATED_ITEMS - `itemId` required, `userId` not used
 #' 
-#' -   USER_PERSONALIZATION - `itemId` optional, `userId` required
+#'   - USER_PERSONALIZATION - `itemId` optional, `userId` required
 #' 
 #' Campaigns that are backed by a solution created using a recipe of type
 #' PERSONALIZED_RANKING use the API.

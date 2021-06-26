@@ -8,8 +8,9 @@ clouddirectory_list_object_policies(DirectoryArn, ObjectReference,
   NextToken, MaxResults, ConsistencyLevel)
 }
 \arguments{
-\item{DirectoryArn}{[required] The Amazon Resource Name (ARN) that is associated with the Directory
-where objects reside. For more information, see arns.}
+\item{DirectoryArn}{[required] The Amazon Resource Name (ARN) that is associated with the
+<span>Directory</span> where objects reside. For more information, see
+<span>arns</span>.}
 
 \item{ObjectReference}{[required] Reference that identifies the object for which policies will be listed.}
 

@@ -54,7 +54,7 @@ A list with the following syntax:\preformatted{list(
 \description{
 Creates an endpoint for a self-managed object storage bucket. For more
 information about self-managed object storage locations, see
-create-object-location.
+<span>create-object-location</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$create_location_object_storage(

@@ -9,11 +9,17 @@ personalizeevents(config = list())
 \arguments{
 \item{config}{Optional configuration of credentials, endpoint, and/or region.}
 }
+\value{
+A client for the service. You can call the service's operations using
+syntax like \code{svc$operation(...)}, where \code{svc} is the name you've assigned
+to the client. The available operations are listed in the
+Operations section.
+}
 \description{
 Amazon Personalize can consume real-time user event data, such as
 \emph{stream} or \emph{click} data, and use it for model training either alone or
 combined with historical data. For more information see
-recording-events.
+<span>recording-events</span>.
 }
 \section{Service syntax}{
 \preformatted{svc <- personalizeevents(

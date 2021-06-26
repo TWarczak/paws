@@ -131,12 +131,12 @@ detective_create_graph <- function() {
 #' 
 #' The response separates the requested accounts into two lists:
 #' 
-#' -   The accounts that [`create_members`][detective_create_members] was
+#'   - The accounts that [`create_members`][detective_create_members] was
 #'     able to start the verification for. This list includes member
 #'     accounts that are being verified, that have passed verification and
 #'     are being sent an invitation, and that have failed verification.
 #' 
-#' -   The accounts that [`create_members`][detective_create_members] was
+#'   - The accounts that [`create_members`][detective_create_members] was
 #'     unable to process. This list includes accounts that were already
 #'     invited to be member accounts in the behavior graph.
 #'
@@ -727,10 +727,10 @@ detective_reject_invitation <- function(GraphArn) {
 #' 
 #' For valid member accounts, the status is updated as follows.
 #' 
-#' -   If Detective enabled the member account, then the new status is
+#'   - If Detective enabled the member account, then the new status is
 #'     `ENABLED`.
 #' 
-#' -   If Detective cannot enable the member account, the status remains
+#'   - If Detective cannot enable the member account, the status remains
 #'     `ACCEPTED_BUT_DISABLED`.
 #'
 #' @usage

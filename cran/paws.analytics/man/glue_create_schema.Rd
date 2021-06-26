@@ -10,8 +10,7 @@ glue_create_schema(RegistryId, SchemaName, DataFormat, Compatibility,
 \arguments{
 \item{RegistryId}{This is a wrapper shape to contain the registry identity fields. If this
 is not provided, the default registry will be used. The ARN format for
-the same will be:
-\verb{arn:aws:glue:us-east-2:<customer id>:registry/default-registry:random-5-letter-id}.}
+the same will be: \verb{arn:aws:glue:us-east-2:<customer id>:registry/default-registry:random-5-letter-id}.}
 
 \item{SchemaName}{[required] Name of the schema to be created of max length of 255, and may only
 contain letters, numbers, hyphen, underscore, dollar sign, or hash mark.

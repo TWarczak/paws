@@ -67,10 +67,10 @@ mturk_accept_qualification_request <- function(QualificationRequestId, IntegerVa
 #' Approving an assignment initiates two payments from the Requester's
 #' Amazon.com account
 #' 
-#' -   The Worker who submitted the results is paid the reward specified in
+#'   - The Worker who submitted the results is paid the reward specified in
 #'     the HIT.
 #' 
-#' -   Amazon Mechanical Turk fees are debited.
+#'   - Amazon Mechanical Turk fees are debited.
 #' 
 #' If the Requester's account does not have adequate funds for these
 #' payments, the call to ApproveAssignment returns an exception, and the
@@ -212,13 +212,13 @@ mturk_associate_qualification_with_worker <- function(QualificationTypeId, Worke
 #' To extend the maximum number of assignments, specify the number of
 #' additional assignments.
 #' 
-#' -   HITs created with fewer than 10 assignments cannot be extended to
+#'   - HITs created with fewer than 10 assignments cannot be extended to
 #'     have 10 or more assignments. Attempting to add assignments in a way
 #'     that brings the total number of assignments for a HIT from fewer
 #'     than 10 assignments to 10 or more assignments will result in an
 #'     `AWS.MechanicalTurk.InvalidMaximumAssignmentsIncrease` exception.
 #' 
-#' -   HITs that were created before July 22, 2015 cannot be extended.
+#'   - HITs that were created before July 22, 2015 cannot be extended.
 #'     Attempting to extend HITs that were created before July 22, 2015
 #'     will result in an `AWS.MechanicalTurk.HITTooOldForExtension`
 #'     exception.
@@ -1029,15 +1029,15 @@ mturk_create_worker_block <- function(WorkerId, Reason) {
 #' its submitted assignments already approved or rejected, the service will
 #' return an error.
 #' 
-#' -   HITs are automatically disposed of after 120 days.
+#'   - HITs are automatically disposed of after 120 days.
 #' 
-#' -   After you dispose of a HIT, you can no longer approve the HIT's
+#'   - After you dispose of a HIT, you can no longer approve the HIT's
 #'     rejected assignments.
 #' 
-#' -   Disposed HITs are not returned in results for the ListHITs
+#'   - Disposed HITs are not returned in results for the ListHITs
 #'     operation.
 #' 
-#' -   Disposing HITs can improve the performance of operations such as
+#'   - Disposing HITs can improve the performance of operations such as
 #'     ListReviewableHITs and ListHITs.
 #'
 #' @usage
@@ -2953,10 +2953,10 @@ mturk_update_expiration_for_hit <- function(HITId, ExpireAt) {
 #' @param HITId &#91;required&#93; The ID of the HIT to update.
 #' @param Revert Specifies how to update the HIT status. Default is `False`.
 #' 
-#' -   Setting this to false will only transition a HIT from `Reviewable`
+#'   - Setting this to false will only transition a HIT from `Reviewable`
 #'     to `Reviewing`
 #' 
-#' -   Setting this to true will only transition a HIT from `Reviewing` to
+#'   - Setting this to true will only transition a HIT from `Reviewing` to
 #'     `Reviewable`
 #'
 #' @return

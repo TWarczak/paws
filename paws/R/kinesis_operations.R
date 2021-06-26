@@ -90,10 +90,10 @@ kinesis_add_tags_to_stream <- function(StreamName, Tags) {
 #' [`create_stream`][kinesis_create_stream] request when you try to do one
 #' of the following:
 #' 
-#' -   Have more than five streams in the `CREATING` state at any point in
+#'   - Have more than five streams in the `CREATING` state at any point in
 #'     time.
 #' 
-#' -   Create more shards than are authorized for your account.
+#'   - Create more shards than are authorized for your account.
 #' 
 #' For the default shard limit for an AWS account, see [Amazon Kinesis Data
 #' Streams
@@ -641,21 +641,21 @@ kinesis_describe_stream_summary <- function(StreamName) {
 #' The following are the valid shard-level metrics. The value "`ALL`"
 #' disables every metric.
 #' 
-#' -   `IncomingBytes`
+#'   - `IncomingBytes`
 #' 
-#' -   `IncomingRecords`
+#'   - `IncomingRecords`
 #' 
-#' -   `OutgoingBytes`
+#'   - `OutgoingBytes`
 #' 
-#' -   `OutgoingRecords`
+#'   - `OutgoingRecords`
 #' 
-#' -   `WriteProvisionedThroughputExceeded`
+#'   - `WriteProvisionedThroughputExceeded`
 #' 
-#' -   `ReadProvisionedThroughputExceeded`
+#'   - `ReadProvisionedThroughputExceeded`
 #' 
-#' -   `IteratorAgeMilliseconds`
+#'   - `IteratorAgeMilliseconds`
 #' 
-#' -   `ALL`
+#'   - `ALL`
 #' 
 #' For more information, see [Monitoring the Amazon Kinesis Data Streams
 #' Service with Amazon
@@ -720,21 +720,21 @@ kinesis_disable_enhanced_monitoring <- function(StreamName, ShardLevelMetrics) {
 #' The following are the valid shard-level metrics. The value "`ALL`"
 #' enables every metric.
 #' 
-#' -   `IncomingBytes`
+#'   - `IncomingBytes`
 #' 
-#' -   `IncomingRecords`
+#'   - `IncomingRecords`
 #' 
-#' -   `OutgoingBytes`
+#'   - `OutgoingBytes`
 #' 
-#' -   `OutgoingRecords`
+#'   - `OutgoingRecords`
 #' 
-#' -   `WriteProvisionedThroughputExceeded`
+#'   - `WriteProvisionedThroughputExceeded`
 #' 
-#' -   `ReadProvisionedThroughputExceeded`
+#'   - `ReadProvisionedThroughputExceeded`
 #' 
-#' -   `IteratorAgeMilliseconds`
+#'   - `IteratorAgeMilliseconds`
 #' 
-#' -   `ALL`
+#'   - `ALL`
 #' 
 #' For more information, see [Monitoring the Amazon Kinesis Data Streams
 #' Service with Amazon
@@ -997,21 +997,21 @@ kinesis_get_records <- function(ShardIterator, Limit = NULL) {
 #' 
 #' The following are the valid Amazon Kinesis shard iterator types:
 #' 
-#' -   AT_SEQUENCE_NUMBER - Start reading from the position denoted by a
+#'   - AT_SEQUENCE_NUMBER - Start reading from the position denoted by a
 #'     specific sequence number, provided in the value
 #'     `StartingSequenceNumber`.
 #' 
-#' -   AFTER_SEQUENCE_NUMBER - Start reading right after the position
+#'   - AFTER_SEQUENCE_NUMBER - Start reading right after the position
 #'     denoted by a specific sequence number, provided in the value
 #'     `StartingSequenceNumber`.
 #' 
-#' -   AT_TIMESTAMP - Start reading from the position denoted by a
+#'   - AT_TIMESTAMP - Start reading from the position denoted by a
 #'     specific time stamp, provided in the value `Timestamp`.
 #' 
-#' -   TRIM_HORIZON - Start reading at the last untrimmed record in the
+#'   - TRIM_HORIZON - Start reading at the last untrimmed record in the
 #'     shard in the system, which is the oldest data record in the shard.
 #' 
-#' -   LATEST - Start reading just after the most recent record in the
+#'   - LATEST - Start reading just after the most recent record in the
 #'     shard, so that you always read the most recent data in the shard.
 #' @param StartingSequenceNumber The sequence number of the data record in the shard from which to start
 #' reading. Used with shard iterator type AT_SEQUENCE_NUMBER and
@@ -1857,17 +1857,17 @@ kinesis_put_records <- function(Records, StreamName) {
 #'
 #' @description
 #' Registers a consumer with a Kinesis data stream. When you use this
-#' operation, the consumer you register can then call SubscribeToShard to
-#' receive data from the stream using enhanced fan-out, at a rate of up to
-#' 2 MiB per second for every shard you subscribe to. This rate is
-#' unaffected by the total number of consumers that read from the same
-#' stream.
+#' operation, the consumer you register can then call
+#' <span>SubscribeToShard</span> to receive data from the stream using
+#' enhanced fan-out, at a rate of up to 2 MiB per second for every shard
+#' you subscribe to. This rate is unaffected by the total number of
+#' consumers that read from the same stream.
 #' 
 #' You can register up to 20 consumers per stream. A given consumer can
 #' only be registered with one stream at a time.
 #' 
-#' For an example of how to use this operations, see Enhanced Fan-Out Using
-#' the Kinesis Data Streams API.
+#' For an example of how to use this operations, see <span>Enhanced Fan-Out
+#' Using the Kinesis Data Streams API</span>.
 #' 
 #' The use of this operation has a limit of five transactions per second
 #' per account. Also, only 5 consumers can be created simultaneously. In
@@ -2129,18 +2129,18 @@ kinesis_split_shard <- function(StreamName, ShardToSplit, NewStartingHashKey) {
 #' prefixed by "alias/".You can also use a master key owned by Kinesis Data
 #' Streams by specifying the alias `aws/kinesis`.
 #' 
-#' -   Key ARN example:
+#'   - Key ARN example:
 #'     `arn:aws:kms:us-east-1:123456789012:key/12345678-1234-1234-1234-123456789012`
 #' 
-#' -   Alias ARN example:
+#'   - Alias ARN example:
 #'     `arn:aws:kms:us-east-1:123456789012:alias/MyAliasName`
 #' 
-#' -   Globally unique key ID example:
+#'   - Globally unique key ID example:
 #'     `12345678-1234-1234-1234-123456789012`
 #' 
-#' -   Alias name example: `alias/MyAliasName`
+#'   - Alias name example: `alias/MyAliasName`
 #' 
-#' -   Master key owned by Kinesis Data Streams: `alias/aws/kinesis`
+#'   - Master key owned by Kinesis Data Streams: `alias/aws/kinesis`
 #'
 #' @return
 #' An empty list.
@@ -2210,18 +2210,18 @@ kinesis_start_stream_encryption <- function(StreamName, EncryptionType, KeyId) {
 #' prefixed by "alias/".You can also use a master key owned by Kinesis Data
 #' Streams by specifying the alias `aws/kinesis`.
 #' 
-#' -   Key ARN example:
+#'   - Key ARN example:
 #'     `arn:aws:kms:us-east-1:123456789012:key/12345678-1234-1234-1234-123456789012`
 #' 
-#' -   Alias ARN example:
+#'   - Alias ARN example:
 #'     `arn:aws:kms:us-east-1:123456789012:alias/MyAliasName`
 #' 
-#' -   Globally unique key ID example:
+#'   - Globally unique key ID example:
 #'     `12345678-1234-1234-1234-123456789012`
 #' 
-#' -   Alias name example: `alias/MyAliasName`
+#'   - Alias name example: `alias/MyAliasName`
 #' 
-#' -   Master key owned by Kinesis Data Streams: `alias/aws/kinesis`
+#'   - Master key owned by Kinesis Data Streams: `alias/aws/kinesis`
 #'
 #' @return
 #' An empty list.
@@ -2284,24 +2284,24 @@ kinesis_stop_stream_encryption <- function(StreamName, EncryptionType, KeyId) {
 #' This operation has the following default limits. By default, you cannot
 #' do the following:
 #' 
-#' -   Scale more than ten times per rolling 24-hour period per stream
+#'   - Scale more than ten times per rolling 24-hour period per stream
 #' 
-#' -   Scale up to more than double your current shard count for a stream
+#'   - Scale up to more than double your current shard count for a stream
 #' 
-#' -   Scale down below half your current shard count for a stream
+#'   - Scale down below half your current shard count for a stream
 #' 
-#' -   Scale up to more than 500 shards in a stream
+#'   - Scale up to more than 500 shards in a stream
 #' 
-#' -   Scale a stream with more than 500 shards down unless the result is
+#'   - Scale a stream with more than 500 shards down unless the result is
 #'     less than 500 shards
 #' 
-#' -   Scale up to more than the shard limit for your account
+#'   - Scale up to more than the shard limit for your account
 #' 
 #' For the default limits for an AWS account, see [Streams
 #' Limits](https://docs.aws.amazon.com/streams/latest/dev/service-sizes-and-limits.html)
 #' in the *Amazon Kinesis Data Streams Developer Guide*. To request an
 #' increase in the call rate limit, the shard limit for this API, or your
-#' overall shard limit, use the limits form.
+#' overall shard limit, use the <span>limits form</span>.
 #'
 #' @usage
 #' kinesis_update_shard_count(StreamName, TargetShardCount, ScalingType)
@@ -2310,16 +2310,16 @@ kinesis_stop_stream_encryption <- function(StreamName, EncryptionType, KeyId) {
 #' @param TargetShardCount &#91;required&#93; The new number of shards. This value has the following default limits.
 #' By default, you cannot do the following:
 #' 
-#' -   Set this value to more than double your current shard count for a
+#'   - Set this value to more than double your current shard count for a
 #'     stream.
 #' 
-#' -   Set this value below half your current shard count for a stream.
+#'   - Set this value below half your current shard count for a stream.
 #' 
-#' -   Set this value to more than 500 shards in a stream (the default
+#'   - Set this value to more than 500 shards in a stream (the default
 #'     limit for shard count per stream is 500 per account per region),
 #'     unless you request a limit increase.
 #' 
-#' -   Scale a stream with more than 500 shards down unless you set this
+#'   - Scale a stream with more than 500 shards down unless you set this
 #'     value to less than 500 shards.
 #' @param ScalingType &#91;required&#93; The scaling type. Uniform scaling creates shards of equal size.
 #'

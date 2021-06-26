@@ -34,10 +34,10 @@ A list with the following syntax:\preformatted{list(
 }
 \description{
 Changes the visibility timeout of multiple messages. This is a batch
-version of \code{ ChangeMessageVisibility.} The result of the action on each
-message is reported individually in the response. You can send up to 10
-\code{\link[=sqs_change_message_visibility]{change_message_visibility}} requests
-with each
+version of \code{ ChangeMessageVisibility.} The result of the action on
+each message is reported individually in the response. You can send up
+to 10 \code{\link[=sqs_change_message_visibility]{change_message_visibility}}
+requests with each
 \code{\link[=sqs_change_message_visibility_batch]{change_message_visibility_batch}}
 action.
 

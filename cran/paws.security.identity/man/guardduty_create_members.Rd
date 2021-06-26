@@ -37,8 +37,7 @@ exception of the organization delegated administrator account, which
 must enable GuardDuty prior to being added as a member.
 
 If you are adding accounts by invitation use this action after GuardDuty
-has been enabled in potential member accounts and before using
-\href{https://docs.aws.amazon.com/guardduty/latest/APIReference/API_InviteMembers.html}{\verb{Invite Members}}
+has been enabled in potential member accounts and before using \href{https://docs.aws.amazon.com/guardduty/latest/APIReference/API_InviteMembers.html}{\verb{Invite Members}}
 .
 }
 \section{Request syntax}{

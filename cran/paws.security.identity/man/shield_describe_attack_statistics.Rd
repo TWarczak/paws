@@ -47,8 +47,7 @@ customers.
 The operation returns data for the time range of midnight UTC, one year
 ago, to midnight UTC, today. For example, if the current time is
 \verb{2020-10-26 15:39:32 PDT}, equal to \verb{2020-10-26 22:39:32 UTC}, then the
-time range for the attack data returned is from
-\verb{2019-10-26 00:00:00 UTC} to \verb{2020-10-26 00:00:00 UTC}.
+time range for the attack data returned is from \verb{2019-10-26 00:00:00 UTC} to \verb{2020-10-26 00:00:00 UTC}.
 
 The time range indicates the period covered by the attack statistics
 data items.

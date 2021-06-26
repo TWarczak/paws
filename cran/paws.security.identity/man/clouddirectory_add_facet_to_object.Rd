@@ -8,11 +8,12 @@ clouddirectory_add_facet_to_object(DirectoryArn, SchemaFacet,
   ObjectAttributeList, ObjectReference)
 }
 \arguments{
-\item{DirectoryArn}{[required] The Amazon Resource Name (ARN) that is associated with the Directory
-where the object resides. For more information, see arns.}
+\item{DirectoryArn}{[required] The Amazon Resource Name (ARN) that is associated with the
+<span>Directory</span> where the object resides. For more information,
+see <span>arns</span>.}
 
 \item{SchemaFacet}{[required] Identifiers for the facet that you are adding to the object. See
-SchemaFacet for details.}
+<span>SchemaFacet</span> for details.}
 
 \item{ObjectAttributeList}{Attributes on the facet that you are adding to the object.}
 
@@ -22,8 +23,8 @@ SchemaFacet for details.}
 An empty list.
 }
 \description{
-Adds a new Facet to an object. An object can have more than one facet
-applied on it.
+Adds a new <span>Facet</span> to an object. An object can have more than
+one facet applied on it.
 }
 \section{Request syntax}{
 \preformatted{svc$add_facet_to_object(

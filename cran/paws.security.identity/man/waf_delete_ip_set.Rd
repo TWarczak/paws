@@ -2,13 +2,13 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_delete_ip_set}
 \alias{waf_delete_ip_set}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_delete_ip_set(IPSetId, ChangeToken)
 }
 \arguments{
-\item{IPSetId}{[required] The \code{IPSetId} of the IPSet that you want to delete. \code{IPSetId} is
-returned by \code{\link[=waf_create_ip_set]{create_ip_set}} and by
+\item{IPSetId}{[required] The \code{IPSetId} of the <span>IPSet</span> that you want to delete.
+\code{IPSetId} is returned by \code{\link[=waf_create_ip_set]{create_ip_set}} and by
 \code{\link[=waf_list_ip_sets]{list_ip_sets}}.}
 
 \item{ChangeToken}{[required] The value returned by the most recent call to
@@ -30,8 +30,9 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Permanently deletes an IPSet. You can't delete an \code{IPSet} if it's still
-used in any \code{Rules} or if it still includes any IP addresses.
+Permanently deletes an <span>IPSet</span>. You can't delete an \code{IPSet}
+if it's still used in any \code{Rules} or if it still includes any IP
+addresses.
 
 If you just want to remove an \code{IPSet} from a \code{Rule}, use
 \code{\link[=waf_update_rule]{update_rule}}.

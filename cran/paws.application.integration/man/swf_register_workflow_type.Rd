@@ -2,7 +2,7 @@
 % Please edit documentation in R/swf_operations.R
 \name{swf_register_workflow_type}
 \alias{swf_register_workflow_type}
-\title{Registers a new workflow type and its configuration settings in the
+\title{Registers a new \emph{workflow type} and its configuration settings in the
 specified domain}
 \usage{
 swf_register_workflow_type(domain, name, version, description,
@@ -38,7 +38,7 @@ the literal string \code{arn}.}
 this workflow type. This default can be overridden when starting a
 workflow execution using the
 \code{\link[=swf_start_workflow_execution]{start_workflow_execution}} action or the
-\code{StartChildWorkflowExecution} Decision.
+\code{StartChildWorkflowExecution} <span>Decision</span>.
 
 The duration is specified in seconds, an integer greater than or equal
 to \code{0}. You can use \code{NONE} to specify unlimited duration.}
@@ -46,7 +46,7 @@ to \code{0}. You can use \code{NONE} to specify unlimited duration.}
 \item{defaultExecutionStartToCloseTimeout}{If set, specifies the default maximum duration for executions of this
 workflow type. You can override this default when starting an execution
 through the \code{\link[=swf_start_workflow_execution]{start_workflow_execution}}
-Action or \code{StartChildWorkflowExecution} Decision.
+Action or \code{StartChildWorkflowExecution} <span>Decision</span>.
 
 The duration is specified in seconds; an integer greater than or equal
 to 0. Unlike some of the other timeout parameters in Amazon SWF, you
@@ -59,7 +59,7 @@ causes the workflow execution to time out.}
 tasks for executions of this workflow type. This default is used only if
 a task list isn't provided when starting the execution through the
 \code{\link[=swf_start_workflow_execution]{start_workflow_execution}} Action or
-\code{StartChildWorkflowExecution} Decision.}
+\code{StartChildWorkflowExecution} <span>Decision</span>.}
 
 \item{defaultTaskPriority}{The default task priority to assign to the workflow type. If not
 assigned, then \code{0} is used. Valid values are integers that range from
@@ -76,7 +76,7 @@ calling the
 action explicitly or due to an expired timeout. This default can be
 overridden when starting a workflow execution using the
 \code{\link[=swf_start_workflow_execution]{start_workflow_execution}} action or the
-\code{StartChildWorkflowExecution} Decision.
+\code{StartChildWorkflowExecution} <span>Decision</span>.
 
 The supported child policies are:
 \itemize{

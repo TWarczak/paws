@@ -2,13 +2,13 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_update_geo_match_set}
 \alias{waf_update_geo_match_set}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_update_geo_match_set(GeoMatchSetId, ChangeToken, Updates)
 }
 \arguments{
-\item{GeoMatchSetId}{[required] The \code{GeoMatchSetId} of the GeoMatchSet that you want to update.
-\code{GeoMatchSetId} is returned by
+\item{GeoMatchSetId}{[required] The \code{GeoMatchSetId} of the <span>GeoMatchSet</span> that you want to
+update. \code{GeoMatchSetId} is returned by
 \code{\link[=waf_create_geo_match_set]{create_geo_match_set}} and by
 \code{\link[=waf_list_geo_match_sets]{list_geo_match_sets}}.}
 
@@ -16,11 +16,12 @@ waf_update_geo_match_set(GeoMatchSetId, ChangeToken, Updates)
 \code{\link[=waf_get_change_token]{get_change_token}}.}
 
 \item{Updates}{[required] An array of \code{GeoMatchSetUpdate} objects that you want to insert into or
-delete from an GeoMatchSet. For more information, see the applicable
-data types:
+delete from an <span>GeoMatchSet</span>. For more information, see the
+applicable data types:
 \itemize{
-\item GeoMatchSetUpdate: Contains \code{Action} and \code{GeoMatchConstraint}
-\item GeoMatchConstraint: Contains \code{Type} and \code{Value}
+\item <span>GeoMatchSetUpdate</span>: Contains \code{Action} and
+\code{GeoMatchConstraint}
+\item <span>GeoMatchConstraint</span>: Contains \code{Type} and \code{Value}
 
 You can have only one \code{Type} and \code{Value} per \code{GeoMatchConstraint}.
 To add multiple countries, include multiple \code{GeoMatchSetUpdate}
@@ -43,8 +44,9 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Inserts or deletes GeoMatchConstraint objects in an \code{GeoMatchSet}. For
-each \code{GeoMatchConstraint} object, you specify the following values:
+Inserts or deletes <span>GeoMatchConstraint</span> objects in an
+\code{GeoMatchSet}. For each \code{GeoMatchConstraint} object, you specify the
+following values:
 \itemize{
 \item Whether to insert or delete the object from the array. If you want
 to change an \code{GeoMatchConstraint} object, you delete the existing
@@ -52,7 +54,7 @@ object and add a new one.
 \item The \code{Type}. The only valid value for \code{Type} is \code{Country}.
 \item The \code{Value}, which is a two character code for the country to add to
 the \code{GeoMatchConstraint} object. Valid codes are listed in
-GeoMatchConstraint$Value.
+<span>GeoMatchConstraint$Value</span>.
 }
 
 To create and configure an \code{GeoMatchSet}, perform the following steps:

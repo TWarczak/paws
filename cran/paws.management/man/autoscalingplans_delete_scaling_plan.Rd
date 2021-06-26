@@ -19,8 +19,9 @@ An empty list.
 \description{
 Deletes the specified scaling plan.
 
-Deleting a scaling plan deletes the underlying ScalingInstruction for
-all of the scalable resources that are covered by the plan.
+Deleting a scaling plan deletes the underlying
+<span>ScalingInstruction</span> for all of the scalable resources that
+are covered by the plan.
 
 If the plan has launched resources or has scaling activities in
 progress, you must delete those resources separately.

@@ -9,13 +9,19 @@ kinesisanalytics(config = list())
 \arguments{
 \item{config}{Optional configuration of credentials, endpoint, and/or region.}
 }
+\value{
+A client for the service. You can call the service's operations using
+syntax like \code{svc$operation(...)}, where \code{svc} is the name you've assigned
+to the client. The available operations are listed in the
+Operations section.
+}
 \description{
 \strong{Overview}
 
 This documentation is for version 1 of the Amazon Kinesis Data Analytics
 API, which only supports SQL applications. Version 2 of the API supports
 SQL and Java applications. For more information about version 2, see
-Amazon Kinesis Data Analytics API V2 Documentation.
+<span>Amazon Kinesis Data Analytics API V2 Documentation</span>.
 
 This is the \emph{Amazon Kinesis Analytics v1 API Reference}. The Amazon
 Kinesis Analytics Developer Guide provides additional information.

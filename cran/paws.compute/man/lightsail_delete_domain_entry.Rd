@@ -43,7 +43,7 @@ Deletes a specific domain entry.
 
 The \verb{delete domain entry} operation supports tag-based access control
 via resource tags applied to the resource identified by \verb{domain name}.
-For more information, see the Lightsail Dev Guide.
+For more information, see the <span>Lightsail Dev Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$delete_domain_entry(

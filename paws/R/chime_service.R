@@ -92,7 +92,7 @@ NULL
 #'  \link[=chime_associate_signin_delegate_groups_with_account]{associate_signin_delegate_groups_with_account} \tab Associates the specified sign-in delegate groups with the specified Amazon Chime account\cr
 #'  \link[=chime_batch_create_attendee]{batch_create_attendee} \tab Creates up to 100 new attendees for an active Amazon Chime SDK meeting\cr
 #'  \link[=chime_batch_create_room_membership]{batch_create_room_membership} \tab Adds up to 50 members to a chat room in an Amazon Chime Enterprise account\cr
-#'  \link[=chime_batch_delete_phone_number]{batch_delete_phone_number} \tab Moves phone numbers into the Deletion queue\cr
+#'  \link[=chime_batch_delete_phone_number]{batch_delete_phone_number} \tab Moves phone numbers into the DELETION QUEUE\cr
 #'  \link[=chime_batch_suspend_user]{batch_suspend_user} \tab Suspends up to 50 users from a Team or EnterpriseLWA Amazon Chime account\cr
 #'  \link[=chime_batch_unsuspend_user]{batch_unsuspend_user} \tab Removes the suspension from up to 50 previously suspended users for the specified Amazon Chime EnterpriseLWA account\cr
 #'  \link[=chime_batch_update_phone_number]{batch_update_phone_number} \tab Updates phone number product types or calling names\cr
@@ -133,7 +133,7 @@ NULL
 #'  \link[=chime_delete_channel_moderator]{delete_channel_moderator} \tab Deletes a channel moderator\cr
 #'  \link[=chime_delete_events_configuration]{delete_events_configuration} \tab Deletes the events configuration that allows a bot to receive outgoing events\cr
 #'  \link[=chime_delete_meeting]{delete_meeting} \tab Deletes the specified Amazon Chime SDK meeting\cr
-#'  \link[=chime_delete_phone_number]{delete_phone_number} \tab Moves the specified phone number into the Deletion queue\cr
+#'  \link[=chime_delete_phone_number]{delete_phone_number} \tab Moves the specified phone number into the DELETION QUEUE\cr
 #'  \link[=chime_delete_proxy_session]{delete_proxy_session} \tab Deletes the specified proxy session from the specified Amazon Chime Voice Connector\cr
 #'  \link[=chime_delete_room]{delete_room} \tab Deletes a chat room in an Amazon Chime Enterprise account\cr
 #'  \link[=chime_delete_room_membership]{delete_room_membership} \tab Removes a member from a chat room in an Amazon Chime Enterprise account\cr
@@ -238,7 +238,7 @@ NULL
 #'  \link[=chime_redact_room_message]{redact_room_message} \tab Redacts the specified message from the specified Amazon Chime channel\cr
 #'  \link[=chime_regenerate_security_token]{regenerate_security_token} \tab Regenerates the security token for a bot\cr
 #'  \link[=chime_reset_personal_pin]{reset_personal_pin} \tab Resets the personal meeting PIN for the specified user on an Amazon Chime account\cr
-#'  \link[=chime_restore_phone_number]{restore_phone_number} \tab Moves a phone number from the Deletion queue back into the phone number Inventory\cr
+#'  \link[=chime_restore_phone_number]{restore_phone_number} \tab Moves a phone number from the DELETION QUEUE back into the phone number INVENTORY\cr
 #'  \link[=chime_search_available_phone_numbers]{search_available_phone_numbers} \tab Searches phone numbers that can be ordered\cr
 #'  \link[=chime_send_channel_message]{send_channel_message} \tab Sends a message to a particular channel that the member is a part of\cr
 #'  \link[=chime_tag_attendee]{tag_attendee} \tab Applies the specified tags to the specified Amazon Chime SDK attendee\cr
@@ -269,6 +269,12 @@ NULL
 #'  \link[=chime_update_voice_connector_group]{update_voice_connector_group} \tab Updates details for the specified Amazon Chime Voice Connector group, such as the name and Amazon Chime Voice Connector priority ranking
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname chime
 #' @export
 chime <- function(config = list()) {
@@ -287,7 +293,7 @@ chime <- function(config = list()) {
   endpoints = list("*" = "service.chime.aws.amazon.com"),
   service_id = "Chime",
   api_version = "2018-05-01",
-  signing_name = NULL,
+  signing_name = "chime",
   json_version = "",
   target_prefix = ""
 )

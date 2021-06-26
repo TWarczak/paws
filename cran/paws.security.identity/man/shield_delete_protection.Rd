@@ -7,13 +7,14 @@
 shield_delete_protection(ProtectionId)
 }
 \arguments{
-\item{ProtectionId}{[required] The unique identifier (ID) for the Protection object to be deleted.}
+\item{ProtectionId}{[required] The unique identifier (ID) for the <span>Protection</span> object to be
+deleted.}
 }
 \value{
 An empty list.
 }
 \description{
-Deletes an AWS Shield Advanced Protection.
+Deletes an AWS Shield Advanced <span>Protection</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$delete_protection(

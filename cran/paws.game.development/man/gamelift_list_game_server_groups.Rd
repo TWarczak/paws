@@ -2,8 +2,8 @@
 % Please edit documentation in R/gamelift_operations.R
 \name{gamelift_list_game_server_groups}
 \alias{gamelift_list_game_server_groups}
-\title{This operation is used with the Amazon GameLift FleetIQ solution and
-game server groups}
+\title{THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND
+GAME SERVER GROUPS}
 \usage{
 gamelift_list_game_server_groups(Limit, NextToken)
 }

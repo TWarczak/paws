@@ -19,8 +19,8 @@ NULL
 #' 
 #' `aws iot describe-endpoint --endpoint-type iot:Data-ATS`
 #' 
-#' The service name used by [AWS Signature Version
-#' 4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html)
+#' The service name used by [AWS Signature
+#' Version 4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html)
 #' to sign requests is: *iotdevicegateway*.
 #'
 #' @param
@@ -61,6 +61,12 @@ NULL
 #'  \link[=iotdataplane_publish]{publish} \tab Publishes state information\cr
 #'  \link[=iotdataplane_update_thing_shadow]{update_thing_shadow} \tab Updates the shadow for the specified thing
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname iotdataplane
 #' @export

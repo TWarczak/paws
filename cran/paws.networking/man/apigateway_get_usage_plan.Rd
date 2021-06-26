@@ -7,7 +7,8 @@
 apigateway_get_usage_plan(usagePlanId)
 }
 \arguments{
-\item{usagePlanId}{[required] [Required] The identifier of the UsagePlan resource to be retrieved.}
+\item{usagePlanId}{[required] [Required] The identifier of the <span>UsagePlan</span> resource to be
+retrieved.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

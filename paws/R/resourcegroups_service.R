@@ -30,17 +30,17 @@ NULL
 #' AWS Resource Groups uses a REST-compliant API that you can use to
 #' perform the following types of operations.
 #' 
-#' -   Create, Read, Update, and Delete (CRUD) operations on resource
+#'   - Create, Read, Update, and Delete (CRUD) operations on resource
 #'     groups and resource query entities
 #' 
-#' -   Applying, editing, and removing tags from resource groups
+#'   - Applying, editing, and removing tags from resource groups
 #' 
-#' -   Resolving resource group member ARNs so they can be returned as
+#'   - Resolving resource group member ARNs so they can be returned as
 #'     search results
 #' 
-#' -   Getting data about resources that are members of a group
+#'   - Getting data about resources that are members of a group
 #' 
-#' -   Searching AWS resources based on a resource query
+#'   - Searching AWS resources based on a resource query
 #'
 #' @param
 #' config
@@ -91,6 +91,12 @@ NULL
 #'  \link[=resourcegroups_update_group]{update_group} \tab Updates the description for an existing group\cr
 #'  \link[=resourcegroups_update_group_query]{update_group_query} \tab Updates the resource query of a group
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname resourcegroups
 #' @export

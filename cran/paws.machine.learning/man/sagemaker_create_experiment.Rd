@@ -2,7 +2,7 @@
 % Please edit documentation in R/sagemaker_operations.R
 \name{sagemaker_create_experiment}
 \alias{sagemaker_create_experiment}
-\title{Creates an SageMaker experiment}
+\title{Creates an SageMaker \emph{experiment}}
 \usage{
 sagemaker_create_experiment(ExperimentName, DisplayName, Description,
   Tags)

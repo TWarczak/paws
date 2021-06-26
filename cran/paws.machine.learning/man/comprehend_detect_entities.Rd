@@ -43,7 +43,8 @@ A list with the following syntax:\preformatted{list(
 }
 \description{
 Inspects text for named entities, and returns information about them.
-For more information, about named entities, see how-entities.
+For more information, about named entities, see
+<span>how-entities</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$detect_entities(

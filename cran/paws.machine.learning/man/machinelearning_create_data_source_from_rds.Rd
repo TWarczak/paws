@@ -48,8 +48,7 @@ required if \code{DataSchemaUri} is specified.
 \item DataRearrangement - A JSON string that represents the splitting and
 rearrangement requirements for the \code{Datasource}.
 
-Sample -
-\verb{ "\{\\"splitting\\":\{\\"percentBegin\\":10,\\"percentEnd\\":60\}\}"}
+Sample - \verb{ "\{\\"splitting\\":\{\\"percentBegin\\":10,\\"percentEnd\\":60\}\}"}
 }}
 
 \item{RoleARN}{[required] The role that Amazon ML assumes on behalf of the user to create and
@@ -59,8 +58,8 @@ activate a data pipeline in the user's account and copy data using the
 \item{ComputeStatistics}{The compute statistics for a \code{DataSource}. The statistics are generated
 from the observation data referenced by a \code{DataSource}. Amazon ML uses
 the statistics internally during \code{MLModel} training. This parameter must
-be set to \code{true} if the \code{DataSource} needs to be used for \code{MLModel}
-training.}
+be set to \code{true} if the \verb{}DataSource\verb{} needs to be used for
+\code{MLModel} training.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -83,7 +82,7 @@ Amazon Machine Learning (Amazon ML) immediately returns and sets the
 \code{DataSource} status to \code{PENDING}. After the \code{DataSource} is created and
 ready for use, Amazon ML sets the \code{Status} parameter to \code{COMPLETED}.
 \code{DataSource} in the \code{COMPLETED} or \code{PENDING} state can be used only to
-perform \verb{>CreateMLModel}>,
+perform \verb{>CreateMLModel}\>,
 \code{\link[=machinelearning_create_evaluation]{create_evaluation}}, or
 \code{\link[=machinelearning_create_batch_prediction]{create_batch_prediction}}
 operations.

@@ -25,11 +25,11 @@ NULL
 #' relation to the requested dimensions, measured at that time point.
 #' Examples include SQL, Wait event, User, and Host.
 #' 
-#' -   To learn more about Performance Insights and Amazon Aurora DB
+#'   - To learn more about Performance Insights and Amazon Aurora DB
 #'     instances, go to the [Amazon Aurora User
 #'     Guide](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights.html).
 #' 
-#' -   To learn more about Performance Insights and Amazon RDS DB
+#'   - To learn more about Performance Insights and Amazon RDS DB
 #'     instances, go to the [Amazon RDS User
 #'     Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html).
 #'
@@ -68,6 +68,12 @@ NULL
 #'  \link[=pi_describe_dimension_keys]{describe_dimension_keys} \tab For a specific time period, retrieve the top N dimension keys for a metric\cr
 #'  \link[=pi_get_resource_metrics]{get_resource_metrics} \tab Retrieve Performance Insights metrics for a set of data sources, over a time period
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname pi
 #' @export

@@ -15,16 +15,19 @@ NULL
 #' 
 #' The WorkMail API is designed for the following scenarios:
 #' 
-#' -   Listing and describing organizations
+#'   - Listing and describing organizations
 #' 
+#' <!-- end list -->
 #' 
-#' -   Managing users
+#'   - Managing users
 #' 
+#' <!-- end list -->
 #' 
-#' -   Managing groups
+#'   - Managing groups
 #' 
+#' <!-- end list -->
 #' 
-#' -   Managing resources
+#'   - Managing resources
 #' 
 #' All WorkMail API operations are Amazon-authenticated and
 #' certificate-signed. They not only require the use of the AWS SDK, but
@@ -121,6 +124,12 @@ NULL
 #'  \link[=workmail_update_resource]{update_resource} \tab Updates data for the resource
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname workmail
 #' @export
 workmail <- function(config = list()) {
@@ -139,7 +148,7 @@ workmail <- function(config = list()) {
   endpoints = list("*" = list(endpoint = "workmail.{region}.amazonaws.com", global = FALSE), "cn-*" = list(endpoint = "workmail.{region}.amazonaws.com.cn", global = FALSE), "us-iso-*" = list(endpoint = "workmail.{region}.c2s.ic.gov", global = FALSE), "us-isob-*" = list(endpoint = "workmail.{region}.sc2s.sgov.gov", global = FALSE)),
   service_id = "WorkMail",
   api_version = "2017-10-01",
-  signing_name = NULL,
+  signing_name = "workmail",
   json_version = "1.1",
   target_prefix = "WorkMailService"
 )

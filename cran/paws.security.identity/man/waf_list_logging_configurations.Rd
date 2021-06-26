@@ -2,7 +2,7 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_list_logging_configurations}
 \alias{waf_list_logging_configurations}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_list_logging_configurations(NextMarker, Limit)
 }
@@ -52,7 +52,7 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Returns an array of LoggingConfiguration objects.
+Returns an array of <span>LoggingConfiguration</span> objects.
 }
 \section{Request syntax}{
 \preformatted{svc$list_logging_configurations(

@@ -19,12 +19,11 @@ An empty list.
 Updates execution of a task.
 
 You can modify bandwidth throttling for a task execution that is running
-or queued. For more information, see Adjusting Bandwidth Throttling for
-a Task Execution.
+or queued. For more information, see <span>Adjusting Bandwidth
+Throttling for a Task Execution</span>.
 
 The only \code{Option} that can be modified by
-\code{\link[=datasync_update_task_execution]{update_task_execution}} is
-\code{BytesPerSecond}.
+\code{\link[=datasync_update_task_execution]{update_task_execution}} is \code{ BytesPerSecond }.
 }
 \section{Request syntax}{
 \preformatted{svc$update_task_execution(

@@ -156,13 +156,13 @@ iot_add_thing_to_thing_group <- function(thingGroupName = NULL, thingGroupArn = 
 #' Associates a group with a continuous job. The following criteria must be
 #' met:
 #' 
-#' -   The job must have been created with the `targetSelection` field set
+#'   - The job must have been created with the `targetSelection` field set
 #'     to "CONTINUOUS".
 #' 
-#' -   The job status must currently be "IN_PROGRESS".
+#'   - The job status must currently be "IN_PROGRESS".
 #' 
-#' -   The total number of targets associated with a job must not
-#'     exceed 100.
+#'   - The total number of targets associated with a job must not exceed
+#'     100.
 #'
 #' @usage
 #' iot_associate_targets_with_job(targets, jobId, comment, namespaceId)
@@ -875,13 +875,13 @@ iot_create_audit_suppression <- function(checkName, resourceIdentifier, expirati
 #' @param status The status of the create authorizer request.
 #' @param tags Metadata which can be used to manage the custom authorizer.
 #' 
-#' For URI Request parameters use format: ...key1=value1&key2=value2...
+#' For URI Request parameters use format: ...key1=value1\&key2=value2...
 #' 
-#' For the CLI command-line parameter use format: &&tags
-#' "key1=value1&key2=value2..."
+#' For the CLI command-line parameter use format: &\&tags
+#' "key1=value1\&key2=value2..."
 #' 
 #' For the cli-input-json file use format: "tags":
-#' "key1=value1&key2=value2..."
+#' "key1=value1\&key2=value2..."
 #' @param signingDisabled Specifies whether AWS IoT validates the token signature in an
 #' authorization request.
 #'
@@ -1033,13 +1033,13 @@ iot_create_billing_group <- function(billingGroupName, billingGroupProperties = 
 #' On Windows PowerShell, the command to create certificates for all CSRs
 #' in my-csr-directory is:
 #' 
-#' &gt; ls -Name my-csr-directory | %\{aws iot create-certificate-from-csr
+#' \> ls -Name my-csr-directory | %\{aws iot create-certificate-from-csr
 #' --certificate-signing-request file://my-csr-directory/$_\}
 #' 
 #' On a Windows command prompt, the command to create certificates for all
 #' CSRs in my-csr-directory is:
 #' 
-#' &gt; forfiles /p my-csr-directory /c "cmd /c aws iot
+#' \> forfiles /p my-csr-directory /c "cmd /c aws iot
 #' create-certificate-from-csr --certificate-signing-request file://@@path"
 #'
 #' @usage
@@ -1256,13 +1256,13 @@ iot_create_dimension <- function(name, type, stringValues, tags = NULL, clientRe
 #' AWS IoT Core currently supports only the `DATA` service type.
 #' @param tags Metadata which can be used to manage the domain configuration.
 #' 
-#' For URI Request parameters use format: ...key1=value1&key2=value2...
+#' For URI Request parameters use format: ...key1=value1\&key2=value2...
 #' 
-#' For the CLI command-line parameter use format: &&tags
-#' "key1=value1&key2=value2..."
+#' For the CLI command-line parameter use format: &\&tags
+#' "key1=value1\&key2=value2..."
 #' 
 #' For the cli-input-json file use format: "tags":
-#' "key1=value1&key2=value2..."
+#' "key1=value1\&key2=value2..."
 #'
 #' @return
 #' A list with the following syntax:
@@ -1864,13 +1864,13 @@ iot_create_ota_update <- function(otaUpdateId, description = NULL, targets, prot
 #' whitespace.
 #' @param tags Metadata which can be used to manage the policy.
 #' 
-#' For URI Request parameters use format: ...key1=value1&key2=value2...
+#' For URI Request parameters use format: ...key1=value1\&key2=value2...
 #' 
-#' For the CLI command-line parameter use format: &&tags
-#' "key1=value1&key2=value2..."
+#' For the CLI command-line parameter use format: &\&tags
+#' "key1=value1\&key2=value2..."
 #' 
 #' For the cli-input-json file use format: "tags":
-#' "key1=value1&key2=value2..."
+#' "key1=value1\&key2=value2..."
 #'
 #' @return
 #' A list with the following syntax:
@@ -2052,13 +2052,13 @@ iot_create_provisioning_claim <- function(templateName) {
 #' @param preProvisioningHook Creates a pre-provisioning hook template.
 #' @param tags Metadata which can be used to manage the fleet provisioning template.
 #' 
-#' For URI Request parameters use format: ...key1=value1&key2=value2...
+#' For URI Request parameters use format: ...key1=value1\&key2=value2...
 #' 
-#' For the CLI command-line parameter use format: &&tags
-#' "key1=value1&key2=value2..."
+#' For the CLI command-line parameter use format: &\&tags
+#' "key1=value1\&key2=value2..."
 #' 
 #' For the cli-input-json file use format: "tags":
-#' "key1=value1&key2=value2..."
+#' "key1=value1\&key2=value2..."
 #'
 #' @return
 #' A list with the following syntax:
@@ -2179,13 +2179,13 @@ iot_create_provisioning_template_version <- function(templateName, templateBody,
 #' @param credentialDurationSeconds How long (in seconds) the credentials will be valid.
 #' @param tags Metadata which can be used to manage the role alias.
 #' 
-#' For URI Request parameters use format: ...key1=value1&key2=value2...
+#' For URI Request parameters use format: ...key1=value1\&key2=value2...
 #' 
-#' For the CLI command-line parameter use format: &&tags
-#' "key1=value1&key2=value2..."
+#' For the CLI command-line parameter use format: &\&tags
+#' "key1=value1\&key2=value2..."
 #' 
 #' For the cli-input-json file use format: "tags":
-#' "key1=value1&key2=value2..."
+#' "key1=value1\&key2=value2..."
 #'
 #' @return
 #' A list with the following syntax:
@@ -2324,7 +2324,8 @@ iot_create_scheduled_audit <- function(frequency, dayOfMonth = NULL, dayOfWeek =
 #' @param alertTargets Specifies the destinations to which alerts are sent. (Alerts are always
 #' sent to the console.) Alerts are generated when a device (thing)
 #' violates a behavior.
-#' @param additionalMetricsToRetain *Please use CreateSecurityProfileRequest$additionalMetricsToRetainV2
+#' @param additionalMetricsToRetain *Please use
+#' <span>CreateSecurityProfileRequest$additionalMetricsToRetainV2</span>
 #' instead.*
 #' 
 #' A list of metrics whose data is retained (stored). By default, data is
@@ -2733,13 +2734,13 @@ iot_create_thing_type <- function(thingTypeName, thingTypeProperties = NULL, tag
 #' @param topicRulePayload &#91;required&#93; The rule payload.
 #' @param tags Metadata which can be used to manage the topic rule.
 #' 
-#' For URI Request parameters use format: ...key1=value1&key2=value2...
+#' For URI Request parameters use format: ...key1=value1\&key2=value2...
 #' 
 #' For the CLI command-line parameter use format: --tags
-#' "key1=value1&key2=value2..."
+#' "key1=value1\&key2=value2..."
 #' 
 #' For the cli-input-json file use format: "tags":
-#' "key1=value1&key2=value2..."
+#' "key1=value1\&key2=value2..."
 #'
 #' @return
 #' An empty list.
@@ -5596,17 +5597,20 @@ iot_describe_domain_configuration <- function(domainConfigurationName) {
 #'
 #' @param endpointType The endpoint type. Valid endpoint types include:
 #' 
-#' -   `iot:Data` - Returns a VeriSign signed data endpoint.
+#'   - `iot:Data` - Returns a VeriSign signed data endpoint.
 #' 
+#' <!-- end list -->
 #' 
-#' -   `iot:Data-ATS` - Returns an ATS signed data endpoint.
+#'   - `iot:Data-ATS` - Returns an ATS signed data endpoint.
 #' 
+#' <!-- end list -->
 #' 
-#' -   `iot:CredentialProvider` - Returns an AWS IoT credentials provider
+#'   - `iot:CredentialProvider` - Returns an AWS IoT credentials provider
 #'     API endpoint.
 #' 
+#' <!-- end list -->
 #' 
-#' -   `iot:Jobs` - Returns an AWS IoT device management Jobs API endpoint.
+#'   - `iot:Jobs` - Returns an AWS IoT device management Jobs API endpoint.
 #' 
 #' We strongly recommend that customers use the newer `iot:Data-ATS`
 #' endpoint type to avoid issues related to the widespread distrust of
@@ -11767,13 +11771,13 @@ iot_list_violation_events <- function(startTime, endTime, thingName = NULL, secu
 #' @param registrationConfig Information about the registration configuration.
 #' @param tags Metadata which can be used to manage the CA certificate.
 #' 
-#' For URI Request parameters use format: ...key1=value1&key2=value2...
+#' For URI Request parameters use format: ...key1=value1\&key2=value2...
 #' 
-#' For the CLI command-line parameter use format: &&tags
-#' "key1=value1&key2=value2..."
+#' For the CLI command-line parameter use format: &\&tags
+#' "key1=value1\&key2=value2..."
 #' 
 #' For the cli-input-json file use format: "tags":
-#' "key1=value1&key2=value2..."
+#' "key1=value1\&key2=value2..."
 #'
 #' @return
 #' A list with the following syntax:
@@ -11935,8 +11939,8 @@ iot_register_certificate_without_ca <- function(certificatePem, status = NULL) {
 #' IoT control plane APIs. These calls might exceed your account level [AWS
 #' IoT Throttling
 #' Limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_iot)
-#' and cause throttle errors. Please contact AWS Customer Support to raise
-#' your throttling limits if necessary.
+#' and cause throttle errors. Please contact <span>AWS Customer
+#' Support</span> to raise your throttling limits if necessary.
 #'
 #' @usage
 #' iot_register_thing(templateBody, parameters)
@@ -14584,7 +14588,8 @@ iot_update_scheduled_audit <- function(frequency = NULL, dayOfMonth = NULL, dayO
 #' @param behaviors Specifies the behaviors that, when violated by a device (thing), cause
 #' an alert.
 #' @param alertTargets Where the alerts are sent. (Alerts are always sent to the console.)
-#' @param additionalMetricsToRetain *Please use UpdateSecurityProfileRequest$additionalMetricsToRetainV2
+#' @param additionalMetricsToRetain *Please use
+#' <span>UpdateSecurityProfileRequest$additionalMetricsToRetainV2</span>
 #' instead.*
 #' 
 #' A list of metrics whose data is retained (stored). By default, data is

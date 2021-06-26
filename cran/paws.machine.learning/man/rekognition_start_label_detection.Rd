@@ -50,8 +50,8 @@ tree, and table; events like wedding, graduation, and birthday party;
 concepts like landscape, evening, and nature; and activities like a
 person getting out of a car or a person skiing.
 
-The video must be stored in an Amazon S3 bucket. Use Video to specify
-the bucket name and the filename of the video.
+The video must be stored in an Amazon S3 bucket. Use <span>Video</span>
+to specify the bucket name and the filename of the video.
 \code{\link[=rekognition_start_label_detection]{start_label_detection}} returns a
 job identifier (\code{JobId}) which you use to get the results of the
 operation. When label detection is finished, Amazon Rekognition Video

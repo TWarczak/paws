@@ -15,14 +15,14 @@ NULL
 #' 
 #' This action:
 #' 
-#' -   Requires a virtual private cloud (VPC) configuration as S3 on
+#'   - Requires a virtual private cloud (VPC) configuration as S3 on
 #'     Outposts only supports VPC style access points.
 #' 
-#' -   Does not support ACL on S3 on Outposts buckets.
+#'   - Does not support ACL on S3 on Outposts buckets.
 #' 
-#' -   Does not support Public Access on S3 on Outposts buckets.
+#'   - Does not support Public Access on S3 on Outposts buckets.
 #' 
-#' -   Does not support object lock for S3 on Outposts buckets.
+#'   - Does not support object lock for S3 on Outposts buckets.
 #' 
 #' For more information, see [Using Amazon S3 on
 #' Outposts](https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html)
@@ -40,11 +40,11 @@ NULL
 #' The following actions are related to
 #' [`create_access_point`][s3control_create_access_point]:
 #' 
-#' -   [`get_access_point`][s3control_get_access_point]
+#'   - [`get_access_point`][s3control_get_access_point]
 #' 
-#' -   [`delete_access_point`][s3control_delete_access_point]
+#'   - [`delete_access_point`][s3control_delete_access_point]
 #' 
-#' -   [`list_access_points`][s3control_list_access_points]
+#'   - [`list_access_points`][s3control_list_access_points]
 #'
 #' @usage
 #' s3control_create_access_point(AccountId, Name, Bucket, VpcConfiguration,
@@ -140,14 +140,14 @@ s3control_create_access_point <- function(AccountId, Name, Bucket, VpcConfigurat
 #' 
 #' S3 on Outposts buckets do not support
 #' 
-#' -   ACLs. Instead, configure access point policies to manage access to
+#'   - ACLs. Instead, configure access point policies to manage access to
 #'     buckets.
 #' 
-#' -   Public access.
+#'   - Public access.
 #' 
-#' -   Object Lock
+#'   - Object Lock
 #' 
-#' -   Bucket Location constraint
+#'   - Bucket Location constraint
 #' 
 #' For an example of the request syntax for Amazon S3 on Outposts that uses
 #' the S3 on Outposts endpoint hostname prefix and `x-amz-outpost-id` in
@@ -158,15 +158,15 @@ s3control_create_access_point <- function(AccountId, Name, Bucket, VpcConfigurat
 #' The following actions are related to
 #' [`create_bucket`][s3control_create_bucket] for Amazon S3 on Outposts:
 #' 
-#' -   [PutObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html)
+#'   - [PutObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html)
 #' 
-#' -   [`get_bucket`][s3control_get_bucket]
+#'   - [`get_bucket`][s3control_get_bucket]
 #' 
-#' -   [`delete_bucket`][s3control_delete_bucket]
+#'   - [`delete_bucket`][s3control_delete_bucket]
 #' 
-#' -   [`create_access_point`][s3control_create_access_point]
+#'   - [`create_access_point`][s3control_create_access_point]
 #' 
-#' -   [`put_access_point_policy`][s3control_put_access_point_policy]
+#'   - [`put_access_point_policy`][s3control_put_access_point_policy]
 #'
 #' @usage
 #' s3control_create_bucket(ACL, Bucket, CreateBucketConfiguration,
@@ -260,20 +260,20 @@ s3control_create_bucket <- function(ACL = NULL, Bucket, CreateBucketConfiguratio
 #' objects. Batch Operations can run a single operation or action on lists
 #' of Amazon S3 objects that you specify. For more information, see [S3
 #' Batch
-#' Operations](https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops-basics.html)
-#' in the *Amazon Simple Storage Service Developer Guide*.
+#' Operations](https://docs.aws.amazon.com/AmazonS3/latest/userguide/) in
+#' the *Amazon Simple Storage Service Developer Guide*.
 #' 
 #' This operation creates an S3 Batch Operations job.
 #' 
 #' Related actions include:
 #' 
-#' -   [`describe_job`][s3control_describe_job]
+#'   - [`describe_job`][s3control_describe_job]
 #' 
-#' -   [`list_jobs`][s3control_list_jobs]
+#'   - [`list_jobs`][s3control_list_jobs]
 #' 
-#' -   [`update_job_priority`][s3control_update_job_priority]
+#'   - [`update_job_priority`][s3control_update_job_priority]
 #' 
-#' -   [`update_job_status`][s3control_update_job_status]
+#'   - [`update_job_status`][s3control_update_job_status]
 #'
 #' @usage
 #' s3control_create_job(AccountId, ConfirmationRequired, Operation, Report,
@@ -491,11 +491,11 @@ s3control_create_job <- function(AccountId, ConfirmationRequired = NULL, Operati
 #' The following actions are related to
 #' [`delete_access_point`][s3control_delete_access_point]:
 #' 
-#' -   [`create_access_point`][s3control_create_access_point]
+#'   - [`create_access_point`][s3control_create_access_point]
 #' 
-#' -   [`get_access_point`][s3control_get_access_point]
+#'   - [`get_access_point`][s3control_get_access_point]
 #' 
-#' -   [`list_access_points`][s3control_list_access_points]
+#'   - [`list_access_points`][s3control_list_access_points]
 #'
 #' @usage
 #' s3control_delete_access_point(AccountId, Name)
@@ -563,9 +563,9 @@ s3control_delete_access_point <- function(AccountId, Name) {
 #' The following actions are related to
 #' [`delete_access_point_policy`][s3control_delete_access_point_policy]:
 #' 
-#' -   [`put_access_point_policy`][s3control_put_access_point_policy]
+#'   - [`put_access_point_policy`][s3control_put_access_point_policy]
 #' 
-#' -   [`get_access_point_policy`][s3control_get_access_point_policy]
+#'   - [`get_access_point_policy`][s3control_get_access_point_policy]
 #'
 #' @usage
 #' s3control_delete_access_point_policy(AccountId, Name)
@@ -641,11 +641,11 @@ s3control_delete_access_point_policy <- function(AccountId, Name) {
 #' 
 #' **Related Resources**
 #' 
-#' -   [`create_bucket`][s3control_create_bucket]
+#'   - [`create_bucket`][s3control_create_bucket]
 #' 
-#' -   [`get_bucket`][s3control_get_bucket]
+#'   - [`get_bucket`][s3control_get_bucket]
 #' 
-#' -   [DeleteObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteObject.html)
+#'   - [DeleteObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteObject.html)
 #'
 #' @usage
 #' s3control_delete_bucket(AccountId, Bucket)
@@ -734,9 +734,9 @@ s3control_delete_bucket <- function(AccountId, Bucket) {
 #' 
 #' Related actions include:
 #' 
-#' -   [`put_bucket_lifecycle_configuration`][s3control_put_bucket_lifecycle_configuration]
+#'   - [`put_bucket_lifecycle_configuration`][s3control_put_bucket_lifecycle_configuration]
 #' 
-#' -   [`get_bucket_lifecycle_configuration`][s3control_get_bucket_lifecycle_configuration]
+#'   - [`get_bucket_lifecycle_configuration`][s3control_get_bucket_lifecycle_configuration]
 #'
 #' @usage
 #' s3control_delete_bucket_lifecycle_configuration(AccountId, Bucket)
@@ -815,8 +815,8 @@ s3control_delete_bucket_lifecycle_configuration <- function(AccountId, Bucket) {
 #' bucket can always use this operation, even if the policy explicitly
 #' denies the root user the ability to perform this action.
 #' 
-#' For more information about bucket policies, see Using Bucket Policies
-#' and User Policies.
+#' For more information about bucket policies, see <span>Using Bucket
+#' Policies and User Policies</span>.
 #' 
 #' All Amazon S3 on Outposts REST API requests for this action require an
 #' additional parameter of `x-amz-outpost-id` to be passed with the request
@@ -830,9 +830,9 @@ s3control_delete_bucket_lifecycle_configuration <- function(AccountId, Bucket) {
 #' The following actions are related to
 #' [`delete_bucket_policy`][s3control_delete_bucket_policy]:
 #' 
-#' -   [`get_bucket_policy`][s3control_get_bucket_policy]
+#'   - [`get_bucket_policy`][s3control_get_bucket_policy]
 #' 
-#' -   [`put_bucket_policy`][s3control_put_bucket_policy]
+#'   - [`put_bucket_policy`][s3control_put_bucket_policy]
 #'
 #' @usage
 #' s3control_delete_bucket_policy(AccountId, Bucket)
@@ -913,9 +913,9 @@ s3control_delete_bucket_policy <- function(AccountId, Bucket) {
 #' The following actions are related to
 #' [`delete_bucket_tagging`][s3control_delete_bucket_tagging]:
 #' 
-#' -   [`get_bucket_tagging`][s3control_get_bucket_tagging]
+#'   - [`get_bucket_tagging`][s3control_get_bucket_tagging]
 #' 
-#' -   [`put_bucket_tagging`][s3control_put_bucket_tagging]
+#'   - [`put_bucket_tagging`][s3control_put_bucket_tagging]
 #'
 #' @usage
 #' s3control_delete_bucket_tagging(AccountId, Bucket)
@@ -978,11 +978,11 @@ s3control_delete_bucket_tagging <- function(AccountId, Bucket) {
 #' 
 #' Related actions include:
 #' 
-#' -   [`create_job`][s3control_create_job]
+#'   - [`create_job`][s3control_create_job]
 #' 
-#' -   [`get_job_tagging`][s3control_get_job_tagging]
+#'   - [`get_job_tagging`][s3control_get_job_tagging]
 #' 
-#' -   [`put_job_tagging`][s3control_put_job_tagging]
+#'   - [`put_job_tagging`][s3control_put_job_tagging]
 #'
 #' @usage
 #' s3control_delete_job_tagging(AccountId, JobId)
@@ -1030,9 +1030,9 @@ s3control_delete_job_tagging <- function(AccountId, JobId) {
 #' 
 #' Related actions include:
 #' 
-#' -   [`get_public_access_block`][s3control_get_public_access_block]
+#'   - [`get_public_access_block`][s3control_get_public_access_block]
 #' 
-#' -   [`put_public_access_block`][s3control_put_public_access_block]
+#'   - [`put_public_access_block`][s3control_put_public_access_block]
 #'
 #' @usage
 #' s3control_delete_public_access_block(AccountId)
@@ -1074,8 +1074,8 @@ s3control_delete_public_access_block <- function(AccountId) {
 #'
 #' @description
 #' Deletes the Amazon S3 Storage Lens configuration. For more information
-#' about S3 Storage Lens, see Working with Amazon S3 Storage Lens in the
-#' *Amazon Simple Storage Service Developer Guide*.
+#' about S3 Storage Lens, see <span>Working with Amazon S3 Storage
+#' Lens</span> in the *Amazon Simple Storage Service Developer Guide*.
 #' 
 #' To use this action, you must have permission to perform the
 #' `s3:DeleteStorageLensConfiguration` action. For more information, see
@@ -1124,8 +1124,9 @@ s3control_delete_storage_lens_configuration <- function(ConfigId, AccountId) {
 #'
 #' @description
 #' Deletes the Amazon S3 Storage Lens configuration tags. For more
-#' information about S3 Storage Lens, see Working with Amazon S3 Storage
-#' Lens in the *Amazon Simple Storage Service Developer Guide*.
+#' information about S3 Storage Lens, see <span>Working with Amazon S3
+#' Storage Lens</span> in the *Amazon Simple Storage Service Developer
+#' Guide*.
 #' 
 #' To use this action, you must have permission to perform the
 #' `s3:DeleteStorageLensConfigurationTagging` action. For more information,
@@ -1176,18 +1177,18 @@ s3control_delete_storage_lens_configuration_tagging <- function(ConfigId, Accoun
 #' @description
 #' Retrieves the configuration parameters and status for a Batch Operations
 #' job. For more information, see [S3 Batch
-#' Operations](https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops-basics.html)
-#' in the *Amazon Simple Storage Service Developer Guide*.
+#' Operations](https://docs.aws.amazon.com/AmazonS3/latest/userguide/) in
+#' the *Amazon Simple Storage Service Developer Guide*.
 #' 
 #' Related actions include:
 #' 
-#' -   [`create_job`][s3control_create_job]
+#'   - [`create_job`][s3control_create_job]
 #' 
-#' -   [`list_jobs`][s3control_list_jobs]
+#'   - [`list_jobs`][s3control_list_jobs]
 #' 
-#' -   [`update_job_priority`][s3control_update_job_priority]
+#'   - [`update_job_priority`][s3control_update_job_priority]
 #' 
-#' -   [`update_job_status`][s3control_update_job_status]
+#'   - [`update_job_status`][s3control_update_job_status]
 #'
 #' @usage
 #' s3control_describe_job(AccountId, JobId)
@@ -1404,11 +1405,11 @@ s3control_describe_job <- function(AccountId, JobId) {
 #' The following actions are related to
 #' [`get_access_point`][s3control_get_access_point]:
 #' 
-#' -   [`create_access_point`][s3control_create_access_point]
+#'   - [`create_access_point`][s3control_create_access_point]
 #' 
-#' -   [`delete_access_point`][s3control_delete_access_point]
+#'   - [`delete_access_point`][s3control_delete_access_point]
 #' 
-#' -   [`list_access_points`][s3control_list_access_points]
+#'   - [`list_access_points`][s3control_list_access_points]
 #'
 #' @usage
 #' s3control_get_access_point(AccountId, Name)
@@ -1489,9 +1490,9 @@ s3control_get_access_point <- function(AccountId, Name) {
 #' The following actions are related to
 #' [`get_access_point_policy`][s3control_get_access_point_policy]:
 #' 
-#' -   [`put_access_point_policy`][s3control_put_access_point_policy]
+#'   - [`put_access_point_policy`][s3control_put_access_point_policy]
 #' 
-#' -   [`delete_access_point_policy`][s3control_delete_access_point_policy]
+#'   - [`delete_access_point_policy`][s3control_delete_access_point_policy]
 #'
 #' @usage
 #' s3control_get_access_point_policy(AccountId, Name)
@@ -1632,11 +1633,11 @@ s3control_get_access_point_policy_status <- function(AccountId, Name) {
 #' [Examples](https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_GetBucket.html#API_control_GetBucket_Examples)
 #' section.
 #' 
-#' -   [PutObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html)
+#'   - [PutObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html)
 #' 
-#' -   [`create_bucket`][s3control_create_bucket]
+#'   - [`create_bucket`][s3control_create_bucket]
 #' 
-#' -   [`delete_bucket`][s3control_delete_bucket]
+#'   - [`delete_bucket`][s3control_delete_bucket]
 #'
 #' @usage
 #' s3control_get_bucket(AccountId, Bucket)
@@ -1733,20 +1734,20 @@ s3control_get_bucket <- function(AccountId, Bucket) {
 #' [`get_bucket_lifecycle_configuration`][s3control_get_bucket_lifecycle_configuration]
 #' has the following special error:
 #' 
-#' -   Error code: `NoSuchLifecycleConfiguration`
-#' 
-#'     -   Description: The lifecycle configuration does not exist.
-#' 
-#'     -   HTTP Status Code: 404 Not Found
-#' 
-#'     -   SOAP Fault Code Prefix: Client
+#'   - Error code: `NoSuchLifecycleConfiguration`
+#'     
+#'       - Description: The lifecycle configuration does not exist.
+#'     
+#'       - HTTP Status Code: 404 Not Found
+#'     
+#'       - SOAP Fault Code Prefix: Client
 #' 
 #' The following actions are related to
 #' [`get_bucket_lifecycle_configuration`][s3control_get_bucket_lifecycle_configuration]:
 #' 
-#' -   [`put_bucket_lifecycle_configuration`][s3control_put_bucket_lifecycle_configuration]
+#'   - [`put_bucket_lifecycle_configuration`][s3control_put_bucket_lifecycle_configuration]
 #' 
-#' -   [`delete_bucket_lifecycle_configuration`][s3control_delete_bucket_lifecycle_configuration]
+#'   - [`delete_bucket_lifecycle_configuration`][s3control_delete_bucket_lifecycle_configuration]
 #'
 #' @usage
 #' s3control_get_bucket_lifecycle_configuration(AccountId, Bucket)
@@ -1896,11 +1897,11 @@ s3control_get_bucket_lifecycle_configuration <- function(AccountId, Bucket) {
 #' The following actions are related to
 #' [`get_bucket_policy`][s3control_get_bucket_policy]:
 #' 
-#' -   [GetObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html)
+#'   - [GetObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html)
 #' 
-#' -   [`put_bucket_policy`][s3control_put_bucket_policy]
+#'   - [`put_bucket_policy`][s3control_put_bucket_policy]
 #' 
-#' -   [`delete_bucket_policy`][s3control_delete_bucket_policy]
+#'   - [`delete_bucket_policy`][s3control_delete_bucket_policy]
 #'
 #' @usage
 #' s3control_get_bucket_policy(AccountId, Bucket)
@@ -1976,9 +1977,9 @@ s3control_get_bucket_policy <- function(AccountId, Bucket) {
 #' [`get_bucket_tagging`][s3control_get_bucket_tagging] has the following
 #' special error:
 #' 
-#' -   Error code: `NoSuchTagSetError`
-#' 
-#'     -   Description: There is no tag set associated with the bucket.
+#'   - Error code: `NoSuchTagSetError`
+#'     
+#'       - Description: There is no tag set associated with the bucket.
 #' 
 #' All Amazon S3 on Outposts REST API requests for this action require an
 #' additional parameter of `x-amz-outpost-id` to be passed with the request
@@ -1992,9 +1993,9 @@ s3control_get_bucket_policy <- function(AccountId, Bucket) {
 #' The following actions are related to
 #' [`get_bucket_tagging`][s3control_get_bucket_tagging]:
 #' 
-#' -   [`put_bucket_tagging`][s3control_put_bucket_tagging]
+#'   - [`put_bucket_tagging`][s3control_put_bucket_tagging]
 #' 
-#' -   [`delete_bucket_tagging`][s3control_delete_bucket_tagging]
+#'   - [`delete_bucket_tagging`][s3control_delete_bucket_tagging]
 #'
 #' @usage
 #' s3control_get_bucket_tagging(AccountId, Bucket)
@@ -2066,11 +2067,11 @@ s3control_get_bucket_tagging <- function(AccountId, Bucket) {
 #' 
 #' Related actions include:
 #' 
-#' -   [`create_job`][s3control_create_job]
+#'   - [`create_job`][s3control_create_job]
 #' 
-#' -   [`put_job_tagging`][s3control_put_job_tagging]
+#'   - [`put_job_tagging`][s3control_put_job_tagging]
 #' 
-#' -   [`delete_job_tagging`][s3control_delete_job_tagging]
+#'   - [`delete_job_tagging`][s3control_delete_job_tagging]
 #'
 #' @usage
 #' s3control_get_job_tagging(AccountId, JobId)
@@ -2128,9 +2129,9 @@ s3control_get_job_tagging <- function(AccountId, JobId) {
 #' 
 #' Related actions include:
 #' 
-#' -   [`delete_public_access_block`][s3control_delete_public_access_block]
+#'   - [`delete_public_access_block`][s3control_delete_public_access_block]
 #' 
-#' -   [`put_public_access_block`][s3control_put_public_access_block]
+#'   - [`put_public_access_block`][s3control_put_public_access_block]
 #'
 #' @usage
 #' s3control_get_public_access_block(AccountId)
@@ -2182,8 +2183,8 @@ s3control_get_public_access_block <- function(AccountId) {
 #'
 #' @description
 #' Gets the Amazon S3 Storage Lens configuration. For more information, see
-#' Working with Amazon S3 Storage Lens in the *Amazon Simple Storage
-#' Service Developer Guide*.
+#' <span>Working with Amazon S3 Storage Lens</span> in the *Amazon Simple
+#' Storage Service Developer Guide*.
 #' 
 #' To use this action, you must have permission to perform the
 #' `s3:GetStorageLensConfiguration` action. For more information, see
@@ -2295,8 +2296,9 @@ s3control_get_storage_lens_configuration <- function(ConfigId, AccountId) {
 #'
 #' @description
 #' Gets the tags of Amazon S3 Storage Lens configuration. For more
-#' information about S3 Storage Lens, see Working with Amazon S3 Storage
-#' Lens in the *Amazon Simple Storage Service Developer Guide*.
+#' information about S3 Storage Lens, see <span>Working with Amazon S3
+#' Storage Lens</span> in the *Amazon Simple Storage Service Developer
+#' Guide*.
 #' 
 #' To use this action, you must have permission to perform the
 #' `s3:GetStorageLensConfigurationTagging` action. For more information,
@@ -2374,11 +2376,11 @@ s3control_get_storage_lens_configuration_tagging <- function(ConfigId, AccountId
 #' The following actions are related to
 #' [`list_access_points`][s3control_list_access_points]:
 #' 
-#' -   [`create_access_point`][s3control_create_access_point]
+#'   - [`create_access_point`][s3control_create_access_point]
 #' 
-#' -   [`delete_access_point`][s3control_delete_access_point]
+#'   - [`delete_access_point`][s3control_delete_access_point]
 #' 
-#' -   [`get_access_point`][s3control_get_access_point]
+#'   - [`get_access_point`][s3control_get_access_point]
 #'
 #' @usage
 #' s3control_list_access_points(AccountId, Bucket, NextToken, MaxResults)
@@ -2464,18 +2466,18 @@ s3control_list_access_points <- function(AccountId, Bucket = NULL, NextToken = N
 #' Lists current S3 Batch Operations jobs and jobs that have ended within
 #' the last 30 days for the AWS account making the request. For more
 #' information, see [S3 Batch
-#' Operations](https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops-basics.html)
-#' in the *Amazon Simple Storage Service Developer Guide*.
+#' Operations](https://docs.aws.amazon.com/AmazonS3/latest/userguide/) in
+#' the *Amazon Simple Storage Service Developer Guide*.
 #' 
 #' Related actions include:
 #' 
-#' -   [`create_job`][s3control_create_job]
+#'   - [`create_job`][s3control_create_job]
 #' 
-#' -   [`describe_job`][s3control_describe_job]
+#'   - [`describe_job`][s3control_describe_job]
 #' 
-#' -   [`update_job_priority`][s3control_update_job_priority]
+#'   - [`update_job_priority`][s3control_update_job_priority]
 #' 
-#' -   [`update_job_status`][s3control_update_job_status]
+#'   - [`update_job_status`][s3control_update_job_status]
 #'
 #' @usage
 #' s3control_list_jobs(AccountId, JobStatuses, NextToken, MaxResults)
@@ -2486,10 +2488,10 @@ s3control_list_access_points <- function(AccountId, Bucket = NULL, NextToken = N
 #' @param NextToken A pagination token to request the next page of results. Use the token
 #' that Amazon S3 returned in the `NextToken` element of the
 #' `ListJobsResult` from the previous `List Jobs` request.
-#' @param MaxResults The maximum number of jobs that Amazon S3 will include in the
-#' `List Jobs` response. If there are more jobs than this number, the
-#' response will include a pagination token in the `NextToken` field to
-#' enable you to retrieve the next page of results.
+#' @param MaxResults The maximum number of jobs that Amazon S3 will include in the `List
+#' Jobs` response. If there are more jobs than this number, the response
+#' will include a pagination token in the `NextToken` field to enable you
+#' to retrieve the next page of results.
 #'
 #' @return
 #' A list with the following syntax:
@@ -2631,8 +2633,9 @@ s3control_list_regional_buckets <- function(AccountId, NextToken = NULL, MaxResu
 #'
 #' @description
 #' Gets a list of Amazon S3 Storage Lens configurations. For more
-#' information about S3 Storage Lens, see Working with Amazon S3 Storage
-#' Lens in the *Amazon Simple Storage Service Developer Guide*.
+#' information about S3 Storage Lens, see <span>Working with Amazon S3
+#' Storage Lens</span> in the *Amazon Simple Storage Service Developer
+#' Guide*.
 #' 
 #' To use this action, you must have permission to perform the
 #' `s3:ListStorageLensConfigurations` action. For more information, see
@@ -2709,9 +2712,9 @@ s3control_list_storage_lens_configurations <- function(AccountId, NextToken = NU
 #' The following actions are related to
 #' [`put_access_point_policy`][s3control_put_access_point_policy]:
 #' 
-#' -   [`get_access_point_policy`][s3control_get_access_point_policy]
+#'   - [`get_access_point_policy`][s3control_get_access_point_policy]
 #' 
-#' -   [`delete_access_point_policy`][s3control_delete_access_point_policy]
+#'   - [`delete_access_point_policy`][s3control_delete_access_point_policy]
 #'
 #' @usage
 #' s3control_put_access_point_policy(AccountId, Name, Policy)
@@ -2798,9 +2801,9 @@ s3control_put_access_point_policy <- function(AccountId, Name, Policy) {
 #' The following actions are related to
 #' [`put_bucket_lifecycle_configuration`][s3control_put_bucket_lifecycle_configuration]:
 #' 
-#' -   [`get_bucket_lifecycle_configuration`][s3control_get_bucket_lifecycle_configuration]
+#'   - [`get_bucket_lifecycle_configuration`][s3control_get_bucket_lifecycle_configuration]
 #' 
-#' -   [`delete_bucket_lifecycle_configuration`][s3control_delete_bucket_lifecycle_configuration]
+#'   - [`delete_bucket_lifecycle_configuration`][s3control_delete_bucket_lifecycle_configuration]
 #'
 #' @usage
 #' s3control_put_bucket_lifecycle_configuration(AccountId, Bucket,
@@ -2915,8 +2918,8 @@ s3control_put_bucket_lifecycle_configuration <- function(AccountId, Bucket, Life
 #' If you don't have [`put_bucket_policy`][s3control_put_bucket_policy]
 #' permissions, Amazon S3 returns a `403 Access Denied` error. If you have
 #' the correct permissions, but you're not using an identity that belongs
-#' to the bucket owner's account, Amazon S3 returns a
-#' `405 Method Not Allowed` error.
+#' to the bucket owner's account, Amazon S3 returns a `405 Method Not
+#' Allowed` error.
 #' 
 #' As a security precaution, the root user of the AWS account that owns a
 #' bucket can always use this operation, even if the policy explicitly
@@ -2938,9 +2941,9 @@ s3control_put_bucket_lifecycle_configuration <- function(AccountId, Bucket, Life
 #' The following actions are related to
 #' [`put_bucket_policy`][s3control_put_bucket_policy]:
 #' 
-#' -   [`get_bucket_policy`][s3control_get_bucket_policy]
+#'   - [`get_bucket_policy`][s3control_get_bucket_policy]
 #' 
-#' -   [`delete_bucket_policy`][s3control_delete_bucket_policy]
+#'   - [`delete_bucket_policy`][s3control_delete_bucket_policy]
 #'
 #' @usage
 #' s3control_put_bucket_policy(AccountId, Bucket,
@@ -3038,27 +3041,27 @@ s3control_put_bucket_policy <- function(AccountId, Bucket, ConfirmRemoveSelfBuck
 #' [`put_bucket_tagging`][s3control_put_bucket_tagging] has the following
 #' special errors:
 #' 
-#' -   Error code: `InvalidTagError`
-#' 
-#'     -   Description: The tag provided was not a valid tag. This error
+#'   - Error code: `InvalidTagError`
+#'     
+#'       - Description: The tag provided was not a valid tag. This error
 #'         can occur if the tag did not pass input validation. For
 #'         information about tag restrictions, see [User-Defined Tag
 #'         Restrictions](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation-tag-restrictions.html)
 #'         and [AWS-Generated Cost Allocation Tag
 #'         Restrictions](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/aws-tag-restrictions.html).
 #' 
-#' -   Error code: `MalformedXMLError`
+#'   - Error code: `MalformedXMLError`
+#'     
+#'       - Description: The XML provided does not match the schema.
 #' 
-#'     -   Description: The XML provided does not match the schema.
-#' 
-#' -   Error code: `OperationAbortedError `
-#' 
-#'     -   Description: A conflicting conditional operation is currently in
+#'   - Error code: ` OperationAbortedError  `
+#'     
+#'       - Description: A conflicting conditional operation is currently in
 #'         progress against this resource. Try again.
 #' 
-#' -   Error code: `InternalError`
-#' 
-#'     -   Description: The service was unable to apply the provided tag to
+#'   - Error code: `InternalError`
+#'     
+#'       - Description: The service was unable to apply the provided tag to
 #'         the bucket.
 #' 
 #' All Amazon S3 on Outposts REST API requests for this action require an
@@ -3073,9 +3076,9 @@ s3control_put_bucket_policy <- function(AccountId, Bucket, ConfirmRemoveSelfBuck
 #' The following actions are related to
 #' [`put_bucket_tagging`][s3control_put_bucket_tagging]:
 #' 
-#' -   [`get_bucket_tagging`][s3control_get_bucket_tagging]
+#'   - [`get_bucket_tagging`][s3control_get_bucket_tagging]
 #' 
-#' -   [`delete_bucket_tagging`][s3control_delete_bucket_tagging]
+#'   - [`delete_bucket_tagging`][s3control_delete_bucket_tagging]
 #'
 #' @usage
 #' s3control_put_bucket_tagging(AccountId, Bucket, Tagging)
@@ -3151,30 +3154,30 @@ s3control_put_bucket_tagging <- function(AccountId, Bucket, Tagging) {
 #' tags](https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops-managing-jobs.html#batch-ops-job-tags)
 #' in the *Amazon Simple Storage Service Developer Guide*.
 #' 
-#' -   If you send this request with an empty tag set, Amazon S3 deletes
+#'   - If you send this request with an empty tag set, Amazon S3 deletes
 #'     the existing tag set on the Batch Operations job. If you use this
 #'     method, you are charged for a Tier 1 Request (PUT). For more
 #'     information, see [Amazon S3
 #'     pricing](https://aws.amazon.com/s3/pricing/).
 #' 
-#' -   For deleting existing tags for your Batch Operations job, a
+#'   - For deleting existing tags for your Batch Operations job, a
 #'     [`delete_job_tagging`][s3control_delete_job_tagging] request is
 #'     preferred because it achieves the same result without incurring
 #'     charges.
 #' 
-#' -   A few things to consider about using tags:
-#' 
-#'     -   Amazon S3 limits the maximum number of tags to 50 tags per job.
-#' 
-#'     -   You can associate up to 50 tags with a job as long as they have
+#'   - A few things to consider about using tags:
+#'     
+#'       - Amazon S3 limits the maximum number of tags to 50 tags per job.
+#'     
+#'       - You can associate up to 50 tags with a job as long as they have
 #'         unique tag keys.
-#' 
-#'     -   A tag key can be up to 128 Unicode characters in length, and tag
+#'     
+#'       - A tag key can be up to 128 Unicode characters in length, and tag
 #'         values can be up to 256 Unicode characters in length.
-#' 
-#'     -   The key and values are case sensitive.
-#' 
-#'     -   For tagging-related restrictions related to characters and
+#'     
+#'       - The key and values are case sensitive.
+#'     
+#'       - For tagging-related restrictions related to characters and
 #'         encodings, see [User-Defined Tag
 #'         Restrictions](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation-tag-restrictions.html)
 #'         in the *AWS Billing and Cost Management User Guide*.
@@ -3184,11 +3187,11 @@ s3control_put_bucket_tagging <- function(AccountId, Bucket, Tagging) {
 #' 
 #' Related actions include:
 #' 
-#' -   [CreatJob](https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateJob.html)
+#'   - [CreatJob](https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_CreateJob.html)
 #' 
-#' -   [`get_job_tagging`][s3control_get_job_tagging]
+#'   - [`get_job_tagging`][s3control_get_job_tagging]
 #' 
-#' -   [`delete_job_tagging`][s3control_delete_job_tagging]
+#'   - [`delete_job_tagging`][s3control_delete_job_tagging]
 #'
 #' @usage
 #' s3control_put_job_tagging(AccountId, JobId, Tags)
@@ -3244,9 +3247,9 @@ s3control_put_job_tagging <- function(AccountId, JobId, Tags) {
 #' 
 #' Related actions include:
 #' 
-#' -   [`get_public_access_block`][s3control_get_public_access_block]
+#'   - [`get_public_access_block`][s3control_get_public_access_block]
 #' 
-#' -   [`delete_public_access_block`][s3control_delete_public_access_block]
+#'   - [`delete_public_access_block`][s3control_delete_public_access_block]
 #'
 #' @usage
 #' s3control_put_public_access_block(PublicAccessBlockConfiguration,
@@ -3297,8 +3300,8 @@ s3control_put_public_access_block <- function(PublicAccessBlockConfiguration, Ac
 #'
 #' @description
 #' Puts an Amazon S3 Storage Lens configuration. For more information about
-#' S3 Storage Lens, see Working with Amazon S3 Storage Lens in the *Amazon
-#' Simple Storage Service Developer Guide*.
+#' S3 Storage Lens, see <span>Working with Amazon S3 Storage Lens</span> in
+#' the *Amazon Simple Storage Service Developer Guide*.
 #' 
 #' To use this action, you must have permission to perform the
 #' `s3:PutStorageLensConfiguration` action. For more information, see
@@ -3417,8 +3420,9 @@ s3control_put_storage_lens_configuration <- function(ConfigId, AccountId, Storag
 #'
 #' @description
 #' Put or replace tags on an existing Amazon S3 Storage Lens configuration.
-#' For more information about S3 Storage Lens, see Working with Amazon S3
-#' Storage Lens in the *Amazon Simple Storage Service Developer Guide*.
+#' For more information about S3 Storage Lens, see <span>Working with
+#' Amazon S3 Storage Lens</span> in the *Amazon Simple Storage Service
+#' Developer Guide*.
 #' 
 #' To use this action, you must have permission to perform the
 #' `s3:PutStorageLensConfigurationTagging` action. For more information,
@@ -3478,18 +3482,18 @@ s3control_put_storage_lens_configuration_tagging <- function(ConfigId, AccountId
 #' @description
 #' Updates an existing S3 Batch Operations job's priority. For more
 #' information, see [S3 Batch
-#' Operations](https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops-basics.html)
-#' in the *Amazon Simple Storage Service Developer Guide*.
+#' Operations](https://docs.aws.amazon.com/AmazonS3/latest/userguide/) in
+#' the *Amazon Simple Storage Service Developer Guide*.
 #' 
 #' Related actions include:
 #' 
-#' -   [`create_job`][s3control_create_job]
+#'   - [`create_job`][s3control_create_job]
 #' 
-#' -   [`list_jobs`][s3control_list_jobs]
+#'   - [`list_jobs`][s3control_list_jobs]
 #' 
-#' -   [`describe_job`][s3control_describe_job]
+#'   - [`describe_job`][s3control_describe_job]
 #' 
-#' -   [`update_job_status`][s3control_update_job_status]
+#'   - [`update_job_status`][s3control_update_job_status]
 #'
 #' @usage
 #' s3control_update_job_priority(AccountId, JobId, Priority)
@@ -3542,18 +3546,18 @@ s3control_update_job_priority <- function(AccountId, JobId, Priority) {
 #' Updates the status for the specified job. Use this operation to confirm
 #' that you want to run a job or to cancel an existing job. For more
 #' information, see [S3 Batch
-#' Operations](https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops-basics.html)
-#' in the *Amazon Simple Storage Service Developer Guide*.
+#' Operations](https://docs.aws.amazon.com/AmazonS3/latest/userguide/) in
+#' the *Amazon Simple Storage Service Developer Guide*.
 #' 
 #' Related actions include:
 #' 
-#' -   [`create_job`][s3control_create_job]
+#'   - [`create_job`][s3control_create_job]
 #' 
-#' -   [`list_jobs`][s3control_list_jobs]
+#'   - [`list_jobs`][s3control_list_jobs]
 #' 
-#' -   [`describe_job`][s3control_describe_job]
+#'   - [`describe_job`][s3control_describe_job]
 #' 
-#' -   [`update_job_status`][s3control_update_job_status]
+#'   - [`update_job_status`][s3control_update_job_status]
 #'
 #' @usage
 #' s3control_update_job_status(AccountId, JobId, RequestedJobStatus,

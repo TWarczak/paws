@@ -23,24 +23,24 @@ NULL
 #' A Detective master account can use the Detective API to do the
 #' following:
 #' 
-#' -   Enable and disable Detective. Enabling Detective creates a new
+#'   - Enable and disable Detective. Enabling Detective creates a new
 #'     behavior graph.
 #' 
-#' -   View the list of member accounts in a behavior graph.
+#'   - View the list of member accounts in a behavior graph.
 #' 
-#' -   Add member accounts to a behavior graph.
+#'   - Add member accounts to a behavior graph.
 #' 
-#' -   Remove member accounts from a behavior graph.
+#'   - Remove member accounts from a behavior graph.
 #' 
 #' A member account can use the Detective API to do the following:
 #' 
-#' -   View the list of behavior graphs that they are invited to.
+#'   - View the list of behavior graphs that they are invited to.
 #' 
-#' -   Accept an invitation to contribute to a behavior graph.
+#'   - Accept an invitation to contribute to a behavior graph.
 #' 
-#' -   Decline an invitation to contribute to a behavior graph.
+#'   - Decline an invitation to contribute to a behavior graph.
 #' 
-#' -   Remove their account from a behavior graph.
+#'   - Remove their account from a behavior graph.
 #' 
 #' All API actions are logged as CloudTrail events. See [Logging Detective
 #' API Calls with
@@ -91,6 +91,12 @@ NULL
 #'  \link[=detective_reject_invitation]{reject_invitation} \tab Rejects an invitation to contribute the account data to a behavior graph\cr
 #'  \link[=detective_start_monitoring_member]{start_monitoring_member} \tab Sends a request to enable data ingest for a member account that has a status of ACCEPTED_BUT_DISABLED
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname detective
 #' @export

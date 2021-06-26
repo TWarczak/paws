@@ -2,18 +2,18 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_update_rule_group}
 \alias{waf_update_rule_group}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_update_rule_group(RuleGroupId, Updates, ChangeToken)
 }
 \arguments{
-\item{RuleGroupId}{[required] The \code{RuleGroupId} of the RuleGroup that you want to update.
+\item{RuleGroupId}{[required] The \code{RuleGroupId} of the <span>RuleGroup</span> that you want to update.
 \code{RuleGroupId} is returned by
 \code{\link[=waf_create_rule_group]{create_rule_group}} and by
 \code{\link[=waf_list_rule_groups]{list_rule_groups}}.}
 
 \item{Updates}{[required] An array of \code{RuleGroupUpdate} objects that you want to insert into or
-delete from a RuleGroup.
+delete from a <span>RuleGroup</span>.
 
 You can only insert \code{REGULAR} rules into a rule group.
 
@@ -42,7 +42,7 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Inserts or deletes ActivatedRule objects in a \code{RuleGroup}.
+Inserts or deletes <span>ActivatedRule</span> objects in a \code{RuleGroup}.
 
 You can only insert \code{REGULAR} rules into a rule group.
 

@@ -242,7 +242,7 @@ cloudwatchevents_create_event_bus <- function(Name, EventSourceName = NULL, Tags
 #' 
 #' Partner event source names follow this format:
 #' 
-#' ` partner_name/event_namespace/event_name `
+#' `  partner_name/event_namespace/event_name  `
 #' 
 #' *partner_name* is determined during partner registration and identifies
 #' the partner to AWS customers. *event_namespace* is determined by the
@@ -256,7 +256,7 @@ cloudwatchevents_create_event_bus <- function(Name, EventSourceName = NULL, Tags
 #' cloudwatchevents_create_partner_event_source(Name, Account)
 #'
 #' @param Name &#91;required&#93; The name of the partner event source. This name must be unique and must
-#' be in the format ` partner_name/event_namespace/event_name `. The AWS
+#' be in the format `  partner_name/event_namespace/event_name  `. The AWS
 #' account that wants to use this partner event source must create a
 #' partner event bus with a name that matches the name of the partner event
 #' source.
@@ -1873,7 +1873,7 @@ cloudwatchevents_put_partner_events <- function(Entries) {
 .cloudwatchevents$operations$put_partner_events <- cloudwatchevents_put_partner_events
 
 #' Running PutPermission permits the specified AWS account or AWS
-#' organization to put events to the specified event bus
+#' organization to put events to the specified _event bus_
 #'
 #' @description
 #' Running [`put_permission`][cloudwatchevents_put_permission] permits the
@@ -1898,7 +1898,7 @@ cloudwatchevents_put_partner_events <- function(Entries) {
 #' organization must specify a `RoleArn` with proper permissions when they
 #' use `PutTarget` to add your account's event bus as a target. For more
 #' information, see [Sending and Receiving Events Between AWS
-#' Accounts](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-cross-account-event-delivery.html)
+#' Accounts](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-cross-account.html)
 #' in the *Amazon EventBridge User Guide*.
 #' 
 #' The permission policy on the default event bus cannot exceed 10 KB in
@@ -2058,7 +2058,7 @@ cloudwatchevents_put_permission <- function(EventBusName = NULL, Action = NULL, 
 #' @param ScheduleExpression The scheduling expression. For example, "cron(0 20 * * ? *)" or
 #' "rate(5 minutes)".
 #' @param EventPattern The event pattern. For more information, see [Events and Event
-#' Patterns](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html)
+#' Patterns](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-events.html)
 #' in the *Amazon EventBridge User Guide*.
 #' @param State Indicates whether the rule is enabled or disabled.
 #' @param Description A description of the rule.
@@ -2125,44 +2125,44 @@ cloudwatchevents_put_rule <- function(Name, ScheduleExpression = NULL, EventPatt
 #' 
 #' You can configure the following as targets for Events:
 #' 
-#' -   EC2 instances
+#'   - EC2 instances
 #' 
-#' -   SSM Run Command
+#'   - SSM Run Command
 #' 
-#' -   SSM Automation
+#'   - SSM Automation
 #' 
-#' -   AWS Lambda functions
+#'   - AWS Lambda functions
 #' 
-#' -   Data streams in Amazon Kinesis Data Streams
+#'   - Data streams in Amazon Kinesis Data Streams
 #' 
-#' -   Data delivery streams in Amazon Kinesis Data Firehose
+#'   - Data delivery streams in Amazon Kinesis Data Firehose
 #' 
-#' -   Amazon ECS tasks
+#'   - Amazon ECS tasks
 #' 
-#' -   AWS Step Functions state machines
+#'   - AWS Step Functions state machines
 #' 
-#' -   AWS Batch jobs
+#'   - AWS Batch jobs
 #' 
-#' -   AWS CodeBuild projects
+#'   - AWS CodeBuild projects
 #' 
-#' -   Pipelines in AWS CodePipeline
+#'   - Pipelines in AWS CodePipeline
 #' 
-#' -   Amazon Inspector assessment templates
+#'   - Amazon Inspector assessment templates
 #' 
-#' -   Amazon SNS topics
+#'   - Amazon SNS topics
 #' 
-#' -   Amazon SQS queues, including FIFO queues
+#'   - Amazon SQS queues, including FIFO queues
 #' 
-#' -   The default event bus of another AWS account
+#'   - The default event bus of another AWS account
 #' 
-#' -   Amazon API Gateway REST APIs
+#'   - Amazon API Gateway REST APIs
 #' 
-#' -   Redshift Clusters to invoke Data API ExecuteStatement on
+#'   - Redshift Clusters to invoke Data API ExecuteStatement on
 #' 
 #' Creating rules with built-in targets is supported only in the AWS
-#' Management Console. The built-in targets are
-#' `EC2 CreateSnapshot API call`, `EC2 RebootInstances API call`,
-#' `EC2 StopInstances API call`, and `EC2 TerminateInstances API call`.
+#' Management Console. The built-in targets are `EC2 CreateSnapshot API
+#' call`, `EC2 RebootInstances API call`, `EC2 StopInstances API call`, and
+#' `EC2 TerminateInstances API call`.
 #' 
 #' For some target types, [`put_targets`][cloudwatchevents_put_targets]
 #' provides target-specific parameters. If the target is a Kinesis data
@@ -2179,7 +2179,7 @@ cloudwatchevents_put_rule <- function(Name, ScheduleExpression = NULL, EventPatt
 #' relies on IAM roles that you specify in the `RoleARN` argument in
 #' [`put_targets`][cloudwatchevents_put_targets]. For more information, see
 #' [Authentication and Access
-#' Control](https://docs.aws.amazon.com/eventbridge/latest/userguide/auth-and-access-control-eventbridge.html)
+#' Control](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-iam.html)
 #' in the *Amazon EventBridge User Guide*.
 #' 
 #' If another AWS account is in the same region and has granted you
@@ -2202,7 +2202,7 @@ cloudwatchevents_put_rule <- function(Name, ScheduleExpression = NULL, EventPatt
 #' instead of directly by the account ID, then you must specify a `RoleArn`
 #' with proper permissions in the `Target` structure. For more information,
 #' see [Sending and Receiving Events Between AWS
-#' Accounts](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-cross-account-event-delivery.html)
+#' Accounts](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-cross-account.html)
 #' in the *Amazon EventBridge User Guide*.
 #' 
 #' For more information about enabling cross-account events, see
@@ -2212,20 +2212,20 @@ cloudwatchevents_put_rule <- function(Name, ScheduleExpression = NULL, EventPatt
 #' exclusive and optional parameters of a target. When a rule is triggered
 #' due to a matched event:
 #' 
-#' -   If none of the following arguments are specified for a target, then
+#'   - If none of the following arguments are specified for a target, then
 #'     the entire event is passed to the target in JSON format (unless the
 #'     target is Amazon EC2 Run Command or Amazon ECS task, in which case
 #'     nothing from the event is passed to the target).
 #' 
-#' -   If **Input** is specified in the form of valid JSON, then the
+#'   - If **Input** is specified in the form of valid JSON, then the
 #'     matched event is overridden with this constant.
 #' 
-#' -   If **InputPath** is specified in the form of JSONPath (for example,
+#'   - If **InputPath** is specified in the form of JSONPath (for example,
 #'     `$.detail`), then only the part of the event specified in the path
 #'     is passed to the target (for example, only the detail part of the
 #'     event is passed).
 #' 
-#' -   If **InputTransformer** is specified, then one or more specified
+#'   - If **InputTransformer** is specified, then one or more specified
 #'     JSONPaths are extracted from the event and used as values in a
 #'     template that you specify as the input to the target.
 #' 
@@ -2670,7 +2670,7 @@ cloudwatchevents_tag_resource <- function(ResourceARN, Tags) {
 #' cloudwatchevents_test_event_pattern(EventPattern, Event)
 #'
 #' @param EventPattern &#91;required&#93; The event pattern. For more information, see [Events and Event
-#' Patterns](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html)
+#' Patterns](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-events.html)
 #' in the *Amazon EventBridge User Guide*.
 #' @param Event &#91;required&#93; The event, in JSON format, to test against the event pattern.
 #'

@@ -8,9 +8,9 @@ specified usage plan}
 apigateway_get_usage_plan_keys(usagePlanId, position, limit, nameQuery)
 }
 \arguments{
-\item{usagePlanId}{[required] [Required] The Id of the UsagePlan resource representing the usage
-plan containing the to-be-retrieved UsagePlanKey resource representing a
-plan customer.}
+\item{usagePlanId}{[required] [Required] The Id of the <span>UsagePlan</span> resource representing
+the usage plan containing the to-be-retrieved <span>UsagePlanKey</span>
+resource representing a plan customer.}
 
 \item{position}{The current pagination position in the paged result set.}
 

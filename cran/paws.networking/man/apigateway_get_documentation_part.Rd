@@ -7,9 +7,11 @@
 apigateway_get_documentation_part(restApiId, documentationPartId)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
-\item{documentationPartId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{documentationPartId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

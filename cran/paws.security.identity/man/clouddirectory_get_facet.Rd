@@ -8,8 +8,8 @@ ObjectType}
 clouddirectory_get_facet(SchemaArn, Name)
 }
 \arguments{
-\item{SchemaArn}{[required] The Amazon Resource Name (ARN) that is associated with the Facet. For
-more information, see arns.}
+\item{SchemaArn}{[required] The Amazon Resource Name (ARN) that is associated with the
+<span>Facet</span>. For more information, see <span>arns</span>.}
 
 \item{Name}{[required] The name of the facet to retrieve.}
 }
@@ -24,9 +24,9 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Gets details of the Facet, such as facet name, attributes, Rules, or
-\code{ObjectType}. You can call this on all kinds of schema facets --
-published, development, or applied.
+Gets details of the <span>Facet</span>, such as facet name, attributes,
+<span>Rule</span>s, or \code{ObjectType}. You can call this on all kinds of
+schema facets -- published, development, or applied.
 }
 \section{Request syntax}{
 \preformatted{svc$get_facet(

@@ -19,13 +19,14 @@ resource types that AWS Config is recording in the region for your
 account.
 
 If the configuration recorder is turned off, AWS Config returns an empty
-list of ResourceCount objects. If the configuration recorder is not
-recording a specific resource type (for example, S3 buckets), that
-resource type is not returned in the list of ResourceCount objects.}
+list of <span>ResourceCount</span> objects. If the configuration
+recorder is not recording a specific resource type (for example, S3
+buckets), that resource type is not returned in the list of
+<span>ResourceCount</span> objects.}
 
-\item{limit}{The maximum number of ResourceCount objects returned on each page. The
-default is 100. You cannot specify a number greater than 100. If you
-specify 0, AWS Config uses the default.}
+\item{limit}{The maximum number of <span>ResourceCount</span> objects returned on
+each page. The default is 100. You cannot specify a number greater than
+100. If you specify 0, AWS Config uses the default.}
 
 \item{nextToken}{The \code{nextToken} string returned on a previous page that you use to get
 the next page of results in a paginated response.}
@@ -65,10 +66,10 @@ action and specify that you want all resource types.
 }
 
 The response is paginated. By default, AWS Config lists 100
-ResourceCount objects on each page. You can customize this number with
-the \code{limit} parameter. The response includes a \code{nextToken} string. To
-get the next page of results, run the request again and specify the
-string for the \code{nextToken} parameter.
+<span>ResourceCount</span> objects on each page. You can customize this
+number with the \code{limit} parameter. The response includes a \code{nextToken}
+string. To get the next page of results, run the request again and
+specify the string for the \code{nextToken} parameter.
 
 If you make a call to the
 \code{\link[=configservice_get_discovered_resource_counts]{get_discovered_resource_counts}}

@@ -2,13 +2,13 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_get_ip_set}
 \alias{waf_get_ip_set}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_get_ip_set(IPSetId)
 }
 \arguments{
-\item{IPSetId}{[required] The \code{IPSetId} of the IPSet that you want to get. \code{IPSetId} is returned
-by \code{\link[=waf_create_ip_set]{create_ip_set}} and by
+\item{IPSetId}{[required] The \code{IPSetId} of the <span>IPSet</span> that you want to get. \code{IPSetId}
+is returned by \code{\link[=waf_create_ip_set]{create_ip_set}} and by
 \code{\link[=waf_list_ip_sets]{list_ip_sets}}.}
 }
 \value{
@@ -36,7 +36,7 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Returns the IPSet that is specified by \code{IPSetId}.
+Returns the <span>IPSet</span> that is specified by \code{IPSetId}.
 }
 \section{Request syntax}{
 \preformatted{svc$get_ip_set(

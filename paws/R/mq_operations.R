@@ -60,7 +60,7 @@ NULL
 #' provisioned. All subsequent broker users are created by making RabbitMQ
 #' API calls directly to brokers or via the RabbitMQ Web Console. This
 #' value can contain only alphanumeric characters, dashes, periods,
-#' underscores, and tildes (- . _ ~). This value must be 2-100 characters
+#' underscores, and tildes (- . _ \~). This value must be 2-100 characters
 #' long.
 #'
 #' @return
@@ -177,7 +177,7 @@ mq_create_broker <- function(AuthenticationStrategy = NULL, AutoMinorVersionUpgr
 #' https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html
 #' @param Name Required. The name of the configuration. This value can contain only
 #' alphanumeric characters, dashes, periods, underscores, and tildes (- .
-#' _ ~). This value must be 1-150 characters long.
+#' _ \~). This value must be 1-150 characters long.
 #' @param Tags Create tags when creating the configuration.
 #'
 #' @return
@@ -290,14 +290,14 @@ mq_create_tags <- function(ResourceArn, Tags = NULL) {
 #' @param ConsoleAccess Enables access to the the ActiveMQ Web Console for the ActiveMQ user.
 #' @param Groups The list of groups (20 maximum) to which the ActiveMQ user belongs. This
 #' value can contain only alphanumeric characters, dashes, periods,
-#' underscores, and tildes (- . _ ~). This value must be 2-100 characters
+#' underscores, and tildes (- . _ \~). This value must be 2-100 characters
 #' long.
 #' @param Password Required. The password of the user. This value must be at least 12
 #' characters long, must contain at least 4 unique characters, and must not
 #' contain commas.
 #' @param Username &#91;required&#93; The username of the ActiveMQ user. This value can contain only
 #' alphanumeric characters, dashes, periods, underscores, and tildes (- .
-#' _ ~). This value must be 2-100 characters long.
+#' _ \~). This value must be 2-100 characters long.
 #'
 #' @return
 #' An empty list.
@@ -435,7 +435,7 @@ mq_delete_tags <- function(ResourceArn, TagKeys) {
 #' @param BrokerId &#91;required&#93; The unique ID that Amazon MQ generates for the broker.
 #' @param Username &#91;required&#93; The username of the ActiveMQ user. This value can contain only
 #' alphanumeric characters, dashes, periods, underscores, and tildes (- .
-#' _ ~). This value must be 2-100 characters long.
+#' _ \~). This value must be 2-100 characters long.
 #'
 #' @return
 #' An empty list.
@@ -890,7 +890,7 @@ mq_describe_configuration_revision <- function(ConfigurationId, ConfigurationRev
 #' @param BrokerId &#91;required&#93; The unique ID that Amazon MQ generates for the broker.
 #' @param Username &#91;required&#93; The username of the ActiveMQ user. This value can contain only
 #' alphanumeric characters, dashes, periods, underscores, and tildes (- .
-#' _ ~). This value must be 2-100 characters long.
+#' _ \~). This value must be 2-100 characters long.
 #'
 #' @return
 #' A list with the following syntax:
@@ -1487,14 +1487,14 @@ mq_update_configuration <- function(ConfigurationId, Data = NULL, Description = 
 #' @param ConsoleAccess Enables access to the the ActiveMQ Web Console for the ActiveMQ user.
 #' @param Groups The list of groups (20 maximum) to which the ActiveMQ user belongs. This
 #' value can contain only alphanumeric characters, dashes, periods,
-#' underscores, and tildes (- . _ ~). This value must be 2-100 characters
+#' underscores, and tildes (- . _ \~). This value must be 2-100 characters
 #' long.
 #' @param Password The password of the user. This value must be at least 12 characters
 #' long, must contain at least 4 unique characters, and must not contain
 #' commas.
 #' @param Username &#91;required&#93; Required. The username of the ActiveMQ user. This value can contain only
 #' alphanumeric characters, dashes, periods, underscores, and tildes (- .
-#' _ ~). This value must be 2-100 characters long.
+#' _ \~). This value must be 2-100 characters long.
 #'
 #' @return
 #' An empty list.

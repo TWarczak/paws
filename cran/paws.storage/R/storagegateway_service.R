@@ -17,27 +17,27 @@ NULL
 #' Use the following links to get started using the *AWS Storage Gateway
 #' Service API Reference*:
 #' 
-#' -   [AWS Storage Gateway required request
+#'   - [AWS Storage Gateway required request
 #'     headers](https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewayHTTPRequestsHeaders):
 #'     Describes the required headers that you must send with every POST
 #'     request to AWS Storage Gateway.
 #' 
-#' -   [Signing
+#'   - [Signing
 #'     requests](https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewaySigningRequests):
 #'     AWS Storage Gateway requires that you authenticate every request you
 #'     send; this topic describes how sign such a request.
 #' 
-#' -   [Error
+#'   - [Error
 #'     responses](https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#APIErrorResponses):
 #'     Provides reference information about AWS Storage Gateway errors.
 #' 
-#' -   [Operations in AWS Storage
+#'   - [Operations in AWS Storage
 #'     Gateway](https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_Operations.html):
 #'     Contains detailed descriptions of all AWS Storage Gateway
 #'     operations, their request parameters, response elements, possible
 #'     errors, and examples of requests and responses.
 #' 
-#' -   [AWS Storage Gateway endpoints and
+#'   - [AWS Storage Gateway endpoints and
 #'     quotas](https://docs.aws.amazon.com/general/latest/gr/sg.html):
 #'     Provides a list of each AWS Region and the endpoints available for
 #'     use with AWS Storage Gateway.
@@ -67,8 +67,8 @@ NULL
 #' `snap-78e226633445566ee`.
 #' 
 #' For more information, see [Announcement: Heads-up – Longer AWS Storage
-#' Gateway volume and snapshot IDs coming in
-#' 2016](https://forums.aws.amazon.com:443/ann.jspa?annID=3557).
+#' Gateway volume and snapshot IDs coming
+#' in 2016](https://forums.aws.amazon.com:443/ann.jspa?annID=3557).
 #'
 #' @param
 #' config
@@ -195,6 +195,12 @@ NULL
 #'  \link[=storagegateway_update_vtl_device_type]{update_vtl_device_type} \tab Updates the type of medium changer in a tape gateway
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname storagegateway
 #' @export
 storagegateway <- function(config = list()) {
@@ -213,7 +219,7 @@ storagegateway <- function(config = list()) {
   endpoints = list("*" = list(endpoint = "storagegateway.{region}.amazonaws.com", global = FALSE), "cn-*" = list(endpoint = "storagegateway.{region}.amazonaws.com.cn", global = FALSE), "us-iso-*" = list(endpoint = "storagegateway.{region}.c2s.ic.gov", global = FALSE), "us-isob-*" = list(endpoint = "storagegateway.{region}.sc2s.sgov.gov", global = FALSE)),
   service_id = "Storage Gateway",
   api_version = "2013-06-30",
-  signing_name = NULL,
+  signing_name = "storagegateway",
   json_version = "1.1",
   target_prefix = "StorageGateway_20130630"
 )

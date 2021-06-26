@@ -7,7 +7,7 @@
 apigateway_generate_client_certificate(description, tags)
 }
 \arguments{
-\item{description}{The description of the ClientCertificate.}
+\item{description}{The description of the <span>ClientCertificate</span>.}
 
 \item{tags}{The key-value map of strings. The valid character set is
 [a-zA-Z+-=._:/]. The tag key can be up to 128 characters and must not
@@ -31,7 +31,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Generates a ClientCertificate resource.
+Generates a <span>ClientCertificate</span> resource.
 }
 \section{Request syntax}{
 \preformatted{svc$generate_client_certificate(

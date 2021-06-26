@@ -31,9 +31,9 @@ sessions that are running on instances in the fleet use connections that
 fall in this range.
 
 To get a fleet's inbound connection permissions, specify the fleet's
-unique identifier. If successful, a collection of IpPermission objects
-is returned for the requested fleet ID. If the requested fleet has been
-deleted, the result set is empty.
+unique identifier. If successful, a collection of
+<span>IpPermission</span> objects is returned for the requested fleet
+ID. If the requested fleet has been deleted, the result set is empty.
 
 \strong{Learn more}
 

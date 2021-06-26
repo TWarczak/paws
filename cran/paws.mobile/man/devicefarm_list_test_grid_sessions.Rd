@@ -9,7 +9,7 @@ devicefarm_list_test_grid_sessions(projectArn, status,
   maxResult, nextToken)
 }
 \arguments{
-\item{projectArn}{[required] ARN of a TestGridProject.}
+\item{projectArn}{[required] ARN of a <span>TestGridProject</span>.}
 
 \item{status}{Return only sessions in this state.}
 
@@ -46,7 +46,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Retrieves a list of sessions for a TestGridProject.
+Retrieves a list of sessions for a <span>TestGridProject</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$list_test_grid_sessions(

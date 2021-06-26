@@ -52,9 +52,9 @@ the root user (UID 0). It is considered best practice to use a non-root
 user.
 
 If the network mode is \code{awsvpc}, the task is allocated an elastic
-network interface, and you must specify a NetworkConfiguration value
-when you create a service or run a task with the task definition. For
-more information, see \href{https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html}{Task Networking}
+network interface, and you must specify a
+<span>NetworkConfiguration</span> value when you create a service or run
+a task with the task definition. For more information, see \href{https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html}{Task Networking}
 in the \emph{Amazon Elastic Container Service Developer Guide}.
 
 Currently, only Amazon ECS-optimized AMIs, other Amazon Linux variants
@@ -510,8 +510,8 @@ definition with the \code{networkMode} parameter. The available network modes
 correspond to those described in \href{https://docs.docker.com/engine/reference/run/#/network-settings}{Network settings}
 in the Docker run reference. If you specify the \code{awsvpc} network mode,
 the task is allocated an elastic network interface, and you must specify
-a NetworkConfiguration when you create a service or run a task with the
-task definition. For more information, see \href{https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html}{Task Networking}
+a <span>NetworkConfiguration</span> when you create a service or run a
+task with the task definition. For more information, see \href{https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html}{Task Networking}
 in the \emph{Amazon Elastic Container Service Developer Guide}.
 }
 \section{Request syntax}{

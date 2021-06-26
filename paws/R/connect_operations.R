@@ -2245,7 +2245,8 @@ connect_get_contact_attributes <- function(InstanceId, InitialContactId) {
 #' When you use groupings, Unit says SECONDS but the Value is returned in
 #' MILLISECONDS. For example, if you get a response like this:
 #' 
-#' `\{ "Metric": \{ "Name": "OLDEST_CONTACT_AGE", "Unit": "SECONDS" \}, "Value": 24113.0 `\}
+#' ` \{ "Metric": \{ "Name": "OLDEST_CONTACT_AGE", "Unit": "SECONDS" \},
+#' "Value": 24113.0  `\}
 #' 
 #' The actual OLDEST_CONTACT_AGE is 24 seconds.
 #' 
@@ -4149,10 +4150,10 @@ connect_resume_contact_recording <- function(InstanceId, ContactId, InitialConta
 #' 
 #' A 429 error occurs in two situations:
 #' 
-#' -   API rate limit is exceeded. API TPS throttling returns a
+#'   - API rate limit is exceeded. API TPS throttling returns a
 #'     `TooManyRequests` exception from the API Gateway.
 #' 
-#' -   The [quota for concurrent active
+#'   - The [quota for concurrent active
 #'     chats](https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html)
 #'     is exceeded. Active chat throttling returns a
 #'     `LimitExceededException`.

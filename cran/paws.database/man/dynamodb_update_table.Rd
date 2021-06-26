@@ -59,7 +59,8 @@ a table that doesn't have a stream.}
 \item{ReplicaUpdates}{A list of replica update actions (create, delete, or update) for the
 table.
 
-This property only applies to \href{https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html}{Version 2019.11.21}
+This property only applies to
+\href{https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html}{Version 2019.11.21}
 of global tables.}
 }
 \value{

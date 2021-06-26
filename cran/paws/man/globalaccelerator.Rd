@@ -9,6 +9,12 @@ globalaccelerator(config = list())
 \arguments{
 \item{config}{Optional configuration of credentials, endpoint, and/or region.}
 }
+\value{
+A client for the service. You can call the service's operations using
+syntax like \code{svc$operation(...)}, where \code{svc} is the name you've assigned
+to the client. The available operations are listed in the
+Operations section.
+}
 \description{
 This is the \emph{AWS Global Accelerator API Reference}. This guide is for
 developers who need detailed information about AWS Global Accelerator
@@ -65,7 +71,7 @@ reacts instantly to changes in health or configuration to ensure that
 internet traffic from clients is always directed to healthy endpoints.
 
 For a list of the AWS Regions where Global Accelerator and other
-services are currently supported, see the AWS Region Table.
+services are currently supported, see the <span>AWS Region Table</span>.
 
 AWS Global Accelerator includes the following components:
 \subsection{Static IP addresses}{

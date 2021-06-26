@@ -21,7 +21,7 @@ Transcribe Medical.}
 your custom vocabulary. The URI must be in the same AWS Region as the
 resource that you are calling. The following is the format for a URI:
 
-\verb{https://s3.<aws-region>.amazonaws.com/<bucket-name>/<keyprefix>/<objectkey>}
+\verb{ https://s3.<aws-region>.amazonaws.com/<bucket-name>/<keyprefix>/<objectkey>}
 
 For example:
 

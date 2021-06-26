@@ -89,19 +89,19 @@ month by 24:00 UTC.
 \item \strong{disbursed_amount_by_product_with_uncollected_funds}
 
 This data set is deprecated. Download related reports from AMMP
-instead!
+instead\!
 \item \strong{customer_profile_by_industry}
 
 This data set is deprecated. Download related reports from AMMP
-instead!
+instead\!
 \item \strong{customer_profile_by_revenue}
 
 This data set is deprecated. Download related reports from AMMP
-instead!
+instead\!
 \item \strong{customer_profile_by_geography}
 
 This data set is deprecated. Download related reports from AMMP
-instead!
+instead\!
 }}
 
 \item{dataSetPublicationDate}{[required] The date a data set was published. For daily data sets, provide a date

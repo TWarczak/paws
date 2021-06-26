@@ -15,8 +15,8 @@ retrieve match results.}
 
 \item{ConfigurationName}{[required] Name of the matchmaker to use for this request. You can use either the
 configuration name or ARN value. The ARN of the matchmaker that was used
-with the original game session is listed in the GameSession object,
-\code{MatchmakerData} property.}
+with the original game session is listed in the <span>GameSession</span>
+object, \code{MatchmakerData} property.}
 
 \item{GameSessionArn}{Amazon Resource Name
 (\href{https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html}{ARN})
@@ -28,10 +28,10 @@ session. This information is used by the matchmaker to find new players
 and add them to the existing game.
 \itemize{
 \item PlayerID, PlayerAttributes, Team -\\\\- This information is
-maintained in the GameSession object, \code{MatchmakerData} property, for
-all players who are currently assigned to the game session. The
-matchmaker data is in JSON syntax, formatted as a string. For more
-details, see \href{https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-server.html#match-server-data}{Match Data}.
+maintained in the <span>GameSession</span> object, \code{MatchmakerData}
+property, for all players who are currently assigned to the game
+session. The matchmaker data is in JSON syntax, formatted as a
+string. For more details, see \href{https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-server.html#match-server-data}{Match Data}.
 \item LatencyInMs -\\\\- If the matchmaker uses player latency, include a
 latency value, in milliseconds, for the Region that the game session
 is currently in. Do not include latency values for any other Region.
@@ -112,9 +112,9 @@ tickets together to form potential matches, allowing only one backfill
 ticket per potential match. Once the a match is formed, the matchmaker
 creates player sessions for the new players. All tickets in the match
 are updated with the game session's connection information, and the
-GameSession object is updated to include matchmaker data on the new
-players. For more detail on how match backfill requests are processed,
-see \href{https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/gamelift-match.html}{How Amazon GameLift FlexMatch Works}.
+<span>GameSession</span> object is updated to include matchmaker data on
+the new players. For more detail on how match backfill requests are
+processed, see \href{https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/gamelift-match.html}{How Amazon GameLift FlexMatch Works}.
 
 \strong{Learn more}
 

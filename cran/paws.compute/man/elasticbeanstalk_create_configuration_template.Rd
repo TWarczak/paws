@@ -18,12 +18,10 @@ configuration template.}
 Constraint: This name must be unique per application.}
 
 \item{SolutionStackName}{The name of an Elastic Beanstalk solution stack (platform version) that
-this configuration uses. For example,
-\verb{64bit Amazon Linux 2013.09 running Tomcat 7 Java 7}. A solution stack
-specifies the operating system, runtime, and application server for a
-configuration template. It also determines the set of configuration
-options as well as the possible and default values. For more
-information, see \href{https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html}{Supported Platforms}
+this configuration uses. For example, \verb{64bit Amazon Linux 2013.09 running Tomcat 7 Java 7}. A solution stack specifies the operating
+system, runtime, and application server for a configuration template. It
+also determines the set of configuration options as well as the possible
+and default values. For more information, see \href{https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html}{Supported Platforms}
 in the \emph{AWS Elastic Beanstalk Developer Guide}.
 
 You must specify \code{SolutionStackName} if you don't specify \code{PlatformArn},

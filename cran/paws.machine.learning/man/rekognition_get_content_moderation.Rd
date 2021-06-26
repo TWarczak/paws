@@ -77,7 +77,8 @@ Rekognition Devlopers Guide.
 
 \code{\link[=rekognition_get_content_moderation]{get_content_moderation}} returns
 detected unsafe content labels, and the time they are detected, in an
-array, \code{ModerationLabels}, of ContentModerationDetection objects.
+array, \code{ModerationLabels}, of <span>ContentModerationDetection</span>
+objects.
 
 By default, the moderated labels are returned sorted by time, in
 milliseconds from the start of the video. You can also sort them by

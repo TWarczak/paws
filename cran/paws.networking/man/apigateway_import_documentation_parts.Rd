@@ -8,11 +8,13 @@ apigateway_import_documentation_parts(restApiId, mode, failOnWarnings,
   body)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
 \item{mode}{A query parameter to indicate whether to overwrite (\code{OVERWRITE}) any
-existing DocumentationParts definition or to merge (\code{MERGE}) the new
-definition into the existing one. The default value is \code{MERGE}.}
+existing <span>DocumentationParts</span> definition or to merge
+(\code{MERGE}) the new definition into the existing one. The default value is
+\code{MERGE}.}
 
 \item{failOnWarnings}{A query parameter to specify whether to rollback the documentation
 importation (\code{true}) or not (\code{false}) when a warning is encountered. The

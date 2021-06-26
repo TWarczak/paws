@@ -8,8 +8,8 @@ apigateway_update_client_certificate(clientCertificateId,
   patchOperations)
 }
 \arguments{
-\item{clientCertificateId}{[required] [Required] The identifier of the ClientCertificate resource to be
-updated.}
+\item{clientCertificateId}{[required] [Required] The identifier of the <span>ClientCertificate</span>
+resource to be updated.}
 
 \item{patchOperations}{A list of update operations to be applied to the specified resource and
 in the order specified in this list.}
@@ -32,7 +32,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Changes information about an ClientCertificate resource.
+Changes information about an <span>ClientCertificate</span> resource.
 }
 \section{Request syntax}{
 \preformatted{svc$update_client_certificate(

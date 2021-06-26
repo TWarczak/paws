@@ -8,21 +8,30 @@ clouddirectory_create_facet(SchemaArn, Name, Attributes, ObjectType,
   FacetStyle)
 }
 \arguments{
-\item{SchemaArn}{[required] The schema ARN in which the new Facet will be created. For more
-information, see arns.}
+\item{SchemaArn}{[required] The schema ARN in which the new <span>Facet</span> will be created. For
+more information, see <span>arns</span>.}
 
-\item{Name}{[required] The name of the Facet, which is unique for a given schema.}
+\item{Name}{[required] The name of the <span>Facet</span>, which is unique for a given schema.}
 
-\item{Attributes}{The attributes that are associated with the Facet.}
+\item{Attributes}{The attributes that are associated with the <span>Facet</span>.}
 
 \item{ObjectType}{Specifies whether a given object created from this facet is of type
 node, leaf node, policy or index.
 \itemize{
 \item Node: Can have multiple children but one parent.
+}<!-- end list -->
+
+\itemize{
 \item Leaf node: Cannot have children but can have multiple parents.
+}<!-- end list -->
+
+\itemize{
 \item Policy: Allows you to store a policy document and policy type. For
 more information, see
 \href{https://docs.aws.amazon.com/clouddirectory/latest/developerguide/key_concepts_directory.html#key_concepts_policies}{Policies}.
+}<!-- end list -->
+
+\itemize{
 \item Index: Can be created with the Index API.
 }}
 
@@ -35,8 +44,8 @@ during data plane operations.}
 An empty list.
 }
 \description{
-Creates a new Facet in a schema. Facet creation is allowed only in
-development or applied schemas.
+Creates a new <span>Facet</span> in a schema. Facet creation is allowed
+only in development or applied schemas.
 }
 \section{Request syntax}{
 \preformatted{svc$create_facet(

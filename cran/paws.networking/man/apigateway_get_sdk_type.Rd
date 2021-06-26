@@ -7,7 +7,8 @@
 apigateway_get_sdk_type(id)
 }
 \arguments{
-\item{id}{[required] [Required] The identifier of the queried SdkType instance.}
+\item{id}{[required] [Required] The identifier of the queried <span>SdkType</span>
+instance.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

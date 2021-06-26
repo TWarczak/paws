@@ -20,7 +20,7 @@ NULL
 #' 
 #' Minimum length=1. Maximum length=127.
 #' 
-#' Pattern "^\[a-z0-9\]((\[a-z0-9\]|-(?!-))*\[a-z0-9\])?$";
+#' Pattern "^\[a-z0-9\]((\[a-z0-9\]|-(?\!-))*\[a-z0-9\])?$";
 #' @param Description &#91;required&#93; The description of the application.
 #' 
 #' Minimum length=1. Maximum length=256
@@ -33,7 +33,7 @@ NULL
 #' Pattern: "^\[a-zA-Z0-9+\\\\-_:\\\\/@@\]+$";
 #' @param LicenseBody A local text file that contains the license of the app that matches the
 #' spdxLicenseID value of your application. The file has the format
-#' file://&lt;path&gt;/&lt;filename&gt;.
+#' file://\<path\>/\<filename\>.
 #' 
 #' Maximum size 5 MB
 #' 
@@ -53,7 +53,7 @@ NULL
 #' Pattern: "\[a-zA-Z0-9\\\\-\]+";
 #' @param ReadmeBody A local text readme file in Markdown language that contains a more
 #' detailed description of the application and how it works. The file has
-#' the format file://&lt;path&gt;/&lt;filename&gt;.
+#' the format file://\<path\>/\<filename\>.
 #' 
 #' Maximum size 5 MB
 #' 
@@ -77,7 +77,7 @@ NULL
 #' for example the URL of a specific GitHub commit.
 #' @param SpdxLicenseId A valid identifier from <https://spdx.org/licenses/>.
 #' @param TemplateBody The local raw packaged AWS SAM template file of your application. The
-#' file has the format file://&lt;path&gt;/&lt;filename&gt;.
+#' file has the format file://\<path\>/\<filename\>.
 #' 
 #' You can specify only one of templateBody and templateUrl; otherwise an
 #' error results.
@@ -1060,7 +1060,7 @@ serverlessapplicationrepository_unshare_application <- function(ApplicationId, O
 #' 
 #' Minimum length=1. Maximum length=127.
 #' 
-#' Pattern "^\[a-z0-9\]((\[a-z0-9\]|-(?!-))*\[a-z0-9\])?$";
+#' Pattern "^\[a-z0-9\]((\[a-z0-9\]|-(?\!-))*\[a-z0-9\])?$";
 #' @param Description The description of the application.
 #' 
 #' Minimum length=1. Maximum length=256

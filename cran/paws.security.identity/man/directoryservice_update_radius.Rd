@@ -11,8 +11,8 @@ directoryservice_update_radius(DirectoryId, RadiusSettings)
 \item{DirectoryId}{[required] The identifier of the directory for which to update the RADIUS server
 information.}
 
-\item{RadiusSettings}{[required] A RadiusSettings object that contains information about the RADIUS
-server.}
+\item{RadiusSettings}{[required] A <span>RadiusSettings</span> object that contains information about the
+RADIUS server.}
 }
 \value{
 An empty list.

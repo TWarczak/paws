@@ -8,7 +8,7 @@ URL that can be called}
 apigateway_get_domain_name(domainName)
 }
 \arguments{
-\item{domainName}{[required] [Required] The name of the DomainName resource.}
+\item{domainName}{[required] [Required] The name of the <span>DomainName</span> resource.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

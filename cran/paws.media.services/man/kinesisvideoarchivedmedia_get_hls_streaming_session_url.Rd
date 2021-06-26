@@ -75,10 +75,10 @@ The default is \code{LIVE}.}
 timestamps.
 
 This parameter is required if \code{PlaybackMode} is \code{ON_DEMAND} or
-\code{LIVE_REPLAY}. This parameter is optional if PlaybackMode is`` \code{LIVE}.
-If `PlaybackMode` is `LIVE`, the `FragmentSelectorType` can be set, but
-the `TimestampRange` should not be set. If `PlaybackMode` is `ON_DEMAND`
-or `LIVE_REPLAY`, both `FragmentSelectorType` and `TimestampRange` must
+\code{LIVE_REPLAY}. This parameter is optional if PlaybackMode is\verb{} \code{LIVE}.
+If \code{PlaybackMode} is \code{LIVE}, the \code{FragmentSelectorType} can be set, but
+the \code{TimestampRange} should not be set. If \code{PlaybackMode} is \code{ON_DEMAND}
+or \code{LIVE_REPLAY}, both \code{FragmentSelectorType} and \code{TimestampRange} must
 be set.}
 
 \item{ContainerFormat}{Specifies which format should be used for packaging the media.
@@ -97,14 +97,15 @@ to the media playlists.
 
 Media players typically build a timeline of media content to play, based
 on the timestamps of each fragment. This means that if there is any
-overlap or gap between fragments (as is typical if HLSFragmentSelector
-is set to \code{SERVER_TIMESTAMP}), the media player timeline will also have
-small gaps between fragments in some places, and will overwrite frames
-in other places. Gaps in the media player timeline can cause playback to
-stall and overlaps can cause playback to be jittery. When there are
-discontinuity flags between fragments, the media player is expected to
-reset the timeline, resulting in the next fragment being played
-immediately after the previous fragment.
+overlap or gap between fragments (as is typical if
+<span>HLSFragmentSelector</span> is set to \code{SERVER_TIMESTAMP}), the
+media player timeline will also have small gaps between fragments in
+some places, and will overwrite frames in other places. Gaps in the
+media player timeline can cause playback to stall and overlaps can cause
+playback to be jittery. When there are discontinuity flags between
+fragments, the media player is expected to reset the timeline, resulting
+in the next fragment being played immediately after the previous
+fragment.
 
 The following modes are supported:
 \itemize{
@@ -122,7 +123,7 @@ when there is a significant issue with the media timeline (e.g. a
 missing fragment).
 }
 
-The default is \code{ALWAYS} when HLSFragmentSelector is set to
+The default is \code{ALWAYS} when <span>HLSFragmentSelector</span> is set to
 \code{SERVER_TIMESTAMP}, and \code{NEVER} when it is set to \code{PRODUCER_TIMESTAMP}.}
 
 \item{DisplayFragmentTimestamp}{Specifies when the fragment start timestamps should be included in the
@@ -134,10 +135,11 @@ as an absolute time based on the fragment timestamps. This can be useful
 for creating a playback experience that shows viewers the wall-clock
 time of the media.
 
-The default is \code{NEVER}. When HLSFragmentSelector is \code{SERVER_TIMESTAMP},
-the timestamps will be the server start timestamps. Similarly, when
-HLSFragmentSelector is \code{PRODUCER_TIMESTAMP}, the timestamps will be the
-producer start timestamps.}
+The default is \code{NEVER}. When <span>HLSFragmentSelector</span> is
+\code{SERVER_TIMESTAMP}, the timestamps will be the server start timestamps.
+Similarly, when <span>HLSFragmentSelector</span> is
+\code{PRODUCER_TIMESTAMP}, the timestamps will be the producer start
+timestamps.}
 
 \item{Expires}{The time in seconds until the requested session expires. This value can
 be between 300 (5 minutes) and 43200 (12 hours).
@@ -193,8 +195,8 @@ Optionally, the codec ID of track 2 should be \code{A_AAC}.
 \item Data retention must be greater than 0.
 \item The video track of each fragment must contain codec private data in
 the Advanced Video Coding (AVC) for H.264 format or HEVC for H.265
-format (\href{https://www.iso.org/standard/55980.html}{MPEG-4 specification ISO/IEC 14496-15}). For information
-about adapting stream data to a given format, see \href{https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/producer-reference-nal.html}{NAL Adaptation Flags}.
+format (\href{https://www.iso.org/standard/55980.html}{MPEG-4 specification ISO/IEC 14496-15}). For
+information about adapting stream data to a given format, see \href{https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/producer-reference-nal.html}{NAL Adaptation Flags}.
 \item The audio track (if present) of each fragment must contain codec
 private data in the AAC format (\href{https://www.iso.org/standard/43345.html}{AAC specification ISO/IEC 13818-7}).
 }
@@ -202,7 +204,7 @@ private data in the AAC format (\href{https://www.iso.org/standard/43345.html}{A
 Kinesis Video Streams HLS sessions contain fragments in the fragmented
 MPEG-4 form (also called fMP4 or CMAF) or the MPEG-2 form (also called
 TS chunks, which the HLS specification also supports). For more
-information about HLS fragment types, see the \href{https://tools.ietf.org/html/draft-pantos-http-live-streaming-23}{HLS specification}.
+information about HLS fragment types, see the \href{https://datatracker.ietf.org/doc/html/draft-pantos-http-live-streaming-23}{HLS specification}.
 
 The following procedure shows how to use HLS with Kinesis Video Streams:
 \enumerate{

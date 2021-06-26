@@ -11,7 +11,7 @@ emr_add_job_flow_steps(JobFlowId, Steps)
 returned by \code{\link[=emr_run_job_flow]{run_job_flow}} and can also be obtained
 from \code{\link[=emr_list_clusters]{list_clusters}}.}
 
-\item{Steps}{[required] A list of StepConfig to be executed by the job flow.}
+\item{Steps}{[required] A list of <span>StepConfig</span> to be executed by the job flow.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

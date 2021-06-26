@@ -21,8 +21,7 @@ permissions to change this bucket policy in the future.}
 \item{Policy}{[required] The bucket policy as a JSON document.}
 
 \item{ExpectedBucketOwner}{The account id of the expected bucket owner. If the bucket is owned by a
-different account, the request will fail with an HTTP
-\verb{403 (Access Denied)} error.}
+different account, the request will fail with an HTTP \verb{403 (Access Denied)} error.}
 }
 \value{
 An empty list.
@@ -38,8 +37,7 @@ operation.
 If you don't have \code{\link[=s3_put_bucket_policy]{put_bucket_policy}}
 permissions, Amazon S3 returns a \verb{403 Access Denied} error. If you have
 the correct permissions, but you're not using an identity that belongs
-to the bucket owner's account, Amazon S3 returns a
-\verb{405 Method Not Allowed} error.
+to the bucket owner's account, Amazon S3 returns a \verb{405 Method Not Allowed} error.
 
 As a security precaution, the root user of the AWS account that owns a
 bucket can always use this operation, even if the policy explicitly

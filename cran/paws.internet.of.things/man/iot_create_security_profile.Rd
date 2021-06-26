@@ -20,7 +20,8 @@ an alert.}
 sent to the console.) Alerts are generated when a device (thing)
 violates a behavior.}
 
-\item{additionalMetricsToRetain}{\emph{Please use CreateSecurityProfileRequest$additionalMetricsToRetainV2
+\item{additionalMetricsToRetain}{\emph{Please use
+<span>CreateSecurityProfileRequest$additionalMetricsToRetainV2</span>
 instead.}
 
 A list of metrics whose data is retained (stored). By default, data is

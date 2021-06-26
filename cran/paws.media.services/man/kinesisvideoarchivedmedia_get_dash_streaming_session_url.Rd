@@ -82,10 +82,11 @@ manifest file may be inaccurate. If DisplayFragmentTimestamp is set to
 the manifest file with the attribute name “kvs:ts”. A custom MPEG-DASH
 media player is necessary to leverage this custom attribute.
 
-The default value is \code{NEVER}. When DASHFragmentSelector is
+The default value is \code{NEVER}. When <span>DASHFragmentSelector</span> is
 \code{SERVER_TIMESTAMP}, the timestamps will be the server start timestamps.
-Similarly, when DASHFragmentSelector is \code{PRODUCER_TIMESTAMP}, the
-timestamps will be the producer start timestamps.}
+Similarly, when <span>DASHFragmentSelector</span> is
+\code{PRODUCER_TIMESTAMP}, the timestamps will be the producer start
+timestamps.}
 
 \item{DisplayFragmentNumber}{Fragments are identified in the manifest file based on their sequence
 number in the session. If DisplayFragmentNumber is set to \code{ALWAYS}, the
@@ -102,10 +103,10 @@ The default value is \code{NEVER}.}
 timestamps.
 
 This parameter is required if \code{PlaybackMode} is \code{ON_DEMAND} or
-\code{LIVE_REPLAY}. This parameter is optional if PlaybackMode is`` \code{LIVE}.
-If `PlaybackMode` is `LIVE`, the `FragmentSelectorType` can be set, but
-the `TimestampRange` should not be set. If `PlaybackMode` is `ON_DEMAND`
-or `LIVE_REPLAY`, both `FragmentSelectorType` and `TimestampRange` must
+\code{LIVE_REPLAY}. This parameter is optional if PlaybackMode is\verb{} \code{LIVE}.
+If \code{PlaybackMode} is \code{LIVE}, the \code{FragmentSelectorType} can be set, but
+the \code{TimestampRange} should not be set. If \code{PlaybackMode} is \code{ON_DEMAND}
+or \code{LIVE_REPLAY}, both \code{FragmentSelectorType} and \code{TimestampRange} must
 be set.}
 
 \item{Expires}{The time in seconds until the requested session expires. This value can
@@ -164,10 +165,11 @@ AAC) or A_MS/ACM (for G.711).
 \item Data retention must be greater than 0.
 \item The video track of each fragment must contain codec private data in
 the Advanced Video Coding (AVC) for H.264 format and HEVC for H.265
-format. For more information, see \href{https://www.iso.org/standard/55980.html}{MPEG-4 specification ISO/IEC 14496-15}. For information
-about adapting stream data to a given format, see \href{https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/producer-reference-nal.html}{NAL Adaptation Flags}.
+format. For more information, see \href{https://www.iso.org/standard/55980.html}{MPEG-4 specification ISO/IEC 14496-15}. For
+information about adapting stream data to a given format, see \href{https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/producer-reference-nal.html}{NAL Adaptation Flags}.
 \item The audio track (if present) of each fragment must contain codec
-private data in the AAC format (\href{https://www.iso.org/standard/43345.html}{AAC specification ISO/IEC 13818-7}) or the \href{http://www-mmsp.ece.mcgill.ca/Documents/AudioFormats/WAVE/WAVE.html}{MS Wave format}.
+private data in the AAC format (\href{https://www.iso.org/standard/43345.html}{AAC specification ISO/IEC 13818-7}) or the
+\href{http://www-mmsp.ece.mcgill.ca/Documents/AudioFormats/WAVE/WAVE.html}{MS Wave format}.
 }
 
 The following procedure shows how to use MPEG-DASH with Kinesis Video

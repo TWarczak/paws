@@ -34,14 +34,14 @@ NULL
 #' system. The alias name has to comply with the following formatting
 #' requirements:
 #' 
-#' -   Formatted as a fully-qualified domain name (FQDN),
+#'   - Formatted as a fully-qualified domain name (FQDN),
 #'     *`hostname.domain`* , for example, `accounting.corp.example.com`.
 #' 
-#' -   Can contain alphanumeric characters and the hyphen (-).
+#'   - Can contain alphanumeric characters and the hyphen (-).
 #' 
-#' -   Cannot start or end with a hyphen.
+#'   - Cannot start or end with a hyphen.
 #' 
-#' -   Can start with a numeric.
+#'   - Can start with a numeric.
 #' 
 #' For DNS alias names, Amazon FSx stores alphabetic characters as
 #' lowercase letters (a-z), regardless of how you specify them: as
@@ -100,12 +100,12 @@ fsx_associate_file_system_aliases <- function(ClientRequestToken = NULL, FileSys
 #' task is in either the `PENDING` or `EXECUTING` state. When you cancel a
 #' task, Amazon FSx does the following.
 #' 
-#' -   Any files that FSx has already exported are not reverted.
+#'   - Any files that FSx has already exported are not reverted.
 #' 
-#' -   FSx continues to export any files that are "in-flight" when the
+#'   - FSx continues to export any files that are "in-flight" when the
 #'     cancel operation is received.
 #' 
-#' -   FSx does not export any files that have not yet been exported.
+#'   - FSx does not export any files that have not yet been exported.
 #'
 #' @usage
 #' fsx_cancel_data_repository_task(TaskId)
@@ -159,9 +159,9 @@ fsx_cancel_data_repository_task <- function(TaskId) {
 #' For Amazon FSx for Lustre file systems, you can create a backup only for
 #' file systems with the following configuration:
 #' 
-#' -   a Persistent deployment type
+#'   - a Persistent deployment type
 #' 
-#' -   is *not* linked to a data respository.
+#'   - is *not* linked to a data respository.
 #' 
 #' For more information about backing up Amazon FSx for Lustre file
 #' systems, see [Working with FSx for Lustre
@@ -179,10 +179,10 @@ fsx_cancel_data_repository_task <- function(TaskId) {
 #' request token doesn't exist, [`create_backup`][fsx_create_backup] does
 #' the following:
 #' 
-#' -   Creates a new Amazon FSx backup with an assigned ID, and an initial
+#'   - Creates a new Amazon FSx backup with an assigned ID, and an initial
 #'     lifecycle state of `CREATING`.
 #' 
-#' -   Returns the description of the backup.
+#'   - Returns the description of the backup.
 #' 
 #' By using the idempotent operation, you can retry a
 #' [`create_backup`][fsx_create_backup] operation without the risk of
@@ -530,10 +530,10 @@ fsx_create_data_repository_task <- function(Type, Paths = NULL, FileSystemId, Re
 #' specified client request token doesn't exist,
 #' [`create_file_system`][fsx_create_file_system] does the following:
 #' 
-#' -   Creates a new, empty Amazon FSx file system with an assigned ID, and
+#'   - Creates a new, empty Amazon FSx file system with an assigned ID, and
 #'     an initial lifecycle state of `CREATING`.
 #' 
-#' -   Returns the description of the file system.
+#'   - Returns the description of the file system.
 #' 
 #' This operation requires a client request token in the request that
 #' Amazon FSx uses to ensure idempotent creation. This means that calling
@@ -567,29 +567,29 @@ fsx_create_data_repository_task <- function(Type, Paths = NULL, FileSystemId, Re
 #' 
 #' For Lustre file systems:
 #' 
-#' -   For `SCRATCH_2` and `PERSISTENT_1 SSD` deployment types, valid
+#'   - For `SCRATCH_2` and `PERSISTENT_1 SSD` deployment types, valid
 #'     values are 1200 GiB, 2400 GiB, and increments of 2400 GiB.
 #' 
-#' -   For `PERSISTENT HDD` file systems, valid values are increments of
+#'   - For `PERSISTENT HDD` file systems, valid values are increments of
 #'     6000 GiB for 12 MB/s/TiB file systems and increments of 1800 GiB for
 #'     40 MB/s/TiB file systems.
 #' 
-#' -   For `SCRATCH_1` deployment type, valid values are 1200 GiB, 2400
+#'   - For `SCRATCH_1` deployment type, valid values are 1200 GiB, 2400
 #'     GiB, and increments of 3600 GiB.
 #' 
 #' For Windows file systems:
 #' 
-#' -   If `StorageType=SSD`, valid values are 32 GiB - 65,536 GiB (64 TiB).
+#'   - If `StorageType=SSD`, valid values are 32 GiB - 65,536 GiB (64 TiB).
 #' 
-#' -   If `StorageType=HDD`, valid values are 2000 GiB - 65,536 GiB (64
+#'   - If `StorageType=HDD`, valid values are 2000 GiB - 65,536 GiB (64
 #'     TiB).
 #' @param StorageType Sets the storage type for the file system you're creating. Valid values
 #' are `SSD` and `HDD`.
 #' 
-#' -   Set to `SSD` to use solid state drive storage. SSD is supported on
+#'   - Set to `SSD` to use solid state drive storage. SSD is supported on
 #'     all Windows and Lustre deployment types.
 #' 
-#' -   Set to `HDD` to use hard disk drive storage. HDD is supported on
+#'   - Set to `HDD` to use hard disk drive storage. HDD is supported on
 #'     `SINGLE_AZ_2` and `MULTI_AZ_1` Windows file system deployment types,
 #'     and on `PERSISTENT` Lustre file system deployment types.
 #' 
@@ -844,10 +844,10 @@ fsx_create_file_system <- function(ClientRequestToken = NULL, FileSystemType, St
 #' `IncompatibleParameterError`. If a file system with the specified client
 #' request token doesn't exist, this operation does the following:
 #' 
-#' -   Creates a new Amazon FSx file system from backup with an assigned
+#'   - Creates a new Amazon FSx file system from backup with an assigned
 #'     ID, and an initial lifecycle state of `CREATING`.
 #' 
-#' -   Returns the description of the file system.
+#'   - Returns the description of the file system.
 #' 
 #' Parameters like Active Directory, default share name, automatic backup,
 #' and backup settings default to the parameters of the file system that
@@ -901,10 +901,10 @@ fsx_create_file_system <- function(ClientRequestToken = NULL, FileSystemType, St
 #' @param StorageType Sets the storage type for the Windows file system you're creating from a
 #' backup. Valid values are `SSD` and `HDD`.
 #' 
-#' -   Set to `SSD` to use solid state drive storage. Supported on all
+#'   - Set to `SSD` to use solid state drive storage. Supported on all
 #'     Windows deployment types.
 #' 
-#' -   Set to `HDD` to use hard disk drive storage. Supported on
+#'   - Set to `HDD` to use hard disk drive storage. Supported on
 #'     `SINGLE_AZ_2` and `MULTI_AZ_1` Windows file system deployment types.
 #' 
 #' Default value is `SSD`.
@@ -1327,10 +1327,10 @@ fsx_delete_file_system <- function(FileSystemId, ClientRequestToken = NULL, Wind
 #' 
 #' When using this action, keep the following in mind:
 #' 
-#' -   The implementation might return fewer than `MaxResults` file system
+#'   - The implementation might return fewer than `MaxResults` file system
 #'     descriptions while still including a `NextToken` value.
 #' 
-#' -   The order of backups returned in the response of one
+#'   - The order of backups returned in the response of one
 #'     [`describe_backups`][fsx_describe_backups] call and the order of
 #'     backups returned across the responses of a multi-call iteration is
 #'     unspecified.
@@ -1654,8 +1654,9 @@ fsx_describe_data_repository_tasks <- function(TaskIds = NULL, Filters = NULL, M
 #' Returns the DNS aliases that are associated with the specified Amazon
 #' FSx for Windows File Server file system. A history of all DNS aliases
 #' that have been associated with and disassociated from the file system is
-#' available in the list of AdministrativeAction provided in the
-#' [`describe_file_systems`][fsx_describe_file_systems] operation response.
+#' available in the list of <span>AdministrativeAction</span> provided in
+#' the [`describe_file_systems`][fsx_describe_file_systems] operation
+#' response.
 #'
 #' @usage
 #' fsx_describe_file_system_aliases(ClientRequestToken, FileSystemId,
@@ -1742,10 +1743,10 @@ fsx_describe_file_system_aliases <- function(ClientRequestToken = NULL, FileSyst
 #' 
 #' When using this action, keep the following in mind:
 #' 
-#' -   The implementation might return fewer than `MaxResults` file system
+#'   - The implementation might return fewer than `MaxResults` file system
 #'     descriptions while still including a `NextToken` value.
 #' 
-#' -   The order of file systems returned in the response of one
+#'   - The order of file systems returned in the response of one
 #'     [`describe_file_systems`][fsx_describe_file_systems] call and the
 #'     order of file systems returned across the responses of a multicall
 #'     iteration is unspecified.
@@ -1997,10 +1998,10 @@ fsx_disassociate_file_system_aliases <- function(ClientRequestToken = NULL, File
 #' 
 #' When using this action, keep the following in mind:
 #' 
-#' -   The implementation might return fewer than `MaxResults` file system
+#'   - The implementation might return fewer than `MaxResults` file system
 #'     descriptions while still including a `NextToken` value.
 #' 
-#' -   The order of tags returned in the response of one
+#'   - The order of tags returned in the response of one
 #'     [`list_tags_for_resource`][fsx_list_tags_for_resource] call and the
 #'     order of tags returned across the responses of a multi-call
 #'     iteration is unspecified.
@@ -2198,30 +2199,30 @@ fsx_untag_resource <- function(ResourceARN, TagKeys) {
 #' For Amazon FSx for Windows File Server file systems, you can update the
 #' following properties:
 #' 
-#' -   AutomaticBackupRetentionDays
+#'   - AutomaticBackupRetentionDays
 #' 
-#' -   DailyAutomaticBackupStartTime
+#'   - DailyAutomaticBackupStartTime
 #' 
-#' -   SelfManagedActiveDirectoryConfiguration
+#'   - SelfManagedActiveDirectoryConfiguration
 #' 
-#' -   StorageCapacity
+#'   - StorageCapacity
 #' 
-#' -   ThroughputCapacity
+#'   - ThroughputCapacity
 #' 
-#' -   WeeklyMaintenanceStartTime
+#'   - WeeklyMaintenanceStartTime
 #' 
 #' For Amazon FSx for Lustre file systems, you can update the following
 #' properties:
 #' 
-#' -   AutoImportPolicy
+#'   - AutoImportPolicy
 #' 
-#' -   AutomaticBackupRetentionDays
+#'   - AutomaticBackupRetentionDays
 #' 
-#' -   DailyAutomaticBackupStartTime
+#'   - DailyAutomaticBackupStartTime
 #' 
-#' -   StorageCapacity
+#'   - StorageCapacity
 #' 
-#' -   WeeklyMaintenanceStartTime
+#'   - WeeklyMaintenanceStartTime
 #'
 #' @usage
 #' fsx_update_file_system(FileSystemId, ClientRequestToken,
@@ -2245,16 +2246,16 @@ fsx_untag_resource <- function(ResourceARN, TagKeys) {
 #' For Lustre file systems, the storage capacity target value can be the
 #' following:
 #' 
-#' -   For `SCRATCH_2` and `PERSISTENT_1 SSD` deployment types, valid
+#'   - For `SCRATCH_2` and `PERSISTENT_1 SSD` deployment types, valid
 #'     values are in multiples of 2400 GiB. The value must be greater than
 #'     the current storage capacity.
 #' 
-#' -   For `PERSISTENT HDD` file systems, valid values are multiples of
+#'   - For `PERSISTENT HDD` file systems, valid values are multiples of
 #'     6000 GiB for 12 MB/s/TiB file systems and multiples of 1800 GiB for
 #'     40 MB/s/TiB file systems. The values must be greater than the
 #'     current storage capacity.
 #' 
-#' -   For `SCRATCH_1` file systems, you cannot increase the storage
+#'   - For `SCRATCH_1` file systems, you cannot increase the storage
 #'     capacity.
 #' 
 #' For more information, see [Managing storage

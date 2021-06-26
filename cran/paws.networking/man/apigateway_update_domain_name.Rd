@@ -7,7 +7,8 @@
 apigateway_update_domain_name(domainName, patchOperations)
 }
 \arguments{
-\item{domainName}{[required] [Required] The name of the DomainName resource to be changed.}
+\item{domainName}{[required] [Required] The name of the <span>DomainName</span> resource to be
+changed.}
 
 \item{patchOperations}{A list of update operations to be applied to the specified resource and
 in the order specified in this list.}
@@ -51,7 +52,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Changes information about the DomainName resource.
+Changes information about the <span>DomainName</span> resource.
 }
 \section{Request syntax}{
 \preformatted{svc$update_domain_name(

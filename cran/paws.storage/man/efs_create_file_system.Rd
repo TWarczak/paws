@@ -20,10 +20,10 @@ file system has been created.}
 
 \item{Encrypted}{A Boolean value that, if true, creates an encrypted file system. When
 creating an encrypted file system, you have the option of specifying
-CreateFileSystemRequest$KmsKeyId for an existing AWS Key Management
-Service (AWS KMS) customer master key (CMK). If you don't specify a CMK,
-then the default CMK for Amazon EFS, \verb{/aws/elasticfilesystem}, is used
-to protect the encrypted file system.}
+<span>CreateFileSystemRequest$KmsKeyId</span> for an existing AWS Key
+Management Service (AWS KMS) customer master key (CMK). If you don't
+specify a CMK, then the default CMK for Amazon EFS,
+\verb{/aws/elasticfilesystem}, is used to protect the encrypted file system.}
 
 \item{KmsKeyId}{The ID of the AWS KMS CMK to be used to protect the encrypted file
 system. This parameter is only required if you want to use a nondefault
@@ -40,8 +40,9 @@ is used. This ID can be in one of the following formats:
 \code{arn:aws:kms:us-west-2:444455556666:alias/projectKey1}.
 }
 
-If \code{KmsKeyId} is specified, the CreateFileSystemRequest$Encrypted
-parameter must be set to true.
+If \code{KmsKeyId} is specified, the
+<span>CreateFileSystemRequest$Encrypted</span> parameter must be set to
+true.
 
 EFS accepts only symmetric CMKs. You cannot use asymmetric CMKs with EFS
 file systems.}

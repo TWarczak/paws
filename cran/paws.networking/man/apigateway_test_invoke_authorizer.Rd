@@ -10,9 +10,11 @@ apigateway_test_invoke_authorizer(restApiId, authorizerId, headers,
   additionalContext)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
-\item{authorizerId}{[required] [Required] Specifies a test invoke authorizer request's Authorizer ID.}
+\item{authorizerId}{[required] [Required] Specifies a test invoke authorizer request's
+<span>Authorizer</span> ID.}
 
 \item{headers}{[Required] A key-value map of headers to simulate an incoming
 invocation request. This is where the incoming authorization token, or
@@ -30,7 +32,7 @@ parameters.}
 request.}
 
 \item{stageVariables}{A key-value map of stage variables to simulate an invocation on a
-deployed Stage.}
+deployed <span>Stage</span>.}
 
 \item{additionalContext}{[Optional] A key-value map of additional context variables.}
 }
@@ -53,8 +55,9 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Simulate the execution of an Authorizer in your RestApi with headers,
-parameters, and an incoming request body.<div class="seeAlso">
+Simulate the execution of an <span>Authorizer</span> in your
+<span>RestApi</span> with headers, parameters, and an incoming request
+body.<div class="seeAlso">
 
 
 \href{https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-use-lambda-authorizer.html}{Use Lambda Function as Authorizer}

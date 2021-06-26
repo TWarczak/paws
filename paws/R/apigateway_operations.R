@@ -6,7 +6,7 @@ NULL
 #' Create an ApiKey resource
 #'
 #' @description
-#' Create an ApiKey resource.
+#' Create an <span>ApiKey</span> resource.
 #' 
 #' <div class="seeAlso">
 #' 
@@ -19,9 +19,9 @@ NULL
 #' apigateway_create_api_key(name, description, enabled,
 #'   generateDistinctId, value, stageKeys, customerId, tags)
 #'
-#' @param name The name of the ApiKey.
-#' @param description The description of the ApiKey.
-#' @param enabled Specifies whether the ApiKey can be used by callers.
+#' @param name The name of the <span>ApiKey</span>.
+#' @param description The description of the <span>ApiKey</span>.
+#' @param enabled Specifies whether the <span>ApiKey</span> can be used by callers.
 #' @param generateDistinctId Specifies whether (`true`) or not (`false`) the key identifier is
 #' distinct from the created API key value. This parameter is deprecated
 #' and should not be used.
@@ -103,7 +103,8 @@ apigateway_create_api_key <- function(name = NULL, description = NULL, enabled =
 #' Adds a new Authorizer resource to an existing RestApi resource
 #'
 #' @description
-#' Adds a new Authorizer resource to an existing RestApi resource.
+#' Adds a new <span>Authorizer</span> resource to an existing
+#' <span>RestApi</span> resource.
 #' 
 #' <div class="seeAlso">
 #' 
@@ -117,7 +118,8 @@ apigateway_create_api_key <- function(name = NULL, description = NULL, enabled =
 #'   authType, authorizerUri, authorizerCredentials, identitySource,
 #'   identityValidationExpression, authorizerResultTtlInSeconds)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param name &#91;required&#93; \[Required\] The name of the authorizer.
 #' @param type &#91;required&#93; \[Required\] The authorizer type. Valid values are `TOKEN` for a Lambda
 #' function using a single authorization token submitted in a custom
@@ -147,12 +149,12 @@ apigateway_create_api_key <- function(name = NULL, description = NULL, enabled =
 #' permissions on the Lambda function, specify null.
 #' @param identitySource The identity source for which authorization is requested.
 #' 
-#' -   For a `TOKEN` or `COGNITO_USER_POOLS` authorizer, this is required
+#'   - For a `TOKEN` or `COGNITO_USER_POOLS` authorizer, this is required
 #'     and specifies the request header mapping expression for the custom
 #'     header holding the authorization token submitted by the client. For
 #'     example, if the token header name is `Auth`, the header mapping
 #'     expression is `method.request.header.Auth`.
-#' -   For the `REQUEST` authorizer, this is required when authorization
+#'   - For the `REQUEST` authorizer, this is required when authorization
 #'     caching is enabled. The value is a comma-separated string of one or
 #'     more mapping expressions of the specified request parameters. For
 #'     example, if an `Auth` header, a `Name` query string parameter are
@@ -240,18 +242,20 @@ apigateway_create_authorizer <- function(restApiId, name, type, providerARNs = N
 #' Creates a new BasePathMapping resource
 #'
 #' @description
-#' Creates a new BasePathMapping resource.
+#' Creates a new <span>BasePathMapping</span> resource.
 #'
 #' @usage
 #' apigateway_create_base_path_mapping(domainName, basePath, restApiId,
 #'   stage)
 #'
-#' @param domainName &#91;required&#93; \[Required\] The domain name of the BasePathMapping resource to create.
+#' @param domainName &#91;required&#93; \[Required\] The domain name of the <span>BasePathMapping</span>
+#' resource to create.
 #' @param basePath The base path name that callers of the API must provide as part of the
 #' URL after the domain name. This value must be unique for all of the
 #' mappings across a single API. Specify '(none)' if you do not want
 #' callers to specify a base path name after the domain name.
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param stage The name of the API's stage that you want to use for this mapping.
 #' Specify '(none)' if you want callers to explicitly specify the stage
 #' name after any base path name.
@@ -300,29 +304,33 @@ apigateway_create_base_path_mapping <- function(domainName, basePath = NULL, res
 #' over the internet
 #'
 #' @description
-#' Creates a Deployment resource, which makes a specified RestApi callable
-#' over the internet.
+#' Creates a <span>Deployment</span> resource, which makes a specified
+#' <span>RestApi</span> callable over the internet.
 #'
 #' @usage
 #' apigateway_create_deployment(restApiId, stageName, stageDescription,
 #'   description, cacheClusterEnabled, cacheClusterSize, variables,
 #'   canarySettings, tracingEnabled)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param stageName The name of the Stage resource for the Deployment resource to create.
-#' @param stageDescription The description of the Stage resource for the Deployment resource to
-#' create.
-#' @param description The description for the Deployment resource to create.
-#' @param cacheClusterEnabled Enables a cache cluster for the Stage resource specified in the input.
-#' @param cacheClusterSize Specifies the cache cluster size for the Stage resource specified in the
-#' input, if a cache cluster is enabled.
-#' @param variables A map that defines the stage variables for the Stage resource that is
-#' associated with the new deployment. Variable names can have alphanumeric
-#' and underscore characters, and the values must match
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param stageName The name of the <span>Stage</span> resource for the
+#' <span>Deployment</span> resource to create.
+#' @param stageDescription The description of the <span>Stage</span> resource for the
+#' <span>Deployment</span> resource to create.
+#' @param description The description for the <span>Deployment</span> resource to create.
+#' @param cacheClusterEnabled Enables a cache cluster for the <span>Stage</span> resource specified in
+#' the input.
+#' @param cacheClusterSize Specifies the cache cluster size for the <span>Stage</span> resource
+#' specified in the input, if a cache cluster is enabled.
+#' @param variables A map that defines the stage variables for the <span>Stage</span>
+#' resource that is associated with the new deployment. Variable names can
+#' have alphanumeric and underscore characters, and the values must match
 #' `[A-Za-z0-9-._~:/?#&=,]+`.
 #' @param canarySettings The input configuration for the canary deployment when the deployment is
 #' a canary release deployment.
-#' @param tracingEnabled Specifies whether active tracing with X-ray is enabled for the Stage.
+#' @param tracingEnabled Specifies whether active tracing with X-ray is enabled for the
+#' <span>Stage</span>.
 #'
 #' @return
 #' A list with the following syntax:
@@ -395,7 +403,8 @@ apigateway_create_deployment <- function(restApiId, stageName = NULL, stageDescr
 #' @usage
 #' apigateway_create_documentation_part(restApiId, location, properties)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param location &#91;required&#93; \[Required\] The location of the targeted API entity of the
 #' to-be-created documentation part.
 #' @param properties &#91;required&#93; \[Required\] The new documentation content map of the targeted API
@@ -462,7 +471,8 @@ apigateway_create_documentation_part <- function(restApiId, location, properties
 #' apigateway_create_documentation_version(restApiId, documentationVersion,
 #'   stageName, description)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param documentationVersion &#91;required&#93; \[Required\] The version identifier of the new snapshot.
 #' @param stageName The stage name to be associated with the new documentation snapshot.
 #' @param description A description about the new documentation snapshot.
@@ -520,7 +530,7 @@ apigateway_create_documentation_version <- function(restApiId, documentationVers
 #'   certificateArn, regionalCertificateName, regionalCertificateArn,
 #'   endpointConfiguration, tags, securityPolicy, mutualTlsAuthentication)
 #'
-#' @param domainName &#91;required&#93; \[Required\] The name of the DomainName resource.
+#' @param domainName &#91;required&#93; \[Required\] The name of the <span>DomainName</span> resource.
 #' @param certificateName The user-friendly name of the certificate that will be used by
 #' edge-optimized endpoint for this domain name.
 #' @param certificateBody \[Deprecated\] The body of the server certificate that will be used by
@@ -543,13 +553,13 @@ apigateway_create_documentation_version <- function(restApiId, documentationVers
 #' @param regionalCertificateArn The reference to an AWS-managed certificate that will be used by
 #' regional endpoint for this domain name. AWS Certificate Manager is the
 #' only supported source.
-#' @param endpointConfiguration The endpoint configuration of this DomainName showing the endpoint types
-#' of the domain name.
+#' @param endpointConfiguration The endpoint configuration of this <span>DomainName</span> showing the
+#' endpoint types of the domain name.
 #' @param tags The key-value map of strings. The valid character set is
 #' \[a-zA-Z+-=._:/\]. The tag key can be up to 128 characters and must not
 #' start with `aws:`. The tag value can be up to 256 characters.
 #' @param securityPolicy The Transport Layer Security (TLS) version + cipher suite for this
-#' DomainName. The valid values are `TLS_1_0` and `TLS_1_2`.
+#' <span>DomainName</span>. The valid values are `TLS_1_0` and `TLS_1_2`.
 #' @param mutualTlsAuthentication 
 #'
 #' @return
@@ -645,18 +655,21 @@ apigateway_create_domain_name <- function(domainName, certificateName = NULL, ce
 #' Adds a new Model resource to an existing RestApi resource
 #'
 #' @description
-#' Adds a new Model resource to an existing RestApi resource.
+#' Adds a new <span>Model</span> resource to an existing
+#' <span>RestApi</span> resource.
 #'
 #' @usage
 #' apigateway_create_model(restApiId, name, description, schema,
 #'   contentType)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The RestApi identifier under which the Model will be
-#' created.
+#' @param restApiId &#91;required&#93; \[Required\] The <span>RestApi</span> identifier under which the
+#' <span>Model</span> will be created.
 #' @param name &#91;required&#93; \[Required\] The name of the model. Must be alphanumeric.
 #' @param description The description of the model.
 #' @param schema The schema for the model. For `application/json` models, this should be
-#' JSON schema draft 4 model.
+#' [JSON schema
+#' draft 4](https://datatracker.ietf.org/doc/html/draft-zyp-json-schema-04)
+#' model.
 #' @param contentType &#91;required&#93; \[Required\] The content-type for the model.
 #'
 #' @return
@@ -705,14 +718,15 @@ apigateway_create_model <- function(restApiId, name, description = NULL, schema 
 #' Creates a ReqeustValidator of a given RestApi
 #'
 #' @description
-#' Creates a ReqeustValidator of a given RestApi.
+#' Creates a <span>ReqeustValidator</span> of a given <span>RestApi</span>.
 #'
 #' @usage
 #' apigateway_create_request_validator(restApiId, name,
 #'   validateRequestBody, validateRequestParameters)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param name The name of the to-be-created RequestValidator.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param name The name of the to-be-created <span>RequestValidator</span>.
 #' @param validateRequestBody A Boolean flag to indicate whether to validate request body according to
 #' the configured model schema for the method (`true`) or not (`false`).
 #' @param validateRequestParameters A Boolean flag to indicate whether to validate request parameters,
@@ -762,12 +776,13 @@ apigateway_create_request_validator <- function(restApiId, name = NULL, validate
 #' Creates a Resource resource
 #'
 #' @description
-#' Creates a Resource resource.
+#' Creates a <span>Resource</span> resource.
 #'
 #' @usage
 #' apigateway_create_resource(restApiId, parentId, pathPart)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param parentId &#91;required&#93; \[Required\] The parent resource's identifier.
 #' @param pathPart &#91;required&#93; The last path segment for this resource.
 #'
@@ -881,19 +896,20 @@ apigateway_create_resource <- function(restApiId, parentId, pathPart) {
 #' Creates a new RestApi resource
 #'
 #' @description
-#' Creates a new RestApi resource.
+#' Creates a new <span>RestApi</span> resource.
 #'
 #' @usage
 #' apigateway_create_rest_api(name, description, version, cloneFrom,
 #'   binaryMediaTypes, minimumCompressionSize, apiKeySource,
 #'   endpointConfiguration, policy, tags, disableExecuteApiEndpoint)
 #'
-#' @param name &#91;required&#93; \[Required\] The name of the RestApi.
-#' @param description The description of the RestApi.
+#' @param name &#91;required&#93; \[Required\] The name of the <span>RestApi</span>.
+#' @param description The description of the <span>RestApi</span>.
 #' @param version A version identifier for the API.
-#' @param cloneFrom The ID of the RestApi that you want to clone from.
-#' @param binaryMediaTypes The list of binary media types supported by the RestApi. By default, the
-#' RestApi supports only UTF-8-encoded text payloads.
+#' @param cloneFrom The ID of the <span>RestApi</span> that you want to clone from.
+#' @param binaryMediaTypes The list of binary media types supported by the <span>RestApi</span>. By
+#' default, the <span>RestApi</span> supports only UTF-8-encoded text
+#' payloads.
 #' @param minimumCompressionSize A nullable integer that is used to enable compression (with non-negative
 #' between 0 and 10485760 (10M) bytes, inclusive) or disable compression
 #' (with a null value) on an API. When compression is enabled, compression
@@ -903,14 +919,14 @@ apigateway_create_resource <- function(restApiId, parentId, pathPart) {
 #' @param apiKeySource The source of the API key for metering requests according to a usage
 #' plan. Valid values are:
 #' 
-#' -   `HEADER` to read the API key from the `X-API-Key` header of a
+#'   - `HEADER` to read the API key from the `X-API-Key` header of a
 #'     request.
-#' -   `AUTHORIZER` to read the API key from the `UsageIdentifierKey` from
+#'   - `AUTHORIZER` to read the API key from the `UsageIdentifierKey` from
 #'     a custom authorizer.
-#' @param endpointConfiguration The endpoint configuration of this RestApi showing the endpoint types of
-#' the API.
+#' @param endpointConfiguration The endpoint configuration of this <span>RestApi</span> showing the
+#' endpoint types of the API.
 #' @param policy A stringified JSON policy document that applies to this RestApi
-#' regardless of the caller and Method configuration.
+#' regardless of the caller and <span>Method</span> configuration.
 #' @param tags The key-value map of strings. The valid character set is
 #' \[a-zA-Z+-=._:/\]. The tag key can be up to 128 characters and must not
 #' start with `aws:`. The tag value can be up to 256 characters.
@@ -1007,29 +1023,31 @@ apigateway_create_rest_api <- function(name, description = NULL, version = NULL,
 #' for the API
 #'
 #' @description
-#' Creates a new Stage resource that references a pre-existing Deployment
-#' for the API.
+#' Creates a new <span>Stage</span> resource that references a pre-existing
+#' <span>Deployment</span> for the API.
 #'
 #' @usage
 #' apigateway_create_stage(restApiId, stageName, deploymentId, description,
 #'   cacheClusterEnabled, cacheClusterSize, variables, documentationVersion,
 #'   canarySettings, tracingEnabled, tags)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param stageName &#91;required&#93; \[Required\] The name for the Stage resource. Stage names can only
-#' contain alphanumeric characters, hyphens, and underscores. Maximum
-#' length is 128 characters.
-#' @param deploymentId &#91;required&#93; \[Required\] The identifier of the Deployment resource for the Stage
-#' resource.
-#' @param description The description of the Stage resource.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param stageName &#91;required&#93; \[Required\] The name for the <span>Stage</span> resource. Stage names
+#' can only contain alphanumeric characters, hyphens, and underscores.
+#' Maximum length is 128 characters.
+#' @param deploymentId &#91;required&#93; \[Required\] The identifier of the <span>Deployment</span> resource for
+#' the <span>Stage</span> resource.
+#' @param description The description of the <span>Stage</span> resource.
 #' @param cacheClusterEnabled Whether cache clustering is enabled for the stage.
 #' @param cacheClusterSize The stage's cache cluster size.
-#' @param variables A map that defines the stage variables for the new Stage resource.
-#' Variable names can have alphanumeric and underscore characters, and the
-#' values must match `[A-Za-z0-9-._~:/?#&=,]+`.
+#' @param variables A map that defines the stage variables for the new <span>Stage</span>
+#' resource. Variable names can have alphanumeric and underscore
+#' characters, and the values must match `[A-Za-z0-9-._~:/?#&=,]+`.
 #' @param documentationVersion The version of the associated API documentation.
 #' @param canarySettings The canary deployment settings of this stage.
-#' @param tracingEnabled Specifies whether active tracing with X-ray is enabled for the Stage.
+#' @param tracingEnabled Specifies whether active tracing with X-ray is enabled for the
+#' <span>Stage</span>.
 #' @param tags The key-value map of strings. The valid character set is
 #' \[a-zA-Z+-=._:/\]. The tag key can be up to 128 characters and must not
 #' start with `aws:`. The tag value can be up to 256 characters.
@@ -1252,12 +1270,13 @@ apigateway_create_usage_plan <- function(name, description = NULL, apiStages = N
 #' @usage
 #' apigateway_create_usage_plan_key(usagePlanId, keyId, keyType)
 #'
-#' @param usagePlanId &#91;required&#93; \[Required\] The Id of the UsagePlan resource representing the usage
-#' plan containing the to-be-created UsagePlanKey resource representing a
-#' plan customer.
-#' @param keyId &#91;required&#93; \[Required\] The identifier of a UsagePlanKey resource for a plan
+#' @param usagePlanId &#91;required&#93; \[Required\] The Id of the <span>UsagePlan</span> resource representing
+#' the usage plan containing the to-be-created <span>UsagePlanKey</span>
+#' resource representing a plan customer.
+#' @param keyId &#91;required&#93; \[Required\] The identifier of a <span>UsagePlanKey</span> resource for
+#' a plan customer.
+#' @param keyType &#91;required&#93; \[Required\] The type of a <span>UsagePlanKey</span> resource for a plan
 #' customer.
-#' @param keyType &#91;required&#93; \[Required\] The type of a UsagePlanKey resource for a plan customer.
 #'
 #' @return
 #' A list with the following syntax:
@@ -1376,12 +1395,13 @@ apigateway_create_vpc_link <- function(name, description = NULL, targetArns, tag
 #' Deletes the ApiKey resource
 #'
 #' @description
-#' Deletes the ApiKey resource.
+#' Deletes the <span>ApiKey</span> resource.
 #'
 #' @usage
 #' apigateway_delete_api_key(apiKey)
 #'
-#' @param apiKey &#91;required&#93; \[Required\] The identifier of the ApiKey resource to be deleted.
+#' @param apiKey &#91;required&#93; \[Required\] The identifier of the <span>ApiKey</span> resource to be
+#' deleted.
 #'
 #' @return
 #' An empty list.
@@ -1416,7 +1436,7 @@ apigateway_delete_api_key <- function(apiKey) {
 #' Deletes an existing Authorizer resource
 #'
 #' @description
-#' Deletes an existing Authorizer resource.
+#' Deletes an existing <span>Authorizer</span> resource.
 #' 
 #' <div class="seeAlso">
 #' 
@@ -1428,8 +1448,9 @@ apigateway_delete_api_key <- function(apiKey) {
 #' @usage
 #' apigateway_delete_authorizer(restApiId, authorizerId)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param authorizerId &#91;required&#93; \[Required\] The identifier of the Authorizer resource.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param authorizerId &#91;required&#93; \[Required\] The identifier of the <span>Authorizer</span> resource.
 #'
 #' @return
 #' An empty list.
@@ -1465,14 +1486,15 @@ apigateway_delete_authorizer <- function(restApiId, authorizerId) {
 #' Deletes the BasePathMapping resource
 #'
 #' @description
-#' Deletes the BasePathMapping resource.
+#' Deletes the <span>BasePathMapping</span> resource.
 #'
 #' @usage
 #' apigateway_delete_base_path_mapping(domainName, basePath)
 #'
-#' @param domainName &#91;required&#93; \[Required\] The domain name of the BasePathMapping resource to delete.
-#' @param basePath &#91;required&#93; \[Required\] The base path name of the BasePathMapping resource to
-#' delete.
+#' @param domainName &#91;required&#93; \[Required\] The domain name of the <span>BasePathMapping</span>
+#' resource to delete.
+#' @param basePath &#91;required&#93; \[Required\] The base path name of the <span>BasePathMapping</span>
+#' resource to delete.
 #' 
 #' To specify an empty base path, set this parameter to `'(none)'`.
 #'
@@ -1510,13 +1532,13 @@ apigateway_delete_base_path_mapping <- function(domainName, basePath) {
 #' Deletes the ClientCertificate resource
 #'
 #' @description
-#' Deletes the ClientCertificate resource.
+#' Deletes the <span>ClientCertificate</span> resource.
 #'
 #' @usage
 #' apigateway_delete_client_certificate(clientCertificateId)
 #'
-#' @param clientCertificateId &#91;required&#93; \[Required\] The identifier of the ClientCertificate resource to be
-#' deleted.
+#' @param clientCertificateId &#91;required&#93; \[Required\] The identifier of the <span>ClientCertificate</span>
+#' resource to be deleted.
 #'
 #' @return
 #' An empty list.
@@ -1551,14 +1573,17 @@ apigateway_delete_client_certificate <- function(clientCertificateId) {
 #' Deletes a Deployment resource
 #'
 #' @description
-#' Deletes a Deployment resource. Deleting a deployment will only succeed
-#' if there are no Stage resources associated with it.
+#' Deletes a <span>Deployment</span> resource. Deleting a deployment will
+#' only succeed if there are no <span>Stage</span> resources associated
+#' with it.
 #'
 #' @usage
 #' apigateway_delete_deployment(restApiId, deploymentId)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param deploymentId &#91;required&#93; \[Required\] The identifier of the Deployment resource to delete.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param deploymentId &#91;required&#93; \[Required\] The identifier of the <span>Deployment</span> resource to
+#' delete.
 #'
 #' @return
 #' An empty list.
@@ -1599,7 +1624,8 @@ apigateway_delete_deployment <- function(restApiId, deploymentId) {
 #' @usage
 #' apigateway_delete_documentation_part(restApiId, documentationPartId)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param documentationPartId &#91;required&#93; \[Required\] The identifier of the to-be-deleted documentation part.
 #'
 #' @return
@@ -1641,7 +1667,8 @@ apigateway_delete_documentation_part <- function(restApiId, documentationPartId)
 #' @usage
 #' apigateway_delete_documentation_version(restApiId, documentationVersion)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param documentationVersion &#91;required&#93; \[Required\] The version identifier of a to-be-deleted documentation
 #' snapshot.
 #'
@@ -1679,12 +1706,13 @@ apigateway_delete_documentation_version <- function(restApiId, documentationVers
 #' Deletes the DomainName resource
 #'
 #' @description
-#' Deletes the DomainName resource.
+#' Deletes the <span>DomainName</span> resource.
 #'
 #' @usage
 #' apigateway_delete_domain_name(domainName)
 #'
-#' @param domainName &#91;required&#93; \[Required\] The name of the DomainName resource to be deleted.
+#' @param domainName &#91;required&#93; \[Required\] The name of the <span>DomainName</span> resource to be
+#' deleted.
 #'
 #' @return
 #' An empty list.
@@ -1720,37 +1748,40 @@ apigateway_delete_domain_name <- function(domainName) {
 #' type on the given RestApi and resets it with the default settings
 #'
 #' @description
-#' Clears any customization of a GatewayResponse of a specified response
-#' type on the given RestApi and resets it with the default settings.
+#' Clears any customization of a <span>GatewayResponse</span> of a
+#' specified response type on the given <span>RestApi</span> and resets it
+#' with the default settings.
 #'
 #' @usage
 #' apigateway_delete_gateway_response(restApiId, responseType)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param responseType &#91;required&#93; \[Required\]
 #' 
-#' The response type of the associated GatewayResponse. Valid values are
+#' The response type of the associated <span>GatewayResponse</span>. Valid
+#' values are
 #' 
-#' -   ACCESS_DENIED
-#' -   API_CONFIGURATION_ERROR
-#' -   AUTHORIZER_FAILURE
-#' -   AUTHORIZER_CONFIGURATION_ERROR
-#' -   BAD_REQUEST_PARAMETERS
-#' -   BAD_REQUEST_BODY
-#' -   DEFAULT_4XX
-#' -   DEFAULT_5XX
-#' -   EXPIRED_TOKEN
-#' -   INVALID_SIGNATURE
-#' -   INTEGRATION_FAILURE
-#' -   INTEGRATION_TIMEOUT
-#' -   INVALID_API_KEY
-#' -   MISSING_AUTHENTICATION_TOKEN
-#' -   QUOTA_EXCEEDED
-#' -   REQUEST_TOO_LARGE
-#' -   RESOURCE_NOT_FOUND
-#' -   THROTTLED
-#' -   UNAUTHORIZED
-#' -   UNSUPPORTED_MEDIA_TYPE
+#'   - ACCESS_DENIED
+#'   - API_CONFIGURATION_ERROR
+#'   - AUTHORIZER_FAILURE
+#'   - AUTHORIZER_CONFIGURATION_ERROR
+#'   - BAD_REQUEST_PARAMETERS
+#'   - BAD_REQUEST_BODY
+#'   - DEFAULT_4XX
+#'   - DEFAULT_5XX
+#'   - EXPIRED_TOKEN
+#'   - INVALID_SIGNATURE
+#'   - INTEGRATION_FAILURE
+#'   - INTEGRATION_TIMEOUT
+#'   - INVALID_API_KEY
+#'   - MISSING_AUTHENTICATION_TOKEN
+#'   - QUOTA_EXCEEDED
+#'   - REQUEST_TOO_LARGE
+#'   - RESOURCE_NOT_FOUND
+#'   - THROTTLED
+#'   - UNAUTHORIZED
+#'   - UNSUPPORTED_MEDIA_TYPE
 #'
 #' @return
 #' An empty list.
@@ -1791,7 +1822,8 @@ apigateway_delete_gateway_response <- function(restApiId, responseType) {
 #' @usage
 #' apigateway_delete_integration(restApiId, resourceId, httpMethod)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param resourceId &#91;required&#93; \[Required\] Specifies a delete integration request's resource
 #' identifier.
 #' @param httpMethod &#91;required&#93; \[Required\] Specifies a delete integration request's HTTP method.
@@ -1837,7 +1869,8 @@ apigateway_delete_integration <- function(restApiId, resourceId, httpMethod) {
 #' apigateway_delete_integration_response(restApiId, resourceId,
 #'   httpMethod, statusCode)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param resourceId &#91;required&#93; \[Required\] Specifies a delete integration response request's resource
 #' identifier.
 #' @param httpMethod &#91;required&#93; \[Required\] Specifies a delete integration response request's HTTP
@@ -1881,14 +1914,16 @@ apigateway_delete_integration_response <- function(restApiId, resourceId, httpMe
 #' Deletes an existing Method resource
 #'
 #' @description
-#' Deletes an existing Method resource.
+#' Deletes an existing <span>Method</span> resource.
 #'
 #' @usage
 #' apigateway_delete_method(restApiId, resourceId, httpMethod)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param resourceId &#91;required&#93; \[Required\] The Resource identifier for the Method resource.
-#' @param httpMethod &#91;required&#93; \[Required\] The HTTP verb of the Method resource.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param resourceId &#91;required&#93; \[Required\] The <span>Resource</span> identifier for the
+#' <span>Method</span> resource.
+#' @param httpMethod &#91;required&#93; \[Required\] The HTTP verb of the <span>Method</span> resource.
 #'
 #' @return
 #' An empty list.
@@ -1925,16 +1960,19 @@ apigateway_delete_method <- function(restApiId, resourceId, httpMethod) {
 #' Deletes an existing MethodResponse resource
 #'
 #' @description
-#' Deletes an existing MethodResponse resource.
+#' Deletes an existing <span>MethodResponse</span> resource.
 #'
 #' @usage
 #' apigateway_delete_method_response(restApiId, resourceId, httpMethod,
 #'   statusCode)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param resourceId &#91;required&#93; \[Required\] The Resource identifier for the MethodResponse resource.
-#' @param httpMethod &#91;required&#93; \[Required\] The HTTP verb of the Method resource.
-#' @param statusCode &#91;required&#93; \[Required\] The status code identifier for the MethodResponse resource.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param resourceId &#91;required&#93; \[Required\] The <span>Resource</span> identifier for the
+#' <span>MethodResponse</span> resource.
+#' @param httpMethod &#91;required&#93; \[Required\] The HTTP verb of the <span>Method</span> resource.
+#' @param statusCode &#91;required&#93; \[Required\] The status code identifier for the
+#' <span>MethodResponse</span> resource.
 #'
 #' @return
 #' An empty list.
@@ -1977,7 +2015,8 @@ apigateway_delete_method_response <- function(restApiId, resourceId, httpMethod,
 #' @usage
 #' apigateway_delete_model(restApiId, modelName)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param modelName &#91;required&#93; \[Required\] The name of the model to delete.
 #'
 #' @return
@@ -2014,13 +2053,15 @@ apigateway_delete_model <- function(restApiId, modelName) {
 #' Deletes a RequestValidator of a given RestApi
 #'
 #' @description
-#' Deletes a RequestValidator of a given RestApi.
+#' Deletes a <span>RequestValidator</span> of a given <span>RestApi</span>.
 #'
 #' @usage
 #' apigateway_delete_request_validator(restApiId, requestValidatorId)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param requestValidatorId &#91;required&#93; \[Required\] The identifier of the RequestValidator to be deleted.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param requestValidatorId &#91;required&#93; \[Required\] The identifier of the <span>RequestValidator</span> to be
+#' deleted.
 #'
 #' @return
 #' An empty list.
@@ -2056,13 +2097,14 @@ apigateway_delete_request_validator <- function(restApiId, requestValidatorId) {
 #' Deletes a Resource resource
 #'
 #' @description
-#' Deletes a Resource resource.
+#' Deletes a <span>Resource</span> resource.
 #'
 #' @usage
 #' apigateway_delete_resource(restApiId, resourceId)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param resourceId &#91;required&#93; \[Required\] The identifier of the Resource resource.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param resourceId &#91;required&#93; \[Required\] The identifier of the <span>Resource</span> resource.
 #'
 #' @return
 #' An empty list.
@@ -2103,7 +2145,8 @@ apigateway_delete_resource <- function(restApiId, resourceId) {
 #' @usage
 #' apigateway_delete_rest_api(restApiId)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #'
 #' @return
 #' An empty list.
@@ -2138,13 +2181,14 @@ apigateway_delete_rest_api <- function(restApiId) {
 #' Deletes a Stage resource
 #'
 #' @description
-#' Deletes a Stage resource.
+#' Deletes a <span>Stage</span> resource.
 #'
 #' @usage
 #' apigateway_delete_stage(restApiId, stageName)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param stageName &#91;required&#93; \[Required\] The name of the Stage resource to delete.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param stageName &#91;required&#93; \[Required\] The name of the <span>Stage</span> resource to delete.
 #'
 #' @return
 #' An empty list.
@@ -2227,10 +2271,11 @@ apigateway_delete_usage_plan <- function(usagePlanId) {
 #' @usage
 #' apigateway_delete_usage_plan_key(usagePlanId, keyId)
 #'
-#' @param usagePlanId &#91;required&#93; \[Required\] The Id of the UsagePlan resource representing the usage
-#' plan containing the to-be-deleted UsagePlanKey resource representing a
-#' plan customer.
-#' @param keyId &#91;required&#93; \[Required\] The Id of the UsagePlanKey resource to be deleted.
+#' @param usagePlanId &#91;required&#93; \[Required\] The Id of the <span>UsagePlan</span> resource representing
+#' the usage plan containing the to-be-deleted <span>UsagePlanKey</span>
+#' resource representing a plan customer.
+#' @param keyId &#91;required&#93; \[Required\] The Id of the <span>UsagePlanKey</span> resource to be
+#' deleted.
 #'
 #' @return
 #' An empty list.
@@ -2266,13 +2311,13 @@ apigateway_delete_usage_plan_key <- function(usagePlanId, keyId) {
 #' Deletes an existing VpcLink of a specified identifier
 #'
 #' @description
-#' Deletes an existing VpcLink of a specified identifier.
+#' Deletes an existing <span>VpcLink</span> of a specified identifier.
 #'
 #' @usage
 #' apigateway_delete_vpc_link(vpcLinkId)
 #'
-#' @param vpcLinkId &#91;required&#93; \[Required\] The identifier of the VpcLink. It is used in an Integration
-#' to reference this VpcLink.
+#' @param vpcLinkId &#91;required&#93; \[Required\] The identifier of the <span>VpcLink</span>. It is used in
+#' an <span>Integration</span> to reference this <span>VpcLink</span>.
 #'
 #' @return
 #' An empty list.
@@ -2312,7 +2357,7 @@ apigateway_delete_vpc_link <- function(vpcLinkId) {
 #' @usage
 #' apigateway_flush_stage_authorizers_cache(restApiId, stageName)
 #'
-#' @param restApiId &#91;required&#93; The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; The string identifier of the associated <span>RestApi</span>.
 #' @param stageName &#91;required&#93; The name of the stage to flush.
 #'
 #' @return
@@ -2354,7 +2399,8 @@ apigateway_flush_stage_authorizers_cache <- function(restApiId, stageName) {
 #' @usage
 #' apigateway_flush_stage_cache(restApiId, stageName)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param stageName &#91;required&#93; \[Required\] The name of the stage to flush its cache.
 #'
 #' @return
@@ -2391,12 +2437,12 @@ apigateway_flush_stage_cache <- function(restApiId, stageName) {
 #' Generates a ClientCertificate resource
 #'
 #' @description
-#' Generates a ClientCertificate resource.
+#' Generates a <span>ClientCertificate</span> resource.
 #'
 #' @usage
 #' apigateway_generate_client_certificate(description, tags)
 #'
-#' @param description The description of the ClientCertificate.
+#' @param description The description of the <span>ClientCertificate</span>.
 #' @param tags The key-value map of strings. The valid character set is
 #' \[a-zA-Z+-=._:/\]. The tag key can be up to 128 characters and must not
 #' start with `aws:`. The tag value can be up to 256 characters.
@@ -2453,7 +2499,7 @@ apigateway_generate_client_certificate <- function(description = NULL, tags = NU
 #' Gets information about the current Account resource
 #'
 #' @description
-#' Gets information about the current Account resource.
+#' Gets information about the current <span>Account</span> resource.
 #'
 #' @usage
 #' apigateway_get_account()
@@ -2502,12 +2548,12 @@ apigateway_get_account <- function() {
 #' Gets information about the current ApiKey resource
 #'
 #' @description
-#' Gets information about the current ApiKey resource.
+#' Gets information about the current <span>ApiKey</span> resource.
 #'
 #' @usage
 #' apigateway_get_api_key(apiKey, includeValue)
 #'
-#' @param apiKey &#91;required&#93; \[Required\] The identifier of the ApiKey resource.
+#' @param apiKey &#91;required&#93; \[Required\] The identifier of the <span>ApiKey</span> resource.
 #' @param includeValue A boolean flag to specify whether (`true`) or not (`false`) the result
 #' contains the key value.
 #'
@@ -2567,7 +2613,7 @@ apigateway_get_api_key <- function(apiKey, includeValue = NULL) {
 #' Gets information about the current ApiKeys resource
 #'
 #' @description
-#' Gets information about the current ApiKeys resource.
+#' Gets information about the current <span>ApiKeys</span> resource.
 #'
 #' @usage
 #' apigateway_get_api_keys(position, limit, nameQuery, customerId,
@@ -2649,7 +2695,7 @@ apigateway_get_api_keys <- function(position = NULL, limit = NULL, nameQuery = N
 #' Describe an existing Authorizer resource
 #'
 #' @description
-#' Describe an existing Authorizer resource.
+#' Describe an existing <span>Authorizer</span> resource.
 #' 
 #' <div class="seeAlso">
 #' 
@@ -2661,8 +2707,9 @@ apigateway_get_api_keys <- function(position = NULL, limit = NULL, nameQuery = N
 #' @usage
 #' apigateway_get_authorizer(restApiId, authorizerId)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param authorizerId &#91;required&#93; \[Required\] The identifier of the Authorizer resource.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param authorizerId &#91;required&#93; \[Required\] The identifier of the <span>Authorizer</span> resource.
 #'
 #' @return
 #' A list with the following syntax:
@@ -2714,7 +2761,7 @@ apigateway_get_authorizer <- function(restApiId, authorizerId) {
 #' Describe an existing Authorizers resource
 #'
 #' @description
-#' Describe an existing Authorizers resource.
+#' Describe an existing <span>Authorizers</span> resource.
 #' 
 #' <div class="seeAlso">
 #' 
@@ -2726,7 +2773,8 @@ apigateway_get_authorizer <- function(restApiId, authorizerId) {
 #' @usage
 #' apigateway_get_authorizers(restApiId, position, limit)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param position The current pagination position in the paged result set.
 #' @param limit The maximum number of returned results per page. The default value is 25
 #' and the maximum value is 500.
@@ -2787,13 +2835,13 @@ apigateway_get_authorizers <- function(restApiId, position = NULL, limit = NULL)
 #' Describe a BasePathMapping resource
 #'
 #' @description
-#' Describe a BasePathMapping resource.
+#' Describe a <span>BasePathMapping</span> resource.
 #'
 #' @usage
 #' apigateway_get_base_path_mapping(domainName, basePath)
 #'
-#' @param domainName &#91;required&#93; \[Required\] The domain name of the BasePathMapping resource to be
-#' described.
+#' @param domainName &#91;required&#93; \[Required\] The domain name of the <span>BasePathMapping</span>
+#' resource to be described.
 #' @param basePath &#91;required&#93; \[Required\] The base path name that callers of the API must provide as
 #' part of the URL after the domain name. This value must be unique for all
 #' of the mappings across a single API. Specify '(none)' if you do not want
@@ -2840,12 +2888,12 @@ apigateway_get_base_path_mapping <- function(domainName, basePath) {
 #' Represents a collection of BasePathMapping resources
 #'
 #' @description
-#' Represents a collection of BasePathMapping resources.
+#' Represents a collection of <span>BasePathMapping</span> resources.
 #'
 #' @usage
 #' apigateway_get_base_path_mappings(domainName, position, limit)
 #'
-#' @param domainName &#91;required&#93; \[Required\] The domain name of a BasePathMapping resource.
+#' @param domainName &#91;required&#93; \[Required\] The domain name of a <span>BasePathMapping</span> resource.
 #' @param position The current pagination position in the paged result set.
 #' @param limit The maximum number of returned results per page. The default value is 25
 #' and the maximum value is 500.
@@ -2897,13 +2945,14 @@ apigateway_get_base_path_mappings <- function(domainName, position = NULL, limit
 #' Gets information about the current ClientCertificate resource
 #'
 #' @description
-#' Gets information about the current ClientCertificate resource.
+#' Gets information about the current <span>ClientCertificate</span>
+#' resource.
 #'
 #' @usage
 #' apigateway_get_client_certificate(clientCertificateId)
 #'
-#' @param clientCertificateId &#91;required&#93; \[Required\] The identifier of the ClientCertificate resource to be
-#' described.
+#' @param clientCertificateId &#91;required&#93; \[Required\] The identifier of the <span>ClientCertificate</span>
+#' resource to be described.
 #'
 #' @return
 #' A list with the following syntax:
@@ -2954,7 +3003,7 @@ apigateway_get_client_certificate <- function(clientCertificateId) {
 #' Gets a collection of ClientCertificate resources
 #'
 #' @description
-#' Gets a collection of ClientCertificate resources.
+#' Gets a collection of <span>ClientCertificate</span> resources.
 #'
 #' @usage
 #' apigateway_get_client_certificates(position, limit)
@@ -3018,24 +3067,26 @@ apigateway_get_client_certificates <- function(position = NULL, limit = NULL) {
 #' Gets information about a Deployment resource
 #'
 #' @description
-#' Gets information about a Deployment resource.
+#' Gets information about a <span>Deployment</span> resource.
 #'
 #' @usage
 #' apigateway_get_deployment(restApiId, deploymentId, embed)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param deploymentId &#91;required&#93; \[Required\] The identifier of the Deployment resource to get
-#' information about.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param deploymentId &#91;required&#93; \[Required\] The identifier of the <span>Deployment</span> resource to
+#' get information about.
 #' @param embed A query parameter to retrieve the specified embedded resources of the
-#' returned Deployment resource in the response. In a REST API call, this
-#' `embed` parameter value is a list of comma-separated strings, as in
-#' `GET /restapis/{restapi_id}/deployments/{deployment_id}?embed=var1,var2`.
-#' The SDK and other platform-dependent libraries might use a different
-#' format for the list. Currently, this request supports only retrieval of
-#' the embedded API summary this way. Hence, the parameter value must be a
+#' returned <span>Deployment</span> resource in the response. In a REST API
+#' call, this `embed` parameter value is a list of comma-separated strings,
+#' as in `GET
+#' /restapis/{restapi_id}/deployments/{deployment_id}?embed=var1,var2`. The
+#' SDK and other platform-dependent libraries might use a different format
+#' for the list. Currently, this request supports only retrieval of the
+#' embedded API summary this way. Hence, the parameter value must be a
 #' single-valued list containing only the `"apisummary"` string. For
-#' example,
-#' `GET /restapis/{restapi_id}/deployments/{deployment_id}?embed=apisummary`.
+#' example, `GET
+#' /restapis/{restapi_id}/deployments/{deployment_id}?embed=apisummary`.
 #'
 #' @return
 #' A list with the following syntax:
@@ -3091,12 +3142,13 @@ apigateway_get_deployment <- function(restApiId, deploymentId, embed = NULL) {
 #' Gets information about a Deployments collection
 #'
 #' @description
-#' Gets information about a Deployments collection.
+#' Gets information about a <span>Deployments</span> collection.
 #'
 #' @usage
 #' apigateway_get_deployments(restApiId, position, limit)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param position The current pagination position in the paged result set.
 #' @param limit The maximum number of returned results per page. The default value is 25
 #' and the maximum value is 500.
@@ -3163,8 +3215,10 @@ apigateway_get_deployments <- function(restApiId, position = NULL, limit = NULL)
 #' @usage
 #' apigateway_get_documentation_part(restApiId, documentationPartId)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param documentationPartId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param documentationPartId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #'
 #' @return
 #' A list with the following syntax:
@@ -3219,7 +3273,8 @@ apigateway_get_documentation_part <- function(restApiId, documentationPartId) {
 #' apigateway_get_documentation_parts(restApiId, type, nameQuery, path,
 #'   position, limit, locationStatus)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param type The type of API entities of the to-be-retrieved documentation parts.
 #' @param nameQuery The name of API entities of the to-be-retrieved documentation parts.
 #' @param path The path of API entities of the to-be-retrieved documentation parts.
@@ -3227,8 +3282,9 @@ apigateway_get_documentation_part <- function(restApiId, documentationPartId) {
 #' @param limit The maximum number of returned results per page. The default value is 25
 #' and the maximum value is 500.
 #' @param locationStatus The status of the API documentation parts to retrieve. Valid values are
-#' `DOCUMENTED` for retrieving DocumentationPart resources with content and
-#' `UNDOCUMENTED` for DocumentationPart resources without content.
+#' `DOCUMENTED` for retrieving <span>DocumentationPart</span> resources
+#' with content and `UNDOCUMENTED` for <span>DocumentationPart</span>
+#' resources without content.
 #'
 #' @return
 #' A list with the following syntax:
@@ -3292,7 +3348,8 @@ apigateway_get_documentation_parts <- function(restApiId, type = NULL, nameQuery
 #' @usage
 #' apigateway_get_documentation_version(restApiId, documentationVersion)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param documentationVersion &#91;required&#93; \[Required\] The version identifier of the to-be-retrieved documentation
 #' snapshot.
 #'
@@ -3344,7 +3401,8 @@ apigateway_get_documentation_version <- function(restApiId, documentationVersion
 #' @usage
 #' apigateway_get_documentation_versions(restApiId, position, limit)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param position The current pagination position in the paged result set.
 #' @param limit The maximum number of returned results per page. The default value is 25
 #' and the maximum value is 500.
@@ -3405,7 +3463,7 @@ apigateway_get_documentation_versions <- function(restApiId, position = NULL, li
 #' @usage
 #' apigateway_get_domain_name(domainName)
 #'
-#' @param domainName &#91;required&#93; \[Required\] The name of the DomainName resource.
+#' @param domainName &#91;required&#93; \[Required\] The name of the <span>DomainName</span> resource.
 #'
 #' @return
 #' A list with the following syntax:
@@ -3477,7 +3535,7 @@ apigateway_get_domain_name <- function(domainName) {
 #' Represents a collection of DomainName resources
 #'
 #' @description
-#' Represents a collection of DomainName resources.
+#' Represents a collection of <span>DomainName</span> resources.
 #'
 #' @usage
 #' apigateway_get_domain_names(position, limit)
@@ -3562,14 +3620,16 @@ apigateway_get_domain_names <- function(position = NULL, limit = NULL) {
 #' Exports a deployed version of a RestApi in a specified format
 #'
 #' @description
-#' Exports a deployed version of a RestApi in a specified format.
+#' Exports a deployed version of a <span>RestApi</span> in a specified
+#' format.
 #'
 #' @usage
 #' apigateway_get_export(restApiId, stageName, exportType, parameters,
 #'   accepts)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param stageName &#91;required&#93; \[Required\] The name of the Stage that will be exported.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param stageName &#91;required&#93; \[Required\] The name of the <span>Stage</span> that will be exported.
 #' @param exportType &#91;required&#93; \[Required\] The type of export. Acceptable values are 'oas30' for
 #' OpenAPI 3.0.x and 'swagger' for Swagger/OpenAPI 2.0.
 #' @param parameters A key-value map of query string parameters that specify properties of
@@ -3631,37 +3691,39 @@ apigateway_get_export <- function(restApiId, stageName, exportType, parameters =
 #' Gets a GatewayResponse of a specified response type on the given RestApi
 #'
 #' @description
-#' Gets a GatewayResponse of a specified response type on the given
-#' RestApi.
+#' Gets a <span>GatewayResponse</span> of a specified response type on the
+#' given <span>RestApi</span>.
 #'
 #' @usage
 #' apigateway_get_gateway_response(restApiId, responseType)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param responseType &#91;required&#93; \[Required\]
 #' 
-#' The response type of the associated GatewayResponse. Valid values are
+#' The response type of the associated <span>GatewayResponse</span>. Valid
+#' values are
 #' 
-#' -   ACCESS_DENIED
-#' -   API_CONFIGURATION_ERROR
-#' -   AUTHORIZER_FAILURE
-#' -   AUTHORIZER_CONFIGURATION_ERROR
-#' -   BAD_REQUEST_PARAMETERS
-#' -   BAD_REQUEST_BODY
-#' -   DEFAULT_4XX
-#' -   DEFAULT_5XX
-#' -   EXPIRED_TOKEN
-#' -   INVALID_SIGNATURE
-#' -   INTEGRATION_FAILURE
-#' -   INTEGRATION_TIMEOUT
-#' -   INVALID_API_KEY
-#' -   MISSING_AUTHENTICATION_TOKEN
-#' -   QUOTA_EXCEEDED
-#' -   REQUEST_TOO_LARGE
-#' -   RESOURCE_NOT_FOUND
-#' -   THROTTLED
-#' -   UNAUTHORIZED
-#' -   UNSUPPORTED_MEDIA_TYPE
+#'   - ACCESS_DENIED
+#'   - API_CONFIGURATION_ERROR
+#'   - AUTHORIZER_FAILURE
+#'   - AUTHORIZER_CONFIGURATION_ERROR
+#'   - BAD_REQUEST_PARAMETERS
+#'   - BAD_REQUEST_BODY
+#'   - DEFAULT_4XX
+#'   - DEFAULT_5XX
+#'   - EXPIRED_TOKEN
+#'   - INVALID_SIGNATURE
+#'   - INTEGRATION_FAILURE
+#'   - INTEGRATION_TIMEOUT
+#'   - INVALID_API_KEY
+#'   - MISSING_AUTHENTICATION_TOKEN
+#'   - QUOTA_EXCEEDED
+#'   - REQUEST_TOO_LARGE
+#'   - RESOURCE_NOT_FOUND
+#'   - THROTTLED
+#'   - UNAUTHORIZED
+#'   - UNSUPPORTED_MEDIA_TYPE
 #'
 #' @return
 #' A list with the following syntax:
@@ -3710,21 +3772,24 @@ apigateway_get_gateway_response <- function(restApiId, responseType) {
 #' Gets the GatewayResponses collection on the given RestApi
 #'
 #' @description
-#' Gets the GatewayResponses collection on the given RestApi. If an API
-#' developer has not added any definitions for gateway responses, the
-#' result will be the API Gateway-generated default GatewayResponses
-#' collection for the supported response types.
+#' Gets the <span>GatewayResponses</span> collection on the given
+#' <span>RestApi</span>. If an API developer has not added any definitions
+#' for gateway responses, the result will be the API Gateway-generated
+#' default <span>GatewayResponses</span> collection for the supported
+#' response types.
 #'
 #' @usage
 #' apigateway_get_gateway_responses(restApiId, position, limit)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param position The current pagination position in the paged result set. The
-#' GatewayResponse collection does not support pagination and the position
-#' does not apply here.
+#' <span>GatewayResponse</span> collection does not support pagination and
+#' the position does not apply here.
 #' @param limit The maximum number of returned results per page. The default value is 25
-#' and the maximum value is 500. The GatewayResponses collection does not
-#' support pagination and the limit does not apply here.
+#' and the maximum value is 500. The <span>GatewayResponses</span>
+#' collection does not support pagination and the limit does not apply
+#' here.
 #'
 #' @return
 #' A list with the following syntax:
@@ -3784,7 +3849,8 @@ apigateway_get_gateway_responses <- function(restApiId, position = NULL, limit =
 #' @usage
 #' apigateway_get_integration(restApiId, resourceId, httpMethod)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param resourceId &#91;required&#93; \[Required\] Specifies a get integration request's resource identifier
 #' @param httpMethod &#91;required&#93; \[Required\] Specifies a get integration request's HTTP method.
 #'
@@ -3868,7 +3934,8 @@ apigateway_get_integration <- function(restApiId, resourceId, httpMethod) {
 #' apigateway_get_integration_response(restApiId, resourceId, httpMethod,
 #'   statusCode)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param resourceId &#91;required&#93; \[Required\] Specifies a get integration response request's resource
 #' identifier.
 #' @param httpMethod &#91;required&#93; \[Required\] Specifies a get integration response request's HTTP method.
@@ -3923,13 +3990,15 @@ apigateway_get_integration_response <- function(restApiId, resourceId, httpMetho
 #' Describe an existing Method resource
 #'
 #' @description
-#' Describe an existing Method resource.
+#' Describe an existing <span>Method</span> resource.
 #'
 #' @usage
 #' apigateway_get_method(restApiId, resourceId, httpMethod)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param resourceId &#91;required&#93; \[Required\] The Resource identifier for the Method resource.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param resourceId &#91;required&#93; \[Required\] The <span>Resource</span> identifier for the
+#' <span>Method</span> resource.
 #' @param httpMethod &#91;required&#93; \[Required\] Specifies the method request's HTTP method type.
 #'
 #' @return
@@ -4034,16 +4103,19 @@ apigateway_get_method <- function(restApiId, resourceId, httpMethod) {
 #' Describes a MethodResponse resource
 #'
 #' @description
-#' Describes a MethodResponse resource.
+#' Describes a <span>MethodResponse</span> resource.
 #'
 #' @usage
 #' apigateway_get_method_response(restApiId, resourceId, httpMethod,
 #'   statusCode)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param resourceId &#91;required&#93; \[Required\] The Resource identifier for the MethodResponse resource.
-#' @param httpMethod &#91;required&#93; \[Required\] The HTTP verb of the Method resource.
-#' @param statusCode &#91;required&#93; \[Required\] The status code for the MethodResponse resource.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param resourceId &#91;required&#93; \[Required\] The <span>Resource</span> identifier for the
+#' <span>MethodResponse</span> resource.
+#' @param httpMethod &#91;required&#93; \[Required\] The HTTP verb of the <span>Method</span> resource.
+#' @param statusCode &#91;required&#93; \[Required\] The status code for the <span>MethodResponse</span>
+#' resource.
 #'
 #' @return
 #' A list with the following syntax:
@@ -4092,12 +4164,13 @@ apigateway_get_method_response <- function(restApiId, resourceId, httpMethod, st
 #' Describes an existing model defined for a RestApi resource
 #'
 #' @description
-#' Describes an existing model defined for a RestApi resource.
+#' Describes an existing model defined for a <span>RestApi</span> resource.
 #'
 #' @usage
 #' apigateway_get_model(restApiId, modelName, flatten)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The RestApi identifier under which the Model exists.
+#' @param restApiId &#91;required&#93; \[Required\] The <span>RestApi</span> identifier under which the
+#' <span>Model</span> exists.
 #' @param modelName &#91;required&#93; \[Required\] The name of the model as an identifier.
 #' @param flatten A query parameter of a Boolean value to resolve (`true`) all external
 #' model references and returns a flattened model schema or not (`false`)
@@ -4154,7 +4227,8 @@ apigateway_get_model <- function(restApiId, modelName, flatten = NULL) {
 #' @usage
 #' apigateway_get_model_template(restApiId, modelName)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param modelName &#91;required&#93; \[Required\] The name of the model for which to generate a template.
 #'
 #' @return
@@ -4196,12 +4270,14 @@ apigateway_get_model_template <- function(restApiId, modelName) {
 #' Describes existing Models defined for a RestApi resource
 #'
 #' @description
-#' Describes existing Models defined for a RestApi resource.
+#' Describes existing <span>Models</span> defined for a
+#' <span>RestApi</span> resource.
 #'
 #' @usage
 #' apigateway_get_models(restApiId, position, limit)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param position The current pagination position in the paged result set.
 #' @param limit The maximum number of returned results per page. The default value is 25
 #' and the maximum value is 500.
@@ -4255,13 +4331,15 @@ apigateway_get_models <- function(restApiId, position = NULL, limit = NULL) {
 #' Gets a RequestValidator of a given RestApi
 #'
 #' @description
-#' Gets a RequestValidator of a given RestApi.
+#' Gets a <span>RequestValidator</span> of a given <span>RestApi</span>.
 #'
 #' @usage
 #' apigateway_get_request_validator(restApiId, requestValidatorId)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param requestValidatorId &#91;required&#93; \[Required\] The identifier of the RequestValidator to be retrieved.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param requestValidatorId &#91;required&#93; \[Required\] The identifier of the <span>RequestValidator</span> to be
+#' retrieved.
 #'
 #' @return
 #' A list with the following syntax:
@@ -4305,12 +4383,14 @@ apigateway_get_request_validator <- function(restApiId, requestValidatorId) {
 #' Gets the RequestValidators collection of a given RestApi
 #'
 #' @description
-#' Gets the RequestValidators collection of a given RestApi.
+#' Gets the <span>RequestValidators</span> collection of a given
+#' <span>RestApi</span>.
 #'
 #' @usage
 #' apigateway_get_request_validators(restApiId, position, limit)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param position The current pagination position in the paged result set.
 #' @param limit The maximum number of returned results per page. The default value is 25
 #' and the maximum value is 500.
@@ -4368,15 +4448,16 @@ apigateway_get_request_validators <- function(restApiId, position = NULL, limit 
 #' @usage
 #' apigateway_get_resource(restApiId, resourceId, embed)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param resourceId &#91;required&#93; \[Required\] The identifier for the Resource resource.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param resourceId &#91;required&#93; \[Required\] The identifier for the <span>Resource</span> resource.
 #' @param embed A query parameter to retrieve the specified resources embedded in the
-#' returned Resource representation in the response. This `embed` parameter
-#' value is a list of comma-separated strings. Currently, the request
-#' supports only retrieval of the embedded Method resources this way. The
-#' query parameter value must be a single-valued list and contain the
-#' `"methods"` string. For example,
-#' `GET /restapis/{restapi_id}/resources/{resource_id}?embed=methods`.
+#' returned <span>Resource</span> representation in the response. This
+#' `embed` parameter value is a list of comma-separated strings. Currently,
+#' the request supports only retrieval of the embedded <span>Method</span>
+#' resources this way. The query parameter value must be a single-valued
+#' list and contain the `"methods"` string. For example, `GET
+#' /restapis/{restapi_id}/resources/{resource_id}?embed=methods`.
 #'
 #' @return
 #' A list with the following syntax:
@@ -4490,22 +4571,23 @@ apigateway_get_resource <- function(restApiId, resourceId, embed = NULL) {
 #' Lists information about a collection of Resource resources
 #'
 #' @description
-#' Lists information about a collection of Resource resources.
+#' Lists information about a collection of <span>Resource</span> resources.
 #'
 #' @usage
 #' apigateway_get_resources(restApiId, position, limit, embed)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param position The current pagination position in the paged result set.
 #' @param limit The maximum number of returned results per page. The default value is 25
 #' and the maximum value is 500.
 #' @param embed A query parameter used to retrieve the specified resources embedded in
-#' the returned Resources resource in the response. This `embed` parameter
-#' value is a list of comma-separated strings. Currently, the request
-#' supports only retrieval of the embedded Method resources this way. The
-#' query parameter value must be a single-valued list and contain the
-#' `"methods"` string. For example,
-#' `GET /restapis/{restapi_id}/resources?embed=methods`.
+#' the returned <span>Resources</span> resource in the response. This
+#' `embed` parameter value is a list of comma-separated strings. Currently,
+#' the request supports only retrieval of the embedded <span>Method</span>
+#' resources this way. The query parameter value must be a single-valued
+#' list and contain the `"methods"` string. For example, `GET
+#' /restapis/{restapi_id}/resources?embed=methods`.
 #'
 #' @return
 #' A list with the following syntax:
@@ -4625,12 +4707,13 @@ apigateway_get_resources <- function(restApiId, position = NULL, limit = NULL, e
 #' Lists the RestApi resource in the collection
 #'
 #' @description
-#' Lists the RestApi resource in the collection.
+#' Lists the <span>RestApi</span> resource in the collection.
 #'
 #' @usage
 #' apigateway_get_rest_api(restApiId)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #'
 #' @return
 #' A list with the following syntax:
@@ -4697,7 +4780,7 @@ apigateway_get_rest_api <- function(restApiId) {
 #' Lists the RestApis resources for your collection
 #'
 #' @description
-#' Lists the RestApis resources for your collection.
+#' Lists the <span>RestApis</span> resources for your collection.
 #'
 #' @usage
 #' apigateway_get_rest_apis(position, limit)
@@ -4777,13 +4860,15 @@ apigateway_get_rest_apis <- function(position = NULL, limit = NULL) {
 #' Generates a client SDK for a RestApi and Stage
 #'
 #' @description
-#' Generates a client SDK for a RestApi and Stage.
+#' Generates a client SDK for a <span>RestApi</span> and
+#' <span>Stage</span>.
 #'
 #' @usage
 #' apigateway_get_sdk(restApiId, stageName, sdkType, parameters)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param stageName &#91;required&#93; \[Required\] The name of the Stage that the SDK will use.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param stageName &#91;required&#93; \[Required\] The name of the <span>Stage</span> that the SDK will use.
 #' @param sdkType &#91;required&#93; \[Required\] The language for the generated SDK. Currently `java`,
 #' `javascript`, `android`, `objectivec` (for iOS), `swift` (for iOS), and
 #' `ruby` are supported.
@@ -4844,7 +4929,8 @@ apigateway_get_sdk <- function(restApiId, stageName, sdkType, parameters = NULL)
 #' @usage
 #' apigateway_get_sdk_type(id)
 #'
-#' @param id &#91;required&#93; \[Required\] The identifier of the queried SdkType instance.
+#' @param id &#91;required&#93; \[Required\] The identifier of the queried <span>SdkType</span>
+#' instance.
 #'
 #' @return
 #' A list with the following syntax:
@@ -4959,13 +5045,15 @@ apigateway_get_sdk_types <- function(position = NULL, limit = NULL) {
 #' Gets information about a Stage resource
 #'
 #' @description
-#' Gets information about a Stage resource.
+#' Gets information about a <span>Stage</span> resource.
 #'
 #' @usage
 #' apigateway_get_stage(restApiId, stageName)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param stageName &#91;required&#93; \[Required\] The name of the Stage resource to get information about.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param stageName &#91;required&#93; \[Required\] The name of the <span>Stage</span> resource to get
+#' information about.
 #'
 #' @return
 #' A list with the following syntax:
@@ -5053,12 +5141,13 @@ apigateway_get_stage <- function(restApiId, stageName) {
 #' Gets information about one or more Stage resources
 #'
 #' @description
-#' Gets information about one or more Stage resources.
+#' Gets information about one or more <span>Stage</span> resources.
 #'
 #' @usage
 #' apigateway_get_stages(restApiId, deploymentId)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param deploymentId The stages' deployment identifiers.
 #'
 #' @return
@@ -5151,7 +5240,7 @@ apigateway_get_stages <- function(restApiId, deploymentId = NULL) {
 #' Gets the Tags collection for a given resource
 #'
 #' @description
-#' Gets the Tags collection for a given resource.
+#' Gets the <span>Tags</span> collection for a given resource.
 #'
 #' @usage
 #' apigateway_get_tags(resourceArn, position, limit)
@@ -5276,7 +5365,8 @@ apigateway_get_usage <- function(usagePlanId, keyId = NULL, startDate, endDate, 
 #' @usage
 #' apigateway_get_usage_plan(usagePlanId)
 #'
-#' @param usagePlanId &#91;required&#93; \[Required\] The identifier of the UsagePlan resource to be retrieved.
+#' @param usagePlanId &#91;required&#93; \[Required\] The identifier of the <span>UsagePlan</span> resource to be
+#' retrieved.
 #'
 #' @return
 #' A list with the following syntax:
@@ -5348,11 +5438,11 @@ apigateway_get_usage_plan <- function(usagePlanId) {
 #' @usage
 #' apigateway_get_usage_plan_key(usagePlanId, keyId)
 #'
-#' @param usagePlanId &#91;required&#93; \[Required\] The Id of the UsagePlan resource representing the usage
-#' plan containing the to-be-retrieved UsagePlanKey resource representing a
-#' plan customer.
-#' @param keyId &#91;required&#93; \[Required\] The key Id of the to-be-retrieved UsagePlanKey resource
-#' representing a plan customer.
+#' @param usagePlanId &#91;required&#93; \[Required\] The Id of the <span>UsagePlan</span> resource representing
+#' the usage plan containing the to-be-retrieved <span>UsagePlanKey</span>
+#' resource representing a plan customer.
+#' @param keyId &#91;required&#93; \[Required\] The key Id of the to-be-retrieved <span>UsagePlanKey</span>
+#' resource representing a plan customer.
 #'
 #' @return
 #' A list with the following syntax:
@@ -5403,9 +5493,9 @@ apigateway_get_usage_plan_key <- function(usagePlanId, keyId) {
 #' @usage
 #' apigateway_get_usage_plan_keys(usagePlanId, position, limit, nameQuery)
 #'
-#' @param usagePlanId &#91;required&#93; \[Required\] The Id of the UsagePlan resource representing the usage
-#' plan containing the to-be-retrieved UsagePlanKey resource representing a
-#' plan customer.
+#' @param usagePlanId &#91;required&#93; \[Required\] The Id of the <span>UsagePlan</span> resource representing
+#' the usage plan containing the to-be-retrieved <span>UsagePlanKey</span>
+#' resource representing a plan customer.
 #' @param position The current pagination position in the paged result set.
 #' @param limit The maximum number of returned results per page. The default value is 25
 #' and the maximum value is 500.
@@ -5548,8 +5638,8 @@ apigateway_get_usage_plans <- function(position = NULL, keyId = NULL, limit = NU
 #' @usage
 #' apigateway_get_vpc_link(vpcLinkId)
 #'
-#' @param vpcLinkId &#91;required&#93; \[Required\] The identifier of the VpcLink. It is used in an Integration
-#' to reference this VpcLink.
+#' @param vpcLinkId &#91;required&#93; \[Required\] The identifier of the <span>VpcLink</span>. It is used in
+#' an <span>Integration</span> to reference this <span>VpcLink</span>.
 #'
 #' @return
 #' A list with the following syntax:
@@ -5600,8 +5690,8 @@ apigateway_get_vpc_link <- function(vpcLinkId) {
 #' region
 #'
 #' @description
-#' Gets the VpcLinks collection under the caller's account in a selected
-#' region.
+#' Gets the <span>VpcLinks</span> collection under the caller's account in
+#' a selected region.
 #'
 #' @usage
 #' apigateway_get_vpc_links(position, limit)
@@ -5674,8 +5764,8 @@ apigateway_get_vpc_links <- function(position = NULL, limit = NULL) {
 #' Format](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-key-file-format.html).
 #' @param format &#91;required&#93; A query parameter to specify the input format to imported API keys.
 #' Currently, only the `csv` format is supported.
-#' @param failOnWarnings A query parameter to indicate whether to rollback ApiKey importation
-#' (`true`) or not (`false`) when error is encountered.
+#' @param failOnWarnings A query parameter to indicate whether to rollback <span>ApiKey</span>
+#' importation (`true`) or not (`false`) when error is encountered.
 #'
 #' @return
 #' A list with the following syntax:
@@ -5728,10 +5818,12 @@ apigateway_import_api_keys <- function(body, format, failOnWarnings = NULL) {
 #' apigateway_import_documentation_parts(restApiId, mode, failOnWarnings,
 #'   body)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param mode A query parameter to indicate whether to overwrite (`OVERWRITE`) any
-#' existing DocumentationParts definition or to merge (`MERGE`) the new
-#' definition into the existing one. The default value is `MERGE`.
+#' existing <span>DocumentationParts</span> definition or to merge
+#' (`MERGE`) the new definition into the existing one. The default value is
+#' `MERGE`.
 #' @param failOnWarnings A query parameter to specify whether to rollback the documentation
 #' importation (`true`) or not (`false`) when a warning is encountered. The
 #' default value is `false`.
@@ -5799,8 +5891,8 @@ apigateway_import_documentation_parts <- function(restApiId, mode = NULL, failOn
 #' the behavior of different API importing operations. The following shows
 #' operation-specific parameters and their supported values.
 #' 
-#' To exclude DocumentationParts from the import, set `parameters` as
-#' `ignore=documentation`.
+#' To exclude <span>DocumentationParts</span> from the import, set
+#' `parameters` as `ignore=documentation`.
 #' 
 #' To configure the endpoint type, set `parameters` as
 #' `endpointConfigurationTypes=EDGE`,
@@ -5893,43 +5985,46 @@ apigateway_import_rest_api <- function(failOnWarnings = NULL, parameters = NULL,
 #' type and status code on the given RestApi
 #'
 #' @description
-#' Creates a customization of a GatewayResponse of a specified response
-#' type and status code on the given RestApi.
+#' Creates a customization of a <span>GatewayResponse</span> of a specified
+#' response type and status code on the given <span>RestApi</span>.
 #'
 #' @usage
 #' apigateway_put_gateway_response(restApiId, responseType, statusCode,
 #'   responseParameters, responseTemplates)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param responseType &#91;required&#93; \[Required\]
 #' 
-#' The response type of the associated GatewayResponse. Valid values are
+#' The response type of the associated <span>GatewayResponse</span>. Valid
+#' values are
 #' 
-#' -   ACCESS_DENIED
-#' -   API_CONFIGURATION_ERROR
-#' -   AUTHORIZER_FAILURE
-#' -   AUTHORIZER_CONFIGURATION_ERROR
-#' -   BAD_REQUEST_PARAMETERS
-#' -   BAD_REQUEST_BODY
-#' -   DEFAULT_4XX
-#' -   DEFAULT_5XX
-#' -   EXPIRED_TOKEN
-#' -   INVALID_SIGNATURE
-#' -   INTEGRATION_FAILURE
-#' -   INTEGRATION_TIMEOUT
-#' -   INVALID_API_KEY
-#' -   MISSING_AUTHENTICATION_TOKEN
-#' -   QUOTA_EXCEEDED
-#' -   REQUEST_TOO_LARGE
-#' -   RESOURCE_NOT_FOUND
-#' -   THROTTLED
-#' -   UNAUTHORIZED
-#' -   UNSUPPORTED_MEDIA_TYPE
-#' @param statusCode The HTTP status code of the GatewayResponse.
+#'   - ACCESS_DENIED
+#'   - API_CONFIGURATION_ERROR
+#'   - AUTHORIZER_FAILURE
+#'   - AUTHORIZER_CONFIGURATION_ERROR
+#'   - BAD_REQUEST_PARAMETERS
+#'   - BAD_REQUEST_BODY
+#'   - DEFAULT_4XX
+#'   - DEFAULT_5XX
+#'   - EXPIRED_TOKEN
+#'   - INVALID_SIGNATURE
+#'   - INTEGRATION_FAILURE
+#'   - INTEGRATION_TIMEOUT
+#'   - INVALID_API_KEY
+#'   - MISSING_AUTHENTICATION_TOKEN
+#'   - QUOTA_EXCEEDED
+#'   - REQUEST_TOO_LARGE
+#'   - RESOURCE_NOT_FOUND
+#'   - THROTTLED
+#'   - UNAUTHORIZED
+#'   - UNSUPPORTED_MEDIA_TYPE
+#' @param statusCode The HTTP status code of the <span>GatewayResponse</span>.
 #' @param responseParameters Response parameters (paths, query strings and headers) of the
-#' GatewayResponse as a string-to-string map of key-value pairs.
-#' @param responseTemplates Response templates of the GatewayResponse as a string-to-string map of
-#' key-value pairs.
+#' <span>GatewayResponse</span> as a string-to-string map of key-value
+#' pairs.
+#' @param responseTemplates Response templates of the <span>GatewayResponse</span> as a
+#' string-to-string map of key-value pairs.
 #'
 #' @return
 #' A list with the following syntax:
@@ -5994,7 +6089,8 @@ apigateway_put_gateway_response <- function(restApiId, responseType, statusCode 
 #'   cacheNamespace, cacheKeyParameters, contentHandling, timeoutInMillis,
 #'   tlsConfig)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param resourceId &#91;required&#93; \[Required\] Specifies a put integration request's resource ID.
 #' @param httpMethod &#91;required&#93; \[Required\] Specifies a put integration request's HTTP method.
 #' @param type &#91;required&#93; \[Required\] Specifies a put integration input's type.
@@ -6002,7 +6098,7 @@ apigateway_put_gateway_response <- function(restApiId, responseType, statusCode 
 #' HTTP or AWS, this field is required.
 #' @param uri Specifies Uniform Resource Identifier (URI) of the integration endpoint.
 #' 
-#' -   For `HTTP` or `HTTP_PROXY` integrations, the URI must be a fully
+#'   - For `HTTP` or `HTTP_PROXY` integrations, the URI must be a fully
 #'     formed, encoded HTTP(S) URL according to the [RFC-3986
 #'     specification](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier),
 #'     for either standard integration, where `connectionType` is not
@@ -6010,7 +6106,7 @@ apigateway_put_gateway_response <- function(restApiId, responseType, statusCode 
 #'     `VPC_LINK`. For a private HTTP integration, the URI is not used for
 #'     routing.
 #' 
-#' -   For `AWS` or `AWS_PROXY` integrations, the URI is of the form
+#'   - For `AWS` or `AWS_PROXY` integrations, the URI is of the form
 #'     `arn:aws:apigateway:{region}:{subdomain.service|service}:path|action/{service_api}`.
 #'     Here, `{Region}` is the API Gateway region (e.g., `us-east-1`);
 #'     `{service}` is the name of the integrated AWS service (e.g., `s3`);
@@ -6032,8 +6128,8 @@ apigateway_put_gateway_response <- function(restApiId, responseType, statusCode 
 #' network load balancer in a VPC. The default value is `INTERNET`.
 #' @param connectionId The
 #' ([`id`](https://docs.aws.amazon.com/apigateway/api-reference/resource/vpc-link/#id))
-#' of the VpcLink used for the integration when `connectionType=VPC_LINK`
-#' and undefined, otherwise.
+#' of the <span>VpcLink</span> used for the integration when
+#' `connectionType=VPC_LINK` and undefined, otherwise.
 #' @param credentials Specifies whether credentials are required for a put integration.
 #' @param requestParameters A key-value map specifying request parameters that are passed from the
 #' method request to the back end. The key is an integration request
@@ -6053,13 +6149,13 @@ apigateway_put_gateway_response <- function(restApiId, responseType, statusCode 
 #' resource. There are three valid values: `WHEN_NO_MATCH`,
 #' `WHEN_NO_TEMPLATES`, and `NEVER`.
 #' 
-#' -   `WHEN_NO_MATCH` passes the request body for unmapped content types
+#'   - `WHEN_NO_MATCH` passes the request body for unmapped content types
 #'     through to the integration back end without transformation.
 #' 
-#' -   `NEVER` rejects unmapped content types with an HTTP 415 'Unsupported
+#'   - `NEVER` rejects unmapped content types with an HTTP 415 'Unsupported
 #'     Media Type' response.
 #' 
-#' -   `WHEN_NO_TEMPLATES` allows pass-through when the integration has NO
+#'   - `WHEN_NO_TEMPLATES` allows pass-through when the integration has NO
 #'     content types mapped to templates. However if there is at least one
 #'     content type defined, unmapped content types will be rejected with
 #'     the same 415 response.
@@ -6069,15 +6165,15 @@ apigateway_put_gateway_response <- function(restApiId, responseType, statusCode 
 #' requests to different resources.
 #' @param cacheKeyParameters A list of request parameters whose values API Gateway caches. To be
 #' valid values for `cacheKeyParameters`, these parameters must also be
-#' specified for Method `requestParameters`.
+#' specified for <span>Method</span> `requestParameters`.
 #' @param contentHandling Specifies how to handle request payload content type conversions.
 #' Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`, with the
 #' following behaviors:
 #' 
-#' -   `CONVERT_TO_BINARY`: Converts a request payload from a
+#'   - `CONVERT_TO_BINARY`: Converts a request payload from a
 #'     Base64-encoded string to the corresponding binary blob.
 #' 
-#' -   `CONVERT_TO_TEXT`: Converts a request payload from a binary blob to
+#'   - `CONVERT_TO_TEXT`: Converts a request payload from a binary blob to
 #'     a Base64-encoded string.
 #' 
 #' If this property is not defined, the request payload will be passed
@@ -6191,12 +6287,13 @@ apigateway_put_integration <- function(restApiId, resourceId, httpMethod, type, 
 #'   statusCode, selectionPattern, responseParameters, responseTemplates,
 #'   contentHandling)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param resourceId &#91;required&#93; \[Required\] Specifies a put integration response request's resource
 #' identifier.
 #' @param httpMethod &#91;required&#93; \[Required\] Specifies a put integration response request's HTTP method.
 #' @param statusCode &#91;required&#93; \[Required\] Specifies the status code that is used to map the
-#' integration response to an existing MethodResponse.
+#' integration response to an existing <span>MethodResponse</span>.
 #' @param selectionPattern Specifies the selection pattern of a put integration response.
 #' @param responseParameters A key-value map specifying response parameters that are passed to the
 #' method response from the back end. The key is a method response header
@@ -6214,10 +6311,10 @@ apigateway_put_integration <- function(restApiId, resourceId, httpMethod, type, 
 #' Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`, with the
 #' following behaviors:
 #' 
-#' -   `CONVERT_TO_BINARY`: Converts a response payload from a
+#'   - `CONVERT_TO_BINARY`: Converts a response payload from a
 #'     Base64-encoded string to the corresponding binary blob.
 #' 
-#' -   `CONVERT_TO_TEXT`: Converts a response payload from a binary blob to
+#'   - `CONVERT_TO_TEXT`: Converts a response payload from a binary blob to
 #'     a Base64-encoded string.
 #' 
 #' If this property is not defined, the response payload will be passed
@@ -6281,7 +6378,7 @@ apigateway_put_integration_response <- function(restApiId, resourceId, httpMetho
 #' Add a method to an existing Resource resource
 #'
 #' @description
-#' Add a method to an existing Resource resource.
+#' Add a method to an existing <span>Resource</span> resource.
 #'
 #' @usage
 #' apigateway_put_method(restApiId, resourceId, httpMethod,
@@ -6289,17 +6386,19 @@ apigateway_put_integration_response <- function(restApiId, resourceId, httpMetho
 #'   requestParameters, requestModels, requestValidatorId,
 #'   authorizationScopes)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param resourceId &#91;required&#93; \[Required\] The Resource identifier for the new Method resource.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param resourceId &#91;required&#93; \[Required\] The <span>Resource</span> identifier for the new
+#' <span>Method</span> resource.
 #' @param httpMethod &#91;required&#93; \[Required\] Specifies the method request's HTTP method type.
 #' @param authorizationType &#91;required&#93; \[Required\] The method's authorization type. Valid values are `NONE`
 #' for open access, `AWS_IAM` for using AWS IAM permissions, `CUSTOM` for
 #' using a custom authorizer, or `COGNITO_USER_POOLS` for using a Cognito
 #' user pool.
-#' @param authorizerId Specifies the identifier of an Authorizer to use on this Method, if the
-#' type is CUSTOM or COGNITO_USER_POOLS. The authorizer identifier is
-#' generated by API Gateway when you created the authorizer.
-#' @param apiKeyRequired Specifies whether the method required a valid ApiKey.
+#' @param authorizerId Specifies the identifier of an <span>Authorizer</span> to use on this
+#' Method, if the type is CUSTOM or COGNITO_USER_POOLS. The authorizer
+#' identifier is generated by API Gateway when you created the authorizer.
+#' @param apiKeyRequired Specifies whether the method required a valid <span>ApiKey</span>.
 #' @param operationName A human-friendly operation identifier for the method. For example, you
 #' can assign the `operationName` of `ListPets` for the `GET /pets` method
 #' in the `PetStore` example.
@@ -6310,12 +6409,14 @@ apigateway_put_integration_response <- function(restApiId, resourceId, httpMetho
 #' `path`, or `header` and `name` is a valid and unique parameter name. The
 #' value associated with the key is a Boolean flag indicating whether the
 #' parameter is required (`true`) or optional (`false`). The method request
-#' parameter names defined here are available in Integration to be mapped
-#' to integration request parameters or body-mapping templates.
-#' @param requestModels Specifies the Model resources used for the request's content type.
-#' Request models are represented as a key/value map, with a content type
-#' as the key and a Model name as the value.
-#' @param requestValidatorId The identifier of a RequestValidator for validating the method request.
+#' parameter names defined here are available in <span>Integration</span>
+#' to be mapped to integration request parameters or body-mapping
+#' templates.
+#' @param requestModels Specifies the <span>Model</span> resources used for the request's
+#' content type. Request models are represented as a key/value map, with a
+#' content type as the key and a <span>Model</span> name as the value.
+#' @param requestValidatorId The identifier of a <span>RequestValidator</span> for validating the
+#' method request.
 #' @param authorizationScopes A list of authorization scopes configured on the method. The scopes are
 #' used with a `COGNITO_USER_POOLS` authorizer to authorize the method
 #' invocation. The authorization works by matching the method scopes
@@ -6441,15 +6542,18 @@ apigateway_put_method <- function(restApiId, resourceId, httpMethod, authorizati
 #' Adds a MethodResponse to an existing Method resource
 #'
 #' @description
-#' Adds a MethodResponse to an existing Method resource.
+#' Adds a <span>MethodResponse</span> to an existing <span>Method</span>
+#' resource.
 #'
 #' @usage
 #' apigateway_put_method_response(restApiId, resourceId, httpMethod,
 #'   statusCode, responseParameters, responseModels)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param resourceId &#91;required&#93; \[Required\] The Resource identifier for the Method resource.
-#' @param httpMethod &#91;required&#93; \[Required\] The HTTP verb of the Method resource.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param resourceId &#91;required&#93; \[Required\] The <span>Resource</span> identifier for the
+#' <span>Method</span> resource.
+#' @param httpMethod &#91;required&#93; \[Required\] The HTTP verb of the <span>Method</span> resource.
 #' @param statusCode &#91;required&#93; \[Required\] The method response's status code.
 #' @param responseParameters A key-value map specifying required or optional response parameters that
 #' API Gateway can send back to the caller. A key defines a method response
@@ -6464,9 +6568,9 @@ apigateway_put_method <- function(restApiId, resourceId, httpMethod, authorizati
 #' a JSON expression from the back-end response payload in the form of
 #' `integration.response.body.{JSON-expression}`, where `JSON-expression`
 #' is a valid JSON expression without the `$` prefix.)
-#' @param responseModels Specifies the Model resources used for the response's content type.
-#' Response models are represented as a key/value map, with a content type
-#' as the key and a Model name as the value.
+#' @param responseModels Specifies the <span>Model</span> resources used for the response's
+#' content type. Response models are represented as a key/value map, with a
+#' content type as the key and a <span>Model</span> name as the value.
 #'
 #' @return
 #' A list with the following syntax:
@@ -6531,16 +6635,18 @@ apigateway_put_method_response <- function(restApiId, resourceId, httpMethod, st
 #' apigateway_put_rest_api(restApiId, mode, failOnWarnings, parameters,
 #'   body)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param mode The `mode` query parameter to specify the update mode. Valid values are
 #' "merge" and "overwrite". By default, the update mode is "merge".
 #' @param failOnWarnings A query parameter to indicate whether to rollback the API update
 #' (`true`) or not (`false`) when a warning is encountered. The default
 #' value is `false`.
 #' @param parameters Custom header parameters as part of the request. For example, to exclude
-#' DocumentationParts from an imported API, set `ignore=documentation` as a
-#' `parameters` value, as in the AWS CLI command of
-#' `aws apigateway import-rest-api --parameters ignore=documentation --body 'file:///path/to/imported-api-body.json'`.
+#' <span>DocumentationParts</span> from an imported API, set
+#' `ignore=documentation` as a `parameters` value, as in the AWS CLI
+#' command of `aws apigateway import-rest-api --parameters
+#' ignore=documentation --body 'file:///path/to/imported-api-body.json'`.
 #' @param body &#91;required&#93; \[Required\] The PUT request body containing external API definitions.
 #' Currently, only OpenAPI definition JSON/YAML files are supported. The
 #' maximum size of the API definition file is 6MB.
@@ -6663,8 +6769,9 @@ apigateway_tag_resource <- function(resourceArn, tags) {
 #' parameters, and an incoming request body
 #'
 #' @description
-#' Simulate the execution of an Authorizer in your RestApi with headers,
-#' parameters, and an incoming request body.
+#' Simulate the execution of an <span>Authorizer</span> in your
+#' <span>RestApi</span> with headers, parameters, and an incoming request
+#' body.
 #' 
 #' <div class="seeAlso">
 #' 
@@ -6680,8 +6787,10 @@ apigateway_tag_resource <- function(resourceArn, tags) {
 #'   multiValueHeaders, pathWithQueryString, body, stageVariables,
 #'   additionalContext)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param authorizerId &#91;required&#93; \[Required\] Specifies a test invoke authorizer request's Authorizer ID.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param authorizerId &#91;required&#93; \[Required\] Specifies a test invoke authorizer request's
+#' <span>Authorizer</span> ID.
 #' @param headers \[Required\] A key-value map of headers to simulate an incoming
 #' invocation request. This is where the incoming authorization token, or
 #' identity source, should be specified.
@@ -6694,7 +6803,7 @@ apigateway_tag_resource <- function(resourceArn, tags) {
 #' @param body \[Optional\] The simulated request body of an incoming invocation
 #' request.
 #' @param stageVariables A key-value map of stage variables to simulate an invocation on a
-#' deployed Stage.
+#' deployed <span>Stage</span>.
 #' @param additionalContext \[Optional\] A key-value map of additional context variables.
 #'
 #' @return
@@ -6765,15 +6874,17 @@ apigateway_test_invoke_authorizer <- function(restApiId, authorizerId, headers =
 #' parameters, and an incoming request body
 #'
 #' @description
-#' Simulate the execution of a Method in your RestApi with headers,
-#' parameters, and an incoming request body.
+#' Simulate the execution of a <span>Method</span> in your
+#' <span>RestApi</span> with headers, parameters, and an incoming request
+#' body.
 #'
 #' @usage
 #' apigateway_test_invoke_method(restApiId, resourceId, httpMethod,
 #'   pathWithQueryString, body, headers, multiValueHeaders,
 #'   clientCertificateId, stageVariables)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param resourceId &#91;required&#93; \[Required\] Specifies a test invoke method request's resource ID.
 #' @param httpMethod &#91;required&#93; \[Required\] Specifies a test invoke method request's HTTP method.
 #' @param pathWithQueryString The URI path, including query string, of the simulated invocation
@@ -6783,11 +6894,11 @@ apigateway_test_invoke_authorizer <- function(restApiId, authorizerId, headers =
 #' @param headers A key-value map of headers to simulate an incoming invocation request.
 #' @param multiValueHeaders The headers as a map from string to list of values to simulate an
 #' incoming invocation request.
-#' @param clientCertificateId A ClientCertificate identifier to use in the test invocation. API
-#' Gateway will use the certificate when making the HTTPS request to the
-#' defined back-end endpoint.
+#' @param clientCertificateId A <span>ClientCertificate</span> identifier to use in the test
+#' invocation. API Gateway will use the certificate when making the HTTPS
+#' request to the defined back-end endpoint.
 #' @param stageVariables A key-value map of stage variables to simulate an invocation on a
-#' deployed Stage.
+#' deployed <span>Stage</span>.
 #'
 #' @return
 #' A list with the following syntax:
@@ -6898,7 +7009,7 @@ apigateway_untag_resource <- function(resourceArn, tagKeys) {
 #' Changes information about the current Account resource
 #'
 #' @description
-#' Changes information about the current Account resource.
+#' Changes information about the current <span>Account</span> resource.
 #'
 #' @usage
 #' apigateway_update_account(patchOperations)
@@ -6959,12 +7070,13 @@ apigateway_update_account <- function(patchOperations = NULL) {
 #' Changes information about an ApiKey resource
 #'
 #' @description
-#' Changes information about an ApiKey resource.
+#' Changes information about an <span>ApiKey</span> resource.
 #'
 #' @usage
 #' apigateway_update_api_key(apiKey, patchOperations)
 #'
-#' @param apiKey &#91;required&#93; \[Required\] The identifier of the ApiKey resource to be updated.
+#' @param apiKey &#91;required&#93; \[Required\] The identifier of the <span>ApiKey</span> resource to be
+#' updated.
 #' @param patchOperations A list of update operations to be applied to the specified resource and
 #' in the order specified in this list.
 #'
@@ -7031,7 +7143,7 @@ apigateway_update_api_key <- function(apiKey, patchOperations = NULL) {
 #' Updates an existing Authorizer resource
 #'
 #' @description
-#' Updates an existing Authorizer resource.
+#' Updates an existing <span>Authorizer</span> resource.
 #' 
 #' <div class="seeAlso">
 #' 
@@ -7043,8 +7155,9 @@ apigateway_update_api_key <- function(apiKey, patchOperations = NULL) {
 #' @usage
 #' apigateway_update_authorizer(restApiId, authorizerId, patchOperations)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param authorizerId &#91;required&#93; \[Required\] The identifier of the Authorizer resource.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param authorizerId &#91;required&#93; \[Required\] The identifier of the <span>Authorizer</span> resource.
 #' @param patchOperations A list of update operations to be applied to the specified resource and
 #' in the order specified in this list.
 #'
@@ -7106,14 +7219,16 @@ apigateway_update_authorizer <- function(restApiId, authorizerId, patchOperation
 #' Changes information about the BasePathMapping resource
 #'
 #' @description
-#' Changes information about the BasePathMapping resource.
+#' Changes information about the <span>BasePathMapping</span> resource.
 #'
 #' @usage
 #' apigateway_update_base_path_mapping(domainName, basePath,
 #'   patchOperations)
 #'
-#' @param domainName &#91;required&#93; \[Required\] The domain name of the BasePathMapping resource to change.
-#' @param basePath &#91;required&#93; \[Required\] The base path of the BasePathMapping resource to change.
+#' @param domainName &#91;required&#93; \[Required\] The domain name of the <span>BasePathMapping</span>
+#' resource to change.
+#' @param basePath &#91;required&#93; \[Required\] The base path of the <span>BasePathMapping</span> resource
+#' to change.
 #' 
 #' To specify an empty base path, set this parameter to `'(none)'`.
 #' @param patchOperations A list of update operations to be applied to the specified resource and
@@ -7168,14 +7283,14 @@ apigateway_update_base_path_mapping <- function(domainName, basePath, patchOpera
 #' Changes information about an ClientCertificate resource
 #'
 #' @description
-#' Changes information about an ClientCertificate resource.
+#' Changes information about an <span>ClientCertificate</span> resource.
 #'
 #' @usage
 #' apigateway_update_client_certificate(clientCertificateId,
 #'   patchOperations)
 #'
-#' @param clientCertificateId &#91;required&#93; \[Required\] The identifier of the ClientCertificate resource to be
-#' updated.
+#' @param clientCertificateId &#91;required&#93; \[Required\] The identifier of the <span>ClientCertificate</span>
+#' resource to be updated.
 #' @param patchOperations A list of update operations to be applied to the specified resource and
 #' in the order specified in this list.
 #'
@@ -7236,14 +7351,15 @@ apigateway_update_client_certificate <- function(clientCertificateId, patchOpera
 #' Changes information about a Deployment resource
 #'
 #' @description
-#' Changes information about a Deployment resource.
+#' Changes information about a <span>Deployment</span> resource.
 #'
 #' @usage
 #' apigateway_update_deployment(restApiId, deploymentId, patchOperations)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param deploymentId &#91;required&#93; The replacement identifier for the Deployment resource to change
-#' information about.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param deploymentId &#91;required&#93; The replacement identifier for the <span>Deployment</span> resource to
+#' change information about.
 #' @param patchOperations A list of update operations to be applied to the specified resource and
 #' in the order specified in this list.
 #'
@@ -7312,7 +7428,8 @@ apigateway_update_deployment <- function(restApiId, deploymentId, patchOperation
 #' apigateway_update_documentation_part(restApiId, documentationPartId,
 #'   patchOperations)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param documentationPartId &#91;required&#93; \[Required\] The identifier of the to-be-updated documentation part.
 #' @param patchOperations A list of update operations to be applied to the specified resource and
 #' in the order specified in this list.
@@ -7378,7 +7495,8 @@ apigateway_update_documentation_part <- function(restApiId, documentationPartId,
 #' apigateway_update_documentation_version(restApiId, documentationVersion,
 #'   patchOperations)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi..
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>..
 #' @param documentationVersion &#91;required&#93; \[Required\] The version identifier of the to-be-updated documentation
 #' version.
 #' @param patchOperations A list of update operations to be applied to the specified resource and
@@ -7435,12 +7553,13 @@ apigateway_update_documentation_version <- function(restApiId, documentationVers
 #' Changes information about the DomainName resource
 #'
 #' @description
-#' Changes information about the DomainName resource.
+#' Changes information about the <span>DomainName</span> resource.
 #'
 #' @usage
 #' apigateway_update_domain_name(domainName, patchOperations)
 #'
-#' @param domainName &#91;required&#93; \[Required\] The name of the DomainName resource to be changed.
+#' @param domainName &#91;required&#93; \[Required\] The name of the <span>DomainName</span> resource to be
+#' changed.
 #' @param patchOperations A list of update operations to be applied to the specified resource and
 #' in the order specified in this list.
 #'
@@ -7523,38 +7642,40 @@ apigateway_update_domain_name <- function(domainName, patchOperations = NULL) {
 #' RestApi
 #'
 #' @description
-#' Updates a GatewayResponse of a specified response type on the given
-#' RestApi.
+#' Updates a <span>GatewayResponse</span> of a specified response type on
+#' the given <span>RestApi</span>.
 #'
 #' @usage
 #' apigateway_update_gateway_response(restApiId, responseType,
 #'   patchOperations)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param responseType &#91;required&#93; \[Required\]
 #' 
-#' The response type of the associated GatewayResponse. Valid values are
+#' The response type of the associated <span>GatewayResponse</span>. Valid
+#' values are
 #' 
-#' -   ACCESS_DENIED
-#' -   API_CONFIGURATION_ERROR
-#' -   AUTHORIZER_FAILURE
-#' -   AUTHORIZER_CONFIGURATION_ERROR
-#' -   BAD_REQUEST_PARAMETERS
-#' -   BAD_REQUEST_BODY
-#' -   DEFAULT_4XX
-#' -   DEFAULT_5XX
-#' -   EXPIRED_TOKEN
-#' -   INVALID_SIGNATURE
-#' -   INTEGRATION_FAILURE
-#' -   INTEGRATION_TIMEOUT
-#' -   INVALID_API_KEY
-#' -   MISSING_AUTHENTICATION_TOKEN
-#' -   QUOTA_EXCEEDED
-#' -   REQUEST_TOO_LARGE
-#' -   RESOURCE_NOT_FOUND
-#' -   THROTTLED
-#' -   UNAUTHORIZED
-#' -   UNSUPPORTED_MEDIA_TYPE
+#'   - ACCESS_DENIED
+#'   - API_CONFIGURATION_ERROR
+#'   - AUTHORIZER_FAILURE
+#'   - AUTHORIZER_CONFIGURATION_ERROR
+#'   - BAD_REQUEST_PARAMETERS
+#'   - BAD_REQUEST_BODY
+#'   - DEFAULT_4XX
+#'   - DEFAULT_5XX
+#'   - EXPIRED_TOKEN
+#'   - INVALID_SIGNATURE
+#'   - INTEGRATION_FAILURE
+#'   - INTEGRATION_TIMEOUT
+#'   - INVALID_API_KEY
+#'   - MISSING_AUTHENTICATION_TOKEN
+#'   - QUOTA_EXCEEDED
+#'   - REQUEST_TOO_LARGE
+#'   - RESOURCE_NOT_FOUND
+#'   - THROTTLED
+#'   - UNAUTHORIZED
+#'   - UNSUPPORTED_MEDIA_TYPE
 #' @param patchOperations A list of update operations to be applied to the specified resource and
 #' in the order specified in this list.
 #'
@@ -7619,7 +7740,8 @@ apigateway_update_gateway_response <- function(restApiId, responseType, patchOpe
 #' apigateway_update_integration(restApiId, resourceId, httpMethod,
 #'   patchOperations)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param resourceId &#91;required&#93; \[Required\] Represents an update integration request's resource
 #' identifier.
 #' @param httpMethod &#91;required&#93; \[Required\] Represents an update integration request's HTTP method.
@@ -7714,7 +7836,8 @@ apigateway_update_integration <- function(restApiId, resourceId, httpMethod, pat
 #' apigateway_update_integration_response(restApiId, resourceId,
 #'   httpMethod, statusCode, patchOperations)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param resourceId &#91;required&#93; \[Required\] Specifies an update integration response request's resource
 #' identifier.
 #' @param httpMethod &#91;required&#93; \[Required\] Specifies an update integration response request's HTTP
@@ -7781,15 +7904,17 @@ apigateway_update_integration_response <- function(restApiId, resourceId, httpMe
 #' Updates an existing Method resource
 #'
 #' @description
-#' Updates an existing Method resource.
+#' Updates an existing <span>Method</span> resource.
 #'
 #' @usage
 #' apigateway_update_method(restApiId, resourceId, httpMethod,
 #'   patchOperations)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param resourceId &#91;required&#93; \[Required\] The Resource identifier for the Method resource.
-#' @param httpMethod &#91;required&#93; \[Required\] The HTTP verb of the Method resource.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param resourceId &#91;required&#93; \[Required\] The <span>Resource</span> identifier for the
+#' <span>Method</span> resource.
+#' @param httpMethod &#91;required&#93; \[Required\] The HTTP verb of the <span>Method</span> resource.
 #' @param patchOperations A list of update operations to be applied to the specified resource and
 #' in the order specified in this list.
 #'
@@ -7903,16 +8028,19 @@ apigateway_update_method <- function(restApiId, resourceId, httpMethod, patchOpe
 #' Updates an existing MethodResponse resource
 #'
 #' @description
-#' Updates an existing MethodResponse resource.
+#' Updates an existing <span>MethodResponse</span> resource.
 #'
 #' @usage
 #' apigateway_update_method_response(restApiId, resourceId, httpMethod,
 #'   statusCode, patchOperations)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param resourceId &#91;required&#93; \[Required\] The Resource identifier for the MethodResponse resource.
-#' @param httpMethod &#91;required&#93; \[Required\] The HTTP verb of the Method resource.
-#' @param statusCode &#91;required&#93; \[Required\] The status code for the MethodResponse resource.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param resourceId &#91;required&#93; \[Required\] The <span>Resource</span> identifier for the
+#' <span>MethodResponse</span> resource.
+#' @param httpMethod &#91;required&#93; \[Required\] The HTTP verb of the <span>Method</span> resource.
+#' @param statusCode &#91;required&#93; \[Required\] The status code for the <span>MethodResponse</span>
+#' resource.
 #' @param patchOperations A list of update operations to be applied to the specified resource and
 #' in the order specified in this list.
 #'
@@ -7976,7 +8104,8 @@ apigateway_update_method_response <- function(restApiId, resourceId, httpMethod,
 #' @usage
 #' apigateway_update_model(restApiId, modelName, patchOperations)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param modelName &#91;required&#93; \[Required\] The name of the model to update.
 #' @param patchOperations A list of update operations to be applied to the specified resource and
 #' in the order specified in this list.
@@ -8032,14 +8161,16 @@ apigateway_update_model <- function(restApiId, modelName, patchOperations = NULL
 #' Updates a RequestValidator of a given RestApi
 #'
 #' @description
-#' Updates a RequestValidator of a given RestApi.
+#' Updates a <span>RequestValidator</span> of a given <span>RestApi</span>.
 #'
 #' @usage
 #' apigateway_update_request_validator(restApiId, requestValidatorId,
 #'   patchOperations)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param requestValidatorId &#91;required&#93; \[Required\] The identifier of RequestValidator to be updated.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param requestValidatorId &#91;required&#93; \[Required\] The identifier of <span>RequestValidator</span> to be
+#' updated.
 #' @param patchOperations A list of update operations to be applied to the specified resource and
 #' in the order specified in this list.
 #'
@@ -8093,13 +8224,14 @@ apigateway_update_request_validator <- function(restApiId, requestValidatorId, p
 #' Changes information about a Resource resource
 #'
 #' @description
-#' Changes information about a Resource resource.
+#' Changes information about a <span>Resource</span> resource.
 #'
 #' @usage
 #' apigateway_update_resource(restApiId, resourceId, patchOperations)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param resourceId &#91;required&#93; \[Required\] The identifier of the Resource resource.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param resourceId &#91;required&#93; \[Required\] The identifier of the <span>Resource</span> resource.
 #' @param patchOperations A list of update operations to be applied to the specified resource and
 #' in the order specified in this list.
 #'
@@ -8225,7 +8357,8 @@ apigateway_update_resource <- function(restApiId, resourceId, patchOperations = 
 #' @usage
 #' apigateway_update_rest_api(restApiId, patchOperations)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
 #' @param patchOperations A list of update operations to be applied to the specified resource and
 #' in the order specified in this list.
 #'
@@ -8302,13 +8435,15 @@ apigateway_update_rest_api <- function(restApiId, patchOperations = NULL) {
 #' Changes information about a Stage resource
 #'
 #' @description
-#' Changes information about a Stage resource.
+#' Changes information about a <span>Stage</span> resource.
 #'
 #' @usage
 #' apigateway_update_stage(restApiId, stageName, patchOperations)
 #'
-#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated RestApi.
-#' @param stageName &#91;required&#93; \[Required\] The name of the Stage resource to change information about.
+#' @param restApiId &#91;required&#93; \[Required\] The string identifier of the associated
+#' <span>RestApi</span>.
+#' @param stageName &#91;required&#93; \[Required\] The name of the <span>Stage</span> resource to change
+#' information about.
 #' @param patchOperations A list of update operations to be applied to the specified resource and
 #' in the order specified in this list.
 #'
@@ -8558,13 +8693,13 @@ apigateway_update_usage_plan <- function(usagePlanId, patchOperations = NULL) {
 #' Updates an existing VpcLink of a specified identifier
 #'
 #' @description
-#' Updates an existing VpcLink of a specified identifier.
+#' Updates an existing <span>VpcLink</span> of a specified identifier.
 #'
 #' @usage
 #' apigateway_update_vpc_link(vpcLinkId, patchOperations)
 #'
-#' @param vpcLinkId &#91;required&#93; \[Required\] The identifier of the VpcLink. It is used in an Integration
-#' to reference this VpcLink.
+#' @param vpcLinkId &#91;required&#93; \[Required\] The identifier of the <span>VpcLink</span>. It is used in
+#' an <span>Integration</span> to reference this <span>VpcLink</span>.
 #' @param patchOperations A list of update operations to be applied to the specified resource and
 #' in the order specified in this list.
 #'

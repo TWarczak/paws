@@ -11,7 +11,7 @@ mq_describe_user(BrokerId, Username)
 
 \item{Username}{[required] The username of the ActiveMQ user. This value can contain only
 alphanumeric characters, dashes, periods, underscores, and tildes (- .
-_ ~). This value must be 2-100 characters long.}
+_ \~). This value must be 2-100 characters long.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

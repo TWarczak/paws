@@ -74,7 +74,7 @@ A list with the following syntax:\preformatted{list(
 Creates an alias for the specified version of the bot or replaces an
 alias for the specified bot. To change the version of the bot that the
 alias points to, replace the alias. For more information about aliases,
-see versioning-aliases.
+see <span>versioning-aliases</span>.
 
 This operation requires permissions for the \code{lex:PutBotAlias} action.
 }

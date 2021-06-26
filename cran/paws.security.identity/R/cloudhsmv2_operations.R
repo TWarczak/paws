@@ -87,9 +87,9 @@ cloudhsmv2_copy_backup_to_region <- function(DestinationRegion, BackupId, TagLis
 #' You must specify at least one subnet. If you specify multiple subnets,
 #' they must meet the following criteria:
 #' 
-#' -   All subnets must be in the same virtual private cloud (VPC).
+#'   - All subnets must be in the same virtual private cloud (VPC).
 #' 
-#' -   You can specify only one subnet per Availability Zone.
+#'   - You can specify only one subnet per Availability Zone.
 #' @param TagList Tags to apply to the CloudHSM cluster during creation.
 #'
 #' @return

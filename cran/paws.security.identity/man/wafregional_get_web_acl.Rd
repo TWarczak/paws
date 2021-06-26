@@ -2,14 +2,14 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_get_web_acl}
 \alias{wafregional_get_web_acl}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 wafregional_get_web_acl(WebACLId)
 }
 \arguments{
-\item{WebACLId}{[required] The \code{WebACLId} of the WebACL that you want to get. \code{WebACLId} is
-returned by \code{\link[=wafregional_create_web_acl]{create_web_acl}} and by
-\code{\link[=wafregional_list_web_ac_ls]{list_web_ac_ls}}.}
+\item{WebACLId}{[required] The \code{WebACLId} of the <span>WebACL</span> that you want to get.
+\code{WebACLId} is returned by \code{\link[=wafregional_create_web_acl]{create_web_acl}}
+and by \code{\link[=wafregional_list_web_ac_ls]{list_web_ac_ls}}.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -53,7 +53,7 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Returns the WebACL that is specified by \code{WebACLId}.
+Returns the <span>WebACL</span> that is specified by \code{WebACLId}.
 }
 \section{Request syntax}{
 \preformatted{svc$get_web_acl(

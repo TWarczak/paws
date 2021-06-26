@@ -31,10 +31,10 @@ NULL
 #' The AWS Serverless Application Repository Developer Guide contains more
 #' information about the two developer experiences available:
 #' 
-#' -   Consuming Applications – Browse for applications and view
+#'   - Consuming Applications – Browse for applications and view
 #'     information about them, including source code and readme files. Also
 #'     install, configure, and deploy applications of your choosing.
-#' 
+#'     
 #'     Publishing Applications – Configure and upload applications to make
 #'     them available to other developers, and publish new versions of
 #'     applications.
@@ -86,6 +86,12 @@ NULL
 #'  \link[=serverlessapplicationrepository_unshare_application]{unshare_application} \tab Unshares an application from an AWS Organization\cr
 #'  \link[=serverlessapplicationrepository_update_application]{update_application} \tab Updates the specified application
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname serverlessapplicationrepository
 #' @export

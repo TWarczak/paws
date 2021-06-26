@@ -6,17 +6,18 @@ NULL
 #' Adds a new Facet to an object
 #'
 #' @description
-#' Adds a new Facet to an object. An object can have more than one facet
-#' applied on it.
+#' Adds a new <span>Facet</span> to an object. An object can have more than
+#' one facet applied on it.
 #'
 #' @usage
 #' clouddirectory_add_facet_to_object(DirectoryArn, SchemaFacet,
 #'   ObjectAttributeList, ObjectReference)
 #'
-#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the Directory
-#' where the object resides. For more information, see arns.
+#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the
+#' <span>Directory</span> where the object resides. For more information,
+#' see <span>arns</span>.
 #' @param SchemaFacet &#91;required&#93; Identifiers for the facet that you are adding to the object. See
-#' SchemaFacet for details.
+#' <span>SchemaFacet</span> for details.
 #' @param ObjectAttributeList Attributes on the facet that you are adding to the object.
 #' @param ObjectReference &#91;required&#93; A reference to the object you are adding the specified facet to.
 #'
@@ -80,16 +81,17 @@ clouddirectory_add_facet_to_object <- function(DirectoryArn, SchemaFacet, Object
 #'
 #' @description
 #' Copies the input published schema, at the specified version, into the
-#' Directory with the same name and version as that of the published
-#' schema.
+#' <span>Directory</span> with the same name and version as that of the
+#' published schema.
 #'
 #' @usage
 #' clouddirectory_apply_schema(PublishedSchemaArn, DirectoryArn)
 #'
 #' @param PublishedSchemaArn &#91;required&#93; Published schema Amazon Resource Name (ARN) that needs to be copied. For
-#' more information, see arns.
-#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the Directory
-#' into which the schema is copied. For more information, see arns.
+#' more information, see <span>arns</span>.
+#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the
+#' <span>Directory</span> into which the schema is copied. For more
+#' information, see <span>arns</span>.
 #'
 #' @return
 #' A list with the following syntax:
@@ -142,8 +144,9 @@ clouddirectory_apply_schema <- function(PublishedSchemaArn, DirectoryArn) {
 #' clouddirectory_attach_object(DirectoryArn, ParentReference,
 #'   ChildReference, LinkName)
 #'
-#' @param DirectoryArn &#91;required&#93; Amazon Resource Name (ARN) that is associated with the Directory where
-#' both objects reside. For more information, see arns.
+#' @param DirectoryArn &#91;required&#93; Amazon Resource Name (ARN) that is associated with the
+#' <span>Directory</span> where both objects reside. For more information,
+#' see <span>arns</span>.
 #' @param ParentReference &#91;required&#93; The parent object reference.
 #' @param ChildReference &#91;required&#93; The child object reference to be attached to the object.
 #' @param LinkName &#91;required&#93; The link name with which the child object is attached to the parent.
@@ -200,8 +203,9 @@ clouddirectory_attach_object <- function(DirectoryArn, ParentReference, ChildRef
 #' clouddirectory_attach_policy(DirectoryArn, PolicyReference,
 #'   ObjectReference)
 #'
-#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the Directory
-#' where both objects reside. For more information, see arns.
+#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the
+#' <span>Directory</span> where both objects reside. For more information,
+#' see <span>arns</span>.
 #' @param PolicyReference &#91;required&#93; The reference that is associated with the policy object.
 #' @param ObjectReference &#91;required&#93; The reference that identifies the object to which the policy will be
 #' attached.
@@ -407,8 +411,8 @@ clouddirectory_attach_typed_link <- function(DirectoryArn, SourceObjectReference
 #' @usage
 #' clouddirectory_batch_read(DirectoryArn, Operations, ConsistencyLevel)
 #'
-#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the Directory.
-#' For more information, see arns.
+#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the
+#' <span>Directory</span>. For more information, see <span>arns</span>.
 #' @param Operations &#91;required&#93; A list of operations that are part of the batch.
 #' @param ConsistencyLevel Represents the manner and timing in which the successful write or update
 #' of an object is reflected in a subsequent read operation of that same
@@ -931,8 +935,8 @@ clouddirectory_batch_read <- function(DirectoryArn, Operations, ConsistencyLevel
 #' @usage
 #' clouddirectory_batch_write(DirectoryArn, Operations)
 #'
-#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the Directory.
-#' For more information, see arns.
+#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the
+#' <span>Directory</span>. For more information, see <span>arns</span>.
 #' @param Operations &#91;required&#93; A list of operations that are part of the batch.
 #'
 #' @return
@@ -1300,8 +1304,8 @@ clouddirectory_batch_write <- function(DirectoryArn, Operations) {
 #' Creates a Directory by copying the published schema into the directory
 #'
 #' @description
-#' Creates a Directory by copying the published schema into the directory.
-#' A directory cannot be created without a schema.
+#' Creates a <span>Directory</span> by copying the published schema into
+#' the directory. A directory cannot be created without a schema.
 #' 
 #' You can also quickly create a directory using a managed schema, called
 #' the `QuickStartSchema`. For more information, see [Managed
@@ -1311,9 +1315,11 @@ clouddirectory_batch_write <- function(DirectoryArn, Operations) {
 #' @usage
 #' clouddirectory_create_directory(Name, SchemaArn)
 #'
-#' @param Name &#91;required&#93; The name of the Directory. Should be unique per account, per region.
+#' @param Name &#91;required&#93; The name of the <span>Directory</span>. Should be unique per account,
+#' per region.
 #' @param SchemaArn &#91;required&#93; The Amazon Resource Name (ARN) of the published schema that will be
-#' copied into the data Directory. For more information, see arns.
+#' copied into the data <span>Directory</span>. For more information, see
+#' <span>arns</span>.
 #'
 #' @return
 #' A list with the following syntax:
@@ -1357,32 +1363,35 @@ clouddirectory_create_directory <- function(Name, SchemaArn) {
 #' Creates a new Facet in a schema
 #'
 #' @description
-#' Creates a new Facet in a schema. Facet creation is allowed only in
-#' development or applied schemas.
+#' Creates a new <span>Facet</span> in a schema. Facet creation is allowed
+#' only in development or applied schemas.
 #'
 #' @usage
 #' clouddirectory_create_facet(SchemaArn, Name, Attributes, ObjectType,
 #'   FacetStyle)
 #'
-#' @param SchemaArn &#91;required&#93; The schema ARN in which the new Facet will be created. For more
-#' information, see arns.
-#' @param Name &#91;required&#93; The name of the Facet, which is unique for a given schema.
-#' @param Attributes The attributes that are associated with the Facet.
+#' @param SchemaArn &#91;required&#93; The schema ARN in which the new <span>Facet</span> will be created. For
+#' more information, see <span>arns</span>.
+#' @param Name &#91;required&#93; The name of the <span>Facet</span>, which is unique for a given schema.
+#' @param Attributes The attributes that are associated with the <span>Facet</span>.
 #' @param ObjectType Specifies whether a given object created from this facet is of type
 #' node, leaf node, policy or index.
 #' 
-#' -   Node: Can have multiple children but one parent.
+#'   - Node: Can have multiple children but one parent.
 #' 
+#' <!-- end list -->
 #' 
-#' -   Leaf node: Cannot have children but can have multiple parents.
+#'   - Leaf node: Cannot have children but can have multiple parents.
 #' 
+#' <!-- end list -->
 #' 
-#' -   Policy: Allows you to store a policy document and policy type. For
+#'   - Policy: Allows you to store a policy document and policy type. For
 #'     more information, see
 #'     [Policies](https://docs.aws.amazon.com/clouddirectory/latest/developerguide/key_concepts_directory.html#key_concepts_policies).
 #' 
+#' <!-- end list -->
 #' 
-#' -   Index: Can be created with the Index API.
+#'   - Index: Can be created with the Index API.
 #' @param FacetStyle There are two different styles that you can define on any given facet,
 #' `Static` and `Dynamic`. For static facets, all attributes must be
 #' defined in the schema. For dynamic facets, attributes can be defined
@@ -1521,20 +1530,21 @@ clouddirectory_create_index <- function(DirectoryArn, OrderedIndexedAttributeLis
 #' Creates an object in a Directory
 #'
 #' @description
-#' Creates an object in a Directory. Additionally attaches the object to a
-#' parent, if a parent reference and `LinkName` is specified. An object is
-#' simply a collection of Facet attributes. You can also use this API call
-#' to create a policy object, if the facet from which you create the object
-#' is a policy facet.
+#' Creates an object in a <span>Directory</span>. Additionally attaches the
+#' object to a parent, if a parent reference and `LinkName` is specified.
+#' An object is simply a collection of <span>Facet</span> attributes. You
+#' can also use this API call to create a policy object, if the facet from
+#' which you create the object is a policy facet.
 #'
 #' @usage
 #' clouddirectory_create_object(DirectoryArn, SchemaFacets,
 #'   ObjectAttributeList, ParentReference, LinkName)
 #'
-#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the Directory in
-#' which the object will be created. For more information, see arns.
+#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the
+#' <span>Directory</span> in which the object will be created. For more
+#' information, see <span>arns</span>.
 #' @param SchemaFacets &#91;required&#93; A list of schema facets to be associated with the object. Do not provide
-#' minor version components. See SchemaFacet for details.
+#' minor version components. See <span>SchemaFacet</span> for details.
 #' @param ObjectAttributeList The attribute map whose attribute ARN contains the key and attribute
 #' value as the map value.
 #' @param ParentReference If specified, the parent reference to which this object will be
@@ -1610,14 +1620,14 @@ clouddirectory_create_object <- function(DirectoryArn, SchemaFacets, ObjectAttri
 #' Creates a new schema in a development state. A schema can exist in three
 #' phases:
 #' 
-#' -   *Development:* This is a mutable phase of the schema. All new
+#'   - *Development:* This is a mutable phase of the schema. All new
 #'     schemas are in the development phase. Once the schema is finalized,
 #'     it can be published.
 #' 
-#' -   *Published:* Published schemas are immutable and have a version
+#'   - *Published:* Published schemas are immutable and have a version
 #'     associated with them.
 #' 
-#' -   *Applied:* Applied schemas are mutable in a way that allows you to
+#'   - *Applied:* Applied schemas are mutable in a way that allows you to
 #'     add new schema facets. You can also add new, nonrequired attributes
 #'     to existing schema facets. You can apply only published schemas to
 #'     directories.
@@ -1666,15 +1676,16 @@ clouddirectory_create_schema <- function(Name) {
 #' Creates a TypedLinkFacet
 #'
 #' @description
-#' Creates a TypedLinkFacet. For more information, see [Typed
+#' Creates a <span>TypedLinkFacet</span>. For more information, see [Typed
 #' Links](https://docs.aws.amazon.com/clouddirectory/latest/developerguide/directory_objects_links.html#directory_objects_links_typedlink).
 #'
 #' @usage
 #' clouddirectory_create_typed_link_facet(SchemaArn, Facet)
 #'
 #' @param SchemaArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the schema. For
-#' more information, see arns.
-#' @param Facet &#91;required&#93; Facet structure that is associated with the typed link facet.
+#' more information, see <span>arns</span>.
+#' @param Facet &#91;required&#93; <span>Facet</span> structure that is associated with the typed link
+#' facet.
 #'
 #' @return
 #' An empty list.
@@ -1787,15 +1798,15 @@ clouddirectory_delete_directory <- function(DirectoryArn) {
 #' Deletes a given Facet
 #'
 #' @description
-#' Deletes a given Facet. All attributes and Rules that are associated with
-#' the facet will be deleted. Only development schema facets are allowed
-#' deletion.
+#' Deletes a given <span>Facet</span>. All attributes and
+#' <span>Rule</span>s that are associated with the facet will be deleted.
+#' Only development schema facets are allowed deletion.
 #'
 #' @usage
 #' clouddirectory_delete_facet(SchemaArn, Name)
 #'
-#' @param SchemaArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the Facet. For
-#' more information, see arns.
+#' @param SchemaArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the
+#' <span>Facet</span>. For more information, see <span>arns</span>.
 #' @param Name &#91;required&#93; The name of the facet to delete.
 #'
 #' @return
@@ -1841,8 +1852,9 @@ clouddirectory_delete_facet <- function(SchemaArn, Name) {
 #' @usage
 #' clouddirectory_delete_object(DirectoryArn, ObjectReference)
 #'
-#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the Directory
-#' where the object resides. For more information, see arns.
+#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the
+#' <span>Directory</span> where the object resides. For more information,
+#' see <span>arns</span>.
 #' @param ObjectReference &#91;required&#93; A reference that identifies the object.
 #'
 #' @return
@@ -1888,7 +1900,7 @@ clouddirectory_delete_object <- function(DirectoryArn, ObjectReference) {
 #' clouddirectory_delete_schema(SchemaArn)
 #'
 #' @param SchemaArn &#91;required&#93; The Amazon Resource Name (ARN) of the development schema. For more
-#' information, see arns.
+#' information, see <span>arns</span>.
 #'
 #' @return
 #' A list with the following syntax:
@@ -1928,14 +1940,14 @@ clouddirectory_delete_schema <- function(SchemaArn) {
 #' Deletes a TypedLinkFacet
 #'
 #' @description
-#' Deletes a TypedLinkFacet. For more information, see [Typed
+#' Deletes a <span>TypedLinkFacet</span>. For more information, see [Typed
 #' Links](https://docs.aws.amazon.com/clouddirectory/latest/developerguide/directory_objects_links.html#directory_objects_links_typedlink).
 #'
 #' @usage
 #' clouddirectory_delete_typed_link_facet(SchemaArn, Name)
 #'
 #' @param SchemaArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the schema. For
-#' more information, see arns.
+#' more information, see <span>arns</span>.
 #' @param Name &#91;required&#93; The unique name of the typed link facet.
 #'
 #' @return
@@ -2033,8 +2045,9 @@ clouddirectory_detach_from_index <- function(DirectoryArn, IndexReference, Targe
 #' @usage
 #' clouddirectory_detach_object(DirectoryArn, ParentReference, LinkName)
 #'
-#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the Directory
-#' where objects reside. For more information, see arns.
+#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the
+#' <span>Directory</span> where objects reside. For more information, see
+#' <span>arns</span>.
 #' @param ParentReference &#91;required&#93; The parent reference from which the object with the specified link name
 #' is detached.
 #' @param LinkName &#91;required&#93; The link name associated with the object that needs to be detached.
@@ -2087,8 +2100,9 @@ clouddirectory_detach_object <- function(DirectoryArn, ParentReference, LinkName
 #' clouddirectory_detach_policy(DirectoryArn, PolicyReference,
 #'   ObjectReference)
 #'
-#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the Directory
-#' where both objects reside. For more information, see arns.
+#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the
+#' <span>Directory</span> where both objects reside. For more information,
+#' see <span>arns</span>.
 #' @param PolicyReference &#91;required&#93; Reference that identifies the policy object.
 #' @param ObjectReference &#91;required&#93; Reference that identifies the object whose policy object will be
 #' detached.
@@ -2395,15 +2409,15 @@ clouddirectory_get_directory <- function(DirectoryArn) {
 #' ObjectType
 #'
 #' @description
-#' Gets details of the Facet, such as facet name, attributes, Rules, or
-#' `ObjectType`. You can call this on all kinds of schema facets --
-#' published, development, or applied.
+#' Gets details of the <span>Facet</span>, such as facet name, attributes,
+#' <span>Rule</span>s, or `ObjectType`. You can call this on all kinds of
+#' schema facets -- published, development, or applied.
 #'
 #' @usage
 #' clouddirectory_get_facet(SchemaArn, Name)
 #'
-#' @param SchemaArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the Facet. For
-#' more information, see arns.
+#' @param SchemaArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the
+#' <span>Facet</span>. For more information, see <span>arns</span>.
 #' @param Name &#91;required&#93; The name of the facet to retrieve.
 #'
 #' @return
@@ -2456,7 +2470,8 @@ clouddirectory_get_facet <- function(SchemaArn, Name) {
 #'   AttributeNames, ConsistencyLevel)
 #'
 #' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the Directory
-#' where the typed link resides. For more information, see arns or [Typed
+#' where the typed link resides. For more information, see
+#' <span>arns</span> or [Typed
 #' Links](https://docs.aws.amazon.com/clouddirectory/latest/developerguide/directory_objects_links.html#directory_objects_links_typedlink).
 #' @param TypedLinkSpecifier &#91;required&#93; Allows a typed link specifier to be accepted as input.
 #' @param AttributeNames &#91;required&#93; A list of attribute names whose values will be retrieved.
@@ -2554,12 +2569,12 @@ clouddirectory_get_link_attributes <- function(DirectoryArn, TypedLinkSpecifier,
 #' clouddirectory_get_object_attributes(DirectoryArn, ObjectReference,
 #'   ConsistencyLevel, SchemaFacet, AttributeNames)
 #'
-#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the Directory
-#' where the object resides.
+#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the
+#' <span>Directory</span> where the object resides.
 #' @param ObjectReference &#91;required&#93; Reference that identifies the object whose attributes will be retrieved.
 #' @param ConsistencyLevel The consistency level at which to retrieve the attributes on an object.
 #' @param SchemaFacet &#91;required&#93; Identifier for the facet whose attributes will be retrieved. See
-#' SchemaFacet for details.
+#' <span>SchemaFacet</span> for details.
 #' @param AttributeNames &#91;required&#93; List of attribute names whose values will be retrieved.
 #'
 #' @return
@@ -2734,15 +2749,15 @@ clouddirectory_get_schema_as_json <- function(SchemaArn) {
 #' Returns the identity attribute order for a specific TypedLinkFacet
 #'
 #' @description
-#' Returns the identity attribute order for a specific TypedLinkFacet. For
-#' more information, see [Typed
+#' Returns the identity attribute order for a specific
+#' <span>TypedLinkFacet</span>. For more information, see [Typed
 #' Links](https://docs.aws.amazon.com/clouddirectory/latest/developerguide/directory_objects_links.html#directory_objects_links_typedlink).
 #'
 #' @usage
 #' clouddirectory_get_typed_link_facet_information(SchemaArn, Name)
 #'
 #' @param SchemaArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the schema. For
-#' more information, see arns.
+#' more information, see <span>arns</span>.
 #' @param Name &#91;required&#93; The unique name of the typed link facet.
 #'
 #' @return
@@ -3172,9 +3187,10 @@ clouddirectory_list_facet_names <- function(SchemaArn, NextToken = NULL, MaxResu
 #' information for an object
 #'
 #' @description
-#' Returns a paginated list of all the incoming TypedLinkSpecifier
-#' information for an object. It also supports filtering by typed link
-#' facet and identity attributes. For more information, see [Typed
+#' Returns a paginated list of all the incoming
+#' <span>TypedLinkSpecifier</span> information for an object. It also
+#' supports filtering by typed link facet and identity attributes. For more
+#' information, see [Typed
 #' Links](https://docs.aws.amazon.com/clouddirectory/latest/developerguide/directory_objects_links.html#directory_objects_links_typedlink).
 #'
 #' @usage
@@ -3474,8 +3490,9 @@ clouddirectory_list_managed_schema_arns <- function(SchemaArn = NULL, NextToken 
 #' clouddirectory_list_object_attributes(DirectoryArn, ObjectReference,
 #'   NextToken, MaxResults, ConsistencyLevel, FacetFilter)
 #'
-#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the Directory
-#' where the object resides. For more information, see arns.
+#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the
+#' <span>Directory</span> where the object resides. For more information,
+#' see <span>arns</span>.
 #' @param ObjectReference &#91;required&#93; The reference that identifies the object whose attributes will be
 #' listed.
 #' @param NextToken The pagination token.
@@ -3561,8 +3578,9 @@ clouddirectory_list_object_attributes <- function(DirectoryArn, ObjectReference,
 #' clouddirectory_list_object_children(DirectoryArn, ObjectReference,
 #'   NextToken, MaxResults, ConsistencyLevel)
 #'
-#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the Directory
-#' where the object resides. For more information, see arns.
+#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the
+#' <span>Directory</span> where the object resides. For more information,
+#' see <span>arns</span>.
 #' @param ObjectReference &#91;required&#93; The reference that identifies the object for which child objects are
 #' being listed.
 #' @param NextToken The pagination token.
@@ -3702,8 +3720,9 @@ clouddirectory_list_object_parent_paths <- function(DirectoryArn, ObjectReferenc
 #' clouddirectory_list_object_parents(DirectoryArn, ObjectReference,
 #'   NextToken, MaxResults, ConsistencyLevel, IncludeAllLinksToEachParent)
 #'
-#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the Directory
-#' where the object resides. For more information, see arns.
+#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the
+#' <span>Directory</span> where the object resides. For more information,
+#' see <span>arns</span>.
 #' @param ObjectReference &#91;required&#93; The reference that identifies the object for which parent objects are
 #' being listed.
 #' @param NextToken The pagination token.
@@ -3712,8 +3731,9 @@ clouddirectory_list_object_parent_paths <- function(DirectoryArn, ObjectReferenc
 #' @param ConsistencyLevel Represents the manner and timing in which the successful write or update
 #' of an object is reflected in a subsequent read operation of that same
 #' object.
-#' @param IncludeAllLinksToEachParent When set to True, returns all ListObjectParentsResponse$ParentLinks.
-#' There could be multiple links between a parent-child pair.
+#' @param IncludeAllLinksToEachParent When set to True, returns all
+#' <span>ListObjectParentsResponse$ParentLinks</span>. There could be
+#' multiple links between a parent-child pair.
 #'
 #' @return
 #' A list with the following syntax:
@@ -3775,8 +3795,9 @@ clouddirectory_list_object_parents <- function(DirectoryArn, ObjectReference, Ne
 #' clouddirectory_list_object_policies(DirectoryArn, ObjectReference,
 #'   NextToken, MaxResults, ConsistencyLevel)
 #'
-#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the Directory
-#' where objects reside. For more information, see arns.
+#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the
+#' <span>Directory</span> where objects reside. For more information, see
+#' <span>arns</span>.
 #' @param ObjectReference &#91;required&#93; Reference that identifies the object for which policies will be listed.
 #' @param NextToken The pagination token.
 #' @param MaxResults The maximum number of items to be retrieved in a single call. This is an
@@ -3833,9 +3854,10 @@ clouddirectory_list_object_policies <- function(DirectoryArn, ObjectReference, N
 #' information for an object
 #'
 #' @description
-#' Returns a paginated list of all the outgoing TypedLinkSpecifier
-#' information for an object. It also supports filtering by typed link
-#' facet and identity attributes. For more information, see [Typed
+#' Returns a paginated list of all the outgoing
+#' <span>TypedLinkSpecifier</span> information for an object. It also
+#' supports filtering by typed link facet and identity attributes. For more
+#' information, see [Typed
 #' Links](https://docs.aws.amazon.com/clouddirectory/latest/developerguide/directory_objects_links.html#directory_objects_links_typedlink).
 #'
 #' @usage
@@ -3966,8 +3988,9 @@ clouddirectory_list_outgoing_typed_links <- function(DirectoryArn, ObjectReferen
 #' clouddirectory_list_policy_attachments(DirectoryArn, PolicyReference,
 #'   NextToken, MaxResults, ConsistencyLevel)
 #'
-#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the Directory
-#' where objects reside. For more information, see arns.
+#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the
+#' <span>Directory</span> where objects reside. For more information, see
+#' <span>arns</span>.
 #' @param PolicyReference &#91;required&#93; The reference that identifies the policy object.
 #' @param NextToken The pagination token.
 #' @param MaxResults The maximum number of items to be retrieved in a single call. This is an
@@ -4144,7 +4167,7 @@ clouddirectory_list_tags_for_resource <- function(ResourceArn, NextToken = NULL,
 #'
 #' @description
 #' Returns a paginated list of all attribute definitions for a particular
-#' TypedLinkFacet. For more information, see [Typed
+#' <span>TypedLinkFacet</span>. For more information, see [Typed
 #' Links](https://docs.aws.amazon.com/clouddirectory/latest/developerguide/directory_objects_links.html#directory_objects_links_typedlink).
 #'
 #' @usage
@@ -4152,7 +4175,7 @@ clouddirectory_list_tags_for_resource <- function(ResourceArn, NextToken = NULL,
 #'   NextToken, MaxResults)
 #'
 #' @param SchemaArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the schema. For
-#' more information, see arns.
+#' more information, see <span>arns</span>.
 #' @param Name &#91;required&#93; The unique name of the typed link facet.
 #' @param NextToken The pagination token.
 #' @param MaxResults The maximum number of results to retrieve.
@@ -4233,7 +4256,7 @@ clouddirectory_list_typed_link_facet_attributes <- function(SchemaArn, Name, Nex
 #'   MaxResults)
 #'
 #' @param SchemaArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the schema. For
-#' more information, see arns.
+#' more information, see <span>arns</span>.
 #' @param NextToken The pagination token.
 #' @param MaxResults The maximum number of results to retrieve.
 #'
@@ -4281,11 +4304,11 @@ clouddirectory_list_typed_link_facet_names <- function(SchemaArn, NextToken = NU
 #' specified
 #'
 #' @description
-#' Lists all policies from the root of the Directory to the object
-#' specified. If there are no policies present, an empty list is returned.
-#' If policies are present, and if some objects don't have the policies
-#' attached, it returns the `ObjectIdentifier` for such objects. If
-#' policies are present, it returns `ObjectIdentifier`, `policyId`, and
+#' Lists all policies from the root of the <span>Directory</span> to the
+#' object specified. If there are no policies present, an empty list is
+#' returned. If policies are present, and if some objects don't have the
+#' policies attached, it returns the `ObjectIdentifier` for such objects.
+#' If policies are present, it returns `ObjectIdentifier`, `policyId`, and
 #' `policyType`. Paths that don't lead to the root from the target object
 #' are ignored. For more information, see
 #' [Policies](https://docs.aws.amazon.com/clouddirectory/latest/developerguide/key_concepts_directory.html#key_concepts_policies).
@@ -4294,8 +4317,8 @@ clouddirectory_list_typed_link_facet_names <- function(SchemaArn, NextToken = NU
 #' clouddirectory_lookup_policy(DirectoryArn, ObjectReference, NextToken,
 #'   MaxResults)
 #'
-#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the Directory.
-#' For more information, see arns.
+#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the
+#' <span>Directory</span>. For more information, see <span>arns</span>.
 #' @param ObjectReference &#91;required&#93; Reference that identifies the object whose policies will be looked up.
 #' @param NextToken The token to request the next page of results.
 #' @param MaxResults The maximum number of items to be retrieved in a single call. This is an
@@ -4365,7 +4388,7 @@ clouddirectory_lookup_policy <- function(DirectoryArn, ObjectReference, NextToke
 #'   MinorVersion, Name)
 #'
 #' @param DevelopmentSchemaArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the development
-#' schema. For more information, see arns.
+#' schema. For more information, see <span>arns</span>.
 #' @param Version &#91;required&#93; The major version under which the schema will be published. Schemas have
 #' both a major and minor version associated with them.
 #' @param MinorVersion The minor version under which the schema will be published. This
@@ -4472,7 +4495,7 @@ clouddirectory_put_schema_from_json <- function(SchemaArn, Document) {
 #'   ObjectReference)
 #'
 #' @param DirectoryArn &#91;required&#93; The ARN of the directory in which the object resides.
-#' @param SchemaFacet &#91;required&#93; The facet to remove. See SchemaFacet for details.
+#' @param SchemaFacet &#91;required&#93; The facet to remove. See <span>SchemaFacet</span> for details.
 #' @param ObjectReference &#91;required&#93; A reference to the object to remove the facet from.
 #'
 #' @return
@@ -4620,14 +4643,14 @@ clouddirectory_untag_resource <- function(ResourceArn, TagKeys) {
 #' clouddirectory_update_facet(SchemaArn, Name, AttributeUpdates,
 #'   ObjectType)
 #'
-#' @param SchemaArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the Facet. For
-#' more information, see arns.
+#' @param SchemaArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the
+#' <span>Facet</span>. For more information, see <span>arns</span>.
 #' @param Name &#91;required&#93; The name of the facet.
-#' @param AttributeUpdates List of attributes that need to be updated in a given schema Facet. Each
-#' attribute is followed by `AttributeAction`, which specifies the type of
-#' update operation to perform.
+#' @param AttributeUpdates List of attributes that need to be updated in a given schema
+#' <span>Facet</span>. Each attribute is followed by `AttributeAction`,
+#' which specifies the type of update operation to perform.
 #' @param ObjectType The object type that is associated with the facet. See
-#' CreateFacetRequest$ObjectType for more details.
+#' <span>CreateFacetRequest$ObjectType</span> for more details.
 #'
 #' @return
 #' An empty list.
@@ -4707,8 +4730,8 @@ clouddirectory_update_facet <- function(SchemaArn, Name, AttributeUpdates = NULL
 #'   AttributeUpdates)
 #'
 #' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the Directory
-#' where the updated typed link resides. For more information, see arns or
-#' [Typed
+#' where the updated typed link resides. For more information, see
+#' <span>arns</span> or [Typed
 #' Links](https://docs.aws.amazon.com/clouddirectory/latest/developerguide/directory_objects_links.html#directory_objects_links_typedlink).
 #' @param TypedLinkSpecifier &#91;required&#93; Allows a typed link specifier to be accepted as input.
 #' @param AttributeUpdates &#91;required&#93; The attributes update structure.
@@ -4799,8 +4822,9 @@ clouddirectory_update_link_attributes <- function(DirectoryArn, TypedLinkSpecifi
 #' clouddirectory_update_object_attributes(DirectoryArn, ObjectReference,
 #'   AttributeUpdates)
 #'
-#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the Directory
-#' where the object resides. For more information, see arns.
+#' @param DirectoryArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the
+#' <span>Directory</span> where the object resides. For more information,
+#' see <span>arns</span>.
 #' @param ObjectReference &#91;required&#93; The reference that identifies the object.
 #' @param AttributeUpdates &#91;required&#93; The attributes update structure.
 #'
@@ -4873,7 +4897,7 @@ clouddirectory_update_object_attributes <- function(DirectoryArn, ObjectReferenc
 #' clouddirectory_update_schema(SchemaArn, Name)
 #'
 #' @param SchemaArn &#91;required&#93; The Amazon Resource Name (ARN) of the development schema. For more
-#' information, see arns.
+#' information, see <span>arns</span>.
 #' @param Name &#91;required&#93; The name of the schema.
 #'
 #' @return
@@ -4915,7 +4939,7 @@ clouddirectory_update_schema <- function(SchemaArn, Name) {
 #' Updates a TypedLinkFacet
 #'
 #' @description
-#' Updates a TypedLinkFacet. For more information, see [Typed
+#' Updates a <span>TypedLinkFacet</span>. For more information, see [Typed
 #' Links](https://docs.aws.amazon.com/clouddirectory/latest/developerguide/directory_objects_links.html#directory_objects_links_typedlink).
 #'
 #' @usage
@@ -4923,7 +4947,7 @@ clouddirectory_update_schema <- function(SchemaArn, Name) {
 #'   AttributeUpdates, IdentityAttributeOrder)
 #'
 #' @param SchemaArn &#91;required&#93; The Amazon Resource Name (ARN) that is associated with the schema. For
-#' more information, see arns.
+#' more information, see <span>arns</span>.
 #' @param Name &#91;required&#93; The unique name of the typed link facet.
 #' @param AttributeUpdates &#91;required&#93; Attributes update structure.
 #' @param IdentityAttributeOrder &#91;required&#93; The order of identity attributes for the facet, from most significant to

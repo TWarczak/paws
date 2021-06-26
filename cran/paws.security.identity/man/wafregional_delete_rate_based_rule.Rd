@@ -2,13 +2,13 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_delete_rate_based_rule}
 \alias{wafregional_delete_rate_based_rule}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 wafregional_delete_rate_based_rule(RuleId, ChangeToken)
 }
 \arguments{
-\item{RuleId}{[required] The \code{RuleId} of the RateBasedRule that you want to delete. \code{RuleId} is
-returned by
+\item{RuleId}{[required] The \code{RuleId} of the <span>RateBasedRule</span> that you want to delete.
+\code{RuleId} is returned by
 \code{\link[=wafregional_create_rate_based_rule]{create_rate_based_rule}} and by
 \code{\link[=wafregional_list_rate_based_rules]{list_rate_based_rules}}.}
 
@@ -31,9 +31,9 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Permanently deletes a RateBasedRule. You can't delete a rule if it's
-still used in any \code{WebACL} objects or if it still includes any
-predicates, such as \code{ByteMatchSet} objects.
+Permanently deletes a <span>RateBasedRule</span>. You can't delete a
+rule if it's still used in any \code{WebACL} objects or if it still includes
+any predicates, such as \code{ByteMatchSet} objects.
 
 If you just want to remove a rule from a \code{WebACL}, use
 \code{\link[=wafregional_update_web_acl]{update_web_acl}}.

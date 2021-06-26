@@ -57,8 +57,8 @@ snapshots for backups, to make copies of a database, and to save data
 before deleting a database.
 
 The \verb{create relational database snapshot} operation supports tag-based
-access control via request tags. For more information, see the Lightsail
-Dev Guide.
+access control via request tags. For more information, see the
+<span>Lightsail Dev Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$create_relational_database_snapshot(

@@ -193,8 +193,8 @@ an associated value. For more information about session tags, see
 in the \emph{IAM User Guide}.
 
 You can pass up to 50 session tags. The plain text session tag keys
-can’t exceed 128 characters and the values can’t exceed 256 characters.
-For these and additional limits, see \href{https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html#reference_iam-limits-entity-length}{IAM and STS Character Limits}
+can’t exceed 128 characters and the values can’t exceed 256
+characters. For these and additional limits, see \href{https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html#reference_iam-limits-entity-length}{IAM and STS Character Limits}
 in the \emph{IAM User Guide}.
 
 An AWS conversion compresses the passed session policies and session

@@ -74,6 +74,12 @@
 #'  \link[=batch_update_job_queue]{update_job_queue} \tab Updates a job queue
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname batch
 #' @export
 batch <- function(config = list()) {
@@ -90,20 +96,20 @@ batch <- function(config = list()) {
 #' 
 #' To learn more, see the following resources:
 #' 
-#' -   Amazon EC2: [AmazonEC2 product page](https://aws.amazon.com/ec2/),
+#'   - Amazon EC2: [AmazonEC2 product page](https://aws.amazon.com/ec2/),
 #'     [Amazon EC2
 #'     documentation](https://docs.aws.amazon.com/ec2/index.html)
 #' 
-#' -   Amazon EBS: [Amazon EBS product page](https://aws.amazon.com/ebs/),
+#'   - Amazon EBS: [Amazon EBS product page](https://aws.amazon.com/ebs/),
 #'     [Amazon EBS
 #'     documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html)
 #' 
-#' -   Amazon VPC: [Amazon VPC product page](https://aws.amazon.com/vpc/),
+#'   - Amazon VPC: [Amazon VPC product page](https://aws.amazon.com/vpc/),
 #'     [Amazon VPC
 #'     documentation](https://docs.aws.amazon.com/vpc/index.html)
 #' 
-#' -   AWS VPN: [AWS VPN product page](https://aws.amazon.com/vpn/), AWS
-#'     VPN documentation
+#'   - AWS VPN: [AWS VPN product page](https://aws.amazon.com/vpn/),
+#'     <span>AWS VPN documentation</span>
 #'
 #' @param
 #' config
@@ -563,7 +569,7 @@ batch <- function(config = list()) {
 #'  \link[=ec2_search_local_gateway_routes]{search_local_gateway_routes} \tab Searches for routes in the specified local gateway route table\cr
 #'  \link[=ec2_search_transit_gateway_multicast_groups]{search_transit_gateway_multicast_groups} \tab Searches one or more transit gateway multicast groups and returns the group membership information\cr
 #'  \link[=ec2_search_transit_gateway_routes]{search_transit_gateway_routes} \tab Searches for routes in the specified transit gateway route table\cr
-#'  \link[=ec2_send_diagnostic_interrupt]{send_diagnostic_interrupt} \tab Sends a diagnostic interrupt to the specified Amazon EC2 instance to trigger a kernel panic (on Linux instances), or a blue screen/stop error (on Windows instances)\cr
+#'  \link[=ec2_send_diagnostic_interrupt]{send_diagnostic_interrupt} \tab Sends a diagnostic interrupt to the specified Amazon EC2 instance to trigger a _kernel panic_ (on Linux instances), or a _blue screen_/_stop error_ (on Windows instances)\cr
 #'  \link[=ec2_start_instances]{start_instances} \tab Starts an Amazon EBS-backed instance that you've previously stopped\cr
 #'  \link[=ec2_start_network_insights_analysis]{start_network_insights_analysis} \tab Starts analyzing the specified path\cr
 #'  \link[=ec2_start_vpc_endpoint_service_private_dns_verification]{start_vpc_endpoint_service_private_dns_verification} \tab Initiates the verification process to prove that the service provider owns the private DNS name domain for the endpoint service\cr
@@ -577,6 +583,12 @@ batch <- function(config = list()) {
 #'  \link[=ec2_update_security_group_rule_descriptions_ingress]{update_security_group_rule_descriptions_ingress} \tab Updates the description of an ingress (inbound) security group rule\cr
 #'  \link[=ec2_withdraw_byoip_cidr]{withdraw_byoip_cidr} \tab Stops advertising an address range that is provisioned as an address pool
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname ec2
 #' @export
@@ -631,6 +643,12 @@ ec2 <- function(config = list()) {
 #' \tabular{ll}{
 #'  \link[=ec2instanceconnect_send_ssh_public_key]{send_ssh_public_key} \tab Pushes an SSH public key to a particular OS user on a given EC2 instance for 60 seconds
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname ec2instanceconnect
 #' @export
@@ -725,6 +743,12 @@ ec2instanceconnect <- function(config = list()) {
 #'  \link[=ecr_untag_resource]{untag_resource} \tab Deletes specified tags from a resource\cr
 #'  \link[=ecr_upload_layer_part]{upload_layer_part} \tab Uploads an image layer part to Amazon ECR
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname ecr
 #' @export
@@ -843,6 +867,12 @@ ecr <- function(config = list()) {
 #'  \link[=ecs_update_task_set]{update_task_set} \tab Modifies a task set
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname ecs
 #' @export
 ecs <- function(config = list()) {
@@ -939,6 +969,12 @@ ecs <- function(config = list()) {
 #'  \link[=eks_update_nodegroup_config]{update_nodegroup_config} \tab Updates an Amazon EKS managed node group configuration\cr
 #'  \link[=eks_update_nodegroup_version]{update_nodegroup_version} \tab Updates the Kubernetes version or AMI version of an Amazon EKS managed node group
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname eks
 #' @export
@@ -1051,6 +1087,12 @@ eks <- function(config = list()) {
 #'  \link[=elasticbeanstalk_update_tags_for_resource]{update_tags_for_resource} \tab Update the list of tags applied to an AWS Elastic Beanstalk resource\cr
 #'  \link[=elasticbeanstalk_validate_configuration_settings]{validate_configuration_settings} \tab Takes a set of configuration settings and either a configuration template or environment, and determines whether those values are valid
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname elasticbeanstalk
 #' @export
@@ -1168,6 +1210,12 @@ elasticbeanstalk <- function(config = list()) {
 #'  \link[=lambda_update_function_event_invoke_config]{update_function_event_invoke_config} \tab Updates the configuration for asynchronous invocation for a function, version, or alias
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname lambda
 #' @export
 lambda <- function(config = list()) {
@@ -1188,8 +1236,8 @@ lambda <- function(config = list()) {
 #' 
 #' You can manage your Lightsail resources using the Lightsail console,
 #' Lightsail API, AWS Command Line Interface (AWS CLI), or SDKs. For more
-#' information about Lightsail concepts and tasks, see the Lightsail Dev
-#' Guide.
+#' information about Lightsail concepts and tasks, see the <span>Lightsail
+#' Dev Guide</span>.
 #' 
 #' This API Reference provides detailed information about the actions, data
 #' types, parameters, and errors of the Lightsail service. For more
@@ -1252,7 +1300,7 @@ lambda <- function(config = list()) {
 #'  \link[=lightsail_create_domain_entry]{create_domain_entry} \tab Creates one of the following domain name system (DNS) records in a domain DNS zone: Address (A), canonical name (CNAME), mail exchanger (MX), name server (NS), start of authority (SOA), service locator (SRV), or text (TXT)\cr
 #'  \link[=lightsail_create_instances]{create_instances} \tab Creates one or more Amazon Lightsail instances\cr
 #'  \link[=lightsail_create_instances_from_snapshot]{create_instances_from_snapshot} \tab Creates one or more new instances from a manual or automatic snapshot of an instance\cr
-#'  \link[=lightsail_create_instance_snapshot]{create_instance_snapshot} \tab Creates a snapshot of a specific virtual private server, or instance\cr
+#'  \link[=lightsail_create_instance_snapshot]{create_instance_snapshot} \tab Creates a snapshot of a specific virtual private server, or _instance_\cr
 #'  \link[=lightsail_create_key_pair]{create_key_pair} \tab Creates an SSH key pair\cr
 #'  \link[=lightsail_create_load_balancer]{create_load_balancer} \tab Creates a Lightsail load balancer\cr
 #'  \link[=lightsail_create_load_balancer_tls_certificate]{create_load_balancer_tls_certificate} \tab Creates a Lightsail load balancer TLS certificate\cr
@@ -1271,7 +1319,7 @@ lambda <- function(config = list()) {
 #'  \link[=lightsail_delete_domain]{delete_domain} \tab Deletes the specified domain recordset and all of its domain records\cr
 #'  \link[=lightsail_delete_domain_entry]{delete_domain_entry} \tab Deletes a specific domain entry\cr
 #'  \link[=lightsail_delete_instance]{delete_instance} \tab Deletes an Amazon Lightsail instance\cr
-#'  \link[=lightsail_delete_instance_snapshot]{delete_instance_snapshot} \tab Deletes a specific snapshot of a virtual private server (or instance)\cr
+#'  \link[=lightsail_delete_instance_snapshot]{delete_instance_snapshot} \tab Deletes a specific snapshot of a virtual private server (or _instance_)\cr
 #'  \link[=lightsail_delete_key_pair]{delete_key_pair} \tab Deletes a specific SSH key pair\cr
 #'  \link[=lightsail_delete_known_host_keys]{delete_known_host_keys} \tab Deletes the known host key or certificate used by the Amazon Lightsail browser-based SSH or RDP clients to authenticate an instance\cr
 #'  \link[=lightsail_delete_load_balancer]{delete_load_balancer} \tab Deletes a Lightsail load balancer and all its associated SSL/TLS certificates\cr
@@ -1289,7 +1337,7 @@ lambda <- function(config = list()) {
 #'  \link[=lightsail_get_active_names]{get_active_names} \tab Returns the names of all active (not deleted) resources\cr
 #'  \link[=lightsail_get_alarms]{get_alarms} \tab Returns information about the configured alarms\cr
 #'  \link[=lightsail_get_auto_snapshots]{get_auto_snapshots} \tab Returns the available automatic snapshots for an instance or disk\cr
-#'  \link[=lightsail_get_blueprints]{get_blueprints} \tab Returns the list of available instance images, or blueprints\cr
+#'  \link[=lightsail_get_blueprints]{get_blueprints} \tab Returns the list of available instance images, or _blueprints_\cr
 #'  \link[=lightsail_get_bundles]{get_bundles} \tab Returns the list of bundles that are available for purchase\cr
 #'  \link[=lightsail_get_certificates]{get_certificates} \tab Returns information about one or more Amazon Lightsail SSL/TLS certificates\cr
 #'  \link[=lightsail_get_cloud_formation_stack_records]{get_cloud_formation_stack_records} \tab Returns the CloudFormation stack record created as a result of the create cloud formation stack operation\cr
@@ -1313,10 +1361,10 @@ lambda <- function(config = list()) {
 #'  \link[=lightsail_get_domains]{get_domains} \tab Returns a list of all domains in the user's account\cr
 #'  \link[=lightsail_get_export_snapshot_records]{get_export_snapshot_records} \tab Returns the export snapshot record created as a result of the export snapshot operation\cr
 #'  \link[=lightsail_get_instance]{get_instance} \tab Returns information about a specific Amazon Lightsail instance, which is a virtual private server\cr
-#'  \link[=lightsail_get_instance_access_details]{get_instance_access_details} \tab Returns temporary SSH keys you can use to connect to a specific virtual private server, or instance\cr
+#'  \link[=lightsail_get_instance_access_details]{get_instance_access_details} \tab Returns temporary SSH keys you can use to connect to a specific virtual private server, or _instance_\cr
 #'  \link[=lightsail_get_instance_metric_data]{get_instance_metric_data} \tab Returns the data points for the specified Amazon Lightsail instance metric, given an instance name\cr
 #'  \link[=lightsail_get_instance_port_states]{get_instance_port_states} \tab Returns the firewall port states for a specific Amazon Lightsail instance, the IP addresses allowed to connect to the instance through the ports, and the protocol\cr
-#'  \link[=lightsail_get_instances]{get_instances} \tab Returns information about all Amazon Lightsail virtual private servers, or instances\cr
+#'  \link[=lightsail_get_instances]{get_instances} \tab Returns information about all Amazon Lightsail virtual private servers, or _instances_\cr
 #'  \link[=lightsail_get_instance_snapshot]{get_instance_snapshot} \tab Returns information about a specific instance snapshot\cr
 #'  \link[=lightsail_get_instance_snapshots]{get_instance_snapshots} \tab Returns all instance snapshots for the user's account\cr
 #'  \link[=lightsail_get_instance_state]{get_instance_state} \tab Returns the state of a specific instance\cr
@@ -1373,6 +1421,12 @@ lambda <- function(config = list()) {
 #'  \link[=lightsail_update_relational_database_parameters]{update_relational_database_parameters} \tab Allows the update of one or more parameters of a database in Amazon Lightsail
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname lightsail
 #' @export
 lightsail <- function(config = list()) {
@@ -1408,10 +1462,10 @@ lightsail <- function(config = list()) {
 #' The AWS Serverless Application Repository Developer Guide contains more
 #' information about the two developer experiences available:
 #' 
-#' -   Consuming Applications – Browse for applications and view
+#'   - Consuming Applications – Browse for applications and view
 #'     information about them, including source code and readme files. Also
 #'     install, configure, and deploy applications of your choosing.
-#' 
+#'     
 #'     Publishing Applications – Configure and upload applications to make
 #'     them available to other developers, and publish new versions of
 #'     applications.
@@ -1463,6 +1517,12 @@ lightsail <- function(config = list()) {
 #'  \link[=serverlessapplicationrepository_unshare_application]{unshare_application} \tab Unshares an application from an AWS Organization\cr
 #'  \link[=serverlessapplicationrepository_update_application]{update_application} \tab Updates the specified application
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname serverlessapplicationrepository
 #' @export
@@ -1562,6 +1622,12 @@ serverlessapplicationrepository <- function(config = list()) {
 #'  \link[=backup_update_region_settings]{update_region_settings} \tab Updates the current service opt-in settings for the Region
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname backup
 #' @export
 backup <- function(config = list()) {
@@ -1622,6 +1688,12 @@ backup <- function(config = list()) {
 #'  \link[=dlm_untag_resource]{untag_resource} \tab Removes the specified tags from the specified resource\cr
 #'  \link[=dlm_update_lifecycle_policy]{update_lifecycle_policy} \tab Updates the specified lifecycle policy
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname dlm
 #' @export
@@ -1707,6 +1779,12 @@ dlm <- function(config = list()) {
 #'  \link[=efs_update_file_system]{update_file_system} \tab Updates the throughput mode or the amount of provisioned throughput of an existing file system
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname efs
 #' @export
 efs <- function(config = list()) {
@@ -1777,6 +1855,12 @@ efs <- function(config = list()) {
 #'  \link[=fsx_update_file_system]{update_file_system} \tab Use this operation to update the configuration of an existing Amazon FSx file system
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname fsx
 #' @export
 fsx <- function(config = list()) {
@@ -1810,15 +1894,15 @@ fsx <- function(config = list()) {
 #' reading the following sections in the *Amazon S3 Glacier Developer
 #' Guide*:
 #' 
-#' -   [What is Amazon S3
-#'     Glacier](https://docs.aws.amazon.com/amazonglacier/latest/dev/introduction.html) -
-#'     This section of the Developer Guide describes the underlying data
+#'   - [What is Amazon S3
+#'     Glacier](https://docs.aws.amazon.com/amazonglacier/latest/dev/introduction.html)
+#'     - This section of the Developer Guide describes the underlying data
 #'     model, the operations it supports, and the AWS SDKs that you can use
 #'     to interact with the service.
 #' 
-#' -   [Getting Started with Amazon S3
-#'     Glacier](https://docs.aws.amazon.com/amazonglacier/latest/dev/amazon-glacier-getting-started.html) -
-#'     The Getting Started section walks you through the process of
+#'   - [Getting Started with Amazon S3
+#'     Glacier](https://docs.aws.amazon.com/amazonglacier/latest/dev/amazon-glacier-getting-started.html)
+#'     - The Getting Started section walks you through the process of
 #'     creating a vault, uploading archives, creating jobs to download
 #'     archives, retrieving the job output, and deleting archives.
 #'
@@ -1893,6 +1977,12 @@ fsx <- function(config = list()) {
 #'  \link[=glacier_upload_multipart_part]{upload_multipart_part} \tab This operation uploads a part of an archive
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname glacier
 #' @export
 glacier <- function(config = list()) {
@@ -1960,6 +2050,7 @@ glacier <- function(config = list()) {
 #'  \link[=s3_delete_objects]{delete_objects} \tab This operation enables you to delete multiple objects from a bucket using a single HTTP request\cr
 #'  \link[=s3_delete_object_tagging]{delete_object_tagging} \tab Removes the entire tag set from the specified object\cr
 #'  \link[=s3_delete_public_access_block]{delete_public_access_block} \tab Removes the PublicAccessBlock configuration for an Amazon S3 bucket\cr
+#'  \link[=s3_download_file]{download_file} \tab Download a file from S3 and store it at a specified file location\cr
 #'  \link[=s3_get_bucket_accelerate_configuration]{get_bucket_accelerate_configuration} \tab This implementation of the GET operation uses the accelerate subresource to return the Transfer Acceleration state of a bucket, which is either Enabled or Suspended\cr
 #'  \link[=s3_get_bucket_acl]{get_bucket_acl} \tab This implementation of the GET operation uses the acl subresource to return the access control list (ACL) of a bucket\cr
 #'  \link[=s3_get_bucket_analytics_configuration]{get_bucket_analytics_configuration} \tab This implementation of the GET operation returns an analytics configuration (identified by the analytics configuration ID) from the bucket\cr
@@ -2034,6 +2125,12 @@ glacier <- function(config = list()) {
 #'  \link[=s3_upload_part]{upload_part} \tab Uploads a part in a multipart upload\cr
 #'  \link[=s3_upload_part_copy]{upload_part_copy} \tab Uploads a part by copying data from an existing object as data source
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname s3
 #' @export
@@ -2119,6 +2216,12 @@ s3 <- function(config = list()) {
 #'  \link[=s3control_update_job_status]{update_job_status} \tab Updates the status for the specified job
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname s3control
 #' @export
 s3control <- function(config = list()) {
@@ -2140,27 +2243,27 @@ s3control <- function(config = list()) {
 #' Use the following links to get started using the *AWS Storage Gateway
 #' Service API Reference*:
 #' 
-#' -   [AWS Storage Gateway required request
+#'   - [AWS Storage Gateway required request
 #'     headers](https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewayHTTPRequestsHeaders):
 #'     Describes the required headers that you must send with every POST
 #'     request to AWS Storage Gateway.
 #' 
-#' -   [Signing
+#'   - [Signing
 #'     requests](https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#AWSStorageGatewaySigningRequests):
 #'     AWS Storage Gateway requires that you authenticate every request you
 #'     send; this topic describes how sign such a request.
 #' 
-#' -   [Error
+#'   - [Error
 #'     responses](https://docs.aws.amazon.com/storagegateway/latest/userguide/AWSStorageGatewayAPI.html#APIErrorResponses):
 #'     Provides reference information about AWS Storage Gateway errors.
 #' 
-#' -   [Operations in AWS Storage
+#'   - [Operations in AWS Storage
 #'     Gateway](https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_Operations.html):
 #'     Contains detailed descriptions of all AWS Storage Gateway
 #'     operations, their request parameters, response elements, possible
 #'     errors, and examples of requests and responses.
 #' 
-#' -   [AWS Storage Gateway endpoints and
+#'   - [AWS Storage Gateway endpoints and
 #'     quotas](https://docs.aws.amazon.com/general/latest/gr/sg.html):
 #'     Provides a list of each AWS Region and the endpoints available for
 #'     use with AWS Storage Gateway.
@@ -2190,8 +2293,8 @@ s3control <- function(config = list()) {
 #' `snap-78e226633445566ee`.
 #' 
 #' For more information, see [Announcement: Heads-up – Longer AWS Storage
-#' Gateway volume and snapshot IDs coming in
-#' 2016](https://forums.aws.amazon.com:443/ann.jspa?annID=3557).
+#' Gateway volume and snapshot IDs coming
+#' in 2016](https://forums.aws.amazon.com:443/ann.jspa?annID=3557).
 #'
 #' @param
 #' config
@@ -2318,6 +2421,12 @@ s3control <- function(config = list()) {
 #'  \link[=storagegateway_update_vtl_device_type]{update_vtl_device_type} \tab Updates the type of medium changer in a tape gateway
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname storagegateway
 #' @export
 storagegateway <- function(config = list()) {
@@ -2389,6 +2498,12 @@ storagegateway <- function(config = list()) {
 #'  \link[=dax_update_parameter_group]{update_parameter_group} \tab Modifies the parameters of a parameter group\cr
 #'  \link[=dax_update_subnet_group]{update_subnet_group} \tab Modifies an existing subnet group
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname dax
 #' @export
@@ -2476,6 +2591,12 @@ dax <- function(config = list()) {
 #'  \link[=docdb_start_db_cluster]{start_db_cluster} \tab Restarts the stopped cluster that is specified by DBClusterIdentifier\cr
 #'  \link[=docdb_stop_db_cluster]{stop_db_cluster} \tab Stops the running cluster that is specified by DBClusterIdentifier
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname docdb
 #' @export
@@ -2622,6 +2743,12 @@ docdb <- function(config = list()) {
 #'  \link[=dynamodb_update_time_to_live]{update_time_to_live} \tab The UpdateTimeToLive method enables or disables Time to Live (TTL) for the specified table
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname dynamodb
 #' @export
 dynamodb <- function(config = list()) {
@@ -2677,6 +2804,12 @@ dynamodb <- function(config = list()) {
 #'  \link[=dynamodbstreams_get_shard_iterator]{get_shard_iterator} \tab Returns a shard iterator\cr
 #'  \link[=dynamodbstreams_list_streams]{list_streams} \tab Returns an array of stream ARNs associated with the current account and endpoint
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname dynamodbstreams
 #' @export
@@ -2798,6 +2931,12 @@ dynamodbstreams <- function(config = list()) {
 #'  \link[=elasticache_start_migration]{start_migration} \tab Start the migration of data\cr
 #'  \link[=elasticache_test_failover]{test_failover} \tab Represents the input of a TestFailover operation which test automatic failover on a specified node group (called shard in the console) in a replication group (called cluster in the console)
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname elasticache
 #' @export
@@ -2927,6 +3066,12 @@ elasticache <- function(config = list()) {
 #'  \link[=neptune_stop_db_cluster]{stop_db_cluster} \tab Stops an Amazon Neptune DB cluster
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname neptune
 #' @export
 neptune <- function(config = list()) {
@@ -2966,24 +3111,24 @@ neptune <- function(config = list()) {
 #' 
 #' **Amazon RDS API Reference**
 #' 
-#' -   For the alphabetical list of API actions, see [API
+#'   - For the alphabetical list of API actions, see [API
 #'     Actions](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Operations.html).
 #' 
-#' -   For the alphabetical list of data types, see [Data
+#'   - For the alphabetical list of data types, see [Data
 #'     Types](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Types.html).
 #' 
-#' -   For a list of common query parameters, see [Common
+#'   - For a list of common query parameters, see [Common
 #'     Parameters](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/CommonParameters.html).
 #' 
-#' -   For descriptions of the error codes, see [Common
+#'   - For descriptions of the error codes, see [Common
 #'     Errors](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/CommonErrors.html).
 #' 
 #' **Amazon RDS User Guide**
 #' 
-#' -   For a summary of the Amazon RDS interfaces, see [Available RDS
+#'   - For a summary of the Amazon RDS interfaces, see [Available RDS
 #'     Interfaces](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html#Welcome.Interfaces).
 #' 
-#' -   For more information about how to use the Query API, see [Using the
+#'   - For more information about how to use the Query API, see [Using the
 #'     Query
 #'     API](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Using_the_Query_API.html).
 #'
@@ -3154,6 +3299,12 @@ neptune <- function(config = list()) {
 #'  \link[=rds_stop_db_instance_automated_backups_replication]{stop_db_instance_automated_backups_replication} \tab Stops automated backup replication for a DB instance
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname rds
 #' @export
 rds <- function(config = list()) {
@@ -3216,6 +3367,12 @@ rds <- function(config = list()) {
 #'  \link[=rdsdataservice_execute_statement]{execute_statement} \tab Runs a SQL statement against a database\cr
 #'  \link[=rdsdataservice_rollback_transaction]{rollback_transaction} \tab Performs a rollback of a transaction
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname rdsdataservice
 #' @export
@@ -3381,6 +3538,12 @@ rdsdataservice <- function(config = list()) {
 #'  \link[=redshift_rotate_encryption_key]{rotate_encryption_key} \tab Rotates the encryption keys for a cluster
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname redshift
 #' @export
 redshift <- function(config = list()) {
@@ -3453,6 +3616,12 @@ redshift <- function(config = list()) {
 #'  \link[=simpledb_put_attributes]{put_attributes} \tab The PutAttributes operation creates or replaces attributes in an item\cr
 #'  \link[=simpledb_select]{select} \tab The Select operation returns a set of attributes for ItemNames that match the select expression
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname simpledb
 #' @export
@@ -3623,6 +3792,12 @@ simpledb <- function(config = list()) {
 #'  \link[=apigateway_update_vpc_link]{update_vpc_link} \tab Updates an existing VpcLink of a specified identifier
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname apigateway
 #' @export
 apigateway <- function(config = list()) {
@@ -3676,6 +3851,12 @@ apigateway <- function(config = list()) {
 #'  \link[=apigatewaymanagementapi_get_connection]{get_connection} \tab Get information about the connection with the provided id\cr
 #'  \link[=apigatewaymanagementapi_post_to_connection]{post_to_connection} \tab Sends the provided data to the specified connection
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname apigatewaymanagementapi
 #' @export
@@ -3794,6 +3975,12 @@ apigatewaymanagementapi <- function(config = list()) {
 #'  \link[=apigatewayv2_update_vpc_link]{update_vpc_link} \tab Updates a VPC link
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname apigatewayv2
 #' @export
 apigatewayv2 <- function(config = list()) {
@@ -3893,6 +4080,12 @@ apigatewayv2 <- function(config = list()) {
 #'  \link[=appmesh_update_virtual_router]{update_virtual_router} \tab Updates an existing virtual router in a specified service mesh\cr
 #'  \link[=appmesh_update_virtual_service]{update_virtual_service} \tab Updates an existing virtual service in a specified service mesh
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname appmesh
 #' @export
@@ -4017,6 +4210,12 @@ appmesh <- function(config = list()) {
 #'  \link[=cloudfront_update_streaming_distribution]{update_streaming_distribution} \tab Update a streaming distribution
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname cloudfront
 #' @export
 cloudfront <- function(config = list()) {
@@ -4126,6 +4325,12 @@ cloudfront <- function(config = list()) {
 #'  \link[=directconnect_update_lag]{update_lag} \tab Updates the attributes of the specified link aggregation group (LAG)\cr
 #'  \link[=directconnect_update_virtual_interface_attributes]{update_virtual_interface_attributes} \tab Updates the specified attributes of the specified virtual private interface
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname directconnect
 #' @export
@@ -4241,6 +4446,12 @@ directconnect <- function(config = list()) {
 #'  \link[=elb_set_load_balancer_policies_of_listener]{set_load_balancer_policies_of_listener} \tab Replaces the current set of policies for the specified load balancer port with the specified set of policies
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname elb
 #' @export
 elb <- function(config = list()) {
@@ -4266,13 +4477,13 @@ elb <- function(config = list()) {
 #' Balancers, and Classic Load Balancers. This reference covers the
 #' following load balancer types:
 #' 
-#' -   Application Load Balancer - Operates at the application layer
-#'     (layer 7) and supports HTTP and HTTPS.
+#'   - Application Load Balancer - Operates at the application layer (layer
+#'     7) and supports HTTP and HTTPS.
 #' 
-#' -   Network Load Balancer - Operates at the transport layer (layer 4)
+#'   - Network Load Balancer - Operates at the transport layer (layer 4)
 #'     and supports TCP, TLS, and UDP.
 #' 
-#' -   Gateway Load Balancer - Operates at the network layer (layer 3).
+#'   - Gateway Load Balancer - Operates at the network layer (layer 3).
 #' 
 #' For more information, see the [Elastic Load Balancing User
 #' Guide](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/).
@@ -4361,6 +4572,12 @@ elb <- function(config = list()) {
 #'  \link[=elbv2_set_subnets]{set_subnets} \tab Enables the Availability Zones for the specified public subnets for the specified Application Load Balancer or Network Load Balancer
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname elbv2
 #' @export
 elbv2 <- function(config = list()) {
@@ -4381,12 +4598,12 @@ elbv2 <- function(config = list()) {
 #' users. Depending on the type of accelerator you choose, you can gain
 #' additional benefits.
 #' 
-#' -   By using a standard accelerator, you can improve availability of
+#'   - By using a standard accelerator, you can improve availability of
 #'     your internet applications that are used by a global audience. With
 #'     a standard accelerator, Global Accelerator directs traffic to
 #'     optimal endpoints over the AWS global network.
 #' 
-#' -   For other scenarios, you might choose a custom routing accelerator.
+#'   - For other scenarios, you might choose a custom routing accelerator.
 #'     With a custom routing accelerator, you can use application logic to
 #'     directly map one or more users to a specific endpoint among many
 #'     endpoints.
@@ -4427,7 +4644,7 @@ elbv2 <- function(config = list()) {
 #' internet traffic from clients is always directed to healthy endpoints.
 #' 
 #' For a list of the AWS Regions where Global Accelerator and other
-#' services are currently supported, see the AWS Region Table.
+#' services are currently supported, see the <span>AWS Region Table</span>.
 #' 
 #' AWS Global Accelerator includes the following components:
 #' 
@@ -4465,14 +4682,14 @@ elbv2 <- function(config = list()) {
 #' 
 #' There are two types of accelerators:
 #' 
-#' -   A *standard* accelerator directs traffic to the optimal AWS endpoint
+#'   - A *standard* accelerator directs traffic to the optimal AWS endpoint
 #'     based on several factors, including the user’s location, the health
 #'     of the endpoint, and the endpoint weights that you configure. This
 #'     improves the availability and performance of your applications.
 #'     Endpoints can be Network Load Balancers, Application Load Balancers,
 #'     Amazon EC2 instances, or Elastic IP addresses.
 #' 
-#' -   A *custom routing* accelerator directs traffic to one of possibly
+#'   - A *custom routing* accelerator directs traffic to one of possibly
 #'     thousands of Amazon EC2 instances running in a single or multiple
 #'     virtual private clouds (VPCs). With custom routing, listener ports
 #'     are mapped to statically associate port ranges with VPC subnets,
@@ -4626,6 +4843,12 @@ elbv2 <- function(config = list()) {
 #'  \link[=globalaccelerator_withdraw_byoip_cidr]{withdraw_byoip_cidr} \tab Stops advertising an address range that is provisioned as an address pool
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname globalaccelerator
 #' @export
 globalaccelerator <- function(config = list()) {
@@ -4743,6 +4966,12 @@ globalaccelerator <- function(config = list()) {
 #'  \link[=route53_update_traffic_policy_instance]{update_traffic_policy_instance} \tab Updates the resource record sets in a specified hosted zone that were created based on the settings in a specified traffic policy version
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname route53
 #' @export
 route53 <- function(config = list()) {
@@ -4816,6 +5045,12 @@ route53 <- function(config = list()) {
 #'  \link[=route53domains_update_tags_for_domain]{update_tags_for_domain} \tab This operation adds or updates tags for a specified domain\cr
 #'  \link[=route53domains_view_billing]{view_billing} \tab Returns all the domain-related billing records for the current AWS account for a specified period
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname route53domains
 #' @export
@@ -4936,6 +5171,12 @@ route53domains <- function(config = list()) {
 #'  \link[=route53resolver_update_resolver_rule]{update_resolver_rule} \tab Updates settings for a specified Resolver rule
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname route53resolver
 #' @export
 route53resolver <- function(config = list()) {
@@ -5014,6 +5255,12 @@ route53resolver <- function(config = list()) {
 #'  \link[=servicediscovery_update_service]{update_service} \tab Submits a request to perform the following operations:
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname servicediscovery
 #' @export
 servicediscovery <- function(config = list()) {
@@ -5026,48 +5273,48 @@ servicediscovery <- function(config = list()) {
 #' With Application Auto Scaling, you can configure automatic scaling for
 #' the following resources:
 #' 
-#' -   Amazon ECS services
+#'   - Amazon ECS services
 #' 
-#' -   Amazon EC2 Spot Fleet requests
+#'   - Amazon EC2 Spot Fleet requests
 #' 
-#' -   Amazon EMR clusters
+#'   - Amazon EMR clusters
 #' 
-#' -   Amazon AppStream 2.0 fleets
+#'   - Amazon AppStream 2.0 fleets
 #' 
-#' -   Amazon DynamoDB tables and global secondary indexes throughput
+#'   - Amazon DynamoDB tables and global secondary indexes throughput
 #'     capacity
 #' 
-#' -   Amazon Aurora Replicas
+#'   - Amazon Aurora Replicas
 #' 
-#' -   Amazon SageMaker endpoint variants
+#'   - Amazon SageMaker endpoint variants
 #' 
-#' -   Custom resources provided by your own applications or services
+#'   - Custom resources provided by your own applications or services
 #' 
-#' -   Amazon Comprehend document classification and entity recognizer
+#'   - Amazon Comprehend document classification and entity recognizer
 #'     endpoints
 #' 
-#' -   AWS Lambda function provisioned concurrency
+#'   - AWS Lambda function provisioned concurrency
 #' 
-#' -   Amazon Keyspaces (for Apache Cassandra) tables
+#'   - Amazon Keyspaces (for Apache Cassandra) tables
 #' 
-#' -   Amazon Managed Streaming for Apache Kafka cluster storage
+#'   - Amazon Managed Streaming for Apache Kafka cluster storage
 #' 
 #' **API Summary**
 #' 
 #' The Application Auto Scaling service API includes three key sets of
 #' actions:
 #' 
-#' -   Register and manage scalable targets - Register AWS or custom
+#'   - Register and manage scalable targets - Register AWS or custom
 #'     resources as scalable targets (a resource that Application Auto
 #'     Scaling can scale), set minimum and maximum capacity limits, and
 #'     retrieve information on existing scalable targets.
 #' 
-#' -   Configure and manage automatic scaling - Define scaling policies to
+#'   - Configure and manage automatic scaling - Define scaling policies to
 #'     dynamically scale your resources in response to CloudWatch alarms,
 #'     schedule one-time or recurring scaling actions, and retrieve your
 #'     recent scaling activity history.
 #' 
-#' -   Suspend and resume scaling - Temporarily suspend and later resume
+#'   - Suspend and resume scaling - Temporarily suspend and later resume
 #'     automatic scaling by calling the
 #'     [`register_scalable_target`][applicationautoscaling_register_scalable_target]
 #'     API action for any Application Auto Scaling scalable target. You can
@@ -5129,6 +5376,12 @@ servicediscovery <- function(config = list()) {
 #'  \link[=applicationautoscaling_put_scheduled_action]{put_scheduled_action} \tab Creates or updates a scheduled action for an Application Auto Scaling scalable target\cr
 #'  \link[=applicationautoscaling_register_scalable_target]{register_scalable_target} \tab Registers or updates a scalable target
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname applicationautoscaling
 #' @export
@@ -5215,6 +5468,12 @@ applicationautoscaling <- function(config = list()) {
 #'  \link[=applicationinsights_update_log_pattern]{update_log_pattern} \tab Adds a log pattern to a LogPatternSet
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname applicationinsights
 #' @export
 applicationinsights <- function(config = list()) {
@@ -5280,7 +5539,7 @@ applicationinsights <- function(config = list()) {
 #'  \link[=autoscaling_batch_put_scheduled_update_group_action]{batch_put_scheduled_update_group_action} \tab Creates or updates one or more scheduled scaling actions for an Auto Scaling group\cr
 #'  \link[=autoscaling_cancel_instance_refresh]{cancel_instance_refresh} \tab Cancels an instance refresh operation in progress\cr
 #'  \link[=autoscaling_complete_lifecycle_action]{complete_lifecycle_action} \tab Completes the lifecycle action for the specified token or instance with the specified result\cr
-#'  \link[=autoscaling_create_auto_scaling_group]{create_auto_scaling_group} \tab We strongly recommend using a launch template when calling this operation to ensure full functionality for Amazon EC2 Auto Scaling and Amazon EC2\cr
+#'  \link[=autoscaling_create_auto_scaling_group]{create_auto_scaling_group} \tab WE STRONGLY RECOMMEND USING A LAUNCH TEMPLATE WHEN CALLING THIS OPERATION TO ENSURE FULL FUNCTIONALITY FOR AMAZON EC2 AUTO SCALING AND AMAZON EC2\cr
 #'  \link[=autoscaling_create_launch_configuration]{create_launch_configuration} \tab Creates a launch configuration\cr
 #'  \link[=autoscaling_create_or_update_tags]{create_or_update_tags} \tab Creates or updates tags for the specified Auto Scaling group\cr
 #'  \link[=autoscaling_delete_auto_scaling_group]{delete_auto_scaling_group} \tab Deletes the specified Auto Scaling group\cr
@@ -5329,8 +5588,14 @@ applicationinsights <- function(config = list()) {
 #'  \link[=autoscaling_start_instance_refresh]{start_instance_refresh} \tab Starts a new instance refresh operation, which triggers a rolling replacement of all previously launched instances in the Auto Scaling group with a new group of instances\cr
 #'  \link[=autoscaling_suspend_processes]{suspend_processes} \tab Suspends the specified auto scaling processes, or all processes, for the specified Auto Scaling group\cr
 #'  \link[=autoscaling_terminate_instance_in_auto_scaling_group]{terminate_instance_in_auto_scaling_group} \tab Terminates the specified instance and optionally adjusts the desired group size\cr
-#'  \link[=autoscaling_update_auto_scaling_group]{update_auto_scaling_group} \tab We strongly recommend that all Auto Scaling groups use launch templates to ensure full functionality for Amazon EC2 Auto Scaling and Amazon EC2
+#'  \link[=autoscaling_update_auto_scaling_group]{update_auto_scaling_group} \tab WE STRONGLY RECOMMEND THAT ALL AUTO SCALING GROUPS USE LAUNCH TEMPLATES TO ENSURE FULL FUNCTIONALITY FOR AMAZON EC2 AUTO SCALING AND AMAZON EC2
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname autoscaling
 #' @export
@@ -5351,19 +5616,19 @@ autoscaling <- function(config = list()) {
 #' You can use the AWS Auto Scaling service API to accomplish the following
 #' tasks:
 #' 
-#' -   Create and manage scaling plans
+#'   - Create and manage scaling plans
 #' 
-#' -   Define target tracking scaling policies to dynamically scale your
+#'   - Define target tracking scaling policies to dynamically scale your
 #'     resources based on utilization
 #' 
-#' -   Scale Amazon EC2 Auto Scaling groups using predictive scaling and
+#'   - Scale Amazon EC2 Auto Scaling groups using predictive scaling and
 #'     dynamic scaling to scale your Amazon EC2 capacity faster
 #' 
-#' -   Set minimum and maximum capacity limits
+#'   - Set minimum and maximum capacity limits
 #' 
-#' -   Retrieve information on existing scaling plans
+#'   - Retrieve information on existing scaling plans
 #' 
-#' -   Access current forecast data and historical forecast data for up to
+#'   - Access current forecast data and historical forecast data for up to
 #'     56 days previous
 #' 
 #' To learn more about AWS Auto Scaling, including information about
@@ -5410,6 +5675,12 @@ autoscaling <- function(config = list()) {
 #'  \link[=autoscalingplans_get_scaling_plan_resource_forecast_data]{get_scaling_plan_resource_forecast_data} \tab Retrieves the forecast data for a scalable resource\cr
 #'  \link[=autoscalingplans_update_scaling_plan]{update_scaling_plan} \tab Updates the specified scaling plan
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname autoscalingplans
 #' @export
@@ -5498,8 +5769,8 @@ autoscalingplans <- function(config = list()) {
 #'  \link[=cloudformation_describe_stack_set_operation]{describe_stack_set_operation} \tab Returns the description of the specified stack set operation\cr
 #'  \link[=cloudformation_describe_type]{describe_type} \tab Returns detailed information about a type that has been registered\cr
 #'  \link[=cloudformation_describe_type_registration]{describe_type_registration} \tab Returns information about a type's registration, including its current status and type and version identifiers\cr
-#'  \link[=cloudformation_detect_stack_drift]{detect_stack_drift} \tab Detects whether a stack's actual configuration differs, or has drifted, from it's expected configuration, as defined in the stack template and any values specified as template parameters\cr
-#'  \link[=cloudformation_detect_stack_resource_drift]{detect_stack_resource_drift} \tab Returns information about whether a resource's actual configuration differs, or has drifted, from it's expected configuration, as defined in the stack template and any values specified as template parameters\cr
+#'  \link[=cloudformation_detect_stack_drift]{detect_stack_drift} \tab Detects whether a stack's actual configuration differs, or has _drifted_, from it's expected configuration, as defined in the stack template and any values specified as template parameters\cr
+#'  \link[=cloudformation_detect_stack_resource_drift]{detect_stack_resource_drift} \tab Returns information about whether a resource's actual configuration differs, or has _drifted_, from it's expected configuration, as defined in the stack template and any values specified as template parameters\cr
 #'  \link[=cloudformation_detect_stack_set_drift]{detect_stack_set_drift} \tab Detect drift on a stack set\cr
 #'  \link[=cloudformation_estimate_template_cost]{estimate_template_cost} \tab Returns the estimated monthly cost of a template\cr
 #'  \link[=cloudformation_execute_change_set]{execute_change_set} \tab Updates a stack using the input information that was provided when the specified change set was created\cr
@@ -5530,6 +5801,12 @@ autoscalingplans <- function(config = list()) {
 #'  \link[=cloudformation_update_termination_protection]{update_termination_protection} \tab Updates termination protection for the specified stack\cr
 #'  \link[=cloudformation_validate_template]{validate_template} \tab Validates a specified template
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname cloudformation
 #' @export
@@ -5616,6 +5893,12 @@ cloudformation <- function(config = list()) {
 #'  \link[=cloudtrail_update_trail]{update_trail} \tab Updates the settings that specify delivery of log files
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname cloudtrail
 #' @export
 cloudtrail <- function(config = list()) {
@@ -5696,7 +5979,7 @@ cloudtrail <- function(config = list()) {
 #'  \link[=cloudwatch_list_metrics]{list_metrics} \tab List the specified metrics\cr
 #'  \link[=cloudwatch_list_tags_for_resource]{list_tags_for_resource} \tab Displays the tags associated with a CloudWatch resource\cr
 #'  \link[=cloudwatch_put_anomaly_detector]{put_anomaly_detector} \tab Creates an anomaly detection model for a CloudWatch metric\cr
-#'  \link[=cloudwatch_put_composite_alarm]{put_composite_alarm} \tab Creates or updates a composite alarm\cr
+#'  \link[=cloudwatch_put_composite_alarm]{put_composite_alarm} \tab Creates or updates a _composite alarm_\cr
 #'  \link[=cloudwatch_put_dashboard]{put_dashboard} \tab Creates a dashboard if it does not already exist, or updates an existing dashboard\cr
 #'  \link[=cloudwatch_put_insight_rule]{put_insight_rule} \tab Creates a Contributor Insights rule\cr
 #'  \link[=cloudwatch_put_metric_alarm]{put_metric_alarm} \tab Creates or updates an alarm and associates it with the specified metric, metric math expression, or anomaly detection model\cr
@@ -5705,6 +5988,12 @@ cloudtrail <- function(config = list()) {
 #'  \link[=cloudwatch_tag_resource]{tag_resource} \tab Assigns one or more tags (key-value pairs) to the specified CloudWatch resource\cr
 #'  \link[=cloudwatch_untag_resource]{untag_resource} \tab Removes one or more tags from the specified resource
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname cloudwatch
 #' @export
@@ -5722,15 +6011,15 @@ cloudwatch <- function(config = list()) {
 #' also use rules to take action on a predetermined schedule. For example,
 #' you can configure rules to:
 #' 
-#' -   Automatically invoke an AWS Lambda function to update DNS entries
+#'   - Automatically invoke an AWS Lambda function to update DNS entries
 #'     when an event notifies you that Amazon EC2 instance enters the
 #'     running state.
 #' 
-#' -   Direct specific API records from AWS CloudTrail to an Amazon Kinesis
+#'   - Direct specific API records from AWS CloudTrail to an Amazon Kinesis
 #'     data stream for detailed analysis of potential security or
 #'     availability risks.
 #' 
-#' -   Periodically invoke a built-in target to create a snapshot of an
+#'   - Periodically invoke a built-in target to create a snapshot of an
 #'     Amazon EBS volume.
 #' 
 #' For more information about the features of Amazon EventBridge, see the
@@ -5799,7 +6088,7 @@ cloudwatch <- function(config = list()) {
 #'  \link[=cloudwatchevents_list_targets_by_rule]{list_targets_by_rule} \tab Lists the targets assigned to the specified rule\cr
 #'  \link[=cloudwatchevents_put_events]{put_events} \tab Sends custom events to Amazon EventBridge so that they can be matched to rules\cr
 #'  \link[=cloudwatchevents_put_partner_events]{put_partner_events} \tab This is used by SaaS partners to write events to a customer's partner event bus\cr
-#'  \link[=cloudwatchevents_put_permission]{put_permission} \tab Running PutPermission permits the specified AWS account or AWS organization to put events to the specified event bus\cr
+#'  \link[=cloudwatchevents_put_permission]{put_permission} \tab Running PutPermission permits the specified AWS account or AWS organization to put events to the specified _event bus_\cr
 #'  \link[=cloudwatchevents_put_rule]{put_rule} \tab Creates or updates the specified rule\cr
 #'  \link[=cloudwatchevents_put_targets]{put_targets} \tab Adds the specified targets to the specified rule, or updates the targets if they are already associated with the rule\cr
 #'  \link[=cloudwatchevents_remove_permission]{remove_permission} \tab Revokes the permission of another AWS account to be able to put events to the specified event bus\cr
@@ -5810,6 +6099,12 @@ cloudwatch <- function(config = list()) {
 #'  \link[=cloudwatchevents_untag_resource]{untag_resource} \tab Removes one or more tags from the specified EventBridge resource\cr
 #'  \link[=cloudwatchevents_update_archive]{update_archive} \tab Updates the specified archive
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname cloudwatchevents
 #' @export
@@ -5828,7 +6123,7 @@ cloudwatchevents <- function(config = list()) {
 #' 
 #' You can use CloudWatch Logs to:
 #' 
-#' -   **Monitor logs from EC2 instances in real-time**: You can use
+#'   - **Monitor logs from EC2 instances in real-time**: You can use
 #'     CloudWatch Logs to monitor applications and systems using log data.
 #'     For example, CloudWatch Logs can track the number of errors that
 #'     occur in your application logs and send you a notification whenever
@@ -5841,12 +6136,12 @@ cloudwatchevents <- function(config = list()) {
 #'     term you are searching for is found, CloudWatch Logs reports the
 #'     data to a CloudWatch metric that you specify.
 #' 
-#' -   **Monitor AWS CloudTrail logged events**: You can create alarms in
+#'   - **Monitor AWS CloudTrail logged events**: You can create alarms in
 #'     CloudWatch and receive notifications of particular API activity as
 #'     captured by CloudTrail. You can use the notification to perform
 #'     troubleshooting.
 #' 
-#' -   **Archive log data**: You can use CloudWatch Logs to store your log
+#'   - **Archive log data**: You can use CloudWatch Logs to store your log
 #'     data in highly durable storage. You can change the log retention
 #'     setting so that any log events older than this setting are
 #'     automatically deleted. The CloudWatch Logs agent makes it easy to
@@ -5929,6 +6224,12 @@ cloudwatchevents <- function(config = list()) {
 #'  \link[=cloudwatchlogs_test_metric_filter]{test_metric_filter} \tab Tests the filter pattern of a metric filter against a sample of log event messages\cr
 #'  \link[=cloudwatchlogs_untag_log_group]{untag_log_group} \tab Removes the specified tags from the specified log group
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname cloudwatchlogs
 #' @export
@@ -6081,6 +6382,12 @@ cloudwatchlogs <- function(config = list()) {
 #'  \link[=configservice_untag_resource]{untag_resource} \tab Deletes specified tags from a resource
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname configservice
 #' @export
 configservice <- function(config = list()) {
@@ -6125,12 +6432,12 @@ configservice <- function(config = list()) {
 #' When you use the AWS Health API operations to return AWS Health events,
 #' see the following recommendations:
 #' 
-#' -   Use the
+#'   - Use the
 #'     [eventScopeCode](https://docs.aws.amazon.com/health/latest/APIReference/API_Event.html#AWSHealth-Type-Event-eventScopeCode)
 #'     parameter to specify whether to return AWS Health events that are
 #'     public or account-specific.
 #' 
-#' -   Use pagination to view all events from the response. For example, if
+#'   - Use pagination to view all events from the response. For example, if
 #'     you call the
 #'     [`describe_events_for_organization`][health_describe_events_for_organization]
 #'     operation to get all events in your organization, you might receive
@@ -6183,6 +6490,12 @@ configservice <- function(config = list()) {
 #'  \link[=health_disable_health_service_access_for_organization]{disable_health_service_access_for_organization} \tab Disables AWS Health from working with AWS Organizations\cr
 #'  \link[=health_enable_health_service_access_for_organization]{enable_health_service_access_for_organization} \tab Calling this operation enables AWS Health to work with AWS Organizations
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname health
 #' @export
@@ -6270,6 +6583,12 @@ health <- function(config = list()) {
 #'  \link[=licensemanager_update_service_settings]{update_service_settings} \tab Updates License Manager settings for the current Region
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname licensemanager
 #' @export
 licensemanager <- function(config = list()) {
@@ -6295,24 +6614,24 @@ licensemanager <- function(config = list()) {
 #' implement applications in your preferred language. For more information,
 #' see:
 #' 
-#' -   [AWS
+#'   - [AWS
 #'     CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html)
 #' 
-#' -   [AWS SDK for
+#'   - [AWS SDK for
 #'     Java](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/opsworks/AWSOpsWorksClient.html)
 #' 
-#' -   [AWS SDK for
+#'   - [AWS SDK for
 #'     .NET](https://docs.aws.amazon.com/sdkfornet/latest/apidocs/Index.html)
 #' 
-#' -   [AWS SDK for PHP
-#'     2](https://docs.aws.amazon.com/aws-sdk-php/v3/api/class-Aws.OpsWorks.OpsWorksClient.html)
+#'   - [AWS SDK for
+#'     PHP 2](https://docs.aws.amazon.com/aws-sdk-php/v3/api/class-Aws.OpsWorks.OpsWorksClient.html)
 #' 
-#' -   [AWS SDK for Ruby](https://docs.aws.amazon.com/sdk-for-ruby/v2/api/)
+#'   - [AWS SDK for Ruby](https://docs.aws.amazon.com/sdk-for-ruby/v2/api/)
 #' 
-#' -   [AWS SDK for
+#'   - [AWS SDK for
 #'     Node.js](https://docs.aws.amazon.com/sdk-for-javascript/index.html)
 #' 
-#' -   [AWS SDK for
+#'   - [AWS SDK for
 #'     Python(Boto)](http://docs.pythonboto.org/en/latest/ref/opsworks.html)
 #' 
 #' **Endpoints**
@@ -6321,36 +6640,36 @@ licensemanager <- function(config = list()) {
 #' must connect to one of the following endpoints. Stacks can only be
 #' accessed or managed within the endpoint in which they are created.
 #' 
-#' -   opsworks.us-east-1.amazonaws.com
+#'   - opsworks.us-east-1.amazonaws.com
 #' 
-#' -   opsworks.us-east-2.amazonaws.com
+#'   - opsworks.us-east-2.amazonaws.com
 #' 
-#' -   opsworks.us-west-1.amazonaws.com
+#'   - opsworks.us-west-1.amazonaws.com
 #' 
-#' -   opsworks.us-west-2.amazonaws.com
+#'   - opsworks.us-west-2.amazonaws.com
 #' 
-#' -   opsworks.ca-central-1.amazonaws.com (API only; not available in the
+#'   - opsworks.ca-central-1.amazonaws.com (API only; not available in the
 #'     AWS console)
 #' 
-#' -   opsworks.eu-west-1.amazonaws.com
+#'   - opsworks.eu-west-1.amazonaws.com
 #' 
-#' -   opsworks.eu-west-2.amazonaws.com
+#'   - opsworks.eu-west-2.amazonaws.com
 #' 
-#' -   opsworks.eu-west-3.amazonaws.com
+#'   - opsworks.eu-west-3.amazonaws.com
 #' 
-#' -   opsworks.eu-central-1.amazonaws.com
+#'   - opsworks.eu-central-1.amazonaws.com
 #' 
-#' -   opsworks.ap-northeast-1.amazonaws.com
+#'   - opsworks.ap-northeast-1.amazonaws.com
 #' 
-#' -   opsworks.ap-northeast-2.amazonaws.com
+#'   - opsworks.ap-northeast-2.amazonaws.com
 #' 
-#' -   opsworks.ap-south-1.amazonaws.com
+#'   - opsworks.ap-south-1.amazonaws.com
 #' 
-#' -   opsworks.ap-southeast-1.amazonaws.com
+#'   - opsworks.ap-southeast-1.amazonaws.com
 #' 
-#' -   opsworks.ap-southeast-2.amazonaws.com
+#'   - opsworks.ap-southeast-2.amazonaws.com
 #' 
-#' -   opsworks.sa-east-1.amazonaws.com
+#'   - opsworks.sa-east-1.amazonaws.com
 #' 
 #' **Chef Versions**
 #' 
@@ -6474,6 +6793,12 @@ licensemanager <- function(config = list()) {
 #'  \link[=opsworks_update_volume]{update_volume} \tab Updates an Amazon EBS volume's name or mount point
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname opsworks
 #' @export
 opsworks <- function(config = list()) {
@@ -6491,7 +6816,7 @@ opsworks <- function(config = list()) {
 #' 
 #' **Glossary of terms**
 #' 
-#' -   **Server**: A configuration management server that can be
+#'   - **Server**: A configuration management server that can be
 #'     highly-available. The configuration management server runs on an
 #'     Amazon Elastic Compute Cloud (EC2) instance, and may use various
 #'     other AWS services, such as Amazon Relational Database Service (RDS)
@@ -6500,22 +6825,22 @@ opsworks <- function(config = list()) {
 #'     RDS. In AWS OpsWorks CM, you do not start or stop servers. After you
 #'     create servers, they continue to run until they are deleted.
 #' 
-#' -   **Engine**: The engine is the specific configuration manager that
+#'   - **Engine**: The engine is the specific configuration manager that
 #'     you want to use. Valid values in this release include `ChefAutomate`
 #'     and `Puppet`.
 #' 
-#' -   **Backup**: This is an application-level backup of the data that the
+#'   - **Backup**: This is an application-level backup of the data that the
 #'     configuration manager stores. AWS OpsWorks CM creates an S3 bucket
 #'     for backups when you launch the first server. A backup maintains a
 #'     snapshot of a server's configuration-related attributes at the time
 #'     the backup starts.
 #' 
-#' -   **Events**: Events are always related to a server. Events are
+#'   - **Events**: Events are always related to a server. Events are
 #'     written during server creation, when health checks run, when backups
 #'     are created, when system maintenance is performed, etc. When you
 #'     delete a server, the server's events are also deleted.
 #' 
-#' -   **Account attributes**: Every account has attributes that are
+#'   - **Account attributes**: Every account has attributes that are
 #'     assigned in the AWS OpsWorks CM database. These attributes store
 #'     information about configuration limits (servers, backups, etc.) and
 #'     your customer account.
@@ -6526,23 +6851,23 @@ opsworks <- function(config = list()) {
 #' connect to one of the following endpoints. Your servers can only be
 #' accessed or managed within the endpoint in which they are created.
 #' 
-#' -   opsworks-cm.us-east-1.amazonaws.com
+#'   - opsworks-cm.us-east-1.amazonaws.com
 #' 
-#' -   opsworks-cm.us-east-2.amazonaws.com
+#'   - opsworks-cm.us-east-2.amazonaws.com
 #' 
-#' -   opsworks-cm.us-west-1.amazonaws.com
+#'   - opsworks-cm.us-west-1.amazonaws.com
 #' 
-#' -   opsworks-cm.us-west-2.amazonaws.com
+#'   - opsworks-cm.us-west-2.amazonaws.com
 #' 
-#' -   opsworks-cm.ap-northeast-1.amazonaws.com
+#'   - opsworks-cm.ap-northeast-1.amazonaws.com
 #' 
-#' -   opsworks-cm.ap-southeast-1.amazonaws.com
+#'   - opsworks-cm.ap-southeast-1.amazonaws.com
 #' 
-#' -   opsworks-cm.ap-southeast-2.amazonaws.com
+#'   - opsworks-cm.ap-southeast-2.amazonaws.com
 #' 
-#' -   opsworks-cm.eu-central-1.amazonaws.com
+#'   - opsworks-cm.eu-central-1.amazonaws.com
 #' 
-#' -   opsworks-cm.eu-west-1.amazonaws.com
+#'   - opsworks-cm.eu-west-1.amazonaws.com
 #' 
 #' For more information, see [AWS OpsWorks endpoints and
 #' quotas](https://docs.aws.amazon.com/general/latest/gr/opsworks-service.html)
@@ -6605,6 +6930,12 @@ opsworks <- function(config = list()) {
 #'  \link[=opsworkscm_update_server]{update_server} \tab Updates settings for a server\cr
 #'  \link[=opsworkscm_update_server_engine_attributes]{update_server_engine_attributes} \tab Updates engine-specific attributes on a specified server
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname opsworkscm
 #' @export
@@ -6706,6 +7037,12 @@ opsworkscm <- function(config = list()) {
 #'  \link[=organizations_update_policy]{update_policy} \tab Updates an existing policy with a new name, description, or content
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname organizations
 #' @export
 organizations <- function(config = list()) {
@@ -6735,11 +7072,11 @@ organizations <- function(config = list()) {
 #' relation to the requested dimensions, measured at that time point.
 #' Examples include SQL, Wait event, User, and Host.
 #' 
-#' -   To learn more about Performance Insights and Amazon Aurora DB
+#'   - To learn more about Performance Insights and Amazon Aurora DB
 #'     instances, go to the [Amazon Aurora User
 #'     Guide](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights.html).
 #' 
-#' -   To learn more about Performance Insights and Amazon RDS DB
+#'   - To learn more about Performance Insights and Amazon RDS DB
 #'     instances, go to the [Amazon RDS User
 #'     Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html).
 #'
@@ -6779,6 +7116,12 @@ organizations <- function(config = list()) {
 #'  \link[=pi_get_resource_metrics]{get_resource_metrics} \tab Retrieve Performance Insights metrics for a set of data sources, over a time period
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname pi
 #' @export
 pi <- function(config = list()) {
@@ -6813,17 +7156,17 @@ pi <- function(config = list()) {
 #' AWS Resource Groups uses a REST-compliant API that you can use to
 #' perform the following types of operations.
 #' 
-#' -   Create, Read, Update, and Delete (CRUD) operations on resource
+#'   - Create, Read, Update, and Delete (CRUD) operations on resource
 #'     groups and resource query entities
 #' 
-#' -   Applying, editing, and removing tags from resource groups
+#'   - Applying, editing, and removing tags from resource groups
 #' 
-#' -   Resolving resource group member ARNs so they can be returned as
+#'   - Resolving resource group member ARNs so they can be returned as
 #'     search results
 #' 
-#' -   Getting data about resources that are members of a group
+#'   - Getting data about resources that are members of a group
 #' 
-#' -   Searching AWS resources based on a resource query
+#'   - Searching AWS resources based on a resource query
 #'
 #' @param
 #' config
@@ -6875,6 +7218,12 @@ pi <- function(config = list()) {
 #'  \link[=resourcegroups_update_group_query]{update_group_query} \tab Updates the resource query of a group
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname resourcegroups
 #' @export
 resourcegroups <- function(config = list()) {
@@ -6905,30 +7254,30 @@ resourcegroups <- function(config = list()) {
 #' You can use the resource groups tagging API operations to complete the
 #' following tasks:
 #' 
-#' -   Tag and untag supported resources located in the specified Region
+#'   - Tag and untag supported resources located in the specified Region
 #'     for the AWS account.
 #' 
-#' -   Use tag-based filters to search for resources located in the
+#'   - Use tag-based filters to search for resources located in the
 #'     specified Region for the AWS account.
 #' 
-#' -   List all existing tag keys in the specified Region for the AWS
+#'   - List all existing tag keys in the specified Region for the AWS
 #'     account.
 #' 
-#' -   List all existing values for the specified key in the specified
+#'   - List all existing values for the specified key in the specified
 #'     Region for the AWS account.
 #' 
 #' To use resource groups tagging API operations, you must add the
 #' following permissions to your IAM policy:
 #' 
-#' -   `tag:GetResources`
+#'   - `tag:GetResources`
 #' 
-#' -   `tag:TagResources`
+#'   - `tag:TagResources`
 #' 
-#' -   `tag:UntagResources`
+#'   - `tag:UntagResources`
 #' 
-#' -   `tag:GetTagKeys`
+#'   - `tag:GetTagKeys`
 #' 
-#' -   `tag:GetTagValues`
+#'   - `tag:GetTagValues`
 #' 
 #' You'll also need permissions to access the resources of individual
 #' services so that you can tag and untag those resources.
@@ -6942,285 +7291,285 @@ resourcegroups <- function(config = list()) {
 #' You can use the Resource Groups Tagging API to tag resources for the
 #' following AWS services.
 #' 
-#' -   [Alexa for Business (a4b)](https://docs.aws.amazon.com/a4b/)
+#'   - [Alexa for Business (a4b)](https://docs.aws.amazon.com/a4b/)
 #' 
-#' -   [API Gateway](https://docs.aws.amazon.com/apigateway/)
+#'   - [API Gateway](https://docs.aws.amazon.com/apigateway/)
 #' 
-#' -   [Amazon AppStream](https://docs.aws.amazon.com/appstream2/)
+#'   - [Amazon AppStream](https://docs.aws.amazon.com/appstream2/)
 #' 
-#' -   [AWS AppSync](https://docs.aws.amazon.com/appsync/)
+#'   - [AWS AppSync](https://docs.aws.amazon.com/appsync/)
 #' 
-#' -   [AWS App Mesh](https://docs.aws.amazon.com/app-mesh/)
+#'   - [AWS App Mesh](https://docs.aws.amazon.com/app-mesh/)
 #' 
-#' -   [Amazon Athena](https://docs.aws.amazon.com/athena/)
+#'   - [Amazon Athena](https://docs.aws.amazon.com/athena/)
 #' 
-#' -   [Amazon
+#'   - [Amazon
 #'     Aurora](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/)
 #' 
-#' -   [AWS Backup](https://docs.aws.amazon.com/aws-backup/)
+#'   - [AWS Backup](https://docs.aws.amazon.com/aws-backup/)
 #' 
-#' -   [AWS Certificate Manager](https://docs.aws.amazon.com/acm/)
+#'   - [AWS Certificate Manager](https://docs.aws.amazon.com/acm/)
 #' 
-#' -   [AWS Certificate Manager Private
+#'   - [AWS Certificate Manager Private
 #'     CA](https://docs.aws.amazon.com/acm/)
 #' 
-#' -   [Amazon Cloud
+#'   - [Amazon Cloud
 #'     Directory](https://docs.aws.amazon.com/clouddirectory/)
 #' 
-#' -   [AWS Cloud Map](https://docs.aws.amazon.com/cloud-map/)
+#'   - [AWS Cloud Map](https://docs.aws.amazon.com/cloud-map/)
 #' 
-#' -   [AWS CloudFormation](https://docs.aws.amazon.com/cloudformation/)
+#'   - [AWS CloudFormation](https://docs.aws.amazon.com/cloudformation/)
 #' 
-#' -   [Amazon CloudFront](https://docs.aws.amazon.com/cloudfront/)
+#'   - [Amazon CloudFront](https://docs.aws.amazon.com/cloudfront/)
 #' 
-#' -   [AWS CloudHSM](https://docs.aws.amazon.com/cloudhsm/)
+#'   - [AWS CloudHSM](https://docs.aws.amazon.com/cloudhsm/)
 #' 
-#' -   [AWS CloudTrail](https://docs.aws.amazon.com/cloudtrail/)
+#'   - [AWS CloudTrail](https://docs.aws.amazon.com/cloudtrail/)
 #' 
-#' -   [Amazon CloudWatch (alarms
+#'   - [Amazon CloudWatch (alarms
 #'     only)](https://docs.aws.amazon.com/cloudwatch/)
 #' 
-#' -   [Amazon CloudWatch
+#'   - [Amazon CloudWatch
 #'     Events](https://docs.aws.amazon.com/cloudwatch/?id=docs_gateway#amazon-cloudwatch-events)
 #' 
-#' -   [Amazon CloudWatch
+#'   - [Amazon CloudWatch
 #'     Logs](https://docs.aws.amazon.com/cloudwatch/?id=docs_gateway#amazon-cloudwatch-logs)
 #' 
-#' -   [Amazon Cloudwatch
+#'   - [Amazon Cloudwatch
 #'     Synthetics](https://docs.aws.amazon.com/cloudwatch/)
 #' 
-#' -   [AWS CodeBuild](https://docs.aws.amazon.com/codebuild/)
+#'   - [AWS CodeBuild](https://docs.aws.amazon.com/codebuild/)
 #' 
-#' -   [AWS CodeCommit](https://docs.aws.amazon.com/codecommit/)
+#'   - [AWS CodeCommit](https://docs.aws.amazon.com/codecommit/)
 #' 
-#' -   [AWS CodeGuru
+#'   - [AWS CodeGuru
 #'     Profiler](https://docs.aws.amazon.com/codeguru/latest/profiler-ug/)
 #' 
-#' -   [AWS CodePipeline](https://docs.aws.amazon.com/codepipeline/)
+#'   - [AWS CodePipeline](https://docs.aws.amazon.com/codepipeline/)
 #' 
-#' -   [AWS CodeStar](https://docs.aws.amazon.com/codestar/)
+#'   - [AWS CodeStar](https://docs.aws.amazon.com/codestar/)
 #' 
-#' -   [AWS CodeStar
+#'   - [AWS CodeStar
 #'     Connections](https://docs.aws.amazon.com/codestar-connections/latest/APIReference/)
 #' 
-#' -   [Amazon Cognito Identity](https://docs.aws.amazon.com/cognito/)
+#'   - [Amazon Cognito Identity](https://docs.aws.amazon.com/cognito/)
 #' 
-#' -   [Amazon Cognito User Pools](https://docs.aws.amazon.com/cognito/)
+#'   - [Amazon Cognito User Pools](https://docs.aws.amazon.com/cognito/)
 #' 
-#' -   [Amazon Comprehend](https://docs.aws.amazon.com/comprehend/)
+#'   - [Amazon Comprehend](https://docs.aws.amazon.com/comprehend/)
 #' 
-#' -   [AWS Config](https://docs.aws.amazon.com/config/)
+#'   - [AWS Config](https://docs.aws.amazon.com/config/)
 #' 
-#' -   [Amazon
+#'   - [Amazon
 #'     Connect](https://aws.amazon.com/connect/resources/?whats-new-cards=#Documentation)
 #' 
-#' -   [AWS Data Exchange](https://docs.aws.amazon.com/data-exchange/)
+#'   - [AWS Data Exchange](https://docs.aws.amazon.com/data-exchange/)
 #' 
-#' -   [AWS Data Pipeline](https://docs.aws.amazon.com/data-pipeline/)
+#'   - [AWS Data Pipeline](https://docs.aws.amazon.com/data-pipeline/)
 #' 
-#' -   [AWS Database Migration Service](https://docs.aws.amazon.com/dms/)
+#'   - [AWS Database Migration Service](https://docs.aws.amazon.com/dms/)
 #' 
-#' -   [AWS DataSync](https://docs.aws.amazon.com/datasync/)
+#'   - [AWS DataSync](https://docs.aws.amazon.com/datasync/)
 #' 
-#' -   [AWS Device Farm](https://docs.aws.amazon.com/devicefarm/)
+#'   - [AWS Device Farm](https://docs.aws.amazon.com/devicefarm/)
 #' 
-#' -   [AWS Direct Connect](https://docs.aws.amazon.com/directconnect/)
+#'   - [AWS Direct Connect](https://docs.aws.amazon.com/directconnect/)
 #' 
-#' -   [AWS Directory
+#'   - [AWS Directory
 #'     Service](https://docs.aws.amazon.com/directory-service/)
 #' 
-#' -   [Amazon DynamoDB](https://docs.aws.amazon.com/dynamodb/)
+#'   - [Amazon DynamoDB](https://docs.aws.amazon.com/dynamodb/)
 #' 
-#' -   [Amazon EBS](https://docs.aws.amazon.com/ebs/)
+#'   - [Amazon EBS](https://docs.aws.amazon.com/ebs/)
 #' 
-#' -   [Amazon EC2](https://docs.aws.amazon.com/ec2/)
+#'   - [Amazon EC2](https://docs.aws.amazon.com/ec2/)
 #' 
-#' -   [EC2 Image Builder](https://docs.aws.amazon.com/imagebuilder/)
+#'   - [EC2 Image Builder](https://docs.aws.amazon.com/imagebuilder/)
 #' 
-#' -   [Amazon ECR](https://docs.aws.amazon.com/ecr/)
+#'   - [Amazon ECR](https://docs.aws.amazon.com/ecr/)
 #' 
-#' -   [Amazon ECS](https://docs.aws.amazon.com/ecs/)
+#'   - [Amazon ECS](https://docs.aws.amazon.com/ecs/)
 #' 
-#' -   [Amazon EKS](https://docs.aws.amazon.com/eks/)
+#'   - [Amazon EKS](https://docs.aws.amazon.com/eks/)
 #' 
-#' -   [AWS Elastic
+#'   - [AWS Elastic
 #'     Beanstalk](https://docs.aws.amazon.com/elastic-beanstalk/)
 #' 
-#' -   [Amazon Elastic File System](https://docs.aws.amazon.com/efs/)
+#'   - [Amazon Elastic File System](https://docs.aws.amazon.com/efs/)
 #' 
-#' -   [Elastic Load
+#'   - [Elastic Load
 #'     Balancing](https://docs.aws.amazon.com/elasticloadbalancing/)
 #' 
-#' -   [Amazon Elastic
+#'   - [Amazon Elastic
 #'     Inference](https://docs.aws.amazon.com/elastic-inference/)
 #' 
-#' -   [Amazon ElastiCache](https://docs.aws.amazon.com/elasticache/)
+#'   - [Amazon ElastiCache](https://docs.aws.amazon.com/elasticache/)
 #' 
-#' -   [Amazon Elasticsearch
+#'   - [Amazon Elasticsearch
 #'     Service](https://docs.aws.amazon.com/elasticsearch-service/)
 #' 
-#' -   [AWS Elemental MediaLive](https://docs.aws.amazon.com/medialive/)
+#'   - [AWS Elemental MediaLive](https://docs.aws.amazon.com/medialive/)
 #' 
-#' -   [AWS Elemental
+#'   - [AWS Elemental
 #'     MediaPackage](https://docs.aws.amazon.com/mediapackage/)
 #' 
-#' -   [AWS Elemental MediaPackage
+#'   - [AWS Elemental MediaPackage
 #'     VoD](https://docs.aws.amazon.com/mediapackage/)
 #' 
-#' -   [AWS Elemental
+#'   - [AWS Elemental
 #'     MediaTailor](https://docs.aws.amazon.com/mediatailor/)
 #' 
-#' -   [Amazon EMR](https://docs.aws.amazon.com/emr/)
+#'   - [Amazon EMR](https://docs.aws.amazon.com/emr/)
 #' 
-#' -   [Amazon EventBridge
+#'   - [Amazon EventBridge
 #'     Schema](https://docs.aws.amazon.com/eventbridge/)
 #' 
-#' -   [AWS Firewall
+#'   - [AWS Firewall
 #'     Manager](https://docs.aws.amazon.com/firewall-manager/)
 #' 
-#' -   [Amazon Forecast](https://docs.aws.amazon.com/forecast/)
+#'   - [Amazon Forecast](https://docs.aws.amazon.com/forecast/)
 #' 
-#' -   [Amazon Fraud Detector](https://docs.aws.amazon.com/frauddetector/)
+#'   - [Amazon Fraud Detector](https://docs.aws.amazon.com/frauddetector/)
 #' 
-#' -   [Amazon FSx](https://docs.aws.amazon.com/fsx/)
+#'   - [Amazon FSx](https://docs.aws.amazon.com/fsx/)
 #' 
-#' -   [Amazon S3
+#'   - [Amazon S3
 #'     Glacier](https://docs.aws.amazon.com/s3/?id=docs_gateway#amazon-s3-glacier)
 #' 
-#' -   [AWS Global
+#'   - [AWS Global
 #'     Accelerator](https://docs.aws.amazon.com/global-accelerator/)
 #' 
-#' -   [AWS Ground Station](https://docs.aws.amazon.com/ground-station/)
+#'   - [AWS Ground Station](https://docs.aws.amazon.com/ground-station/)
 #' 
-#' -   [AWS Glue](https://docs.aws.amazon.com/glue/)
+#'   - [AWS Glue](https://docs.aws.amazon.com/glue/)
 #' 
-#' -   [Amazon GuardDuty](https://docs.aws.amazon.com/guardduty/)
+#'   - [Amazon GuardDuty](https://docs.aws.amazon.com/guardduty/)
 #' 
-#' -   [Amazon Inspector](https://docs.aws.amazon.com/inspector/)
+#'   - [Amazon Inspector](https://docs.aws.amazon.com/inspector/)
 #' 
-#' -   [Amazon Interactive Video Service](https://docs.aws.amazon.com/ivs/)
+#'   - [Amazon Interactive Video Service](https://docs.aws.amazon.com/ivs/)
 #' 
-#' -   [AWS IoT Analytics](https://docs.aws.amazon.com/iotanalytics/)
+#'   - [AWS IoT Analytics](https://docs.aws.amazon.com/iotanalytics/)
 #' 
-#' -   [AWS IoT Core](https://docs.aws.amazon.com/iot/)
+#'   - [AWS IoT Core](https://docs.aws.amazon.com/iot/)
 #' 
-#' -   [AWS IoT Device
+#'   - [AWS IoT Device
 #'     Defender](https://docs.aws.amazon.com/iot-device-defender/)
 #' 
-#' -   [AWS IoT Device
+#'   - [AWS IoT Device
 #'     Management](https://docs.aws.amazon.com/iot-device-management/)
 #' 
-#' -   [AWS IoT Events](https://docs.aws.amazon.com/iotevents/)
+#'   - [AWS IoT Events](https://docs.aws.amazon.com/iotevents/)
 #' 
-#' -   [AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/)
+#'   - [AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/)
 #' 
-#' -   [AWS IoT 1-Click](https://docs.aws.amazon.com/iot-1-click/)
+#'   - [AWS IoT 1-Click](https://docs.aws.amazon.com/iot-1-click/)
 #' 
-#' -   [AWS IoT Sitewise](https://docs.aws.amazon.com/iot-sitewise/)
+#'   - [AWS IoT Sitewise](https://docs.aws.amazon.com/iot-sitewise/)
 #' 
-#' -   [AWS IoT Things Graph](https://docs.aws.amazon.com/thingsgraph/)
+#'   - [AWS IoT Things Graph](https://docs.aws.amazon.com/thingsgraph/)
 #' 
-#' -   [Amazon Kendra](https://docs.aws.amazon.com/kendra/)
+#'   - [Amazon Kendra](https://docs.aws.amazon.com/kendra/)
 #' 
-#' -   [AWS Key Management Service](https://docs.aws.amazon.com/kms/)
+#'   - [AWS Key Management Service](https://docs.aws.amazon.com/kms/)
 #' 
-#' -   [Amazon Kinesis](https://docs.aws.amazon.com/kinesis/)
+#'   - [Amazon Kinesis](https://docs.aws.amazon.com/kinesis/)
 #' 
-#' -   [Amazon Kinesis Data
+#'   - [Amazon Kinesis Data
 #'     Analytics](https://docs.aws.amazon.com/kinesis/?id=docs_gateway#amazon-kinesis-data-analytics)
 #' 
-#' -   [Amazon Kinesis Data
+#'   - [Amazon Kinesis Data
 #'     Firehose](https://docs.aws.amazon.com/kinesis/?id=docs_gateway#amazon-kinesis-data-firehose)
 #' 
-#' -   [AWS Lambda](https://docs.aws.amazon.com/lambda/)
+#'   - [AWS Lambda](https://docs.aws.amazon.com/lambda/)
 #' 
-#' -   [Amazon Lex](https://docs.aws.amazon.com/lex/)
+#'   - [Amazon Lex](https://docs.aws.amazon.com/lex/)
 #' 
-#' -   [AWS License Manager](https://docs.aws.amazon.com/license-manager/)
+#'   - [AWS License Manager](https://docs.aws.amazon.com/license-manager/)
 #' 
-#' -   [Amazon Lightsail](https://docs.aws.amazon.com/lightsail/)
+#'   - [Amazon Lightsail](https://docs.aws.amazon.com/lightsail/)
 #' 
-#' -   [Amazon Macie](https://docs.aws.amazon.com/macie/)
+#'   - [Amazon Macie](https://docs.aws.amazon.com/macie/)
 #' 
-#' -   [Amazon Machine
+#'   - [Amazon Machine
 #'     Learning](https://docs.aws.amazon.com/machine-learning/)
 #' 
-#' -   [Amazon MQ](https://docs.aws.amazon.com/amazon-mq/)
+#'   - [Amazon MQ](https://docs.aws.amazon.com/amazon-mq/)
 #' 
-#' -   [Amazon MSK](https://docs.aws.amazon.com/msk/)
+#'   - [Amazon MSK](https://docs.aws.amazon.com/msk/)
 #' 
-#' -   [Amazon MSK](https://docs.aws.amazon.com/msk/)
+#'   - [Amazon MSK](https://docs.aws.amazon.com/msk/)
 #' 
-#' -   [Amazon Neptune](https://docs.aws.amazon.com/neptune/)
+#'   - [Amazon Neptune](https://docs.aws.amazon.com/neptune/)
 #' 
-#' -   [AWS Network
+#'   - [AWS Network
 #'     Manager](https://docs.aws.amazon.com/vpc/latest/tgw/what-is-network-manager.html)
 #' 
-#' -   [AWS OpsWorks](https://docs.aws.amazon.com/opsworks/)
+#'   - [AWS OpsWorks](https://docs.aws.amazon.com/opsworks/)
 #' 
-#' -   [AWS OpsWorks CM](https://docs.aws.amazon.com/opsworks/)
+#'   - [AWS OpsWorks CM](https://docs.aws.amazon.com/opsworks/)
 #' 
-#' -   [AWS Organizations](https://docs.aws.amazon.com/organizations/)
+#'   - [AWS Organizations](https://docs.aws.amazon.com/organizations/)
 #' 
-#' -   [Amazon Pinpoint](https://docs.aws.amazon.com/pinpoint/)
+#'   - [Amazon Pinpoint](https://docs.aws.amazon.com/pinpoint/)
 #' 
-#' -   [Amazon Quantum Ledger Database
+#'   - [Amazon Quantum Ledger Database
 #'     (QLDB)](https://docs.aws.amazon.com/qldb/)
 #' 
-#' -   [Amazon RDS](https://docs.aws.amazon.com/rds/)
+#'   - [Amazon RDS](https://docs.aws.amazon.com/rds/)
 #' 
-#' -   [Amazon Redshift](https://docs.aws.amazon.com/redshift/)
+#'   - [Amazon Redshift](https://docs.aws.amazon.com/redshift/)
 #' 
-#' -   [AWS Resource Access Manager](https://docs.aws.amazon.com/ram/)
+#'   - [AWS Resource Access Manager](https://docs.aws.amazon.com/ram/)
 #' 
-#' -   [AWS Resource Groups](https://docs.aws.amazon.com/ARG/)
+#'   - [AWS Resource Groups](https://docs.aws.amazon.com/ARG/)
 #' 
-#' -   [AWS RoboMaker](https://docs.aws.amazon.com/robomaker/)
+#'   - [AWS RoboMaker](https://docs.aws.amazon.com/robomaker/)
 #' 
-#' -   [Amazon Route 53](https://docs.aws.amazon.com/route53/)
+#'   - [Amazon Route 53](https://docs.aws.amazon.com/route53/)
 #' 
-#' -   [Amazon Route 53 Resolver](https://docs.aws.amazon.com/route53/)
+#'   - [Amazon Route 53 Resolver](https://docs.aws.amazon.com/route53/)
 #' 
-#' -   [Amazon S3 (buckets only)](https://docs.aws.amazon.com/s3/)
+#'   - [Amazon S3 (buckets only)](https://docs.aws.amazon.com/s3/)
 #' 
-#' -   [Amazon SageMaker](https://docs.aws.amazon.com/sagemaker/)
+#'   - [Amazon SageMaker](https://docs.aws.amazon.com/sagemaker/)
 #' 
-#' -   [Savings Plans](https://docs.aws.amazon.com/savingsplans/)
+#'   - [Savings Plans](https://docs.aws.amazon.com/savingsplans/)
 #' 
-#' -   [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/)
+#'   - [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/)
 #' 
-#' -   [AWS Security Hub](https://docs.aws.amazon.com/securityhub/)
+#'   - [AWS Security Hub](https://docs.aws.amazon.com/securityhub/)
 #' 
-#' -   [AWS Service Catalog](https://docs.aws.amazon.com/servicecatalog/)
+#'   - [AWS Service Catalog](https://docs.aws.amazon.com/servicecatalog/)
 #' 
-#' -   [Amazon Simple Email Service
+#'   - [Amazon Simple Email Service
 #'     (SES)](https://docs.aws.amazon.com/ses/)
 #' 
-#' -   [Amazon Simple Notification Service
+#'   - [Amazon Simple Notification Service
 #'     (SNS)](https://docs.aws.amazon.com/sns/)
 #' 
-#' -   [Amazon Simple Queue Service
+#'   - [Amazon Simple Queue Service
 #'     (SQS)](https://docs.aws.amazon.com/sqs/)
 #' 
-#' -   [Amazon Simple Workflow Service](https://docs.aws.amazon.com/swf/)
+#'   - [Amazon Simple Workflow Service](https://docs.aws.amazon.com/swf/)
 #' 
-#' -   [AWS Step Functions](https://docs.aws.amazon.com/step-functions/)
+#'   - [AWS Step Functions](https://docs.aws.amazon.com/step-functions/)
 #' 
-#' -   [AWS Storage Gateway](https://docs.aws.amazon.com/storagegateway/)
+#'   - [AWS Storage Gateway](https://docs.aws.amazon.com/storagegateway/)
 #' 
-#' -   [AWS Systems Manager](https://docs.aws.amazon.com/systems-manager/)
+#'   - [AWS Systems Manager](https://docs.aws.amazon.com/systems-manager/)
 #' 
-#' -   [AWS Transfer for SFTP](https://docs.aws.amazon.com/transfer/)
+#'   - [AWS Transfer for SFTP](https://docs.aws.amazon.com/transfer/)
 #' 
-#' -   [Amazon VPC](https://docs.aws.amazon.com/vpc/)
+#'   - [Amazon VPC](https://docs.aws.amazon.com/vpc/)
 #' 
-#' -   [AWS WAF](https://docs.aws.amazon.com/waf/)
+#'   - [AWS WAF](https://docs.aws.amazon.com/waf/)
 #' 
-#' -   [AWS WAF Regional](https://docs.aws.amazon.com/waf/)
+#'   - [AWS WAF Regional](https://docs.aws.amazon.com/waf/)
 #' 
-#' -   [Amazon WorkLink](https://docs.aws.amazon.com/worklink/)
+#'   - [Amazon WorkLink](https://docs.aws.amazon.com/worklink/)
 #' 
-#' -   [Amazon WorkSpaces](https://docs.aws.amazon.com/workspaces/)
+#'   - [Amazon WorkSpaces](https://docs.aws.amazon.com/workspaces/)
 #'
 #' @param
 #' config
@@ -7263,6 +7612,12 @@ resourcegroups <- function(config = list()) {
 #'  \link[=resourcegroupstaggingapi_tag_resources]{tag_resources} \tab Applies one or more tags to the specified resources\cr
 #'  \link[=resourcegroupstaggingapi_untag_resources]{untag_resources} \tab Removes the specified tags from the specified resources
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname resourcegroupstaggingapi
 #' @export
@@ -7400,6 +7755,12 @@ resourcegroupstaggingapi <- function(config = list()) {
 #'  \link[=servicecatalog_update_tag_option]{update_tag_option} \tab Updates the specified TagOption
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname servicecatalog
 #' @export
 servicecatalog <- function(config = list()) {
@@ -7467,6 +7828,12 @@ servicecatalog <- function(config = list()) {
 #'  \link[=servicequotas_tag_resource]{tag_resource} \tab Adds tags to the specified applied quota\cr
 #'  \link[=servicequotas_untag_resource]{untag_resource} \tab Removes tags from the specified applied quota
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname servicequotas
 #' @export
@@ -7668,6 +8035,12 @@ servicequotas <- function(config = list()) {
 #'  \link[=ssm_update_service_setting]{update_service_setting} \tab ServiceSetting is an account-level setting for an AWS service
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname ssm
 #' @export
 ssm <- function(config = list()) {
@@ -7683,10 +8056,10 @@ ssm <- function(config = list()) {
 #' programmatically. It uses HTTP methods that return results in JSON
 #' format.
 #' 
-#' -   You must have a Business or Enterprise support plan to use the AWS
+#'   - You must have a Business or Enterprise support plan to use the AWS
 #'     Support API.
 #' 
-#' -   If you call the AWS Support API from an account that does not have a
+#'   - If you call the AWS Support API from an account that does not have a
 #'     Business or Enterprise support plan, the
 #'     `SubscriptionRequiredException` error message appears. For
 #'     information about changing your support plan, see [AWS
@@ -7700,21 +8073,21 @@ ssm <- function(config = list()) {
 #' 
 #' The following list describes the AWS Support case management operations:
 #' 
-#' -   **Service names, issue categories, and available severity levels.**
+#'   - **Service names, issue categories, and available severity levels.**
 #'     The [`describe_services`][support_describe_services] and
 #'     [`describe_severity_levels`][support_describe_severity_levels]
 #'     operations return AWS service names, service codes, service
 #'     categories, and problem severity levels. You use these values when
 #'     you call the [`create_case`][support_create_case] operation.
 #' 
-#' -   **Case creation, case details, and case resolution.** The
+#'   - **Case creation, case details, and case resolution.** The
 #'     [`create_case`][support_create_case],
 #'     [`describe_cases`][support_describe_cases],
 #'     [`describe_attachment`][support_describe_attachment], and
 #'     [`resolve_case`][support_resolve_case] operations create AWS Support
 #'     cases, retrieve information about cases, and resolve cases.
 #' 
-#' -   **Case communication.** The
+#'   - **Case communication.** The
 #'     [`describe_communications`][support_describe_communications],
 #'     [`add_communication_to_case`][support_add_communication_to_case],
 #'     and [`add_attachments_to_set`][support_add_attachments_to_set]
@@ -7724,22 +8097,22 @@ ssm <- function(config = list()) {
 #' The following list describes the operations available from the AWS
 #' Support service for Trusted Advisor:
 #' 
-#' -   [`describe_trusted_advisor_checks`][support_describe_trusted_advisor_checks]
+#'   - [`describe_trusted_advisor_checks`][support_describe_trusted_advisor_checks]
 #'     returns the list of checks that run against your AWS resources.
 #' 
-#' -   Using the `checkId` for a specific check returned by
+#'   - Using the `checkId` for a specific check returned by
 #'     [`describe_trusted_advisor_checks`][support_describe_trusted_advisor_checks],
 #'     you can call
 #'     [`describe_trusted_advisor_check_result`][support_describe_trusted_advisor_check_result]
 #'     to obtain the results for the check that you specified.
 #' 
-#' -   [`describe_trusted_advisor_check_summaries`][support_describe_trusted_advisor_check_summaries]
+#'   - [`describe_trusted_advisor_check_summaries`][support_describe_trusted_advisor_check_summaries]
 #'     returns summarized results for one or more Trusted Advisor checks.
 #' 
-#' -   [`refresh_trusted_advisor_check`][support_refresh_trusted_advisor_check]
+#'   - [`refresh_trusted_advisor_check`][support_refresh_trusted_advisor_check]
 #'     requests that Trusted Advisor rerun a specified check.
 #' 
-#' -   [`describe_trusted_advisor_check_refresh_statuses`][support_describe_trusted_advisor_check_refresh_statuses]
+#'   - [`describe_trusted_advisor_check_refresh_statuses`][support_describe_trusted_advisor_check_refresh_statuses]
 #'     reports the refresh status of one or more checks.
 #' 
 #' For authentication of requests, AWS Support uses [Signature Version 4
@@ -7799,6 +8172,12 @@ ssm <- function(config = list()) {
 #'  \link[=support_refresh_trusted_advisor_check]{refresh_trusted_advisor_check} \tab Refreshes the AWS Trusted Advisor check that you specify using the check ID\cr
 #'  \link[=support_resolve_case]{resolve_case} \tab Resolves a support case
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname support
 #' @export
@@ -7908,6 +8287,12 @@ support <- function(config = list()) {
 #'  \link[=comprehend_update_endpoint]{update_endpoint} \tab Updates information about the specified endpoint
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname comprehend
 #' @export
 comprehend <- function(config = list()) {
@@ -7975,6 +8360,12 @@ comprehend <- function(config = list()) {
 #'  \link[=comprehendmedical_stop_phi_detection_job]{stop_phi_detection_job} \tab Stops a protected health information (PHI) detection job in progress\cr
 #'  \link[=comprehendmedical_stop_rx_norm_inference_job]{stop_rx_norm_inference_job} \tab Stops an InferRxNorm inference job in progress
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname comprehendmedical
 #' @export
@@ -8066,6 +8457,12 @@ comprehendmedical <- function(config = list()) {
 #'  \link[=lexmodelbuildingservice_untag_resource]{untag_resource} \tab Removes tags from a bot, bot alias or bot channel
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname lexmodelbuildingservice
 #' @export
 lexmodelbuildingservice <- function(config = list()) {
@@ -8126,6 +8523,12 @@ lexmodelbuildingservice <- function(config = list()) {
 #'  \link[=lexruntimeservice_post_text]{post_text} \tab Sends user input to Amazon Lex\cr
 #'  \link[=lexruntimeservice_put_session]{put_session} \tab Creates a new session or modifies an existing session with an Amazon Lex bot
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname lexruntimeservice
 #' @export
@@ -8199,6 +8602,12 @@ lexruntimeservice <- function(config = list()) {
 #'  \link[=machinelearning_update_evaluation]{update_evaluation} \tab Updates the EvaluationName of an Evaluation\cr
 #'  \link[=machinelearning_update_ml_model]{update_ml_model} \tab Updates the MLModelName and the ScoreThreshold of an MLModel
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname machinelearning
 #' @export
@@ -8289,6 +8698,12 @@ machinelearning <- function(config = list()) {
 #'  \link[=personalize_update_campaign]{update_campaign} \tab Updates a campaign by either deploying a new solution or changing the value of the campaign's minProvisionedTPS parameter
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname personalize
 #' @export
 personalize <- function(config = list()) {
@@ -8301,7 +8716,7 @@ personalize <- function(config = list()) {
 #' Amazon Personalize can consume real-time user event data, such as
 #' *stream* or *click* data, and use it for model training either alone or
 #' combined with historical data. For more information see
-#' recording-events.
+#' <span>recording-events</span>.
 #'
 #' @param
 #' config
@@ -8339,6 +8754,12 @@ personalize <- function(config = list()) {
 #'  \link[=personalizeevents_put_items]{put_items} \tab Adds one or more items to an Items dataset\cr
 #'  \link[=personalizeevents_put_users]{put_users} \tab Adds one or more users to a Users dataset
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname personalizeevents
 #' @export
@@ -8385,6 +8806,12 @@ personalizeevents <- function(config = list()) {
 #'  \link[=personalizeruntime_get_personalized_ranking]{get_personalized_ranking} \tab Re-ranks a list of recommended items for the given user\cr
 #'  \link[=personalizeruntime_get_recommendations]{get_recommendations} \tab Returns a list of recommended items
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname personalizeruntime
 #' @export
@@ -8447,6 +8874,12 @@ personalizeruntime <- function(config = list()) {
 #'  \link[=polly_synthesize_speech]{synthesize_speech} \tab Synthesizes UTF-8 input, plain text or SSML, to a stream of bytes
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname polly
 #' @export
 polly <- function(config = list()) {
@@ -8504,7 +8937,7 @@ polly <- function(config = list()) {
 #'
 #' @section Operations:
 #' \tabular{ll}{
-#'  \link[=rekognition_compare_faces]{compare_faces} \tab Compares a face in the source input image with each of the 100 largest faces detected in the target input image\cr
+#'  \link[=rekognition_compare_faces]{compare_faces} \tab Compares a face in the _source_ input image with each of the 100 largest faces detected in the _target_ input image\cr
 #'  \link[=rekognition_create_collection]{create_collection} \tab Creates a collection in an AWS Region\cr
 #'  \link[=rekognition_create_project]{create_project} \tab Creates a new Amazon Rekognition Custom Labels project\cr
 #'  \link[=rekognition_create_project_version]{create_project_version} \tab Creates a new version of a model and begins training\cr
@@ -8554,6 +8987,12 @@ polly <- function(config = list()) {
 #'  \link[=rekognition_stop_stream_processor]{stop_stream_processor} \tab Stops a running stream processor that was created by CreateStreamProcessor
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname rekognition
 #' @export
 rekognition <- function(config = list()) {
@@ -8567,10 +9006,10 @@ rekognition <- function(config = list()) {
 #' 
 #' Other Resources:
 #' 
-#' -   [Amazon SageMaker Developer
+#'   - [Amazon SageMaker Developer
 #'     Guide](https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html#first-time-user)
 #' 
-#' -   [Amazon Augmented AI Runtime API
+#'   - [Amazon Augmented AI Runtime API
 #'     Reference](https://docs.aws.amazon.com/augmented-ai/2019-11-07/APIReference/Welcome.html)
 #'
 #' @param
@@ -8605,25 +9044,25 @@ rekognition <- function(config = list()) {
 #'
 #' @section Operations:
 #' \tabular{ll}{
-#'  \link[=sagemaker_add_association]{add_association} \tab Creates an association between the source and the destination\cr
+#'  \link[=sagemaker_add_association]{add_association} \tab Creates an _association_ between the source and the destination\cr
 #'  \link[=sagemaker_add_tags]{add_tags} \tab Adds or overwrites one or more tags for the specified Amazon SageMaker resource\cr
 #'  \link[=sagemaker_associate_trial_component]{associate_trial_component} \tab Associates a trial component with a trial\cr
-#'  \link[=sagemaker_create_action]{create_action} \tab Creates an action\cr
+#'  \link[=sagemaker_create_action]{create_action} \tab Creates an _action_\cr
 #'  \link[=sagemaker_create_algorithm]{create_algorithm} \tab Create a machine learning algorithm that you can use in Amazon SageMaker and list in the AWS Marketplace\cr
 #'  \link[=sagemaker_create_app]{create_app} \tab Creates a running App for the specified UserProfile\cr
 #'  \link[=sagemaker_create_app_image_config]{create_app_image_config} \tab Creates a configuration for running a SageMaker image as a KernelGateway app\cr
-#'  \link[=sagemaker_create_artifact]{create_artifact} \tab Creates an artifact\cr
+#'  \link[=sagemaker_create_artifact]{create_artifact} \tab Creates an _artifact_\cr
 #'  \link[=sagemaker_create_auto_ml_job]{create_auto_ml_job} \tab Creates an Autopilot job\cr
 #'  \link[=sagemaker_create_code_repository]{create_code_repository} \tab Creates a Git repository as a resource in your Amazon SageMaker account\cr
 #'  \link[=sagemaker_create_compilation_job]{create_compilation_job} \tab Starts a model compilation job\cr
-#'  \link[=sagemaker_create_context]{create_context} \tab Creates a context\cr
+#'  \link[=sagemaker_create_context]{create_context} \tab Creates a _context_\cr
 #'  \link[=sagemaker_create_data_quality_job_definition]{create_data_quality_job_definition} \tab Creates a definition for a job that monitors data quality and drift\cr
 #'  \link[=sagemaker_create_device_fleet]{create_device_fleet} \tab Creates a device fleet\cr
 #'  \link[=sagemaker_create_domain]{create_domain} \tab Creates a Domain used by Amazon SageMaker Studio\cr
 #'  \link[=sagemaker_create_edge_packaging_job]{create_edge_packaging_job} \tab Starts a SageMaker Edge Manager model packaging job\cr
 #'  \link[=sagemaker_create_endpoint]{create_endpoint} \tab Creates an endpoint using the endpoint configuration specified in the request\cr
 #'  \link[=sagemaker_create_endpoint_config]{create_endpoint_config} \tab Creates an endpoint configuration that Amazon SageMaker hosting services uses to deploy models\cr
-#'  \link[=sagemaker_create_experiment]{create_experiment} \tab Creates an SageMaker experiment\cr
+#'  \link[=sagemaker_create_experiment]{create_experiment} \tab Creates an SageMaker _experiment_\cr
 #'  \link[=sagemaker_create_feature_group]{create_feature_group} \tab Create a new FeatureGroup\cr
 #'  \link[=sagemaker_create_flow_definition]{create_flow_definition} \tab Creates a flow definition\cr
 #'  \link[=sagemaker_create_human_task_ui]{create_human_task_ui} \tab Defines the settings you will use for the human review workflow user interface\cr
@@ -8647,8 +9086,8 @@ rekognition <- function(config = list()) {
 #'  \link[=sagemaker_create_project]{create_project} \tab Creates a machine learning (ML) project that can contain one or more templates that set up an ML pipeline from training to deploying an approved model\cr
 #'  \link[=sagemaker_create_training_job]{create_training_job} \tab Starts a model training job\cr
 #'  \link[=sagemaker_create_transform_job]{create_transform_job} \tab Starts a transform job\cr
-#'  \link[=sagemaker_create_trial]{create_trial} \tab Creates an Amazon SageMaker trial\cr
-#'  \link[=sagemaker_create_trial_component]{create_trial_component} \tab Creates a trial component, which is a stage of a machine learning trial\cr
+#'  \link[=sagemaker_create_trial]{create_trial} \tab Creates an Amazon SageMaker _trial_\cr
+#'  \link[=sagemaker_create_trial_component]{create_trial_component} \tab Creates a _trial component_, which is a stage of a machine learning _trial_\cr
 #'  \link[=sagemaker_create_user_profile]{create_user_profile} \tab Creates a user profile\cr
 #'  \link[=sagemaker_create_workforce]{create_workforce} \tab Use this operation to create a workforce\cr
 #'  \link[=sagemaker_create_workteam]{create_workteam} \tab Creates a new work team for labeling your data\cr
@@ -8840,6 +9279,12 @@ rekognition <- function(config = list()) {
 #'  \link[=sagemaker_update_workteam]{update_workteam} \tab Updates an existing work team with new member definitions or description
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname sagemaker
 #' @export
 sagemaker <- function(config = list()) {
@@ -8885,6 +9330,12 @@ sagemaker <- function(config = list()) {
 #' \tabular{ll}{
 #'  \link[=sagemakerruntime_invoke_endpoint]{invoke_endpoint} \tab After you deploy a model into production using Amazon SageMaker hosting services, your client applications use this API to get inferences from the model hosted at the specified endpoint
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname sagemakerruntime
 #' @export
@@ -8938,6 +9389,12 @@ sagemakerruntime <- function(config = list()) {
 #'  \link[=textract_start_document_analysis]{start_document_analysis} \tab Starts the asynchronous analysis of an input document for relationships between detected items such as key-value pairs, tables, and selection elements\cr
 #'  \link[=textract_start_document_text_detection]{start_document_text_detection} \tab Starts the asynchronous detection of text in a document
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname textract
 #' @export
@@ -9011,6 +9468,12 @@ textract <- function(config = list()) {
 #'  \link[=transcribeservice_update_vocabulary_filter]{update_vocabulary_filter} \tab Updates a vocabulary filter with a new list of filtered words
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname transcribeservice
 #' @export
 transcribeservice <- function(config = list()) {
@@ -9070,6 +9533,12 @@ transcribeservice <- function(config = list()) {
 #'  \link[=translate_translate_text]{translate_text} \tab Translates input text from the source language to the target language\cr
 #'  \link[=translate_update_parallel_data]{update_parallel_data} \tab Updates a previously created parallel data resource by importing a new input file from Amazon S3
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname translate
 #' @export
@@ -9163,6 +9632,12 @@ translate <- function(config = list()) {
 #'  \link[=athena_update_work_group]{update_work_group} \tab Updates the workgroup with the specified name
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname athena
 #' @export
 athena <- function(config = list()) {
@@ -9246,6 +9721,12 @@ athena <- function(config = list()) {
 #'  \link[=cloudsearch_update_service_access_policies]{update_service_access_policies} \tab Configures the access rules that control access to the domain's document and search endpoints
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname cloudsearch
 #' @export
 cloudsearch <- function(config = list()) {
@@ -9306,6 +9787,12 @@ cloudsearch <- function(config = list()) {
 #'  \link[=cloudsearchdomain_suggest]{suggest} \tab Retrieves autocomplete suggestions for a partial query string\cr
 #'  \link[=cloudsearchdomain_upload_documents]{upload_documents} \tab Posts a batch of documents to a search domain for indexing
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname cloudsearchdomain
 #' @export
@@ -9392,6 +9879,12 @@ cloudsearchdomain <- function(config = list()) {
 #'  \link[=datapipeline_set_task_status]{set_task_status} \tab Task runners call SetTaskStatus to notify AWS Data Pipeline that a task is completed and provide information about the final status\cr
 #'  \link[=datapipeline_validate_pipeline_definition]{validate_pipeline_definition} \tab Validates the specified pipeline definition to ensure that it is well formed and can be run without error
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname datapipeline
 #' @export
@@ -9492,6 +9985,12 @@ datapipeline <- function(config = list()) {
 #'  \link[=elasticsearchservice_upgrade_elasticsearch_domain]{upgrade_elasticsearch_domain} \tab Allows you to either upgrade your domain or perform an Upgrade eligibility check to a compatible Elasticsearch version
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname elasticsearchservice
 #' @export
 elasticsearchservice <- function(config = list()) {
@@ -9587,6 +10086,12 @@ elasticsearchservice <- function(config = list()) {
 #'  \link[=emr_update_studio_session_mapping]{update_studio_session_mapping} \tab The Amazon EMR Studio APIs are in preview release for Amazon EMR and are subject to change
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname emr
 #' @export
 emr <- function(config = list()) {
@@ -9648,6 +10153,12 @@ emr <- function(config = list()) {
 #'  \link[=firehose_untag_delivery_stream]{untag_delivery_stream} \tab Removes tags from the specified delivery stream\cr
 #'  \link[=firehose_update_destination]{update_destination} \tab Updates the specified destination of the specified delivery stream
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname firehose
 #' @export
@@ -9851,6 +10362,12 @@ firehose <- function(config = list()) {
 #'  \link[=glue_update_workflow]{update_workflow} \tab Updates an existing workflow
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname glue
 #' @export
 glue <- function(config = list()) {
@@ -9924,6 +10441,12 @@ glue <- function(config = list()) {
 #'  \link[=kafka_update_configuration]{update_configuration} \tab Updates an MSK configuration\cr
 #'  \link[=kafka_update_monitoring]{update_monitoring} \tab Updates the monitoring settings for the cluster
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname kafka
 #' @export
@@ -10000,6 +10523,12 @@ kafka <- function(config = list()) {
 #'  \link[=kinesis_update_shard_count]{update_shard_count} \tab Updates the shard count of the specified stream to the specified number of shards
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname kinesis
 #' @export
 kinesis <- function(config = list()) {
@@ -10014,7 +10543,7 @@ kinesis <- function(config = list()) {
 #' This documentation is for version 1 of the Amazon Kinesis Data Analytics
 #' API, which only supports SQL applications. Version 2 of the API supports
 #' SQL and Java applications. For more information about version 2, see
-#' Amazon Kinesis Data Analytics API V2 Documentation.
+#' <span>Amazon Kinesis Data Analytics API V2 Documentation</span>.
 #' 
 #' This is the *Amazon Kinesis Analytics v1 API Reference*. The Amazon
 #' Kinesis Analytics Developer Guide provides additional information.
@@ -10072,6 +10601,12 @@ kinesis <- function(config = list()) {
 #'  \link[=kinesisanalytics_untag_resource]{untag_resource} \tab Removes one or more tags from a Kinesis Analytics application\cr
 #'  \link[=kinesisanalytics_update_application]{update_application} \tab This documentation is for version 1 of the Amazon Kinesis Data Analytics API, which only supports SQL applications
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname kinesisanalytics
 #' @export
@@ -10148,6 +10683,12 @@ kinesisanalytics <- function(config = list()) {
 #'  \link[=kinesisanalyticsv2_untag_resource]{untag_resource} \tab Removes one or more tags from a Kinesis Data Analytics application\cr
 #'  \link[=kinesisanalyticsv2_update_application]{update_application} \tab Updates an existing Kinesis Data Analytics application
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname kinesisanalyticsv2
 #' @export
@@ -10232,6 +10773,12 @@ kinesisanalyticsv2 <- function(config = list()) {
 #'  \link[=mturk_update_notification_settings]{update_notification_settings} \tab The UpdateNotificationSettings operation creates, updates, disables or re-enables notifications for a HIT type\cr
 #'  \link[=mturk_update_qualification_type]{update_qualification_type} \tab The UpdateQualificationType operation modifies the attributes of an existing Qualification type, which is represented by a QualificationType data structure
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname mturk
 #' @export
@@ -10383,6 +10930,12 @@ mturk <- function(config = list()) {
 #'  \link[=quicksight_update_user]{update_user} \tab Updates an Amazon QuickSight user
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname quicksight
 #' @export
 quicksight <- function(config = list()) {
@@ -10445,6 +10998,12 @@ quicksight <- function(config = list()) {
 #'  \link[=acm_resend_validation_email]{resend_validation_email} \tab Resends the email that requests domain ownership validation\cr
 #'  \link[=acm_update_certificate_options]{update_certificate_options} \tab Updates a certificate
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname acm
 #' @export
@@ -10528,6 +11087,12 @@ acm <- function(config = list()) {
 #'  \link[=acmpca_untag_certificate_authority]{untag_certificate_authority} \tab Remove one or more tags from your private CA\cr
 #'  \link[=acmpca_update_certificate_authority]{update_certificate_authority} \tab Updates the status or configuration of a private certificate authority (CA)
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname acmpca
 #' @export
@@ -10650,6 +11215,12 @@ acmpca <- function(config = list()) {
 #'  \link[=clouddirectory_upgrade_published_schema]{upgrade_published_schema} \tab Upgrades a published schema under a new minor version revision using the current contents of DevelopmentSchemaArn
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname clouddirectory
 #' @export
 clouddirectory <- function(config = list()) {
@@ -10706,27 +11277,33 @@ clouddirectory <- function(config = list()) {
 #'
 #' @section Operations:
 #' \tabular{ll}{
-#'  \link[=cloudhsm_add_tags_to_resource]{add_tags_to_resource} \tab This is documentation for AWS CloudHSM Classic\cr
-#'  \link[=cloudhsm_create_hapg]{create_hapg} \tab This is documentation for AWS CloudHSM Classic\cr
-#'  \link[=cloudhsm_create_hsm]{create_hsm} \tab This is documentation for AWS CloudHSM Classic\cr
-#'  \link[=cloudhsm_create_luna_client]{create_luna_client} \tab This is documentation for AWS CloudHSM Classic\cr
-#'  \link[=cloudhsm_delete_hapg]{delete_hapg} \tab This is documentation for AWS CloudHSM Classic\cr
-#'  \link[=cloudhsm_delete_hsm]{delete_hsm} \tab This is documentation for AWS CloudHSM Classic\cr
-#'  \link[=cloudhsm_delete_luna_client]{delete_luna_client} \tab This is documentation for AWS CloudHSM Classic\cr
-#'  \link[=cloudhsm_describe_hapg]{describe_hapg} \tab This is documentation for AWS CloudHSM Classic\cr
-#'  \link[=cloudhsm_describe_hsm]{describe_hsm} \tab This is documentation for AWS CloudHSM Classic\cr
-#'  \link[=cloudhsm_describe_luna_client]{describe_luna_client} \tab This is documentation for AWS CloudHSM Classic\cr
-#'  \link[=cloudhsm_get_config]{get_config} \tab This is documentation for AWS CloudHSM Classic\cr
-#'  \link[=cloudhsm_list_available_zones]{list_available_zones} \tab This is documentation for AWS CloudHSM Classic\cr
-#'  \link[=cloudhsm_list_hapgs]{list_hapgs} \tab This is documentation for AWS CloudHSM Classic\cr
-#'  \link[=cloudhsm_list_hsms]{list_hsms} \tab This is documentation for AWS CloudHSM Classic\cr
-#'  \link[=cloudhsm_list_luna_clients]{list_luna_clients} \tab This is documentation for AWS CloudHSM Classic\cr
-#'  \link[=cloudhsm_list_tags_for_resource]{list_tags_for_resource} \tab This is documentation for AWS CloudHSM Classic\cr
-#'  \link[=cloudhsm_modify_hapg]{modify_hapg} \tab This is documentation for AWS CloudHSM Classic\cr
-#'  \link[=cloudhsm_modify_hsm]{modify_hsm} \tab This is documentation for AWS CloudHSM Classic\cr
-#'  \link[=cloudhsm_modify_luna_client]{modify_luna_client} \tab This is documentation for AWS CloudHSM Classic\cr
-#'  \link[=cloudhsm_remove_tags_from_resource]{remove_tags_from_resource} \tab This is documentation for AWS CloudHSM Classic
+#'  \link[=cloudhsm_add_tags_to_resource]{add_tags_to_resource} \tab This is documentation for AWS CLOUDHSM CLASSIC\cr
+#'  \link[=cloudhsm_create_hapg]{create_hapg} \tab This is documentation for AWS CLOUDHSM CLASSIC\cr
+#'  \link[=cloudhsm_create_hsm]{create_hsm} \tab This is documentation for AWS CLOUDHSM CLASSIC\cr
+#'  \link[=cloudhsm_create_luna_client]{create_luna_client} \tab This is documentation for AWS CLOUDHSM CLASSIC\cr
+#'  \link[=cloudhsm_delete_hapg]{delete_hapg} \tab This is documentation for AWS CLOUDHSM CLASSIC\cr
+#'  \link[=cloudhsm_delete_hsm]{delete_hsm} \tab This is documentation for AWS CLOUDHSM CLASSIC\cr
+#'  \link[=cloudhsm_delete_luna_client]{delete_luna_client} \tab This is documentation for AWS CLOUDHSM CLASSIC\cr
+#'  \link[=cloudhsm_describe_hapg]{describe_hapg} \tab This is documentation for AWS CLOUDHSM CLASSIC\cr
+#'  \link[=cloudhsm_describe_hsm]{describe_hsm} \tab This is documentation for AWS CLOUDHSM CLASSIC\cr
+#'  \link[=cloudhsm_describe_luna_client]{describe_luna_client} \tab This is documentation for AWS CLOUDHSM CLASSIC\cr
+#'  \link[=cloudhsm_get_config]{get_config} \tab This is documentation for AWS CLOUDHSM CLASSIC\cr
+#'  \link[=cloudhsm_list_available_zones]{list_available_zones} \tab This is documentation for AWS CLOUDHSM CLASSIC\cr
+#'  \link[=cloudhsm_list_hapgs]{list_hapgs} \tab This is documentation for AWS CLOUDHSM CLASSIC\cr
+#'  \link[=cloudhsm_list_hsms]{list_hsms} \tab This is documentation for AWS CLOUDHSM CLASSIC\cr
+#'  \link[=cloudhsm_list_luna_clients]{list_luna_clients} \tab This is documentation for AWS CLOUDHSM CLASSIC\cr
+#'  \link[=cloudhsm_list_tags_for_resource]{list_tags_for_resource} \tab This is documentation for AWS CLOUDHSM CLASSIC\cr
+#'  \link[=cloudhsm_modify_hapg]{modify_hapg} \tab This is documentation for AWS CLOUDHSM CLASSIC\cr
+#'  \link[=cloudhsm_modify_hsm]{modify_hsm} \tab This is documentation for AWS CLOUDHSM CLASSIC\cr
+#'  \link[=cloudhsm_modify_luna_client]{modify_luna_client} \tab This is documentation for AWS CLOUDHSM CLASSIC\cr
+#'  \link[=cloudhsm_remove_tags_from_resource]{remove_tags_from_resource} \tab This is documentation for AWS CLOUDHSM CLASSIC
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname cloudhsm
 #' @export
@@ -10789,6 +11366,12 @@ cloudhsm <- function(config = list()) {
 #'  \link[=cloudhsmv2_tag_resource]{tag_resource} \tab Adds or overwrites one or more tags for the specified AWS CloudHSM cluster\cr
 #'  \link[=cloudhsmv2_untag_resource]{untag_resource} \tab Removes the specified tag or tags from the specified AWS CloudHSM cluster
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname cloudhsmv2
 #' @export
@@ -10876,6 +11459,12 @@ cloudhsmv2 <- function(config = list()) {
 #'  \link[=cognitoidentity_update_identity_pool]{update_identity_pool} \tab Updates an identity pool
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname cognitoidentity
 #' @export
 cognitoidentity <- function(config = list()) {
@@ -10948,7 +11537,7 @@ cognitoidentity <- function(config = list()) {
 #'  \link[=cognitoidentityprovider_admin_respond_to_auth_challenge]{admin_respond_to_auth_challenge} \tab Responds to an authentication challenge, as an administrator\cr
 #'  \link[=cognitoidentityprovider_admin_set_user_mfa_preference]{admin_set_user_mfa_preference} \tab Sets the user's multi-factor authentication (MFA) preference, including which MFA options are enabled and if any are preferred\cr
 #'  \link[=cognitoidentityprovider_admin_set_user_password]{admin_set_user_password} \tab Sets the specified user's password in a user pool as an administrator\cr
-#'  \link[=cognitoidentityprovider_admin_set_user_settings]{admin_set_user_settings} \tab This action is no longer supported\cr
+#'  \link[=cognitoidentityprovider_admin_set_user_settings]{admin_set_user_settings} \tab _This action is no longer supported\cr
 #'  \link[=cognitoidentityprovider_admin_update_auth_event_feedback]{admin_update_auth_event_feedback} \tab Provides feedback for an authentication event as to whether it was from a valid user\cr
 #'  \link[=cognitoidentityprovider_admin_update_device_status]{admin_update_device_status} \tab Updates the device status as an administrator\cr
 #'  \link[=cognitoidentityprovider_admin_update_user_attributes]{admin_update_user_attributes} \tab Updates the specified user's attributes, including developer attributes, as an administrator\cr
@@ -11009,7 +11598,7 @@ cognitoidentity <- function(config = list()) {
 #'  \link[=cognitoidentityprovider_set_ui_customization]{set_ui_customization} \tab Sets the UI customization information for a user pool's built-in app UI\cr
 #'  \link[=cognitoidentityprovider_set_user_mfa_preference]{set_user_mfa_preference} \tab Set the user's multi-factor authentication (MFA) method preference, including which MFA factors are enabled and if any are preferred\cr
 #'  \link[=cognitoidentityprovider_set_user_pool_mfa_config]{set_user_pool_mfa_config} \tab Set the user pool multi-factor authentication (MFA) configuration\cr
-#'  \link[=cognitoidentityprovider_set_user_settings]{set_user_settings} \tab This action is no longer supported\cr
+#'  \link[=cognitoidentityprovider_set_user_settings]{set_user_settings} \tab _This action is no longer supported\cr
 #'  \link[=cognitoidentityprovider_sign_up]{sign_up} \tab Registers the user in the specified user pool and creates a user name, password, and user attributes\cr
 #'  \link[=cognitoidentityprovider_start_user_import_job]{start_user_import_job} \tab Starts the user import\cr
 #'  \link[=cognitoidentityprovider_stop_user_import_job]{stop_user_import_job} \tab Stops the user import job\cr
@@ -11027,6 +11616,12 @@ cognitoidentity <- function(config = list()) {
 #'  \link[=cognitoidentityprovider_verify_software_token]{verify_software_token} \tab Use this API to register a user's entered TOTP code and mark the user's software token MFA status as "verified" if successful\cr
 #'  \link[=cognitoidentityprovider_verify_user_attribute]{verify_user_attribute} \tab Verifies the specified user attributes in the user pool
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname cognitoidentityprovider
 #' @export
@@ -11110,6 +11705,12 @@ cognitoidentityprovider <- function(config = list()) {
 #'  \link[=cognitosync_unsubscribe_from_dataset]{unsubscribe_from_dataset} \tab Unsubscribes from receiving notifications when a dataset is modified by another device\cr
 #'  \link[=cognitosync_update_records]{update_records} \tab Posts updates to records and adds and deletes records for a dataset and user
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname cognitosync
 #' @export
@@ -11233,6 +11834,12 @@ cognitosync <- function(config = list()) {
 #'  \link[=directoryservice_verify_trust]{verify_trust} \tab AWS Directory Service for Microsoft Active Directory allows you to configure and verify trust relationships
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname directoryservice
 #' @export
 directoryservice <- function(config = list()) {
@@ -11314,6 +11921,12 @@ directoryservice <- function(config = list()) {
 #'  \link[=fms_tag_resource]{tag_resource} \tab Adds one or more tags to an AWS resource\cr
 #'  \link[=fms_untag_resource]{untag_resource} \tab Removes one or more tags from an AWS resource
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname fms
 #' @export
@@ -11438,6 +12051,12 @@ fms <- function(config = list()) {
 #'  \link[=guardduty_update_publishing_destination]{update_publishing_destination} \tab Updates information about the publishing destination specified by the destinationId\cr
 #'  \link[=guardduty_update_threat_intel_set]{update_threat_intel_set} \tab Updates the ThreatIntelSet specified by the ThreatIntelSet ID
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname guardduty
 #' @export
@@ -11635,6 +12254,12 @@ guardduty <- function(config = list()) {
 #'  \link[=iam_upload_ssh_public_key]{upload_ssh_public_key} \tab Uploads an SSH public key and associates it with the specified IAM user
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname iam
 #' @export
 iam <- function(config = list()) {
@@ -11730,6 +12355,12 @@ iam <- function(config = list()) {
 #'  \link[=inspector_update_assessment_target]{update_assessment_target} \tab Updates the assessment target that is specified by the ARN of the assessment target
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname inspector
 #' @export
 inspector <- function(config = list()) {
@@ -11772,8 +12403,8 @@ inspector <- function(config = list()) {
 #' also use the AWS Security Token Service to generate temporary security
 #' credentials that you can use to sign requests.
 #' 
-#' All AWS KMS operations require [Signature Version
-#' 4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html).
+#' All AWS KMS operations require [Signature
+#' Version 4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html).
 #' 
 #' **Logging API Requests**
 #' 
@@ -11791,19 +12422,19 @@ inspector <- function(config = list()) {
 #' For more information about credentials and request signing, see the
 #' following:
 #' 
-#' -   [AWS Security
-#'     Credentials](https://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html) -
-#'     This topic provides general information about the types of
+#'   - [AWS Security
+#'     Credentials](https://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html)
+#'     - This topic provides general information about the types of
 #'     credentials used for accessing AWS.
 #' 
-#' -   [Temporary Security
-#'     Credentials](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html) -
-#'     This section of the *IAM User Guide* describes how to create and use
-#'     temporary security credentials.
+#'   - [Temporary Security
+#'     Credentials](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html)
+#'     - This section of the *IAM User Guide* describes how to create and
+#'     use temporary security credentials.
 #' 
-#' -   [Signature Version 4 Signing
-#'     Process](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html) -
-#'     This set of topics walks you through the process of signing a
+#'   - [Signature Version 4 Signing
+#'     Process](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html)
+#'     - This set of topics walks you through the process of signing a
 #'     request using an access key ID and a secret access key.
 #' 
 #' **Commonly Used API Operations**
@@ -11813,13 +12444,13 @@ inspector <- function(config = list()) {
 #' operations other than these, such as creating keys and assigning
 #' policies, by using the console.
 #' 
-#' -   [`encrypt`][kms_encrypt]
+#'   - [`encrypt`][kms_encrypt]
 #' 
-#' -   [`decrypt`][kms_decrypt]
+#'   - [`decrypt`][kms_decrypt]
 #' 
-#' -   [`generate_data_key`][kms_generate_data_key]
+#'   - [`generate_data_key`][kms_generate_data_key]
 #' 
-#' -   [`generate_data_key_without_plaintext`][kms_generate_data_key_without_plaintext]
+#'   - [`generate_data_key_without_plaintext`][kms_generate_data_key_without_plaintext]
 #'
 #' @param
 #' config
@@ -11902,6 +12533,12 @@ inspector <- function(config = list()) {
 #'  \link[=kms_verify]{verify} \tab Verifies a digital signature that was generated by the Sign operation
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname kms
 #' @export
 kms <- function(config = list()) {
@@ -11968,6 +12605,12 @@ kms <- function(config = list()) {
 #'  \link[=macie_list_s3_resources]{list_s3_resources} \tab Lists all the S3 resources associated with Amazon Macie Classic\cr
 #'  \link[=macie_update_s3_resources]{update_s3_resources} \tab Updates the classification types for the specified S3 resources
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname macie
 #' @export
@@ -12045,6 +12688,12 @@ macie <- function(config = list()) {
 #'  \link[=ram_untag_resource]{untag_resource} \tab Removes the specified tags from the specified resource share that you own\cr
 #'  \link[=ram_update_resource_share]{update_resource_share} \tab Updates the specified resource share that you own
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname ram
 #' @export
@@ -12183,6 +12832,12 @@ ram <- function(config = list()) {
 #'  \link[=secretsmanager_validate_resource_policy]{validate_resource_policy} \tab Validates the JSON text of the resource-based policy document attached to the specified secret
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname secretsmanager
 #' @export
 secretsmanager <- function(config = list()) {
@@ -12220,21 +12875,21 @@ secretsmanager <- function(config = list()) {
 #' The following throttling limits apply to using Security Hub API
 #' operations.
 #' 
-#' -   [`batch_enable_standards`][securityhub_batch_enable_standards] -
+#'   - [`batch_enable_standards`][securityhub_batch_enable_standards] -
 #'     `RateLimit` of 1 request per second, `BurstLimit` of 1 request per
 #'     second.
 #' 
-#' -   [`get_findings`][securityhub_get_findings] - `RateLimit` of 3
+#'   - [`get_findings`][securityhub_get_findings] - `RateLimit` of 3
 #'     requests per second. `BurstLimit` of 6 requests per second.
 #' 
-#' -   [`update_findings`][securityhub_update_findings] - `RateLimit` of 1
+#'   - [`update_findings`][securityhub_update_findings] - `RateLimit` of 1
 #'     request per second. `BurstLimit` of 5 requests per second.
 #' 
-#' -   [`update_standards_control`][securityhub_update_standards_control] -
+#'   - [`update_standards_control`][securityhub_update_standards_control] -
 #'     `RateLimit` of 1 request per second, `BurstLimit` of 5 requests per
 #'     second.
 #' 
-#' -   All other operations - `RateLimit` of 10 requests per second.
+#'   - All other operations - `RateLimit` of 10 requests per second.
 #'     `BurstLimit` of 30 requests per second.
 #'
 #' @param
@@ -12319,6 +12974,12 @@ secretsmanager <- function(config = list()) {
 #'  \link[=securityhub_update_standards_control]{update_standards_control} \tab Used to control whether an individual security standard control is enabled or disabled
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname securityhub
 #' @export
 securityhub <- function(config = list()) {
@@ -12402,6 +13063,12 @@ securityhub <- function(config = list()) {
 #'  \link[=shield_update_subscription]{update_subscription} \tab Updates the details of an existing subscription
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname shield
 #' @export
 shield <- function(config = list()) {
@@ -12482,6 +13149,12 @@ shield <- function(config = list()) {
 #'  \link[=sts_get_session_token]{get_session_token} \tab Returns a set of temporary credentials for an AWS account or IAM user
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname sts
 #' @export
 sts <- function(config = list()) {
@@ -12547,84 +13220,90 @@ sts <- function(config = list()) {
 #'
 #' @section Operations:
 #' \tabular{ll}{
-#'  \link[=waf_create_byte_match_set]{create_byte_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_create_geo_match_set]{create_geo_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_create_ip_set]{create_ip_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_create_rate_based_rule]{create_rate_based_rule} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_create_regex_match_set]{create_regex_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_create_regex_pattern_set]{create_regex_pattern_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_create_rule]{create_rule} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_create_rule_group]{create_rule_group} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_create_size_constraint_set]{create_size_constraint_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_create_sql_injection_match_set]{create_sql_injection_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_create_web_acl]{create_web_acl} \tab This is AWS WAF Classic documentation\cr
+#'  \link[=waf_create_byte_match_set]{create_byte_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_create_geo_match_set]{create_geo_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_create_ip_set]{create_ip_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_create_rate_based_rule]{create_rate_based_rule} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_create_regex_match_set]{create_regex_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_create_regex_pattern_set]{create_regex_pattern_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_create_rule]{create_rule} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_create_rule_group]{create_rule_group} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_create_size_constraint_set]{create_size_constraint_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_create_sql_injection_match_set]{create_sql_injection_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_create_web_acl]{create_web_acl} \tab This is AWS WAF CLASSIC documentation\cr
 #'  \link[=waf_create_web_acl_migration_stack]{create_web_acl_migration_stack} \tab Creates an AWS CloudFormation WAFV2 template for the specified web ACL in the specified Amazon S3 bucket\cr
-#'  \link[=waf_create_xss_match_set]{create_xss_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_delete_byte_match_set]{delete_byte_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_delete_geo_match_set]{delete_geo_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_delete_ip_set]{delete_ip_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_delete_logging_configuration]{delete_logging_configuration} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_delete_permission_policy]{delete_permission_policy} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_delete_rate_based_rule]{delete_rate_based_rule} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_delete_regex_match_set]{delete_regex_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_delete_regex_pattern_set]{delete_regex_pattern_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_delete_rule]{delete_rule} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_delete_rule_group]{delete_rule_group} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_delete_size_constraint_set]{delete_size_constraint_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_delete_sql_injection_match_set]{delete_sql_injection_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_delete_web_acl]{delete_web_acl} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_delete_xss_match_set]{delete_xss_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_get_byte_match_set]{get_byte_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_get_change_token]{get_change_token} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_get_change_token_status]{get_change_token_status} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_get_geo_match_set]{get_geo_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_get_ip_set]{get_ip_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_get_logging_configuration]{get_logging_configuration} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_get_permission_policy]{get_permission_policy} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_get_rate_based_rule]{get_rate_based_rule} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_get_rate_based_rule_managed_keys]{get_rate_based_rule_managed_keys} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_get_regex_match_set]{get_regex_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_get_regex_pattern_set]{get_regex_pattern_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_get_rule]{get_rule} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_get_rule_group]{get_rule_group} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_get_sampled_requests]{get_sampled_requests} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_get_size_constraint_set]{get_size_constraint_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_get_sql_injection_match_set]{get_sql_injection_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_get_web_acl]{get_web_acl} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_get_xss_match_set]{get_xss_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_list_activated_rules_in_rule_group]{list_activated_rules_in_rule_group} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_list_byte_match_sets]{list_byte_match_sets} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_list_geo_match_sets]{list_geo_match_sets} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_list_ip_sets]{list_ip_sets} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_list_logging_configurations]{list_logging_configurations} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_list_rate_based_rules]{list_rate_based_rules} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_list_regex_match_sets]{list_regex_match_sets} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_list_regex_pattern_sets]{list_regex_pattern_sets} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_list_rule_groups]{list_rule_groups} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_list_rules]{list_rules} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_list_size_constraint_sets]{list_size_constraint_sets} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_list_sql_injection_match_sets]{list_sql_injection_match_sets} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_list_subscribed_rule_groups]{list_subscribed_rule_groups} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_list_tags_for_resource]{list_tags_for_resource} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_list_web_ac_ls]{list_web_ac_ls} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_list_xss_match_sets]{list_xss_match_sets} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_put_logging_configuration]{put_logging_configuration} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_put_permission_policy]{put_permission_policy} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_tag_resource]{tag_resource} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_untag_resource]{untag_resource} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_update_byte_match_set]{update_byte_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_update_geo_match_set]{update_geo_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_update_ip_set]{update_ip_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_update_rate_based_rule]{update_rate_based_rule} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_update_regex_match_set]{update_regex_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_update_regex_pattern_set]{update_regex_pattern_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_update_rule]{update_rule} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_update_rule_group]{update_rule_group} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_update_size_constraint_set]{update_size_constraint_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_update_sql_injection_match_set]{update_sql_injection_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_update_web_acl]{update_web_acl} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=waf_update_xss_match_set]{update_xss_match_set} \tab This is AWS WAF Classic documentation
+#'  \link[=waf_create_xss_match_set]{create_xss_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_delete_byte_match_set]{delete_byte_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_delete_geo_match_set]{delete_geo_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_delete_ip_set]{delete_ip_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_delete_logging_configuration]{delete_logging_configuration} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_delete_permission_policy]{delete_permission_policy} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_delete_rate_based_rule]{delete_rate_based_rule} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_delete_regex_match_set]{delete_regex_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_delete_regex_pattern_set]{delete_regex_pattern_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_delete_rule]{delete_rule} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_delete_rule_group]{delete_rule_group} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_delete_size_constraint_set]{delete_size_constraint_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_delete_sql_injection_match_set]{delete_sql_injection_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_delete_web_acl]{delete_web_acl} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_delete_xss_match_set]{delete_xss_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_get_byte_match_set]{get_byte_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_get_change_token]{get_change_token} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_get_change_token_status]{get_change_token_status} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_get_geo_match_set]{get_geo_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_get_ip_set]{get_ip_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_get_logging_configuration]{get_logging_configuration} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_get_permission_policy]{get_permission_policy} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_get_rate_based_rule]{get_rate_based_rule} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_get_rate_based_rule_managed_keys]{get_rate_based_rule_managed_keys} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_get_regex_match_set]{get_regex_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_get_regex_pattern_set]{get_regex_pattern_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_get_rule]{get_rule} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_get_rule_group]{get_rule_group} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_get_sampled_requests]{get_sampled_requests} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_get_size_constraint_set]{get_size_constraint_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_get_sql_injection_match_set]{get_sql_injection_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_get_web_acl]{get_web_acl} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_get_xss_match_set]{get_xss_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_list_activated_rules_in_rule_group]{list_activated_rules_in_rule_group} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_list_byte_match_sets]{list_byte_match_sets} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_list_geo_match_sets]{list_geo_match_sets} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_list_ip_sets]{list_ip_sets} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_list_logging_configurations]{list_logging_configurations} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_list_rate_based_rules]{list_rate_based_rules} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_list_regex_match_sets]{list_regex_match_sets} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_list_regex_pattern_sets]{list_regex_pattern_sets} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_list_rule_groups]{list_rule_groups} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_list_rules]{list_rules} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_list_size_constraint_sets]{list_size_constraint_sets} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_list_sql_injection_match_sets]{list_sql_injection_match_sets} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_list_subscribed_rule_groups]{list_subscribed_rule_groups} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_list_tags_for_resource]{list_tags_for_resource} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_list_web_ac_ls]{list_web_ac_ls} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_list_xss_match_sets]{list_xss_match_sets} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_put_logging_configuration]{put_logging_configuration} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_put_permission_policy]{put_permission_policy} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_tag_resource]{tag_resource} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_untag_resource]{untag_resource} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_update_byte_match_set]{update_byte_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_update_geo_match_set]{update_geo_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_update_ip_set]{update_ip_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_update_rate_based_rule]{update_rate_based_rule} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_update_regex_match_set]{update_regex_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_update_regex_pattern_set]{update_regex_pattern_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_update_rule]{update_rule} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_update_rule_group]{update_rule_group} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_update_size_constraint_set]{update_size_constraint_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_update_sql_injection_match_set]{update_sql_injection_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_update_web_acl]{update_web_acl} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=waf_update_xss_match_set]{update_xss_match_set} \tab This is AWS WAF CLASSIC documentation
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname waf
 #' @export
@@ -12695,88 +13374,94 @@ waf <- function(config = list()) {
 #'
 #' @section Operations:
 #' \tabular{ll}{
-#'  \link[=wafregional_associate_web_acl]{associate_web_acl} \tab This is AWS WAF Classic Regional documentation\cr
-#'  \link[=wafregional_create_byte_match_set]{create_byte_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_create_geo_match_set]{create_geo_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_create_ip_set]{create_ip_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_create_rate_based_rule]{create_rate_based_rule} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_create_regex_match_set]{create_regex_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_create_regex_pattern_set]{create_regex_pattern_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_create_rule]{create_rule} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_create_rule_group]{create_rule_group} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_create_size_constraint_set]{create_size_constraint_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_create_sql_injection_match_set]{create_sql_injection_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_create_web_acl]{create_web_acl} \tab This is AWS WAF Classic documentation\cr
+#'  \link[=wafregional_associate_web_acl]{associate_web_acl} \tab This is AWS WAF CLASSIC REGIONAL documentation\cr
+#'  \link[=wafregional_create_byte_match_set]{create_byte_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_create_geo_match_set]{create_geo_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_create_ip_set]{create_ip_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_create_rate_based_rule]{create_rate_based_rule} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_create_regex_match_set]{create_regex_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_create_regex_pattern_set]{create_regex_pattern_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_create_rule]{create_rule} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_create_rule_group]{create_rule_group} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_create_size_constraint_set]{create_size_constraint_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_create_sql_injection_match_set]{create_sql_injection_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_create_web_acl]{create_web_acl} \tab This is AWS WAF CLASSIC documentation\cr
 #'  \link[=wafregional_create_web_acl_migration_stack]{create_web_acl_migration_stack} \tab Creates an AWS CloudFormation WAFV2 template for the specified web ACL in the specified Amazon S3 bucket\cr
-#'  \link[=wafregional_create_xss_match_set]{create_xss_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_delete_byte_match_set]{delete_byte_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_delete_geo_match_set]{delete_geo_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_delete_ip_set]{delete_ip_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_delete_logging_configuration]{delete_logging_configuration} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_delete_permission_policy]{delete_permission_policy} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_delete_rate_based_rule]{delete_rate_based_rule} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_delete_regex_match_set]{delete_regex_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_delete_regex_pattern_set]{delete_regex_pattern_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_delete_rule]{delete_rule} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_delete_rule_group]{delete_rule_group} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_delete_size_constraint_set]{delete_size_constraint_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_delete_sql_injection_match_set]{delete_sql_injection_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_delete_web_acl]{delete_web_acl} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_delete_xss_match_set]{delete_xss_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_disassociate_web_acl]{disassociate_web_acl} \tab This is AWS WAF Classic Regional documentation\cr
-#'  \link[=wafregional_get_byte_match_set]{get_byte_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_get_change_token]{get_change_token} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_get_change_token_status]{get_change_token_status} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_get_geo_match_set]{get_geo_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_get_ip_set]{get_ip_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_get_logging_configuration]{get_logging_configuration} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_get_permission_policy]{get_permission_policy} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_get_rate_based_rule]{get_rate_based_rule} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_get_rate_based_rule_managed_keys]{get_rate_based_rule_managed_keys} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_get_regex_match_set]{get_regex_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_get_regex_pattern_set]{get_regex_pattern_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_get_rule]{get_rule} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_get_rule_group]{get_rule_group} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_get_sampled_requests]{get_sampled_requests} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_get_size_constraint_set]{get_size_constraint_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_get_sql_injection_match_set]{get_sql_injection_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_get_web_acl]{get_web_acl} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_get_web_acl_for_resource]{get_web_acl_for_resource} \tab This is AWS WAF Classic Regional documentation\cr
-#'  \link[=wafregional_get_xss_match_set]{get_xss_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_list_activated_rules_in_rule_group]{list_activated_rules_in_rule_group} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_list_byte_match_sets]{list_byte_match_sets} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_list_geo_match_sets]{list_geo_match_sets} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_list_ip_sets]{list_ip_sets} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_list_logging_configurations]{list_logging_configurations} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_list_rate_based_rules]{list_rate_based_rules} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_list_regex_match_sets]{list_regex_match_sets} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_list_regex_pattern_sets]{list_regex_pattern_sets} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_list_resources_for_web_acl]{list_resources_for_web_acl} \tab This is AWS WAF Classic Regional documentation\cr
-#'  \link[=wafregional_list_rule_groups]{list_rule_groups} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_list_rules]{list_rules} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_list_size_constraint_sets]{list_size_constraint_sets} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_list_sql_injection_match_sets]{list_sql_injection_match_sets} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_list_subscribed_rule_groups]{list_subscribed_rule_groups} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_list_tags_for_resource]{list_tags_for_resource} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_list_web_ac_ls]{list_web_ac_ls} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_list_xss_match_sets]{list_xss_match_sets} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_put_logging_configuration]{put_logging_configuration} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_put_permission_policy]{put_permission_policy} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_tag_resource]{tag_resource} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_untag_resource]{untag_resource} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_update_byte_match_set]{update_byte_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_update_geo_match_set]{update_geo_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_update_ip_set]{update_ip_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_update_rate_based_rule]{update_rate_based_rule} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_update_regex_match_set]{update_regex_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_update_regex_pattern_set]{update_regex_pattern_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_update_rule]{update_rule} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_update_rule_group]{update_rule_group} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_update_size_constraint_set]{update_size_constraint_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_update_sql_injection_match_set]{update_sql_injection_match_set} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_update_web_acl]{update_web_acl} \tab This is AWS WAF Classic documentation\cr
-#'  \link[=wafregional_update_xss_match_set]{update_xss_match_set} \tab This is AWS WAF Classic documentation
+#'  \link[=wafregional_create_xss_match_set]{create_xss_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_delete_byte_match_set]{delete_byte_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_delete_geo_match_set]{delete_geo_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_delete_ip_set]{delete_ip_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_delete_logging_configuration]{delete_logging_configuration} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_delete_permission_policy]{delete_permission_policy} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_delete_rate_based_rule]{delete_rate_based_rule} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_delete_regex_match_set]{delete_regex_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_delete_regex_pattern_set]{delete_regex_pattern_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_delete_rule]{delete_rule} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_delete_rule_group]{delete_rule_group} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_delete_size_constraint_set]{delete_size_constraint_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_delete_sql_injection_match_set]{delete_sql_injection_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_delete_web_acl]{delete_web_acl} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_delete_xss_match_set]{delete_xss_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_disassociate_web_acl]{disassociate_web_acl} \tab This is AWS WAF CLASSIC REGIONAL documentation\cr
+#'  \link[=wafregional_get_byte_match_set]{get_byte_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_get_change_token]{get_change_token} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_get_change_token_status]{get_change_token_status} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_get_geo_match_set]{get_geo_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_get_ip_set]{get_ip_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_get_logging_configuration]{get_logging_configuration} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_get_permission_policy]{get_permission_policy} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_get_rate_based_rule]{get_rate_based_rule} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_get_rate_based_rule_managed_keys]{get_rate_based_rule_managed_keys} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_get_regex_match_set]{get_regex_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_get_regex_pattern_set]{get_regex_pattern_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_get_rule]{get_rule} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_get_rule_group]{get_rule_group} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_get_sampled_requests]{get_sampled_requests} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_get_size_constraint_set]{get_size_constraint_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_get_sql_injection_match_set]{get_sql_injection_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_get_web_acl]{get_web_acl} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_get_web_acl_for_resource]{get_web_acl_for_resource} \tab This is AWS WAF CLASSIC REGIONAL documentation\cr
+#'  \link[=wafregional_get_xss_match_set]{get_xss_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_list_activated_rules_in_rule_group]{list_activated_rules_in_rule_group} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_list_byte_match_sets]{list_byte_match_sets} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_list_geo_match_sets]{list_geo_match_sets} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_list_ip_sets]{list_ip_sets} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_list_logging_configurations]{list_logging_configurations} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_list_rate_based_rules]{list_rate_based_rules} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_list_regex_match_sets]{list_regex_match_sets} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_list_regex_pattern_sets]{list_regex_pattern_sets} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_list_resources_for_web_acl]{list_resources_for_web_acl} \tab This is AWS WAF CLASSIC REGIONAL documentation\cr
+#'  \link[=wafregional_list_rule_groups]{list_rule_groups} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_list_rules]{list_rules} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_list_size_constraint_sets]{list_size_constraint_sets} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_list_sql_injection_match_sets]{list_sql_injection_match_sets} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_list_subscribed_rule_groups]{list_subscribed_rule_groups} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_list_tags_for_resource]{list_tags_for_resource} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_list_web_ac_ls]{list_web_ac_ls} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_list_xss_match_sets]{list_xss_match_sets} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_put_logging_configuration]{put_logging_configuration} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_put_permission_policy]{put_permission_policy} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_tag_resource]{tag_resource} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_untag_resource]{untag_resource} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_update_byte_match_set]{update_byte_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_update_geo_match_set]{update_geo_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_update_ip_set]{update_ip_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_update_rate_based_rule]{update_rate_based_rule} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_update_regex_match_set]{update_regex_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_update_regex_pattern_set]{update_regex_pattern_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_update_rule]{update_rule} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_update_rule_group]{update_rule_group} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_update_size_constraint_set]{update_size_constraint_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_update_sql_injection_match_set]{update_sql_injection_match_set} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_update_web_acl]{update_web_acl} \tab This is AWS WAF CLASSIC documentation\cr
+#'  \link[=wafregional_update_xss_match_set]{update_xss_match_set} \tab This is AWS WAF CLASSIC documentation
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname wafregional
 #' @export
@@ -12794,15 +13479,15 @@ wafregional <- function(config = list()) {
 #' also use rules to take action on a predetermined schedule. For example,
 #' you can configure rules to:
 #' 
-#' -   Automatically invoke an AWS Lambda function to update DNS entries
+#'   - Automatically invoke an AWS Lambda function to update DNS entries
 #'     when an event notifies you that Amazon EC2 instance enters the
 #'     running state.
 #' 
-#' -   Direct specific API records from AWS CloudTrail to an Amazon Kinesis
+#'   - Direct specific API records from AWS CloudTrail to an Amazon Kinesis
 #'     data stream for detailed analysis of potential security or
 #'     availability risks.
 #' 
-#' -   Periodically invoke a built-in target to create a snapshot of an
+#'   - Periodically invoke a built-in target to create a snapshot of an
 #'     Amazon EBS volume.
 #' 
 #' For more information about the features of Amazon EventBridge, see the
@@ -12871,7 +13556,7 @@ wafregional <- function(config = list()) {
 #'  \link[=eventbridge_list_targets_by_rule]{list_targets_by_rule} \tab Lists the targets assigned to the specified rule\cr
 #'  \link[=eventbridge_put_events]{put_events} \tab Sends custom events to Amazon EventBridge so that they can be matched to rules\cr
 #'  \link[=eventbridge_put_partner_events]{put_partner_events} \tab This is used by SaaS partners to write events to a customer's partner event bus\cr
-#'  \link[=eventbridge_put_permission]{put_permission} \tab Running PutPermission permits the specified AWS account or AWS organization to put events to the specified event bus\cr
+#'  \link[=eventbridge_put_permission]{put_permission} \tab Running PutPermission permits the specified AWS account or AWS organization to put events to the specified _event bus_\cr
 #'  \link[=eventbridge_put_rule]{put_rule} \tab Creates or updates the specified rule\cr
 #'  \link[=eventbridge_put_targets]{put_targets} \tab Adds the specified targets to the specified rule, or updates the targets if they are already associated with the rule\cr
 #'  \link[=eventbridge_remove_permission]{remove_permission} \tab Revokes the permission of another AWS account to be able to put events to the specified event bus\cr
@@ -12882,6 +13567,12 @@ wafregional <- function(config = list()) {
 #'  \link[=eventbridge_untag_resource]{untag_resource} \tab Removes one or more tags from the specified EventBridge resource\cr
 #'  \link[=eventbridge_update_archive]{update_archive} \tab Updates the specified archive
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname eventbridge
 #' @export
@@ -12953,6 +13644,12 @@ eventbridge <- function(config = list()) {
 #'  \link[=mq_update_configuration]{update_configuration} \tab Updates the specified configuration\cr
 #'  \link[=mq_update_user]{update_user} \tab Updates the information for an ActiveMQ user
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname mq
 #' @export
@@ -13041,6 +13738,12 @@ mq <- function(config = list()) {
 #'  \link[=sfn_untag_resource]{untag_resource} \tab Remove a tag from a Step Functions resource\cr
 #'  \link[=sfn_update_state_machine]{update_state_machine} \tab Updates an existing state machine by modifying its definition, roleArn, or loggingConfiguration
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname sfn
 #' @export
@@ -13140,6 +13843,12 @@ sfn <- function(config = list()) {
 #'  \link[=sns_untag_resource]{untag_resource} \tab Remove tags from the specified Amazon SNS topic
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname sns
 #' @export
 sns <- function(config = list()) {
@@ -13165,33 +13874,33 @@ sns <- function(config = list()) {
 #' Amazon SQS using your favorite programming language. The SDKs perform
 #' tasks such as the following automatically:
 #' 
-#' -   Cryptographically sign your service requests
+#'   - Cryptographically sign your service requests
 #' 
-#' -   Retry requests
+#'   - Retry requests
 #' 
-#' -   Handle error responses
+#'   - Handle error responses
 #' 
 #' **Additional Information**
 #' 
-#' -   [Amazon SQS Product Page](https://aws.amazon.com/sqs/)
+#'   - [Amazon SQS Product Page](https://aws.amazon.com/sqs/)
 #' 
-#' -   *Amazon Simple Queue Service Developer Guide*
-#' 
-#'     -   [Making API
+#'   - *Amazon Simple Queue Service Developer Guide*
+#'     
+#'       - [Making API
 #'         Requests](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-making-api-requests.html)
-#' 
-#'     -   [Amazon SQS Message
+#'     
+#'       - [Amazon SQS Message
 #'         Attributes](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-message-metadata.html#sqs-message-attributes)
-#' 
-#'     -   [Amazon SQS Dead-Letter
+#'     
+#'       - [Amazon SQS Dead-Letter
 #'         Queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html)
 #' 
-#' -   [Amazon SQS in the *AWS CLI Command
+#'   - [Amazon SQS in the *AWS CLI Command
 #'     Reference*](https://docs.aws.amazon.com/cli/latest/reference/sqs/index.html)
 #' 
-#' -   *Amazon Web Services General Reference*
-#' 
-#'     -   [Regions and
+#'   - *Amazon Web Services General Reference*
+#'     
+#'       - [Regions and
 #'         Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#sqs_region)
 #'
 #' @param
@@ -13247,6 +13956,12 @@ sns <- function(config = list()) {
 #'  \link[=sqs_tag_queue]{tag_queue} \tab Add cost allocation tags to the specified Amazon SQS queue\cr
 #'  \link[=sqs_untag_queue]{untag_queue} \tab Remove cost allocation tags from the specified Amazon SQS queue
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname sqs
 #' @export
@@ -13310,13 +14025,13 @@ sqs <- function(config = list()) {
 #'  \link[=swf_count_open_workflow_executions]{count_open_workflow_executions} \tab Returns the number of open workflow executions within the given domain that meet the specified filtering criteria\cr
 #'  \link[=swf_count_pending_activity_tasks]{count_pending_activity_tasks} \tab Returns the estimated number of activity tasks in the specified task list\cr
 #'  \link[=swf_count_pending_decision_tasks]{count_pending_decision_tasks} \tab Returns the estimated number of decision tasks in the specified task list\cr
-#'  \link[=swf_deprecate_activity_type]{deprecate_activity_type} \tab Deprecates the specified activity type\cr
+#'  \link[=swf_deprecate_activity_type]{deprecate_activity_type} \tab Deprecates the specified _activity type_\cr
 #'  \link[=swf_deprecate_domain]{deprecate_domain} \tab Deprecates the specified domain\cr
-#'  \link[=swf_deprecate_workflow_type]{deprecate_workflow_type} \tab Deprecates the specified workflow type\cr
+#'  \link[=swf_deprecate_workflow_type]{deprecate_workflow_type} \tab Deprecates the specified _workflow type_\cr
 #'  \link[=swf_describe_activity_type]{describe_activity_type} \tab Returns information about the specified activity type\cr
 #'  \link[=swf_describe_domain]{describe_domain} \tab Returns information about the specified domain, including description and status\cr
 #'  \link[=swf_describe_workflow_execution]{describe_workflow_execution} \tab Returns information about the specified workflow execution including its type and some statistics\cr
-#'  \link[=swf_describe_workflow_type]{describe_workflow_type} \tab Returns information about the specified workflow type\cr
+#'  \link[=swf_describe_workflow_type]{describe_workflow_type} \tab Returns information about the specified _workflow type_\cr
 #'  \link[=swf_get_workflow_execution_history]{get_workflow_execution_history} \tab Returns the history of the specified workflow execution\cr
 #'  \link[=swf_list_activity_types]{list_activity_types} \tab Returns information about all activities registered in the specified domain that match the specified name and registration status\cr
 #'  \link[=swf_list_closed_workflow_executions]{list_closed_workflow_executions} \tab Returns a list of closed workflow executions in the specified domain that meet the filtering criteria\cr
@@ -13327,9 +14042,9 @@ sqs <- function(config = list()) {
 #'  \link[=swf_poll_for_activity_task]{poll_for_activity_task} \tab Used by workers to get an ActivityTask from the specified activity taskList\cr
 #'  \link[=swf_poll_for_decision_task]{poll_for_decision_task} \tab Used by deciders to get a DecisionTask from the specified decision taskList\cr
 #'  \link[=swf_record_activity_task_heartbeat]{record_activity_task_heartbeat} \tab Used by activity workers to report to the service that the ActivityTask represented by the specified taskToken is still making progress\cr
-#'  \link[=swf_register_activity_type]{register_activity_type} \tab Registers a new activity type along with its configuration settings in the specified domain\cr
+#'  \link[=swf_register_activity_type]{register_activity_type} \tab Registers a new _activity type_ along with its configuration settings in the specified domain\cr
 #'  \link[=swf_register_domain]{register_domain} \tab Registers a new domain\cr
-#'  \link[=swf_register_workflow_type]{register_workflow_type} \tab Registers a new workflow type and its configuration settings in the specified domain\cr
+#'  \link[=swf_register_workflow_type]{register_workflow_type} \tab Registers a new _workflow type_ and its configuration settings in the specified domain\cr
 #'  \link[=swf_request_cancel_workflow_execution]{request_cancel_workflow_execution} \tab Records a WorkflowExecutionCancelRequested event in the currently running workflow execution identified by the given domain, workflowId, and runId\cr
 #'  \link[=swf_respond_activity_task_canceled]{respond_activity_task_canceled} \tab Used by workers to tell the service that the ActivityTask identified by the taskToken was successfully canceled\cr
 #'  \link[=swf_respond_activity_task_completed]{respond_activity_task_completed} \tab Used by workers to tell the service that the ActivityTask identified by the taskToken completed successfully with a result (if provided)\cr
@@ -13339,11 +14054,17 @@ sqs <- function(config = list()) {
 #'  \link[=swf_start_workflow_execution]{start_workflow_execution} \tab Starts an execution of the workflow type in the specified domain using the provided workflowId and input data\cr
 #'  \link[=swf_tag_resource]{tag_resource} \tab Add a tag to a Amazon SWF domain\cr
 #'  \link[=swf_terminate_workflow_execution]{terminate_workflow_execution} \tab Records a WorkflowExecutionTerminated event and forces closure of the workflow execution identified by the given domain, runId, and workflowId\cr
-#'  \link[=swf_undeprecate_activity_type]{undeprecate_activity_type} \tab Undeprecates a previously deprecated activity type\cr
+#'  \link[=swf_undeprecate_activity_type]{undeprecate_activity_type} \tab Undeprecates a previously deprecated _activity type_\cr
 #'  \link[=swf_undeprecate_domain]{undeprecate_domain} \tab Undeprecates a previously deprecated domain\cr
-#'  \link[=swf_undeprecate_workflow_type]{undeprecate_workflow_type} \tab Undeprecates a previously deprecated workflow type\cr
+#'  \link[=swf_undeprecate_workflow_type]{undeprecate_workflow_type} \tab Undeprecates a previously deprecated _workflow type_\cr
 #'  \link[=swf_untag_resource]{untag_resource} \tab Remove a tag from a Amazon SWF domain
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname swf
 #' @export
@@ -13361,31 +14082,31 @@ swf <- function(config = list()) {
 #' 
 #' Budgets provide you with a way to see the following information:
 #' 
-#' -   How close your plan is to your budgeted amount or to the free tier
+#'   - How close your plan is to your budgeted amount or to the free tier
 #'     limits
 #' 
-#' -   Your usage-to-date, including how much you've used of your Reserved
+#'   - Your usage-to-date, including how much you've used of your Reserved
 #'     Instances (RIs)
 #' 
-#' -   Your current estimated charges from AWS, and how much your predicted
+#'   - Your current estimated charges from AWS, and how much your predicted
 #'     usage will accrue in charges by the end of the month
 #' 
-#' -   How much of your budget has been used
+#'   - How much of your budget has been used
 #' 
 #' AWS updates your budget status several times a day. Budgets track your
 #' unblended costs, subscriptions, refunds, and RIs. You can create the
 #' following types of budgets:
 #' 
-#' -   **Cost budgets** - Plan how much you want to spend on a service.
+#'   - **Cost budgets** - Plan how much you want to spend on a service.
 #' 
-#' -   **Usage budgets** - Plan how much you want to use one or more
+#'   - **Usage budgets** - Plan how much you want to use one or more
 #'     services.
 #' 
-#' -   **RI utilization budgets** - Define a utilization threshold, and
+#'   - **RI utilization budgets** - Define a utilization threshold, and
 #'     receive alerts when your RI usage falls below that threshold. This
 #'     lets you see if your RIs are unused or under-utilized.
 #' 
-#' -   **RI coverage budgets** - Define a coverage threshold, and receive
+#'   - **RI coverage budgets** - Define a coverage threshold, and receive
 #'     alerts when the number of your instance hours that are covered by
 #'     RIs fall below that threshold. This lets you see how much of your
 #'     instance usage is covered by a reservation.
@@ -13394,7 +14115,7 @@ swf <- function(config = list()) {
 #' 
 #' The AWS Budgets API provides the following endpoint:
 #' 
-#' -   https://budgets.amazonaws.com
+#'   - https://budgets.amazonaws.com
 #' 
 #' For information about costs that are associated with the AWS Budgets
 #' API, see [AWS Cost Management
@@ -13456,6 +14177,12 @@ swf <- function(config = list()) {
 #'  \link[=budgets_update_subscriber]{update_subscriber} \tab Updates a subscriber
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname budgets
 #' @export
 budgets <- function(config = list()) {
@@ -13478,7 +14205,7 @@ budgets <- function(config = list()) {
 #' 
 #' The AWS Cost and Usage Report API provides the following endpoint:
 #' 
-#' -   cur.us-east-1.amazonaws.com
+#'   - cur.us-east-1.amazonaws.com
 #'
 #' @param
 #' config
@@ -13520,6 +14247,12 @@ budgets <- function(config = list()) {
 #'  \link[=costandusagereportservice_put_report_definition]{put_report_definition} \tab Creates a new report using the description that you provide
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname costandusagereportservice
 #' @export
 costandusagereportservice <- function(config = list()) {
@@ -13539,7 +14272,7 @@ costandusagereportservice <- function(config = list()) {
 #' 
 #' The Cost Explorer API provides the following endpoint:
 #' 
-#' -   `https://ce.us-east-1.amazonaws.com`
+#'   - `https://ce.us-east-1.amazonaws.com`
 #' 
 #' For information about costs associated with the Cost Explorer API, see
 #' [AWS Cost Management
@@ -13609,6 +14342,12 @@ costandusagereportservice <- function(config = list()) {
 #'  \link[=costexplorer_update_cost_category_definition]{update_cost_category_definition} \tab Updates an existing Cost Category
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname costexplorer
 #' @export
 costexplorer <- function(config = list()) {
@@ -13656,6 +14395,12 @@ costexplorer <- function(config = list()) {
 #'  \link[=marketplacecommerceanalytics_start_support_data_export]{start_support_data_export} \tab Given a data set type and a from date, asynchronously publishes the requested customer support data to the specified S3 bucket and notifies the specified SNS topic once the data is available
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname marketplacecommerceanalytics
 #' @export
 marketplacecommerceanalytics <- function(config = list()) {
@@ -13676,7 +14421,7 @@ marketplacecommerceanalytics <- function(config = list()) {
 #' 
 #' **Getting Entitlement Records**
 #' 
-#' -   *GetEntitlements*- Gets the entitlements for a Marketplace product.
+#'   - *GetEntitlements*- Gets the entitlements for a Marketplace product.
 #'
 #' @param
 #' config
@@ -13713,6 +14458,12 @@ marketplacecommerceanalytics <- function(config = list()) {
 #'  \link[=marketplaceentitlementservice_get_entitlements]{get_entitlements} \tab GetEntitlements retrieves entitlement values for a given product
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname marketplaceentitlementservice
 #' @export
 marketplaceentitlementservice <- function(config = list()) {
@@ -13737,17 +14488,17 @@ marketplaceentitlementservice <- function(config = list()) {
 #' 
 #' **Submitting Metering Records**
 #' 
-#' -   *MeterUsage*- Submits the metering record for a Marketplace product.
+#'   - *MeterUsage*- Submits the metering record for a Marketplace product.
 #'     MeterUsage is called from an EC2 instance or a container running on
 #'     EKS or ECS.
 #' 
-#' -   *BatchMeterUsage*- Submits the metering record for a set of
+#'   - *BatchMeterUsage*- Submits the metering record for a set of
 #'     customers. BatchMeterUsage is called from a software-as-a-service
 #'     (SaaS) application.
 #' 
 #' **Accepting New Customers**
 #' 
-#' -   *ResolveCustomer*- Called by a SaaS application during the
+#'   - *ResolveCustomer*- Called by a SaaS application during the
 #'     registration process. When a buyer visits your website during the
 #'     registration process, the buyer submits a Registration Token through
 #'     the browser. The Registration Token is resolved through this API to
@@ -13755,7 +14506,7 @@ marketplaceentitlementservice <- function(config = list()) {
 #' 
 #' **Entitlement and Metering for Paid Container Products**
 #' 
-#' -   Paid container software products sold through AWS Marketplace must
+#'   - Paid container software products sold through AWS Marketplace must
 #'     integrate with the AWS Marketplace Metering Service and call the
 #'     RegisterUsage operation for software entitlement and metering. Free
 #'     and BYOL products for Amazon ECS or Amazon EKS aren't required to
@@ -13810,6 +14561,12 @@ marketplaceentitlementservice <- function(config = list()) {
 #'  \link[=marketplacemetering_resolve_customer]{resolve_customer} \tab ResolveCustomer is called by a SaaS application during the registration process
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname marketplacemetering
 #' @export
 marketplacemetering <- function(config = list()) {
@@ -13822,9 +14579,9 @@ marketplacemetering <- function(config = list()) {
 #' AWS Price List Service API (AWS Price List Service) is a centralized and
 #' convenient way to programmatically query Amazon Web Services for
 #' services, products, and pricing information. The AWS Price List Service
-#' uses standardized product attributes such as `Location`,
-#' `Storage Class`, and `Operating System`, and provides prices at the SKU
-#' level. You can use the AWS Price List Service to build cost control and
+#' uses standardized product attributes such as `Location`, `Storage
+#' Class`, and `Operating System`, and provides prices at the SKU level.
+#' You can use the AWS Price List Service to build cost control and
 #' scenario planning tools, reconcile billing data, forecast future spend
 #' for budgeting purposes, and provide cost benefit analysis that compare
 #' your internal workloads with AWS.
@@ -13844,9 +14601,9 @@ marketplacemetering <- function(config = list()) {
 #' 
 #' AWS Price List Service API provides the following two endpoints:
 #' 
-#' -   https://api.pricing.us-east-1.amazonaws.com
+#'   - https://api.pricing.us-east-1.amazonaws.com
 #' 
-#' -   https://api.pricing.ap-south-1.amazonaws.com
+#'   - https://api.pricing.ap-south-1.amazonaws.com
 #'
 #' @param
 #' config
@@ -13886,6 +14643,12 @@ marketplacemetering <- function(config = list()) {
 #'  \link[=pricing_get_attribute_values]{get_attribute_values} \tab Returns a list of attribute values\cr
 #'  \link[=pricing_get_products]{get_products} \tab Returns a list of all products that match the filter criteria
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname pricing
 #' @export
@@ -14039,6 +14802,12 @@ pricing <- function(config = list()) {
 #'  \link[=connect_update_user_security_profiles]{update_user_security_profiles} \tab Assigns the specified security profiles to the specified user
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname connect
 #' @export
 connect <- function(config = list()) {
@@ -14191,10 +14960,16 @@ connect <- function(config = list()) {
 #'  \link[=pinpoint_update_segment]{update_segment} \tab Creates a new segment for an application or updates the configuration, dimension, and other settings for an existing segment that's associated with an application\cr
 #'  \link[=pinpoint_update_sms_channel]{update_sms_channel} \tab Enables the SMS channel for an application or updates the status and settings of the SMS channel for an application\cr
 #'  \link[=pinpoint_update_sms_template]{update_sms_template} \tab Updates an existing message template for messages that are sent through the SMS channel\cr
-#'  \link[=pinpoint_update_template_active_version]{update_template_active_version} \tab Changes the status of a specific version of a message template to active\cr
+#'  \link[=pinpoint_update_template_active_version]{update_template_active_version} \tab Changes the status of a specific version of a message template to _active_\cr
 #'  \link[=pinpoint_update_voice_channel]{update_voice_channel} \tab Enables the voice channel for an application or updates the status and settings of the voice channel for an application\cr
 #'  \link[=pinpoint_update_voice_template]{update_voice_template} \tab Updates an existing message template for messages that are sent through the voice channel
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname pinpoint
 #' @export
@@ -14321,6 +15096,12 @@ pinpoint <- function(config = list()) {
 #'  \link[=pinpointemail_update_configuration_set_event_destination]{update_configuration_set_event_destination} \tab Update the configuration of an event destination for a configuration set
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname pinpointemail
 #' @export
 pinpointemail <- function(config = list()) {
@@ -14373,6 +15154,12 @@ pinpointemail <- function(config = list()) {
 #'  \link[=pinpointsmsvoice_send_voice_message]{send_voice_message} \tab Create a new voice message and send it to a recipient's phone number\cr
 #'  \link[=pinpointsmsvoice_update_configuration_set_event_destination]{update_configuration_set_event_destination} \tab Update an event destination in a configuration set
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname pinpointsmsvoice
 #' @export
@@ -14502,6 +15289,12 @@ pinpointsmsvoice <- function(config = list()) {
 #'  \link[=ses_verify_email_address]{verify_email_address} \tab Deprecated\cr
 #'  \link[=ses_verify_email_identity]{verify_email_identity} \tab Adds an email address to the list of identities for your Amazon SES account in the current AWS region and attempts to verify it
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname ses
 #' @export

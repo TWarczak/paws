@@ -10,7 +10,7 @@ support_create_case(subject, serviceCode, severityCode, categoryCode,
 }
 \arguments{
 \item{subject}{[required] The title of the AWS Support case. The title appears in the \strong{Subject}
-field on the AWS Support Center Create Case page.}
+field on the AWS Support Center <span>Create Case</span> page.}
 
 \item{serviceCode}{The code for the AWS service. You can use the
 \code{\link[=support_describe_services]{describe_services}} operation to get the
@@ -22,7 +22,7 @@ Support. You can use the
 \code{\link[=support_describe_severity_levels]{describe_severity_levels}} operation
 to get the possible values for \code{severityCode}.
 
-For more information, see SeverityLevel and \href{https://docs.aws.amazon.com/awssupport/latest/user/getting-started.html#choosing-severity}{Choosing a Severity}
+For more information, see <span>SeverityLevel</span> and \href{https://docs.aws.amazon.com/awssupport/latest/user/getting-started.html#choosing-severity}{Choosing a Severity}
 in the \emph{AWS Support User Guide}.
 
 The availability of severity levels depends on the support plan for the
@@ -34,7 +34,8 @@ category code for a service. Each AWS service defines its own set of
 category codes.}
 
 \item{communicationBody}{[required] The communication body text that describes the issue. This text appears
-in the \strong{Description} field on the AWS Support Center Create Case page.}
+in the \strong{Description} field on the AWS Support Center <span>Create
+Case</span> page.}
 
 \item{ccEmailAddresses}{A list of email addresses that AWS Support copies on case
 correspondence. AWS Support identifies the account that creates the case
@@ -60,12 +61,14 @@ A list with the following syntax:\preformatted{list(
 }
 \description{
 Creates a case in the AWS Support Center. This operation is similar to
-how you create a case in the AWS Support Center Create Case page.
+how you create a case in the AWS Support Center <span>Create Case</span>
+page.
 
 The AWS Support API doesn't support requesting service limit increases.
 You can submit a service limit increase in the following ways:
 \itemize{
-\item Submit a request from the AWS Support Center Create Case page.
+\item Submit a request from the AWS Support Center <span>Create
+Case</span> page.
 \item Use the Service Quotas
 \href{https://docs.aws.amazon.com/servicequotas/2019-06-24/apireference/API_RequestServiceQuotaIncrease.html}{RequestServiceQuotaIncrease}
 operation.
@@ -79,9 +82,10 @@ use the \code{\link[=support_add_communication_to_case]{add_communication_to_cas
 operation to add additional communication or attachments to an existing
 case.
 
-The \code{caseId} is separate from the \code{displayId} that appears in the AWS
-Support Center. Use the \code{\link[=support_describe_cases]{describe_cases}}
-operation to get the \code{displayId}.
+The \code{caseId} is separate from the \code{displayId} that appears in the
+<span>AWS Support Center</span>. Use the
+\code{\link[=support_describe_cases]{describe_cases}} operation to get the
+\code{displayId}.
 \itemize{
 \item You must have a Business or Enterprise support plan to use the AWS
 Support API.

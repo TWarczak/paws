@@ -7,7 +7,7 @@
 apigateway_get_base_path_mappings(domainName, position, limit)
 }
 \arguments{
-\item{domainName}{[required] [Required] The domain name of a BasePathMapping resource.}
+\item{domainName}{[required] [Required] The domain name of a <span>BasePathMapping</span> resource.}
 
 \item{position}{The current pagination position in the paged result set.}
 
@@ -28,7 +28,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Represents a collection of BasePathMapping resources.
+Represents a collection of <span>BasePathMapping</span> resources.
 }
 \section{Request syntax}{
 \preformatted{svc$get_base_path_mappings(

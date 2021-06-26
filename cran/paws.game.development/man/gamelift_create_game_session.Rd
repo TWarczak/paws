@@ -25,8 +25,8 @@ names do not need to be unique.}
 
 \item{GameProperties}{Set of custom properties for a game session, formatted as key:value
 pairs. These properties are passed to a game server process in the
-GameSession object with a request to start a new game session (see
-\href{https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession}{Start a Game Session}).}
+<span>GameSession</span> object with a request to start a new game
+session (see \href{https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession}{Start a Game Session}).}
 
 \item{CreatorId}{A unique identifier for a player or entity creating the game session.
 This ID is used to enforce a resource protection policy (if one exists)
@@ -37,21 +37,19 @@ have.}
 instead.} Custom string that uniquely identifies a request for a new
 game session. Maximum token length is 48 characters. If provided, this
 string is included in the new game session's ID. (A game session ARN has
-the following format:
-\verb{arn:aws:gamelift:<region>::gamesession/<fleet ID>/<custom ID string or idempotency token>}.)}
+the following format: \verb{arn:aws:gamelift:<region>::gamesession/<fleet ID>/<custom ID string or idempotency token>}.)}
 
 \item{IdempotencyToken}{Custom string that uniquely identifies a request for a new game session.
 Maximum token length is 48 characters. If provided, this string is
 included in the new game session's ID. (A game session ARN has the
-following format:
-\verb{arn:aws:gamelift:<region>::gamesession/<fleet ID>/<custom ID string or idempotency token>}.)
-Idempotency tokens remain in use for 30 days after a game session has
-ended; game session objects are retained for this time period and then
-deleted.}
+following format: \verb{arn:aws:gamelift:<region>::gamesession/<fleet ID>/<custom ID string or idempotency token>}.) Idempotency tokens remain
+in use for 30 days after a game session has ended; game session objects
+are retained for this time period and then deleted.}
 
 \item{GameSessionData}{Set of custom game session properties, formatted as a single string
-value. This data is passed to a game server process in the GameSession
-object with a request to start a new game session (see \href{https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession}{Start a Game Session}).}
+value. This data is passed to a game server process in the
+<span>GameSession</span> object with a request to start a new game
+session (see \href{https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession}{Start a Game Session}).}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -96,8 +94,8 @@ status before a game session can be created in it.
 To create a game session, specify either fleet ID or alias ID and
 indicate a maximum number of players to allow in the game session. You
 can also provide a name and game-specific properties for this game
-session. If successful, a GameSession object is returned containing the
-game session properties and other settings you specified.
+session. If successful, a <span>GameSession</span> object is returned
+containing the game session properties and other settings you specified.
 
 \strong{Idempotency tokens.} You can add a token that uniquely identifies
 game session requests. This is useful for ensuring that game session

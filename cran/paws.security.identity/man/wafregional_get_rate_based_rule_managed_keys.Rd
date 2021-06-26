@@ -2,13 +2,13 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_get_rate_based_rule_managed_keys}
 \alias{wafregional_get_rate_based_rule_managed_keys}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 wafregional_get_rate_based_rule_managed_keys(RuleId, NextMarker)
 }
 \arguments{
-\item{RuleId}{[required] The \code{RuleId} of the RateBasedRule for which you want to get a list of
-\code{ManagedKeys}. \code{RuleId} is returned by
+\item{RuleId}{[required] The \code{RuleId} of the <span>RateBasedRule</span> for which you want to get
+a list of \code{ManagedKeys}. \code{RuleId} is returned by
 \code{\link[=wafregional_create_rate_based_rule]{create_rate_based_rule}} and by
 \code{\link[=wafregional_list_rate_based_rules]{list_rate_based_rules}}.}
 
@@ -35,10 +35,10 @@ With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
 Returns an array of IP addresses currently being blocked by the
-RateBasedRule that is specified by the \code{RuleId}. The maximum number of
-managed keys that will be blocked is 10,000. If more than 10,000
-addresses exceed the rate limit, the 10,000 addresses with the highest
-rates will be blocked.
+<span>RateBasedRule</span> that is specified by the \code{RuleId}. The
+maximum number of managed keys that will be blocked is 10,000. If more
+than 10,000 addresses exceed the rate limit, the 10,000 addresses with
+the highest rates will be blocked.
 }
 \section{Request syntax}{
 \preformatted{svc$get_rate_based_rule_managed_keys(

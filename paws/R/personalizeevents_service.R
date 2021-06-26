@@ -8,7 +8,7 @@ NULL
 #' Amazon Personalize can consume real-time user event data, such as
 #' *stream* or *click* data, and use it for model training either alone or
 #' combined with historical data. For more information see
-#' recording-events.
+#' <span>recording-events</span>.
 #'
 #' @param
 #' config
@@ -46,6 +46,12 @@ NULL
 #'  \link[=personalizeevents_put_items]{put_items} \tab Adds one or more items to an Items dataset\cr
 #'  \link[=personalizeevents_put_users]{put_users} \tab Adds one or more users to a Users dataset
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname personalizeevents
 #' @export

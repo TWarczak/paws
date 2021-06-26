@@ -144,15 +144,15 @@ cognitoidentityprovider_admin_add_user_to_group <- function(UserPoolId, Username
 #' Take the following limitations into consideration when you use the
 #' ClientMetadata parameter:
 #' 
-#' -   Amazon Cognito does not store the ClientMetadata value. This data is
+#'   - Amazon Cognito does not store the ClientMetadata value. This data is
 #'     available only to AWS Lambda triggers that are assigned to a user
 #'     pool to support custom workflows. If your user pool configuration
 #'     does not include triggers, the ClientMetadata parameter serves no
 #'     purpose.
 #' 
-#' -   Amazon Cognito does not validate the ClientMetadata value.
+#'   - Amazon Cognito does not validate the ClientMetadata value.
 #' 
-#' -   Amazon Cognito does not encrypt the the ClientMetadata value, so
+#'   - Amazon Cognito does not encrypt the the ClientMetadata value, so
 #'     don't use it to provide sensitive information.
 #'
 #' @return
@@ -245,12 +245,12 @@ cognitoidentityprovider_admin_confirm_sign_up <- function(UserPoolId, Username, 
 #' calling
 #' [`admin_update_user_attributes`][cognitoidentityprovider_admin_update_user_attributes].)
 #' 
-#' -   **email**: The email address of the user to whom the message that
+#'   - **email**: The email address of the user to whom the message that
 #'     contains the code and username will be sent. Required if the
 #'     `email_verified` attribute is set to `True`, or if `"EMAIL"` is
 #'     specified in the `DesiredDeliveryMediums` parameter.
 #' 
-#' -   **phone_number**: The phone number of the user to whom the message
+#'   - **phone_number**: The phone number of the user to whom the message
 #'     that contains the code and username will be sent. Required if the
 #'     `phone_number_verified` attribute is set to `True`, or if `"SMS"` is
 #'     specified in the `DesiredDeliveryMediums` parameter.
@@ -320,15 +320,15 @@ cognitoidentityprovider_admin_confirm_sign_up <- function(UserPoolId, Username, 
 #' Take the following limitations into consideration when you use the
 #' ClientMetadata parameter:
 #' 
-#' -   Amazon Cognito does not store the ClientMetadata value. This data is
+#'   - Amazon Cognito does not store the ClientMetadata value. This data is
 #'     available only to AWS Lambda triggers that are assigned to a user
 #'     pool to support custom workflows. If your user pool configuration
 #'     does not include triggers, the ClientMetadata parameter serves no
 #'     purpose.
 #' 
-#' -   Amazon Cognito does not validate the ClientMetadata value.
+#'   - Amazon Cognito does not validate the ClientMetadata value.
 #' 
-#' -   Amazon Cognito does not encrypt the the ClientMetadata value, so
+#'   - Amazon Cognito does not encrypt the the ClientMetadata value, so
 #'     don't use it to provide sensitive information.
 #'
 #' @return
@@ -888,36 +888,36 @@ cognitoidentityprovider_admin_get_user <- function(UserPoolId, Username) {
 #' @param AuthFlow &#91;required&#93; The authentication flow for this call to execute. The API action will
 #' depend on this value. For example:
 #' 
-#' -   `REFRESH_TOKEN_AUTH` will take in a valid refresh token and return
+#'   - `REFRESH_TOKEN_AUTH` will take in a valid refresh token and return
 #'     new tokens.
 #' 
-#' -   `USER_SRP_AUTH` will take in `USERNAME` and `SRP_A` and return the
+#'   - `USER_SRP_AUTH` will take in `USERNAME` and `SRP_A` and return the
 #'     SRP variables to be used for next challenge execution.
 #' 
-#' -   `USER_PASSWORD_AUTH` will take in `USERNAME` and `PASSWORD` and
+#'   - `USER_PASSWORD_AUTH` will take in `USERNAME` and `PASSWORD` and
 #'     return the next challenge or tokens.
 #' 
 #' Valid values include:
 #' 
-#' -   `USER_SRP_AUTH`: Authentication flow for the Secure Remote Password
+#'   - `USER_SRP_AUTH`: Authentication flow for the Secure Remote Password
 #'     (SRP) protocol.
 #' 
-#' -   `REFRESH_TOKEN_AUTH`/`REFRESH_TOKEN`: Authentication flow for
+#'   - `REFRESH_TOKEN_AUTH`/`REFRESH_TOKEN`: Authentication flow for
 #'     refreshing the access token and ID token by supplying a valid
 #'     refresh token.
 #' 
-#' -   `CUSTOM_AUTH`: Custom authentication flow.
+#'   - `CUSTOM_AUTH`: Custom authentication flow.
 #' 
-#' -   `ADMIN_NO_SRP_AUTH`: Non-SRP authentication flow; you can pass in
+#'   - `ADMIN_NO_SRP_AUTH`: Non-SRP authentication flow; you can pass in
 #'     the USERNAME and PASSWORD directly if the flow is enabled for
 #'     calling the app client.
 #' 
-#' -   `USER_PASSWORD_AUTH`: Non-SRP authentication flow; USERNAME and
+#'   - `USER_PASSWORD_AUTH`: Non-SRP authentication flow; USERNAME and
 #'     PASSWORD are passed directly. If a user migration Lambda trigger is
 #'     set, this flow will invoke the user migration Lambda if the USERNAME
 #'     is not found in the user pool.
 #' 
-#' -   `ADMIN_USER_PASSWORD_AUTH`: Admin-based user password
+#'   - `ADMIN_USER_PASSWORD_AUTH`: Admin-based user password
 #'     authentication. This replaces the `ADMIN_NO_SRP_AUTH` authentication
 #'     flow. In this flow, Cognito receives the password in the request
 #'     instead of using the SRP process to verify passwords.
@@ -925,19 +925,19 @@ cognitoidentityprovider_admin_get_user <- function(UserPoolId, Username) {
 #' `AuthFlow` that you are invoking. The required values depend on the
 #' value of `AuthFlow`:
 #' 
-#' -   For `USER_SRP_AUTH`: `USERNAME` (required), `SRP_A` (required),
+#'   - For `USER_SRP_AUTH`: `USERNAME` (required), `SRP_A` (required),
 #'     `SECRET_HASH` (required if the app client is configured with a
 #'     client secret), `DEVICE_KEY`.
 #' 
-#' -   For `REFRESH_TOKEN_AUTH/REFRESH_TOKEN`: `REFRESH_TOKEN` (required),
+#'   - For `REFRESH_TOKEN_AUTH/REFRESH_TOKEN`: `REFRESH_TOKEN` (required),
 #'     `SECRET_HASH` (required if the app client is configured with a
 #'     client secret), `DEVICE_KEY`.
 #' 
-#' -   For `ADMIN_NO_SRP_AUTH`: `USERNAME` (required), `SECRET_HASH` (if
+#'   - For `ADMIN_NO_SRP_AUTH`: `USERNAME` (required), `SECRET_HASH` (if
 #'     app client is configured with client secret), `PASSWORD` (required),
 #'     `DEVICE_KEY`.
 #' 
-#' -   For `CUSTOM_AUTH`: `USERNAME` (required), `SECRET_HASH` (if app
+#'   - For `CUSTOM_AUTH`: `USERNAME` (required), `SECRET_HASH` (if app
 #'     client is configured with client secret), `DEVICE_KEY`. To start the
 #'     authentication flow with password verification, include
 #'     `ChallengeName: SRP_A` and `SRP_A: (The SRP_A Value)`.
@@ -950,11 +950,11 @@ cognitoidentityprovider_admin_get_user <- function(UserPoolId, Username) {
 #' triggers. The ClientMetadata value is passed as input to the functions
 #' for only the following triggers:
 #' 
-#' -   Pre signup
+#'   - Pre signup
 #' 
-#' -   Pre authentication
+#'   - Pre authentication
 #' 
-#' -   User migration
+#'   - User migration
 #' 
 #' When Amazon Cognito invokes the functions for these triggers, it passes
 #' a JSON payload, which the function receives as input. This payload
@@ -967,17 +967,17 @@ cognitoidentityprovider_admin_get_user <- function(UserPoolId, Username) {
 #' invokes the functions for the following triggers, but it does not
 #' provide the ClientMetadata value as input:
 #' 
-#' -   Post authentication
+#'   - Post authentication
 #' 
-#' -   Custom message
+#'   - Custom message
 #' 
-#' -   Pre token generation
+#'   - Pre token generation
 #' 
-#' -   Create auth challenge
+#'   - Create auth challenge
 #' 
-#' -   Define auth challenge
+#'   - Define auth challenge
 #' 
-#' -   Verify auth challenge
+#'   - Verify auth challenge
 #' 
 #' For more information, see [Customizing User Pool Workflows with Lambda
 #' Triggers](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html)
@@ -986,15 +986,15 @@ cognitoidentityprovider_admin_get_user <- function(UserPoolId, Username) {
 #' Take the following limitations into consideration when you use the
 #' ClientMetadata parameter:
 #' 
-#' -   Amazon Cognito does not store the ClientMetadata value. This data is
+#'   - Amazon Cognito does not store the ClientMetadata value. This data is
 #'     available only to AWS Lambda triggers that are assigned to a user
 #'     pool to support custom workflows. If your user pool configuration
 #'     does not include triggers, the ClientMetadata parameter serves no
 #'     purpose.
 #' 
-#' -   Amazon Cognito does not validate the ClientMetadata value.
+#'   - Amazon Cognito does not validate the ClientMetadata value.
 #' 
-#' -   Amazon Cognito does not encrypt the the ClientMetadata value, so
+#'   - Amazon Cognito does not encrypt the the ClientMetadata value, so
 #'     don't use it to provide sensitive information.
 #' @param AnalyticsMetadata The analytics metadata for collecting Amazon Pinpoint metrics for
 #' [`admin_initiate_auth`][cognitoidentityprovider_admin_initiate_auth]
@@ -1512,15 +1512,15 @@ cognitoidentityprovider_admin_remove_user_from_group <- function(UserPoolId, Use
 #' Take the following limitations into consideration when you use the
 #' ClientMetadata parameter:
 #' 
-#' -   Amazon Cognito does not store the ClientMetadata value. This data is
+#'   - Amazon Cognito does not store the ClientMetadata value. This data is
 #'     available only to AWS Lambda triggers that are assigned to a user
 #'     pool to support custom workflows. If your user pool configuration
 #'     does not include triggers, the ClientMetadata parameter serves no
 #'     purpose.
 #' 
-#' -   Amazon Cognito does not validate the ClientMetadata value.
+#'   - Amazon Cognito does not validate the ClientMetadata value.
 #' 
-#' -   Amazon Cognito does not encrypt the the ClientMetadata value, so
+#'   - Amazon Cognito does not encrypt the the ClientMetadata value, so
 #'     don't use it to provide sensitive information.
 #'
 #' @return
@@ -1576,17 +1576,17 @@ cognitoidentityprovider_admin_reset_user_password <- function(UserPoolId, Userna
 #' @param ChallengeResponses The challenge responses. These are inputs corresponding to the value of
 #' `ChallengeName`, for example:
 #' 
-#' -   `SMS_MFA`: `SMS_MFA_CODE`, `USERNAME`, `SECRET_HASH` (if app client
+#'   - `SMS_MFA`: `SMS_MFA_CODE`, `USERNAME`, `SECRET_HASH` (if app client
 #'     is configured with client secret).
 #' 
-#' -   `PASSWORD_VERIFIER`: `PASSWORD_CLAIM_SIGNATURE`,
+#'   - `PASSWORD_VERIFIER`: `PASSWORD_CLAIM_SIGNATURE`,
 #'     `PASSWORD_CLAIM_SECRET_BLOCK`, `TIMESTAMP`, `USERNAME`,
 #'     `SECRET_HASH` (if app client is configured with client secret).
 #' 
-#' -   `ADMIN_NO_SRP_AUTH`: `PASSWORD`, `USERNAME`, `SECRET_HASH` (if app
+#'   - `ADMIN_NO_SRP_AUTH`: `PASSWORD`, `USERNAME`, `SECRET_HASH` (if app
 #'     client is configured with client secret).
 #' 
-#' -   `NEW_PASSWORD_REQUIRED`: `NEW_PASSWORD`, any other required
+#'   - `NEW_PASSWORD_REQUIRED`: `NEW_PASSWORD`, any other required
 #'     attributes, `USERNAME`, `SECRET_HASH` (if app client is configured
 #'     with client secret).
 #' 
@@ -1636,15 +1636,15 @@ cognitoidentityprovider_admin_reset_user_password <- function(UserPoolId, Userna
 #' Take the following limitations into consideration when you use the
 #' ClientMetadata parameter:
 #' 
-#' -   Amazon Cognito does not store the ClientMetadata value. This data is
+#'   - Amazon Cognito does not store the ClientMetadata value. This data is
 #'     available only to AWS Lambda triggers that are assigned to a user
 #'     pool to support custom workflows. If your user pool configuration
 #'     does not include triggers, the ClientMetadata parameter serves no
 #'     purpose.
 #' 
-#' -   Amazon Cognito does not validate the ClientMetadata value.
+#'   - Amazon Cognito does not validate the ClientMetadata value.
 #' 
-#' -   Amazon Cognito does not encrypt the the ClientMetadata value, so
+#'   - Amazon Cognito does not encrypt the the ClientMetadata value, so
 #'     don't use it to provide sensitive information.
 #'
 #' @return
@@ -1839,7 +1839,7 @@ cognitoidentityprovider_admin_set_user_password <- function(UserPoolId, Username
 }
 .cognitoidentityprovider$operations$admin_set_user_password <- cognitoidentityprovider_admin_set_user_password
 
-#' This action is no longer supported
+#' _This action is no longer supported
 #'
 #' @description
 #' *This action is no longer supported.* You can use it to configure only
@@ -2041,15 +2041,15 @@ cognitoidentityprovider_admin_update_device_status <- function(UserPoolId, Usern
 #' Take the following limitations into consideration when you use the
 #' ClientMetadata parameter:
 #' 
-#' -   Amazon Cognito does not store the ClientMetadata value. This data is
+#'   - Amazon Cognito does not store the ClientMetadata value. This data is
 #'     available only to AWS Lambda triggers that are assigned to a user
 #'     pool to support custom workflows. If your user pool configuration
 #'     does not include triggers, the ClientMetadata parameter serves no
 #'     purpose.
 #' 
-#' -   Amazon Cognito does not validate the ClientMetadata value.
+#'   - Amazon Cognito does not validate the ClientMetadata value.
 #' 
-#' -   Amazon Cognito does not encrypt the the ClientMetadata value, so
+#'   - Amazon Cognito does not encrypt the the ClientMetadata value, so
 #'     don't use it to provide sensitive information.
 #'
 #' @return
@@ -2338,15 +2338,15 @@ cognitoidentityprovider_confirm_device <- function(AccessToken, DeviceKey, Devic
 #' Take the following limitations into consideration when you use the
 #' ClientMetadata parameter:
 #' 
-#' -   Amazon Cognito does not store the ClientMetadata value. This data is
+#'   - Amazon Cognito does not store the ClientMetadata value. This data is
 #'     available only to AWS Lambda triggers that are assigned to a user
 #'     pool to support custom workflows. If your user pool configuration
 #'     does not include triggers, the ClientMetadata parameter serves no
 #'     purpose.
 #' 
-#' -   Amazon Cognito does not validate the ClientMetadata value.
+#'   - Amazon Cognito does not validate the ClientMetadata value.
 #' 
-#' -   Amazon Cognito does not encrypt the the ClientMetadata value, so
+#'   - Amazon Cognito does not encrypt the the ClientMetadata value, so
 #'     don't use it to provide sensitive information.
 #'
 #' @return
@@ -2441,15 +2441,15 @@ cognitoidentityprovider_confirm_forgot_password <- function(ClientId, SecretHash
 #' Take the following limitations into consideration when you use the
 #' ClientMetadata parameter:
 #' 
-#' -   Amazon Cognito does not store the ClientMetadata value. This data is
+#'   - Amazon Cognito does not store the ClientMetadata value. This data is
 #'     available only to AWS Lambda triggers that are assigned to a user
 #'     pool to support custom workflows. If your user pool configuration
 #'     does not include triggers, the ClientMetadata parameter serves no
 #'     purpose.
 #' 
-#' -   Amazon Cognito does not validate the ClientMetadata value.
+#'   - Amazon Cognito does not validate the ClientMetadata value.
 #' 
-#' -   Amazon Cognito does not encrypt the the ClientMetadata value, so
+#'   - Amazon Cognito does not encrypt the the ClientMetadata value, so
 #'     don't use it to provide sensitive information.
 #'
 #' @return
@@ -2595,65 +2595,65 @@ cognitoidentityprovider_create_group <- function(GroupName, UserPoolId, Descript
 #' @param ProviderDetails &#91;required&#93; The identity provider details. The following list describes the provider
 #' detail keys for each identity provider type.
 #' 
-#' -   For Google and Login with Amazon:
+#'   - For Google and Login with Amazon:
+#'     
+#'       - client_id
+#'     
+#'       - client_secret
+#'     
+#'       - authorize_scopes
 #' 
-#'     -   client_id
+#'   - For Facebook:
+#'     
+#'       - client_id
+#'     
+#'       - client_secret
+#'     
+#'       - authorize_scopes
+#'     
+#'       - api_version
 #' 
-#'     -   client_secret
+#'   - For Sign in with Apple:
+#'     
+#'       - client_id
+#'     
+#'       - team_id
+#'     
+#'       - key_id
+#'     
+#'       - private_key
+#'     
+#'       - authorize_scopes
 #' 
-#'     -   authorize_scopes
-#' 
-#' -   For Facebook:
-#' 
-#'     -   client_id
-#' 
-#'     -   client_secret
-#' 
-#'     -   authorize_scopes
-#' 
-#'     -   api_version
-#' 
-#' -   For Sign in with Apple:
-#' 
-#'     -   client_id
-#' 
-#'     -   team_id
-#' 
-#'     -   key_id
-#' 
-#'     -   private_key
-#' 
-#'     -   authorize_scopes
-#' 
-#' -   For OIDC providers:
-#' 
-#'     -   client_id
-#' 
-#'     -   client_secret
-#' 
-#'     -   attributes_request_method
-#' 
-#'     -   oidc_issuer
-#' 
-#'     -   authorize_scopes
-#' 
-#'     -   authorize_url *if not available from discovery URL specified by
+#'   - For OIDC providers:
+#'     
+#'       - client_id
+#'     
+#'       - client_secret
+#'     
+#'       - attributes_request_method
+#'     
+#'       - oidc_issuer
+#'     
+#'       - authorize_scopes
+#'     
+#'       - authorize_url *if not available from discovery URL specified by
 #'         oidc_issuer key*
-#' 
-#'     -   token_url *if not available from discovery URL specified by
+#'     
+#'       - token_url *if not available from discovery URL specified by
 #'         oidc_issuer key*
-#' 
-#'     -   attributes_url *if not available from discovery URL specified
+#'     
+#'       - attributes_url *if not available from discovery URL specified
 #'         by oidc_issuer key*
-#' 
-#'     -   jwks_uri *if not available from discovery URL specified by
+#'     
+#'       - jwks_uri *if not available from discovery URL specified by
 #'         oidc_issuer key*
 #' 
-#' -   For SAML providers:
-#' 
-#'     -   MetadataFile OR MetadataURL
-#' 
-#'     -   IDPSignout *optional*
+#'   - For SAML providers:
+#'     
+#'       - MetadataFile OR MetadataURL
+#'     
+#'       - IDPSignout *optional*
 #' @param AttributeMapping A mapping of identity provider attributes to standard and custom user
 #' pool attributes.
 #' @param IdpIdentifiers A list of identity provider identifiers.
@@ -3265,22 +3265,22 @@ cognitoidentityprovider_create_user_pool <- function(PoolName, Policies = NULL, 
 #' 
 #' Valid values include:
 #' 
-#' -   `ALLOW_ADMIN_USER_PASSWORD_AUTH`: Enable admin based user password
+#'   - `ALLOW_ADMIN_USER_PASSWORD_AUTH`: Enable admin based user password
 #'     authentication flow `ADMIN_USER_PASSWORD_AUTH`. This setting
 #'     replaces the `ADMIN_NO_SRP_AUTH` setting. With this authentication
 #'     flow, Cognito receives the password in the request instead of using
 #'     the SRP (Secure Remote Password protocol) protocol to verify
 #'     passwords.
 #' 
-#' -   `ALLOW_CUSTOM_AUTH`: Enable Lambda trigger based authentication.
+#'   - `ALLOW_CUSTOM_AUTH`: Enable Lambda trigger based authentication.
 #' 
-#' -   `ALLOW_USER_PASSWORD_AUTH`: Enable user password-based
+#'   - `ALLOW_USER_PASSWORD_AUTH`: Enable user password-based
 #'     authentication. In this flow, Cognito receives the password in the
 #'     request instead of using the SRP protocol to verify passwords.
 #' 
-#' -   `ALLOW_USER_SRP_AUTH`: Enable SRP based authentication.
+#'   - `ALLOW_USER_SRP_AUTH`: Enable SRP based authentication.
 #' 
-#' -   `ALLOW_REFRESH_TOKEN_AUTH`: Enable authflow to refresh tokens.
+#'   - `ALLOW_REFRESH_TOKEN_AUTH`: Enable authflow to refresh tokens.
 #' @param SupportedIdentityProviders A list of provider names for the identity providers that are supported
 #' on this client. The following are supported: `COGNITO`, `Facebook`,
 #' `Google` and `LoginWithAmazon`.
@@ -3288,14 +3288,14 @@ cognitoidentityprovider_create_user_pool <- function(PoolName, Policies = NULL, 
 #' 
 #' A redirect URI must:
 #' 
-#' -   Be an absolute URI.
+#'   - Be an absolute URI.
 #' 
-#' -   Be registered with the authorization server.
+#'   - Be registered with the authorization server.
 #' 
-#' -   Not include a fragment component.
+#'   - Not include a fragment component.
 #' 
 #' See [OAuth 2.0 - Redirection
-#' Endpoint](https://tools.ietf.org/html/rfc6749#section-3.1.2).
+#' Endpoint](https://datatracker.ietf.org/doc/html/rfc6749#section-3.1.2).
 #' 
 #' Amazon Cognito requires HTTPS over HTTP except for http://localhost for
 #' testing purposes only.
@@ -3306,14 +3306,14 @@ cognitoidentityprovider_create_user_pool <- function(PoolName, Policies = NULL, 
 #' 
 #' A redirect URI must:
 #' 
-#' -   Be an absolute URI.
+#'   - Be an absolute URI.
 #' 
-#' -   Be registered with the authorization server.
+#'   - Be registered with the authorization server.
 #' 
-#' -   Not include a fragment component.
+#'   - Not include a fragment component.
 #' 
 #' See [OAuth 2.0 - Redirection
-#' Endpoint](https://tools.ietf.org/html/rfc6749#section-3.1.2).
+#' Endpoint](https://datatracker.ietf.org/doc/html/rfc6749#section-3.1.2).
 #' 
 #' Amazon Cognito requires HTTPS over HTTP except for http://localhost for
 #' testing purposes only.
@@ -3356,9 +3356,9 @@ cognitoidentityprovider_create_user_pool <- function(PoolName, Policies = NULL, 
 #' 
 #' Valid values include:
 #' 
-#' -   `ENABLED` - This prevents user existence-related errors.
+#'   - `ENABLED` - This prevents user existence-related errors.
 #' 
-#' -   `LEGACY` - This represents the old behavior of Cognito where user
+#'   - `LEGACY` - This represents the old behavior of Cognito where user
 #'     existence related errors are not prevented.
 #' 
 #' After February 15th 2020, the value of `PreventUserExistenceErrors` will
@@ -4624,15 +4624,15 @@ cognitoidentityprovider_forget_device <- function(AccessToken = NULL, DeviceKey)
 #' Take the following limitations into consideration when you use the
 #' ClientMetadata parameter:
 #' 
-#' -   Amazon Cognito does not store the ClientMetadata value. This data is
+#'   - Amazon Cognito does not store the ClientMetadata value. This data is
 #'     available only to AWS Lambda triggers that are assigned to a user
 #'     pool to support custom workflows. If your user pool configuration
 #'     does not include triggers, the ClientMetadata parameter serves no
 #'     purpose.
 #' 
-#' -   Amazon Cognito does not validate the ClientMetadata value.
+#'   - Amazon Cognito does not validate the ClientMetadata value.
 #' 
-#' -   Amazon Cognito does not encrypt the the ClientMetadata value, so
+#'   - Amazon Cognito does not encrypt the the ClientMetadata value, so
 #'     don't use it to provide sensitive information.
 #'
 #' @return
@@ -5134,15 +5134,15 @@ cognitoidentityprovider_get_user <- function(AccessToken) {
 #' Take the following limitations into consideration when you use the
 #' ClientMetadata parameter:
 #' 
-#' -   Amazon Cognito does not store the ClientMetadata value. This data is
+#'   - Amazon Cognito does not store the ClientMetadata value. This data is
 #'     available only to AWS Lambda triggers that are assigned to a user
 #'     pool to support custom workflows. If your user pool configuration
 #'     does not include triggers, the ClientMetadata parameter serves no
 #'     purpose.
 #' 
-#' -   Amazon Cognito does not validate the ClientMetadata value.
+#'   - Amazon Cognito does not validate the ClientMetadata value.
 #' 
-#' -   Amazon Cognito does not encrypt the the ClientMetadata value, so
+#'   - Amazon Cognito does not encrypt the the ClientMetadata value, so
 #'     don't use it to provide sensitive information.
 #'
 #' @return
@@ -5298,32 +5298,32 @@ cognitoidentityprovider_global_sign_out <- function(AccessToken) {
 #' @param AuthFlow &#91;required&#93; The authentication flow for this call to execute. The API action will
 #' depend on this value. For example:
 #' 
-#' -   `REFRESH_TOKEN_AUTH` will take in a valid refresh token and return
+#'   - `REFRESH_TOKEN_AUTH` will take in a valid refresh token and return
 #'     new tokens.
 #' 
-#' -   `USER_SRP_AUTH` will take in `USERNAME` and `SRP_A` and return the
+#'   - `USER_SRP_AUTH` will take in `USERNAME` and `SRP_A` and return the
 #'     SRP variables to be used for next challenge execution.
 #' 
-#' -   `USER_PASSWORD_AUTH` will take in `USERNAME` and `PASSWORD` and
+#'   - `USER_PASSWORD_AUTH` will take in `USERNAME` and `PASSWORD` and
 #'     return the next challenge or tokens.
 #' 
 #' Valid values include:
 #' 
-#' -   `USER_SRP_AUTH`: Authentication flow for the Secure Remote Password
+#'   - `USER_SRP_AUTH`: Authentication flow for the Secure Remote Password
 #'     (SRP) protocol.
 #' 
-#' -   `REFRESH_TOKEN_AUTH`/`REFRESH_TOKEN`: Authentication flow for
+#'   - `REFRESH_TOKEN_AUTH`/`REFRESH_TOKEN`: Authentication flow for
 #'     refreshing the access token and ID token by supplying a valid
 #'     refresh token.
 #' 
-#' -   `CUSTOM_AUTH`: Custom authentication flow.
+#'   - `CUSTOM_AUTH`: Custom authentication flow.
 #' 
-#' -   `USER_PASSWORD_AUTH`: Non-SRP authentication flow; USERNAME and
+#'   - `USER_PASSWORD_AUTH`: Non-SRP authentication flow; USERNAME and
 #'     PASSWORD are passed directly. If a user migration Lambda trigger is
 #'     set, this flow will invoke the user migration Lambda if the USERNAME
 #'     is not found in the user pool.
 #' 
-#' -   `ADMIN_USER_PASSWORD_AUTH`: Admin-based user password
+#'   - `ADMIN_USER_PASSWORD_AUTH`: Admin-based user password
 #'     authentication. This replaces the `ADMIN_NO_SRP_AUTH` authentication
 #'     flow. In this flow, Cognito receives the password in the request
 #'     instead of using the SRP process to verify passwords.
@@ -5333,15 +5333,15 @@ cognitoidentityprovider_global_sign_out <- function(AccessToken) {
 #' `AuthFlow` that you are invoking. The required values depend on the
 #' value of `AuthFlow`:
 #' 
-#' -   For `USER_SRP_AUTH`: `USERNAME` (required), `SRP_A` (required),
+#'   - For `USER_SRP_AUTH`: `USERNAME` (required), `SRP_A` (required),
 #'     `SECRET_HASH` (required if the app client is configured with a
 #'     client secret), `DEVICE_KEY`.
 #' 
-#' -   For `REFRESH_TOKEN_AUTH/REFRESH_TOKEN`: `REFRESH_TOKEN` (required),
+#'   - For `REFRESH_TOKEN_AUTH/REFRESH_TOKEN`: `REFRESH_TOKEN` (required),
 #'     `SECRET_HASH` (required if the app client is configured with a
 #'     client secret), `DEVICE_KEY`.
 #' 
-#' -   For `CUSTOM_AUTH`: `USERNAME` (required), `SECRET_HASH` (if app
+#'   - For `CUSTOM_AUTH`: `USERNAME` (required), `SECRET_HASH` (if app
 #'     client is configured with client secret), `DEVICE_KEY`. To start the
 #'     authentication flow with password verification, include
 #'     `ChallengeName: SRP_A` and `SRP_A: (The SRP_A Value)`.
@@ -5354,11 +5354,11 @@ cognitoidentityprovider_global_sign_out <- function(AccessToken) {
 #' triggers. The ClientMetadata value is passed as input to the functions
 #' for only the following triggers:
 #' 
-#' -   Pre signup
+#'   - Pre signup
 #' 
-#' -   Pre authentication
+#'   - Pre authentication
 #' 
-#' -   User migration
+#'   - User migration
 #' 
 #' When Amazon Cognito invokes the functions for these triggers, it passes
 #' a JSON payload, which the function receives as input. This payload
@@ -5371,17 +5371,17 @@ cognitoidentityprovider_global_sign_out <- function(AccessToken) {
 #' the functions for the following triggers, but it does not provide the
 #' ClientMetadata value as input:
 #' 
-#' -   Post authentication
+#'   - Post authentication
 #' 
-#' -   Custom message
+#'   - Custom message
 #' 
-#' -   Pre token generation
+#'   - Pre token generation
 #' 
-#' -   Create auth challenge
+#'   - Create auth challenge
 #' 
-#' -   Define auth challenge
+#'   - Define auth challenge
 #' 
-#' -   Verify auth challenge
+#'   - Verify auth challenge
 #' 
 #' For more information, see [Customizing User Pool Workflows with Lambda
 #' Triggers](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html)
@@ -5390,15 +5390,15 @@ cognitoidentityprovider_global_sign_out <- function(AccessToken) {
 #' Take the following limitations into consideration when you use the
 #' ClientMetadata parameter:
 #' 
-#' -   Amazon Cognito does not store the ClientMetadata value. This data is
+#'   - Amazon Cognito does not store the ClientMetadata value. This data is
 #'     available only to AWS Lambda triggers that are assigned to a user
 #'     pool to support custom workflows. If your user pool configuration
 #'     does not include triggers, the ClientMetadata parameter serves no
 #'     purpose.
 #' 
-#' -   Amazon Cognito does not validate the ClientMetadata value.
+#'   - Amazon Cognito does not validate the ClientMetadata value.
 #' 
-#' -   Amazon Cognito does not encrypt the the ClientMetadata value, so
+#'   - Amazon Cognito does not encrypt the the ClientMetadata value, so
 #'     don't use it to provide sensitive information.
 #' @param ClientId &#91;required&#93; The app client ID.
 #' @param AnalyticsMetadata The Amazon Pinpoint analytics metadata for collecting metrics for
@@ -6031,14 +6031,14 @@ cognitoidentityprovider_list_user_pools <- function(NextToken = NULL, MaxResults
 #' escaped using the backslash (\\) character. For example, "`family_name`
 #' = \\"Reddy\\"".
 #' 
-#' -   *AttributeName*: The name of the attribute to search for. You can
+#'   - *AttributeName*: The name of the attribute to search for. You can
 #'     only search for one attribute at a time.
 #' 
-#' -   *Filter-Type*: For an exact match, use =, for example, "`given_name`
+#'   - *Filter-Type*: For an exact match, use =, for example, "`given_name`
 #'     = \\"Jon\\"". For a prefix ("starts with") match, use ^=, for
 #'     example, "`given_name` ^= \\"Jon\\"".
 #' 
-#' -   *AttributeValue*: The attribute value that must be matched for each
+#'   - *AttributeValue*: The attribute value that must be matched for each
 #'     user.
 #' 
 #' If the filter string is empty,
@@ -6047,26 +6047,26 @@ cognitoidentityprovider_list_user_pools <- function(NextToken = NULL, MaxResults
 #' 
 #' You can only search for the following standard attributes:
 #' 
-#' -   `username` (case-sensitive)
+#'   - `username` (case-sensitive)
 #' 
-#' -   `email`
+#'   - `email`
 #' 
-#' -   `phone_number`
+#'   - `phone_number`
 #' 
-#' -   `name`
+#'   - `name`
 #' 
-#' -   `given_name`
+#'   - `given_name`
 #' 
-#' -   `family_name`
+#'   - `family_name`
 #' 
-#' -   `preferred_username`
+#'   - `preferred_username`
 #' 
-#' -   `cognito:user_status` (called **Status** in the Console)
+#'   - `cognito:user_status` (called **Status** in the Console)
 #'     (case-insensitive)
 #' 
-#' -   `status (called Enabled in the Console) (case-sensitive)`
+#'   - `status (called Enabled in the Console) (case-sensitive)`
 #' 
-#' -   `sub`
+#'   - `sub`
 #' 
 #' Custom attributes are not searchable.
 #' 
@@ -6266,15 +6266,15 @@ cognitoidentityprovider_list_users_in_group <- function(UserPoolId, GroupName, L
 #' Take the following limitations into consideration when you use the
 #' ClientMetadata parameter:
 #' 
-#' -   Amazon Cognito does not store the ClientMetadata value. This data is
+#'   - Amazon Cognito does not store the ClientMetadata value. This data is
 #'     available only to AWS Lambda triggers that are assigned to a user
 #'     pool to support custom workflows. If your user pool configuration
 #'     does not include triggers, the ClientMetadata parameter serves no
 #'     purpose.
 #' 
-#' -   Amazon Cognito does not validate the ClientMetadata value.
+#'   - Amazon Cognito does not validate the ClientMetadata value.
 #' 
-#' -   Amazon Cognito does not encrypt the the ClientMetadata value, so
+#'   - Amazon Cognito does not encrypt the the ClientMetadata value, so
 #'     don't use it to provide sensitive information.
 #'
 #' @return
@@ -6357,21 +6357,21 @@ cognitoidentityprovider_resend_confirmation_code <- function(ClientId, SecretHas
 #' `SECRET_HASH` (if app client is configured with client secret) applies
 #' to all inputs below (including `SOFTWARE_TOKEN_MFA`).
 #' 
-#' -   `SMS_MFA`: `SMS_MFA_CODE`, `USERNAME`.
+#'   - `SMS_MFA`: `SMS_MFA_CODE`, `USERNAME`.
 #' 
-#' -   `PASSWORD_VERIFIER`: `PASSWORD_CLAIM_SIGNATURE`,
+#'   - `PASSWORD_VERIFIER`: `PASSWORD_CLAIM_SIGNATURE`,
 #'     `PASSWORD_CLAIM_SECRET_BLOCK`, `TIMESTAMP`, `USERNAME`.
 #' 
-#' -   `NEW_PASSWORD_REQUIRED`: `NEW_PASSWORD`, any other required
+#'   - `NEW_PASSWORD_REQUIRED`: `NEW_PASSWORD`, any other required
 #'     attributes, `USERNAME`.
 #' 
-#' -   `SOFTWARE_TOKEN_MFA`: `USERNAME` and `SOFTWARE_TOKEN_MFA_CODE` are
+#'   - `SOFTWARE_TOKEN_MFA`: `USERNAME` and `SOFTWARE_TOKEN_MFA_CODE` are
 #'     required attributes.
 #' 
-#' -   `DEVICE_SRP_AUTH` requires `USERNAME`, `DEVICE_KEY`, `SRP_A` (and
+#'   - `DEVICE_SRP_AUTH` requires `USERNAME`, `DEVICE_KEY`, `SRP_A` (and
 #'     `SECRET_HASH`).
 #' 
-#' -   `DEVICE_PASSWORD_VERIFIER` requires everything that
+#'   - `DEVICE_PASSWORD_VERIFIER` requires everything that
 #'     `PASSWORD_VERIFIER` requires plus `DEVICE_KEY`.
 #' @param AnalyticsMetadata The Amazon Pinpoint analytics metadata for collecting metrics for
 #' [`respond_to_auth_challenge`][cognitoidentityprovider_respond_to_auth_challenge]
@@ -6401,15 +6401,15 @@ cognitoidentityprovider_resend_confirmation_code <- function(ClientId, SecretHas
 #' Take the following limitations into consideration when you use the
 #' ClientMetadata parameter:
 #' 
-#' -   Amazon Cognito does not store the ClientMetadata value. This data is
+#'   - Amazon Cognito does not store the ClientMetadata value. This data is
 #'     available only to AWS Lambda triggers that are assigned to a user
 #'     pool to support custom workflows. If your user pool configuration
 #'     does not include triggers, the ClientMetadata parameter serves no
 #'     purpose.
 #' 
-#' -   Amazon Cognito does not validate the ClientMetadata value.
+#'   - Amazon Cognito does not validate the ClientMetadata value.
 #' 
-#' -   Amazon Cognito does not encrypt the the ClientMetadata value, so
+#'   - Amazon Cognito does not encrypt the the ClientMetadata value, so
 #'     don't use it to provide sensitive information.
 #'
 #' @return
@@ -6800,11 +6800,11 @@ cognitoidentityprovider_set_user_mfa_preference <- function(SMSMfaSettings = NUL
 #' @param SoftwareTokenMfaConfiguration The software token MFA configuration.
 #' @param MfaConfiguration The MFA configuration. Valid values include:
 #' 
-#' -   `OFF` MFA will not be used for any users.
+#'   - `OFF` MFA will not be used for any users.
 #' 
-#' -   `ON` MFA is required for all users to sign in.
+#'   - `ON` MFA is required for all users to sign in.
 #' 
-#' -   `OPTIONAL` MFA will be required only for individual users who have
+#'   - `OPTIONAL` MFA will be required only for individual users who have
 #'     an MFA factor enabled.
 #'
 #' @return
@@ -6863,7 +6863,7 @@ cognitoidentityprovider_set_user_pool_mfa_config <- function(UserPoolId, SmsMfaC
 }
 .cognitoidentityprovider$operations$set_user_pool_mfa_config <- cognitoidentityprovider_set_user_pool_mfa_config
 
-#' This action is no longer supported
+#' _This action is no longer supported
 #'
 #' @description
 #' *This action is no longer supported.* You can use it to configure only
@@ -6964,15 +6964,15 @@ cognitoidentityprovider_set_user_settings <- function(AccessToken, MFAOptions) {
 #' Take the following limitations into consideration when you use the
 #' ClientMetadata parameter:
 #' 
-#' -   Amazon Cognito does not store the ClientMetadata value. This data is
+#'   - Amazon Cognito does not store the ClientMetadata value. This data is
 #'     available only to AWS Lambda triggers that are assigned to a user
 #'     pool to support custom workflows. If your user pool configuration
 #'     does not include triggers, the ClientMetadata parameter serves no
 #'     purpose.
 #' 
-#' -   Amazon Cognito does not validate the ClientMetadata value.
+#'   - Amazon Cognito does not validate the ClientMetadata value.
 #' 
-#' -   Amazon Cognito does not encrypt the the ClientMetadata value, so
+#'   - Amazon Cognito does not encrypt the the ClientMetadata value, so
 #'     don't use it to provide sensitive information.
 #'
 #' @return
@@ -7640,15 +7640,15 @@ cognitoidentityprovider_update_resource_server <- function(UserPoolId, Identifie
 #' Take the following limitations into consideration when you use the
 #' ClientMetadata parameter:
 #' 
-#' -   Amazon Cognito does not store the ClientMetadata value. This data is
+#'   - Amazon Cognito does not store the ClientMetadata value. This data is
 #'     available only to AWS Lambda triggers that are assigned to a user
 #'     pool to support custom workflows. If your user pool configuration
 #'     does not include triggers, the ClientMetadata parameter serves no
 #'     purpose.
 #' 
-#' -   Amazon Cognito does not validate the ClientMetadata value.
+#'   - Amazon Cognito does not validate the ClientMetadata value.
 #' 
-#' -   Amazon Cognito does not encrypt the the ClientMetadata value, so
+#'   - Amazon Cognito does not encrypt the the ClientMetadata value, so
 #'     don't use it to provide sensitive information.
 #'
 #' @return
@@ -7732,13 +7732,13 @@ cognitoidentityprovider_update_user_attributes <- function(UserAttributes, Acces
 #' @param SmsAuthenticationMessage The contents of the SMS authentication message.
 #' @param MfaConfiguration Can be one of the following values:
 #' 
-#' -   `OFF` - MFA tokens are not required and cannot be specified during
+#'   - `OFF` - MFA tokens are not required and cannot be specified during
 #'     user registration.
 #' 
-#' -   `ON` - MFA tokens are required for all user registrations. You can
+#'   - `ON` - MFA tokens are required for all user registrations. You can
 #'     only specify required when you are initially creating a user pool.
 #' 
-#' -   `OPTIONAL` - Users have the option when registering to create an MFA
+#'   - `OPTIONAL` - Users have the option when registering to create an MFA
 #'     token.
 #' @param DeviceConfiguration Device configuration.
 #' @param EmailConfiguration Email configuration.
@@ -7916,36 +7916,36 @@ cognitoidentityprovider_update_user_pool <- function(UserPoolId, Policies = NULL
 #' 
 #' Valid values include:
 #' 
-#' -   `ALLOW_ADMIN_USER_PASSWORD_AUTH`: Enable admin based user password
+#'   - `ALLOW_ADMIN_USER_PASSWORD_AUTH`: Enable admin based user password
 #'     authentication flow `ADMIN_USER_PASSWORD_AUTH`. This setting
 #'     replaces the `ADMIN_NO_SRP_AUTH` setting. With this authentication
 #'     flow, Cognito receives the password in the request instead of using
 #'     the SRP (Secure Remote Password protocol) protocol to verify
 #'     passwords.
 #' 
-#' -   `ALLOW_CUSTOM_AUTH`: Enable Lambda trigger based authentication.
+#'   - `ALLOW_CUSTOM_AUTH`: Enable Lambda trigger based authentication.
 #' 
-#' -   `ALLOW_USER_PASSWORD_AUTH`: Enable user password-based
+#'   - `ALLOW_USER_PASSWORD_AUTH`: Enable user password-based
 #'     authentication. In this flow, Cognito receives the password in the
 #'     request instead of using the SRP protocol to verify passwords.
 #' 
-#' -   `ALLOW_USER_SRP_AUTH`: Enable SRP based authentication.
+#'   - `ALLOW_USER_SRP_AUTH`: Enable SRP based authentication.
 #' 
-#' -   `ALLOW_REFRESH_TOKEN_AUTH`: Enable authflow to refresh tokens.
+#'   - `ALLOW_REFRESH_TOKEN_AUTH`: Enable authflow to refresh tokens.
 #' @param SupportedIdentityProviders A list of provider names for the identity providers that are supported
 #' on this client.
 #' @param CallbackURLs A list of allowed redirect (callback) URLs for the identity providers.
 #' 
 #' A redirect URI must:
 #' 
-#' -   Be an absolute URI.
+#'   - Be an absolute URI.
 #' 
-#' -   Be registered with the authorization server.
+#'   - Be registered with the authorization server.
 #' 
-#' -   Not include a fragment component.
+#'   - Not include a fragment component.
 #' 
 #' See [OAuth 2.0 - Redirection
-#' Endpoint](https://tools.ietf.org/html/rfc6749#section-3.1.2).
+#' Endpoint](https://datatracker.ietf.org/doc/html/rfc6749#section-3.1.2).
 #' 
 #' Amazon Cognito requires HTTPS over HTTP except for http://localhost for
 #' testing purposes only.
@@ -7956,14 +7956,14 @@ cognitoidentityprovider_update_user_pool <- function(UserPoolId, Policies = NULL
 #' 
 #' A redirect URI must:
 #' 
-#' -   Be an absolute URI.
+#'   - Be an absolute URI.
 #' 
-#' -   Be registered with the authorization server.
+#'   - Be registered with the authorization server.
 #' 
-#' -   Not include a fragment component.
+#'   - Not include a fragment component.
 #' 
 #' See [OAuth 2.0 - Redirection
-#' Endpoint](https://tools.ietf.org/html/rfc6749#section-3.1.2).
+#' Endpoint](https://datatracker.ietf.org/doc/html/rfc6749#section-3.1.2).
 #' 
 #' Amazon Cognito requires HTTPS over HTTP except for http://localhost for
 #' testing purposes only.
@@ -8006,9 +8006,9 @@ cognitoidentityprovider_update_user_pool <- function(UserPoolId, Policies = NULL
 #' 
 #' Valid values include:
 #' 
-#' -   `ENABLED` - This prevents user existence-related errors.
+#'   - `ENABLED` - This prevents user existence-related errors.
 #' 
-#' -   `LEGACY` - This represents the old behavior of Cognito where user
+#'   - `LEGACY` - This represents the old behavior of Cognito where user
 #'     existence related errors are not prevented.
 #' 
 #' After February 15th 2020, the value of `PreventUserExistenceErrors` will

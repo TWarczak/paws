@@ -23,10 +23,10 @@ NULL
 #' 
 #' To learn more about AppStream 2.0, see the following resources:
 #' 
-#' -   [Amazon AppStream 2.0 product
+#'   - [Amazon AppStream 2.0 product
 #'     page](https://aws.amazon.com/appstream2/)
 #' 
-#' -   [Amazon AppStream 2.0
+#'   - [Amazon AppStream 2.0
 #'     documentation](https://docs.aws.amazon.com/appstream2/index.html)
 #'
 #' @param
@@ -109,6 +109,12 @@ NULL
 #'  \link[=appstream_update_image_permissions]{update_image_permissions} \tab Adds or updates permissions for the specified private image\cr
 #'  \link[=appstream_update_stack]{update_stack} \tab Updates the specified fields for the specified stack
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname appstream
 #' @export

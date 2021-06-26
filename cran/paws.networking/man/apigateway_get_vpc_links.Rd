@@ -35,8 +35,8 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Gets the VpcLinks collection under the caller's account in a selected
-region.
+Gets the <span>VpcLinks</span> collection under the caller's account in
+a selected region.
 }
 \section{Request syntax}{
 \preformatted{svc$get_vpc_links(

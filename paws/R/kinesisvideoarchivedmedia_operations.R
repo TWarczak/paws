@@ -15,29 +15,31 @@ NULL
 #' API operation.
 #' 
 #' As a prerequsite to using GetCLip API, you must obtain an endpoint using
-#' `GetDataEndpoint`, specifying GET_CLIP for`` the `APIName` parameter.
+#' `GetDataEndpoint`, specifying GET_CLIP for`  ` the `APIName` parameter.
 #' 
 #' An Amazon Kinesis video stream has the following requirements for
 #' providing data through MP4:
 #' 
-#' -   The media must contain h.264 or h.265 encoded video and, optionally,
+#'   - The media must contain h.264 or h.265 encoded video and, optionally,
 #'     AAC or G.711 encoded audio. Specifically, the codec ID of track 1
 #'     should be `V_MPEG/ISO/AVC` (for h.264) or V_MPEGH/ISO/HEVC (for
 #'     H.265). Optionally, the codec ID of track 2 should be `A_AAC` (for
 #'     AAC) or A_MS/ACM (for G.711).
 #' 
-#' -   Data retention must be greater than 0.
+#'   - Data retention must be greater than 0.
 #' 
-#' -   The video track of each fragment must contain codec private data in
+#'   - The video track of each fragment must contain codec private data in
 #'     the Advanced Video Coding (AVC) for H.264 format and HEVC for H.265
-#'     format. For more information, see [MPEG-4 specification ISO/IEC
-#'     14496-15](https://www.iso.org/standard/55980.html). For information
-#'     about adapting stream data to a given format, see [NAL Adaptation
+#'     format. For more information, see [MPEG-4 specification
+#'     ISO/IEC 14496-15](https://www.iso.org/standard/55980.html). For
+#'     information about adapting stream data to a given format, see [NAL
+#'     Adaptation
 #'     Flags](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/producer-reference-nal.html).
 #' 
-#' -   The audio track (if present) of each fragment must contain codec
-#'     private data in the AAC format ([AAC specification ISO/IEC
-#'     13818-7](https://www.iso.org/standard/43345.html)) or the [MS Wave
+#'   - The audio track (if present) of each fragment must contain codec
+#'     private data in the AAC format ([AAC specification
+#'     ISO/IEC 13818-7](https://www.iso.org/standard/43345.html)) or the
+#'     [MS Wave
 #'     format](http://www-mmsp.ece.mcgill.ca/Documents/AudioFormats/WAVE/WAVE.html).
 #' 
 #' You can monitor the amount of outgoing data by monitoring the
@@ -126,24 +128,26 @@ kinesisvideoarchivedmedia_get_clip <- function(StreamName = NULL, StreamARN = NU
 #' An Amazon Kinesis video stream has the following requirements for
 #' providing data through MPEG-DASH:
 #' 
-#' -   The media must contain h.264 or h.265 encoded video and, optionally,
+#'   - The media must contain h.264 or h.265 encoded video and, optionally,
 #'     AAC or G.711 encoded audio. Specifically, the codec ID of track 1
 #'     should be `V_MPEG/ISO/AVC` (for h.264) or V_MPEGH/ISO/HEVC (for
 #'     H.265). Optionally, the codec ID of track 2 should be `A_AAC` (for
 #'     AAC) or A_MS/ACM (for G.711).
 #' 
-#' -   Data retention must be greater than 0.
+#'   - Data retention must be greater than 0.
 #' 
-#' -   The video track of each fragment must contain codec private data in
+#'   - The video track of each fragment must contain codec private data in
 #'     the Advanced Video Coding (AVC) for H.264 format and HEVC for H.265
-#'     format. For more information, see [MPEG-4 specification ISO/IEC
-#'     14496-15](https://www.iso.org/standard/55980.html). For information
-#'     about adapting stream data to a given format, see [NAL Adaptation
+#'     format. For more information, see [MPEG-4 specification
+#'     ISO/IEC 14496-15](https://www.iso.org/standard/55980.html). For
+#'     information about adapting stream data to a given format, see [NAL
+#'     Adaptation
 #'     Flags](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/producer-reference-nal.html).
 #' 
-#' -   The audio track (if present) of each fragment must contain codec
-#'     private data in the AAC format ([AAC specification ISO/IEC
-#'     13818-7](https://www.iso.org/standard/43345.html)) or the [MS Wave
+#'   - The audio track (if present) of each fragment must contain codec
+#'     private data in the AAC format ([AAC specification
+#'     ISO/IEC 13818-7](https://www.iso.org/standard/43345.html)) or the
+#'     [MS Wave
 #'     format](http://www-mmsp.ece.mcgill.ca/Documents/AudioFormats/WAVE/WAVE.html).
 #' 
 #' The following procedure shows how to use MPEG-DASH with Kinesis Video
@@ -162,12 +166,12 @@ kinesisvideoarchivedmedia_get_clip <- function(StreamName = NULL, StreamARN = NU
 #'     returns an authenticated URL (that includes an encrypted session
 #'     token) for the session's MPEG-DASH *manifest* (the root resource
 #'     needed for streaming with MPEG-DASH).
-#' 
+#'     
 #'     Don't share or store this token where an unauthorized entity could
 #'     access it. The token provides access to the content of the stream.
 #'     Safeguard the token with the same measures that you would use with
 #'     your AWS credentials.
-#' 
+#'     
 #'     The media that is made available through the manifest consists only
 #'     of the requested stream, time range, and format. No other media data
 #'     (such as frames outside the requested window or alternate bitrates)
@@ -185,26 +189,26 @@ kinesisvideoarchivedmedia_get_clip <- function(StreamName = NULL, StreamARN = NU
 #' 4.  The media player receives the authenticated URL and requests stream
 #'     metadata and media data normally. When the media player requests
 #'     data, it calls the following actions:
-#' 
-#'     -   **GetDASHManifest:** Retrieves an MPEG DASH manifest, which
+#'     
+#'       - **GetDASHManifest:** Retrieves an MPEG DASH manifest, which
 #'         contains the metadata for the media that you want to playback.
-#' 
-#'     -   **GetMP4InitFragment:** Retrieves the MP4 initialization
+#'     
+#'       - **GetMP4InitFragment:** Retrieves the MP4 initialization
 #'         fragment. The media player typically loads the initialization
 #'         fragment before loading any media fragments. This fragment
 #'         contains the "`fytp`" and "`moov`" MP4 atoms, and the child
 #'         atoms that are needed to initialize the media player decoder.
-#' 
+#'         
 #'         The initialization fragment does not correspond to a fragment in
 #'         a Kinesis video stream. It contains only the codec private data
 #'         for the stream and respective track, which the media player
 #'         needs to decode the media frames.
-#' 
-#'     -   **GetMP4MediaFragment:** Retrieves MP4 media fragments. These
+#'     
+#'       - **GetMP4MediaFragment:** Retrieves MP4 media fragments. These
 #'         fragments contain the "`moof`" and "`mdat`" MP4 atoms and their
 #'         child atoms, containing the encoded fragment's media frames and
 #'         their timestamps.
-#' 
+#'         
 #'         After the first media fragment is made available in a streaming
 #'         session, any fragments that don't contain the same codec private
 #'         data cause an error to be returned when those different media
@@ -212,26 +216,26 @@ kinesisvideoarchivedmedia_get_clip <- function(StreamName = NULL, StreamARN = NU
 #'         not change between fragments in a session. This also means that
 #'         the session fails if the fragments in a stream change from
 #'         having only video to having both audio and video.
-#' 
+#'         
 #'         Data retrieved with this action is billable. See
 #'         [Pricing](https://aws.amazon.com/kinesis/video-streams/pricing/)
 #'         for details.
 #' 
 #' The following restrictions apply to MPEG-DASH sessions:
 #' 
-#' -   A streaming session URL should not be shared between players. The
+#'   - A streaming session URL should not be shared between players. The
 #'     service might throttle a session if multiple media players are
 #'     sharing it. For connection limits, see [Kinesis Video Streams
 #'     Limits](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/limits.html).
 #' 
-#' -   A Kinesis video stream can have a maximum of ten active MPEG-DASH
+#'   - A Kinesis video stream can have a maximum of ten active MPEG-DASH
 #'     streaming sessions. If a new session is created when the maximum
 #'     number of sessions is already active, the oldest (earliest created)
 #'     session is closed. The number of active `GetMedia` connections on a
 #'     Kinesis video stream does not count against this limit, and the
 #'     number of active MPEG-DASH sessions does not count against the
 #'     active `GetMedia` connection limit.
-#' 
+#'     
 #'     The maximum limits for active HLS and MPEG-DASH streaming sessions
 #'     are independent of each other.
 #' 
@@ -253,10 +257,10 @@ kinesisvideoarchivedmedia_get_clip <- function(StreamName = NULL, StreamARN = NU
 #' media API, in addition to the HTTP status code and the response body, it
 #' includes the following pieces of information:
 #' 
-#' -   `x-amz-ErrorType` HTTP header – contains a more specific error type
+#'   - `x-amz-ErrorType` HTTP header – contains a more specific error type
 #'     in addition to what the HTTP status code provides.
 #' 
-#' -   `x-amz-RequestId` HTTP header – if you want to report an issue to
+#'   - `x-amz-RequestId` HTTP header – if you want to report an issue to
 #'     AWS, the support team can better diagnose the problem if given the
 #'     Request Id.
 #' 
@@ -287,14 +291,14 @@ kinesisvideoarchivedmedia_get_clip <- function(StreamName = NULL, StreamARN = NU
 #' 
 #' Features of the three types of sessions include the following:
 #' 
-#' -   **`LIVE`** : For sessions of this type, the MPEG-DASH manifest is
+#'   - **`LIVE`** : For sessions of this type, the MPEG-DASH manifest is
 #'     continually updated with the latest fragments as they become
 #'     available. We recommend that the media player retrieve a new
 #'     manifest on a one-second interval. When this type of session is
 #'     played in a media player, the user interface typically displays a
 #'     "live" notification, with no scrubber control for choosing the
 #'     position in the playback window to display.
-#' 
+#'     
 #'     In `LIVE` mode, the newest available fragments are included in an
 #'     MPEG-DASH manifest, even if there is a gap between fragments (that
 #'     is, if a fragment is missing). A gap like this might cause a media
@@ -304,7 +308,7 @@ kinesisvideoarchivedmedia_get_clip <- function(StreamName = NULL, StreamARN = NU
 #'     available after a subsequent fragment is added to the manifest, the
 #'     older fragment is not added, and the gap is not filled.
 #' 
-#' -   **`LIVE_REPLAY`** : For sessions of this type, the MPEG-DASH
+#'   - **`LIVE_REPLAY`** : For sessions of this type, the MPEG-DASH
 #'     manifest is updated similarly to how it is updated for `LIVE` mode
 #'     except that it starts by including fragments from a given start
 #'     time. Instead of fragments being added as they are ingested,
@@ -317,7 +321,7 @@ kinesisvideoarchivedmedia_get_clip <- function(StreamName = NULL, StreamARN = NU
 #'     useful to stream previously archived media without being limited by
 #'     the 1,000 fragment limit in the `ON_DEMAND` mode.
 #' 
-#' -   **`ON_DEMAND`** : For sessions of this type, the MPEG-DASH manifest
+#'   - **`ON_DEMAND`** : For sessions of this type, the MPEG-DASH manifest
 #'     contains all the fragments for the session, up to the number that is
 #'     specified in `MaxMediaPlaylistFragmentResults`. The manifest must be
 #'     retrieved only once for each session. When this type of session is
@@ -345,10 +349,11 @@ kinesisvideoarchivedmedia_get_clip <- function(StreamName = NULL, StreamARN = NU
 #' the manifest file with the attribute name “kvs:ts”. A custom MPEG-DASH
 #' media player is necessary to leverage this custom attribute.
 #' 
-#' The default value is `NEVER`. When DASHFragmentSelector is
+#' The default value is `NEVER`. When <span>DASHFragmentSelector</span> is
 #' `SERVER_TIMESTAMP`, the timestamps will be the server start timestamps.
-#' Similarly, when DASHFragmentSelector is `PRODUCER_TIMESTAMP`, the
-#' timestamps will be the producer start timestamps.
+#' Similarly, when <span>DASHFragmentSelector</span> is
+#' `PRODUCER_TIMESTAMP`, the timestamps will be the producer start
+#' timestamps.
 #' @param DisplayFragmentNumber Fragments are identified in the manifest file based on their sequence
 #' number in the session. If DisplayFragmentNumber is set to `ALWAYS`, the
 #' Kinesis Video Streams fragment number is added to each S element in the
@@ -363,7 +368,7 @@ kinesisvideoarchivedmedia_get_clip <- function(StreamName = NULL, StreamARN = NU
 #' timestamps.
 #' 
 #' This parameter is required if `PlaybackMode` is `ON_DEMAND` or
-#' `LIVE_REPLAY`. This parameter is optional if PlaybackMode is`` `LIVE`.
+#' `LIVE_REPLAY`. This parameter is optional if PlaybackMode is`  ` `LIVE`.
 #' If `PlaybackMode` is `LIVE`, the `FragmentSelectorType` can be set, but
 #' the `TimestampRange` should not be set. If `PlaybackMode` is `ON_DEMAND`
 #' or `LIVE_REPLAY`, both `FragmentSelectorType` and `TimestampRange` must
@@ -462,29 +467,30 @@ kinesisvideoarchivedmedia_get_dash_streaming_session_url <- function(StreamName 
 #' An Amazon Kinesis video stream has the following requirements for
 #' providing data through HLS:
 #' 
-#' -   The media must contain h.264 or h.265 encoded video and, optionally,
+#'   - The media must contain h.264 or h.265 encoded video and, optionally,
 #'     AAC encoded audio. Specifically, the codec ID of track 1 should be
 #'     `V_MPEG/ISO/AVC` (for h.264) or `V_MPEG/ISO/HEVC` (for h.265).
 #'     Optionally, the codec ID of track 2 should be `A_AAC`.
 #' 
-#' -   Data retention must be greater than 0.
+#'   - Data retention must be greater than 0.
 #' 
-#' -   The video track of each fragment must contain codec private data in
+#'   - The video track of each fragment must contain codec private data in
 #'     the Advanced Video Coding (AVC) for H.264 format or HEVC for H.265
-#'     format ([MPEG-4 specification ISO/IEC
-#'     14496-15](https://www.iso.org/standard/55980.html)). For information
-#'     about adapting stream data to a given format, see [NAL Adaptation
+#'     format ([MPEG-4 specification
+#'     ISO/IEC 14496-15](https://www.iso.org/standard/55980.html)). For
+#'     information about adapting stream data to a given format, see [NAL
+#'     Adaptation
 #'     Flags](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/producer-reference-nal.html).
 #' 
-#' -   The audio track (if present) of each fragment must contain codec
-#'     private data in the AAC format ([AAC specification ISO/IEC
-#'     13818-7](https://www.iso.org/standard/43345.html)).
+#'   - The audio track (if present) of each fragment must contain codec
+#'     private data in the AAC format ([AAC specification
+#'     ISO/IEC 13818-7](https://www.iso.org/standard/43345.html)).
 #' 
 #' Kinesis Video Streams HLS sessions contain fragments in the fragmented
 #' MPEG-4 form (also called fMP4 or CMAF) or the MPEG-2 form (also called
 #' TS chunks, which the HLS specification also supports). For more
 #' information about HLS fragment types, see the [HLS
-#' specification](https://tools.ietf.org/html/draft-pantos-http-live-streaming-23).
+#' specification](https://datatracker.ietf.org/doc/html/draft-pantos-http-live-streaming-23).
 #' 
 #' The following procedure shows how to use HLS with Kinesis Video Streams:
 #' 
@@ -501,12 +507,12 @@ kinesisvideoarchivedmedia_get_dash_streaming_session_url <- function(StreamName 
 #'     returns an authenticated URL (that includes an encrypted session
 #'     token) for the session's HLS *master playlist* (the root resource
 #'     needed for streaming with HLS).
-#' 
+#'     
 #'     Don't share or store this token where an unauthorized entity could
 #'     access it. The token provides access to the content of the stream.
 #'     Safeguard the token with the same measures that you would use with
 #'     your AWS credentials.
-#' 
+#'     
 #'     The media that is made available through the playlist consists only
 #'     of the requested stream, time range, and format. No other media data
 #'     (such as frames outside the requested window or alternate bitrates)
@@ -524,13 +530,13 @@ kinesisvideoarchivedmedia_get_dash_streaming_session_url <- function(StreamName 
 #' 4.  The media player receives the authenticated URL and requests stream
 #'     metadata and media data normally. When the media player requests
 #'     data, it calls the following actions:
-#' 
-#'     -   **GetHLSMasterPlaylist:** Retrieves an HLS master playlist,
+#'     
+#'       - **GetHLSMasterPlaylist:** Retrieves an HLS master playlist,
 #'         which contains a URL for the `GetHLSMediaPlaylist` action for
 #'         each track, and additional metadata for the media player,
 #'         including estimated bitrate and resolution.
-#' 
-#'     -   **GetHLSMediaPlaylist:** Retrieves an HLS media playlist, which
+#'     
+#'       - **GetHLSMediaPlaylist:** Retrieves an HLS media playlist, which
 #'         contains a URL to access the MP4 initialization fragment with
 #'         the `GetMP4InitFragment` action, and URLs to access the MP4
 #'         media fragments with the `GetMP4MediaFragment` actions. The HLS
@@ -542,23 +548,23 @@ kinesisvideoarchivedmedia_get_dash_streaming_session_url <- function(StreamName 
 #'         sessions with a `PlaybackType` of `LIVE`. There is a distinct
 #'         HLS media playlist for the video track and the audio track (if
 #'         applicable) that contains MP4 media URLs for the specific track.
-#' 
-#'     -   **GetMP4InitFragment:** Retrieves the MP4 initialization
+#'     
+#'       - **GetMP4InitFragment:** Retrieves the MP4 initialization
 #'         fragment. The media player typically loads the initialization
 #'         fragment before loading any media fragments. This fragment
 #'         contains the "`fytp`" and "`moov`" MP4 atoms, and the child
 #'         atoms that are needed to initialize the media player decoder.
-#' 
+#'         
 #'         The initialization fragment does not correspond to a fragment in
 #'         a Kinesis video stream. It contains only the codec private data
 #'         for the stream and respective track, which the media player
 #'         needs to decode the media frames.
-#' 
-#'     -   **GetMP4MediaFragment:** Retrieves MP4 media fragments. These
+#'     
+#'       - **GetMP4MediaFragment:** Retrieves MP4 media fragments. These
 #'         fragments contain the "`moof`" and "`mdat`" MP4 atoms and their
 #'         child atoms, containing the encoded fragment's media frames and
 #'         their timestamps.
-#' 
+#'         
 #'         After the first media fragment is made available in a streaming
 #'         session, any fragments that don't contain the same codec private
 #'         data cause an error to be returned when those different media
@@ -566,37 +572,37 @@ kinesisvideoarchivedmedia_get_dash_streaming_session_url <- function(StreamName 
 #'         not change between fragments in a session. This also means that
 #'         the session fails if the fragments in a stream change from
 #'         having only video to having both audio and video.
-#' 
+#'         
 #'         Data retrieved with this action is billable. See
 #'         [Pricing](https://aws.amazon.com/kinesis/video-streams/pricing/)
 #'         for details.
-#' 
-#'     -   **GetTSFragment:** Retrieves MPEG TS fragments containing both
+#'     
+#'       - **GetTSFragment:** Retrieves MPEG TS fragments containing both
 #'         initialization and media data for all tracks in the stream.
-#' 
+#'         
 #'         If the `ContainerFormat` is `MPEG_TS`, this API is used instead
 #'         of `GetMP4InitFragment` and `GetMP4MediaFragment` to retrieve
 #'         stream media.
-#' 
+#'         
 #'         Data retrieved with this action is billable. For more
 #'         information, see [Kinesis Video Streams
 #'         pricing](https://aws.amazon.com/kinesis/video-streams/pricing/).
 #' 
 #' The following restrictions apply to HLS sessions:
 #' 
-#' -   A streaming session URL should not be shared between players. The
+#'   - A streaming session URL should not be shared between players. The
 #'     service might throttle a session if multiple media players are
 #'     sharing it. For connection limits, see [Kinesis Video Streams
 #'     Limits](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/limits.html).
 #' 
-#' -   A Kinesis video stream can have a maximum of ten active HLS
+#'   - A Kinesis video stream can have a maximum of ten active HLS
 #'     streaming sessions. If a new session is created when the maximum
 #'     number of sessions is already active, the oldest (earliest created)
 #'     session is closed. The number of active `GetMedia` connections on a
 #'     Kinesis video stream does not count against this limit, and the
 #'     number of active HLS sessions does not count against the active
 #'     `GetMedia` connection limit.
-#' 
+#'     
 #'     The maximum limits for active HLS and MPEG-DASH streaming sessions
 #'     are independent of each other.
 #' 
@@ -618,10 +624,10 @@ kinesisvideoarchivedmedia_get_dash_streaming_session_url <- function(StreamName 
 #' media API, in addition to the HTTP status code and the response body, it
 #' includes the following pieces of information:
 #' 
-#' -   `x-amz-ErrorType` HTTP header – contains a more specific error type
+#'   - `x-amz-ErrorType` HTTP header – contains a more specific error type
 #'     in addition to what the HTTP status code provides.
 #' 
-#' -   `x-amz-RequestId` HTTP header – if you want to report an issue to
+#'   - `x-amz-RequestId` HTTP header – if you want to report an issue to
 #'     AWS, the support team can better diagnose the problem if given the
 #'     Request Id.
 #' 
@@ -653,14 +659,14 @@ kinesisvideoarchivedmedia_get_dash_streaming_session_url <- function(StreamName 
 #' 
 #' Features of the three types of sessions include the following:
 #' 
-#' -   **`LIVE`** : For sessions of this type, the HLS media playlist is
+#'   - **`LIVE`** : For sessions of this type, the HLS media playlist is
 #'     continually updated with the latest fragments as they become
 #'     available. We recommend that the media player retrieve a new
 #'     playlist on a one-second interval. When this type of session is
 #'     played in a media player, the user interface typically displays a
 #'     "live" notification, with no scrubber control for choosing the
 #'     position in the playback window to display.
-#' 
+#'     
 #'     In `LIVE` mode, the newest available fragments are included in an
 #'     HLS media playlist, even if there is a gap between fragments (that
 #'     is, if a fragment is missing). A gap like this might cause a media
@@ -670,7 +676,7 @@ kinesisvideoarchivedmedia_get_dash_streaming_session_url <- function(StreamName 
 #'     available after a subsequent fragment is added to the playlist, the
 #'     older fragment is not added, and the gap is not filled.
 #' 
-#' -   **`LIVE_REPLAY`** : For sessions of this type, the HLS media
+#'   - **`LIVE_REPLAY`** : For sessions of this type, the HLS media
 #'     playlist is updated similarly to how it is updated for `LIVE` mode
 #'     except that it starts by including fragments from a given start
 #'     time. Instead of fragments being added as they are ingested,
@@ -683,7 +689,7 @@ kinesisvideoarchivedmedia_get_dash_streaming_session_url <- function(StreamName 
 #'     is also useful to stream previously archived media without being
 #'     limited by the 1,000 fragment limit in the `ON_DEMAND` mode.
 #' 
-#' -   **`ON_DEMAND`** : For sessions of this type, the HLS media playlist
+#'   - **`ON_DEMAND`** : For sessions of this type, the HLS media playlist
 #'     contains all the fragments for the session, up to the number that is
 #'     specified in `MaxMediaPlaylistFragmentResults`. The playlist must be
 #'     retrieved only once for each session. When this type of session is
@@ -704,7 +710,7 @@ kinesisvideoarchivedmedia_get_dash_streaming_session_url <- function(StreamName 
 #' timestamps.
 #' 
 #' This parameter is required if `PlaybackMode` is `ON_DEMAND` or
-#' `LIVE_REPLAY`. This parameter is optional if PlaybackMode is`` `LIVE`.
+#' `LIVE_REPLAY`. This parameter is optional if PlaybackMode is`  ` `LIVE`.
 #' If `PlaybackMode` is `LIVE`, the `FragmentSelectorType` can be set, but
 #' the `TimestampRange` should not be set. If `PlaybackMode` is `ON_DEMAND`
 #' or `LIVE_REPLAY`, both `FragmentSelectorType` and `TimestampRange` must
@@ -724,33 +730,34 @@ kinesisvideoarchivedmedia_get_dash_streaming_session_url <- function(StreamName 
 #' 
 #' Media players typically build a timeline of media content to play, based
 #' on the timestamps of each fragment. This means that if there is any
-#' overlap or gap between fragments (as is typical if HLSFragmentSelector
-#' is set to `SERVER_TIMESTAMP`), the media player timeline will also have
-#' small gaps between fragments in some places, and will overwrite frames
-#' in other places. Gaps in the media player timeline can cause playback to
-#' stall and overlaps can cause playback to be jittery. When there are
-#' discontinuity flags between fragments, the media player is expected to
-#' reset the timeline, resulting in the next fragment being played
-#' immediately after the previous fragment.
+#' overlap or gap between fragments (as is typical if
+#' <span>HLSFragmentSelector</span> is set to `SERVER_TIMESTAMP`), the
+#' media player timeline will also have small gaps between fragments in
+#' some places, and will overwrite frames in other places. Gaps in the
+#' media player timeline can cause playback to stall and overlaps can cause
+#' playback to be jittery. When there are discontinuity flags between
+#' fragments, the media player is expected to reset the timeline, resulting
+#' in the next fragment being played immediately after the previous
+#' fragment.
 #' 
 #' The following modes are supported:
 #' 
-#' -   `ALWAYS`: a discontinuity marker is placed between every fragment in
+#'   - `ALWAYS`: a discontinuity marker is placed between every fragment in
 #'     the HLS media playlist. It is recommended to use a value of `ALWAYS`
 #'     if the fragment timestamps are not accurate.
 #' 
-#' -   `NEVER`: no discontinuity markers are placed anywhere. It is
+#'   - `NEVER`: no discontinuity markers are placed anywhere. It is
 #'     recommended to use a value of `NEVER` to ensure the media player
 #'     timeline most accurately maps to the producer timestamps.
 #' 
-#' -   `ON_DISCONTIUNITY`: a discontinuity marker is placed between
+#'   - `ON_DISCONTIUNITY`: a discontinuity marker is placed between
 #'     fragments that have a gap or overlap of more than 50 milliseconds.
 #'     For most playback scenarios, it is recommended to use a value of
 #'     `ON_DISCONTINUITY` so that the media player timeline is only reset
 #'     when there is a significant issue with the media timeline (e.g. a
 #'     missing fragment).
 #' 
-#' The default is `ALWAYS` when HLSFragmentSelector is set to
+#' The default is `ALWAYS` when <span>HLSFragmentSelector</span> is set to
 #' `SERVER_TIMESTAMP`, and `NEVER` when it is set to `PRODUCER_TIMESTAMP`.
 #' @param DisplayFragmentTimestamp Specifies when the fragment start timestamps should be included in the
 #' HLS media playlist. Typically, media players report the playhead
@@ -761,10 +768,11 @@ kinesisvideoarchivedmedia_get_dash_streaming_session_url <- function(StreamName 
 #' for creating a playback experience that shows viewers the wall-clock
 #' time of the media.
 #' 
-#' The default is `NEVER`. When HLSFragmentSelector is `SERVER_TIMESTAMP`,
-#' the timestamps will be the server start timestamps. Similarly, when
-#' HLSFragmentSelector is `PRODUCER_TIMESTAMP`, the timestamps will be the
-#' producer start timestamps.
+#' The default is `NEVER`. When <span>HLSFragmentSelector</span> is
+#' `SERVER_TIMESTAMP`, the timestamps will be the server start timestamps.
+#' Similarly, when <span>HLSFragmentSelector</span> is
+#' `PRODUCER_TIMESTAMP`, the timestamps will be the producer start
+#' timestamps.
 #' @param Expires The time in seconds until the requested session expires. This value can
 #' be between 300 (5 minutes) and 43200 (12 hours).
 #' 
@@ -864,11 +872,11 @@ kinesisvideoarchivedmedia_get_hls_streaming_session_url <- function(StreamName =
 #' [`get_media_for_fragment_list`][kinesisvideoarchivedmedia_get_media_for_fragment_list]
 #' API:
 #' 
-#' -   A client can call
+#'   - A client can call
 #'     [`get_media_for_fragment_list`][kinesisvideoarchivedmedia_get_media_for_fragment_list]
 #'     up to five times per second per stream.
 #' 
-#' -   Kinesis Video Streams sends media data at a rate of up to 25
+#'   - Kinesis Video Streams sends media data at a rate of up to 25
 #'     megabytes per second (or 200 megabits per second) during a
 #'     [`get_media_for_fragment_list`][kinesisvideoarchivedmedia_get_media_for_fragment_list]
 #'     session.
@@ -877,10 +885,10 @@ kinesisvideoarchivedmedia_get_hls_streaming_session_url <- function(StreamName =
 #' media API, in addition to the HTTP status code and the response body, it
 #' includes the following pieces of information:
 #' 
-#' -   `x-amz-ErrorType` HTTP header – contains a more specific error type
+#'   - `x-amz-ErrorType` HTTP header – contains a more specific error type
 #'     in addition to what the HTTP status code provides.
 #' 
-#' -   `x-amz-RequestId` HTTP header – if you want to report an issue to
+#'   - `x-amz-RequestId` HTTP header – if you want to report an issue to
 #'     AWS, the support team can better diagnose the problem if given the
 #'     Request Id.
 #' 
@@ -946,8 +954,8 @@ kinesisvideoarchivedmedia_get_media_for_fragment_list <- function(StreamName, Fr
 #' timestamp range within the archived data
 #'
 #' @description
-#' Returns a list of Fragment objects from the specified stream and
-#' timestamp range within the archived data.
+#' Returns a list of <span>Fragment</span> objects from the specified
+#' stream and timestamp range within the archived data.
 #' 
 #' Listing fragments is eventually consistent. This means that even if the
 #' producer receives an acknowledgment that a fragment is persisted, the
@@ -964,10 +972,10 @@ kinesisvideoarchivedmedia_get_media_for_fragment_list <- function(StreamName, Fr
 #' media API, in addition to the HTTP status code and the response body, it
 #' includes the following pieces of information:
 #' 
-#' -   `x-amz-ErrorType` HTTP header – contains a more specific error type
+#'   - `x-amz-ErrorType` HTTP header – contains a more specific error type
 #'     in addition to what the HTTP status code provides.
 #' 
-#' -   `x-amz-RequestId` HTTP header – if you want to report an issue to
+#'   - `x-amz-RequestId` HTTP header – if you want to report an issue to
 #'     AWS, the support team can better diagnose the problem if given the
 #'     Request Id.
 #' 
@@ -988,10 +996,11 @@ kinesisvideoarchivedmedia_get_media_for_fragment_list <- function(StreamName, Fr
 #' @param StreamName &#91;required&#93; The name of the stream from which to retrieve a fragment list.
 #' @param MaxResults The total number of fragments to return. If the total number of
 #' fragments available is more than the value specified in `max-results`,
-#' then a ListFragmentsOutput$NextToken is provided in the output that you
-#' can use to resume pagination.
+#' then a <span>ListFragmentsOutput$NextToken</span> is provided in the
+#' output that you can use to resume pagination.
 #' @param NextToken A token to specify where to start paginating. This is the
-#' ListFragmentsOutput$NextToken from a previously truncated response.
+#' <span>ListFragmentsOutput$NextToken</span> from a previously truncated
+#' response.
 #' @param FragmentSelector Describes the timestamp range and timestamp origin for the range of
 #' fragments to return.
 #'

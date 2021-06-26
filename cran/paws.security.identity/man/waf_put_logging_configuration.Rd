@@ -2,7 +2,7 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_put_logging_configuration}
 \alias{waf_put_logging_configuration}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_put_logging_configuration(LoggingConfiguration)
 }
@@ -41,7 +41,7 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Associates a LoggingConfiguration with a specified web ACL.
+Associates a <span>LoggingConfiguration</span> with a specified web ACL.
 
 You can access information about all traffic that AWS WAF inspects using
 the following steps:

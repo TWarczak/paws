@@ -41,10 +41,10 @@ NULL
 #' 
 #' Valid values for `Metric` are:
 #' 
-#' -   `db.load.avg` - a scaled representation of the number of active
+#'   - `db.load.avg` - a scaled representation of the number of active
 #'     sessions for the database engine.
 #' 
-#' -   `db.sampledload.avg` - the raw number of active sessions for the
+#'   - `db.sampledload.avg` - the raw number of active sessions for the
 #'     database engine.
 #' 
 #' If the number of active sessions is less than an internal Performance
@@ -58,15 +58,15 @@ NULL
 #' Performance Insights. A period can be as short as one second, or as long
 #' as one day (86400 seconds). Valid values are:
 #' 
-#' -   `1` (one second)
+#'   - `1` (one second)
 #' 
-#' -   `60` (one minute)
+#'   - `60` (one minute)
 #' 
-#' -   `300` (five minutes)
+#'   - `300` (five minutes)
 #' 
-#' -   `3600` (one hour)
+#'   - `3600` (one hour)
 #' 
-#' -   `86400` (twenty-four hours)
+#'   - `86400` (twenty-four hours)
 #' 
 #' If you don't specify `PeriodInSeconds`, then Performance Insights
 #' chooses a value for you, with a goal of returning roughly 100-200 data
@@ -80,10 +80,10 @@ NULL
 #' to further subdivide the partition keys in the response.
 #' @param Filter One or more filters to apply in the request. Restrictions:
 #' 
-#' -   Any number of filters by the same dimension, as specified in the
+#'   - Any number of filters by the same dimension, as specified in the
 #'     `GroupBy` or `Partition` parameters.
 #' 
-#' -   A single filter for any other dimension in this dimension group.
+#'   - A single filter for any other dimension in this dimension group.
 #' @param MaxResults The maximum number of items to return in the response. If more items
 #' exist than the specified `MaxRecords` value, a pagination token is
 #' included in the response so that the remaining results can be retrieved.
@@ -218,15 +218,15 @@ pi_describe_dimension_keys <- function(ServiceType, Identifier, StartTime, EndTi
 #' Performance Insights. A period can be as short as one second, or as long
 #' as one day (86400 seconds). Valid values are:
 #' 
-#' -   `1` (one second)
+#'   - `1` (one second)
 #' 
-#' -   `60` (one minute)
+#'   - `60` (one minute)
 #' 
-#' -   `300` (five minutes)
+#'   - `300` (five minutes)
 #' 
-#' -   `3600` (one hour)
+#'   - `3600` (one hour)
 #' 
-#' -   `86400` (twenty-four hours)
+#'   - `86400` (twenty-four hours)
 #' 
 #' If you don't specify `PeriodInSeconds`, then Performance Insights will
 #' choose a value for you, with a goal of returning roughly 100-200 data

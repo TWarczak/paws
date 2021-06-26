@@ -8,7 +8,8 @@ apigateway_update_documentation_version(restApiId, documentationVersion,
   patchOperations)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi..}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>..}
 
 \item{documentationVersion}{[required] [Required] The version identifier of the to-be-updated documentation
 version.}

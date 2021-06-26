@@ -27,7 +27,7 @@ Sunday. The default is \code{monthly}.}
 
 \item{BreachAction}{The action that Amazon Redshift takes when the limit is reached. The
 default is log. For more information about this parameter, see
-UsageLimit.}
+<span>UsageLimit</span>.}
 
 \item{Tags}{A list of tag instances.}
 }

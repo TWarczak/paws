@@ -7,9 +7,10 @@
 apigateway_get_authorizer(restApiId, authorizerId)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
-\item{authorizerId}{[required] [Required] The identifier of the Authorizer resource.}
+\item{authorizerId}{[required] [Required] The identifier of the <span>Authorizer</span> resource.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -29,7 +30,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Describe an existing Authorizer resource.<div class="seeAlso">
+Describe an existing <span>Authorizer</span> resource.<div class="seeAlso">
 
 
 \href{https://docs.aws.amazon.com/cli/latest/reference/apigateway/get-authorizer.html}{AWS CLI}</div>

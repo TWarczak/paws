@@ -7,14 +7,14 @@
 apigateway_delete_vpc_link(vpcLinkId)
 }
 \arguments{
-\item{vpcLinkId}{[required] [Required] The identifier of the VpcLink. It is used in an Integration
-to reference this VpcLink.}
+\item{vpcLinkId}{[required] [Required] The identifier of the <span>VpcLink</span>. It is used in
+an <span>Integration</span> to reference this <span>VpcLink</span>.}
 }
 \value{
 An empty list.
 }
 \description{
-Deletes an existing VpcLink of a specified identifier.
+Deletes an existing <span>VpcLink</span> of a specified identifier.
 }
 \section{Request syntax}{
 \preformatted{svc$delete_vpc_link(

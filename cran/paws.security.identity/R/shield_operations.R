@@ -69,11 +69,12 @@ shield_associate_drt_log_bucket <- function(LogBucket) {
 #' replace the existing `RoleArn`.
 #' 
 #' Prior to making the [`associate_drt_role`][shield_associate_drt_role]
-#' request, you must attach the AWSShieldDRTAccessPolicy managed policy to
-#' the role you will specify in the request. For more information see
-#' Attaching and Detaching IAM Policies. The role must also trust the
-#' service principal ` drt.shield.amazonaws.com`. For more information, see
-#' [IAM JSON Policy Elements:
+#' request, you must attach the <span>AWSShieldDRTAccessPolicy</span>
+#' managed policy to the role you will specify in the request. For more
+#' information see <span>Attaching and Detaching IAM Policies</span>. The
+#' role must also trust the service principal ` 
+#' drt.shield.amazonaws.com `. For more information, see [IAM JSON Policy
+#' Elements:
 #' Principal](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html).
 #' 
 #' The DRT will have access only to your AWS WAF and Shield resources. By
@@ -101,9 +102,9 @@ shield_associate_drt_log_bucket <- function(LogBucket) {
 #' your AWS account.
 #' 
 #' Prior to making the [`associate_drt_role`][shield_associate_drt_role]
-#' request, you must attach the AWSShieldDRTAccessPolicy managed policy to
-#' this role. For more information see Attaching and Detaching IAM
-#' Policies.
+#' request, you must attach the <span>AWSShieldDRTAccessPolicy</span>
+#' managed policy to this role. For more information see <span>Attaching
+#' and Detaching IAM Policies</span>.
 #'
 #' @return
 #' An empty list.
@@ -154,8 +155,8 @@ shield_associate_drt_role <- function(RoleArn) {
 #' @usage
 #' shield_associate_health_check(ProtectionId, HealthCheckArn)
 #'
-#' @param ProtectionId &#91;required&#93; The unique identifier (ID) for the Protection object to add the health
-#' check association to.
+#' @param ProtectionId &#91;required&#93; The unique identifier (ID) for the <span>Protection</span> object to add
+#' the health check association to.
 #' @param HealthCheckArn &#91;required&#93; The Amazon Resource Name (ARN) of the health check to associate with the
 #' protection.
 #'
@@ -275,9 +276,8 @@ shield_associate_proactive_engagement_details <- function(EmergencyContactList) 
 #' 
 #' You can add protection to only a single resource with each
 #' CreateProtection request. If you want to add protection to multiple
-#' resources at once, use the [AWS WAF
-#' console](https://console.aws.amazon.com/waf/home). For more information
-#' see [Getting Started with AWS Shield
+#' resources at once, use the <span>AWS WAF console</span>. For more
+#' information see [Getting Started with AWS Shield
 #' Advanced](https://docs.aws.amazon.com/waf/latest/developerguide/getting-started-ddos.html)
 #' and [Add AWS Shield Advanced Protection to more AWS
 #' Resources](https://docs.aws.amazon.com/waf/latest/developerguide/configure-new-protection.html).
@@ -290,22 +290,26 @@ shield_associate_proactive_engagement_details <- function(EmergencyContactList) 
 #' 
 #' The ARN should be in one of the following formats:
 #' 
-#' -   For an Application Load Balancer:
-#'     `arn:aws:elasticloadbalancing:region:account-id:loadbalancer/app/load-balancer-name/load-balancer-id `
+#'   - For an Application Load Balancer:
+#'     ` arn:aws:elasticloadbalancing:region:account-id:loadbalancer/app/load-balancer-name/load-balancer-id
+#'      `
 #' 
-#' -   For an Elastic Load Balancer (Classic Load Balancer):
-#'     `arn:aws:elasticloadbalancing:region:account-id:loadbalancer/load-balancer-name `
+#'   - For an Elastic Load Balancer (Classic Load Balancer):
+#'     ` arn:aws:elasticloadbalancing:region:account-id:loadbalancer/load-balancer-name
+#'      `
 #' 
-#' -   For an AWS CloudFront distribution:
-#'     `arn:aws:cloudfront::account-id:distribution/distribution-id `
+#'   - For an AWS CloudFront distribution:
+#'     ` arn:aws:cloudfront::account-id:distribution/distribution-id  `
 #' 
-#' -   For an AWS Global Accelerator accelerator:
-#'     `arn:aws:globalaccelerator::account-id:accelerator/accelerator-id `
+#'   - For an AWS Global Accelerator accelerator:
+#'     ` arn:aws:globalaccelerator::account-id:accelerator/accelerator-id
+#'      `
 #' 
-#' -   For Amazon Route 53: `arn:aws:route53:::hostedzone/hosted-zone-id `
+#'   - For Amazon Route 53: ` arn:aws:route53:::hostedzone/hosted-zone-id
+#'      `
 #' 
-#' -   For an Elastic IP address:
-#'     `arn:aws:ec2:region:account-id:eip-allocation/allocation-id `
+#'   - For an Elastic IP address:
+#'     ` arn:aws:ec2:region:account-id:eip-allocation/allocation-id  `
 #'
 #' @return
 #' A list with the following syntax:
@@ -361,15 +365,15 @@ shield_create_protection <- function(Name, ResourceArn) {
 #' @param Aggregation &#91;required&#93; Defines how AWS Shield combines resource data for the group in order to
 #' detect, mitigate, and report events.
 #' 
-#' -   Sum - Use the total traffic across the group. This is a good choice
+#'   - Sum - Use the total traffic across the group. This is a good choice
 #'     for most cases. Examples include Elastic IP addresses for EC2
 #'     instances that scale manually or automatically.
 #' 
-#' -   Mean - Use the average of the traffic across the group. This is a
+#'   - Mean - Use the average of the traffic across the group. This is a
 #'     good choice for resources that share traffic uniformly. Examples
 #'     include accelerators and load balancers.
 #' 
-#' -   Max - Use the highest traffic from each resource. This is useful for
+#'   - Max - Use the highest traffic from each resource. This is useful for
 #'     resources that don't share traffic and for resources that share that
 #'     traffic in a non-uniform way. Examples include CloudFront
 #'     distributions and origin resources for CloudFront distributions.
@@ -466,12 +470,13 @@ shield_create_subscription <- function() {
 #' Deletes an AWS Shield Advanced Protection
 #'
 #' @description
-#' Deletes an AWS Shield Advanced Protection.
+#' Deletes an AWS Shield Advanced <span>Protection</span>.
 #'
 #' @usage
 #' shield_delete_protection(ProtectionId)
 #'
-#' @param ProtectionId &#91;required&#93; The unique identifier (ID) for the Protection object to be deleted.
+#' @param ProtectionId &#91;required&#93; The unique identifier (ID) for the <span>Protection</span> object to be
+#' deleted.
 #'
 #' @return
 #' An empty list.
@@ -711,8 +716,8 @@ shield_describe_attack <- function(AttackId) {
 #' The operation returns data for the time range of midnight UTC, one year
 #' ago, to midnight UTC, today. For example, if the current time is
 #' `2020-10-26 15:39:32 PDT`, equal to `2020-10-26 22:39:32 UTC`, then the
-#' time range for the attack data returned is from
-#' `2019-10-26 00:00:00 UTC` to `2020-10-26 00:00:00 UTC`.
+#' time range for the attack data returned is from `2019-10-26 00:00:00
+#' UTC` to `2020-10-26 00:00:00 UTC`.
 #' 
 #' The time range indicates the period covered by the attack statistics
 #' data items.
@@ -878,17 +883,17 @@ shield_describe_emergency_contact_settings <- function() {
 #' Lists the details of a Protection object
 #'
 #' @description
-#' Lists the details of a Protection object.
+#' Lists the details of a <span>Protection</span> object.
 #'
 #' @usage
 #' shield_describe_protection(ProtectionId, ResourceArn)
 #'
-#' @param ProtectionId The unique identifier (ID) for the Protection object that is described.
-#' When submitting the [`describe_protection`][shield_describe_protection]
-#' request you must provide either the `ResourceArn` or the `ProtectionID`,
-#' but not both.
-#' @param ResourceArn The ARN (Amazon Resource Name) of the AWS resource for the Protection
-#' object that is described. When submitting the
+#' @param ProtectionId The unique identifier (ID) for the <span>Protection</span> object that
+#' is described. When submitting the
+#' [`describe_protection`][shield_describe_protection] request you must
+#' provide either the `ResourceArn` or the `ProtectionID`, but not both.
+#' @param ResourceArn The ARN (Amazon Resource Name) of the AWS resource for the
+#' <span>Protection</span> object that is described. When submitting the
 #' [`describe_protection`][shield_describe_protection] request you must
 #' provide either the `ResourceArn` or the `ProtectionID`, but not both.
 #'
@@ -1226,8 +1231,8 @@ shield_disassociate_drt_role <- function() {
 #' @usage
 #' shield_disassociate_health_check(ProtectionId, HealthCheckArn)
 #'
-#' @param ProtectionId &#91;required&#93; The unique identifier (ID) for the Protection object to remove the
-#' health check association from.
+#' @param ProtectionId &#91;required&#93; The unique identifier (ID) for the <span>Protection</span> object to
+#' remove the health check association from.
 #' @param HealthCheckArn &#91;required&#93; The Amazon Resource Name (ARN) of the health check that is associated
 #' with the protection.
 #'
@@ -1370,8 +1375,8 @@ shield_get_subscription_state <- function() {
 #' is allowed.
 #' @param NextToken The `ListAttacksRequest.NextMarker` value from a previous call to
 #' `ListAttacksRequest`. Pass null if this is the first call.
-#' @param MaxResults The maximum number of AttackSummary objects to return. If you leave this
-#' blank, Shield Advanced returns the first 20 results.
+#' @param MaxResults The maximum number of <span>AttackSummary</span> objects to return. If
+#' you leave this blank, Shield Advanced returns the first 20 results.
 #' 
 #' This is a maximum value. Shield Advanced might return the results in
 #' smaller batches. That is, the number of objects returned could be less
@@ -1455,7 +1460,7 @@ shield_list_attacks <- function(ResourceArns = NULL, StartTime = NULL, EndTime =
 #' Retrieves the ProtectionGroup objects for the account
 #'
 #' @description
-#' Retrieves the ProtectionGroup objects for the account.
+#' Retrieves the <span>ProtectionGroup</span> objects for the account.
 #'
 #' @usage
 #' shield_list_protection_groups(NextToken, MaxResults)
@@ -1463,8 +1468,8 @@ shield_list_attacks <- function(ResourceArns = NULL, StartTime = NULL, EndTime =
 #' @param NextToken The next token value from a previous call to
 #' [`list_protection_groups`][shield_list_protection_groups]. Pass null if
 #' this is the first call.
-#' @param MaxResults The maximum number of ProtectionGroup objects to return. If you leave
-#' this blank, Shield Advanced returns the first 20 results.
+#' @param MaxResults The maximum number of <span>ProtectionGroup</span> objects to return. If
+#' you leave this blank, Shield Advanced returns the first 20 results.
 #' 
 #' This is a maximum value. Shield Advanced might return the results in
 #' smaller batches. That is, the number of objects returned could be less
@@ -1523,7 +1528,7 @@ shield_list_protection_groups <- function(NextToken = NULL, MaxResults = NULL) {
 #' Lists all Protection objects for the account
 #'
 #' @description
-#' Lists all Protection objects for the account.
+#' Lists all <span>Protection</span> objects for the account.
 #'
 #' @usage
 #' shield_list_protections(NextToken, MaxResults)
@@ -1531,8 +1536,8 @@ shield_list_protection_groups <- function(NextToken = NULL, MaxResults = NULL) {
 #' @param NextToken The `ListProtectionsRequest.NextToken` value from a previous call to
 #' [`list_protections`][shield_list_protections]. Pass null if this is the
 #' first call.
-#' @param MaxResults The maximum number of Protection objects to return. If you leave this
-#' blank, Shield Advanced returns the first 20 results.
+#' @param MaxResults The maximum number of <span>Protection</span> objects to return. If you
+#' leave this blank, Shield Advanced returns the first 20 results.
 #' 
 #' This is a maximum value. Shield Advanced might return the results in
 #' smaller batches. That is, the number of objects returned could be less
@@ -1727,15 +1732,15 @@ shield_update_emergency_contact_settings <- function(EmergencyContactList = NULL
 #' @param Aggregation &#91;required&#93; Defines how AWS Shield combines resource data for the group in order to
 #' detect, mitigate, and report events.
 #' 
-#' -   Sum - Use the total traffic across the group. This is a good choice
+#'   - Sum - Use the total traffic across the group. This is a good choice
 #'     for most cases. Examples include Elastic IP addresses for EC2
 #'     instances that scale manually or automatically.
 #' 
-#' -   Mean - Use the average of the traffic across the group. This is a
+#'   - Mean - Use the average of the traffic across the group. This is a
 #'     good choice for resources that share traffic uniformly. Examples
 #'     include accelerators and load balancers.
 #' 
-#' -   Max - Use the highest traffic from each resource. This is useful for
+#'   - Max - Use the highest traffic from each resource. This is useful for
 #'     resources that don't share traffic and for resources that share that
 #'     traffic in a non-uniform way. Examples include CloudFront
 #'     distributions and origin resources for CloudFront distributions.

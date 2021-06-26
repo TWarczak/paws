@@ -50,13 +50,12 @@ not subject to the preferred maintenance window. However, there are two
 ways in which parameter updates are applied: \code{dynamic} or
 \code{pending-reboot}. Parameters marked with a \code{dynamic} apply type are
 applied immediately. Parameters marked with a \code{pending-reboot} apply
-type are applied only after the database is rebooted using the
-\verb{reboot relational database} operation.
+type are applied only after the database is rebooted using the \verb{reboot relational database} operation.
 
 The \verb{update relational database parameters} operation supports tag-based
 access control via resource tags applied to the resource identified by
-relationalDatabaseName. For more information, see the Lightsail Dev
-Guide.
+relationalDatabaseName. For more information, see the <span>Lightsail
+Dev Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$update_relational_database_parameters(

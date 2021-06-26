@@ -7,15 +7,17 @@
 apigateway_delete_request_validator(restApiId, requestValidatorId)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
-\item{requestValidatorId}{[required] [Required] The identifier of the RequestValidator to be deleted.}
+\item{requestValidatorId}{[required] [Required] The identifier of the <span>RequestValidator</span> to be
+deleted.}
 }
 \value{
 An empty list.
 }
 \description{
-Deletes a RequestValidator of a given RestApi.
+Deletes a <span>RequestValidator</span> of a given <span>RestApi</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$delete_request_validator(

@@ -36,7 +36,7 @@ pipe), for example, \code{"/folder1|/folder2"}.}
 
 \item{Schedule}{Specifies a schedule used to periodically transfer files from a source
 to a destination location. The schedule should be specified in UTC time.
-For more information, see task-scheduling.}
+For more information, see <span>task-scheduling</span>.}
 
 \item{Tags}{The key-value pair that represents the tag that you want to add to the
 resource. The value can be an empty string.}

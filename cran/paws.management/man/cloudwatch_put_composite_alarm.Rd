@@ -2,7 +2,7 @@
 % Please edit documentation in R/cloudwatch_operations.R
 \name{cloudwatch_put_composite_alarm}
 \alias{cloudwatch_put_composite_alarm}
-\title{Creates or updates a composite alarm}
+\title{Creates or updates a \emph{composite alarm}}
 \usage{
 cloudwatch_put_composite_alarm(ActionsEnabled, AlarmActions,
   AlarmDescription, AlarmName, AlarmRule, InsufficientDataActions,
@@ -64,13 +64,12 @@ specifies that the alarm goes to ALARM state if
 CPUUtilizationTooHigh is in ALARM state and DeploymentInProgress is
 not in ALARM state. This example reduces alarm noise during a known
 deployment window.
-\item \verb{(ALARM(CPUUtilizationTooHigh) OR ALARM(DiskReadOpsTooHigh)) AND OK(NetworkOutTooHigh)}
-goes into ALARM state if CPUUtilizationTooHigh OR DiskReadOpsTooHigh
-is in ALARM state, and if NetworkOutTooHigh is in OK state. This
-provides another example of using a composite alarm to prevent
-noise. This rule ensures that you are not notified with an alarm
-action on high CPU or disk usage if a known network problem is also
-occurring.
+\item \verb{(ALARM(CPUUtilizationTooHigh) OR ALARM(DiskReadOpsTooHigh)) AND OK(NetworkOutTooHigh)} goes into ALARM state if
+CPUUtilizationTooHigh OR DiskReadOpsTooHigh is in ALARM state, and
+if NetworkOutTooHigh is in OK state. This provides another example
+of using a composite alarm to prevent noise. This rule ensures that
+you are not notified with an alarm action on high CPU or disk usage
+if a known network problem is also occurring.
 }
 
 The \code{AlarmRule} can specify as many as 100 "children" alarms. The

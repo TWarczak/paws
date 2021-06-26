@@ -36,7 +36,7 @@ To create a cluster layer, set the \code{EcsClusterArn} attribute to the
 cluster's ARN.}
 
 \item{CloudWatchLogsConfiguration}{Specifies CloudWatch Logs configuration options for the layer. For more
-information, see CloudWatchLogsLogStream.}
+information, see <span>CloudWatchLogsLogStream</span>.}
 
 \item{CustomInstanceProfileArn}{The ARN of an IAM profile to be used for the layer's EC2 instances. For
 more information about IAM ARNs, see \href{https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html}{Using Identifiers}.}

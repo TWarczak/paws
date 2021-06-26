@@ -204,8 +204,7 @@ In order to call this API action, your IAM user account, group, or role
 must be configured with permission to call the
 \code{\link[=ssm_describe_association]{describe_association}} API action. If you
 don't have permission to call DescribeAssociation, then you receive the
-following error:
-\verb{An error occurred (AccessDeniedException) when calling the UpdateAssociation operation: User: <user_arn> is not authorized to perform: ssm:DescribeAssociation on resource: <resource_arn>}
+following error: \verb{An error occurred (AccessDeniedException) when calling the UpdateAssociation operation: User: <user_arn> is not authorized to perform: ssm:DescribeAssociation on resource: <resource_arn>}
 
 When you update an association, the association immediately runs against
 the specified targets.

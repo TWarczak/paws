@@ -10,9 +10,18 @@ iot_describe_endpoint(endpointType)
 \item{endpointType}{The endpoint type. Valid endpoint types include:
 \itemize{
 \item \code{iot:Data} - Returns a VeriSign signed data endpoint.
+}<!-- end list -->
+
+\itemize{
 \item \code{iot:Data-ATS} - Returns an ATS signed data endpoint.
+}<!-- end list -->
+
+\itemize{
 \item \code{iot:CredentialProvider} - Returns an AWS IoT credentials provider
 API endpoint.
+}<!-- end list -->
+
+\itemize{
 \item \code{iot:Jobs} - Returns an AWS IoT device management Jobs API endpoint.
 }
 

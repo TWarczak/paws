@@ -8,7 +8,7 @@ clouddirectory_delete_schema(SchemaArn)
 }
 \arguments{
 \item{SchemaArn}{[required] The Amazon Resource Name (ARN) of the development schema. For more
-information, see arns.}
+information, see <span>arns</span>.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

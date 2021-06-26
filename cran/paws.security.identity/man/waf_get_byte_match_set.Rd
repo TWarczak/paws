@@ -2,13 +2,13 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_get_byte_match_set}
 \alias{waf_get_byte_match_set}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_get_byte_match_set(ByteMatchSetId)
 }
 \arguments{
-\item{ByteMatchSetId}{[required] The \code{ByteMatchSetId} of the ByteMatchSet that you want to get.
-\code{ByteMatchSetId} is returned by
+\item{ByteMatchSetId}{[required] The \code{ByteMatchSetId} of the <span>ByteMatchSet</span> that you want to
+get. \code{ByteMatchSetId} is returned by
 \code{\link[=waf_create_byte_match_set]{create_byte_match_set}} and by
 \code{\link[=waf_list_byte_match_sets]{list_byte_match_sets}}.}
 }
@@ -42,7 +42,7 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Returns the ByteMatchSet specified by \code{ByteMatchSetId}.
+Returns the <span>ByteMatchSet</span> specified by \code{ByteMatchSetId}.
 }
 \section{Request syntax}{
 \preformatted{svc$get_byte_match_set(

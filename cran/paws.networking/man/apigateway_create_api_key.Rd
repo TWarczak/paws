@@ -8,11 +8,11 @@ apigateway_create_api_key(name, description, enabled,
   generateDistinctId, value, stageKeys, customerId, tags)
 }
 \arguments{
-\item{name}{The name of the ApiKey.}
+\item{name}{The name of the <span>ApiKey</span>.}
 
-\item{description}{The description of the ApiKey.}
+\item{description}{The description of the <span>ApiKey</span>.}
 
-\item{enabled}{Specifies whether the ApiKey can be used by callers.}
+\item{enabled}{Specifies whether the <span>ApiKey</span> can be used by callers.}
 
 \item{generateDistinctId}{Specifies whether (\code{true}) or not (\code{false}) the key identifier is
 distinct from the created API key value. This parameter is deprecated
@@ -54,7 +54,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Create an ApiKey resource.<div class="seeAlso">
+Create an <span>ApiKey</span> resource.<div class="seeAlso">
 
 
 \href{https://docs.aws.amazon.com/cli/latest/reference/apigateway/create-api-key.html}{AWS CLI}</div>

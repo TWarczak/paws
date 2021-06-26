@@ -8,11 +8,13 @@ apigateway_put_method_response(restApiId, resourceId, httpMethod,
   statusCode, responseParameters, responseModels)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
-\item{resourceId}{[required] [Required] The Resource identifier for the Method resource.}
+\item{resourceId}{[required] [Required] The <span>Resource</span> identifier for the
+<span>Method</span> resource.}
 
-\item{httpMethod}{[required] [Required] The HTTP verb of the Method resource.}
+\item{httpMethod}{[required] [Required] The HTTP verb of the <span>Method</span> resource.}
 
 \item{statusCode}{[required] [Required] The method response's status code.}
 
@@ -30,9 +32,9 @@ a JSON expression from the back-end response payload in the form of
 \verb{integration.response.body.\{JSON-expression\}}, where \code{JSON-expression}
 is a valid JSON expression without the \code{$} prefix.)}
 
-\item{responseModels}{Specifies the Model resources used for the response's content type.
-Response models are represented as a key/value map, with a content type
-as the key and a Model name as the value.}
+\item{responseModels}{Specifies the <span>Model</span> resources used for the response's
+content type. Response models are represented as a key/value map, with a
+content type as the key and a <span>Model</span> name as the value.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -47,7 +49,8 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Adds a MethodResponse to an existing Method resource.
+Adds a <span>MethodResponse</span> to an existing <span>Method</span>
+resource.
 }
 \section{Request syntax}{
 \preformatted{svc$put_method_response(

@@ -1186,19 +1186,19 @@ costexplorer_get_cost_and_usage_with_resources <- function(TimePeriod, Granulari
 #' The key represents cost and usage metrics. The following values are
 #' supported:
 #' 
-#' -   `BlendedCost`
+#'   - `BlendedCost`
 #' 
-#' -   `UnblendedCost`
+#'   - `UnblendedCost`
 #' 
-#' -   `AmortizedCost`
+#'   - `AmortizedCost`
 #' 
-#' -   `NetAmortizedCost`
+#'   - `NetAmortizedCost`
 #' 
-#' -   `NetUnblendedCost`
+#'   - `NetUnblendedCost`
 #' 
-#' -   `UsageQuantity`
+#'   - `UsageQuantity`
 #' 
-#' -   `NormalizedUsageAmount`
+#'   - `NormalizedUsageAmount`
 #' 
 #' Supported values for `SortOrder` are `ASCENDING` or `DESCENDING`.
 #' 
@@ -1330,15 +1330,15 @@ costexplorer_get_cost_categories <- function(SearchString = NULL, TimePeriod, Co
 #' Valid values for a [`get_cost_forecast`][costexplorer_get_cost_forecast]
 #' call are the following:
 #' 
-#' -   AMORTIZED_COST
+#'   - AMORTIZED_COST
 #' 
-#' -   BLENDED_COST
+#'   - BLENDED_COST
 #' 
-#' -   NET_AMORTIZED_COST
+#'   - NET_AMORTIZED_COST
 #' 
-#' -   NET_UNBLENDED_COST
+#'   - NET_UNBLENDED_COST
 #' 
-#' -   UNBLENDED_COST
+#'   - UNBLENDED_COST
 #' @param Granularity &#91;required&#93; How granular you want the forecast to be. You can get 3 months of
 #' `DAILY` forecasts or 12 months of `MONTHLY` forecasts.
 #' 
@@ -1476,123 +1476,123 @@ costexplorer_get_cost_forecast <- function(TimePeriod, Metric, Granularity, Filt
 #' If you set the context to `COST_AND_USAGE`, you can use the following
 #' dimensions for searching:
 #' 
-#' -   AZ - The Availability Zone. An example is `us-east-1a`.
+#'   - AZ - The Availability Zone. An example is `us-east-1a`.
 #' 
-#' -   DATABASE_ENGINE - The Amazon Relational Database Service database.
+#'   - DATABASE_ENGINE - The Amazon Relational Database Service database.
 #'     Examples are Aurora or MySQL.
 #' 
-#' -   INSTANCE_TYPE - The type of Amazon EC2 instance. An example is
+#'   - INSTANCE_TYPE - The type of Amazon EC2 instance. An example is
 #'     `m4.xlarge`.
 #' 
-#' -   LEGAL_ENTITY_NAME - The name of the organization that sells you
+#'   - LEGAL_ENTITY_NAME - The name of the organization that sells you
 #'     AWS services, such as Amazon Web Services.
 #' 
-#' -   LINKED_ACCOUNT - The description in the attribute map that includes
+#'   - LINKED_ACCOUNT - The description in the attribute map that includes
 #'     the full name of the member account. The value field contains the
 #'     AWS ID of the member account.
 #' 
-#' -   OPERATING_SYSTEM - The operating system. Examples are Windows or
+#'   - OPERATING_SYSTEM - The operating system. Examples are Windows or
 #'     Linux.
 #' 
-#' -   OPERATION - The action performed. Examples include `RunInstance` and
+#'   - OPERATION - The action performed. Examples include `RunInstance` and
 #'     `CreateBucket`.
 #' 
-#' -   PLATFORM - The Amazon EC2 operating system. Examples are Windows or
+#'   - PLATFORM - The Amazon EC2 operating system. Examples are Windows or
 #'     Linux.
 #' 
-#' -   PURCHASE_TYPE - The reservation type of the purchase to which this
+#'   - PURCHASE_TYPE - The reservation type of the purchase to which this
 #'     usage is related. Examples include On-Demand Instances and Standard
 #'     Reserved Instances.
 #' 
-#' -   SERVICE - The AWS service such as Amazon DynamoDB.
+#'   - SERVICE - The AWS service such as Amazon DynamoDB.
 #' 
-#' -   USAGE_TYPE - The type of usage. An example is
+#'   - USAGE_TYPE - The type of usage. An example is
 #'     DataTransfer-In-Bytes. The response for the
 #'     [`get_dimension_values`][costexplorer_get_dimension_values]
 #'     operation includes a unit attribute. Examples include GB and Hrs.
 #' 
-#' -   USAGE_TYPE_GROUP - The grouping of common usage types. An example
+#'   - USAGE_TYPE_GROUP - The grouping of common usage types. An example
 #'     is Amazon EC2: CloudWatch – Alarms. The response for this operation
 #'     includes a unit attribute.
 #' 
-#' -   REGION - The AWS Region.
+#'   - REGION - The AWS Region.
 #' 
-#' -   RECORD_TYPE - The different types of charges such as RI fees, usage
+#'   - RECORD_TYPE - The different types of charges such as RI fees, usage
 #'     costs, tax refunds, and credits.
 #' 
-#' -   RESOURCE_ID - The unique identifier of the resource. ResourceId is
+#'   - RESOURCE_ID - The unique identifier of the resource. ResourceId is
 #'     an opt-in feature only available for last 14 days for EC2-Compute
 #'     Service.
 #' 
 #' If you set the context to `RESERVATIONS`, you can use the following
 #' dimensions for searching:
 #' 
-#' -   AZ - The Availability Zone. An example is `us-east-1a`.
+#'   - AZ - The Availability Zone. An example is `us-east-1a`.
 #' 
-#' -   CACHE_ENGINE - The Amazon ElastiCache operating system. Examples
+#'   - CACHE_ENGINE - The Amazon ElastiCache operating system. Examples
 #'     are Windows or Linux.
 #' 
-#' -   DEPLOYMENT_OPTION - The scope of Amazon Relational Database Service
+#'   - DEPLOYMENT_OPTION - The scope of Amazon Relational Database Service
 #'     deployments. Valid values are `SingleAZ` and `MultiAZ`.
 #' 
-#' -   INSTANCE_TYPE - The type of Amazon EC2 instance. An example is
+#'   - INSTANCE_TYPE - The type of Amazon EC2 instance. An example is
 #'     `m4.xlarge`.
 #' 
-#' -   LINKED_ACCOUNT - The description in the attribute map that includes
+#'   - LINKED_ACCOUNT - The description in the attribute map that includes
 #'     the full name of the member account. The value field contains the
 #'     AWS ID of the member account.
 #' 
-#' -   PLATFORM - The Amazon EC2 operating system. Examples are Windows or
+#'   - PLATFORM - The Amazon EC2 operating system. Examples are Windows or
 #'     Linux.
 #' 
-#' -   REGION - The AWS Region.
+#'   - REGION - The AWS Region.
 #' 
-#' -   SCOPE (Utilization only) - The scope of a Reserved Instance (RI).
+#'   - SCOPE (Utilization only) - The scope of a Reserved Instance (RI).
 #'     Values are regional or a single Availability Zone.
 #' 
-#' -   TAG (Coverage only) - The tags that are associated with a Reserved
+#'   - TAG (Coverage only) - The tags that are associated with a Reserved
 #'     Instance (RI).
 #' 
-#' -   TENANCY - The tenancy of a resource. Examples are shared or
+#'   - TENANCY - The tenancy of a resource. Examples are shared or
 #'     dedicated.
 #' 
 #' If you set the context to `SAVINGS_PLANS`, you can use the following
 #' dimensions for searching:
 #' 
-#' -   SAVINGS_PLANS_TYPE - Type of Savings Plans (EC2 Instance or
+#'   - SAVINGS_PLANS_TYPE - Type of Savings Plans (EC2 Instance or
 #'     Compute)
 #' 
-#' -   PAYMENT_OPTION - Payment option for the given Savings Plans (for
+#'   - PAYMENT_OPTION - Payment option for the given Savings Plans (for
 #'     example, All Upfront)
 #' 
-#' -   REGION - The AWS Region.
+#'   - REGION - The AWS Region.
 #' 
-#' -   INSTANCE_TYPE_FAMILY - The family of instances (For example, `m5`)
+#'   - INSTANCE_TYPE_FAMILY - The family of instances (For example, `m5`)
 #' 
-#' -   LINKED_ACCOUNT - The description in the attribute map that includes
+#'   - LINKED_ACCOUNT - The description in the attribute map that includes
 #'     the full name of the member account. The value field contains the
 #'     AWS ID of the member account.
 #' 
-#' -   SAVINGS_PLAN_ARN - The unique identifier for your Savings Plan
+#'   - SAVINGS_PLAN_ARN - The unique identifier for your Savings Plan
 #' @param Filter 
 #' @param SortBy The value by which you want to sort the data.
 #' 
 #' The key represents cost and usage metrics. The following values are
 #' supported:
 #' 
-#' -   `BlendedCost`
+#'   - `BlendedCost`
 #' 
-#' -   `UnblendedCost`
+#'   - `UnblendedCost`
 #' 
-#' -   `AmortizedCost`
+#'   - `AmortizedCost`
 #' 
-#' -   `NetAmortizedCost`
+#'   - `NetAmortizedCost`
 #' 
-#' -   `NetUnblendedCost`
+#'   - `NetUnblendedCost`
 #' 
-#' -   `UsageQuantity`
+#'   - `UsageQuantity`
 #' 
-#' -   `NormalizedUsageAmount`
+#'   - `NormalizedUsageAmount`
 #' 
 #' Supported values for `SortOrder` are `ASCENDING` or `DESCENDING`.
 #' 
@@ -1713,29 +1713,29 @@ costexplorer_get_dimension_values <- function(SearchString = NULL, TimePeriod, D
 #' Cost Categories, and nested expressions. For any time period, you can
 #' filter data about reservation usage by the following dimensions:
 #' 
-#' -   AZ
+#'   - AZ
 #' 
-#' -   CACHE_ENGINE
+#'   - CACHE_ENGINE
 #' 
-#' -   DATABASE_ENGINE
+#'   - DATABASE_ENGINE
 #' 
-#' -   DEPLOYMENT_OPTION
+#'   - DEPLOYMENT_OPTION
 #' 
-#' -   INSTANCE_TYPE
+#'   - INSTANCE_TYPE
 #' 
-#' -   LINKED_ACCOUNT
+#'   - LINKED_ACCOUNT
 #' 
-#' -   OPERATING_SYSTEM
+#'   - OPERATING_SYSTEM
 #' 
-#' -   PLATFORM
+#'   - PLATFORM
 #' 
-#' -   REGION
+#'   - REGION
 #' 
-#' -   SERVICE
+#'   - SERVICE
 #' 
-#' -   TAG
+#'   - TAG
 #' 
-#' -   TENANCY
+#'   - TENANCY
 #' 
 #' To determine valid values for a dimension, use the
 #' [`get_dimension_values`][costexplorer_get_dimension_values] operation.
@@ -1753,25 +1753,25 @@ costexplorer_get_dimension_values <- function(SearchString = NULL, TimePeriod, D
 #' including `2017-05-01`.
 #' @param GroupBy You can group the data by the following attributes:
 #' 
-#' -   AZ
+#'   - AZ
 #' 
-#' -   CACHE_ENGINE
+#'   - CACHE_ENGINE
 #' 
-#' -   DATABASE_ENGINE
+#'   - DATABASE_ENGINE
 #' 
-#' -   DEPLOYMENT_OPTION
+#'   - DEPLOYMENT_OPTION
 #' 
-#' -   INSTANCE_TYPE
+#'   - INSTANCE_TYPE
 #' 
-#' -   LINKED_ACCOUNT
+#'   - LINKED_ACCOUNT
 #' 
-#' -   OPERATING_SYSTEM
+#'   - OPERATING_SYSTEM
 #' 
-#' -   PLATFORM
+#'   - PLATFORM
 #' 
-#' -   REGION
+#'   - REGION
 #' 
-#' -   TENANCY
+#'   - TENANCY
 #' @param Granularity The granularity of the AWS cost data for the reservation. Valid values
 #' are `MONTHLY` and `DAILY`.
 #' 
@@ -1784,29 +1784,29 @@ costexplorer_get_dimension_values <- function(SearchString = NULL, TimePeriod, D
 #' @param Filter Filters utilization data by dimensions. You can filter by the following
 #' dimensions:
 #' 
-#' -   AZ
+#'   - AZ
 #' 
-#' -   CACHE_ENGINE
+#'   - CACHE_ENGINE
 #' 
-#' -   DATABASE_ENGINE
+#'   - DATABASE_ENGINE
 #' 
-#' -   DEPLOYMENT_OPTION
+#'   - DEPLOYMENT_OPTION
 #' 
-#' -   INSTANCE_TYPE
+#'   - INSTANCE_TYPE
 #' 
-#' -   LINKED_ACCOUNT
+#'   - LINKED_ACCOUNT
 #' 
-#' -   OPERATING_SYSTEM
+#'   - OPERATING_SYSTEM
 #' 
-#' -   PLATFORM
+#'   - PLATFORM
 #' 
-#' -   REGION
+#'   - REGION
 #' 
-#' -   SERVICE
+#'   - SERVICE
 #' 
-#' -   TAG
+#'   - TAG
 #' 
-#' -   TENANCY
+#'   - TENANCY
 #' 
 #' [`get_reservation_coverage`][costexplorer_get_reservation_coverage] uses
 #' the same
@@ -1829,25 +1829,25 @@ costexplorer_get_dimension_values <- function(SearchString = NULL, TimePeriod, D
 #' 
 #' The following values are supported for `Key`:
 #' 
-#' -   `OnDemandCost`
+#'   - `OnDemandCost`
 #' 
-#' -   `CoverageHoursPercentage`
+#'   - `CoverageHoursPercentage`
 #' 
-#' -   `OnDemandHours`
+#'   - `OnDemandHours`
 #' 
-#' -   `ReservedHours`
+#'   - `ReservedHours`
 #' 
-#' -   `TotalRunningHours`
+#'   - `TotalRunningHours`
 #' 
-#' -   `CoverageNormalizedUnitsPercentage`
+#'   - `CoverageNormalizedUnitsPercentage`
 #' 
-#' -   `OnDemandNormalizedUnits`
+#'   - `OnDemandNormalizedUnits`
 #' 
-#' -   `ReservedNormalizedUnits`
+#'   - `ReservedNormalizedUnits`
 #' 
-#' -   `TotalRunningNormalizedUnits`
+#'   - `TotalRunningNormalizedUnits`
 #' 
-#' -   `Time`
+#'   - `Time`
 #' 
 #' Supported values for `SortOrder` are `ASCENDING` or `DESCENDING`.
 #' @param MaxResults The maximum number of objects that you returned for this request. If
@@ -2264,27 +2264,27 @@ costexplorer_get_reservation_purchase_recommendation <- function(AccountId = NUL
 #' @param Filter Filters utilization data by dimensions. You can filter by the following
 #' dimensions:
 #' 
-#' -   AZ
+#'   - AZ
 #' 
-#' -   CACHE_ENGINE
+#'   - CACHE_ENGINE
 #' 
-#' -   DEPLOYMENT_OPTION
+#'   - DEPLOYMENT_OPTION
 #' 
-#' -   INSTANCE_TYPE
+#'   - INSTANCE_TYPE
 #' 
-#' -   LINKED_ACCOUNT
+#'   - LINKED_ACCOUNT
 #' 
-#' -   OPERATING_SYSTEM
+#'   - OPERATING_SYSTEM
 #' 
-#' -   PLATFORM
+#'   - PLATFORM
 #' 
-#' -   REGION
+#'   - REGION
 #' 
-#' -   SERVICE
+#'   - SERVICE
 #' 
-#' -   SCOPE
+#'   - SCOPE
 #' 
-#' -   TENANCY
+#'   - TENANCY
 #' 
 #' [`get_reservation_utilization`][costexplorer_get_reservation_utilization]
 #' uses the same
@@ -2296,39 +2296,39 @@ costexplorer_get_reservation_purchase_recommendation <- function(AccountId = NUL
 #' 
 #' The following values are supported for `Key`:
 #' 
-#' -   `UtilizationPercentage`
+#'   - `UtilizationPercentage`
 #' 
-#' -   `UtilizationPercentageInUnits`
+#'   - `UtilizationPercentageInUnits`
 #' 
-#' -   `PurchasedHours`
+#'   - `PurchasedHours`
 #' 
-#' -   `PurchasedUnits`
+#'   - `PurchasedUnits`
 #' 
-#' -   `TotalActualHours`
+#'   - `TotalActualHours`
 #' 
-#' -   `TotalActualUnits`
+#'   - `TotalActualUnits`
 #' 
-#' -   `UnusedHours`
+#'   - `UnusedHours`
 #' 
-#' -   `UnusedUnits`
+#'   - `UnusedUnits`
 #' 
-#' -   `OnDemandCostOfRIHoursUsed`
+#'   - `OnDemandCostOfRIHoursUsed`
 #' 
-#' -   `NetRISavings`
+#'   - `NetRISavings`
 #' 
-#' -   `TotalPotentialRISavings`
+#'   - `TotalPotentialRISavings`
 #' 
-#' -   `AmortizedUpfrontFee`
+#'   - `AmortizedUpfrontFee`
 #' 
-#' -   `AmortizedRecurringFee`
+#'   - `AmortizedRecurringFee`
 #' 
-#' -   `TotalAmortizedFee`
+#'   - `TotalAmortizedFee`
 #' 
-#' -   `RICostForUnusedHours`
+#'   - `RICostForUnusedHours`
 #' 
-#' -   `RealizedSavings`
+#'   - `RealizedSavings`
 #' 
-#' -   `UnrealizedSavings`
+#'   - `UnrealizedSavings`
 #' 
 #' Supported values for `SortOrder` are `ASCENDING` or `DESCENDING`.
 #' @param NextPageToken The token to retrieve the next set of results. AWS provides the token
@@ -2728,13 +2728,13 @@ costexplorer_get_rightsizing_recommendation <- function(Filter = NULL, Configura
 #' expressions. For any time period, you can filter data for Savings Plans
 #' usage with the following dimensions:
 #' 
-#' -   `LINKED_ACCOUNT`
+#'   - `LINKED_ACCOUNT`
 #' 
-#' -   `REGION`
+#'   - `REGION`
 #' 
-#' -   `SERVICE`
+#'   - `SERVICE`
 #' 
-#' -   `INSTANCE_FAMILY`
+#'   - `INSTANCE_FAMILY`
 #' 
 #' To determine valid values for a dimension, use the
 #' [`get_dimension_values`][costexplorer_get_dimension_values] operation.
@@ -2758,13 +2758,13 @@ costexplorer_get_rightsizing_recommendation <- function(Filter = NULL, Configura
 #' @param Filter Filters Savings Plans coverage data by dimensions. You can filter data
 #' for Savings Plans usage with the following dimensions:
 #' 
-#' -   `LINKED_ACCOUNT`
+#'   - `LINKED_ACCOUNT`
 #' 
-#' -   `REGION`
+#'   - `REGION`
 #' 
-#' -   `SERVICE`
+#'   - `SERVICE`
 #' 
-#' -   `INSTANCE_FAMILY`
+#'   - `INSTANCE_FAMILY`
 #' 
 #' [`get_savings_plans_coverage`][costexplorer_get_savings_plans_coverage]
 #' uses the same
@@ -2785,19 +2785,19 @@ costexplorer_get_rightsizing_recommendation <- function(Filter = NULL, Configura
 #' 
 #' The following values are supported for `Key`:
 #' 
-#' -   `SpendCoveredBySavingsPlan`
+#'   - `SpendCoveredBySavingsPlan`
 #' 
-#' -   `OnDemandCost`
+#'   - `OnDemandCost`
 #' 
-#' -   `CoveragePercentage`
+#'   - `CoveragePercentage`
 #' 
-#' -   `TotalCost`
+#'   - `TotalCost`
 #' 
-#' -   `InstanceFamily`
+#'   - `InstanceFamily`
 #' 
-#' -   `Region`
+#'   - `Region`
 #' 
-#' -   `Service`
+#'   - `Service`
 #' 
 #' Supported values for `SortOrder` are `ASCENDING` or `DESCENDING`.
 #'
@@ -3104,17 +3104,17 @@ costexplorer_get_savings_plans_purchase_recommendation <- function(SavingsPlansT
 #' @param Filter Filters Savings Plans utilization coverage data for active Savings Plans
 #' dimensions. You can filter data with the following dimensions:
 #' 
-#' -   `LINKED_ACCOUNT`
+#'   - `LINKED_ACCOUNT`
 #' 
-#' -   `SAVINGS_PLAN_ARN`
+#'   - `SAVINGS_PLAN_ARN`
 #' 
-#' -   `SAVINGS_PLANS_TYPE`
+#'   - `SAVINGS_PLANS_TYPE`
 #' 
-#' -   `REGION`
+#'   - `REGION`
 #' 
-#' -   `PAYMENT_OPTION`
+#'   - `PAYMENT_OPTION`
 #' 
-#' -   `INSTANCE_TYPE_FAMILY`
+#'   - `INSTANCE_TYPE_FAMILY`
 #' 
 #' [`get_savings_plans_utilization`][costexplorer_get_savings_plans_utilization]
 #' uses the same
@@ -3125,15 +3125,15 @@ costexplorer_get_savings_plans_purchase_recommendation <- function(SavingsPlansT
 #' 
 #' The following values are supported for `Key`:
 #' 
-#' -   `UtilizationPercentage`
+#'   - `UtilizationPercentage`
 #' 
-#' -   `TotalCommitment`
+#'   - `TotalCommitment`
 #' 
-#' -   `UsedCommitment`
+#'   - `UsedCommitment`
 #' 
-#' -   `UnusedCommitment`
+#'   - `UnusedCommitment`
 #' 
-#' -   `NetSavings`
+#'   - `NetSavings`
 #' 
 #' Supported values for `SortOrder` are `ASCENDING` or `DESCENDING`.
 #'
@@ -3282,15 +3282,15 @@ costexplorer_get_savings_plans_utilization <- function(TimePeriod, Granularity =
 #' @param Filter Filters Savings Plans utilization coverage data for active Savings Plans
 #' dimensions. You can filter data with the following dimensions:
 #' 
-#' -   `LINKED_ACCOUNT`
+#'   - `LINKED_ACCOUNT`
 #' 
-#' -   `SAVINGS_PLAN_ARN`
+#'   - `SAVINGS_PLAN_ARN`
 #' 
-#' -   `REGION`
+#'   - `REGION`
 #' 
-#' -   `PAYMENT_OPTION`
+#'   - `PAYMENT_OPTION`
 #' 
-#' -   `INSTANCE_TYPE_FAMILY`
+#'   - `INSTANCE_TYPE_FAMILY`
 #' 
 #' [`get_savings_plans_utilization_details`][costexplorer_get_savings_plans_utilization_details]
 #' uses the same
@@ -3307,19 +3307,19 @@ costexplorer_get_savings_plans_utilization <- function(TimePeriod, Granularity =
 #' 
 #' The following values are supported for `Key`:
 #' 
-#' -   `UtilizationPercentage`
+#'   - `UtilizationPercentage`
 #' 
-#' -   `TotalCommitment`
+#'   - `TotalCommitment`
 #' 
-#' -   `UsedCommitment`
+#'   - `UsedCommitment`
 #' 
-#' -   `UnusedCommitment`
+#'   - `UnusedCommitment`
 #' 
-#' -   `NetSavings`
+#'   - `NetSavings`
 #' 
-#' -   `AmortizedRecurringCommitment`
+#'   - `AmortizedRecurringCommitment`
 #' 
-#' -   `AmortizedUpfrontCommitment`
+#'   - `AmortizedUpfrontCommitment`
 #' 
 #' Supported values for `SortOrder` are `ASCENDING` or `DESCENDING`.
 #'
@@ -3473,19 +3473,19 @@ costexplorer_get_savings_plans_utilization_details <- function(TimePeriod, Filte
 #' The key represents cost and usage metrics. The following values are
 #' supported:
 #' 
-#' -   `BlendedCost`
+#'   - `BlendedCost`
 #' 
-#' -   `UnblendedCost`
+#'   - `UnblendedCost`
 #' 
-#' -   `AmortizedCost`
+#'   - `AmortizedCost`
 #' 
-#' -   `NetAmortizedCost`
+#'   - `NetAmortizedCost`
 #' 
-#' -   `NetUnblendedCost`
+#'   - `NetUnblendedCost`
 #' 
-#' -   `UsageQuantity`
+#'   - `UsageQuantity`
 #' 
-#' -   `NormalizedUsageAmount`
+#'   - `NormalizedUsageAmount`
 #' 
 #' Supported values for `SortOrder` are `ASCENDING` or `DESCENDING`.
 #' 
@@ -3614,9 +3614,9 @@ costexplorer_get_tags <- function(SearchString = NULL, TimePeriod, TagKey = NULL
 #' [`get_usage_forecast`][costexplorer_get_usage_forecast] call are the
 #' following:
 #' 
-#' -   USAGE_QUANTITY
+#'   - USAGE_QUANTITY
 #' 
-#' -   NORMALIZED_USAGE_AMOUNT
+#'   - NORMALIZED_USAGE_AMOUNT
 #' @param Granularity &#91;required&#93; How granular you want the forecast to be. You can get 3 months of
 #' `DAILY` forecasts or 12 months of `MONTHLY` forecasts.
 #' 

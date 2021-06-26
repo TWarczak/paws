@@ -2,13 +2,13 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_create_ip_set}
 \alias{wafregional_create_ip_set}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 wafregional_create_ip_set(Name, ChangeToken)
 }
 \arguments{
-\item{Name}{[required] A friendly name or description of the IPSet. You can't change \code{Name}
-after you create the \code{IPSet}.}
+\item{Name}{[required] A friendly name or description of the <span>IPSet</span>. You can't
+change \code{Name} after you create the \code{IPSet}.}
 
 \item{ChangeToken}{[required] The value returned by the most recent call to
 \code{\link[=wafregional_get_change_token]{get_change_token}}.}
@@ -39,13 +39,13 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Creates an IPSet, which you use to specify which web requests that you
-want to allow or block based on the IP addresses that the requests
-originate from. For example, if you're receiving a lot of requests from
-one or more individual IP addresses or one or more ranges of IP
-addresses and you want to block the requests, you can create an \code{IPSet}
-that contains those IP addresses and then configure AWS WAF to block the
-requests.
+Creates an <span>IPSet</span>, which you use to specify which web
+requests that you want to allow or block based on the IP addresses that
+the requests originate from. For example, if you're receiving a lot of
+requests from one or more individual IP addresses or one or more ranges
+of IP addresses and you want to block the requests, you can create an
+\code{IPSet} that contains those IP addresses and then configure AWS WAF to
+block the requests.
 
 To create and configure an \code{IPSet}, perform the following steps:
 \enumerate{

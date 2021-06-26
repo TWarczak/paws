@@ -86,8 +86,7 @@ that the encryption key was transmitted without error.}
 specified. Useful for downloading just a part of an object.}
 
 \item{ExpectedBucketOwner}{The account id of the expected bucket owner. If the bucket is owned by a
-different account, the request will fail with an HTTP
-\verb{403 (Access Denied)} error.}
+different account, the request will fail with an HTTP \verb{403 (Access Denied)} error.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -156,7 +155,7 @@ named \code{examplebucket}, specify the resource as
 about request types, see \href{https://docs.aws.amazon.com/AmazonS3/latest/userguide/VirtualHosting.html#VirtualHostingSpecifyBucket}{HTTP Host Header Bucket Specification}.
 
 To distribute large files to many people, you can save bandwidth costs
-by using BitTorrent. For more information, see \href{https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3Torrent.html}{Amazon S3 Torrent}.
+by using BitTorrent. For more information, see \href{https://docs.aws.amazon.com/AmazonS3/latest/userguide/uploading-downloading-objects.html}{Amazon S3 Torrent}.
 For more information about returning the ACL of an object, see
 \code{\link[=s3_get_object_acl]{get_object_acl}}.
 
@@ -212,8 +211,7 @@ By default, the GET operation returns the current version of an object.
 To return a different version, use the \code{versionId} subresource.
 
 If the current version of the object is a delete marker, Amazon S3
-behaves as if the object was deleted and includes
-\code{x-amz-delete-marker: true} in the response.
+behaves as if the object was deleted and includes \code{x-amz-delete-marker: true} in the response.
 
 For more information about versioning, see
 \code{\link[=s3_put_bucket_versioning]{put_bucket_versioning}}.
@@ -258,7 +256,8 @@ present in the request as follows:\code{ If-None-Match} condition evaluates
 to \code{false}, and; \code{If-Modified-Since} condition evaluates to \code{true};
 then, S3 returns 304 Not Modified response code.
 
-For more information about conditional requests, see \href{https://tools.ietf.org/html/rfc7232}{RFC 7232}.
+For more information about conditional requests, see
+\href{https://datatracker.ietf.org/doc/html/rfc7232}{RFC 7232}.
 
 The following operations are related to \code{\link[=s3_get_object]{get_object}}:
 \itemize{

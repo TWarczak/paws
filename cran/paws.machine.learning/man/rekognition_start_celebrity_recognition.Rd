@@ -35,8 +35,8 @@ A list with the following syntax:\preformatted{list(
 Starts asynchronous recognition of celebrities in a stored video.
 
 Amazon Rekognition Video can detect celebrities in a video must be
-stored in an Amazon S3 bucket. Use Video to specify the bucket name and
-the filename of the video.
+stored in an Amazon S3 bucket. Use <span>Video</span> to specify the
+bucket name and the filename of the video.
 \code{\link[=rekognition_start_celebrity_recognition]{start_celebrity_recognition}}
 returns a job identifier (\code{JobId}) which you use to get the results of
 the analysis. When celebrity recognition analysis is finished, Amazon

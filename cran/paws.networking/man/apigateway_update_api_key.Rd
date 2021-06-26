@@ -7,7 +7,8 @@
 apigateway_update_api_key(apiKey, patchOperations)
 }
 \arguments{
-\item{apiKey}{[required] [Required] The identifier of the ApiKey resource to be updated.}
+\item{apiKey}{[required] [Required] The identifier of the <span>ApiKey</span> resource to be
+updated.}
 
 \item{patchOperations}{A list of update operations to be applied to the specified resource and
 in the order specified in this list.}
@@ -36,7 +37,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Changes information about an ApiKey resource.
+Changes information about an <span>ApiKey</span> resource.
 }
 \section{Request syntax}{
 \preformatted{svc$update_api_key(

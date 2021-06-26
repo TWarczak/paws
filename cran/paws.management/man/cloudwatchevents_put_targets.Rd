@@ -56,9 +56,8 @@ You can configure the following as targets for Events:
 }
 
 Creating rules with built-in targets is supported only in the AWS
-Management Console. The built-in targets are
-\verb{EC2 CreateSnapshot API call}, \verb{EC2 RebootInstances API call},
-\verb{EC2 StopInstances API call}, and \verb{EC2 TerminateInstances API call}.
+Management Console. The built-in targets are \verb{EC2 CreateSnapshot API call}, \verb{EC2 RebootInstances API call}, \verb{EC2 StopInstances API call}, and
+\verb{EC2 TerminateInstances API call}.
 
 For some target types, \code{\link[=cloudwatchevents_put_targets]{put_targets}}
 provides target-specific parameters. If the target is a Kinesis data
@@ -74,7 +73,7 @@ resource-based policies. For EC2 instances, Kinesis data streams, AWS
 Step Functions state machines and API Gateway REST APIs, EventBridge
 relies on IAM roles that you specify in the \code{RoleARN} argument in
 \code{\link[=cloudwatchevents_put_targets]{put_targets}}. For more information, see
-\href{https://docs.aws.amazon.com/eventbridge/latest/userguide/auth-and-access-control-eventbridge.html}{Authentication and Access Control}
+\href{https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-iam.html}{Authentication and Access Control}
 in the \emph{Amazon EventBridge User Guide}.
 
 If another AWS account is in the same region and has granted you
@@ -95,7 +94,7 @@ If you are setting the event bus of another account as the target, and
 that account granted permission to your account through an organization
 instead of directly by the account ID, then you must specify a \code{RoleArn}
 with proper permissions in the \code{Target} structure. For more information,
-see \href{https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-cross-account-event-delivery.html}{Sending and Receiving Events Between AWS Accounts}
+see \href{https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-cross-account.html}{Sending and Receiving Events Between AWS Accounts}
 in the \emph{Amazon EventBridge User Guide}.
 
 For more information about enabling cross-account events, see

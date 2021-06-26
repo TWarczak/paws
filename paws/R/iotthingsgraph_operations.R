@@ -481,7 +481,7 @@ iotthingsgraph_delete_system_template <- function(id) {
 }
 .iotthingsgraph$operations$delete_system_template <- iotthingsgraph_delete_system_template
 
-#' Greengrass and Cloud Deployments
+#' GREENGRASS AND CLOUD DEPLOYMENTS
 #'
 #' @description
 #' **Greengrass and Cloud Deployments**
@@ -758,23 +758,23 @@ iotthingsgraph_dissociate_entity_from_thing <- function(thingName, entityType) {
 #' the user's namespace by default. This API returns the following TDM
 #' entities.
 #' 
-#' -   Properties
+#'   - Properties
 #' 
-#' -   States
+#'   - States
 #' 
-#' -   Events
+#'   - Events
 #' 
-#' -   Actions
+#'   - Actions
 #' 
-#' -   Capabilities
+#'   - Capabilities
 #' 
-#' -   Mappings
+#'   - Mappings
 #' 
-#' -   Devices
+#'   - Devices
 #' 
-#' -   Device Models
+#'   - Device Models
 #' 
-#' -   Services
+#'   - Services
 #' 
 #' This action doesn't return definitions for systems, flows, and
 #' deployments.
@@ -1872,7 +1872,7 @@ iotthingsgraph_search_things <- function(entityId, nextToken = NULL, maxResults 
 #' iotthingsgraph_tag_resource(resourceArn, tags)
 #'
 #' @param resourceArn &#91;required&#93; The Amazon Resource Name (ARN) of the resource whose tags are returned.
-#' @param tags &#91;required&#93; A list of tags to add to the resource.&gt;
+#' @param tags &#91;required&#93; A list of tags to add to the resource.\>
 #'
 #' @return
 #' An empty list.

@@ -11,7 +11,7 @@ sqs_send_message_batch(QueueUrl, Entries)
 
 Queue URLs and names are case-sensitive.}
 
-\item{Entries}{[required] A list of \code{SendMessageBatchRequestEntry} items.}
+\item{Entries}{[required] A list of \code{ SendMessageBatchRequestEntry } items.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -38,8 +38,8 @@ A list with the following syntax:\preformatted{list(
 }
 \description{
 Delivers up to ten messages to the specified queue. This is a batch
-version of \code{ SendMessage.} For a FIFO queue, multiple messages within a
-single batch are enqueued in the order they are sent.
+version of \code{ SendMessage.} For a FIFO queue, multiple messages within
+a single batch are enqueued in the order they are sent.
 
 The result of sending each message is reported individually in the
 response. Because the batch request can result in a combination of

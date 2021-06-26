@@ -54,7 +54,7 @@ the following:
 \item Tags for a Tag target
 \item From any supported tag type to another. The three supported tag
 types are ID target, Tag target, and resource group. For more
-information, see Target.
+information, see <span>Target</span>.
 }
 
 If a parameter is null, then the corresponding field is not modified.

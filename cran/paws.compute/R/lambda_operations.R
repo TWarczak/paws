@@ -121,13 +121,13 @@ lambda_add_layer_version_permission <- function(LayerName, VersionNumber, Statem
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `my-function` (name-only), `my-function:v1`
+#'   - **Function name** - `my-function` (name-only), `my-function:v1`
 #'     (with alias).
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:my-function`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:my-function`.
+#'   - **Partial ARN** - `123456789012:function:my-function`.
 #' 
 #' You can append a version number or alias to any of the formats. The
 #' length constraint applies only to the full ARN. If you specify only the
@@ -240,12 +240,12 @@ lambda_add_permission <- function(FunctionName, StatementId, Action, Principal, 
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `MyFunction`.
+#'   - **Function name** - `MyFunction`.
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:MyFunction`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:MyFunction`.
+#'   - **Partial ARN** - `123456789012:function:MyFunction`.
 #' 
 #' The length constraint applies only to the full ARN. If you specify only
 #' the function name, it is limited to 64 characters in length.
@@ -401,42 +401,42 @@ lambda_create_code_signing_config <- function(Description = NULL, AllowedPublish
 #' 
 #' For details about each event source type, see the following topics.
 #' 
-#' -   [Using AWS Lambda with Amazon
+#'   - [Using AWS Lambda with Amazon
 #'     DynamoDB](https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html)
 #' 
-#' -   [Using AWS Lambda with Amazon
+#'   - [Using AWS Lambda with Amazon
 #'     Kinesis](https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html)
 #' 
-#' -   [Using AWS Lambda with Amazon
+#'   - [Using AWS Lambda with Amazon
 #'     SQS](https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html)
 #' 
-#' -   [Using AWS Lambda with Amazon
+#'   - [Using AWS Lambda with Amazon
 #'     MQ](https://docs.aws.amazon.com/lambda/latest/dg/with-mq.html)
 #' 
-#' -   [Using AWS Lambda with Amazon
+#'   - [Using AWS Lambda with Amazon
 #'     MSK](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html)
 #' 
-#' -   [Using AWS Lambda with Self-Managed Apache
-#'     Kafka](https://docs.aws.amazon.com/lambda/latest/dg/kafka-smaa.html)
+#'   - [Using AWS Lambda with Self-Managed Apache
+#'     Kafka](https://docs.aws.amazon.com/lambda/latest/dg/)
 #' 
 #' The following error handling options are only available for stream
 #' sources (DynamoDB and Kinesis):
 #' 
-#' -   `BisectBatchOnFunctionError` - If the function returns an error,
+#'   - `BisectBatchOnFunctionError` - If the function returns an error,
 #'     split the batch in two and retry.
 #' 
-#' -   `DestinationConfig` - Send discarded records to an Amazon SQS queue
+#'   - `DestinationConfig` - Send discarded records to an Amazon SQS queue
 #'     or Amazon SNS topic.
 #' 
-#' -   `MaximumRecordAgeInSeconds` - Discard records older than the
+#'   - `MaximumRecordAgeInSeconds` - Discard records older than the
 #'     specified age. The default value is infinite (-1). When set to
 #'     infinite (-1), failed records are retried until the record expires
 #' 
-#' -   `MaximumRetryAttempts` - Discard records after the specified number
+#'   - `MaximumRetryAttempts` - Discard records after the specified number
 #'     of retries. The default value is infinite (-1). When set to infinite
 #'     (-1), failed records are retried until the record expires.
 #' 
-#' -   `ParallelizationFactor` - Process multiple batches from each shard
+#'   - `ParallelizationFactor` - Process multiple batches from each shard
 #'     concurrently.
 #'
 #' @usage
@@ -450,28 +450,28 @@ lambda_create_code_signing_config <- function(Description = NULL, AllowedPublish
 #'
 #' @param EventSourceArn The Amazon Resource Name (ARN) of the event source.
 #' 
-#' -   **Amazon Kinesis** - The ARN of the data stream or a stream
+#'   - **Amazon Kinesis** - The ARN of the data stream or a stream
 #'     consumer.
 #' 
-#' -   **Amazon DynamoDB Streams** - The ARN of the stream.
+#'   - **Amazon DynamoDB Streams** - The ARN of the stream.
 #' 
-#' -   **Amazon Simple Queue Service** - The ARN of the queue.
+#'   - **Amazon Simple Queue Service** - The ARN of the queue.
 #' 
-#' -   **Amazon Managed Streaming for Apache Kafka** - The ARN of the
+#'   - **Amazon Managed Streaming for Apache Kafka** - The ARN of the
 #'     cluster.
 #' @param FunctionName &#91;required&#93; The name of the Lambda function.
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `MyFunction`.
+#'   - **Function name** - `MyFunction`.
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:MyFunction`.
 #' 
-#' -   **Version or Alias ARN** -
+#'   - **Version or Alias ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:MyFunction:PROD`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:MyFunction`.
+#'   - **Partial ARN** - `123456789012:function:MyFunction`.
 #' 
 #' The length constraint applies only to the full ARN. If you specify only
 #' the function name, it's limited to 64 characters in length.
@@ -479,17 +479,17 @@ lambda_create_code_signing_config <- function(Description = NULL, AllowedPublish
 #' polling and invocation.
 #' @param BatchSize The maximum number of items to retrieve in a single batch.
 #' 
-#' -   **Amazon Kinesis** - Default 100. Max 10,000.
+#'   - **Amazon Kinesis** - Default 100. Max 10,000.
 #' 
-#' -   **Amazon DynamoDB Streams** - Default 100. Max 1,000.
+#'   - **Amazon DynamoDB Streams** - Default 100. Max 1,000.
 #' 
-#' -   **Amazon Simple Queue Service** - Default 10. For standard queues
+#'   - **Amazon Simple Queue Service** - Default 10. For standard queues
 #'     the max is 10,000. For FIFO queues the max is 10.
 #' 
-#' -   **Amazon Managed Streaming for Apache Kafka** - Default 100. Max
+#'   - **Amazon Managed Streaming for Apache Kafka** - Default 100. Max
 #'     10,000.
 #' 
-#' -   **Self-Managed Apache Kafka** - Default 100. Max 10,000.
+#'   - **Self-Managed Apache Kafka** - Default 100. Max 10,000.
 #' @param MaximumBatchingWindowInSeconds (Streams and SQS standard queues) The maximum amount of time to gather
 #' records before invoking the function, in seconds.
 #' @param ParallelizationFactor (Streams) The number of batches to process from each shard concurrently.
@@ -725,12 +725,12 @@ lambda_create_event_source_mapping <- function(EventSourceArn = NULL, FunctionNa
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `my-function`.
+#'   - **Function name** - `my-function`.
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:my-function`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:my-function`.
+#'   - **Partial ARN** - `123456789012:function:my-function`.
 #' 
 #' The length constraint applies only to the full ARN. If you specify only
 #' the function name, it is limited to 64 characters in length.
@@ -997,12 +997,12 @@ lambda_create_function <- function(FunctionName, Runtime = NULL, Role, Handler =
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `MyFunction`.
+#'   - **Function name** - `MyFunction`.
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:MyFunction`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:MyFunction`.
+#'   - **Partial ARN** - `123456789012:function:MyFunction`.
 #' 
 #' The length constraint applies only to the full ARN. If you specify only
 #' the function name, it is limited to 64 characters in length.
@@ -1218,13 +1218,13 @@ lambda_delete_event_source_mapping <- function(UUID) {
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `my-function` (name-only), `my-function:1` (with
+#'   - **Function name** - `my-function` (name-only), `my-function:1` (with
 #'     version).
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:my-function`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:my-function`.
+#'   - **Partial ARN** - `123456789012:function:my-function`.
 #' 
 #' You can append a version number or alias to any of the formats. The
 #' length constraint applies only to the full ARN. If you specify only the
@@ -1285,12 +1285,12 @@ lambda_delete_function <- function(FunctionName, Qualifier = NULL) {
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `MyFunction`.
+#'   - **Function name** - `MyFunction`.
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:MyFunction`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:MyFunction`.
+#'   - **Partial ARN** - `123456789012:function:MyFunction`.
 #' 
 #' The length constraint applies only to the full ARN. If you specify only
 #' the function name, it is limited to 64 characters in length.
@@ -1337,12 +1337,12 @@ lambda_delete_function_code_signing_config <- function(FunctionName) {
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `my-function`.
+#'   - **Function name** - `my-function`.
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:my-function`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:my-function`.
+#'   - **Partial ARN** - `123456789012:function:my-function`.
 #' 
 #' The length constraint applies only to the full ARN. If you specify only
 #' the function name, it is limited to 64 characters in length.
@@ -1403,13 +1403,13 @@ lambda_delete_function_concurrency <- function(FunctionName) {
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `my-function` (name-only), `my-function:v1`
+#'   - **Function name** - `my-function` (name-only), `my-function:v1`
 #'     (with alias).
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:my-function`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:my-function`.
+#'   - **Partial ARN** - `123456789012:function:my-function`.
 #' 
 #' You can append a version number or alias to any of the formats. The
 #' length constraint applies only to the full ARN. If you specify only the
@@ -1524,12 +1524,12 @@ lambda_delete_layer_version <- function(LayerName, VersionNumber) {
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `my-function`.
+#'   - **Function name** - `my-function`.
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:my-function`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:my-function`.
+#'   - **Partial ARN** - `123456789012:function:my-function`.
 #' 
 #' The length constraint applies only to the full ARN. If you specify only
 #' the function name, it is limited to 64 characters in length.
@@ -1649,12 +1649,12 @@ lambda_get_account_settings <- function() {
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `MyFunction`.
+#'   - **Function name** - `MyFunction`.
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:MyFunction`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:MyFunction`.
+#'   - **Partial ARN** - `123456789012:function:MyFunction`.
 #' 
 #' The length constraint applies only to the full ARN. If you specify only
 #' the function name, it is limited to 64 characters in length.
@@ -1894,13 +1894,13 @@ lambda_get_event_source_mapping <- function(UUID) {
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `my-function` (name-only), `my-function:v1`
+#'   - **Function name** - `my-function` (name-only), `my-function:v1`
 #'     (with alias).
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:my-function`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:my-function`.
+#'   - **Partial ARN** - `123456789012:function:my-function`.
 #' 
 #' You can append a version number or alias to any of the formats. The
 #' length constraint applies only to the full ARN. If you specify only the
@@ -2056,12 +2056,12 @@ lambda_get_function <- function(FunctionName, Qualifier = NULL) {
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `MyFunction`.
+#'   - **Function name** - `MyFunction`.
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:MyFunction`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:MyFunction`.
+#'   - **Partial ARN** - `123456789012:function:MyFunction`.
 #' 
 #' The length constraint applies only to the full ARN. If you specify only
 #' the function name, it is limited to 64 characters in length.
@@ -2117,12 +2117,12 @@ lambda_get_function_code_signing_config <- function(FunctionName) {
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `my-function`.
+#'   - **Function name** - `my-function`.
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:my-function`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:my-function`.
+#'   - **Partial ARN** - `123456789012:function:my-function`.
 #' 
 #' The length constraint applies only to the full ARN. If you specify only
 #' the function name, it is limited to 64 characters in length.
@@ -2189,13 +2189,13 @@ lambda_get_function_concurrency <- function(FunctionName) {
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `my-function` (name-only), `my-function:v1`
+#'   - **Function name** - `my-function` (name-only), `my-function:v1`
 #'     (with alias).
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:my-function`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:my-function`.
+#'   - **Partial ARN** - `123456789012:function:my-function`.
 #' 
 #' You can append a version number or alias to any of the formats. The
 #' length constraint applies only to the full ARN. If you specify only the
@@ -2342,13 +2342,13 @@ lambda_get_function_configuration <- function(FunctionName, Qualifier = NULL) {
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `my-function` (name-only), `my-function:v1`
+#'   - **Function name** - `my-function` (name-only), `my-function:v1`
 #'     (with alias).
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:my-function`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:my-function`.
+#'   - **Partial ARN** - `123456789012:function:my-function`.
 #' 
 #' You can append a version number or alias to any of the formats. The
 #' length constraint applies only to the full ARN. If you specify only the
@@ -2626,13 +2626,13 @@ lambda_get_layer_version_policy <- function(LayerName, VersionNumber) {
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `my-function` (name-only), `my-function:v1`
+#'   - **Function name** - `my-function` (name-only), `my-function:v1`
 #'     (with alias).
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:my-function`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:my-function`.
+#'   - **Partial ARN** - `123456789012:function:my-function`.
 #' 
 #' You can append a version number or alias to any of the formats. The
 #' length constraint applies only to the full ARN. If you specify only the
@@ -2700,12 +2700,12 @@ lambda_get_policy <- function(FunctionName, Qualifier = NULL) {
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `my-function`.
+#'   - **Function name** - `my-function`.
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:my-function`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:my-function`.
+#'   - **Partial ARN** - `123456789012:function:my-function`.
 #' 
 #' The length constraint applies only to the full ARN. If you specify only
 #' the function name, it is limited to 64 characters in length.
@@ -2828,29 +2828,29 @@ lambda_get_provisioned_concurrency_config <- function(FunctionName, Qualifier) {
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `my-function` (name-only), `my-function:v1`
+#'   - **Function name** - `my-function` (name-only), `my-function:v1`
 #'     (with alias).
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:my-function`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:my-function`.
+#'   - **Partial ARN** - `123456789012:function:my-function`.
 #' 
 #' You can append a version number or alias to any of the formats. The
 #' length constraint applies only to the full ARN. If you specify only the
 #' function name, it is limited to 64 characters in length.
 #' @param InvocationType Choose from the following options.
 #' 
-#' -   `RequestResponse` (default) - Invoke the function synchronously.
+#'   - `RequestResponse` (default) - Invoke the function synchronously.
 #'     Keep the connection open until the function returns a response or
 #'     times out. The API response includes the function response and
 #'     additional data.
 #' 
-#' -   `Event` - Invoke the function asynchronously. Send events that fail
+#'   - `Event` - Invoke the function asynchronously. Send events that fail
 #'     multiple times to the function's dead-letter queue (if it's
 #'     configured). The API response only includes a status code.
 #' 
-#' -   `DryRun` - Validate parameter values and verify that the user or
+#'   - `DryRun` - Validate parameter values and verify that the user or
 #'     role has permission to invoke the function.
 #' @param LogType Set to `Tail` to include the execution log in the response.
 #' @param ClientContext Up to 3583 bytes of base64-encoded data about the invoking client to
@@ -2937,12 +2937,12 @@ lambda_invoke <- function(FunctionName, InvocationType = NULL, LogType = NULL, C
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `my-function`.
+#'   - **Function name** - `my-function`.
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:my-function`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:my-function`.
+#'   - **Partial ARN** - `123456789012:function:my-function`.
 #' 
 #' The length constraint applies only to the full ARN. If you specify only
 #' the function name, it is limited to 64 characters in length.
@@ -3007,12 +3007,12 @@ lambda_invoke_async <- function(FunctionName, InvokeArgs) {
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `MyFunction`.
+#'   - **Function name** - `MyFunction`.
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:MyFunction`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:MyFunction`.
+#'   - **Partial ARN** - `123456789012:function:MyFunction`.
 #' 
 #' The length constraint applies only to the full ARN. If you specify only
 #' the function name, it is limited to 64 characters in length.
@@ -3087,8 +3087,8 @@ lambda_list_aliases <- function(FunctionName, FunctionVersion = NULL, Marker = N
 #'
 #' @description
 #' Returns a list of [code signing
-#' configurations](https://docs.aws.amazon.com/lambda/latest/dg/). A
-#' request returns up to 10,000 configurations per call. You can use the
+#' configurations](https://docs.aws.amazon.com/lambda/latest/dg/configuration-codesigning.html).
+#' A request returns up to 10,000 configurations per call. You can use the
 #' `MaxItems` parameter to return fewer configurations per call.
 #'
 #' @usage
@@ -3162,28 +3162,28 @@ lambda_list_code_signing_configs <- function(Marker = NULL, MaxItems = NULL) {
 #'
 #' @param EventSourceArn The Amazon Resource Name (ARN) of the event source.
 #' 
-#' -   **Amazon Kinesis** - The ARN of the data stream or a stream
+#'   - **Amazon Kinesis** - The ARN of the data stream or a stream
 #'     consumer.
 #' 
-#' -   **Amazon DynamoDB Streams** - The ARN of the stream.
+#'   - **Amazon DynamoDB Streams** - The ARN of the stream.
 #' 
-#' -   **Amazon Simple Queue Service** - The ARN of the queue.
+#'   - **Amazon Simple Queue Service** - The ARN of the queue.
 #' 
-#' -   **Amazon Managed Streaming for Apache Kafka** - The ARN of the
+#'   - **Amazon Managed Streaming for Apache Kafka** - The ARN of the
 #'     cluster.
 #' @param FunctionName The name of the Lambda function.
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `MyFunction`.
+#'   - **Function name** - `MyFunction`.
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:MyFunction`.
 #' 
-#' -   **Version or Alias ARN** -
+#'   - **Version or Alias ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:MyFunction:PROD`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:MyFunction`.
+#'   - **Partial ARN** - `123456789012:function:MyFunction`.
 #' 
 #' The length constraint applies only to the full ARN. If you specify only
 #' the function name, it's limited to 64 characters in length.
@@ -3309,12 +3309,12 @@ lambda_list_event_source_mappings <- function(EventSourceArn = NULL, FunctionNam
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `my-function`.
+#'   - **Function name** - `my-function`.
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:my-function`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:my-function`.
+#'   - **Partial ARN** - `123456789012:function:my-function`.
 #' 
 #' The length constraint applies only to the full ARN. If you specify only
 #' the function name, it is limited to 64 characters in length.
@@ -3765,12 +3765,12 @@ lambda_list_layers <- function(CompatibleRuntime = NULL, Marker = NULL, MaxItems
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `my-function`.
+#'   - **Function name** - `my-function`.
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:my-function`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:my-function`.
+#'   - **Partial ARN** - `123456789012:function:my-function`.
 #' 
 #' The length constraint applies only to the full ARN. If you specify only
 #' the function name, it is limited to 64 characters in length.
@@ -3909,12 +3909,12 @@ lambda_list_tags <- function(Resource) {
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `MyFunction`.
+#'   - **Function name** - `MyFunction`.
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:MyFunction`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:MyFunction`.
+#'   - **Partial ARN** - `123456789012:function:MyFunction`.
 #' 
 #' The length constraint applies only to the full ARN. If you specify only
 #' the function name, it is limited to 64 characters in length.
@@ -4075,13 +4075,13 @@ lambda_list_versions_by_function <- function(FunctionName, Marker = NULL, MaxIte
 #' [`list_layer_versions`][lambda_list_layer_versions].
 #' @param LicenseInfo The layer's software license. It can be any of the following:
 #' 
-#' -   An [SPDX license identifier](https://spdx.org/licenses/). For
+#'   - An [SPDX license identifier](https://spdx.org/licenses/). For
 #'     example, `MIT`.
 #' 
-#' -   The URL of a license hosted on the internet. For example,
+#'   - The URL of a license hosted on the internet. For example,
 #'     `https://opensource.org/licenses/MIT`.
 #' 
-#' -   The full text of the license.
+#'   - The full text of the license.
 #'
 #' @return
 #' A list with the following syntax:
@@ -4190,12 +4190,12 @@ lambda_publish_layer_version <- function(LayerName, Description = NULL, Content,
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `MyFunction`.
+#'   - **Function name** - `MyFunction`.
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:MyFunction`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:MyFunction`.
+#'   - **Partial ARN** - `123456789012:function:MyFunction`.
 #' 
 #' The length constraint applies only to the full ARN. If you specify only
 #' the function name, it is limited to 64 characters in length.
@@ -4350,12 +4350,12 @@ lambda_publish_version <- function(FunctionName, CodeSha256 = NULL, Description 
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `MyFunction`.
+#'   - **Function name** - `MyFunction`.
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:MyFunction`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:MyFunction`.
+#'   - **Partial ARN** - `123456789012:function:MyFunction`.
 #' 
 #' The length constraint applies only to the full ARN. If you specify only
 #' the function name, it is limited to 64 characters in length.
@@ -4426,12 +4426,12 @@ lambda_put_function_code_signing_config <- function(CodeSigningConfigArn, Functi
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `my-function`.
+#'   - **Function name** - `my-function`.
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:my-function`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:my-function`.
+#'   - **Partial ARN** - `123456789012:function:my-function`.
 #' 
 #' The length constraint applies only to the full ARN. If you specify only
 #' the function name, it is limited to 64 characters in length.
@@ -4518,13 +4518,13 @@ lambda_put_function_concurrency <- function(FunctionName, ReservedConcurrentExec
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `my-function` (name-only), `my-function:v1`
+#'   - **Function name** - `my-function` (name-only), `my-function:v1`
 #'     (with alias).
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:my-function`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:my-function`.
+#'   - **Partial ARN** - `123456789012:function:my-function`.
 #' 
 #' You can append a version number or alias to any of the formats. The
 #' length constraint applies only to the full ARN. If you specify only the
@@ -4538,13 +4538,13 @@ lambda_put_function_concurrency <- function(FunctionName, ReservedConcurrentExec
 #' 
 #' **Destinations**
 #' 
-#' -   **Function** - The Amazon Resource Name (ARN) of a Lambda function.
+#'   - **Function** - The Amazon Resource Name (ARN) of a Lambda function.
 #' 
-#' -   **Queue** - The ARN of an SQS queue.
+#'   - **Queue** - The ARN of an SQS queue.
 #' 
-#' -   **Topic** - The ARN of an SNS topic.
+#'   - **Topic** - The ARN of an SNS topic.
 #' 
-#' -   **Event Bus** - The ARN of an Amazon EventBridge event bus.
+#'   - **Event Bus** - The ARN of an Amazon EventBridge event bus.
 #'
 #' @return
 #' A list with the following syntax:
@@ -4631,12 +4631,12 @@ lambda_put_function_event_invoke_config <- function(FunctionName, Qualifier = NU
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `my-function`.
+#'   - **Function name** - `my-function`.
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:my-function`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:my-function`.
+#'   - **Partial ARN** - `123456789012:function:my-function`.
 #' 
 #' The length constraint applies only to the full ARN. If you specify only
 #' the function name, it is limited to 64 characters in length.
@@ -4777,13 +4777,13 @@ lambda_remove_layer_version_permission <- function(LayerName, VersionNumber, Sta
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `my-function` (name-only), `my-function:v1`
+#'   - **Function name** - `my-function` (name-only), `my-function:v1`
 #'     (with alias).
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:my-function`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:my-function`.
+#'   - **Partial ARN** - `123456789012:function:my-function`.
 #' 
 #' You can append a version number or alias to any of the formats. The
 #' length constraint applies only to the full ARN. If you specify only the
@@ -4969,12 +4969,12 @@ lambda_untag_resource <- function(Resource, TagKeys) {
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `MyFunction`.
+#'   - **Function name** - `MyFunction`.
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:MyFunction`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:MyFunction`.
+#'   - **Partial ARN** - `123456789012:function:MyFunction`.
 #' 
 #' The length constraint applies only to the full ARN. If you specify only
 #' the function name, it is limited to 64 characters in length.
@@ -5140,21 +5140,21 @@ lambda_update_code_signing_config <- function(CodeSigningConfigArn, Description 
 #' The following error handling options are only available for stream
 #' sources (DynamoDB and Kinesis):
 #' 
-#' -   `BisectBatchOnFunctionError` - If the function returns an error,
+#'   - `BisectBatchOnFunctionError` - If the function returns an error,
 #'     split the batch in two and retry.
 #' 
-#' -   `DestinationConfig` - Send discarded records to an Amazon SQS queue
+#'   - `DestinationConfig` - Send discarded records to an Amazon SQS queue
 #'     or Amazon SNS topic.
 #' 
-#' -   `MaximumRecordAgeInSeconds` - Discard records older than the
+#'   - `MaximumRecordAgeInSeconds` - Discard records older than the
 #'     specified age. The default value is infinite (-1). When set to
 #'     infinite (-1), failed records are retried until the record expires
 #' 
-#' -   `MaximumRetryAttempts` - Discard records after the specified number
+#'   - `MaximumRetryAttempts` - Discard records after the specified number
 #'     of retries. The default value is infinite (-1). When set to infinite
 #'     (-1), failed records are retried until the record expires.
 #' 
-#' -   `ParallelizationFactor` - Process multiple batches from each shard
+#'   - `ParallelizationFactor` - Process multiple batches from each shard
 #'     concurrently.
 #'
 #' @usage
@@ -5169,15 +5169,15 @@ lambda_update_code_signing_config <- function(CodeSigningConfigArn, Description 
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `MyFunction`.
+#'   - **Function name** - `MyFunction`.
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:MyFunction`.
 #' 
-#' -   **Version or Alias ARN** -
+#'   - **Version or Alias ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:MyFunction:PROD`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:MyFunction`.
+#'   - **Partial ARN** - `123456789012:function:MyFunction`.
 #' 
 #' The length constraint applies only to the full ARN. If you specify only
 #' the function name, it's limited to 64 characters in length.
@@ -5185,17 +5185,17 @@ lambda_update_code_signing_config <- function(CodeSigningConfigArn, Description 
 #' polling and invocation.
 #' @param BatchSize The maximum number of items to retrieve in a single batch.
 #' 
-#' -   **Amazon Kinesis** - Default 100. Max 10,000.
+#'   - **Amazon Kinesis** - Default 100. Max 10,000.
 #' 
-#' -   **Amazon DynamoDB Streams** - Default 100. Max 1,000.
+#'   - **Amazon DynamoDB Streams** - Default 100. Max 1,000.
 #' 
-#' -   **Amazon Simple Queue Service** - Default 10. For standard queues
+#'   - **Amazon Simple Queue Service** - Default 10. For standard queues
 #'     the max is 10,000. For FIFO queues the max is 10.
 #' 
-#' -   **Amazon Managed Streaming for Apache Kafka** - Default 100. Max
+#'   - **Amazon Managed Streaming for Apache Kafka** - Default 100. Max
 #'     10,000.
 #' 
-#' -   **Self-Managed Apache Kafka** - Default 100. Max 10,000.
+#'   - **Self-Managed Apache Kafka** - Default 100. Max 10,000.
 #' @param MaximumBatchingWindowInSeconds (Streams and SQS standard queues) The maximum amount of time to gather
 #' records before invoking the function, in seconds.
 #' @param DestinationConfig (Streams) An Amazon SQS queue or Amazon SNS topic destination for
@@ -5359,12 +5359,12 @@ lambda_update_event_source_mapping <- function(UUID, FunctionName = NULL, Enable
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `my-function`.
+#'   - **Function name** - `my-function`.
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:my-function`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:my-function`.
+#'   - **Partial ARN** - `123456789012:function:my-function`.
 #' 
 #' The length constraint applies only to the full ARN. If you specify only
 #' the function name, it is limited to 64 characters in length.
@@ -5551,12 +5551,12 @@ lambda_update_function_code <- function(FunctionName, ZipFile = NULL, S3Bucket =
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `my-function`.
+#'   - **Function name** - `my-function`.
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:my-function`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:my-function`.
+#'   - **Partial ARN** - `123456789012:function:my-function`.
 #' 
 #' The length constraint applies only to the full ARN. If you specify only
 #' the function name, it is limited to 64 characters in length.
@@ -5784,13 +5784,13 @@ lambda_update_function_configuration <- function(FunctionName, Role = NULL, Hand
 #' 
 #' **Name formats**
 #' 
-#' -   **Function name** - `my-function` (name-only), `my-function:v1`
+#'   - **Function name** - `my-function` (name-only), `my-function:v1`
 #'     (with alias).
 #' 
-#' -   **Function ARN** -
+#'   - **Function ARN** -
 #'     `arn:aws:lambda:us-west-2:123456789012:function:my-function`.
 #' 
-#' -   **Partial ARN** - `123456789012:function:my-function`.
+#'   - **Partial ARN** - `123456789012:function:my-function`.
 #' 
 #' You can append a version number or alias to any of the formats. The
 #' length constraint applies only to the full ARN. If you specify only the
@@ -5804,13 +5804,13 @@ lambda_update_function_configuration <- function(FunctionName, Role = NULL, Hand
 #' 
 #' **Destinations**
 #' 
-#' -   **Function** - The Amazon Resource Name (ARN) of a Lambda function.
+#'   - **Function** - The Amazon Resource Name (ARN) of a Lambda function.
 #' 
-#' -   **Queue** - The ARN of an SQS queue.
+#'   - **Queue** - The ARN of an SQS queue.
 #' 
-#' -   **Topic** - The ARN of an SNS topic.
+#'   - **Topic** - The ARN of an SNS topic.
 #' 
-#' -   **Event Bus** - The ARN of an Amazon EventBridge event bus.
+#'   - **Event Bus** - The ARN of an Amazon EventBridge event bus.
 #'
 #' @return
 #' A list with the following syntax:

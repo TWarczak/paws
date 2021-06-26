@@ -13,8 +13,8 @@ retrieve.}
 
 \item{StackStatusFilter}{Stack status to use as a filter. Specify one or more stack status codes
 to list only stacks with the specified status codes. For a complete list
-of stack status codes, see the \code{StackStatus} parameter of the Stack data
-type.}
+of stack status codes, see the \code{StackStatus} parameter of the
+<span>Stack</span> data type.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

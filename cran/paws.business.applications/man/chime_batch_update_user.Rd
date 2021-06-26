@@ -25,9 +25,9 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Updates user details within the UpdateUserRequestItem object for up to
-20 users for the specified Amazon Chime account. Currently, only
-\code{LicenseType} updates are supported for this action.
+Updates user details within the <span>UpdateUserRequestItem</span>
+object for up to 20 users for the specified Amazon Chime account.
+Currently, only \code{LicenseType} updates are supported for this action.
 }
 \section{Request syntax}{
 \preformatted{svc$batch_update_user(

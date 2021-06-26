@@ -22,7 +22,7 @@ pipe), for example: \code{"/folder1|/folder2"}}
 to a destination location. You can configure your task to execute
 hourly, daily, weekly or on specific days of the week. You control when
 in the day or hour you want the task to execute. The time you specify is
-UTC time. For more information, see task-scheduling.}
+UTC time. For more information, see <span>task-scheduling</span>.}
 
 \item{Name}{The name of the task to update.}
 

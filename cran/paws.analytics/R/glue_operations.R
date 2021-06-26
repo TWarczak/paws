@@ -1982,14 +1982,14 @@ glue_create_database <- function(CatalogId = NULL, DatabaseInput) {
 #' @param WorkerType The type of predefined worker that is allocated to the development
 #' endpoint. Accepts a value of Standard, G.1X, or G.2X.
 #' 
-#' -   For the `Standard` worker type, each worker provides 4 vCPU, 16 GB
+#'   - For the `Standard` worker type, each worker provides 4 vCPU, 16 GB
 #'     of memory and a 50GB disk, and 2 executors per worker.
 #' 
-#' -   For the `G.1X` worker type, each worker maps to 1 DPU (4 vCPU, 16 GB
+#'   - For the `G.1X` worker type, each worker maps to 1 DPU (4 vCPU, 16 GB
 #'     of memory, 64 GB disk), and provides 1 executor per worker. We
 #'     recommend this worker type for memory-intensive jobs.
 #' 
-#' -   For the `G.2X` worker type, each worker maps to 2 DPU (8 vCPU, 32 GB
+#'   - For the `G.2X` worker type, each worker maps to 2 DPU (8 vCPU, 32 GB
 #'     of memory, 128 GB disk), and provides 1 executor per worker. We
 #'     recommend this worker type for memory-intensive jobs.
 #' 
@@ -2177,11 +2177,11 @@ glue_create_dev_endpoint <- function(EndpointName, RoleArn, SecurityGroupIds = N
 #' The value that can be allocated for `MaxCapacity` depends on whether you
 #' are running a Python shell job or an Apache Spark ETL job:
 #' 
-#' -   When you specify a Python shell job
+#'   - When you specify a Python shell job
 #'     (`JobCommand.Name`="pythonshell"), you can allocate either 0.0625 or
 #'     1 DPU. The default is 0.0625 DPU.
 #' 
-#' -   When you specify an Apache Spark ETL job
+#'   - When you specify an Apache Spark ETL job
 #'     (`JobCommand.Name`="glueetl") or Apache Spark streaming ETL job
 #'     (`JobCommand.Name`="gluestreaming"), you can allocate from 2 to 100
 #'     DPUs. The default is 10 DPUs. This job type cannot have a fractional
@@ -2212,14 +2212,14 @@ glue_create_dev_endpoint <- function(EndpointName, RoleArn, SecurityGroupIds = N
 #' @param WorkerType The type of predefined worker that is allocated when a job runs. Accepts
 #' a value of Standard, G.1X, or G.2X.
 #' 
-#' -   For the `Standard` worker type, each worker provides 4 vCPU, 16 GB
+#'   - For the `Standard` worker type, each worker provides 4 vCPU, 16 GB
 #'     of memory and a 50GB disk, and 2 executors per worker.
 #' 
-#' -   For the `G.1X` worker type, each worker maps to 1 DPU (4 vCPU, 16 GB
+#'   - For the `G.1X` worker type, each worker maps to 1 DPU (4 vCPU, 16 GB
 #'     of memory, 64 GB disk), and provides 1 executor per worker. We
 #'     recommend this worker type for memory-intensive jobs.
 #' 
-#' -   For the `G.2X` worker type, each worker maps to 2 DPU (8 vCPU, 32 GB
+#'   - For the `G.2X` worker type, each worker maps to 2 DPU (8 vCPU, 32 GB
 #'     of memory, 128 GB disk), and provides 1 executor per worker. We
 #'     recommend this worker type for memory-intensive jobs.
 #'
@@ -2328,12 +2328,12 @@ glue_create_job <- function(Name, Description = NULL, LogUri = NULL, Role, Execu
 #' permissions to AWS Glue resources, and Amazon S3 permissions required by
 #' the transform.
 #' 
-#' -   This role needs AWS Glue service role permissions to allow access to
+#'   - This role needs AWS Glue service role permissions to allow access to
 #'     resources in AWS Glue. See [Attach a Policy to IAM Users That Access
 #'     AWS
 #'     Glue](https://docs.aws.amazon.com/glue/latest/dg/attach-policy-iam-user.html).
 #' 
-#' -   This role needs permission to your Amazon Simple Storage Service
+#'   - This role needs permission to your Amazon Simple Storage Service
 #'     (Amazon S3) sources, targets, temporary directory, scripts, and any
 #'     libraries used by the task run for this transform.
 #' @param GlueVersion This value determines which version of AWS Glue this machine learning
@@ -2352,16 +2352,16 @@ glue_create_job <- function(Name, Description = NULL, LogUri = NULL, Role, Execu
 #' `MaxCapacity` is a mutually exclusive option with `NumberOfWorkers` and
 #' `WorkerType`.
 #' 
-#' -   If either `NumberOfWorkers` or `WorkerType` is set, then
+#'   - If either `NumberOfWorkers` or `WorkerType` is set, then
 #'     `MaxCapacity` cannot be set.
 #' 
-#' -   If `MaxCapacity` is set then neither `NumberOfWorkers` or
+#'   - If `MaxCapacity` is set then neither `NumberOfWorkers` or
 #'     `WorkerType` can be set.
 #' 
-#' -   If `WorkerType` is set, then `NumberOfWorkers` is required (and vice
+#'   - If `WorkerType` is set, then `NumberOfWorkers` is required (and vice
 #'     versa).
 #' 
-#' -   `MaxCapacity` and `NumberOfWorkers` must both be at least 1.
+#'   - `MaxCapacity` and `NumberOfWorkers` must both be at least 1.
 #' 
 #' When the `WorkerType` field is set to a value other than `Standard`, the
 #' `MaxCapacity` field is set automatically and becomes read-only.
@@ -2371,28 +2371,28 @@ glue_create_job <- function(Name, Description = NULL, LogUri = NULL, Role, Execu
 #' @param WorkerType The type of predefined worker that is allocated when this task runs.
 #' Accepts a value of Standard, G.1X, or G.2X.
 #' 
-#' -   For the `Standard` worker type, each worker provides 4 vCPU, 16 GB
+#'   - For the `Standard` worker type, each worker provides 4 vCPU, 16 GB
 #'     of memory and a 50GB disk, and 2 executors per worker.
 #' 
-#' -   For the `G.1X` worker type, each worker provides 4 vCPU, 16 GB of
+#'   - For the `G.1X` worker type, each worker provides 4 vCPU, 16 GB of
 #'     memory and a 64GB disk, and 1 executor per worker.
 #' 
-#' -   For the `G.2X` worker type, each worker provides 8 vCPU, 32 GB of
+#'   - For the `G.2X` worker type, each worker provides 8 vCPU, 32 GB of
 #'     memory and a 128GB disk, and 1 executor per worker.
 #' 
 #' `MaxCapacity` is a mutually exclusive option with `NumberOfWorkers` and
 #' `WorkerType`.
 #' 
-#' -   If either `NumberOfWorkers` or `WorkerType` is set, then
+#'   - If either `NumberOfWorkers` or `WorkerType` is set, then
 #'     `MaxCapacity` cannot be set.
 #' 
-#' -   If `MaxCapacity` is set then neither `NumberOfWorkers` or
+#'   - If `MaxCapacity` is set then neither `NumberOfWorkers` or
 #'     `WorkerType` can be set.
 #' 
-#' -   If `WorkerType` is set, then `NumberOfWorkers` is required (and vice
+#'   - If `WorkerType` is set, then `NumberOfWorkers` is required (and vice
 #'     versa).
 #' 
-#' -   `MaxCapacity` and `NumberOfWorkers` must both be at least 1.
+#'   - `MaxCapacity` and `NumberOfWorkers` must both be at least 1.
 #' @param NumberOfWorkers The number of workers of a defined `workerType` that are allocated when
 #' this task runs.
 #' 
@@ -2742,8 +2742,8 @@ glue_create_registry <- function(RegistryName, Description = NULL, Tags = NULL) 
 #'
 #' @param RegistryId This is a wrapper shape to contain the registry identity fields. If this
 #' is not provided, the default registry will be used. The ARN format for
-#' the same will be:
-#' `arn:aws:glue:us-east-2:<customer id>:registry/default-registry:random-5-letter-id`.
+#' the same will be: `arn:aws:glue:us-east-2:<customer
+#' id>:registry/default-registry:random-5-letter-id`.
 #' @param SchemaName &#91;required&#93; Name of the schema to be created of max length of 255, and may only
 #' contain letters, numbers, hyphen, underscore, dollar sign, or hash mark.
 #' No whitespace.
@@ -2751,44 +2751,44 @@ glue_create_registry <- function(RegistryName, Description = NULL, Tags = NULL) 
 #' supported.
 #' @param Compatibility The compatibility mode of the schema. The possible values are:
 #' 
-#' -   *NONE*: No compatibility mode applies. You can use this choice in
+#'   - *NONE*: No compatibility mode applies. You can use this choice in
 #'     development scenarios or if you do not know the compatibility mode
 #'     that you want to apply to schemas. Any new version added will be
 #'     accepted without undergoing a compatibility check.
 #' 
-#' -   *DISABLED*: This compatibility choice prevents versioning for a
+#'   - *DISABLED*: This compatibility choice prevents versioning for a
 #'     particular schema. You can use this choice to prevent future
 #'     versioning of a schema.
 #' 
-#' -   *BACKWARD*: This compatibility choice is recommended as it allows
+#'   - *BACKWARD*: This compatibility choice is recommended as it allows
 #'     data receivers to read both the current and one previous schema
 #'     version. This means that for instance, a new schema version cannot
 #'     drop data fields or change the type of these fields, so they can't
 #'     be read by readers using the previous version.
 #' 
-#' -   *BACKWARD_ALL*: This compatibility choice allows data receivers to
+#'   - *BACKWARD_ALL*: This compatibility choice allows data receivers to
 #'     read both the current and all previous schema versions. You can use
 #'     this choice when you need to delete fields or add optional fields,
 #'     and check compatibility against all previous schema versions.
 #' 
-#' -   *FORWARD*: This compatibility choice allows data receivers to read
+#'   - *FORWARD*: This compatibility choice allows data receivers to read
 #'     both the current and one next schema version, but not necessarily
 #'     later versions. You can use this choice when you need to add fields
 #'     or delete optional fields, but only check compatibility against the
 #'     last schema version.
 #' 
-#' -   *FORWARD_ALL*: This compatibility choice allows data receivers to
+#'   - *FORWARD_ALL*: This compatibility choice allows data receivers to
 #'     read written by producers of any new registered schema. You can use
 #'     this choice when you need to add fields or delete optional fields,
 #'     and check compatibility against all previous schema versions.
 #' 
-#' -   *FULL*: This compatibility choice allows data receivers to read data
+#'   - *FULL*: This compatibility choice allows data receivers to read data
 #'     written by producers using the previous or next version of the
 #'     schema, but not necessarily earlier or later versions. You can use
 #'     this choice when you need to add or remove optional fields, but only
 #'     check compatibility against the last schema version.
 #' 
-#' -   *FULL_ALL*: This compatibility choice allows data receivers to read
+#'   - *FULL_ALL*: This compatibility choice allows data receivers to read
 #'     data written by producers using all previous schema versions. You
 #'     can use this choice when you need to add or remove optional fields,
 #'     and check compatibility against all previous schema versions.
@@ -4085,9 +4085,9 @@ glue_delete_schema <- function(SchemaId) {
 #' Resource Name (ARN).
 #' @param Versions &#91;required&#93; A version range may be supplied which may be of the format:
 #' 
-#' -   a single version number, 5
+#'   - a single version number, 5
 #' 
-#' -   a range, 5-8 : deletes versions 5, 6, 7, 8
+#'   - a range, 5-8 : deletes versions 5, 6, 7, 8
 #'
 #' @return
 #' A list with the following syntax:
@@ -5585,10 +5585,10 @@ glue_get_database <- function(CatalogId = NULL, Name) {
 #' @param ResourceShareType Allows you to specify that you want to list the databases shared with
 #' your account. The allowable values are `FOREIGN` or `ALL`.
 #' 
-#' -   If set to `FOREIGN`, will list the databases shared with your
+#'   - If set to `FOREIGN`, will list the databases shared with your
 #'     account.
 #' 
-#' -   If set to `ALL`, will list the databases shared with your account,
+#'   - If set to `ALL`, will list the databases shared with your account,
 #'     as well as the databases in yor local account.
 #'
 #' @return
@@ -7100,7 +7100,7 @@ glue_get_partition_indexes <- function(CatalogId = NULL, DatabaseName, TableName
 #' *Operators*: The following are the operators that you can use in the
 #' `Expression` API call:
 #' 
-#' ### =
+#' ### \=
 #' 
 #' Checks whether the values of the two operands are equal; if yes, then
 #' the condition becomes true.
@@ -7109,40 +7109,40 @@ glue_get_partition_indexes <- function(CatalogId = NULL, DatabaseName, TableName
 #' 
 #' (a = b) is not true.
 #' 
-#' ### &lt; &gt;
+#' ### \< \>
 #' 
 #' Checks whether the values of two operands are equal; if the values are
 #' not equal, then the condition becomes true.
 #' 
-#' Example: (a &lt; &gt; b) is true.
+#' Example: (a \< \> b) is true.
 #' 
-#' ### &gt;
+#' ### \>
 #' 
 #' Checks whether the value of the left operand is greater than the value
 #' of the right operand; if yes, then the condition becomes true.
 #' 
-#' Example: (a &gt; b) is not true.
+#' Example: (a \> b) is not true.
 #' 
-#' ### &lt;
+#' ### \<
 #' 
 #' Checks whether the value of the left operand is less than the value of
 #' the right operand; if yes, then the condition becomes true.
 #' 
-#' Example: (a &lt; b) is true.
+#' Example: (a \< b) is true.
 #' 
-#' ### &gt;=
+#' ### \>=
 #' 
 #' Checks whether the value of the left operand is greater than or equal to
 #' the value of the right operand; if yes, then the condition becomes true.
 #' 
-#' Example: (a &gt;= b) is not true.
+#' Example: (a \>= b) is not true.
 #' 
-#' ### &lt;=
+#' ### \<=
 #' 
 #' Checks whether the value of the left operand is less than or equal to
 #' the value of the right operand; if yes, then the condition becomes true.
 #' 
-#' Example: (a &lt;= b) is true.
+#' Example: (a \<= b) is true.
 #' 
 #' ### AND, OR, IN, BETWEEN, LIKE, NOT, IS NULL
 #' 
@@ -7151,23 +7151,23 @@ glue_get_partition_indexes <- function(CatalogId = NULL, DatabaseName, TableName
 #' *Supported Partition Key Types*: The following are the supported
 #' partition keys.
 #' 
-#' -   `string`
+#'   - `string`
 #' 
-#' -   `date`
+#'   - `date`
 #' 
-#' -   `timestamp`
+#'   - `timestamp`
 #' 
-#' -   `int`
+#'   - `int`
 #' 
-#' -   `bigint`
+#'   - `bigint`
 #' 
-#' -   `long`
+#'   - `long`
 #' 
-#' -   `tinyint`
+#'   - `tinyint`
 #' 
-#' -   `smallint`
+#'   - `smallint`
 #' 
-#' -   `decimal`
+#'   - `decimal`
 #' 
 #' If an invalid type is encountered, an exception is thrown.
 #' 
@@ -7322,11 +7322,11 @@ glue_get_partitions <- function(CatalogId = NULL, DatabaseName, TableName, Expre
 #' 
 #' Currently, these key-value pairs are supported:
 #' 
-#' -   `inferSchema`  —  Specifies whether to set `inferSchema` to true or
+#'   - `inferSchema`  —  Specifies whether to set `inferSchema` to true or
 #'     false for the default script generated by an AWS Glue job. For
 #'     example, to set `inferSchema` to true, pass the following key value
 #'     pair:
-#' 
+#'     
 #'     `--additional-plan-options-map '{"inferSchema":"true"}'`
 #'
 #' @return
@@ -7597,11 +7597,11 @@ glue_get_resource_policy <- function(ResourceArn = NULL) {
 #' @param SchemaId &#91;required&#93; This is a wrapper structure to contain schema identity fields. The
 #' structure contains:
 #' 
-#' -   SchemaId$SchemaArn: The Amazon Resource Name (ARN) of the schema.
+#'   - SchemaId$SchemaArn: The Amazon Resource Name (ARN) of the schema.
 #'     Either `SchemaArn` or `SchemaName` and `RegistryName` has to be
 #'     provided.
 #' 
-#' -   SchemaId$SchemaName: The name of the schema. Either `SchemaArn` or
+#'   - SchemaId$SchemaName: The name of the schema. Either `SchemaArn` or
 #'     `SchemaName` and `RegistryName` has to be provided.
 #'
 #' @return
@@ -7671,10 +7671,10 @@ glue_get_schema <- function(SchemaId) {
 #' @param SchemaId &#91;required&#93; This is a wrapper structure to contain schema identity fields. The
 #' structure contains:
 #' 
-#' -   SchemaId$SchemaArn: The Amazon Resource Name (ARN) of the schema.
+#'   - SchemaId$SchemaArn: The Amazon Resource Name (ARN) of the schema.
 #'     One of `SchemaArn` or `SchemaName` has to be provided.
 #' 
-#' -   SchemaId$SchemaName: The name of the schema. One of `SchemaArn` or
+#'   - SchemaId$SchemaName: The name of the schema. One of `SchemaArn` or
 #'     `SchemaName` has to be provided.
 #' @param SchemaDefinition &#91;required&#93; The definition of the schema for which schema details are required.
 #'
@@ -7736,11 +7736,11 @@ glue_get_schema_by_definition <- function(SchemaId, SchemaDefinition) {
 #' @param SchemaId This is a wrapper structure to contain schema identity fields. The
 #' structure contains:
 #' 
-#' -   SchemaId$SchemaArn: The Amazon Resource Name (ARN) of the schema.
+#'   - SchemaId$SchemaArn: The Amazon Resource Name (ARN) of the schema.
 #'     Either `SchemaArn` or `SchemaName` and `RegistryName` has to be
 #'     provided.
 #' 
-#' -   SchemaId$SchemaName: The name of the schema. Either `SchemaArn` or
+#'   - SchemaId$SchemaName: The name of the schema. Either `SchemaArn` or
 #'     `SchemaName` and `RegistryName` has to be provided.
 #' @param SchemaVersionId The `SchemaVersionId` of the schema version. This field is required for
 #' fetching by schema ID. Either this or the `SchemaId` wrapper has to be
@@ -7814,10 +7814,10 @@ glue_get_schema_version <- function(SchemaId = NULL, SchemaVersionId = NULL, Sch
 #' @param SchemaId &#91;required&#93; This is a wrapper structure to contain schema identity fields. The
 #' structure contains:
 #' 
-#' -   SchemaId$SchemaArn: The Amazon Resource Name (ARN) of the schema.
+#'   - SchemaId$SchemaArn: The Amazon Resource Name (ARN) of the schema.
 #'     One of `SchemaArn` or `SchemaName` has to be provided.
 #' 
-#' -   SchemaId$SchemaName: The name of the schema. One of `SchemaArn` or
+#'   - SchemaId$SchemaName: The name of the schema. One of `SchemaArn` or
 #'     `SchemaName` has to be provided.
 #' @param FirstSchemaVersionNumber &#91;required&#93; The first of the two schema versions to be compared.
 #' @param SecondSchemaVersionNumber &#91;required&#93; The second of the two schema versions to be compared.
@@ -10123,11 +10123,11 @@ glue_list_registries <- function(MaxResults = NULL, NextToken = NULL) {
 #' @param SchemaId &#91;required&#93; This is a wrapper structure to contain schema identity fields. The
 #' structure contains:
 #' 
-#' -   SchemaId$SchemaArn: The Amazon Resource Name (ARN) of the schema.
+#'   - SchemaId$SchemaArn: The Amazon Resource Name (ARN) of the schema.
 #'     Either `SchemaArn` or `SchemaName` and `RegistryName` has to be
 #'     provided.
 #' 
-#' -   SchemaId$SchemaName: The name of the schema. Either `SchemaArn` or
+#'   - SchemaId$SchemaName: The name of the schema. Either `SchemaArn` or
 #'     `SchemaName` and `RegistryName` has to be provided.
 #' @param MaxResults Maximum number of results required per page. If the value is not
 #' supplied, this will be defaulted to 25 per page.
@@ -10717,11 +10717,11 @@ glue_query_schema_version_metadata <- function(SchemaId = NULL, SchemaVersionNum
 #' @param SchemaId &#91;required&#93; This is a wrapper structure to contain schema identity fields. The
 #' structure contains:
 #' 
-#' -   SchemaId$SchemaArn: The Amazon Resource Name (ARN) of the schema.
+#'   - SchemaId$SchemaArn: The Amazon Resource Name (ARN) of the schema.
 #'     Either `SchemaArn` or `SchemaName` and `RegistryName` has to be
 #'     provided.
 #' 
-#' -   SchemaId$SchemaName: The name of the schema. Either `SchemaArn` or
+#'   - SchemaId$SchemaName: The name of the schema. Either `SchemaArn` or
 #'     `SchemaName` and `RegistryName` has to be provided.
 #' @param SchemaDefinition &#91;required&#93; The schema definition using the `DataFormat` setting for the
 #' `SchemaName`.
@@ -10973,7 +10973,7 @@ glue_resume_workflow_run <- function(Name, RunId, NodeIds) {
 #' glue_search_tables(CatalogId, NextToken, Filters, SearchText,
 #'   SortCriteria, MaxResults, ResourceShareType)
 #'
-#' @param CatalogId A unique identifier, consisting of ` account_id `.
+#' @param CatalogId A unique identifier, consisting of `  account_id  `.
 #' @param NextToken A continuation token, included if this is a continuation call.
 #' @param Filters A list of key-value pairs, and a comparator used to filter the search
 #' results. Returns all entities matching the predicate.
@@ -10997,10 +10997,10 @@ glue_resume_workflow_run <- function(Name, RunId, NodeIds) {
 #' @param ResourceShareType Allows you to specify that you want to search the tables shared with
 #' your account. The allowable values are `FOREIGN` or `ALL`.
 #' 
-#' -   If set to `FOREIGN`, will search the tables shared with your
+#'   - If set to `FOREIGN`, will search the tables shared with your
 #'     account.
 #' 
-#' -   If set to `ALL`, will search the tables shared with your account, as
+#'   - If set to `ALL`, will search the tables shared with your account, as
 #'     well as the tables in yor local account.
 #'
 #' @return
@@ -11420,8 +11420,8 @@ glue_start_import_labels_task_run <- function(TransformId, InputS3Path, ReplaceA
 #' The number of AWS Glue data processing units (DPUs) to allocate to this
 #' JobRun. From 2 to 100 DPUs can be allocated; the default is 10. A DPU is
 #' a relative measure of processing power that consists of 4 vCPUs of
-#' compute capacity and 16 GB of memory. For more information, see the AWS
-#' Glue pricing page.
+#' compute capacity and 16 GB of memory. For more information, see the
+#' <span>AWS Glue pricing page</span>.
 #' @param Timeout The `JobRun` timeout in minutes. This is the maximum time that a job run
 #' can consume resources before it is terminated and enters `TIMEOUT`
 #' status. The default is 2,880 minutes (48 hours). This overrides the
@@ -11429,18 +11429,18 @@ glue_start_import_labels_task_run <- function(TransformId, InputS3Path, ReplaceA
 #' @param MaxCapacity The number of AWS Glue data processing units (DPUs) that can be
 #' allocated when this job runs. A DPU is a relative measure of processing
 #' power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
-#' For more information, see the AWS Glue pricing page.
+#' For more information, see the <span>AWS Glue pricing page</span>.
 #' 
 #' Do not set `Max Capacity` if using `WorkerType` and `NumberOfWorkers`.
 #' 
 #' The value that can be allocated for `MaxCapacity` depends on whether you
 #' are running a Python shell job, or an Apache Spark ETL job:
 #' 
-#' -   When you specify a Python shell job
+#'   - When you specify a Python shell job
 #'     (`JobCommand.Name`="pythonshell"), you can allocate either 0.0625 or
 #'     1 DPU. The default is 0.0625 DPU.
 #' 
-#' -   When you specify an Apache Spark ETL job
+#'   - When you specify an Apache Spark ETL job
 #'     (`JobCommand.Name`="glueetl"), you can allocate from 2 to 100 DPUs.
 #'     The default is 10 DPUs. This job type cannot have a fractional DPU
 #'     allocation.
@@ -11450,13 +11450,13 @@ glue_start_import_labels_task_run <- function(TransformId, InputS3Path, ReplaceA
 #' @param WorkerType The type of predefined worker that is allocated when a job runs. Accepts
 #' a value of Standard, G.1X, or G.2X.
 #' 
-#' -   For the `Standard` worker type, each worker provides 4 vCPU, 16 GB
+#'   - For the `Standard` worker type, each worker provides 4 vCPU, 16 GB
 #'     of memory and a 50GB disk, and 2 executors per worker.
 #' 
-#' -   For the `G.1X` worker type, each worker provides 4 vCPU, 16 GB of
+#'   - For the `G.1X` worker type, each worker provides 4 vCPU, 16 GB of
 #'     memory and a 64GB disk, and 1 executor per worker.
 #' 
-#' -   For the `G.2X` worker type, each worker provides 8 vCPU, 32 GB of
+#'   - For the `G.2X` worker type, each worker provides 8 vCPU, 32 GB of
 #'     memory and a 128GB disk, and 1 executor per worker.
 #' @param NumberOfWorkers The number of workers of a defined `workerType` that are allocated when
 #' a job runs.
@@ -12765,11 +12765,11 @@ glue_update_database <- function(CatalogId = NULL, Name, DatabaseInput) {
 #' 
 #' Valid arguments are:
 #' 
-#' -   `"--enable-glue-datacatalog": ""`
+#'   - `"--enable-glue-datacatalog": ""`
 #' 
-#' -   `"GLUE_PYTHON_VERSION": "3"`
+#'   - `"GLUE_PYTHON_VERSION": "3"`
 #' 
-#' -   `"GLUE_PYTHON_VERSION": "2"`
+#'   - `"GLUE_PYTHON_VERSION": "2"`
 #' 
 #' You can specify a version of Python support for development endpoints by
 #' using the `Arguments` parameter in the
@@ -12948,13 +12948,13 @@ glue_update_job <- function(JobName, JobUpdate) {
 #' @param WorkerType The type of predefined worker that is allocated when this task runs.
 #' Accepts a value of Standard, G.1X, or G.2X.
 #' 
-#' -   For the `Standard` worker type, each worker provides 4 vCPU, 16 GB
+#'   - For the `Standard` worker type, each worker provides 4 vCPU, 16 GB
 #'     of memory and a 50GB disk, and 2 executors per worker.
 #' 
-#' -   For the `G.1X` worker type, each worker provides 4 vCPU, 16 GB of
+#'   - For the `G.1X` worker type, each worker provides 4 vCPU, 16 GB of
 #'     memory and a 64GB disk, and 1 executor per worker.
 #' 
-#' -   For the `G.2X` worker type, each worker provides 8 vCPU, 32 GB of
+#'   - For the `G.2X` worker type, each worker provides 8 vCPU, 32 GB of
 #'     memory and a 128GB disk, and 1 executor per worker.
 #' @param NumberOfWorkers The number of workers of a defined `workerType` that are allocated when
 #' this task runs.
@@ -13225,10 +13225,10 @@ glue_update_registry <- function(RegistryId, Description) {
 #' @param SchemaId &#91;required&#93; This is a wrapper structure to contain schema identity fields. The
 #' structure contains:
 #' 
-#' -   SchemaId$SchemaArn: The Amazon Resource Name (ARN) of the schema.
+#'   - SchemaId$SchemaArn: The Amazon Resource Name (ARN) of the schema.
 #'     One of `SchemaArn` or `SchemaName` has to be provided.
 #' 
-#' -   SchemaId$SchemaName: The name of the schema. One of `SchemaArn` or
+#'   - SchemaId$SchemaName: The name of the schema. One of `SchemaArn` or
 #'     `SchemaName` has to be provided.
 #' @param SchemaVersionNumber Version number required for check pointing. One of `VersionNumber` or
 #' `Compatibility` has to be provided.

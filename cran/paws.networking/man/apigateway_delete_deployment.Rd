@@ -7,16 +7,19 @@
 apigateway_delete_deployment(restApiId, deploymentId)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
-\item{deploymentId}{[required] [Required] The identifier of the Deployment resource to delete.}
+\item{deploymentId}{[required] [Required] The identifier of the <span>Deployment</span> resource to
+delete.}
 }
 \value{
 An empty list.
 }
 \description{
-Deletes a Deployment resource. Deleting a deployment will only succeed
-if there are no Stage resources associated with it.
+Deletes a <span>Deployment</span> resource. Deleting a deployment will
+only succeed if there are no <span>Stage</span> resources associated
+with it.
 }
 \section{Request syntax}{
 \preformatted{svc$delete_deployment(

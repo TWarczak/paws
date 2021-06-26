@@ -88,10 +88,10 @@ NULL
 #' account. If the user is in the same account as the role, then you can do
 #' either of the following:
 #' 
-#' -   Attach a policy to the user (identical to the previous user in a
+#'   - Attach a policy to the user (identical to the previous user in a
 #'     different account).
 #' 
-#' -   Add the user as a principal directly in the role's trust policy.
+#'   - Add the user as a principal directly in the role's trust policy.
 #' 
 #' In this case, the trust policy acts as an IAM resource-based policy.
 #' Users in the same account as the role do not need explicit permission to
@@ -513,8 +513,8 @@ sts_assume_role <- function(RoleArn, RoleSessionName, PolicyArns = NULL, Policy 
 #' in the *IAM User Guide*.
 #' 
 #' You can pass up to 50 session tags. The plain text session tag keys
-#' can’t exceed 128 characters and the values can’t exceed 256 characters.
-#' For these and additional limits, see [IAM and STS Character
+#' can’t exceed 128 characters and the values can’t exceed 256
+#' characters. For these and additional limits, see [IAM and STS Character
 #' Limits](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html#reference_iam-limits-entity-length)
 #' in the *IAM User Guide*.
 #' 
@@ -554,19 +554,19 @@ sts_assume_role <- function(RoleArn, RoleSessionName, PolicyArns = NULL, Policy 
 #' 
 #' For more information, see the following resources:
 #' 
-#' -   [About SAML 2.0-based
+#'   - [About SAML 2.0-based
 #'     Federation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_saml.html)
 #'     in the *IAM User Guide*.
 #' 
-#' -   [Creating SAML Identity
+#'   - [Creating SAML Identity
 #'     Providers](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_saml.html)
 #'     in the *IAM User Guide*.
 #' 
-#' -   [Configuring a Relying Party and
+#'   - [Configuring a Relying Party and
 #'     Claims](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_saml_relying-party.html)
 #'     in the *IAM User Guide*.
 #' 
-#' -   [Creating a Role for SAML 2.0
+#'   - [Creating a Role for SAML 2.0
 #'     Federation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-idp_saml.html)
 #'     in the *IAM User Guide*.
 #'
@@ -831,8 +831,8 @@ sts_assume_role_with_saml <- function(RoleArn, PrincipalArn, SAMLAssertion, Poli
 #' in the *IAM User Guide*.
 #' 
 #' You can pass up to 50 session tags. The plain text session tag keys
-#' can’t exceed 128 characters and the values can’t exceed 256 characters.
-#' For these and additional limits, see [IAM and STS Character
+#' can’t exceed 128 characters and the values can’t exceed 256
+#' characters. For these and additional limits, see [IAM and STS Character
 #' Limits](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html#reference_iam-limits-entity-length)
 #' in the *IAM User Guide*.
 #' 
@@ -884,25 +884,25 @@ sts_assume_role_with_saml <- function(RoleArn, PrincipalArn, SAMLAssertion, Poli
 #' [`assume_role_with_web_identity`][sts_assume_role_with_web_identity]
 #' API, see the following resources:
 #' 
-#' -   [Using Web Identity Federation API Operations for Mobile
+#'   - [Using Web Identity Federation API Operations for Mobile
 #'     Apps](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_oidc_manual.html)
 #'     and [Federation Through a Web-based Identity
 #'     Provider](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html#api_assumerolewithwebidentity).
 #' 
-#' -   [Web Identity Federation
+#'   - [Web Identity Federation
 #'     Playground](https://aws.amazon.com/blogs/aws/the-aws-web-identity-federation-playground/).
 #'     Walk through the process of authenticating through Login with
 #'     Amazon, Facebook, or Google, getting temporary security credentials,
 #'     and then using those credentials to make a request to AWS.
 #' 
-#' -   [AWS SDK for iOS Developer Guide](https://aws.amazon.com/amplify/)
+#'   - [AWS SDK for iOS Developer Guide](https://aws.amazon.com/amplify/)
 #'     and [AWS SDK for Android Developer
 #'     Guide](https://aws.amazon.com/amplify/). These toolkits contain
 #'     sample apps that show how to invoke the identity providers. The
 #'     toolkits then show how to use the information from these providers
 #'     to get and use temporary security credentials.
 #' 
-#' -   [Web Identity Federation with Mobile
+#'   - [Web Identity Federation with Mobile
 #'     Applications](https://aws.amazon.com/articles/web-identity-federation-with-mobile-applications/).
 #'     This article discusses web identity federation and shows an example
 #'     of how to use web identity federation to get access to content in
@@ -1114,19 +1114,19 @@ sts_assume_role_with_web_identity <- function(RoleArn, RoleSessionName, WebIdent
 #' 
 #' The decoded message includes the following type of information:
 #' 
-#' -   Whether the request was denied due to an explicit deny or due to the
+#'   - Whether the request was denied due to an explicit deny or due to the
 #'     absence of an explicit allow. For more information, see [Determining
 #'     Whether a Request is Allowed or
 #'     Denied](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html#policy-eval-denyallow)
 #'     in the *IAM User Guide*.
 #' 
-#' -   The principal who made the request.
+#'   - The principal who made the request.
 #' 
-#' -   The requested action.
+#'   - The requested action.
 #' 
-#' -   The requested resource.
+#'   - The requested resource.
 #' 
-#' -   The values of condition keys in the context of the user's request.
+#'   - The values of condition keys in the context of the user's request.
 #'
 #' @usage
 #' sts_decode_authorization_message(EncodedMessage)
@@ -1375,9 +1375,9 @@ sts_get_caller_identity <- function() {
 #' [`get_federation_token`][sts_get_federation_token] in any AWS service
 #' except the following:
 #' 
-#' -   You cannot call any IAM operations using the AWS CLI or the AWS API.
+#'   - You cannot call any IAM operations using the AWS CLI or the AWS API.
 #' 
-#' -   You cannot call any STS operations except
+#'   - You cannot call any STS operations except
 #'     [`get_caller_identity`][sts_get_caller_identity].
 #' 
 #' You must pass an inline or managed [session
@@ -1682,10 +1682,10 @@ sts_get_federation_token <- function(Name, Policy = NULL, PolicyArns = NULL, Dur
 #' [`get_session_token`][sts_get_session_token] can be used to make API
 #' calls to any AWS service with the following exceptions:
 #' 
-#' -   You cannot call any IAM API operations unless MFA authentication
+#'   - You cannot call any IAM API operations unless MFA authentication
 #'     information is included in the request.
 #' 
-#' -   You cannot call any STS API *except*
+#'   - You cannot call any STS API *except*
 #'     [`assume_role`][sts_assume_role] or
 #'     [`get_caller_identity`][sts_get_caller_identity].
 #' 

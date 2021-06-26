@@ -15,7 +15,7 @@ NULL
 #' 
 #' The Cost Explorer API provides the following endpoint:
 #' 
-#' -   `https://ce.us-east-1.amazonaws.com`
+#'   - `https://ce.us-east-1.amazonaws.com`
 #' 
 #' For information about costs associated with the Cost Explorer API, see
 #' [AWS Cost Management
@@ -84,6 +84,12 @@ NULL
 #'  \link[=costexplorer_update_anomaly_subscription]{update_anomaly_subscription} \tab Updates an existing cost anomaly monitor subscription\cr
 #'  \link[=costexplorer_update_cost_category_definition]{update_cost_category_definition} \tab Updates an existing Cost Category
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname costexplorer
 #' @export

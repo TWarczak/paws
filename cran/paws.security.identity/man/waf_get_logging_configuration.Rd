@@ -2,13 +2,13 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_get_logging_configuration}
 \alias{waf_get_logging_configuration}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_get_logging_configuration(ResourceArn)
 }
 \arguments{
 \item{ResourceArn}{[required] The Amazon Resource Name (ARN) of the web ACL for which you want to get
-the LoggingConfiguration.}
+the <span>LoggingConfiguration</span>.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -37,7 +37,7 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Returns the LoggingConfiguration for the specified web ACL.
+Returns the <span>LoggingConfiguration</span> for the specified web ACL.
 }
 \section{Request syntax}{
 \preformatted{svc$get_logging_configuration(

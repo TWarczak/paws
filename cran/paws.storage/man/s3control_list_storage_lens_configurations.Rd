@@ -27,8 +27,9 @@ A list with the following syntax:\preformatted{list(
 }
 \description{
 Gets a list of Amazon S3 Storage Lens configurations. For more
-information about S3 Storage Lens, see Working with Amazon S3 Storage
-Lens in the \emph{Amazon Simple Storage Service Developer Guide}.
+information about S3 Storage Lens, see <span>Working with Amazon S3
+Storage Lens</span> in the \emph{Amazon Simple Storage Service Developer
+Guide}.
 
 To use this action, you must have permission to perform the
 \code{s3:ListStorageLensConfigurations} action. For more information, see

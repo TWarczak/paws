@@ -97,10 +97,12 @@ quicksight_cancel_ingestion <- function(AwsAccountId, DataSetId, IngestionId) {
 #' You can add these to an AWS account and a QuickSight namespace.
 #' 
 #' For example, you can add a default theme by setting
-#' `AccountCustomization` to the midnight theme:
-#' `"AccountCustomization": { "DefaultTheme": "arn:aws:quicksight::aws:theme/MIDNIGHT" }`.
-#' Or, you can add a custom theme by specifying
-#' `"AccountCustomization": { "DefaultTheme": "arn:aws:quicksight:us-west-2:111122223333:theme/bdb844d0-0fe9-4d9d-b520-0fe602d93639" }`.
+#' `AccountCustomization` to the midnight theme: `"AccountCustomization": {
+#' "DefaultTheme": "arn:aws:quicksight::aws:theme/MIDNIGHT" }`. Or, you can
+#' add a custom theme by specifying `"AccountCustomization": {
+#' "DefaultTheme":
+#' "arn:aws:quicksight:us-west-2:111122223333:theme/bdb844d0-0fe9-4d9d-b520-0fe602d93639"
+#' }`.
 #' @param Tags A list of the tags that you want to attach to this resource.
 #'
 #' @return
@@ -337,18 +339,18 @@ quicksight_create_analysis <- function(AwsAccountId, AnalysisId, Name, Parameter
 #' @param VersionDescription A description for the first version of the dashboard being created.
 #' @param DashboardPublishOptions Options for publishing the dashboard when you create it:
 #' 
-#' -   `AvailabilityStatus` for `AdHocFilteringOption` - This status can be
+#'   - `AvailabilityStatus` for `AdHocFilteringOption` - This status can be
 #'     either `ENABLED` or `DISABLED`. When this is set to `DISABLED`,
 #'     QuickSight disables the left filter pane on the published dashboard,
 #'     which can be used for ad hoc (one-time) filtering. This option is
 #'     `ENABLED` by default.
 #' 
-#' -   `AvailabilityStatus` for `ExportToCSVOption` - This status can be
+#'   - `AvailabilityStatus` for `ExportToCSVOption` - This status can be
 #'     either `ENABLED` or `DISABLED`. The visual option to export data to
 #'     .CSV format isn't enabled when this is set to `DISABLED`. This
 #'     option is `ENABLED` by default.
 #' 
-#' -   `VisibilityState` for `SheetControlsOption` - This visibility state
+#'   - `VisibilityState` for `SheetControlsOption` - This visibility state
 #'     can be either `COLLAPSED` or `EXPANDED`. This option is `COLLAPSED`
 #'     by default.
 #' @param ThemeArn The Amazon Resource Name (ARN) of the theme that is being used for this
@@ -497,7 +499,7 @@ quicksight_create_dashboard <- function(AwsAccountId, DashboardId, Name, Paramet
 #' @param Permissions A list of resource permissions on the dataset.
 #' @param RowLevelPermissionDataSet The row-level security configuration for the data that you want to
 #' create.
-#' @param ColumnLevelPermissionRules A set of one or more definitions of a ` ColumnLevelPermissionRule `.
+#' @param ColumnLevelPermissionRules A set of one or more definitions of a `  ColumnLevelPermissionRule  `.
 #' @param Tags Contains a map of the key-value pairs for the resource tag or tags
 #' assigned to the dataset.
 #'
@@ -703,10 +705,10 @@ quicksight_create_data_set <- function(AwsAccountId, DataSetId, Name, PhysicalTa
 #' account.
 #' @param Name &#91;required&#93; A display name for the data source.
 #' @param Type &#91;required&#93; The type of the data source. Currently, the supported types for this
-#' operation are:
-#' `ATHENA, AURORA, AURORA_POSTGRESQL, MARIADB, MYSQL, POSTGRESQL, PRESTO, REDSHIFT, S3, SNOWFLAKE, SPARK, SQLSERVER, TERADATA`.
-#' Use [`list_data_sources`][quicksight_list_data_sources] to return a list
-#' of all data sources.
+#' operation are: `ATHENA, AURORA, AURORA_POSTGRESQL, MARIADB, MYSQL,
+#' POSTGRESQL, PRESTO, REDSHIFT, S3, SNOWFLAKE, SPARK, SQLSERVER,
+#' TERADATA`. Use [`list_data_sources`][quicksight_list_data_sources] to
+#' return a list of all data sources.
 #' @param DataSourceParameters The parameters that QuickSight uses to connect to your underlying
 #' source.
 #' @param Credentials The credentials QuickSight that uses to connect to your underlying
@@ -979,7 +981,8 @@ quicksight_create_data_source <- function(AwsAccountId, DataSourceId, Name, Type
 #' Creates an Amazon QuickSight group.
 #' 
 #' The permissions resource is
-#' `arn:aws:quicksight:us-east-1:<relevant-aws-account-id>:group/default/<group-name> `.
+#' ` arn:aws:quicksight:us-east-1:<relevant-aws-account-id>:group/default/<group-name>
+#'  `.
 #' 
 #' The response is a group object.
 #'
@@ -1115,13 +1118,13 @@ quicksight_create_group_membership <- function(MemberName, GroupName, AwsAccount
 #' an AWS account.
 #' @param AssignmentStatus &#91;required&#93; The status of the assignment. Possible values are as follows:
 #' 
-#' -   `ENABLED` - Anything specified in this assignment is used when
+#'   - `ENABLED` - Anything specified in this assignment is used when
 #'     creating the data source.
 #' 
-#' -   `DISABLED` - This assignment isn't used when creating the data
+#'   - `DISABLED` - This assignment isn't used when creating the data
 #'     source.
 #' 
-#' -   `DRAFT` - This assignment is an unfinished draft and isn't used when
+#'   - `DRAFT` - This assignment is an unfinished draft and isn't used when
 #'     creating the data source.
 #' @param PolicyArn The ARN for the IAM policy to apply to the QuickSight users and groups
 #' specified in this assignment.
@@ -2536,42 +2539,42 @@ quicksight_delete_user_by_principal_id <- function(PrincipalId, AwsAccountId, Na
 #' To determine what customizations display when you run this command, it
 #' can help to visualize the relationship of the entities involved.
 #' 
-#' -   `AWS Account` - The AWS account exists at the top of the hierarchy.
+#'   - `AWS Account` - The AWS account exists at the top of the hierarchy.
 #'     It has the potential to use all of the AWS Regions and AWS Services.
 #'     When you subscribe to QuickSight, you choose one AWS Region to use
 #'     as your home Region. That's where your free SPICE capacity is
 #'     located. You can use QuickSight in any supported AWS Region.
 #' 
-#' -   `AWS Region` - In each AWS Region where you sign in to QuickSight at
+#'   - `AWS Region` - In each AWS Region where you sign in to QuickSight at
 #'     least once, QuickSight acts as a separate instance of the same
 #'     service. If you have a user directory, it resides in us-east-1,
 #'     which is the US East (N. Virginia). Generally speaking, these users
 #'     have access to QuickSight in any AWS Region, unless they are
 #'     constrained to a namespace.
-#' 
+#'     
 #'     To run the command in a different AWS Region, you change your Region
 #'     settings. If you're using the AWS CLI, you can use one of the
 #'     following options:
-#' 
-#'     -   Use [command line
+#'     
+#'       - Use [command line
 #'         options](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-options.html).
-#' 
-#'     -   Use [named
+#'     
+#'       - Use [named
 #'         profiles](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html).
-#' 
-#'     -   Run `aws configure` to change your default AWS Region. Use Enter
+#'     
+#'       - Run `aws configure` to change your default AWS Region. Use Enter
 #'         to key the same settings for your keys. For more information,
 #'         see [Configuring the AWS
 #'         CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html).
 #' 
-#' -   `Namespace` - A QuickSight namespace is a partition that contains
+#'   - `Namespace` - A QuickSight namespace is a partition that contains
 #'     users and assets (data sources, datasets, dashboards, and so on). To
 #'     access assets that are in a specific namespace, users and groups
 #'     must also be part of the same namespace. People who share a
 #'     namespace are completely isolated from users and assets in other
 #'     namespaces, even if they are in the same AWS account and AWS Region.
 #' 
-#' -   `Applied customizations` - Within an AWS Region, a set of QuickSight
+#'   - `Applied customizations` - Within an AWS Region, a set of QuickSight
 #'     customizations can apply to an AWS account or to a namespace.
 #'     Settings that you apply to a namespace override settings that you
 #'     apply to an AWS account. All settings are isolated to a single AWS
@@ -4379,13 +4382,13 @@ quicksight_describe_user <- function(UserName, AwsAccountId, Namespace) {
 #' from the user's browser. The following rules apply to the combination of
 #' URL and authorization code:
 #' 
-#' -   They must be used together.
+#'   - They must be used together.
 #' 
-#' -   They can be used one time only.
+#'   - They can be used one time only.
 #' 
-#' -   They are valid for 5 minutes after you run this command.
+#'   - They are valid for 5 minutes after you run this command.
 #' 
-#' -   The resulting user session is valid for 10 hours.
+#'   - The resulting user session is valid for 10 hours.
 #' 
 #' For more information, see [Embedded
 #' Analytics](https://docs.aws.amazon.com/quicksight/latest/user/embedded-analytics.html)
@@ -4420,11 +4423,11 @@ quicksight_describe_user <- function(UserName, AwsAccountId, Namespace) {
 #' users in your account (readers, authors, or admins) authenticated as one
 #' of the following:
 #' 
-#' -   Active Directory (AD) users or group members
+#'   - Active Directory (AD) users or group members
 #' 
-#' -   Invited nonfederated users
+#'   - Invited nonfederated users
 #' 
-#' -   IAM users and IAM role-based sessions authenticated through
+#'   - IAM users and IAM role-based sessions authenticated through
 #'     Federated Single Sign-On using SAML, OpenID Connect, or IAM
 #'     federation.
 #' 
@@ -4437,8 +4440,8 @@ quicksight_describe_user <- function(UserName, AwsAccountId, Namespace) {
 #' that includes anonymous users. The `IdentityType` parameter must be set
 #' to `ANONYMOUS` for this to work, because other identity types
 #' authenticate as QuickSight or IAM users. For example, if you set
-#' "`--dashboard-id dash_id1 --dashboard-id dash_id2 dash_id3 identity-type ANONYMOUS`",
-#' the session can access all three dashboards.
+#' "`--dashboard-id dash_id1 --dashboard-id dash_id2 dash_id3 identity-type
+#' ANONYMOUS`", the session can access all three dashboards.
 #'
 #' @return
 #' A list with the following syntax:
@@ -4505,10 +4508,10 @@ quicksight_get_dashboard_embed_url <- function(AwsAccountId, DashboardId, Identi
 #' user with a custom permission profile attached. For more information,
 #' see the following sections in the *Amazon QuickSight User Guide*:
 #' 
-#' -   [Embedding the Amazon QuickSight
+#'   - [Embedding the Amazon QuickSight
 #'     Console](https://docs.aws.amazon.com/quicksight/latest/user/embedded-analytics.html)
 #' 
-#' -   [Customizing Access to the Amazon QuickSight
+#'   - [Customizing Access to the Amazon QuickSight
 #'     Console](https://docs.aws.amazon.com/quicksight/latest/user/customizing-permissions-to-the-quicksight-console.html)
 #'
 #' @usage
@@ -4519,18 +4522,18 @@ quicksight_get_dashboard_embed_url <- function(AwsAccountId, DashboardId, Identi
 #' @param EntryPoint The URL you use to access the embedded session. The entry point URL is
 #' constrained to the following paths:
 #' 
-#' -   `/start`
+#'   - `/start`
 #' 
-#' -   `/start/analyses`
+#'   - `/start/analyses`
 #' 
-#' -   `/start/dashboards`
+#'   - `/start/dashboards`
 #' 
-#' -   `/start/favorites`
+#'   - `/start/favorites`
 #' 
-#' -   `/dashboards/DashboardId ` - where `DashboardId` is the actual ID
+#'   - ` /dashboards/DashboardId  ` - where `DashboardId` is the actual ID
 #'     key from the QuickSight console URL of the dashboard
 #' 
-#' -   `/analyses/AnalysisId ` - where `AnalysisId` is the actual ID key
+#'   - ` /analyses/AnalysisId  ` - where `AnalysisId` is the actual ID key
 #'     from the QuickSight console URL of the analysis
 #' @param SessionLifetimeInMinutes How many minutes the session is valid. The session lifetime must be
 #' 15-600 minutes.
@@ -5930,12 +5933,12 @@ quicksight_list_theme_versions <- function(AwsAccountId, ThemeId, NextToken = NU
 #' @param Type The type of themes that you want to list. Valid options include the
 #' following:
 #' 
-#' -   `ALL (default)`- Display all existing themes.
+#'   - `ALL (default)`- Display all existing themes.
 #' 
-#' -   `CUSTOM` - Display only the themes created by people using Amazon
+#'   - `CUSTOM` - Display only the themes created by people using Amazon
 #'     QuickSight.
 #' 
-#' -   `QUICKSIGHT` - Display only the starting themes defined by
+#'   - `QUICKSIGHT` - Display only the starting themes defined by
 #'     QuickSight.
 #'
 #' @return
@@ -6144,25 +6147,25 @@ quicksight_list_users <- function(AwsAccountId, NextToken = NULL, MaxResults = N
 #' @param IdentityType &#91;required&#93; Amazon QuickSight supports several ways of managing the identity of
 #' users. This parameter accepts two values:
 #' 
-#' -   `IAM`: A user whose identity maps to an existing IAM user or role.
+#'   - `IAM`: A user whose identity maps to an existing IAM user or role.
 #' 
-#' -   `QUICKSIGHT`: A user whose identity is owned and managed internally
+#'   - `QUICKSIGHT`: A user whose identity is owned and managed internally
 #'     by Amazon QuickSight.
 #' @param Email &#91;required&#93; The email address of the user that you want to register.
 #' @param UserRole &#91;required&#93; The Amazon QuickSight role for the user. The user role can be one of the
 #' following:
 #' 
-#' -   `READER`: A user who has read-only access to dashboards.
+#'   - `READER`: A user who has read-only access to dashboards.
 #' 
-#' -   `AUTHOR`: A user who can create data sources, datasets, analyses,
+#'   - `AUTHOR`: A user who can create data sources, datasets, analyses,
 #'     and dashboards.
 #' 
-#' -   `ADMIN`: A user who is an author, who can also manage Amazon
+#'   - `ADMIN`: A user who is an author, who can also manage Amazon
 #'     QuickSight settings.
 #' 
-#' -   `RESTRICTED_READER`: This role isn't currently available for use.
+#'   - `RESTRICTED_READER`: This role isn't currently available for use.
 #' 
-#' -   `RESTRICTED_AUTHOR`: This role isn't currently available for use.
+#'   - `RESTRICTED_AUTHOR`: This role isn't currently available for use.
 #' @param IamArn The ARN of the IAM user or role that you are registering with Amazon
 #' QuickSight.
 #' @param SessionName You need to use this parameter only when you register one or more users
@@ -6183,13 +6186,13 @@ quicksight_list_users <- function(AwsAccountId, NextToken = NULL, MaxResults = N
 #' to control a user's access by restricting access the following
 #' operations:
 #' 
-#' -   Create and update data sources
+#'   - Create and update data sources
 #' 
-#' -   Create and update datasets
+#'   - Create and update datasets
 #' 
-#' -   Create and update email reports
+#'   - Create and update email reports
 #' 
-#' -   Subscribe to email reports
+#'   - Subscribe to email reports
 #' 
 #' To add custom permissions to an existing user, use
 #' [`update_user`][quicksight_update_user] instead.
@@ -6401,8 +6404,9 @@ quicksight_search_analyses <- function(AwsAccountId, Filters, NextToken = NULL, 
 #' @param AwsAccountId &#91;required&#93; The ID of the AWS account that contains the user whose dashboards you're
 #' searching for.
 #' @param Filters &#91;required&#93; The filters to apply to the search. Currently, you can search only by
-#' user name, for example,
-#' `"Filters": [ { "Name": "QUICKSIGHT_USER", "Operator": "StringEquals", "Value": "arn:aws:quicksight:us-east-1:1:user/default/UserName1" } ]`
+#' user name, for example, `"Filters": [ { "Name": "QUICKSIGHT_USER",
+#' "Operator": "StringEquals", "Value":
+#' "arn:aws:quicksight:us-east-1:1:user/default/UserName1" } ]`
 #' @param NextToken The token for the next set of results, or null if there are no more
 #' results.
 #' @param MaxResults The maximum number of results to be returned per request.
@@ -6492,11 +6496,11 @@ quicksight_search_dashboards <- function(AwsAccountId, Filters, NextToken = NULL
 #' Tagging for QuickSight works in a similar way to tagging for other AWS
 #' services, except for the following:
 #' 
-#' -   You can't use tags to track AWS costs for QuickSight. This
+#'   - You can't use tags to track AWS costs for QuickSight. This
 #'     restriction is because QuickSight costs are based on users and SPICE
 #'     capacity, which aren't taggable resources.
 #' 
-#' -   QuickSight doesn't currently support the Tag Editor for AWS Resource
+#'   - QuickSight doesn't currently support the Tag Editor for AWS Resource
 #'     Groups.
 #'
 #' @usage
@@ -6952,18 +6956,18 @@ quicksight_update_analysis_permissions <- function(AwsAccountId, AnalysisId, Gra
 #' @param VersionDescription A description for the first version of the dashboard being created.
 #' @param DashboardPublishOptions Options for publishing the dashboard when you create it:
 #' 
-#' -   `AvailabilityStatus` for `AdHocFilteringOption` - This status can be
+#'   - `AvailabilityStatus` for `AdHocFilteringOption` - This status can be
 #'     either `ENABLED` or `DISABLED`. When this is set to `DISABLED`,
 #'     QuickSight disables the left filter pane on the published dashboard,
 #'     which can be used for ad hoc (one-time) filtering. This option is
 #'     `ENABLED` by default.
 #' 
-#' -   `AvailabilityStatus` for `ExportToCSVOption` - This status can be
+#'   - `AvailabilityStatus` for `ExportToCSVOption` - This status can be
 #'     either `ENABLED` or `DISABLED`. The visual option to export data to
 #'     .CSV format isn't enabled when this is set to `DISABLED`. This
 #'     option is `ENABLED` by default.
 #' 
-#' -   `VisibilityState` for `SheetControlsOption` - This visibility state
+#'   - `VisibilityState` for `SheetControlsOption` - This visibility state
 #'     can be either `COLLAPSED` or `EXPANDED`. This option is `COLLAPSED`
 #'     by default.
 #' @param ThemeArn The Amazon Resource Name (ARN) of the theme that is being used for this
@@ -7227,7 +7231,7 @@ quicksight_update_dashboard_published_version <- function(AwsAccountId, Dashboar
 #' @param ColumnGroups Groupings of columns that work together in certain QuickSight features.
 #' Currently, only geospatial hierarchy is supported.
 #' @param RowLevelPermissionDataSet The row-level security configuration for the data you want to create.
-#' @param ColumnLevelPermissionRules A set of one or more definitions of a ` ColumnLevelPermissionRule `.
+#' @param ColumnLevelPermissionRules A set of one or more definitions of a `  ColumnLevelPermissionRule  `.
 #'
 #' @return
 #' A list with the following syntax:
@@ -7885,13 +7889,13 @@ quicksight_update_group <- function(GroupName, Description = NULL, AwsAccountId,
 #' @param Namespace &#91;required&#93; The namespace of the assignment.
 #' @param AssignmentStatus The status of the assignment. Possible values are as follows:
 #' 
-#' -   `ENABLED` - Anything specified in this assignment is used when
+#'   - `ENABLED` - Anything specified in this assignment is used when
 #'     creating the data source.
 #' 
-#' -   `DISABLED` - This assignment isn't used when creating the data
+#'   - `DISABLED` - This assignment isn't used when creating the data
 #'     source.
 #' 
-#' -   `DRAFT` - This assignment is an unfinished draft and isn't used when
+#'   - `DRAFT` - This assignment is an unfinished draft and isn't used when
 #'     creating the data source.
 #' @param PolicyArn The ARN for the IAM policy to apply to the QuickSight users and groups
 #' specified in this assignment.
@@ -8361,41 +8365,41 @@ quicksight_update_theme_alias <- function(AwsAccountId, ThemeId, AliasName, Them
 #' following for the three levels of permissions, which are user, owner, or
 #' no permissions:
 #' 
-#' -   User
+#'   - User
+#'     
+#'       - `"quicksight:DescribeTheme"`
+#'     
+#'       - `"quicksight:DescribeThemeAlias"`
+#'     
+#'       - `"quicksight:ListThemeAliases"`
+#'     
+#'       - `"quicksight:ListThemeVersions"`
 #' 
-#'     -   `"quicksight:DescribeTheme"`
+#'   - Owner
+#'     
+#'       - `"quicksight:DescribeTheme"`
+#'     
+#'       - `"quicksight:DescribeThemeAlias"`
+#'     
+#'       - `"quicksight:ListThemeAliases"`
+#'     
+#'       - `"quicksight:ListThemeVersions"`
+#'     
+#'       - `"quicksight:DeleteTheme"`
+#'     
+#'       - `"quicksight:UpdateTheme"`
+#'     
+#'       - `"quicksight:CreateThemeAlias"`
+#'     
+#'       - `"quicksight:DeleteThemeAlias"`
+#'     
+#'       - `"quicksight:UpdateThemeAlias"`
+#'     
+#'       - `"quicksight:UpdateThemePermissions"`
+#'     
+#'       - `"quicksight:DescribeThemePermissions"`
 #' 
-#'     -   `"quicksight:DescribeThemeAlias"`
-#' 
-#'     -   `"quicksight:ListThemeAliases"`
-#' 
-#'     -   `"quicksight:ListThemeVersions"`
-#' 
-#' -   Owner
-#' 
-#'     -   `"quicksight:DescribeTheme"`
-#' 
-#'     -   `"quicksight:DescribeThemeAlias"`
-#' 
-#'     -   `"quicksight:ListThemeAliases"`
-#' 
-#'     -   `"quicksight:ListThemeVersions"`
-#' 
-#'     -   `"quicksight:DeleteTheme"`
-#' 
-#'     -   `"quicksight:UpdateTheme"`
-#' 
-#'     -   `"quicksight:CreateThemeAlias"`
-#' 
-#'     -   `"quicksight:DeleteThemeAlias"`
-#' 
-#'     -   `"quicksight:UpdateThemeAlias"`
-#' 
-#'     -   `"quicksight:UpdateThemePermissions"`
-#' 
-#'     -   `"quicksight:DescribeThemePermissions"`
-#' 
-#' -   To specify no permissions, omit the permissions list.
+#'   - To specify no permissions, omit the permissions list.
 #'
 #' @usage
 #' quicksight_update_theme_permissions(AwsAccountId, ThemeId,
@@ -8486,12 +8490,12 @@ quicksight_update_theme_permissions <- function(AwsAccountId, ThemeId, GrantPerm
 #' @param Role &#91;required&#93; The Amazon QuickSight role of the user. The role can be one of the
 #' following default security cohorts:
 #' 
-#' -   `READER`: A user who has read-only access to dashboards.
+#'   - `READER`: A user who has read-only access to dashboards.
 #' 
-#' -   `AUTHOR`: A user who can create data sources, datasets, analyses,
+#'   - `AUTHOR`: A user who can create data sources, datasets, analyses,
 #'     and dashboards.
 #' 
-#' -   `ADMIN`: A user who is an author, who can also manage Amazon
+#'   - `ADMIN`: A user who is an author, who can also manage Amazon
 #'     QuickSight settings.
 #' 
 #' The name of the QuickSight role is invisible to the user except for the
@@ -8501,13 +8505,13 @@ quicksight_update_theme_permissions <- function(AwsAccountId, ThemeId, GrantPerm
 #' to control a user's access by restricting access the following
 #' operations:
 #' 
-#' -   Create and update data sources
+#'   - Create and update data sources
 #' 
-#' -   Create and update datasets
+#'   - Create and update datasets
 #' 
-#' -   Create and update email reports
+#'   - Create and update email reports
 #' 
-#' -   Subscribe to email reports
+#'   - Subscribe to email reports
 #' 
 #' A set of custom permissions includes any combination of these
 #' restrictions. Currently, you need to create the profile names for custom

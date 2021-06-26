@@ -7,9 +7,11 @@
 apigateway_update_stage(restApiId, stageName, patchOperations)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
-\item{stageName}{[required] [Required] The name of the Stage resource to change information about.}
+\item{stageName}{[required] [Required] The name of the <span>Stage</span> resource to change
+information about.}
 
 \item{patchOperations}{A list of update operations to be applied to the specified resource and
 in the order specified in this list.}
@@ -68,7 +70,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Changes information about a Stage resource.
+Changes information about a <span>Stage</span> resource.
 }
 \section{Request syntax}{
 \preformatted{svc$update_stage(

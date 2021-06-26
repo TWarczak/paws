@@ -9,13 +9,18 @@ pricing(config = list())
 \arguments{
 \item{config}{Optional configuration of credentials, endpoint, and/or region.}
 }
+\value{
+A client for the service. You can call the service's operations using
+syntax like \code{svc$operation(...)}, where \code{svc} is the name you've assigned
+to the client. The available operations are listed in the
+Operations section.
+}
 \description{
 AWS Price List Service API (AWS Price List Service) is a centralized and
 convenient way to programmatically query Amazon Web Services for
 services, products, and pricing information. The AWS Price List Service
-uses standardized product attributes such as \code{Location},
-\verb{Storage Class}, and \verb{Operating System}, and provides prices at the SKU
-level. You can use the AWS Price List Service to build cost control and
+uses standardized product attributes such as \code{Location}, \verb{Storage Class}, and \verb{Operating System}, and provides prices at the SKU level.
+You can use the AWS Price List Service to build cost control and
 scenario planning tools, reconcile billing data, forecast future spend
 for budgeting purposes, and provide cost benefit analysis that compare
 your internal workloads with AWS.

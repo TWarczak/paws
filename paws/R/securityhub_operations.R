@@ -199,13 +199,13 @@ securityhub_batch_enable_standards <- function(StandardsSubscriptionRequests) {
 #' used to update the following finding fields and objects, which Security
 #' Hub customers use to manage their investigation workflow.
 #' 
-#' -   `Note`
+#'   - `Note`
 #' 
-#' -   `UserDefinedFields`
+#'   - `UserDefinedFields`
 #' 
-#' -   `VerificationState`
+#'   - `VerificationState`
 #' 
-#' -   `Workflow`
+#'   - `Workflow`
 #' 
 #' [`batch_import_findings`][securityhub_batch_import_findings] can be used
 #' to update the following finding fields and objects only if they have not
@@ -216,15 +216,15 @@ securityhub_batch_enable_standards <- function(StandardsSubscriptionRequests) {
 #' fields cannot be updated using
 #' [`batch_import_findings`][securityhub_batch_import_findings].
 #' 
-#' -   `Confidence`
+#'   - `Confidence`
 #' 
-#' -   `Criticality`
+#'   - `Criticality`
 #' 
-#' -   `RelatedFindings`
+#'   - `RelatedFindings`
 #' 
-#' -   `Severity`
+#'   - `Severity`
 #' 
-#' -   `Types`
+#'   - `Types`
 #'
 #' @usage
 #' securityhub_batch_import_findings(Findings)
@@ -1922,23 +1922,23 @@ securityhub_batch_import_findings <- function(Findings) {
 #' [`batch_update_findings`][securityhub_batch_update_findings] to update
 #' the following finding fields and objects.
 #' 
-#' -   `Confidence`
+#'   - `Confidence`
 #' 
-#' -   `Criticality`
+#'   - `Criticality`
 #' 
-#' -   `Note`
+#'   - `Note`
 #' 
-#' -   `RelatedFindings`
+#'   - `RelatedFindings`
 #' 
-#' -   `Severity`
+#'   - `Severity`
 #' 
-#' -   `Types`
+#'   - `Types`
 #' 
-#' -   `UserDefinedFields`
+#'   - `UserDefinedFields`
 #' 
-#' -   `VerificationState`
+#'   - `VerificationState`
 #' 
-#' -   `Workflow`
+#'   - `Workflow`
 #' 
 #' You can configure IAM policies to restrict access to fields and field
 #' values. For example, you might not want member accounts to be able to
@@ -1964,14 +1964,14 @@ securityhub_batch_import_findings <- function(Findings) {
 #' 
 #' The available values for `VerificationState` are as follows.
 #' 
-#' -   `UNKNOWN` – The default disposition of a security finding
+#'   - `UNKNOWN` – The default disposition of a security finding
 #' 
-#' -   `TRUE_POSITIVE` – The security finding is confirmed
+#'   - `TRUE_POSITIVE` – The security finding is confirmed
 #' 
-#' -   `FALSE_POSITIVE` – The security finding was determined to be a false
+#'   - `FALSE_POSITIVE` – The security finding was determined to be a false
 #'     alarm
 #' 
-#' -   `BENIGN_POSITIVE` – A special case of `TRUE_POSITIVE` where the
+#'   - `BENIGN_POSITIVE` – A special case of `TRUE_POSITIVE` where the
 #'     finding doesn't pose any threat, is expected, or both
 #' @param Confidence The updated value for the finding confidence. Confidence is defined as
 #' the likelihood that a finding accurately identifies the behavior or
@@ -1989,15 +1989,15 @@ securityhub_batch_import_findings <- function(Findings) {
 #' 
 #' Valid namespace values are as follows.
 #' 
-#' -   Software and Configuration Checks
+#'   - Software and Configuration Checks
 #' 
-#' -   TTPs
+#'   - TTPs
 #' 
-#' -   Effects
+#'   - Effects
 #' 
-#' -   Unusual Behaviors
+#'   - Unusual Behaviors
 #' 
-#' -   Sensitive Data Identifications
+#'   - Sensitive Data Identifications
 #' @param UserDefinedFields A list of name/value string pairs associated with the finding. These are
 #' custom, user-defined fields added to a finding.
 #' @param Workflow Used to update the workflow status of a finding.
@@ -2771,10 +2771,10 @@ securityhub_create_insight <- function(Name, Filters, GroupByAttribute) {
 #' [`create_members`][securityhub_create_members] is only used in the
 #' following cases:
 #' 
-#' -   Security Hub is not configured to automatically add new accounts in
+#'   - Security Hub is not configured to automatically add new accounts in
 #'     an organization.
 #' 
-#' -   The account was disassociated or deleted in Security Hub.
+#'   - The account was disassociated or deleted in Security Hub.
 #' 
 #' This action can only be used by an account that has Security Hub
 #' enabled. To enable Security Hub, you can use the
@@ -3821,9 +3821,9 @@ securityhub_enable_organization_admin_account <- function(AdminAccountId) {
 #' enable Security Hub, you also automatically enable the following
 #' standards.
 #' 
-#' -   CIS AWS Foundations
+#'   - CIS AWS Foundations
 #' 
-#' -   AWS Foundational Security Best Practices
+#'   - AWS Foundational Security Best Practices
 #' 
 #' You do not enable the Payment Card Industry Data Security Standard (PCI
 #' DSS) standard.

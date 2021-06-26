@@ -19,8 +19,8 @@ directoryservice_connect_directory(Name, ShortName, Password,
 
 \item{Size}{[required] The size of the directory.}
 
-\item{ConnectSettings}{[required] A DirectoryConnectSettings object that contains additional information
-for the operation.}
+\item{ConnectSettings}{[required] A <span>DirectoryConnectSettings</span> object that contains additional
+information for the operation.}
 
 \item{Tags}{The tags to be assigned to AD Connector.}
 }

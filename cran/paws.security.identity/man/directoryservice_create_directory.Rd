@@ -47,8 +47,8 @@ on the Microsoft website.}
 
 \item{Size}{[required] The size of the directory.}
 
-\item{VpcSettings}{A DirectoryVpcSettings object that contains additional information for
-the operation.}
+\item{VpcSettings}{A <span>DirectoryVpcSettings</span> object that contains additional
+information for the operation.}
 
 \item{Tags}{The tags to be assigned to the Simple AD directory.}
 }

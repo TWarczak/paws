@@ -26,8 +26,8 @@ A list with the following syntax:\preformatted{list(
 \description{
 The \code{\link[=simpledb_list_domains]{list_domains}} operation lists all domains
 associated with the Access Key ID. It returns domain names up to the
-limit set by MaxNumberOfDomains. A NextToken is returned if there are
-more than \code{MaxNumberOfDomains} domains. Calling
+limit set by <span>MaxNumberOfDomains</span>. A <span>NextToken</span>
+is returned if there are more than \code{MaxNumberOfDomains} domains. Calling
 \code{\link[=simpledb_list_domains]{list_domains}} successive times with the
 \code{NextToken} provided by the operation returns up to \code{MaxNumberOfDomains}
 more domain names with each successive operation call.

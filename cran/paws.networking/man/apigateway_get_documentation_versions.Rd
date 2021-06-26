@@ -7,7 +7,8 @@
 apigateway_get_documentation_versions(restApiId, position, limit)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
 \item{position}{The current pagination position in the paged result set.}
 

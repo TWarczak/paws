@@ -25,7 +25,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Changes information about the current Account resource.
+Changes information about the current <span>Account</span> resource.
 }
 \section{Request syntax}{
 \preformatted{svc$update_account(

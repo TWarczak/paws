@@ -22,27 +22,27 @@ NULL
 #' creation.
 #' @param apiCachingBehavior &#91;required&#93; Caching behavior.
 #' 
-#' -   **FULL_REQUEST_CACHING**: All requests are fully cached.
+#'   - **FULL_REQUEST_CACHING**: All requests are fully cached.
 #' 
-#' -   **PER_RESOLVER_CACHING**: Individual resolvers that you specify
+#'   - **PER_RESOLVER_CACHING**: Individual resolvers that you specify
 #'     are cached.
 #' @param type &#91;required&#93; The cache instance type. Valid values are
 #' 
-#' -   `SMALL`
+#'   - `SMALL`
 #' 
-#' -   `MEDIUM`
+#'   - `MEDIUM`
 #' 
-#' -   `LARGE`
+#'   - `LARGE`
 #' 
-#' -   `XLARGE`
+#'   - `XLARGE`
 #' 
-#' -   `LARGE_2X`
+#'   - `LARGE_2X`
 #' 
-#' -   `LARGE_4X`
+#'   - `LARGE_4X`
 #' 
-#' -   `LARGE_8X` (not available in all regions)
+#'   - `LARGE_8X` (not available in all regions)
 #' 
-#' -   `LARGE_12X`
+#'   - `LARGE_12X`
 #' 
 #' Historically, instance types were identified by an EC2-style value. As
 #' of July 2020, this is deprecated, and the generic identifiers above
@@ -51,19 +51,19 @@ NULL
 #' The following legacy instance types are available, but their use is
 #' discouraged:
 #' 
-#' -   **T2_SMALL**: A t2.small instance type.
+#'   - **T2_SMALL**: A t2.small instance type.
 #' 
-#' -   **T2_MEDIUM**: A t2.medium instance type.
+#'   - **T2_MEDIUM**: A t2.medium instance type.
 #' 
-#' -   **R4_LARGE**: A r4.large instance type.
+#'   - **R4_LARGE**: A r4.large instance type.
 #' 
-#' -   **R4_XLARGE**: A r4.xlarge instance type.
+#'   - **R4_XLARGE**: A r4.xlarge instance type.
 #' 
-#' -   **R4_2XLARGE**: A r4.2xlarge instance type.
+#'   - **R4_2XLARGE**: A r4.2xlarge instance type.
 #' 
-#' -   **R4_4XLARGE**: A r4.4xlarge instance type.
+#'   - **R4_4XLARGE**: A r4.4xlarge instance type.
 #' 
-#' -   **R4_8XLARGE**: A r4.8xlarge instance type.
+#'   - **R4_8XLARGE**: A r4.8xlarge instance type.
 #'
 #' @return
 #' A list with the following syntax:
@@ -554,11 +554,11 @@ appsync_create_graphql_api <- function(name, logConfig = NULL, authenticationTyp
 #' @param responseMappingTemplate The mapping template to be used for responses from the data source.
 #' @param kind The resolver type.
 #' 
-#' -   **UNIT**: A UNIT resolver type. A UNIT resolver is the default
+#'   - **UNIT**: A UNIT resolver type. A UNIT resolver is the default
 #'     resolver type. A UNIT resolver enables you to execute a GraphQL
 #'     query against a single data source.
 #' 
-#' -   **PIPELINE**: A PIPELINE resolver type. A PIPELINE resolver enables
+#'   - **PIPELINE**: A PIPELINE resolver type. A PIPELINE resolver enables
 #'     you to execute a series of `Function` in a serial manner. You can
 #'     use a pipeline resolver to execute a GraphQL query against multiple
 #'     data sources.
@@ -2305,27 +2305,27 @@ appsync_untag_resource <- function(resourceArn, tagKeys) {
 #' Valid values are between 1 and 3600 seconds.
 #' @param apiCachingBehavior &#91;required&#93; Caching behavior.
 #' 
-#' -   **FULL_REQUEST_CACHING**: All requests are fully cached.
+#'   - **FULL_REQUEST_CACHING**: All requests are fully cached.
 #' 
-#' -   **PER_RESOLVER_CACHING**: Individual resolvers that you specify
+#'   - **PER_RESOLVER_CACHING**: Individual resolvers that you specify
 #'     are cached.
 #' @param type &#91;required&#93; The cache instance type. Valid values are
 #' 
-#' -   `SMALL`
+#'   - `SMALL`
 #' 
-#' -   `MEDIUM`
+#'   - `MEDIUM`
 #' 
-#' -   `LARGE`
+#'   - `LARGE`
 #' 
-#' -   `XLARGE`
+#'   - `XLARGE`
 #' 
-#' -   `LARGE_2X`
+#'   - `LARGE_2X`
 #' 
-#' -   `LARGE_4X`
+#'   - `LARGE_4X`
 #' 
-#' -   `LARGE_8X` (not available in all regions)
+#'   - `LARGE_8X` (not available in all regions)
 #' 
-#' -   `LARGE_12X`
+#'   - `LARGE_12X`
 #' 
 #' Historically, instance types were identified by an EC2-style value. As
 #' of July 2020, this is deprecated, and the generic identifiers above
@@ -2334,19 +2334,19 @@ appsync_untag_resource <- function(resourceArn, tagKeys) {
 #' The following legacy instance types are available, but their use is
 #' discouraged:
 #' 
-#' -   **T2_SMALL**: A t2.small instance type.
+#'   - **T2_SMALL**: A t2.small instance type.
 #' 
-#' -   **T2_MEDIUM**: A t2.medium instance type.
+#'   - **T2_MEDIUM**: A t2.medium instance type.
 #' 
-#' -   **R4_LARGE**: A r4.large instance type.
+#'   - **R4_LARGE**: A r4.large instance type.
 #' 
-#' -   **R4_XLARGE**: A r4.xlarge instance type.
+#'   - **R4_XLARGE**: A r4.xlarge instance type.
 #' 
-#' -   **R4_2XLARGE**: A r4.2xlarge instance type.
+#'   - **R4_2XLARGE**: A r4.2xlarge instance type.
 #' 
-#' -   **R4_4XLARGE**: A r4.4xlarge instance type.
+#'   - **R4_4XLARGE**: A r4.4xlarge instance type.
 #' 
-#' -   **R4_8XLARGE**: A r4.8xlarge instance type.
+#'   - **R4_8XLARGE**: A r4.8xlarge instance type.
 #'
 #' @return
 #' A list with the following syntax:
@@ -2827,11 +2827,11 @@ appsync_update_graphql_api <- function(apiId, name, logConfig = NULL, authentica
 #' @param responseMappingTemplate The new response mapping template.
 #' @param kind The resolver type.
 #' 
-#' -   **UNIT**: A UNIT resolver type. A UNIT resolver is the default
+#'   - **UNIT**: A UNIT resolver type. A UNIT resolver is the default
 #'     resolver type. A UNIT resolver enables you to execute a GraphQL
 #'     query against a single data source.
 #' 
-#' -   **PIPELINE**: A PIPELINE resolver type. A PIPELINE resolver enables
+#'   - **PIPELINE**: A PIPELINE resolver type. A PIPELINE resolver enables
 #'     you to execute a series of `Function` in a serial manner. You can
 #'     use a pipeline resolver to execute a GraphQL query against multiple
 #'     data sources.

@@ -14,25 +14,25 @@ NULL
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param PortfolioId &#91;required&#93; The portfolio identifier.
 #' @param PortfolioShareType The type of shared portfolios to accept. The default is to accept
 #' imported portfolios.
 #' 
-#' -   `AWS_ORGANIZATIONS` - Accept portfolios shared by the management
+#'   - `AWS_ORGANIZATIONS` - Accept portfolios shared by the management
 #'     account of your organization.
 #' 
-#' -   `IMPORTED` - Accept imported portfolios.
+#'   - `IMPORTED` - Accept imported portfolios.
 #' 
-#' -   `AWS_SERVICECATALOG` - Not supported. (Throws
+#'   - `AWS_SERVICECATALOG` - Not supported. (Throws
 #'     ResourceNotFoundException.)
 #' 
-#' For example,
-#' `aws servicecatalog accept-portfolio-share --portfolio-id "port-2qwzkwxt3y5fk" --portfolio-share-type AWS_ORGANIZATIONS`
+#' For example, `aws servicecatalog accept-portfolio-share --portfolio-id
+#' "port-2qwzkwxt3y5fk" --portfolio-share-type AWS_ORGANIZATIONS`
 #'
 #' @return
 #' An empty list.
@@ -119,11 +119,11 @@ servicecatalog_associate_budget_with_resource <- function(BudgetName, ResourceId
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param PortfolioId &#91;required&#93; The portfolio identifier.
 #' @param PrincipalARN &#91;required&#93; The ARN of the principal (IAM user, role, or group).
 #' @param PrincipalType &#91;required&#93; The principal type. The supported value is `IAM`.
@@ -174,11 +174,11 @@ servicecatalog_associate_principal_with_portfolio <- function(AcceptLanguage = N
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param ProductId &#91;required&#93; The product identifier.
 #' @param PortfolioId &#91;required&#93; The portfolio identifier.
 #' @param SourcePortfolioId The identifier of the source portfolio.
@@ -231,11 +231,11 @@ servicecatalog_associate_product_with_portfolio <- function(AcceptLanguage = NUL
 #' @param ServiceActionId &#91;required&#93; The self-service action identifier. For example, `act-fs7abcd89wxyz`.
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #'
 #' @return
 #' An empty list.
@@ -328,11 +328,11 @@ servicecatalog_associate_tag_option_with_resource <- function(ResourceId, TagOpt
 #' ID, and the Provisioning Artifact ID.
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #'
 #' @return
 #' A list with the following syntax:
@@ -399,11 +399,11 @@ servicecatalog_batch_associate_service_action_with_provisioning_artifact <- func
 #' ID, and the Provisioning Artifact ID.
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #'
 #' @return
 #' A list with the following syntax:
@@ -476,11 +476,11 @@ servicecatalog_batch_disassociate_service_action_from_provisioning_artifact <- f
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param SourceProductArn &#91;required&#93; The Amazon Resource Name (ARN) of the source product.
 #' @param TargetProductId The identifier of the target product. By default, a new product is
 #' created.
@@ -555,11 +555,11 @@ servicecatalog_copy_product <- function(AcceptLanguage = NULL, SourceProductArn,
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param PortfolioId &#91;required&#93; The portfolio identifier.
 #' @param ProductId &#91;required&#93; The product identifier.
 #' @param Parameters &#91;required&#93; The constraint parameters, in JSON format. The syntax depends on the
@@ -611,7 +611,9 @@ servicecatalog_copy_product <- function(AcceptLanguage = NULL, SourceProductArn,
 #' 
 #' Specify the `Parameters` property as follows:
 #' 
-#' `{"Version": "String", "Properties": {"AccountList": [ "String" ], "RegionList": [ "String" ], "AdminRole": "String", "ExecutionRole": "String"}}`
+#' `{"Version": "String", "Properties": {"AccountList": [ "String" ],
+#' "RegionList": [ "String" ], "AdminRole": "String", "ExecutionRole":
+#' "String"}}`
 #' 
 #' You cannot have both a `LAUNCH` and a `STACKSET` constraint.
 #' 
@@ -628,15 +630,15 @@ servicecatalog_copy_product <- function(AcceptLanguage = NULL, SourceProductArn,
 #' Rules](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/reference-template_constraint_rules.html).
 #' @param Type &#91;required&#93; The type of constraint.
 #' 
-#' -   `LAUNCH`
+#'   - `LAUNCH`
 #' 
-#' -   `NOTIFICATION`
+#'   - `NOTIFICATION`
 #' 
-#' -   `RESOURCE_UPDATE`
+#'   - `RESOURCE_UPDATE`
 #' 
-#' -   `STACKSET`
+#'   - `STACKSET`
 #' 
-#' -   `TEMPLATE`
+#'   - `TEMPLATE`
 #' @param Description The description of the constraint.
 #' @param IdempotencyToken &#91;required&#93; A unique identifier that you provide to ensure idempotency. If multiple
 #' requests differ only by the idempotency token, the same response is
@@ -705,11 +707,11 @@ servicecatalog_create_constraint <- function(AcceptLanguage = NULL, PortfolioId,
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param DisplayName &#91;required&#93; The name to use for display purposes.
 #' @param Description The description of the portfolio.
 #' @param ProviderName &#91;required&#93; The name of the portfolio provider.
@@ -809,11 +811,11 @@ servicecatalog_create_portfolio <- function(AcceptLanguage = NULL, DisplayName, 
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param PortfolioId &#91;required&#93; The portfolio identifier.
 #' @param AccountId The AWS account ID. For example, `123456789012`.
 #' @param OrganizationNode The organization node to whom you are going to share. If
@@ -822,7 +824,7 @@ servicecatalog_create_portfolio <- function(AcceptLanguage = NULL, DisplayName, 
 #' applies), and a `PortfolioShareToken` will be returned in the output in
 #' order for the administrator to monitor the status of the
 #' `PortfolioShare` creation process.
-#' @param ShareTagOptions Enables or disables `TagOptions ` sharing when creating the portfolio
+#' @param ShareTagOptions Enables or disables ` TagOptions  ` sharing when creating the portfolio
 #' share. If this flag is not provided, TagOptions sharing is disabled.
 #'
 #' @return
@@ -886,11 +888,11 @@ servicecatalog_create_portfolio_share <- function(AcceptLanguage = NULL, Portfol
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param Name &#91;required&#93; The name of the product.
 #' @param Owner &#91;required&#93; The owner of the product.
 #' @param Description The description of the product.
@@ -899,7 +901,7 @@ servicecatalog_create_portfolio_share <- function(AcceptLanguage = NULL, Portfol
 #' @param SupportEmail The contact email for product support.
 #' @param SupportUrl The contact URL for product support.
 #' 
-#' `^https?:\/\// `/ is the pattern used to validate SupportUrl.
+#' ` ^https?:\/\//  `/ is the pattern used to validate SupportUrl.
 #' @param ProductType &#91;required&#93; The type of product.
 #' @param Tags One or more tags.
 #' @param ProvisioningArtifactParameters &#91;required&#93; The configuration of the provisioning artifact.
@@ -1025,11 +1027,11 @@ servicecatalog_create_product <- function(AcceptLanguage = NULL, Name, Owner, De
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param PlanName &#91;required&#93; The name of the plan.
 #' @param PlanType &#91;required&#93; The plan type.
 #' @param NotificationArns Passed to CloudFormation. The SNS topic ARNs to which to publish
@@ -1137,11 +1139,11 @@ servicecatalog_create_provisioned_product_plan <- function(AcceptLanguage = NULL
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param ProductId &#91;required&#93; The product identifier.
 #' @param Parameters &#91;required&#93; The configuration for the provisioning artifact.
 #' @param IdempotencyToken &#91;required&#93; A unique identifier that you provide to ensure idempotency. If multiple
@@ -1237,11 +1239,11 @@ servicecatalog_create_provisioning_artifact <- function(AcceptLanguage = NULL, P
 #' ### AssumeRole
 #' 
 #' The Amazon Resource Name (ARN) of the role that performs the
-#' self-service actions on your behalf. For example,
-#' `"AssumeRole": "arn:aws:iam::12345678910:role/ActionRole"`.
+#' self-service actions on your behalf. For example, `"AssumeRole":
+#' "arn:aws:iam::12345678910:role/ActionRole"`.
 #' 
-#' To reuse the provisioned product launch role, set to
-#' `"AssumeRole": "LAUNCH_ROLE"`.
+#' To reuse the provisioned product launch role, set to `"AssumeRole":
+#' "LAUNCH_ROLE"`.
 #' 
 #' ### Parameters
 #' 
@@ -1252,11 +1254,11 @@ servicecatalog_create_provisioning_artifact <- function(AcceptLanguage = NULL, P
 #' @param Description The self-service action description.
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param IdempotencyToken &#91;required&#93; A unique identifier that you provide to ensure idempotency. If multiple
 #' requests differ only by the idempotency token, the same response is
 #' returned for each repeated request.
@@ -1378,11 +1380,11 @@ servicecatalog_create_tag_option <- function(Key, Value) {
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param Id &#91;required&#93; The identifier of the constraint.
 #'
 #' @return
@@ -1431,11 +1433,11 @@ servicecatalog_delete_constraint <- function(AcceptLanguage = NULL, Id) {
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param Id &#91;required&#93; The portfolio identifier.
 #'
 #' @return
@@ -1487,11 +1489,11 @@ servicecatalog_delete_portfolio <- function(AcceptLanguage = NULL, Id) {
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param PortfolioId &#91;required&#93; The portfolio identifier.
 #' @param AccountId The AWS account ID.
 #' @param OrganizationNode The organization node to whom you are going to stop sharing.
@@ -1552,11 +1554,11 @@ servicecatalog_delete_portfolio_share <- function(AcceptLanguage = NULL, Portfol
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param Id &#91;required&#93; The product identifier.
 #'
 #' @return
@@ -1601,11 +1603,11 @@ servicecatalog_delete_product <- function(AcceptLanguage = NULL, Id) {
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param PlanId &#91;required&#93; The plan identifier.
 #' @param IgnoreErrors If set to true, AWS Service Catalog stops managing the specified
 #' provisioned product even if it cannot delete the underlying resources.
@@ -1660,11 +1662,11 @@ servicecatalog_delete_provisioned_product_plan <- function(AcceptLanguage = NULL
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param ProductId &#91;required&#93; The product identifier.
 #' @param ProvisioningArtifactId &#91;required&#93; The identifier of the provisioning artifact.
 #'
@@ -1711,11 +1713,11 @@ servicecatalog_delete_provisioning_artifact <- function(AcceptLanguage = NULL, P
 #' @param Id &#91;required&#93; The self-service action identifier. For example, `act-fs7abcd89wxyz`.
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #'
 #' @return
 #' An empty list.
@@ -1801,11 +1803,11 @@ servicecatalog_delete_tag_option <- function(Id) {
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param Id &#91;required&#93; The identifier of the constraint.
 #'
 #' @return
@@ -1864,11 +1866,11 @@ servicecatalog_describe_constraint <- function(AcceptLanguage = NULL, Id) {
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param CopyProductToken &#91;required&#93; The token for the copy product operation. This token is returned by
 #' [`copy_product`][servicecatalog_copy_product].
 #'
@@ -1922,11 +1924,11 @@ servicecatalog_describe_copy_product_status <- function(AcceptLanguage = NULL, C
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param Id &#91;required&#93; The portfolio identifier.
 #'
 #' @return
@@ -2151,11 +2153,11 @@ servicecatalog_describe_portfolio_shares <- function(PortfolioId, Type, PageToke
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param Id The product identifier.
 #' @param Name The product name.
 #'
@@ -2242,11 +2244,11 @@ servicecatalog_describe_product <- function(AcceptLanguage = NULL, Id = NULL, Na
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param Id The product identifier.
 #' @param Name The product name.
 #' @param SourcePortfolioId The unique identifier of the shared portfolio that the specified product
@@ -2358,11 +2360,11 @@ servicecatalog_describe_product_as_admin <- function(AcceptLanguage = NULL, Id =
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param Id &#91;required&#93; The product view identifier.
 #'
 #' @return
@@ -2434,11 +2436,11 @@ servicecatalog_describe_product_view <- function(AcceptLanguage = NULL, Id) {
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param Id The provisioned product identifier. You must provide the name or ID, but
 #' not both.
 #' 
@@ -2520,11 +2522,11 @@ servicecatalog_describe_provisioned_product <- function(AcceptLanguage = NULL, I
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param PlanId &#91;required&#93; The plan identifier.
 #' @param PageSize The maximum number of items to return with this call.
 #' @param PageToken The page token for the next set of results. To retrieve the first set of
@@ -2639,11 +2641,11 @@ servicecatalog_describe_provisioned_product_plan <- function(AcceptLanguage = NU
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param ProvisioningArtifactId The identifier of the provisioning artifact.
 #' @param ProductId The product identifier.
 #' @param ProvisioningArtifactName The provisioning artifact name.
@@ -2727,11 +2729,11 @@ servicecatalog_describe_provisioning_artifact <- function(AcceptLanguage = NULL,
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param ProductId The product identifier. You must provide the product name or ID, but not
 #' both.
 #' @param ProductName The name of the product. You must provide the name or ID, but not both.
@@ -2864,11 +2866,11 @@ servicecatalog_describe_provisioning_parameters <- function(AcceptLanguage = NUL
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param Id &#91;required&#93; The record identifier of the provisioned product. This identifier is
 #' returned by the request operation.
 #' @param PageToken The page token for the next set of results. To retrieve the first set of
@@ -2961,11 +2963,11 @@ servicecatalog_describe_record <- function(AcceptLanguage = NULL, Id, PageToken 
 #' @param Id &#91;required&#93; The self-service action identifier.
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #'
 #' @return
 #' A list with the following syntax:
@@ -3030,11 +3032,11 @@ servicecatalog_describe_service_action <- function(Id, AcceptLanguage = NULL) {
 #' @param ServiceActionId &#91;required&#93; The self-service action identifier.
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #'
 #' @return
 #' A list with the following syntax:
@@ -3235,11 +3237,11 @@ servicecatalog_disassociate_budget_from_resource <- function(BudgetName, Resourc
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param PortfolioId &#91;required&#93; The portfolio identifier.
 #' @param PrincipalARN &#91;required&#93; The ARN of the principal (IAM user, role, or group).
 #'
@@ -3288,11 +3290,11 @@ servicecatalog_disassociate_principal_from_portfolio <- function(AcceptLanguage 
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param ProductId &#91;required&#93; The product identifier.
 #' @param PortfolioId &#91;required&#93; The portfolio identifier.
 #'
@@ -3345,11 +3347,11 @@ servicecatalog_disassociate_product_from_portfolio <- function(AcceptLanguage = 
 #' @param ServiceActionId &#91;required&#93; The self-service action identifier. For example, `act-fs7abcd89wxyz`.
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #'
 #' @return
 #' An empty list.
@@ -3486,11 +3488,11 @@ servicecatalog_enable_aws_organizations_access <- function() {
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param PlanId &#91;required&#93; The plan identifier.
 #' @param IdempotencyToken &#91;required&#93; A unique identifier that you provide to ensure idempotency. If multiple
 #' requests differ only by the idempotency token, the same response is
@@ -3577,11 +3579,11 @@ servicecatalog_execute_provisioned_product_plan <- function(AcceptLanguage = NUL
 #' @param ExecuteToken &#91;required&#93; An idempotency token that uniquely identifies the execute request.
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param Parameters A map of all self-service action parameters and their values. If a
 #' provided parameter is of a special type, such as `TARGET`, the provided
 #' value will override the default value generated by AWS Service Catalog.
@@ -3720,11 +3722,11 @@ servicecatalog_get_aws_organizations_access_status <- function() {
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param ProvisionedProductId The identifier of the provisioned product that you want the outputs
 #' from.
 #' @param ProvisionedProductName The name of the provisioned product that you want the outputs from.
@@ -3816,11 +3818,11 @@ servicecatalog_get_provisioned_product_outputs <- function(AcceptLanguage = NULL
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param ProductId &#91;required&#93; The product identifier.
 #' @param ProvisioningArtifactId &#91;required&#93; The identifier of the provisioning artifact.
 #' @param ProvisionedProductName &#91;required&#93; The user-friendly name of the provisioned product. The value must be
@@ -3912,23 +3914,23 @@ servicecatalog_import_as_provisioned_product <- function(AcceptLanguage = NULL, 
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param PageToken The page token for the next set of results. To retrieve the first set of
 #' results, use null.
 #' @param PageSize The maximum number of items to return with this call.
 #' @param PortfolioShareType The type of shared portfolios to list. The default is to list imported
 #' portfolios.
 #' 
-#' -   `AWS_ORGANIZATIONS` - List portfolios shared by the management
+#'   - `AWS_ORGANIZATIONS` - List portfolios shared by the management
 #'     account of your organization
 #' 
-#' -   `AWS_SERVICECATALOG` - List default portfolios
+#'   - `AWS_SERVICECATALOG` - List default portfolios
 #' 
-#' -   `IMPORTED` - List imported portfolios
+#'   - `IMPORTED` - List imported portfolios
 #'
 #' @return
 #' A list with the following syntax:
@@ -3991,11 +3993,11 @@ servicecatalog_list_accepted_portfolio_shares <- function(AcceptLanguage = NULL,
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param ResourceId &#91;required&#93; The resource identifier.
 #' @param PageSize The maximum number of items to return with this call.
 #' @param PageToken The page token for the next set of results. To retrieve the first set of
@@ -4055,11 +4057,11 @@ servicecatalog_list_budgets_for_resource <- function(AcceptLanguage = NULL, Reso
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param PortfolioId &#91;required&#93; The portfolio identifier.
 #' @param ProductId The product identifier.
 #' @param PageSize The maximum number of items to return with this call.
@@ -4128,11 +4130,11 @@ servicecatalog_list_constraints_for_portfolio <- function(AcceptLanguage = NULL,
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param ProductId &#91;required&#93; The product identifier.
 #' @param PageSize The maximum number of items to return with this call.
 #' @param PageToken The page token for the next set of results. To retrieve the first set of
@@ -4210,20 +4212,20 @@ servicecatalog_list_launch_paths <- function(AcceptLanguage = NULL, ProductId, P
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param PortfolioId &#91;required&#93; The portfolio identifier. For example, `port-2abcdext3y5fk`.
 #' @param OrganizationNodeType &#91;required&#93; The organization node type that will be returned in the output.
 #' 
-#' -   `ORGANIZATION` - Organization that has access to the portfolio.
+#'   - `ORGANIZATION` - Organization that has access to the portfolio.
 #' 
-#' -   `ORGANIZATIONAL_UNIT` - Organizational unit that has access to the
+#'   - `ORGANIZATIONAL_UNIT` - Organizational unit that has access to the
 #'     portfolio within your organization.
 #' 
-#' -   `ACCOUNT` - Account that has access to the portfolio within your
+#'   - `ACCOUNT` - Account that has access to the portfolio within your
 #'     organization.
 #' @param PageToken The page token for the next set of results. To retrieve the first set of
 #' results, use null.
@@ -4289,11 +4291,11 @@ servicecatalog_list_organization_portfolio_access <- function(AcceptLanguage = N
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param PortfolioId &#91;required&#93; The portfolio identifier.
 #' @param OrganizationParentId The ID of an organization node the portfolio is shared with. All
 #' children of this node with an inherited portfolio share will be
@@ -4354,11 +4356,11 @@ servicecatalog_list_portfolio_access <- function(AcceptLanguage = NULL, Portfoli
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param PageToken The page token for the next set of results. To retrieve the first set of
 #' results, use null.
 #' @param PageSize The maximum number of items to return with this call.
@@ -4423,11 +4425,11 @@ servicecatalog_list_portfolios <- function(AcceptLanguage = NULL, PageToken = NU
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param ProductId &#91;required&#93; The product identifier.
 #' @param PageToken The page token for the next set of results. To retrieve the first set of
 #' results, use null.
@@ -4494,11 +4496,11 @@ servicecatalog_list_portfolios_for_product <- function(AcceptLanguage = NULL, Pr
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param PortfolioId &#91;required&#93; The portfolio identifier.
 #' @param PageSize The maximum number of items to return with this call.
 #' @param PageToken The page token for the next set of results. To retrieve the first set of
@@ -4561,11 +4563,11 @@ servicecatalog_list_principals_for_portfolio <- function(AcceptLanguage = NULL, 
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param ProvisionProductId The product identifier.
 #' @param PageSize The maximum number of items to return with this call.
 #' @param PageToken The page token for the next set of results. To retrieve the first set of
@@ -4636,11 +4638,11 @@ servicecatalog_list_provisioned_product_plans <- function(AcceptLanguage = NULL,
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param ProductId &#91;required&#93; The product identifier.
 #'
 #' @return
@@ -4709,11 +4711,11 @@ servicecatalog_list_provisioning_artifacts <- function(AcceptLanguage = NULL, Pr
 #' results, use null.
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #'
 #' @return
 #' A list with the following syntax:
@@ -4790,11 +4792,11 @@ servicecatalog_list_provisioning_artifacts_for_service_action <- function(Servic
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param AccessLevelFilter The access level to use to obtain results. The default is `User`.
 #' @param SearchFilter The search filter to scope the results.
 #' @param PageSize The maximum number of items to return with this call.
@@ -4890,9 +4892,9 @@ servicecatalog_list_record_history <- function(AcceptLanguage = NULL, AccessLeve
 #' @param TagOptionId &#91;required&#93; The TagOption identifier.
 #' @param ResourceType The resource type.
 #' 
-#' -   `Portfolio`
+#'   - `Portfolio`
 #' 
-#' -   `Product`
+#'   - `Product`
 #' @param PageSize The maximum number of items to return with this call.
 #' @param PageToken The page token for the next set of results. To retrieve the first set of
 #' results, use null.
@@ -4956,11 +4958,11 @@ servicecatalog_list_resources_for_tag_option <- function(TagOptionId, ResourceTy
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param PageSize The maximum number of items to return with this call.
 #' @param PageToken The page token for the next set of results. To retrieve the first set of
 #' results, use null.
@@ -5029,11 +5031,11 @@ servicecatalog_list_service_actions <- function(AcceptLanguage = NULL, PageSize 
 #' results, use null.
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #'
 #' @return
 #' A list with the following syntax:
@@ -5097,11 +5099,11 @@ servicecatalog_list_service_actions_for_provisioning_artifact <- function(Produc
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param ProvisionedProductId &#91;required&#93; The identifier of the provisioned product.
 #' @param PageToken The page token for the next set of results. To retrieve the first set of
 #' results, use null.
@@ -5240,11 +5242,11 @@ servicecatalog_list_tag_options <- function(Filters = NULL, PageSize = NULL, Pag
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param ProductId The product identifier. You must provide the name or ID, but not both.
 #' @param ProductName The name of the product. You must provide the name or ID, but not both.
 #' @param ProvisioningArtifactId The identifier of the provisioning artifact. You must provide the name
@@ -5379,25 +5381,25 @@ servicecatalog_provision_product <- function(AcceptLanguage = NULL, ProductId = 
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param PortfolioId &#91;required&#93; The portfolio identifier.
 #' @param PortfolioShareType The type of shared portfolios to reject. The default is to reject
 #' imported portfolios.
 #' 
-#' -   `AWS_ORGANIZATIONS` - Reject portfolios shared by the management
+#'   - `AWS_ORGANIZATIONS` - Reject portfolios shared by the management
 #'     account of your organization.
 #' 
-#' -   `IMPORTED` - Reject imported portfolios.
+#'   - `IMPORTED` - Reject imported portfolios.
 #' 
-#' -   `AWS_SERVICECATALOG` - Not supported. (Throws
+#'   - `AWS_SERVICECATALOG` - Not supported. (Throws
 #'     ResourceNotFoundException.)
 #' 
-#' For example,
-#' `aws servicecatalog reject-portfolio-share --portfolio-id "port-2qwzkwxt3y5fk" --portfolio-share-type AWS_ORGANIZATIONS`
+#' For example, `aws servicecatalog reject-portfolio-share --portfolio-id
+#' "port-2qwzkwxt3y5fk" --portfolio-share-type AWS_ORGANIZATIONS`
 #'
 #' @return
 #' An empty list.
@@ -5445,11 +5447,11 @@ servicecatalog_reject_portfolio_share <- function(AcceptLanguage = NULL, Portfol
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param AccessLevelFilter The access level to use to obtain results. The default is `User`.
 #' @param PageSize The maximum number of items to return with this call.
 #' @param PageToken The page token for the next set of results. To retrieve the first set of
@@ -5527,11 +5529,11 @@ servicecatalog_scan_provisioned_products <- function(AcceptLanguage = NULL, Acce
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param Filters The search filters. If no search filters are specified, the output
 #' includes all products to which the caller has access.
 #' @param PageSize The maximum number of items to return with this call.
@@ -5620,11 +5622,11 @@ servicecatalog_search_products <- function(AcceptLanguage = NULL, Filters = NULL
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param PortfolioId The portfolio identifier.
 #' @param Filters The search filters. If no search filters are specified, the output
 #' includes all products to which the administrator has access.
@@ -5716,11 +5718,11 @@ servicecatalog_search_products_as_admin <- function(AcceptLanguage = NULL, Portf
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param AccessLevelFilter The access level to use to obtain results. The default is `User`.
 #' @param Filters The search filters.
 #' 
@@ -5846,11 +5848,11 @@ servicecatalog_search_provisioned_products <- function(AcceptLanguage = NULL, Ac
 #' provisioned product even if it cannot delete the underlying resources.
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param RetainPhysicalResources When this boolean parameter is set to true, the
 #' [`terminate_provisioned_product`][servicecatalog_terminate_provisioned_product]
 #' API deletes the Service Catalog provisioned product. However, it does
@@ -5938,11 +5940,11 @@ servicecatalog_terminate_provisioned_product <- function(ProvisionedProductName 
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param Id &#91;required&#93; The identifier of the constraint.
 #' @param Description The updated description of the constraint.
 #' @param Parameters The constraint parameters, in JSON format. The syntax depends on the
@@ -5994,7 +5996,9 @@ servicecatalog_terminate_provisioned_product <- function(ProvisionedProductName 
 #' 
 #' Specify the `Parameters` property as follows:
 #' 
-#' `{"Version": "String", "Properties": {"AccountList": [ "String" ], "RegionList": [ "String" ], "AdminRole": "String", "ExecutionRole": "String"}}`
+#' `{"Version": "String", "Properties": {"AccountList": [ "String" ],
+#' "RegionList": [ "String" ], "AdminRole": "String", "ExecutionRole":
+#' "String"}}`
 #' 
 #' You cannot have both a `LAUNCH` and a `STACKSET` constraint.
 #' 
@@ -6070,11 +6074,11 @@ servicecatalog_update_constraint <- function(AcceptLanguage = NULL, Id, Descript
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param Id &#91;required&#93; The portfolio identifier.
 #' @param DisplayName The name to use for display purposes.
 #' @param Description The updated description of the portfolio.
@@ -6175,11 +6179,11 @@ servicecatalog_update_portfolio <- function(AcceptLanguage = NULL, Id, DisplayNa
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param PortfolioId &#91;required&#93; The unique identifier of the portfolio for which the share will be
 #' updated.
 #' @param AccountId The AWS Account Id of the recipient account. This field is required when
@@ -6244,11 +6248,11 @@ servicecatalog_update_portfolio_share <- function(AcceptLanguage = NULL, Portfol
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param Id &#91;required&#93; The product identifier.
 #' @param Name The updated product name.
 #' @param Owner The updated owner of the product.
@@ -6360,11 +6364,11 @@ servicecatalog_update_product <- function(AcceptLanguage = NULL, Id, Name = NULL
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param ProvisionedProductName The name of the provisioned product. You cannot specify both
 #' `ProvisionedProductName` and `ProvisionedProductId`.
 #' @param ProvisionedProductId The identifier of the provisioned product. You must provide the name or
@@ -6498,11 +6502,11 @@ servicecatalog_update_provisioned_product <- function(AcceptLanguage = NULL, Pro
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param ProvisionedProductId &#91;required&#93; The identifier of the provisioned product.
 #' @param ProvisionedProductProperties &#91;required&#93; A map that contains the provisioned product properties to be updated.
 #' 
@@ -6603,11 +6607,11 @@ servicecatalog_update_provisioned_product_properties <- function(AcceptLanguage 
 #'
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #' @param ProductId &#91;required&#93; The product identifier.
 #' @param ProvisioningArtifactId &#91;required&#93; The identifier of the provisioning artifact.
 #' @param Name The updated name of the provisioning artifact.
@@ -6697,11 +6701,11 @@ servicecatalog_update_provisioning_artifact <- function(AcceptLanguage = NULL, P
 #' @param Description The self-service action description.
 #' @param AcceptLanguage The language code.
 #' 
-#' -   `en` - English (default)
+#'   - `en` - English (default)
 #' 
-#' -   `jp` - Japanese
+#'   - `jp` - Japanese
 #' 
-#' -   `zh` - Chinese
+#'   - `zh` - Chinese
 #'
 #' @return
 #' A list with the following syntax:

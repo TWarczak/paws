@@ -145,6 +145,9 @@ create a new version.
 \item If you include \code{SecretString} or \code{SecretBinary} to create a new
 secret version, Secrets Manager automatically attaches the staging
 label \code{AWSCURRENT} to the new version.
+}<!-- end list -->
+
+\itemize{
 \item If you call an operation to encrypt or decrypt the \code{SecretString} or
 \code{SecretBinary} for a secret in the same account as the calling user
 and that secret doesn't specify a AWS KMS encryption key, Secrets

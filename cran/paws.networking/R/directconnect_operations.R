@@ -4453,9 +4453,9 @@ directconnect_update_direct_connect_gateway_association <- function(associationI
 #' 
 #' You can update the following attributes:
 #' 
-#' -   The name of the LAG.
+#'   - The name of the LAG.
 #' 
-#' -   The value for the minimum number of connections that must be
+#'   - The value for the minimum number of connections that must be
 #'     operational for the LAG itself to be operational.
 #' 
 #' When you create a LAG, the default value for the minimum number of

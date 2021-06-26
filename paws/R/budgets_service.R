@@ -12,31 +12,31 @@ NULL
 #' 
 #' Budgets provide you with a way to see the following information:
 #' 
-#' -   How close your plan is to your budgeted amount or to the free tier
+#'   - How close your plan is to your budgeted amount or to the free tier
 #'     limits
 #' 
-#' -   Your usage-to-date, including how much you've used of your Reserved
+#'   - Your usage-to-date, including how much you've used of your Reserved
 #'     Instances (RIs)
 #' 
-#' -   Your current estimated charges from AWS, and how much your predicted
+#'   - Your current estimated charges from AWS, and how much your predicted
 #'     usage will accrue in charges by the end of the month
 #' 
-#' -   How much of your budget has been used
+#'   - How much of your budget has been used
 #' 
 #' AWS updates your budget status several times a day. Budgets track your
 #' unblended costs, subscriptions, refunds, and RIs. You can create the
 #' following types of budgets:
 #' 
-#' -   **Cost budgets** - Plan how much you want to spend on a service.
+#'   - **Cost budgets** - Plan how much you want to spend on a service.
 #' 
-#' -   **Usage budgets** - Plan how much you want to use one or more
+#'   - **Usage budgets** - Plan how much you want to use one or more
 #'     services.
 #' 
-#' -   **RI utilization budgets** - Define a utilization threshold, and
+#'   - **RI utilization budgets** - Define a utilization threshold, and
 #'     receive alerts when your RI usage falls below that threshold. This
 #'     lets you see if your RIs are unused or under-utilized.
 #' 
-#' -   **RI coverage budgets** - Define a coverage threshold, and receive
+#'   - **RI coverage budgets** - Define a coverage threshold, and receive
 #'     alerts when the number of your instance hours that are covered by
 #'     RIs fall below that threshold. This lets you see how much of your
 #'     instance usage is covered by a reservation.
@@ -45,7 +45,7 @@ NULL
 #' 
 #' The AWS Budgets API provides the following endpoint:
 #' 
-#' -   https://budgets.amazonaws.com
+#'   - https://budgets.amazonaws.com
 #' 
 #' For information about costs that are associated with the AWS Budgets
 #' API, see [AWS Cost Management
@@ -107,6 +107,12 @@ NULL
 #'  \link[=budgets_update_subscriber]{update_subscriber} \tab Updates a subscriber
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname budgets
 #' @export
 budgets <- function(config = list()) {
@@ -125,7 +131,7 @@ budgets <- function(config = list()) {
   endpoints = list("*" = list(endpoint = "https://budgets.amazonaws.com", global = TRUE), "cn-*" = list(endpoint = "budgets.{region}.amazonaws.com.cn", global = FALSE), "us-iso-*" = list(endpoint = "budgets.{region}.c2s.ic.gov", global = FALSE), "us-isob-*" = list(endpoint = "budgets.{region}.sc2s.sgov.gov", global = FALSE)),
   service_id = "Budgets",
   api_version = "2016-10-20",
-  signing_name = NULL,
+  signing_name = "budgets",
   json_version = "1.1",
   target_prefix = "AWSBudgetServiceGateway"
 )

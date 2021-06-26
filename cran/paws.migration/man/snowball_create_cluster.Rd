@@ -50,6 +50,9 @@ shipping, which typically takes less than a week, one way.
 \item In India, Snow device are delivered in one to seven days.
 \item In the United States of America (US), you have access to one-day
 shipping and two-day shipping.
+}<!-- end list -->
+
+\itemize{
 \item In Australia, you have access to express shipping. Typically,
 devices shipped express are delivered in about a day.
 \item In the European Union (EU), you have access to express shipping.

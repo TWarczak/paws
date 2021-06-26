@@ -7,13 +7,13 @@
 shield_describe_protection(ProtectionId, ResourceArn)
 }
 \arguments{
-\item{ProtectionId}{The unique identifier (ID) for the Protection object that is described.
-When submitting the \code{\link[=shield_describe_protection]{describe_protection}}
-request you must provide either the \code{ResourceArn} or the \code{ProtectionID},
-but not both.}
+\item{ProtectionId}{The unique identifier (ID) for the <span>Protection</span> object that
+is described. When submitting the
+\code{\link[=shield_describe_protection]{describe_protection}} request you must
+provide either the \code{ResourceArn} or the \code{ProtectionID}, but not both.}
 
-\item{ResourceArn}{The ARN (Amazon Resource Name) of the AWS resource for the Protection
-object that is described. When submitting the
+\item{ResourceArn}{The ARN (Amazon Resource Name) of the AWS resource for the
+<span>Protection</span> object that is described. When submitting the
 \code{\link[=shield_describe_protection]{describe_protection}} request you must
 provide either the \code{ResourceArn} or the \code{ProtectionID}, but not both.}
 }
@@ -31,7 +31,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Lists the details of a Protection object.
+Lists the details of a <span>Protection</span> object.
 }
 \section{Request syntax}{
 \preformatted{svc$describe_protection(

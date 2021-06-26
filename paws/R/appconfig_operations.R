@@ -71,12 +71,12 @@ appconfig_create_application <- function(Name, Description = NULL, Tags = NULL) 
 #' Parameter Store parameters, and Amazon S3 objects. A configuration
 #' profile includes the following information.
 #' 
-#' -   The Uri location of the configuration data.
+#'   - The Uri location of the configuration data.
 #' 
-#' -   The AWS Identity and Access Management (IAM) role that provides
+#'   - The AWS Identity and Access Management (IAM) role that provides
 #'     access to the configuration data.
 #' 
-#' -   A validator for the configuration data. Available validators include
+#'   - A validator for the configuration data. Available validators include
 #'     either a JSON Schema or an AWS Lambda function.
 #' 
 #' For more information, see [Create a Configuration and a Configuration
@@ -96,7 +96,7 @@ appconfig_create_application <- function(Name, Description = NULL, Tags = NULL) 
 #' format `ssm-document://<Document_name>` or the Amazon Resource Name
 #' (ARN). For a parameter, specify either the parameter name in the format
 #' `ssm-parameter://<Parameter_name>` or the ARN. For an Amazon S3 object,
-#' specify the URI in the following format: `s3://<bucket>/<objectKey> `.
+#' specify the URI in the following format: ` s3://<bucket>/<objectKey>  `.
 #' Here is an example: s3://my-bucket/my-app/us-east-1/my-config.json
 #' @param RetrievalRoleArn The ARN of an IAM role with permission to access the configuration at
 #' the specified LocationUri.
@@ -191,10 +191,10 @@ appconfig_create_configuration_profile <- function(ApplicationId, Name, Descript
 #' AppConfig supports the following growth types:
 #' 
 #' **Linear**: For this type, AppConfig processes the deployment by
-#' dividing the total number of targets by the value specified for
-#' `Step percentage`. For example, a linear deployment that uses a
-#' `Step percentage` of 10 deploys the configuration to 10 percent of the
-#' hosts. After those deployments are complete, the system deploys the
+#' dividing the total number of targets by the value specified for `Step
+#' percentage`. For example, a linear deployment that uses a `Step
+#' percentage` of 10 deploys the configuration to 10 percent of the hosts.
+#' After those deployments are complete, the system deploys the
 #' configuration to the next 10 percent. This continues until 100% of the
 #' targets have successfully received the configuration.
 #' 
@@ -365,7 +365,7 @@ appconfig_create_environment <- function(ApplicationId, Name, Description = NULL
 #' @param Description A description of the configuration.
 #' @param Content &#91;required&#93; The content of the configuration or the configuration data.
 #' @param ContentType &#91;required&#93; A standard MIME type describing the format of the configuration content.
-#' For more information, see Content-Type.
+#' For more information, see <span>Content-Type</span>.
 #' @param LatestVersionNumber An optional locking token used to prevent race conditions from
 #' overwriting configuration updates when creating a new version. To ensure
 #' your data is not overwritten when creating multiple hosted configuration

@@ -49,7 +49,8 @@ they are detached from the load balancer.
 
 The \verb{detach instances from load balancer} operation supports tag-based
 access control via resource tags applied to the resource identified by
-\verb{load balancer name}. For more information, see the Lightsail Dev Guide.
+\verb{load balancer name}. For more information, see the <span>Lightsail Dev
+Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$detach_instances_from_load_balancer(

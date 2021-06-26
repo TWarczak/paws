@@ -98,12 +98,12 @@ databasemigrationservice_add_tags_to_resource <- function(ResourceArn, Tags) {
 #' 
 #' Valid values:
 #' 
-#' -   `immediate` - Apply the maintenance action immediately.
+#'   - `immediate` - Apply the maintenance action immediately.
 #' 
-#' -   `next-maintenance` - Apply the maintenance action during the next
+#'   - `next-maintenance` - Apply the maintenance action during the next
 #'     maintenance window for the resource.
 #' 
-#' -   `undo-opt-in` - Cancel any existing `next-maintenance` opt-in
+#'   - `undo-opt-in` - Cancel any existing `next-maintenance` opt-in
 #'     requests.
 #'
 #' @return
@@ -298,20 +298,21 @@ databasemigrationservice_cancel_replication_task_assessment_run <- function(Repl
 #' 
 #' Possible settings include the following:
 #' 
-#' -   `ServiceAccessRoleArn` - The IAM role that has permission to access
+#'   - `ServiceAccessRoleArn` - The IAM role that has permission to access
 #'     the Amazon S3 bucket.
 #' 
-#' -   `BucketName` - The name of the S3 bucket to use.
+#'   - `BucketName` - The name of the S3 bucket to use.
 #' 
-#' -   `CompressionType` - An optional parameter to use GZIP to compress
+#'   - `CompressionType` - An optional parameter to use GZIP to compress
 #'     the target files. To use GZIP, set this value to `NONE` (the
 #'     default). To keep the files uncompressed, don't use this value.
 #' 
 #' Shorthand syntax for these settings is as follows:
 #' `ServiceAccessRoleArn=string,BucketName=string,CompressionType=string`
 #' 
-#' JSON syntax for these settings is as follows:
-#' `{ "ServiceAccessRoleArn": "string", "BucketName": "string", "CompressionType": "none"|"gzip" } `
+#' JSON syntax for these settings is as follows: ` {
+#' "ServiceAccessRoleArn": "string", "BucketName": "string",
+#' "CompressionType": "none"|"gzip" }  `
 #' @param MongoDbSettings Settings in JSON format for the source MongoDB endpoint. For more
 #' information about the available settings, see [Using MongoDB as a Target
 #' for AWS Database Migration
@@ -976,15 +977,14 @@ databasemigrationservice_create_endpoint <- function(EndpointIdentifier, Endpoin
 #' notified of, provide a list of AWS DMS source IDs (`SourceIds`) that
 #' triggers the events, and provide a list of event categories
 #' (`EventCategories`) for events you want to be notified of. If you
-#' specify both the `SourceType` and `SourceIds`, such as
-#' `SourceType = replication-instance` and
-#' `SourceIdentifier = my-replinstance`, you will be notified of all the
-#' replication instance events for the specified source. If you specify a
-#' `SourceType` but don't specify a `SourceIdentifier`, you receive notice
-#' of the events for that source type for all your AWS DMS sources. If you
-#' don't specify either `SourceType` nor `SourceIdentifier`, you will be
-#' notified of events generated from all AWS DMS sources belonging to your
-#' customer account.
+#' specify both the `SourceType` and `SourceIds`, such as `SourceType =
+#' replication-instance` and `SourceIdentifier = my-replinstance`, you will
+#' be notified of all the replication instance events for the specified
+#' source. If you specify a `SourceType` but don't specify a
+#' `SourceIdentifier`, you receive notice of the events for that source
+#' type for all your AWS DMS sources. If you don't specify either
+#' `SourceType` nor `SourceIdentifier`, you will be notified of events
+#' generated from all AWS DMS sources belonging to your customer account.
 #' 
 #' For more information about AWS DMS events, see [Working with Events and
 #' Notifications](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html)
@@ -1112,11 +1112,11 @@ databasemigrationservice_create_event_subscription <- function(SubscriptionName,
 #' 
 #' Constraints:
 #' 
-#' -   Must contain 1-63 alphanumeric characters or hyphens.
+#'   - Must contain 1-63 alphanumeric characters or hyphens.
 #' 
-#' -   First character must be a letter.
+#'   - First character must be a letter.
 #' 
-#' -   Can't end with a hyphen or contain two consecutive hyphens.
+#'   - Can't end with a hyphen or contain two consecutive hyphens.
 #' 
 #' Example: `myrepinstance`
 #' @param AllocatedStorage The amount of storage (in gigabytes) to be initially allocated for the
@@ -1444,11 +1444,11 @@ databasemigrationservice_create_replication_subnet_group <- function(Replication
 #' 
 #' Constraints:
 #' 
-#' -   Must contain 1-255 alphanumeric characters or hyphens.
+#'   - Must contain 1-255 alphanumeric characters or hyphens.
 #' 
-#' -   First character must be a letter.
+#'   - First character must be a letter.
 #' 
-#' -   Cannot end with a hyphen or contain two consecutive hyphens.
+#'   - Cannot end with a hyphen or contain two consecutive hyphens.
 #' @param SourceEndpointArn &#91;required&#93; An Amazon Resource Name (ARN) that uniquely identifies the source
 #' endpoint.
 #' @param TargetEndpointArn &#91;required&#93; An Amazon Resource Name (ARN) that uniquely identifies the target
@@ -4902,20 +4902,21 @@ databasemigrationservice_list_tags_for_resource <- function(ResourceArn) {
 #' 
 #' Attributes include the following:
 #' 
-#' -   serviceAccessRoleArn - The AWS Identity and Access Management (IAM)
+#'   - serviceAccessRoleArn - The AWS Identity and Access Management (IAM)
 #'     role that has permission to access the Amazon S3 bucket.
 #' 
-#' -   BucketName - The name of the S3 bucket to use.
+#'   - BucketName - The name of the S3 bucket to use.
 #' 
-#' -   compressionType - An optional parameter to use GZIP to compress the
+#'   - compressionType - An optional parameter to use GZIP to compress the
 #'     target files. Either set this parameter to NONE (the default) or
 #'     don't use it to leave the files uncompressed.
 #' 
 #' Shorthand syntax for these settings is as follows:
 #' `ServiceAccessRoleArn=string ,BucketName=string,CompressionType=string`
 #' 
-#' JSON syntax for these settings is as follows:
-#' `{ "ServiceAccessRoleArn": "string", "BucketName": "string", "CompressionType": "none"|"gzip" } `
+#' JSON syntax for these settings is as follows: ` {
+#' "ServiceAccessRoleArn": "string", "BucketName": "string",
+#' "CompressionType": "none"|"gzip" }  `
 #' @param MongoDbSettings Settings in JSON format for the source MongoDB endpoint. For more
 #' information about the available settings, see the configuration
 #' properties section in [Using MongoDB as a Target for AWS Database
@@ -4944,33 +4945,36 @@ databasemigrationservice_list_tags_for_resource <- function(ResourceArn) {
 #' in the *AWS Database Migration Service User Guide.*
 #' @param RedshiftSettings 
 #' @param PostgreSQLSettings Settings in JSON format for the source and target PostgreSQL endpoint.
-#' For information about other available settings, see Extra connection
-#' attributes when using PostgreSQL as a source for AWS DMS and Extra
-#' connection attributes when using PostgreSQL as a target for AWS DMS in
-#' the *AWS Database Migration Service User Guide.*
+#' For information about other available settings, see <span>Extra
+#' connection attributes when using PostgreSQL as a source for AWS
+#' DMS</span> and <span>Extra connection attributes when using PostgreSQL
+#' as a target for AWS DMS</span> in the *AWS Database Migration Service
+#' User Guide.*
 #' @param MySQLSettings Settings in JSON format for the source and target MySQL endpoint. For
-#' information about other available settings, see Extra connection
-#' attributes when using MySQL as a source for AWS DMS and Extra connection
-#' attributes when using a MySQL-compatible database as a target for AWS
-#' DMS in the *AWS Database Migration Service User Guide.*
+#' information about other available settings, see <span>Extra connection
+#' attributes when using MySQL as a source for AWS DMS</span> and
+#' <span>Extra connection attributes when using a MySQL-compatible database
+#' as a target for AWS DMS</span> in the *AWS Database Migration Service
+#' User Guide.*
 #' @param OracleSettings Settings in JSON format for the source and target Oracle endpoint. For
-#' information about other available settings, see Extra connection
-#' attributes when using Oracle as a source for AWS DMS and Extra
-#' connection attributes when using Oracle as a target for AWS DMS in the
-#' *AWS Database Migration Service User Guide.*
+#' information about other available settings, see <span>Extra connection
+#' attributes when using Oracle as a source for AWS DMS</span> and
+#' <span>Extra connection attributes when using Oracle as a target for AWS
+#' DMS</span> in the *AWS Database Migration Service User Guide.*
 #' @param SybaseSettings Settings in JSON format for the source and target SAP ASE endpoint. For
-#' information about other available settings, see Extra connection
-#' attributes when using SAP ASE as a source for AWS DMS and Extra
-#' connection attributes when using SAP ASE as a target for AWS DMS in the
-#' *AWS Database Migration Service User Guide.*
+#' information about other available settings, see <span>Extra connection
+#' attributes when using SAP ASE as a source for AWS DMS</span> and
+#' <span>Extra connection attributes when using SAP ASE as a target for AWS
+#' DMS</span> in the *AWS Database Migration Service User Guide.*
 #' @param MicrosoftSQLServerSettings Settings in JSON format for the source and target Microsoft SQL Server
-#' endpoint. For information about other available settings, see Extra
-#' connection attributes when using SQL Server as a source for AWS DMS and
-#' Extra connection attributes when using SQL Server as a target for AWS
-#' DMS in the *AWS Database Migration Service User Guide.*
+#' endpoint. For information about other available settings, see
+#' <span>Extra connection attributes when using SQL Server as a source for
+#' AWS DMS</span> and <span>Extra connection attributes when using SQL
+#' Server as a target for AWS DMS</span> in the *AWS Database Migration
+#' Service User Guide.*
 #' @param IBMDb2Settings Settings in JSON format for the source IBM Db2 LUW endpoint. For
-#' information about other available settings, see Extra connection
-#' attributes when using Db2 LUW as a source for AWS DMS in the *AWS
+#' information about other available settings, see <span>Extra connection
+#' attributes when using Db2 LUW as a source for AWS DMS</span> in the *AWS
 #' Database Migration Service User Guide.*
 #' @param DocDbSettings Settings in JSON format for the source DocumentDB endpoint. For more
 #' information about the available settings, see the configuration
@@ -5687,11 +5691,11 @@ databasemigrationservice_modify_event_subscription <- function(SubscriptionName,
 #' 
 #' An outage does result if these factors apply:
 #' 
-#' -   This parameter is set to `true` during the maintenance window.
+#'   - This parameter is set to `true` during the maintenance window.
 #' 
-#' -   A newer minor version is available.
+#'   - A newer minor version is available.
 #' 
-#' -   AWS DMS has enabled automatic patching for the given engine version.
+#'   - AWS DMS has enabled automatic patching for the given engine version.
 #' @param ReplicationInstanceIdentifier The replication instance identifier. This parameter is stored as a
 #' lowercase string.
 #'
@@ -5918,11 +5922,11 @@ databasemigrationservice_modify_replication_subnet_group <- function(Replication
 #' 
 #' Constraints:
 #' 
-#' -   Must contain 1-255 alphanumeric characters or hyphens.
+#'   - Must contain 1-255 alphanumeric characters or hyphens.
 #' 
-#' -   First character must be a letter.
+#'   - First character must be a letter.
 #' 
-#' -   Cannot end with a hyphen or contain two consecutive hyphens.
+#'   - Cannot end with a hyphen or contain two consecutive hyphens.
 #' @param MigrationType The migration type. Valid values: `full-load` | `cdc` |
 #' `full-load-and-cdc`
 #' @param TableMappings When using the AWS CLI or boto3, provide the path of the JSON file that
@@ -6730,10 +6734,10 @@ databasemigrationservice_start_replication_task_assessment <- function(Replicati
 #' stores the assessment run results without encryption. You can specify
 #' one of the options following:
 #' 
-#' -   `"SSE_S3"` – The server-side encryption provided as a default by
+#'   - `"SSE_S3"` – The server-side encryption provided as a default by
 #'     Amazon S3.
 #' 
-#' -   `"SSE_KMS"` – AWS Key Management Service (AWS KMS) encryption. This
+#'   - `"SSE_KMS"` – AWS Key Management Service (AWS KMS) encryption. This
 #'     encryption can use either a custom KMS encryption key that you
 #'     specify or the default KMS encryption key that DMS provides.
 #' @param ResultKmsKeyArn ARN of a custom KMS encryption key that you specify when you set

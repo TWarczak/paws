@@ -17,8 +17,7 @@ truncated list response to continue the listing. The continuation token
 is an opaque value that Amazon S3 understands.}
 
 \item{ExpectedBucketOwner}{The account id of the expected bucket owner. If the bucket is owned by a
-different account, the request will fail with an HTTP
-\verb{403 (Access Denied)} error.}
+different account, the request will fail with an HTTP \verb{403 (Access Denied)} error.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

@@ -108,8 +108,7 @@ results first by DNS name with the labels reversed, for example:
 
 Note the trailing dot, which can change the sort order when the record
 name contains characters that appear before \code{.} (decimal 46) in the
-ASCII table. These characters include the following:
-\verb{! \\" # $ \% & \\' ( ) * + , -}
+ASCII table. These characters include the following: \verb{! \\" # $ \% & \\' ( ) * + , -}
 
 When multiple records have the same DNS name,
 \code{\link[=route53_list_resource_record_sets]{list_resource_record_sets}} sorts

@@ -8,7 +8,8 @@ apigateway_delete_integration_response(restApiId, resourceId,
   httpMethod, statusCode)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
 \item{resourceId}{[required] [Required] Specifies a delete integration response request's resource
 identifier.}

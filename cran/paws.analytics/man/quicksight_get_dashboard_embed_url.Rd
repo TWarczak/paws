@@ -59,8 +59,7 @@ request. If you're not using a custom namespace, set this to
 that includes anonymous users. The \code{IdentityType} parameter must be set
 to \code{ANONYMOUS} for this to work, because other identity types
 authenticate as QuickSight or IAM users. For example, if you set
-"\verb{--dashboard-id dash_id1 --dashboard-id dash_id2 dash_id3 identity-type ANONYMOUS}",
-the session can access all three dashboards.}
+"\verb{--dashboard-id dash_id1 --dashboard-id dash_id2 dash_id3 identity-type ANONYMOUS}", the session can access all three dashboards.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

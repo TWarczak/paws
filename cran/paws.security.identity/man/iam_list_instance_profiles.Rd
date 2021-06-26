@@ -16,7 +16,7 @@ slash (/), listing all instance profiles. This parameter allows (through
 its \href{https://en.wikipedia.org/wiki/Regex}{regex pattern}) a string of
 characters consisting of either a forward slash (/) by itself or a
 string that must begin and end with forward slashes. In addition, it can
-contain any ASCII character from the ! (\verb{\\u0021}) through the DEL
+contain any ASCII character from the \! (\verb{\\u0021}) through the DEL
 character (\verb{\\u007F}), including most punctuation characters, digits, and
 upper and lowercased letters.}
 

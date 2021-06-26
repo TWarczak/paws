@@ -14,10 +14,11 @@ instead.}}}
 
 \item{Group}{The name or the ARN of the resource group}
 
-\item{Filters}{Filters, formatted as ResourceFilter objects, that you want to apply to
-a \code{\link[=resourcegroups_list_group_resources]{list_group_resources}}
-operation. Filters the results to include only those of the specified
-resource types.
+\item{Filters}{Filters, formatted as <span>ResourceFilter</span> objects, that you want
+to apply to a
+\code{\link[=resourcegroups_list_group_resources]{list_group_resources}} operation.
+Filters the results to include only those of the specified resource
+types.
 \itemize{
 \item \code{resource-type} - Filter resources by their type. Specify up to five
 resource types in the format \verb{AWS::ServiceCode::ResourceType}. For

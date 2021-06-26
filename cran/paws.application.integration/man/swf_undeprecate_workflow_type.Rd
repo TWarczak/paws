@@ -2,7 +2,7 @@
 % Please edit documentation in R/swf_operations.R
 \name{swf_undeprecate_workflow_type}
 \alias{swf_undeprecate_workflow_type}
-\title{Undeprecates a previously deprecated workflow type}
+\title{Undeprecates a previously deprecated \emph{workflow type}}
 \usage{
 swf_undeprecate_workflow_type(domain, workflowType)
 }

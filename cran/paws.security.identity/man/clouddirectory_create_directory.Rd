@@ -7,10 +7,12 @@
 clouddirectory_create_directory(Name, SchemaArn)
 }
 \arguments{
-\item{Name}{[required] The name of the Directory. Should be unique per account, per region.}
+\item{Name}{[required] The name of the <span>Directory</span>. Should be unique per account,
+per region.}
 
 \item{SchemaArn}{[required] The Amazon Resource Name (ARN) of the published schema that will be
-copied into the data Directory. For more information, see arns.}
+copied into the data <span>Directory</span>. For more information, see
+<span>arns</span>.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -22,8 +24,8 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Creates a Directory by copying the published schema into the directory.
-A directory cannot be created without a schema.
+Creates a <span>Directory</span> by copying the published schema into
+the directory. A directory cannot be created without a schema.
 
 You can also quickly create a directory using a managed schema, called
 the \code{QuickStartSchema}. For more information, see \href{https://docs.aws.amazon.com/clouddirectory/latest/developerguide/schemas_managed.html}{Managed Schema}

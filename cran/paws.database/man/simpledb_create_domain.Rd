@@ -27,7 +27,7 @@ the same domain name will not result in an error response.
 The client can create up to 100 domains per account.
 
 If the client requires additional domains, go to
-http://aws.amazon.com/contact-us/simpledb-limit-request/.
+<span>http://aws.amazon.com/contact-us/simpledb-limit-request/</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$create_domain(

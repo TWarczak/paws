@@ -17,7 +17,7 @@ API.}
 generates the sessionId when a user first visits your website or uses
 your application. Amazon Personalize uses the sessionId to associate
 events with the user before they log in. For more information see
-event-record-api.}
+<span>event-record-api</span>.}
 
 \item{eventList}{[required] A list of event data from the session.}
 }
@@ -26,7 +26,7 @@ An empty list.
 }
 \description{
 Records user interaction event data. For more information see
-event-record-api.
+<span>event-record-api</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$put_events(

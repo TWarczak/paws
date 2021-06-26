@@ -66,8 +66,8 @@ player count, protection policy, which controls whether or not an active
 game session can be terminated during a scale-down event, and the player
 session creation policy, which controls whether or not new players can
 join the session. To update a game session, specify the game session ID
-and the values you want to change. If successful, an updated GameSession
-object is returned.
+and the values you want to change. If successful, an updated
+<span>GameSession</span> object is returned.
 \itemize{
 \item \code{\link[=gamelift_create_game_session]{create_game_session}}
 \item \code{\link[=gamelift_describe_game_sessions]{describe_game_sessions}}

@@ -25,9 +25,9 @@ codes:
 \href{https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2}{ISO standard 3166-1 alpha-2}.}
 
 \item{SubdivisionCode}{For \code{SubdivisionCode}, Amazon Route 53 supports only states of the
-United States. For a list of state abbreviations, see Appendix B:
-Two–Letter State and Possession Abbreviations on the United States
-Postal Service website.
+United States. For a list of state abbreviations, see <span>Appendix B:
+Two–Letter State and Possession Abbreviations</span> on the United
+States Postal Service website.
 
 If you specify \code{subdivisioncode}, you must also specify \code{US} for
 \code{CountryCode}.}

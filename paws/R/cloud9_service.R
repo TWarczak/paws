@@ -13,44 +13,44 @@ NULL
 #' 
 #' AWS Cloud9 supports these operations:
 #' 
-#' -   [`create_environment_ec2`][cloud9_create_environment_ec2]: Creates
+#'   - [`create_environment_ec2`][cloud9_create_environment_ec2]: Creates
 #'     an AWS Cloud9 development environment, launches an Amazon EC2
 #'     instance, and then connects from the instance to the environment.
 #' 
-#' -   [`create_environment_membership`][cloud9_create_environment_membership]:
+#'   - [`create_environment_membership`][cloud9_create_environment_membership]:
 #'     Adds an environment member to an environment.
 #' 
-#' -   [`delete_environment`][cloud9_delete_environment]: Deletes an
+#'   - [`delete_environment`][cloud9_delete_environment]: Deletes an
 #'     environment. If an Amazon EC2 instance is connected to the
 #'     environment, also terminates the instance.
 #' 
-#' -   [`delete_environment_membership`][cloud9_delete_environment_membership]:
+#'   - [`delete_environment_membership`][cloud9_delete_environment_membership]:
 #'     Deletes an environment member from an environment.
 #' 
-#' -   [`describe_environment_memberships`][cloud9_describe_environment_memberships]:
+#'   - [`describe_environment_memberships`][cloud9_describe_environment_memberships]:
 #'     Gets information about environment members for an environment.
 #' 
-#' -   [`describe_environments`][cloud9_describe_environments]: Gets
+#'   - [`describe_environments`][cloud9_describe_environments]: Gets
 #'     information about environments.
 #' 
-#' -   [`describe_environment_status`][cloud9_describe_environment_status]:
+#'   - [`describe_environment_status`][cloud9_describe_environment_status]:
 #'     Gets status information for an environment.
 #' 
-#' -   [`list_environments`][cloud9_list_environments]: Gets a list of
+#'   - [`list_environments`][cloud9_list_environments]: Gets a list of
 #'     environment identifiers.
 #' 
-#' -   [`list_tags_for_resource`][cloud9_list_tags_for_resource]: Gets the
+#'   - [`list_tags_for_resource`][cloud9_list_tags_for_resource]: Gets the
 #'     tags for an environment.
 #' 
-#' -   [`tag_resource`][cloud9_tag_resource]: Adds tags to an environment.
+#'   - [`tag_resource`][cloud9_tag_resource]: Adds tags to an environment.
 #' 
-#' -   [`untag_resource`][cloud9_untag_resource]: Removes tags from an
+#'   - [`untag_resource`][cloud9_untag_resource]: Removes tags from an
 #'     environment.
 #' 
-#' -   [`update_environment`][cloud9_update_environment]: Changes the
+#'   - [`update_environment`][cloud9_update_environment]: Changes the
 #'     settings of an existing environment.
 #' 
-#' -   [`update_environment_membership`][cloud9_update_environment_membership]:
+#'   - [`update_environment_membership`][cloud9_update_environment_membership]:
 #'     Changes the settings of an existing environment member for an
 #'     environment.
 #'
@@ -107,6 +107,12 @@ NULL
 #'  \link[=cloud9_update_environment_membership]{update_environment_membership} \tab Changes the settings of an existing environment member for an AWS Cloud9 development environment
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname cloud9
 #' @export
 cloud9 <- function(config = list()) {
@@ -125,7 +131,7 @@ cloud9 <- function(config = list()) {
   endpoints = list("*" = list(endpoint = "cloud9.{region}.amazonaws.com", global = FALSE), "cn-*" = list(endpoint = "cloud9.{region}.amazonaws.com.cn", global = FALSE), "us-iso-*" = list(endpoint = "cloud9.{region}.c2s.ic.gov", global = FALSE), "us-isob-*" = list(endpoint = "cloud9.{region}.sc2s.sgov.gov", global = FALSE)),
   service_id = "Cloud9",
   api_version = "2017-09-23",
-  signing_name = NULL,
+  signing_name = "cloud9",
   json_version = "1.1",
   target_prefix = "AWSCloud9WorkspaceManagementService"
 )

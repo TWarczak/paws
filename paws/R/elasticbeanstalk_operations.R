@@ -639,11 +639,11 @@ elasticbeanstalk_create_application_version <- function(ApplicationName, Version
 #' 
 #' Related Topics
 #' 
-#' -   [`describe_configuration_options`][elasticbeanstalk_describe_configuration_options]
+#'   - [`describe_configuration_options`][elasticbeanstalk_describe_configuration_options]
 #' 
-#' -   [`describe_configuration_settings`][elasticbeanstalk_describe_configuration_settings]
+#'   - [`describe_configuration_settings`][elasticbeanstalk_describe_configuration_settings]
 #' 
-#' -   [`list_available_solution_stacks`][elasticbeanstalk_list_available_solution_stacks]
+#'   - [`list_available_solution_stacks`][elasticbeanstalk_list_available_solution_stacks]
 #'
 #' @usage
 #' elasticbeanstalk_create_configuration_template(ApplicationName,
@@ -656,12 +656,11 @@ elasticbeanstalk_create_application_version <- function(ApplicationName, Version
 #' 
 #' Constraint: This name must be unique per application.
 #' @param SolutionStackName The name of an Elastic Beanstalk solution stack (platform version) that
-#' this configuration uses. For example,
-#' `64bit Amazon Linux 2013.09 running Tomcat 7 Java 7`. A solution stack
-#' specifies the operating system, runtime, and application server for a
-#' configuration template. It also determines the set of configuration
-#' options as well as the possible and default values. For more
-#' information, see [Supported
+#' this configuration uses. For example, `64bit Amazon Linux 2013.09
+#' running Tomcat 7 Java 7`. A solution stack specifies the operating
+#' system, runtime, and application server for a configuration template. It
+#' also determines the set of configuration options as well as the possible
+#' and default values. For more information, see [Supported
 #' Platforms](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
 #' in the *AWS Elastic Beanstalk Developer Guide*.
 #' 
@@ -1815,7 +1814,7 @@ elasticbeanstalk_describe_configuration_options <- function(ApplicationName = NU
 #' 
 #' Related Topics
 #' 
-#' -   [`delete_environment_configuration`][elasticbeanstalk_delete_environment_configuration]
+#'   - [`delete_environment_configuration`][elasticbeanstalk_delete_environment_configuration]
 #'
 #' @usage
 #' elasticbeanstalk_describe_configuration_settings(ApplicationName,
@@ -2866,27 +2865,27 @@ elasticbeanstalk_list_available_solution_stacks <- function() {
 #' `SearchFilter` terms. Most operators take a single value. The `in` and
 #' `not_in` operators can take multiple values.
 #' 
-#' -   `Attribute = BranchName`:
-#' 
-#'     -   `Operator`: `=` | `!=` | `begins_with` | `ends_with` |
+#'   - `Attribute = BranchName`:
+#'     
+#'       - `Operator`: `=` | `!=` | `begins_with` | `ends_with` |
 #'         `contains` | `in` | `not_in`
 #' 
-#' -   `Attribute = LifecycleState`:
+#'   - `Attribute = LifecycleState`:
+#'     
+#'       - `Operator`: `=` | `!=` | `in` | `not_in`
+#'     
+#'       - `Values`: `beta` | `supported` | `deprecated` | `retired`
 #' 
-#'     -   `Operator`: `=` | `!=` | `in` | `not_in`
-#' 
-#'     -   `Values`: `beta` | `supported` | `deprecated` | `retired`
-#' 
-#' -   `Attribute = PlatformName`:
-#' 
-#'     -   `Operator`: `=` | `!=` | `begins_with` | `ends_with` |
+#'   - `Attribute = PlatformName`:
+#'     
+#'       - `Operator`: `=` | `!=` | `begins_with` | `ends_with` |
 #'         `contains` | `in` | `not_in`
 #' 
-#' -   `Attribute = TierType`:
-#' 
-#'     -   `Operator`: `=` | `!=`
-#' 
-#'     -   `Values`: `WebServer/Standard` | `Worker/SQS/HTTP`
+#'   - `Attribute = TierType`:
+#'     
+#'       - `Operator`: `=` | `!=`
+#'     
+#'       - `Values`: `WebServer/Standard` | `Worker/SQS/HTTP`
 #' 
 #' Array size: limited to 10 `SearchFilter` objects.
 #' 
@@ -3187,7 +3186,7 @@ elasticbeanstalk_rebuild_environment <- function(EnvironmentId = NULL, Environme
 #' 
 #' Related Topics
 #' 
-#' -   [`retrieve_environment_info`][elasticbeanstalk_retrieve_environment_info]
+#'   - [`retrieve_environment_info`][elasticbeanstalk_retrieve_environment_info]
 #'
 #' @usage
 #' elasticbeanstalk_request_environment_info(EnvironmentId,
@@ -3324,7 +3323,7 @@ elasticbeanstalk_restart_app_server <- function(EnvironmentId = NULL, Environmen
 #' 
 #' Related Topics
 #' 
-#' -   [`request_environment_info`][elasticbeanstalk_request_environment_info]
+#'   - [`request_environment_info`][elasticbeanstalk_request_environment_info]
 #'
 #' @usage
 #' elasticbeanstalk_retrieve_environment_info(EnvironmentId,
@@ -3502,11 +3501,11 @@ elasticbeanstalk_swap_environment_cnam_es <- function(SourceEnvironmentId = NULL
 #' @param TerminateResources Indicates whether the associated AWS resources should shut down when the
 #' environment is terminated:
 #' 
-#' -   `true`: The specified environment as well as the associated AWS
+#'   - `true`: The specified environment as well as the associated AWS
 #'     resources, such as Auto Scaling group and LoadBalancer, are
 #'     terminated.
 #' 
-#' -   `false`: AWS Elastic Beanstalk resource management is removed from
+#'   - `false`: AWS Elastic Beanstalk resource management is removed from
 #'     the environment, but the AWS resources continue to operate.
 #' 
 #' For more information, see the [AWS Elastic Beanstalk User
@@ -3891,7 +3890,7 @@ elasticbeanstalk_update_application_version <- function(ApplicationName, Version
 #' 
 #' Related Topics
 #' 
-#' -   [`describe_configuration_options`][elasticbeanstalk_describe_configuration_options]
+#'   - [`describe_configuration_options`][elasticbeanstalk_describe_configuration_options]
 #'
 #' @usage
 #' elasticbeanstalk_update_configuration_template(ApplicationName,

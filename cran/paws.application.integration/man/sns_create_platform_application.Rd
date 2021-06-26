@@ -40,8 +40,7 @@ notification service.
 \code{PlatformCredential} is \verb{client secret}.
 \item For \code{Baidu}, \code{PlatformPrincipal} is \verb{API key} and
 \code{PlatformCredential} is \verb{secret key}.
-\item For \code{APNS} and \code{APNS_SANDBOX}, \code{PlatformPrincipal} is
-\verb{SSL certificate} and \code{PlatformCredential} is \verb{private key}.
+\item For \code{APNS} and \code{APNS_SANDBOX}, \code{PlatformPrincipal} is \verb{SSL certificate} and \code{PlatformCredential} is \verb{private key}.
 \item For \code{GCM} (Firebase Cloud Messaging), there is no
 \code{PlatformPrincipal} and the \code{PlatformCredential} is \verb{API key}.
 \item For \code{MPNS}, \code{PlatformPrincipal} is \verb{TLS certificate} and

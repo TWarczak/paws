@@ -30,7 +30,7 @@ settings may override query settings. This affects the query results
 location. The workgroup settings override is specified in
 EnforceWorkGroupConfiguration (true/false) in the
 WorkGroupConfiguration. See
-WorkGroupConfiguration$EnforceWorkGroupConfiguration.}
+<span>WorkGroupConfiguration$EnforceWorkGroupConfiguration</span>.}
 
 \item{WorkGroup}{The name of the workgroup in which the query is being started.}
 }

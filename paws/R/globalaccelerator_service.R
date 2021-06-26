@@ -16,12 +16,12 @@ NULL
 #' users. Depending on the type of accelerator you choose, you can gain
 #' additional benefits.
 #' 
-#' -   By using a standard accelerator, you can improve availability of
+#'   - By using a standard accelerator, you can improve availability of
 #'     your internet applications that are used by a global audience. With
 #'     a standard accelerator, Global Accelerator directs traffic to
 #'     optimal endpoints over the AWS global network.
 #' 
-#' -   For other scenarios, you might choose a custom routing accelerator.
+#'   - For other scenarios, you might choose a custom routing accelerator.
 #'     With a custom routing accelerator, you can use application logic to
 #'     directly map one or more users to a specific endpoint among many
 #'     endpoints.
@@ -62,7 +62,7 @@ NULL
 #' internet traffic from clients is always directed to healthy endpoints.
 #' 
 #' For a list of the AWS Regions where Global Accelerator and other
-#' services are currently supported, see the AWS Region Table.
+#' services are currently supported, see the <span>AWS Region Table</span>.
 #' 
 #' AWS Global Accelerator includes the following components:
 #' 
@@ -100,14 +100,14 @@ NULL
 #' 
 #' There are two types of accelerators:
 #' 
-#' -   A *standard* accelerator directs traffic to the optimal AWS endpoint
+#'   - A *standard* accelerator directs traffic to the optimal AWS endpoint
 #'     based on several factors, including the user’s location, the health
 #'     of the endpoint, and the endpoint weights that you configure. This
 #'     improves the availability and performance of your applications.
 #'     Endpoints can be Network Load Balancers, Application Load Balancers,
 #'     Amazon EC2 instances, or Elastic IP addresses.
 #' 
-#' -   A *custom routing* accelerator directs traffic to one of possibly
+#'   - A *custom routing* accelerator directs traffic to one of possibly
 #'     thousands of Amazon EC2 instances running in a single or multiple
 #'     virtual private clouds (VPCs). With custom routing, listener ports
 #'     are mapped to statically associate port ranges with VPC subnets,
@@ -260,6 +260,12 @@ NULL
 #'  \link[=globalaccelerator_update_listener]{update_listener} \tab Update a listener\cr
 #'  \link[=globalaccelerator_withdraw_byoip_cidr]{withdraw_byoip_cidr} \tab Stops advertising an address range that is provisioned as an address pool
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname globalaccelerator
 #' @export

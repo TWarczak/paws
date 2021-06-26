@@ -2,7 +2,7 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_list_tags_for_resource}
 \alias{waf_list_tags_for_resource}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_list_tags_for_resource(NextMarker, Limit, ResourceARN)
 }

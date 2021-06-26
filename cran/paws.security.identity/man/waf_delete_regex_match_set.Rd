@@ -2,13 +2,13 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_delete_regex_match_set}
 \alias{waf_delete_regex_match_set}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_delete_regex_match_set(RegexMatchSetId, ChangeToken)
 }
 \arguments{
-\item{RegexMatchSetId}{[required] The \code{RegexMatchSetId} of the RegexMatchSet that you want to delete.
-\code{RegexMatchSetId} is returned by
+\item{RegexMatchSetId}{[required] The \code{RegexMatchSetId} of the <span>RegexMatchSet</span> that you want to
+delete. \code{RegexMatchSetId} is returned by
 \code{\link[=waf_create_regex_match_set]{create_regex_match_set}} and by
 \code{\link[=waf_list_regex_match_sets]{list_regex_match_sets}}.}
 
@@ -31,9 +31,9 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Permanently deletes a RegexMatchSet. You can't delete a \code{RegexMatchSet}
-if it's still used in any \code{Rules} or if it still includes any
-\code{RegexMatchTuples} objects (any filters).
+Permanently deletes a <span>RegexMatchSet</span>. You can't delete a
+\code{RegexMatchSet} if it's still used in any \code{Rules} or if it still
+includes any \code{RegexMatchTuples} objects (any filters).
 
 If you just want to remove a \code{RegexMatchSet} from a \code{Rule}, use
 \code{\link[=waf_update_rule]{update_rule}}.

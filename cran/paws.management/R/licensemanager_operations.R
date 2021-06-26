@@ -107,7 +107,8 @@ licensemanager_check_in_license <- function(LicenseConsumptionToken, Beneficiary
 #' @param Entitlements &#91;required&#93; License entitlements. Partial checkouts are not supported.
 #' @param DigitalSignatureMethod &#91;required&#93; Digital signature method. The possible value is JSON Web Signature (JWS)
 #' algorithm PS384. For more information, see [RFC 7518 Digital Signature
-#' with RSASSA-PSS](https://tools.ietf.org/html/rfc7518#section-3.5).
+#' with
+#' RSASSA-PSS](https://datatracker.ietf.org/doc/html/rfc7518#section-3.5).
 #' @param NodeId Node ID.
 #' @param CheckoutMetadata Information about constraints.
 #' @param ClientToken &#91;required&#93; Unique, case-sensitive identifier that you provide to ensure the
@@ -514,17 +515,17 @@ licensemanager_create_license <- function(LicenseName, ProductName, ProductSKU, 
 #' \#allowedTenancy=EC2-DedicatedHost). The available rules vary by
 #' dimension, as follows.
 #' 
-#' -   `Cores` dimension: `allowedTenancy` | `licenseAffinityToHost` |
+#'   - `Cores` dimension: `allowedTenancy` | `licenseAffinityToHost` |
 #'     `maximumCores` | `minimumCores`
 #' 
-#' -   `Instances` dimension: `allowedTenancy` | `maximumCores` |
+#'   - `Instances` dimension: `allowedTenancy` | `maximumCores` |
 #'     `minimumCores` | `maximumSockets` | `minimumSockets` |
 #'     `maximumVcpus` | `minimumVcpus`
 #' 
-#' -   `Sockets` dimension: `allowedTenancy` | `licenseAffinityToHost` |
+#'   - `Sockets` dimension: `allowedTenancy` | `licenseAffinityToHost` |
 #'     `maximumSockets` | `minimumSockets`
 #' 
-#' -   `vCPUs` dimension: `allowedTenancy` | `honorVcpuOptimization` |
+#'   - `vCPUs` dimension: `allowedTenancy` | `honorVcpuOptimization` |
 #'     `maximumVcpus` | `minimumVcpus`
 #' 
 #' The unit for `licenseAffinityToHost` is days and the range is 1 to 180.
@@ -1477,13 +1478,13 @@ licensemanager_list_associations_for_license_configuration <- function(LicenseCo
 #' @param GrantArns Amazon Resource Names (ARNs) of the grants.
 #' @param Filters Filters to scope the results. The following filters are supported:
 #' 
-#' -   `LicenseARN`
+#'   - `LicenseARN`
 #' 
-#' -   `Status`
+#'   - `Status`
 #' 
-#' -   `PrincipalARN`
+#'   - `PrincipalARN`
 #' 
-#' -   `ParentARN`
+#'   - `ParentARN`
 #' @param NextToken Token for the next set of results.
 #' @param MaxResults Maximum number of results to return in a single call.
 #'
@@ -1634,15 +1635,15 @@ licensemanager_list_failures_for_license_configuration_operations <- function(Li
 #' @param Filters Filters to scope the results. The following filters and logical
 #' operators are supported:
 #' 
-#' -   `licenseCountingType` - The dimension on which licenses are counted.
+#'   - `licenseCountingType` - The dimension on which licenses are counted.
 #'     Possible values are `vCPU` | `Instance` | `Core` | `Socket`. Logical
 #'     operators are `EQUALS` | `NOT_EQUALS`.
 #' 
-#' -   `enforceLicenseCount` - A Boolean value that indicates whether hard
+#'   - `enforceLicenseCount` - A Boolean value that indicates whether hard
 #'     license enforcement is used. Logical operators are `EQUALS` |
 #'     `NOT_EQUALS`.
 #' 
-#' -   `usagelimitExceeded` - A Boolean value that indicates whether the
+#'   - `usagelimitExceeded` - A Boolean value that indicates whether the
 #'     available licenses have been exceeded. Logical operators are
 #'     `EQUALS` | `NOT_EQUALS`.
 #'
@@ -1908,13 +1909,13 @@ licensemanager_list_license_versions <- function(LicenseArn, NextToken = NULL, M
 #' @param LicenseArns Amazon Resource Names (ARNs) of the licenses.
 #' @param Filters Filters to scope the results. The following filters are supported:
 #' 
-#' -   `Beneficiary`
+#'   - `Beneficiary`
 #' 
-#' -   `ProductSKU`
+#'   - `ProductSKU`
 #' 
-#' -   `KeyFingerprint`
+#'   - `KeyFingerprint`
 #' 
-#' -   `Status`
+#'   - `Status`
 #' @param NextToken Token for the next set of results.
 #' @param MaxResults Maximum number of results to return in a single call.
 #'
@@ -2025,9 +2026,9 @@ licensemanager_list_licenses <- function(LicenseArns = NULL, Filters = NULL, Nex
 #' @param GrantArns Amazon Resource Names (ARNs) of the grants.
 #' @param Filters Filters to scope the results. The following filters are supported:
 #' 
-#' -   `LicenseARN`
+#'   - `LicenseARN`
 #' 
-#' -   `Status`
+#'   - `Status`
 #' @param NextToken Token for the next set of results.
 #' @param MaxResults Maximum number of results to return in a single call.
 #'
@@ -2106,13 +2107,13 @@ licensemanager_list_received_grants <- function(GrantArns = NULL, Filters = NULL
 #' @param LicenseArns Amazon Resource Names (ARNs) of the licenses.
 #' @param Filters Filters to scope the results. The following filters are supported:
 #' 
-#' -   `ProductSKU`
+#'   - `ProductSKU`
 #' 
-#' -   `Status`
+#'   - `Status`
 #' 
-#' -   `KeyFingerprint`
+#'   - `KeyFingerprint`
 #' 
-#' -   `Issuer`
+#'   - `Issuer`
 #' @param NextToken Token for the next set of results.
 #' @param MaxResults Maximum number of results to return in a single call.
 #'
@@ -2230,24 +2231,24 @@ licensemanager_list_received_licenses <- function(LicenseArns = NULL, Filters = 
 #' @param Filters Filters to scope the results. The following filters and logical
 #' operators are supported:
 #' 
-#' -   `account_id` - The ID of the AWS account that owns the resource.
+#'   - `account_id` - The ID of the AWS account that owns the resource.
 #'     Logical operators are `EQUALS` | `NOT_EQUALS`.
 #' 
-#' -   `application_name` - The name of the application. Logical operators
+#'   - `application_name` - The name of the application. Logical operators
 #'     are `EQUALS` | `BEGINS_WITH`.
 #' 
-#' -   `license_included` - The type of license included. Logical operators
+#'   - `license_included` - The type of license included. Logical operators
 #'     are `EQUALS` | `NOT_EQUALS`. Possible values are
 #'     `sql-server-enterprise` | `sql-server-standard` | `sql-server-web` |
 #'     `windows-server-datacenter`.
 #' 
-#' -   `platform` - The platform of the resource. Logical operators are
+#'   - `platform` - The platform of the resource. Logical operators are
 #'     `EQUALS` | `BEGINS_WITH`.
 #' 
-#' -   `resource_id` - The ID of the resource. Logical operators are
+#'   - `resource_id` - The ID of the resource. Logical operators are
 #'     `EQUALS` | `NOT_EQUALS`.
 #' 
-#' -   `tag:<key>` - The key/value combination of a tag assigned to the
+#'   - `tag:<key>` - The key/value combination of a tag assigned to the
 #'     resource. Logical operators are `EQUALS` (single account) or
 #'     `EQUALS` | `NOT_EQUALS` (cross account).
 #'
@@ -2365,7 +2366,7 @@ licensemanager_list_tags_for_resource <- function(ResourceArn) {
 #' @param TokenIds Token IDs.
 #' @param Filters Filters to scope the results. The following filter is supported:
 #' 
-#' -   `licenseArns`
+#'   - `licenseArns`
 #' @param NextToken Token for the next set of results.
 #' @param MaxResults Maximum number of results to return in a single call.
 #'
@@ -2450,14 +2451,14 @@ licensemanager_list_tokens <- function(TokenIds = NULL, Filters = NULL, NextToke
 #' @param Filters Filters to scope the results. The following filters and logical
 #' operators are supported:
 #' 
-#' -   `resourceArn` - The ARN of the license configuration resource.
+#'   - `resourceArn` - The ARN of the license configuration resource.
 #'     Logical operators are `EQUALS` | `NOT_EQUALS`.
 #' 
-#' -   `resourceType` - The resource type (`EC2_INSTANCE` | `EC2_HOST` |
+#'   - `resourceType` - The resource type (`EC2_INSTANCE` | `EC2_HOST` |
 #'     `EC2_AMI` | `SYSTEMS_MANAGER_MANAGED_INSTANCE`). Logical operators
 #'     are `EQUALS` | `NOT_EQUALS`.
 #' 
-#' -   `resourceAccount` - The ID of the account that owns the resource.
+#'   - `resourceAccount` - The ID of the account that owns the resource.
 #'     Logical operators are `EQUALS` | `NOT_EQUALS`.
 #'
 #' @return

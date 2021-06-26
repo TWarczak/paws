@@ -128,10 +128,10 @@ For more information, see \href{https://docs.aws.amazon.com/AWSCloudFormation/la
 this create stack action, such as \verb{AWS::EC2::Instance}, \verb{AWS::EC2::*},
 or \code{Custom::MyCustomInstance}. Use the following syntax to describe
 template resource types: \verb{AWS::*} (for all AWS resource), \verb{Custom::*}
-(for all custom resources), \code{Custom::logical_ID } (for a specific custom
-resource), \verb{AWS::service_name::*} (for all resources of a particular AWS
-service), and \verb{AWS::service_name::resource_logical_ID } (for a specific
-AWS resource).
+(for all custom resources), \code{Custom::logical_ID } (for a specific
+custom resource), \verb{AWS::service_name::*} (for all resources of a
+particular AWS service), and \verb{AWS::service_name::resource_logical_ID }
+(for a specific AWS resource).
 
 If the list of resource types doesn't include a resource that you're
 creating, the stack creation fails. By default, AWS CloudFormation

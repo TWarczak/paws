@@ -11,8 +11,8 @@ shield_list_protections(NextToken, MaxResults)
 \code{\link[=shield_list_protections]{list_protections}}. Pass null if this is the
 first call.}
 
-\item{MaxResults}{The maximum number of Protection objects to return. If you leave this
-blank, Shield Advanced returns the first 20 results.
+\item{MaxResults}{The maximum number of <span>Protection</span> objects to return. If you
+leave this blank, Shield Advanced returns the first 20 results.
 
 This is a maximum value. Shield Advanced might return the results in
 smaller batches. That is, the number of objects returned could be less
@@ -38,7 +38,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Lists all Protection objects for the account.
+Lists all <span>Protection</span> objects for the account.
 }
 \section{Request syntax}{
 \preformatted{svc$list_protections(

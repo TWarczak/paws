@@ -45,8 +45,7 @@ a new load balancer, create a new certificate, and verify domain
 ownership again.
 
 The \verb{delete load balancer} operation supports tag-based access control
-via resource tags applied to the resource identified by
-\verb{load balancer name}. For more information, see the Lightsail Dev Guide.
+via resource tags applied to the resource identified by \verb{load balancer name}. For more information, see the <span>Lightsail Dev Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$delete_load_balancer(

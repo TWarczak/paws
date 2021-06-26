@@ -103,8 +103,8 @@ that the encryption key was transmitted without error.}
 for object encryption. All GET and PUT requests for an object protected
 by AWS KMS will fail if not made via SSL or using SigV4. For information
 about configuring using any of the officially supported AWS SDKs and AWS
-CLI, see Specifying the Signature Version in Request Authentication in
-the \emph{Amazon S3 Developer Guide}.}
+CLI, see <span>Specifying the Signature Version in Request
+Authentication</span> in the \emph{Amazon S3 Developer Guide}.}
 
 \item{SSEKMSEncryptionContext}{Specifies the AWS KMS Encryption Context to use for object encryption.
 The value of this header is a base64-encoded UTF-8 string holding JSON
@@ -131,8 +131,7 @@ object.}
 \item{ObjectLockLegalHoldStatus}{Specifies whether you want to apply a Legal Hold to the uploaded object.}
 
 \item{ExpectedBucketOwner}{The account id of the expected bucket owner. If the bucket is owned by a
-different account, the request will fail with an HTTP
-\verb{403 (Access Denied)} error.}
+different account, the request will fail with an HTTP \verb{403 (Access Denied)} error.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -278,7 +277,7 @@ operation. By default, all objects are private. Only the owner has full
 access control. When adding a new object, you can grant permissions to
 individual AWS accounts or to predefined groups defined by Amazon S3.
 These permissions are then added to the access control list (ACL) on the
-object. For more information, see \href{https://docs.aws.amazon.com/AmazonS3/latest/userguide/acl_overview.html}{Using ACLs}.
+object. For more information, see \href{https://docs.aws.amazon.com/AmazonS3/latest/userguide/acl-overview.html}{Using ACLs}.
 With this operation, you can grant access permissions using one of the
 following two methods:
 \itemize{

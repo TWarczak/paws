@@ -13,7 +13,8 @@ want to update.}
 \item{Configuration}{The new configuration to associate with the specified group. A
 configuration associates the resource group with an AWS service and
 specifies how the service can interact with the resources in the group.
-A configuration is an array of GroupConfigurationItem elements.
+A configuration is an array of <span>GroupConfigurationItem</span>
+elements.
 
 For information about the syntax of a service configuration, see
 \href{https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html}{Service configurations for resource groups}.

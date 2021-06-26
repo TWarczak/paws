@@ -9,16 +9,17 @@ apigateway_create_rest_api(name, description, version, cloneFrom,
   endpointConfiguration, policy, tags, disableExecuteApiEndpoint)
 }
 \arguments{
-\item{name}{[required] [Required] The name of the RestApi.}
+\item{name}{[required] [Required] The name of the <span>RestApi</span>.}
 
-\item{description}{The description of the RestApi.}
+\item{description}{The description of the <span>RestApi</span>.}
 
 \item{version}{A version identifier for the API.}
 
-\item{cloneFrom}{The ID of the RestApi that you want to clone from.}
+\item{cloneFrom}{The ID of the <span>RestApi</span> that you want to clone from.}
 
-\item{binaryMediaTypes}{The list of binary media types supported by the RestApi. By default, the
-RestApi supports only UTF-8-encoded text payloads.}
+\item{binaryMediaTypes}{The list of binary media types supported by the <span>RestApi</span>. By
+default, the <span>RestApi</span> supports only UTF-8-encoded text
+payloads.}
 
 \item{minimumCompressionSize}{A nullable integer that is used to enable compression (with non-negative
 between 0 and 10485760 (10M) bytes, inclusive) or disable compression
@@ -36,11 +37,11 @@ request.
 a custom authorizer.
 }}
 
-\item{endpointConfiguration}{The endpoint configuration of this RestApi showing the endpoint types of
-the API.}
+\item{endpointConfiguration}{The endpoint configuration of this <span>RestApi</span> showing the
+endpoint types of the API.}
 
 \item{policy}{A stringified JSON policy document that applies to this RestApi
-regardless of the caller and Method configuration.}
+regardless of the caller and <span>Method</span> configuration.}
 
 \item{tags}{The key-value map of strings. The valid character set is
 [a-zA-Z+-=._:/]. The tag key can be up to 128 characters and must not
@@ -86,7 +87,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Creates a new RestApi resource.
+Creates a new <span>RestApi</span> resource.
 }
 \section{Request syntax}{
 \preformatted{svc$create_rest_api(

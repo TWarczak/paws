@@ -10,31 +10,32 @@ redshift_create_scheduled_action(ScheduledActionName, TargetAction,
 }
 \arguments{
 \item{ScheduledActionName}{[required] The name of the scheduled action. The name must be unique within an
-account. For more information about this parameter, see ScheduledAction.}
+account. For more information about this parameter, see
+<span>ScheduledAction</span>.}
 
 \item{TargetAction}{[required] A JSON format string of the Amazon Redshift API operation with input
 parameters. For more information about this parameter, see
-ScheduledAction.}
+<span>ScheduledAction</span>.}
 
 \item{Schedule}{[required] The schedule in \code{at( )} or \code{cron( )} format. For more information about
-this parameter, see ScheduledAction.}
+this parameter, see <span>ScheduledAction</span>.}
 
 \item{IamRole}{[required] The IAM role to assume to run the target action. For more information
-about this parameter, see ScheduledAction.}
+about this parameter, see <span>ScheduledAction</span>.}
 
 \item{ScheduledActionDescription}{The description of the scheduled action.}
 
 \item{StartTime}{The start time in UTC of the scheduled action. Before this time, the
 scheduled action does not trigger. For more information about this
-parameter, see ScheduledAction.}
+parameter, see <span>ScheduledAction</span>.}
 
 \item{EndTime}{The end time in UTC of the scheduled action. After this time, the
 scheduled action does not trigger. For more information about this
-parameter, see ScheduledAction.}
+parameter, see <span>ScheduledAction</span>.}
 
 \item{Enable}{If true, the schedule is enabled. If false, the scheduled action does
 not trigger. For more information about \code{state} of the scheduled action,
-see ScheduledAction.}
+see <span>ScheduledAction</span>.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

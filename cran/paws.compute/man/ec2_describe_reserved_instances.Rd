@@ -25,26 +25,19 @@ reservation.
 \item \code{product-description} - The Reserved Instance product platform
 description. Instances that include \verb{(Amazon VPC)} in the product
 platform description will only be displayed to EC2-Classic account
-holders and are for use with Amazon VPC (\code{Linux/UNIX} |
-\verb{Linux/UNIX (Amazon VPC)} | \verb{SUSE Linux} | \verb{SUSE Linux (Amazon VPC)}
-| \verb{Red Hat Enterprise Linux} |
-\verb{Red Hat Enterprise Linux (Amazon VPC)} | \code{Windows} |
-\verb{Windows (Amazon VPC)} | \verb{Windows with SQL Server Standard} |
-\verb{Windows with SQL Server Standard (Amazon VPC)} |
-\verb{Windows with SQL Server Web} |
-\verb{Windows with SQL Server Web (Amazon VPC)} |
-\verb{Windows with SQL Server Enterprise} |
-\verb{Windows with SQL Server Enterprise (Amazon VPC)}).
+holders and are for use with Amazon VPC (\code{Linux/UNIX} | \verb{Linux/UNIX (Amazon VPC)} | \verb{SUSE Linux} | \verb{SUSE Linux (Amazon VPC)} | \verb{Red Hat Enterprise Linux} | \verb{Red Hat Enterprise Linux (Amazon VPC)} |
+\code{Windows} | \verb{Windows (Amazon VPC)} | \verb{Windows with SQL Server Standard} | \verb{Windows with SQL Server Standard (Amazon VPC)} |
+\verb{Windows with SQL Server Web} | \verb{Windows with SQL Server Web (Amazon VPC)} | \verb{Windows with SQL Server Enterprise} | \verb{Windows with SQL Server Enterprise (Amazon VPC)}).
 \item \code{reserved-instances-id} - The ID of the Reserved Instance.
 \item \code{start} - The time at which the Reserved Instance purchase request
 was placed (for example, 2014-08-07T11:54:42.000Z).
 \item \code{state} - The state of the Reserved Instance (\code{payment-pending} |
 \code{active} | \code{payment-failed} | \code{retired}).
-\item \code{tag}:<key> - The key/value combination of a tag assigned to
-the resource. Use the tag key in the filter name and the tag value
-as the filter value. For example, to find all resources that have a
-tag with the key \code{Owner} and the value \code{TeamA}, specify \code{tag:Owner}
-for the filter name and \code{TeamA} for the filter value.
+\item \code{tag}:\<key\> - The key/value combination of a tag assigned to the
+resource. Use the tag key in the filter name and the tag value as
+the filter value. For example, to find all resources that have a tag
+with the key \code{Owner} and the value \code{TeamA}, specify \code{tag:Owner} for
+the filter name and \code{TeamA} for the filter value.
 \item \code{tag-key} - The key of a tag assigned to the resource. Use this
 filter to find all resources assigned a tag with a specific key,
 regardless of the tag value.
@@ -65,8 +58,7 @@ the required permissions, the error response is \code{DryRunOperation}.
 Otherwise, it is \code{UnauthorizedOperation}.}
 
 \item{OfferingType}{The Reserved Instance offering type. If you are using tools that predate
-the 2011-11-01 API version, you only have access to the
-\verb{Medium Utilization} Reserved Instance offering type.}
+the 2011-11-01 API version, you only have access to the \verb{Medium Utilization} Reserved Instance offering type.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

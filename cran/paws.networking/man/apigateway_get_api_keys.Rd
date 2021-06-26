@@ -53,7 +53,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Gets information about the current ApiKeys resource.
+Gets information about the current <span>ApiKeys</span> resource.
 }
 \section{Request syntax}{
 \preformatted{svc$get_api_keys(

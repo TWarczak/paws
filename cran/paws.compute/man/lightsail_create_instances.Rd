@@ -43,7 +43,7 @@ user data. For example, you might want to run \verb{apt-get -y update}.
 Depending on the machine image you choose, the command to get software
 on your instance varies. Amazon Linux and CentOS use \code{yum}, Debian and
 Ubuntu use \code{apt-get}, and FreeBSD uses \code{pkg}. For a complete list, see
-the Dev Guide.}
+the <span>Dev Guide</span>.}
 
 \item{keyPairName}{The name of your key pair.}
 
@@ -87,7 +87,8 @@ A list with the following syntax:\preformatted{list(
 Creates one or more Amazon Lightsail instances.
 
 The \verb{create instances} operation supports tag-based access control via
-request tags. For more information, see the Lightsail Dev Guide.
+request tags. For more information, see the <span>Lightsail Dev
+Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$create_instances(

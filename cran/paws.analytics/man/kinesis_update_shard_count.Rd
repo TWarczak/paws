@@ -71,7 +71,7 @@ less than 500 shards
 For the default limits for an AWS account, see \href{https://docs.aws.amazon.com/streams/latest/dev/service-sizes-and-limits.html}{Streams Limits}
 in the \emph{Amazon Kinesis Data Streams Developer Guide}. To request an
 increase in the call rate limit, the shard limit for this API, or your
-overall shard limit, use the limits form.
+overall shard limit, use the <span>limits form</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$update_shard_count(

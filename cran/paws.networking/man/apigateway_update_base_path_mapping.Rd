@@ -8,9 +8,11 @@ apigateway_update_base_path_mapping(domainName, basePath,
   patchOperations)
 }
 \arguments{
-\item{domainName}{[required] [Required] The domain name of the BasePathMapping resource to change.}
+\item{domainName}{[required] [Required] The domain name of the <span>BasePathMapping</span>
+resource to change.}
 
-\item{basePath}{[required] [Required] The base path of the BasePathMapping resource to change.
+\item{basePath}{[required] [Required] The base path of the <span>BasePathMapping</span> resource
+to change.
 
 To specify an empty base path, set this parameter to \code{'(none)'}.}
 
@@ -26,7 +28,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Changes information about the BasePathMapping resource.
+Changes information about the <span>BasePathMapping</span> resource.
 }
 \section{Request syntax}{
 \preformatted{svc$update_base_path_mapping(

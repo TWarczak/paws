@@ -51,9 +51,9 @@ game hosting activity in the fleet, see
 You can request capacity for all fleets or specify a list of one or more
 fleet identifiers. When requesting multiple fleets, use the pagination
 parameters to retrieve results as a set of sequential pages. If
-successful, a FleetCapacity object is returned for each requested fleet
-ID. When a list of fleet IDs is provided, attribute objects are returned
-only for fleets that currently exist.
+successful, a <span>FleetCapacity</span> object is returned for each
+requested fleet ID. When a list of fleet IDs is provided, attribute
+objects are returned only for fleets that currently exist.
 
 Some API operations may limit the number of fleet IDs allowed in one
 request. If a request exceeds this limit, the request fails and the

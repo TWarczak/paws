@@ -3442,14 +3442,14 @@ pinpoint_delete_email_channel <- function(ApplicationId) {
 #' If you don't specify a value for this parameter, Amazon Pinpoint does
 #' the following:
 #' 
-#' -   For a get operation, retrieves information about the active version
+#'   - For a get operation, retrieves information about the active version
 #'     of the template.
 #' 
-#' -   For an update operation, saves the updates to (overwrites) the
+#'   - For an update operation, saves the updates to (overwrites) the
 #'     latest existing version of the template, if the create-new-version
 #'     parameter isn't used or is set to false.
 #' 
-#' -   For a delete operation, deletes the template, including all versions
+#'   - For a delete operation, deletes the template, including all versions
 #'     of the template.
 #'
 #' @return
@@ -4149,14 +4149,14 @@ pinpoint_delete_journey <- function(ApplicationId, JourneyId) {
 #' If you don't specify a value for this parameter, Amazon Pinpoint does
 #' the following:
 #' 
-#' -   For a get operation, retrieves information about the active version
+#'   - For a get operation, retrieves information about the active version
 #'     of the template.
 #' 
-#' -   For an update operation, saves the updates to (overwrites) the
+#'   - For an update operation, saves the updates to (overwrites) the
 #'     latest existing version of the template, if the create-new-version
 #'     parameter isn't used or is set to false.
 #' 
-#' -   For a delete operation, deletes the template, including all versions
+#'   - For a delete operation, deletes the template, including all versions
 #'     of the template.
 #'
 #' @return
@@ -4603,14 +4603,14 @@ pinpoint_delete_sms_channel <- function(ApplicationId) {
 #' If you don't specify a value for this parameter, Amazon Pinpoint does
 #' the following:
 #' 
-#' -   For a get operation, retrieves information about the active version
+#'   - For a get operation, retrieves information about the active version
 #'     of the template.
 #' 
-#' -   For an update operation, saves the updates to (overwrites) the
+#'   - For an update operation, saves the updates to (overwrites) the
 #'     latest existing version of the template, if the create-new-version
 #'     parameter isn't used or is set to false.
 #' 
-#' -   For a delete operation, deletes the template, including all versions
+#'   - For a delete operation, deletes the template, including all versions
 #'     of the template.
 #'
 #' @return
@@ -4835,14 +4835,14 @@ pinpoint_delete_voice_channel <- function(ApplicationId) {
 #' If you don't specify a value for this parameter, Amazon Pinpoint does
 #' the following:
 #' 
-#' -   For a get operation, retrieves information about the active version
+#'   - For a get operation, retrieves information about the active version
 #'     of the template.
 #' 
-#' -   For an update operation, saves the updates to (overwrites) the
+#'   - For an update operation, saves the updates to (overwrites) the
 #'     latest existing version of the template, if the create-new-version
 #'     parameter isn't used or is set to false.
 #' 
-#' -   For a delete operation, deletes the template, including all versions
+#'   - For a delete operation, deletes the template, including all versions
 #'     of the template.
 #'
 #' @return
@@ -5262,7 +5262,8 @@ pinpoint_get_app <- function(ApplicationId) {
 #' and consists of two or more terms, which are comprised of lowercase
 #' alphanumeric characters, separated by a hyphen. Examples are
 #' email-open-rate and successful-delivery-rate. For a list of valid
-#' values, see the Amazon Pinpoint Developer Guide.
+#' values, see the [Amazon Pinpoint Developer
+#' Guide](https://docs.aws.amazon.com/pinpoint/latest/developerguide/analytics-standard-metrics.html).
 #' @param NextToken The string that specifies which page of results to return in a paginated
 #' response. This parameter is not supported for application, campaign, and
 #' journey metrics.
@@ -6023,7 +6024,8 @@ pinpoint_get_campaign_activities <- function(ApplicationId, CampaignId, PageSize
 #' and consists of two or more terms, which are comprised of lowercase
 #' alphanumeric characters, separated by a hyphen. Examples are
 #' email-open-rate and successful-delivery-rate. For a list of valid
-#' values, see the Amazon Pinpoint Developer Guide.
+#' values, see the [Amazon Pinpoint Developer
+#' Guide](https://docs.aws.amazon.com/pinpoint/latest/developerguide/analytics-standard-metrics.html).
 #' @param NextToken The string that specifies which page of results to return in a paginated
 #' response. This parameter is not supported for application, campaign, and
 #' journey metrics.
@@ -7454,14 +7456,14 @@ pinpoint_get_email_channel <- function(ApplicationId) {
 #' If you don't specify a value for this parameter, Amazon Pinpoint does
 #' the following:
 #' 
-#' -   For a get operation, retrieves information about the active version
+#'   - For a get operation, retrieves information about the active version
 #'     of the template.
 #' 
-#' -   For an update operation, saves the updates to (overwrites) the
+#'   - For an update operation, saves the updates to (overwrites) the
 #'     latest existing version of the template, if the create-new-version
 #'     parameter isn't used or is set to false.
 #' 
-#' -   For a delete operation, deletes the template, including all versions
+#'   - For a delete operation, deletes the template, including all versions
 #'     of the template.
 #'
 #' @return
@@ -8487,7 +8489,8 @@ pinpoint_get_journey <- function(ApplicationId, JourneyId) {
 #' and consists of two or more terms, which are comprised of lowercase
 #' alphanumeric characters, separated by a hyphen. Examples are
 #' email-open-rate and successful-delivery-rate. For a list of valid
-#' values, see the Amazon Pinpoint Developer Guide.
+#' values, see the [Amazon Pinpoint Developer
+#' Guide](https://docs.aws.amazon.com/pinpoint/latest/developerguide/analytics-standard-metrics.html).
 #' @param NextToken The string that specifies which page of results to return in a paginated
 #' response. This parameter is not supported for application, campaign, and
 #' journey metrics.
@@ -8739,14 +8742,14 @@ pinpoint_get_journey_execution_metrics <- function(ApplicationId, JourneyId, Nex
 #' If you don't specify a value for this parameter, Amazon Pinpoint does
 #' the following:
 #' 
-#' -   For a get operation, retrieves information about the active version
+#'   - For a get operation, retrieves information about the active version
 #'     of the template.
 #' 
-#' -   For an update operation, saves the updates to (overwrites) the
+#'   - For an update operation, saves the updates to (overwrites) the
 #'     latest existing version of the template, if the create-new-version
 #'     parameter isn't used or is set to false.
 #' 
-#' -   For a delete operation, deletes the template, including all versions
+#'   - For a delete operation, deletes the template, including all versions
 #'     of the template.
 #'
 #' @return
@@ -10293,14 +10296,14 @@ pinpoint_get_sms_channel <- function(ApplicationId) {
 #' If you don't specify a value for this parameter, Amazon Pinpoint does
 #' the following:
 #' 
-#' -   For a get operation, retrieves information about the active version
+#'   - For a get operation, retrieves information about the active version
 #'     of the template.
 #' 
-#' -   For an update operation, saves the updates to (overwrites) the
+#'   - For an update operation, saves the updates to (overwrites) the
 #'     latest existing version of the template, if the create-new-version
 #'     parameter isn't used or is set to false.
 #' 
-#' -   For a delete operation, deletes the template, including all versions
+#'   - For a delete operation, deletes the template, including all versions
 #'     of the template.
 #'
 #' @return
@@ -10538,14 +10541,14 @@ pinpoint_get_voice_channel <- function(ApplicationId) {
 #' If you don't specify a value for this parameter, Amazon Pinpoint does
 #' the following:
 #' 
-#' -   For a get operation, retrieves information about the active version
+#'   - For a get operation, retrieves information about the active version
 #'     of the template.
 #' 
-#' -   For an update operation, saves the updates to (overwrites) the
+#'   - For an update operation, saves the updates to (overwrites) the
 #'     latest existing version of the template, if the create-new-version
 #'     parameter isn't used or is set to false.
 #' 
-#' -   For a delete operation, deletes the template, including all versions
+#'   - For a delete operation, deletes the template, including all versions
 #'     of the template.
 #'
 #' @return
@@ -11515,16 +11518,16 @@ pinpoint_put_events <- function(ApplicationId, EventsRequest) {
 #' as the **Project ID** on the Amazon Pinpoint console.
 #' @param AttributeType &#91;required&#93; The type of attribute or attributes to remove. Valid values are:
 #' 
-#' -   endpoint-custom-attributes - Custom attributes that describe
+#'   - endpoint-custom-attributes - Custom attributes that describe
 #'     endpoints, such as the date when an associated user opted in or out
 #'     of receiving communications from you through a specific type of
 #'     channel.
 #' 
-#' -   endpoint-metric-attributes - Custom metrics that your app reports to
+#'   - endpoint-metric-attributes - Custom metrics that your app reports to
 #'     Amazon Pinpoint for endpoints, such as the number of app sessions or
 #'     the number of items left in a cart.
 #' 
-#' -   endpoint-user-attributes - Custom attributes that describe users,
+#'   - endpoint-user-attributes - Custom attributes that describe users,
 #'     such as first name, last name, and age.
 #' @param UpdateAttributesRequest &#91;required&#93; 
 #'
@@ -13575,14 +13578,14 @@ pinpoint_update_email_channel <- function(ApplicationId, EmailChannelRequest) {
 #' If you don't specify a value for this parameter, Amazon Pinpoint does
 #' the following:
 #' 
-#' -   For a get operation, retrieves information about the active version
+#'   - For a get operation, retrieves information about the active version
 #'     of the template.
 #' 
-#' -   For an update operation, saves the updates to (overwrites) the
+#'   - For an update operation, saves the updates to (overwrites) the
 #'     latest existing version of the template, if the create-new-version
 #'     parameter isn't used or is set to false.
 #' 
-#' -   For a delete operation, deletes the template, including all versions
+#'   - For a delete operation, deletes the template, including all versions
 #'     of the template.
 #'
 #' @return
@@ -15171,14 +15174,14 @@ pinpoint_update_journey_state <- function(ApplicationId, JourneyId, JourneyState
 #' If you don't specify a value for this parameter, Amazon Pinpoint does
 #' the following:
 #' 
-#' -   For a get operation, retrieves information about the active version
+#'   - For a get operation, retrieves information about the active version
 #'     of the template.
 #' 
-#' -   For an update operation, saves the updates to (overwrites) the
+#'   - For an update operation, saves the updates to (overwrites) the
 #'     latest existing version of the template, if the create-new-version
 #'     parameter isn't used or is set to false.
 #' 
-#' -   For a delete operation, deletes the template, including all versions
+#'   - For a delete operation, deletes the template, including all versions
 #'     of the template.
 #'
 #' @return
@@ -15909,14 +15912,14 @@ pinpoint_update_sms_channel <- function(ApplicationId, SMSChannelRequest) {
 #' If you don't specify a value for this parameter, Amazon Pinpoint does
 #' the following:
 #' 
-#' -   For a get operation, retrieves information about the active version
+#'   - For a get operation, retrieves information about the active version
 #'     of the template.
 #' 
-#' -   For an update operation, saves the updates to (overwrites) the
+#'   - For an update operation, saves the updates to (overwrites) the
 #'     latest existing version of the template, if the create-new-version
 #'     parameter isn't used or is set to false.
 #' 
-#' -   For a delete operation, deletes the template, including all versions
+#'   - For a delete operation, deletes the template, including all versions
 #'     of the template.
 #'
 #' @return
@@ -15968,7 +15971,8 @@ pinpoint_update_sms_template <- function(CreateNewVersion = NULL, SMSTemplateReq
 }
 .pinpoint$operations$update_sms_template <- pinpoint_update_sms_template
 
-#' Changes the status of a specific version of a message template to active
+#' Changes the status of a specific version of a message template to
+#' _active_
 #'
 #' @description
 #' Changes the status of a specific version of a message template to
@@ -16128,14 +16132,14 @@ pinpoint_update_voice_channel <- function(ApplicationId, VoiceChannelRequest) {
 #' If you don't specify a value for this parameter, Amazon Pinpoint does
 #' the following:
 #' 
-#' -   For a get operation, retrieves information about the active version
+#'   - For a get operation, retrieves information about the active version
 #'     of the template.
 #' 
-#' -   For an update operation, saves the updates to (overwrites) the
+#'   - For an update operation, saves the updates to (overwrites) the
 #'     latest existing version of the template, if the create-new-version
 #'     parameter isn't used or is set to false.
 #' 
-#' -   For a delete operation, deletes the template, including all versions
+#'   - For a delete operation, deletes the template, including all versions
 #'     of the template.
 #' @param VoiceTemplateRequest &#91;required&#93; 
 #'

@@ -33,7 +33,7 @@ NULL
 #' @param RootDirectory Specifies the directory on the Amazon EFS file system that the access
 #' point exposes as the root directory of your file system to NFS clients
 #' using the access point. The clients using the access point can only
-#' access the root directory and below. If the `RootDirectory` &gt; `Path`
+#' access the root directory and below. If the `RootDirectory` \> `Path`
 #' specified does not exist, EFS creates it and applies the `CreationInfo`
 #' settings when a client connects to an access point. When specifying a
 #' `RootDirectory`, you need to provide the `Path`, and the `CreationInfo`
@@ -133,10 +133,10 @@ efs_create_access_point <- function(ClientToken, Tags = NULL, FileSystemId, Posi
 #' account with the specified creation token, this operation does the
 #' following:
 #' 
-#' -   Creates a new, empty file system. The file system will have an
+#'   - Creates a new, empty file system. The file system will have an
 #'     Amazon EFS assigned ID, and an initial lifecycle state `creating`.
 #' 
-#' -   Returns with the description of the created file system.
+#'   - Returns with the description of the created file system.
 #' 
 #' Otherwise, this operation returns a `FileSystemAlreadyExists` error with
 #' the ID of the existing file system.
@@ -195,29 +195,30 @@ efs_create_access_point <- function(ClientToken, Tags = NULL, FileSystemId, Posi
 #' file system has been created.
 #' @param Encrypted A Boolean value that, if true, creates an encrypted file system. When
 #' creating an encrypted file system, you have the option of specifying
-#' CreateFileSystemRequest$KmsKeyId for an existing AWS Key Management
-#' Service (AWS KMS) customer master key (CMK). If you don't specify a CMK,
-#' then the default CMK for Amazon EFS, `/aws/elasticfilesystem`, is used
-#' to protect the encrypted file system.
+#' <span>CreateFileSystemRequest$KmsKeyId</span> for an existing AWS Key
+#' Management Service (AWS KMS) customer master key (CMK). If you don't
+#' specify a CMK, then the default CMK for Amazon EFS,
+#' `/aws/elasticfilesystem`, is used to protect the encrypted file system.
 #' @param KmsKeyId The ID of the AWS KMS CMK to be used to protect the encrypted file
 #' system. This parameter is only required if you want to use a nondefault
 #' CMK. If this parameter is not specified, the default CMK for Amazon EFS
 #' is used. This ID can be in one of the following formats:
 #' 
-#' -   Key ID - A unique identifier of the key, for example
+#'   - Key ID - A unique identifier of the key, for example
 #'     `1234abcd-12ab-34cd-56ef-1234567890ab`.
 #' 
-#' -   ARN - An Amazon Resource Name (ARN) for the key, for example
+#'   - ARN - An Amazon Resource Name (ARN) for the key, for example
 #'     `arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`.
 #' 
-#' -   Key alias - A previously created display name for a key, for example
+#'   - Key alias - A previously created display name for a key, for example
 #'     `alias/projectKey1`.
 #' 
-#' -   Key alias ARN - An ARN for a key alias, for example
+#'   - Key alias ARN - An ARN for a key alias, for example
 #'     `arn:aws:kms:us-west-2:444455556666:alias/projectKey1`.
 #' 
-#' If `KmsKeyId` is specified, the CreateFileSystemRequest$Encrypted
-#' parameter must be set to true.
+#' If `KmsKeyId` is specified, the
+#' <span>CreateFileSystemRequest$Encrypted</span> parameter must be set to
+#' true.
 #' 
 #' EFS accepts only symmetric CMKs. You cannot use asymmetric CMKs with EFS
 #' file systems.
@@ -356,11 +357,11 @@ efs_create_file_system <- function(CreationToken, PerformanceMode = NULL, Encryp
 #' In the request, you also provide a subnet ID, which determines the
 #' following:
 #' 
-#' -   VPC in which Amazon EFS creates the mount target
+#'   - VPC in which Amazon EFS creates the mount target
 #' 
-#' -   Availability Zone in which Amazon EFS creates the mount target
+#'   - Availability Zone in which Amazon EFS creates the mount target
 #' 
-#' -   IP address range from which Amazon EFS selects the IP address of the
+#'   - IP address range from which Amazon EFS selects the IP address of the
 #'     mount target (if you don't specify an IP address in the request)
 #' 
 #' After creating the mount target, Amazon EFS returns a response that
@@ -378,36 +379,36 @@ efs_create_file_system <- function(CreationToken, PerformanceMode = NULL, Encryp
 #' it, the subnet specified in the request to add another mount target must
 #' meet the following requirements:
 #' 
-#' -   Must belong to the same VPC as the subnets of the existing mount
+#'   - Must belong to the same VPC as the subnets of the existing mount
 #'     targets
 #' 
-#' -   Must not be in the same Availability Zone as any of the subnets of
+#'   - Must not be in the same Availability Zone as any of the subnets of
 #'     the existing mount targets
 #' 
 #' If the request satisfies the requirements, Amazon EFS does the
 #' following:
 #' 
-#' -   Creates a new mount target in the specified subnet.
+#'   - Creates a new mount target in the specified subnet.
 #' 
-#' -   Also creates a new network interface in the subnet as follows:
-#' 
-#'     -   If the request provides an `IpAddress`, Amazon EFS assigns that
+#'   - Also creates a new network interface in the subnet as follows:
+#'     
+#'       - If the request provides an `IpAddress`, Amazon EFS assigns that
 #'         IP address to the network interface. Otherwise, Amazon EFS
 #'         assigns a free address in the subnet (in the same way that the
 #'         Amazon EC2 `CreateNetworkInterface` call does when a request
 #'         does not specify a primary private IP address).
-#' 
-#'     -   If the request provides `SecurityGroups`, this network interface
+#'     
+#'       - If the request provides `SecurityGroups`, this network interface
 #'         is associated with those security groups. Otherwise, it belongs
 #'         to the default security group for the subnet's VPC.
-#' 
-#'     -   Assigns the description
-#'         `Mount target fsmt-id for file system fs-id ` where ` fsmt-id `
-#'         is the mount target ID, and ` fs-id ` is the `FileSystemId`.
-#' 
-#'     -   Sets the `requesterManaged` property of the network interface to
+#'     
+#'       - Assigns the description ` Mount target fsmt-id for file system
+#'         fs-id  ` where `  fsmt-id  ` is the mount target ID, and ` 
+#'         fs-id  ` is the `FileSystemId`.
+#'     
+#'       - Sets the `requesterManaged` property of the network interface to
 #'         `true`, and the `requesterId` value to `EFS`.
-#' 
+#'     
 #'     Each Amazon EFS mount target has one corresponding requester-managed
 #'     EC2 network interface. After the network interface is created,
 #'     Amazon EFS sets the `NetworkInterfaceId` field in the mount target's
@@ -434,16 +435,16 @@ efs_create_file_system <- function(CreationToken, PerformanceMode = NULL, Encryp
 #' This operation requires permissions for the following action on the file
 #' system:
 #' 
-#' -   `elasticfilesystem:CreateMountTarget`
+#'   - `elasticfilesystem:CreateMountTarget`
 #' 
 #' This operation also requires permissions for the following Amazon EC2
 #' actions:
 #' 
-#' -   `ec2:DescribeSubnets`
+#'   - `ec2:DescribeSubnets`
 #' 
-#' -   `ec2:DescribeNetworkInterfaces`
+#'   - `ec2:DescribeNetworkInterfaces`
 #' 
-#' -   `ec2:CreateNetworkInterface`
+#'   - `ec2:CreateNetworkInterface`
 #'
 #' @usage
 #' efs_create_mount_target(FileSystemId, SubnetId, IpAddress,
@@ -647,8 +648,8 @@ efs_delete_access_point <- function(AccessPointId) {
 #' [`describe_file_systems`][efs_describe_file_systems] operation, which
 #' returns a list of file systems in your account. If you pass file system
 #' ID or creation token for the deleted file system, the
-#' [`describe_file_systems`][efs_describe_file_systems] returns a
-#' `404 FileSystemNotFound` error.
+#' [`describe_file_systems`][efs_describe_file_systems] returns a `404
+#' FileSystemNotFound` error.
 #' 
 #' This operation requires permissions for the
 #' `elasticfilesystem:DeleteFileSystem` action.
@@ -762,7 +763,7 @@ efs_delete_file_system_policy <- function(FileSystemId) {
 #' This operation requires permissions for the following action on the file
 #' system:
 #' 
-#' -   `elasticfilesystem:DeleteMountTarget`
+#'   - `elasticfilesystem:DeleteMountTarget`
 #' 
 #' The [`delete_mount_target`][efs_delete_mount_target] call returns while
 #' the mount target state is still `deleting`. You can check the mount
@@ -773,7 +774,7 @@ efs_delete_file_system_policy <- function(FileSystemId) {
 #' The operation also requires permissions for the following Amazon EC2
 #' action on the mount target's network interface:
 #' 
-#' -   `ec2:DeleteNetworkInterface`
+#'   - `ec2:DeleteNetworkInterface`
 #'
 #' @usage
 #' efs_delete_mount_target(MountTargetId)
@@ -1282,10 +1283,10 @@ efs_describe_lifecycle_configuration <- function(FileSystemId) {
 #' 
 #' This operation requires permissions for the following actions:
 #' 
-#' -   `elasticfilesystem:DescribeMountTargetSecurityGroups` action on the
+#'   - `elasticfilesystem:DescribeMountTargetSecurityGroups` action on the
 #'     mount target's file system.
 #' 
-#' -   `ec2:DescribeNetworkInterfaceAttribute` action on the mount target's
+#'   - `ec2:DescribeNetworkInterfaceAttribute` action on the mount target's
 #'     network interface.
 #'
 #' @usage
@@ -1593,10 +1594,10 @@ efs_list_tags_for_resource <- function(ResourceId, MaxResults = NULL, NextToken 
 #' 
 #' The operation requires permissions for the following actions:
 #' 
-#' -   `elasticfilesystem:ModifyMountTargetSecurityGroups` action on the
+#'   - `elasticfilesystem:ModifyMountTargetSecurityGroups` action on the
 #'     mount target's file system.
 #' 
-#' -   `ec2:ModifyNetworkInterfaceAttribute` action on the mount target's
+#'   - `ec2:ModifyNetworkInterfaceAttribute` action on the mount target's
 #'     network interface.
 #'
 #' @usage
@@ -1798,10 +1799,10 @@ efs_put_file_system_policy <- function(FileSystemId, Policy, BypassPolicyLockout
 #' 
 #' In the request, specify the following:
 #' 
-#' -   The ID for the file system for which you are enabling, disabling, or
+#'   - The ID for the file system for which you are enabling, disabling, or
 #'     modifying lifecycle management.
 #' 
-#' -   A `LifecyclePolicies` array of `LifecyclePolicy` objects that define
+#'   - A `LifecyclePolicies` array of `LifecyclePolicy` objects that define
 #'     when files are moved to the IA storage class. The array can contain
 #'     only one `LifecyclePolicy` item.
 #' 

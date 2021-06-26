@@ -8,7 +8,7 @@ NULL
 #' @description
 #' Creates a batch inference job. The operation can handle up to 50 million
 #' records and the input file must be in JSON format. For more information,
-#' see recommendations-batch.
+#' see <span>recommendations-batch</span>.
 #'
 #' @usage
 #' personalize_create_batch_inference_job(jobName, solutionVersionArn,
@@ -114,10 +114,9 @@ personalize_create_batch_inference_job <- function(jobName, solutionVersionArn, 
 #' 
 #' A campaign can be in one of the following states:
 #' 
-#' -   CREATE PENDING &gt; CREATE IN_PROGRESS &gt; ACTIVE -or- CREATE
-#'     FAILED
+#'   - CREATE PENDING \> CREATE IN_PROGRESS \> ACTIVE -or- CREATE FAILED
 #' 
-#' -   DELETE PENDING &gt; DELETE IN_PROGRESS
+#'   - DELETE PENDING \> DELETE IN_PROGRESS
 #' 
 #' To get the campaign status, call
 #' [`describe_campaign`][personalize_describe_campaign].
@@ -127,13 +126,13 @@ personalize_create_batch_inference_job <- function(jobName, solutionVersionArn, 
 #' 
 #' **Related APIs**
 #' 
-#' -   [`list_campaigns`][personalize_list_campaigns]
+#'   - [`list_campaigns`][personalize_list_campaigns]
 #' 
-#' -   [`describe_campaign`][personalize_describe_campaign]
+#'   - [`describe_campaign`][personalize_describe_campaign]
 #' 
-#' -   [`update_campaign`][personalize_update_campaign]
+#'   - [`update_campaign`][personalize_update_campaign]
 #' 
-#' -   [`delete_campaign`][personalize_delete_campaign]
+#'   - [`delete_campaign`][personalize_delete_campaign]
 #'
 #' @usage
 #' personalize_create_campaign(name, solutionVersionArn, minProvisionedTPS,
@@ -197,11 +196,11 @@ personalize_create_campaign <- function(name, solutionVersionArn, minProvisioned
 #' 
 #' There are three types of datasets:
 #' 
-#' -   Interactions
+#'   - Interactions
 #' 
-#' -   Items
+#'   - Items
 #' 
-#' -   Users
+#'   - Users
 #' 
 #' Each dataset type has an associated schema with required field types.
 #' Only the `Interactions` dataset is required in order to train a model
@@ -209,23 +208,22 @@ personalize_create_campaign <- function(name, solutionVersionArn, minProvisioned
 #' 
 #' A dataset can be in one of the following states:
 #' 
-#' -   CREATE PENDING &gt; CREATE IN_PROGRESS &gt; ACTIVE -or- CREATE
-#'     FAILED
+#'   - CREATE PENDING \> CREATE IN_PROGRESS \> ACTIVE -or- CREATE FAILED
 #' 
-#' -   DELETE PENDING &gt; DELETE IN_PROGRESS
+#'   - DELETE PENDING \> DELETE IN_PROGRESS
 #' 
 #' To get the status of the dataset, call
 #' [`describe_dataset`][personalize_describe_dataset].
 #' 
 #' **Related APIs**
 #' 
-#' -   [`create_dataset_group`][personalize_create_dataset_group]
+#'   - [`create_dataset_group`][personalize_create_dataset_group]
 #' 
-#' -   [`list_datasets`][personalize_list_datasets]
+#'   - [`list_datasets`][personalize_list_datasets]
 #' 
-#' -   [`describe_dataset`][personalize_describe_dataset]
+#'   - [`describe_dataset`][personalize_describe_dataset]
 #' 
-#' -   [`delete_dataset`][personalize_delete_dataset]
+#'   - [`delete_dataset`][personalize_delete_dataset]
 #'
 #' @usage
 #' personalize_create_dataset(name, schemaArn, datasetGroupArn,
@@ -240,11 +238,11 @@ personalize_create_campaign <- function(name, solutionVersionArn, minProvisioned
 #' 
 #' One of the following (case insensitive) values:
 #' 
-#' -   Interactions
+#'   - Interactions
 #' 
-#' -   Items
+#'   - Items
 #' 
-#' -   Users
+#'   - Users
 #'
 #' @return
 #' A list with the following syntax:
@@ -291,11 +289,11 @@ personalize_create_dataset <- function(name, schemaArn, datasetGroupArn, dataset
 #' datasets that supply data for training a model. A dataset group can
 #' contain at most three datasets, one for each type of dataset:
 #' 
-#' -   Interactions
+#'   - Interactions
 #' 
-#' -   Items
+#'   - Items
 #' 
-#' -   Users
+#'   - Users
 #' 
 #' To train a model (create a solution), a dataset group that contains an
 #' `Interactions` dataset is required. Call
@@ -304,10 +302,9 @@ personalize_create_dataset <- function(name, schemaArn, datasetGroupArn, dataset
 #' 
 #' A dataset group can be in one of the following states:
 #' 
-#' -   CREATE PENDING &gt; CREATE IN_PROGRESS &gt; ACTIVE -or- CREATE
-#'     FAILED
+#'   - CREATE PENDING \> CREATE IN_PROGRESS \> ACTIVE -or- CREATE FAILED
 #' 
-#' -   DELETE PENDING
+#'   - DELETE PENDING
 #' 
 #' To get the status of the dataset group, call
 #' [`describe_dataset_group`][personalize_describe_dataset_group]. If the
@@ -324,19 +321,19 @@ personalize_create_dataset <- function(name, schemaArn, datasetGroupArn, dataset
 #' 
 #' **APIs that require a dataset group ARN in the request**
 #' 
-#' -   [`create_dataset`][personalize_create_dataset]
+#'   - [`create_dataset`][personalize_create_dataset]
 #' 
-#' -   [`create_event_tracker`][personalize_create_event_tracker]
+#'   - [`create_event_tracker`][personalize_create_event_tracker]
 #' 
-#' -   [`create_solution`][personalize_create_solution]
+#'   - [`create_solution`][personalize_create_solution]
 #' 
 #' **Related APIs**
 #' 
-#' -   [`list_dataset_groups`][personalize_list_dataset_groups]
+#'   - [`list_dataset_groups`][personalize_list_dataset_groups]
 #' 
-#' -   [`describe_dataset_group`][personalize_describe_dataset_group]
+#'   - [`describe_dataset_group`][personalize_describe_dataset_group]
 #' 
-#' -   [`delete_dataset_group`][personalize_delete_dataset_group]
+#'   - [`delete_dataset_group`][personalize_delete_dataset_group]
 #'
 #' @usage
 #' personalize_create_dataset_group(name, roleArn, kmsKeyArn)
@@ -401,8 +398,7 @@ personalize_create_dataset_group <- function(name, roleArn = NULL, kmsKeyArn = N
 #' 
 #' A dataset import job can be in one of the following states:
 #' 
-#' -   CREATE PENDING &gt; CREATE IN_PROGRESS &gt; ACTIVE -or- CREATE
-#'     FAILED
+#'   - CREATE PENDING \> CREATE IN_PROGRESS \> ACTIVE -or- CREATE FAILED
 #' 
 #' To get the status of the import job, call
 #' [`describe_dataset_import_job`][personalize_describe_dataset_import_job],
@@ -416,9 +412,9 @@ personalize_create_dataset_group <- function(name, roleArn = NULL, kmsKeyArn = N
 #' 
 #' **Related APIs**
 #' 
-#' -   [`list_dataset_import_jobs`][personalize_list_dataset_import_jobs]
+#'   - [`list_dataset_import_jobs`][personalize_list_dataset_import_jobs]
 #' 
-#' -   [`describe_dataset_import_job`][personalize_describe_dataset_import_job]
+#'   - [`describe_dataset_import_job`][personalize_describe_dataset_import_job]
 #'
 #' @usage
 #' personalize_create_dataset_import_job(jobName, datasetArn, dataSource,
@@ -495,10 +491,9 @@ personalize_create_dataset_import_job <- function(jobName, datasetArn, dataSourc
 #' 
 #' The event tracker can be in one of the following states:
 #' 
-#' -   CREATE PENDING &gt; CREATE IN_PROGRESS &gt; ACTIVE -or- CREATE
-#'     FAILED
+#'   - CREATE PENDING \> CREATE IN_PROGRESS \> ACTIVE -or- CREATE FAILED
 #' 
-#' -   DELETE PENDING &gt; DELETE IN_PROGRESS
+#'   - DELETE PENDING \> DELETE IN_PROGRESS
 #' 
 #' To get the status of the event tracker, call
 #' [`describe_event_tracker`][personalize_describe_event_tracker].
@@ -508,11 +503,11 @@ personalize_create_dataset_import_job <- function(jobName, datasetArn, dataSourc
 #' 
 #' **Related APIs**
 #' 
-#' -   [`list_event_trackers`][personalize_list_event_trackers]
+#'   - [`list_event_trackers`][personalize_list_event_trackers]
 #' 
-#' -   [`describe_event_tracker`][personalize_describe_event_tracker]
+#'   - [`describe_event_tracker`][personalize_describe_event_tracker]
 #' 
-#' -   [`delete_event_tracker`][personalize_delete_event_tracker]
+#'   - [`delete_event_tracker`][personalize_delete_event_tracker]
 #'
 #' @usage
 #' personalize_create_event_tracker(name, datasetGroupArn)
@@ -631,11 +626,11 @@ personalize_create_filter <- function(name, datasetGroupArn, filterExpression) {
 #' 
 #' **Related APIs**
 #' 
-#' -   [`list_schemas`][personalize_list_schemas]
+#'   - [`list_schemas`][personalize_list_schemas]
 #' 
-#' -   [`describe_schema`][personalize_describe_schema]
+#'   - [`describe_schema`][personalize_describe_schema]
 #' 
-#' -   [`delete_schema`][personalize_delete_schema]
+#'   - [`delete_schema`][personalize_delete_schema]
 #'
 #' @usage
 #' personalize_create_schema(name, schema)
@@ -710,10 +705,9 @@ personalize_create_schema <- function(name, schema) {
 #' 
 #' A solution can be in one of the following states:
 #' 
-#' -   CREATE PENDING &gt; CREATE IN_PROGRESS &gt; ACTIVE -or- CREATE
-#'     FAILED
+#'   - CREATE PENDING \> CREATE IN_PROGRESS \> ACTIVE -or- CREATE FAILED
 #' 
-#' -   DELETE PENDING &gt; DELETE IN_PROGRESS
+#'   - DELETE PENDING \> DELETE IN_PROGRESS
 #' 
 #' To get the status of the solution, call
 #' [`describe_solution`][personalize_describe_solution]. Wait until the
@@ -722,18 +716,19 @@ personalize_create_schema <- function(name, schema) {
 #' 
 #' **Related APIs**
 #' 
-#' -   [`list_solutions`][personalize_list_solutions]
+#'   - [`list_solutions`][personalize_list_solutions]
 #' 
-#' -   [`create_solution_version`][personalize_create_solution_version]
+#'   - [`create_solution_version`][personalize_create_solution_version]
 #' 
-#' -   [`describe_solution`][personalize_describe_solution]
+#'   - [`describe_solution`][personalize_describe_solution]
 #' 
-#' -   [`delete_solution`][personalize_delete_solution]
+#'   - [`delete_solution`][personalize_delete_solution]
 #' 
+#' <!-- end list -->
 #' 
-#' -   [`list_solution_versions`][personalize_list_solution_versions]
+#'   - [`list_solution_versions`][personalize_list_solution_versions]
 #' 
-#' -   [`describe_solution_version`][personalize_describe_solution_version]
+#'   - [`describe_solution_version`][personalize_describe_solution_version]
 #'
 #' @usage
 #' personalize_create_solution(name, performHPO, performAutoML, recipeArn,
@@ -868,8 +863,7 @@ personalize_create_solution <- function(name, performHPO = NULL, performAutoML =
 #' 
 #' A solution version can be in one of the following states:
 #' 
-#' -   CREATE PENDING &gt; CREATE IN_PROGRESS &gt; ACTIVE -or- CREATE
-#'     FAILED
+#'   - CREATE PENDING \> CREATE IN_PROGRESS \> ACTIVE -or- CREATE FAILED
 #' 
 #' To get the status of the version, call
 #' [`describe_solution_version`][personalize_describe_solution_version].
@@ -881,18 +875,19 @@ personalize_create_solution <- function(name, performHPO = NULL, performAutoML =
 #' 
 #' **Related APIs**
 #' 
-#' -   [`list_solution_versions`][personalize_list_solution_versions]
+#'   - [`list_solution_versions`][personalize_list_solution_versions]
 #' 
-#' -   [`describe_solution_version`][personalize_describe_solution_version]
+#'   - [`describe_solution_version`][personalize_describe_solution_version]
 #' 
+#' <!-- end list -->
 #' 
-#' -   [`list_solutions`][personalize_list_solutions]
+#'   - [`list_solutions`][personalize_list_solutions]
 #' 
-#' -   [`create_solution`][personalize_create_solution]
+#'   - [`create_solution`][personalize_create_solution]
 #' 
-#' -   [`describe_solution`][personalize_describe_solution]
+#'   - [`describe_solution`][personalize_describe_solution]
 #' 
-#' -   [`delete_solution`][personalize_delete_solution]
+#'   - [`delete_solution`][personalize_delete_solution]
 #'
 #' @usage
 #' personalize_create_solution_version(solutionArn, trainingMode)
@@ -908,8 +903,8 @@ personalize_create_solution <- function(name, performHPO = NULL, performAutoML =
 #' 
 #' The `UPDATE` option can only be used when you already have an active
 #' solution version created from the input solution using the `FULL` option
-#' and the input solution was trained with the native-recipe-hrnn-coldstart
-#' recipe.
+#' and the input solution was trained with the
+#' <span>native-recipe-hrnn-coldstart</span> recipe.
 #'
 #' @return
 #' A list with the following syntax:
@@ -1041,11 +1036,11 @@ personalize_delete_dataset <- function(datasetArn) {
 #' Deletes a dataset group. Before you delete a dataset group, you must
 #' delete the following:
 #' 
-#' -   All associated event trackers.
+#'   - All associated event trackers.
 #' 
-#' -   All associated solutions.
+#'   - All associated solutions.
 #' 
-#' -   All datasets in the dataset group.
+#'   - All datasets in the dataset group.
 #'
 #' @usage
 #' personalize_delete_dataset_group(datasetGroupArn)
@@ -1435,10 +1430,9 @@ personalize_describe_batch_inference_job <- function(batchInferenceJobArn) {
 #' 
 #' A campaign can be in one of the following states:
 #' 
-#' -   CREATE PENDING &gt; CREATE IN_PROGRESS &gt; ACTIVE -or- CREATE
-#'     FAILED
+#'   - CREATE PENDING \> CREATE IN_PROGRESS \> ACTIVE -or- CREATE FAILED
 #' 
-#' -   DELETE PENDING &gt; DELETE IN_PROGRESS
+#'   - DELETE PENDING \> DELETE IN_PROGRESS
 #' 
 #' When the `status` is `CREATE FAILED`, the response includes the
 #' `failureReason` key, which describes why.
@@ -1887,11 +1881,11 @@ personalize_describe_filter <- function(filterArn) {
 #' 
 #' A recipe contains three items:
 #' 
-#' -   An algorithm that trains a model.
+#'   - An algorithm that trains a model.
 #' 
-#' -   Hyperparameters that govern the training.
+#'   - Hyperparameters that govern the training.
 #' 
-#' -   Feature transformation information for modifying the input data
+#'   - Feature transformation information for modifying the input data
 #'     before training.
 #' 
 #' Amazon Personalize provides a set of predefined recipes. You specify a

@@ -2,13 +2,14 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_create_xss_match_set}
 \alias{wafregional_create_xss_match_set}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 wafregional_create_xss_match_set(Name, ChangeToken)
 }
 \arguments{
-\item{Name}{[required] A friendly name or description for the XssMatchSet that you're creating.
-You can't change \code{Name} after you create the \code{XssMatchSet}.}
+\item{Name}{[required] A friendly name or description for the <span>XssMatchSet</span> that
+you're creating. You can't change \code{Name} after you create the
+\code{XssMatchSet}.}
 
 \item{ChangeToken}{[required] The value returned by the most recent call to
 \code{\link[=wafregional_get_change_token]{get_change_token}}.}
@@ -42,10 +43,10 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Creates an XssMatchSet, which you use to allow, block, or count requests
-that contain cross-site scripting attacks in the specified part of web
-requests. AWS WAF searches for character sequences that are likely to be
-malicious strings.
+Creates an <span>XssMatchSet</span>, which you use to allow, block, or
+count requests that contain cross-site scripting attacks in the
+specified part of web requests. AWS WAF searches for character sequences
+that are likely to be malicious strings.
 
 To create and configure an \code{XssMatchSet}, perform the following steps:
 \enumerate{

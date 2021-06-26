@@ -2618,7 +2618,7 @@ workspaces_register_workspace_directory <- function(DirectoryId, SubnetIds = NUL
 #' @description
 #' Restores the specified WorkSpace to its last known healthy state.
 #' 
-#' You cannot restore a WorkSpace unless its state is ` AVAILABLE`,
+#' You cannot restore a WorkSpace unless its state is `  AVAILABLE `,
 #' `ERROR`, `UNHEALTHY`, or `STOPPED`.
 #' 
 #' Restoring a WorkSpace is a potentially destructive action that can
@@ -2920,12 +2920,12 @@ workspaces_terminate_workspaces <- function(TerminateWorkspaceRequests) {
 #' account. For more information, see [Cross-Region Redirection for Amazon
 #' WorkSpaces](https://docs.aws.amazon.com/workspaces/latest/adminguide/cross-region-redirection.html).
 #' 
-#' -   Before performing this operation, call
+#'   - Before performing this operation, call
 #'     [DescribeConnectionAliases](https://docs.aws.amazon.com/workspaces/latest/api/API_DescribeConnectionAliases.html)
 #'     to make sure that the current state of the connection alias is
 #'     `CREATED`.
 #' 
-#' -   To delete a connection alias that has been shared, the shared
+#'   - To delete a connection alias that has been shared, the shared
 #'     account must first disassociate the connection alias from any
 #'     directories it has been associated with. Then you must unshare the
 #'     connection alias from the account it has been shared with. You can
@@ -3047,10 +3047,10 @@ workspaces_update_rules_of_ip_group <- function(GroupId, UserRules) {
 #' Custom WorkSpaces
 #' Image](https://docs.aws.amazon.com/workspaces/latest/adminguide/share-custom-image.html).
 #' 
-#' -   To delete an image that has been shared, you must unshare the image
+#'   - To delete an image that has been shared, you must unshare the image
 #'     before you delete it.
 #' 
-#' -   Sharing Bring Your Own License (BYOL) images across AWS accounts
+#'   - Sharing Bring Your Own License (BYOL) images across AWS accounts
 #'     isn't supported at this time in the AWS GovCloud (US-West) Region.
 #'     To share BYOL images across accounts in the AWS GovCloud (US-West)
 #'     Region, contact AWS Support.

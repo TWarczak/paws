@@ -26,9 +26,9 @@ NULL
 #' To successfully start a rotation, the staging label `AWSPENDING` must be
 #' in one of the following states:
 #' 
-#' -   Not attached to any version at all
+#'   - Not attached to any version at all
 #' 
-#' -   Attached to the same version as the staging label `AWSCURRENT`
+#'   - Attached to the same version as the staging label `AWSCURRENT`
 #' 
 #' If the staging label `AWSPENDING` attached to a different version than
 #' the version with `AWSCURRENT` then the attempt to rotate fails.
@@ -37,20 +37,20 @@ NULL
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   secretsmanager:CancelRotateSecret
+#'   - secretsmanager:CancelRotateSecret
 #' 
 #' **Related operations**
 #' 
-#' -   To configure rotation for a secret or to manually trigger a
+#'   - To configure rotation for a secret or to manually trigger a
 #'     rotation, use [`rotate_secret`][secretsmanager_rotate_secret].
 #' 
-#' -   To get the rotation configuration details for a secret, use
+#'   - To get the rotation configuration details for a secret, use
 #'     [`describe_secret`][secretsmanager_describe_secret].
 #' 
-#' -   To list all of the currently available secrets, use
+#'   - To list all of the currently available secrets, use
 #'     [`list_secrets`][secretsmanager_list_secrets].
 #' 
-#' -   To list all of the versions currently associated with a secret, use
+#'   - To list all of the versions currently associated with a secret, use
 #'     [`list_secret_version_ids`][secretsmanager_list_secret_version_ids].
 #'
 #' @usage
@@ -150,7 +150,7 @@ secretsmanager_cancel_rotate_secret <- function(SecretId) {
 #' automatically attaches the staging label `AWSCURRENT` to the new
 #' version.
 #' 
-#' -   If you call an operation to encrypt or decrypt the `SecretString` or
+#'   - If you call an operation to encrypt or decrypt the `SecretString` or
 #'     `SecretBinary` for a secret in the same account as the calling user
 #'     and that secret doesn't specify a AWS KMS encryption key, Secrets
 #'     Manager uses the account's default AWS managed customer master key
@@ -162,7 +162,7 @@ secretsmanager_cancel_rotate_secret <- function(SecretId) {
 #'     AWS-managed CMK, it can result in a one-time significant delay in
 #'     returning the result.
 #' 
-#' -   If the secret resides in a different AWS account from the
+#'   - If the secret resides in a different AWS account from the
 #'     credentials calling an API that requires encryption or decryption of
 #'     the secret value then you must create and use a custom AWS KMS CMK
 #'     because you can't access the default CMK for the account using
@@ -178,38 +178,38 @@ secretsmanager_cancel_rotate_secret <- function(SecretId) {
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   secretsmanager:CreateSecret
+#'   - secretsmanager:CreateSecret
 #' 
-#' -   kms:GenerateDataKey - needed only if you use a customer-managed AWS
+#'   - kms:GenerateDataKey - needed only if you use a customer-managed AWS
 #'     KMS key to encrypt the secret. You do not need this permission to
 #'     use the account default AWS managed CMK for Secrets Manager.
 #' 
-#' -   kms:Decrypt - needed only if you use a customer-managed AWS KMS key
+#'   - kms:Decrypt - needed only if you use a customer-managed AWS KMS key
 #'     to encrypt the secret. You do not need this permission to use the
 #'     account default AWS managed CMK for Secrets Manager.
 #' 
-#' -   secretsmanager:TagResource - needed only if you include the `Tags`
+#'   - secretsmanager:TagResource - needed only if you include the `Tags`
 #'     parameter.
 #' 
 #' **Related operations**
 #' 
-#' -   To delete a secret, use
+#'   - To delete a secret, use
 #'     [`delete_secret`][secretsmanager_delete_secret].
 #' 
-#' -   To modify an existing secret, use
+#'   - To modify an existing secret, use
 #'     [`update_secret`][secretsmanager_update_secret].
 #' 
-#' -   To create a new version of a secret, use
+#'   - To create a new version of a secret, use
 #'     [`put_secret_value`][secretsmanager_put_secret_value].
 #' 
-#' -   To retrieve the encrypted secure string and secure binary values,
+#'   - To retrieve the encrypted secure string and secure binary values,
 #'     use [`get_secret_value`][secretsmanager_get_secret_value].
 #' 
-#' -   To retrieve all other details for a secret, use
+#'   - To retrieve all other details for a secret, use
 #'     [`describe_secret`][secretsmanager_describe_secret]. This does not
 #'     include the encrypted secure string and secure binary values.
 #' 
-#' -   To retrieve the list of secret versions associated with the current
+#'   - To retrieve the list of secret versions associated with the current
 #'     secret, use [`describe_secret`][secretsmanager_describe_secret] and
 #'     examine the `SecretVersionsToStages` response value.
 #'
@@ -244,14 +244,14 @@ secretsmanager_cancel_rotate_secret <- function(SecretId) {
 #' [UUID-type](https://en.wikipedia.org/wiki/Universally_unique_identifier)
 #' value to ensure uniqueness of your versions within the specified secret.
 #' 
-#' -   If the `ClientRequestToken` value isn't already associated with a
+#'   - If the `ClientRequestToken` value isn't already associated with a
 #'     version of the secret then a new version of the secret is created.
 #' 
-#' -   If a version with this value already exists and the version
+#'   - If a version with this value already exists and the version
 #'     `SecretString` and `SecretBinary` values are the same as those in
 #'     the request, then the request is ignored.
 #' 
-#' -   If a version with this value already exists and that version's
+#'   - If a version with this value already exists and that version's
 #'     `SecretString` and `SecretBinary` values are different from those in
 #'     the request then the request fails because you cannot modify an
 #'     existing version. Instead, use
@@ -318,10 +318,10 @@ secretsmanager_cancel_rotate_secret <- function(SecretId) {
 #' operation only appends tags to the existing list of tags. To remove
 #' tags, you must use [`untag_resource`][secretsmanager_untag_resource].
 #' 
-#' -   Secrets Manager tag key names are case sensitive. A tag with the key
+#'   - Secrets Manager tag key names are case sensitive. A tag with the key
 #'     "ABC" is a different tag from one with key "abc".
 #' 
-#' -   If you check tags in IAM policy `Condition` elements as part of your
+#'   - If you check tags in IAM policy `Condition` elements as part of your
 #'     security strategy, then adding or removing a tag can change
 #'     permissions. If the successful completion of this operation would
 #'     result in you losing your permissions for this secret, then this
@@ -341,20 +341,20 @@ secretsmanager_cancel_rotate_secret <- function(SecretId) {
 #' 
 #' The following basic restrictions apply to tags:
 #' 
-#' -   Maximum number of tags per secret—50
+#'   - Maximum number of tags per secret—50
 #' 
-#' -   Maximum key length—127 Unicode characters in UTF-8
+#'   - Maximum key length—127 Unicode characters in UTF-8
 #' 
-#' -   Maximum value length—255 Unicode characters in UTF-8
+#'   - Maximum value length—255 Unicode characters in UTF-8
 #' 
-#' -   Tag keys and values are case sensitive.
+#'   - Tag keys and values are case sensitive.
 #' 
-#' -   Do not use the `aws:` prefix in your tag names or values because AWS
+#'   - Do not use the `aws:` prefix in your tag names or values because AWS
 #'     reserves it for AWS use. You can't edit or delete tag names or
 #'     values with this prefix. Tags with this prefix do not count against
 #'     your tags per secret limit.
 #' 
-#' -   If you use your tagging schema across multiple services and
+#'   - If you use your tagging schema across multiple services and
 #'     resources, remember other services might have restrictions on
 #'     allowed characters. Generally allowed characters: letters, spaces,
 #'     and numbers representable in UTF-8, plus the following special
@@ -430,18 +430,18 @@ secretsmanager_create_secret <- function(Name, ClientRequestToken = NULL, Descri
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   secretsmanager:DeleteResourcePolicy
+#'   - secretsmanager:DeleteResourcePolicy
 #' 
 #' **Related operations**
 #' 
-#' -   To attach a resource policy to a secret, use
+#'   - To attach a resource policy to a secret, use
 #'     [`put_resource_policy`][secretsmanager_put_resource_policy].
 #' 
-#' -   To retrieve the current resource-based policy that's attached to a
+#'   - To retrieve the current resource-based policy that's attached to a
 #'     secret, use
 #'     [`get_resource_policy`][secretsmanager_get_resource_policy].
 #' 
-#' -   To list all of the currently available secrets, use
+#'   - To list all of the currently available secrets, use
 #'     [`list_secrets`][secretsmanager_list_secrets].
 #'
 #' @usage
@@ -535,7 +535,7 @@ secretsmanager_delete_resource_policy <- function(SecretId) {
 #' [`restore_secret`][secretsmanager_restore_secret] and then retrieve the
 #' information.
 #' 
-#' -   There is no explicit operation to delete a version of a secret.
+#'   - There is no explicit operation to delete a version of a secret.
 #'     Instead, remove all staging labels from the `VersionStage` field of
 #'     a version. That marks the version as deprecated and allows Secrets
 #'     Manager to delete it as needed. Versions that do not have any
@@ -543,7 +543,7 @@ secretsmanager_delete_resource_policy <- function(SecretId) {
 #'     [`list_secret_version_ids`][secretsmanager_list_secret_version_ids]
 #'     unless you specify `IncludeDeprecated`.
 #' 
-#' -   The permanent secret deletion at the end of the waiting period is
+#'   - The permanent secret deletion at the end of the waiting period is
 #'     performed as a background task with low priority. There is no
 #'     guarantee of a specific time after the recovery window for the
 #'     actual delete operation to occur.
@@ -552,14 +552,14 @@ secretsmanager_delete_resource_policy <- function(SecretId) {
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   secretsmanager:DeleteSecret
+#'   - secretsmanager:DeleteSecret
 #' 
 #' **Related operations**
 #' 
-#' -   To create a secret, use
+#'   - To create a secret, use
 #'     [`create_secret`][secretsmanager_create_secret].
 #' 
-#' -   To cancel deletion of a version of a secret before the recovery
+#'   - To cancel deletion of a version of a secret before the recovery
 #'     window has expired, use
 #'     [`restore_secret`][secretsmanager_restore_secret].
 #'
@@ -673,20 +673,20 @@ secretsmanager_delete_secret <- function(SecretId, RecoveryWindowInDays = NULL, 
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   secretsmanager:DescribeSecret
+#'   - secretsmanager:DescribeSecret
 #' 
 #' **Related operations**
 #' 
-#' -   To create a secret, use
+#'   - To create a secret, use
 #'     [`create_secret`][secretsmanager_create_secret].
 #' 
-#' -   To modify a secret, use
+#'   - To modify a secret, use
 #'     [`update_secret`][secretsmanager_update_secret].
 #' 
-#' -   To retrieve the encrypted secret information in a version of the
+#'   - To retrieve the encrypted secret information in a version of the
 #'     secret, use [`get_secret_value`][secretsmanager_get_secret_value].
 #' 
-#' -   To list all of the secrets in the AWS account, use
+#'   - To list all of the secrets in the AWS account, use
 #'     [`list_secrets`][secretsmanager_list_secrets].
 #'
 #' @usage
@@ -806,7 +806,7 @@ secretsmanager_describe_secret <- function(SecretId) {
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   secretsmanager:GetRandomPassword
+#'   - secretsmanager:GetRandomPassword
 #'
 #' @usage
 #' secretsmanager_get_random_password(PasswordLength, ExcludeCharacters,
@@ -829,7 +829,7 @@ secretsmanager_describe_secret <- function(SecretId) {
 #' the generated password if you don't explicitly exclude them with
 #' `ExcludeCharacters` or `ExcludePunctuation`:
 #' 
-#' `` ! \" # $ % & \' ( ) * + , - . / : ; < = > ? @@ [ \ ] ^ _ \` { | } ~ ``
+#' ``! \" # $ % & \' ( ) * + , - . / : ; < = > ? @@ [ \ ] ^ _ \` { | } ~``
 #' @param ExcludeUppercase Specifies that the generated password should not include uppercase
 #' letters. The default if you do not include this switch parameter is that
 #' uppercase letters can be included.
@@ -912,17 +912,17 @@ secretsmanager_get_random_password <- function(PasswordLength = NULL, ExcludeCha
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   secretsmanager:GetResourcePolicy
+#'   - secretsmanager:GetResourcePolicy
 #' 
 #' **Related operations**
 #' 
-#' -   To attach a resource policy to a secret, use
+#'   - To attach a resource policy to a secret, use
 #'     [`put_resource_policy`][secretsmanager_put_resource_policy].
 #' 
-#' -   To delete the resource-based policy attached to a secret, use
+#'   - To delete the resource-based policy attached to a secret, use
 #'     [`delete_resource_policy`][secretsmanager_delete_resource_policy].
 #' 
-#' -   To list all of the currently available secrets, use
+#'   - To list all of the currently available secrets, use
 #'     [`list_secrets`][secretsmanager_list_secrets].
 #'
 #' @usage
@@ -1010,19 +1010,19 @@ secretsmanager_get_resource_policy <- function(SecretId) {
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   secretsmanager:GetSecretValue
+#'   - secretsmanager:GetSecretValue
 #' 
-#' -   kms:Decrypt - required only if you use a customer-managed AWS KMS
+#'   - kms:Decrypt - required only if you use a customer-managed AWS KMS
 #'     key to encrypt the secret. You do not need this permission to use
 #'     the account's default AWS managed CMK for Secrets Manager.
 #' 
 #' **Related operations**
 #' 
-#' -   To create a new version of the secret with different encrypted
+#'   - To create a new version of the secret with different encrypted
 #'     information, use
 #'     [`put_secret_value`][secretsmanager_put_secret_value].
 #' 
-#' -   To retrieve the non-encrypted details for the secret, use
+#'   - To retrieve the non-encrypted details for the secret, use
 #'     [`describe_secret`][secretsmanager_describe_secret].
 #'
 #' @usage
@@ -1147,11 +1147,11 @@ secretsmanager_get_secret_value <- function(SecretId, VersionId = NULL, VersionS
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   secretsmanager:ListSecretVersionIds
+#'   - secretsmanager:ListSecretVersionIds
 #' 
 #' **Related operations**
 #' 
-#' -   To list the secrets in an account, use
+#'   - To list the secrets in an account, use
 #'     [`list_secrets`][secretsmanager_list_secrets].
 #'
 #' @usage
@@ -1285,11 +1285,11 @@ secretsmanager_list_secret_version_ids <- function(SecretId, MaxResults = NULL, 
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   secretsmanager:ListSecrets
+#'   - secretsmanager:ListSecrets
 #' 
 #' **Related operations**
 #' 
-#' -   To list the versions attached to a secret, use
+#'   - To list the versions attached to a secret, use
 #'     [`list_secret_version_ids`][secretsmanager_list_secret_version_ids].
 #'
 #' @usage
@@ -1426,17 +1426,17 @@ secretsmanager_list_secrets <- function(MaxResults = NULL, NextToken = NULL, Fil
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   secretsmanager:PutResourcePolicy
+#'   - secretsmanager:PutResourcePolicy
 #' 
 #' **Related operations**
 #' 
-#' -   To retrieve the resource policy attached to a secret, use
+#'   - To retrieve the resource policy attached to a secret, use
 #'     [`get_resource_policy`][secretsmanager_get_resource_policy].
 #' 
-#' -   To delete the resource-based policy that's attached to a secret, use
+#'   - To delete the resource-based policy that's attached to a secret, use
 #'     [`delete_resource_policy`][secretsmanager_delete_resource_policy].
 #' 
-#' -   To list all of the currently available secrets, use
+#'   - To list all of the currently available secrets, use
 #'     [`list_secrets`][secretsmanager_list_secrets].
 #'
 #' @usage
@@ -1535,29 +1535,30 @@ secretsmanager_put_resource_policy <- function(SecretId, ResourcePolicy, BlockPu
 #' binary data to a secret with the `SecretBinary` field you must use the
 #' AWS CLI or one of the AWS SDKs.
 #' 
-#' -   If this operation creates the first version for the secret then
+#'   - If this operation creates the first version for the secret then
 #'     Secrets Manager automatically attaches the staging label
 #'     `AWSCURRENT` to the new version.
 #' 
-#' -   If another version of this secret already exists, then this
+#'   - If another version of this secret already exists, then this
 #'     operation does not automatically move any staging labels other than
 #'     those that you explicitly specify in the `VersionStages` parameter.
 #' 
-#' -   If this operation moves the staging label `AWSCURRENT` from another
+#'   - If this operation moves the staging label `AWSCURRENT` from another
 #'     version to this version (because you included it in the
 #'     `StagingLabels` parameter) then Secrets Manager also automatically
 #'     moves the staging label `AWSPREVIOUS` to the version that
 #'     `AWSCURRENT` was removed from.
 #' 
-#' -   This operation is idempotent. If a version with a `VersionId` with
+#'   - This operation is idempotent. If a version with a `VersionId` with
 #'     the same value as the `ClientRequestToken` parameter already exists
 #'     and you specify the same secret data, the operation succeeds but
 #'     does nothing. However, if the secret data is different, then the
 #'     operation fails because you cannot modify an existing version; you
 #'     can only create new ones.
 #' 
+#' <!-- end list -->
 #' 
-#' -   If you call an operation to encrypt or decrypt the `SecretString` or
+#'   - If you call an operation to encrypt or decrypt the `SecretString` or
 #'     `SecretBinary` for a secret in the same account as the calling user
 #'     and that secret doesn't specify a AWS KMS encryption key, Secrets
 #'     Manager uses the account's default AWS managed customer master key
@@ -1569,7 +1570,7 @@ secretsmanager_put_resource_policy <- function(SecretId, ResourcePolicy, BlockPu
 #'     AWS-managed CMK, it can result in a one-time significant delay in
 #'     returning the result.
 #' 
-#' -   If the secret resides in a different AWS account from the
+#'   - If the secret resides in a different AWS account from the
 #'     credentials calling an API that requires encryption or decryption of
 #'     the secret value then you must create and use a custom AWS KMS CMK
 #'     because you can't access the default CMK for the account using
@@ -1585,24 +1586,24 @@ secretsmanager_put_resource_policy <- function(SecretId, ResourcePolicy, BlockPu
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   secretsmanager:PutSecretValue
+#'   - secretsmanager:PutSecretValue
 #' 
-#' -   kms:GenerateDataKey - needed only if you use a customer-managed AWS
+#'   - kms:GenerateDataKey - needed only if you use a customer-managed AWS
 #'     KMS key to encrypt the secret. You do not need this permission to
 #'     use the account's default AWS managed CMK for Secrets Manager.
 #' 
 #' **Related operations**
 #' 
-#' -   To retrieve the encrypted value you store in the version of a
+#'   - To retrieve the encrypted value you store in the version of a
 #'     secret, use [`get_secret_value`][secretsmanager_get_secret_value].
 #' 
-#' -   To create a secret, use
+#'   - To create a secret, use
 #'     [`create_secret`][secretsmanager_create_secret].
 #' 
-#' -   To get the details for a secret, use
+#'   - To get the details for a secret, use
 #'     [`describe_secret`][secretsmanager_describe_secret].
 #' 
-#' -   To list the versions attached to a secret, use
+#'   - To list the versions attached to a secret, use
 #'     [`list_secret_version_ids`][secretsmanager_list_secret_version_ids].
 #'
 #' @usage
@@ -1648,14 +1649,14 @@ secretsmanager_put_resource_policy <- function(SecretId, ResourcePolicy, BlockPu
 #' [UUID-type](https://en.wikipedia.org/wiki/Universally_unique_identifier)
 #' value to ensure uniqueness within the specified secret.
 #' 
-#' -   If the `ClientRequestToken` value isn't already associated with a
+#'   - If the `ClientRequestToken` value isn't already associated with a
 #'     version of the secret then a new version of the secret is created.
 #' 
-#' -   If a version with this value already exists and that version's
+#'   - If a version with this value already exists and that version's
 #'     `SecretString` or `SecretBinary` values are the same as those in the
 #'     request then the request is ignored (the operation is idempotent).
 #' 
-#' -   If a version with this value already exists and the version of the
+#'   - If a version with this value already exists and the version of the
 #'     `SecretString` and `SecretBinary` values are different from those in
 #'     the request then the request fails because you cannot modify an
 #'     existing secret version. You can only create new versions to store
@@ -1775,11 +1776,11 @@ secretsmanager_put_secret_value <- function(SecretId, ClientRequestToken = NULL,
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   secretsmanager:RestoreSecret
+#'   - secretsmanager:RestoreSecret
 #' 
 #' **Related operations**
 #' 
-#' -   To delete a secret, use
+#'   - To delete a secret, use
 #'     [`delete_secret`][secretsmanager_delete_secret].
 #'
 #' @usage
@@ -1887,10 +1888,10 @@ secretsmanager_restore_secret <- function(SecretId) {
 #' The rotation function must end with the versions of the secret in one of
 #' two states:
 #' 
-#' -   The `AWSPENDING` and `AWSCURRENT` staging labels are attached to the
+#'   - The `AWSPENDING` and `AWSCURRENT` staging labels are attached to the
 #'     same version of the secret, or
 #' 
-#' -   The `AWSPENDING` staging label is not attached to any version of the
+#'   - The `AWSPENDING` staging label is not attached to any version of the
 #'     secret.
 #' 
 #' If the `AWSPENDING` staging label is present but not attached to the
@@ -1902,23 +1903,23 @@ secretsmanager_restore_secret <- function(SecretId) {
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   secretsmanager:RotateSecret
+#'   - secretsmanager:RotateSecret
 #' 
-#' -   lambda:InvokeFunction (on the function specified in the secret's
+#'   - lambda:InvokeFunction (on the function specified in the secret's
 #'     metadata)
 #' 
 #' **Related operations**
 #' 
-#' -   To list the secrets in your account, use
+#'   - To list the secrets in your account, use
 #'     [`list_secrets`][secretsmanager_list_secrets].
 #' 
-#' -   To get the details for a version of a secret, use
+#'   - To get the details for a version of a secret, use
 #'     [`describe_secret`][secretsmanager_describe_secret].
 #' 
-#' -   To create a new version of a secret, use
+#'   - To create a new version of a secret, use
 #'     [`create_secret`][secretsmanager_create_secret].
 #' 
-#' -   To attach staging labels to or remove staging labels from a version
+#'   - To attach staging labels to or remove staging labels from a version
 #'     of a secret, use
 #'     [`update_secret_version_stage`][secretsmanager_update_secret_version_stage].
 #'
@@ -2050,20 +2051,20 @@ secretsmanager_rotate_secret <- function(SecretId, ClientRequestToken = NULL, Ro
 #' 
 #' The following basic restrictions apply to tags:
 #' 
-#' -   Maximum number of tags per secret—50
+#'   - Maximum number of tags per secret—50
 #' 
-#' -   Maximum key length—127 Unicode characters in UTF-8
+#'   - Maximum key length—127 Unicode characters in UTF-8
 #' 
-#' -   Maximum value length—255 Unicode characters in UTF-8
+#'   - Maximum value length—255 Unicode characters in UTF-8
 #' 
-#' -   Tag keys and values are case sensitive.
+#'   - Tag keys and values are case sensitive.
 #' 
-#' -   Do not use the `aws:` prefix in your tag names or values because AWS
+#'   - Do not use the `aws:` prefix in your tag names or values because AWS
 #'     reserves it for AWS use. You can't edit or delete tag names or
 #'     values with this prefix. Tags with this prefix do not count against
 #'     your tags per secret limit.
 #' 
-#' -   If you use your tagging schema across multiple services and
+#'   - If you use your tagging schema across multiple services and
 #'     resources, remember other services might have restrictions on
 #'     allowed characters. Generally allowed characters: letters, spaces,
 #'     and numbers representable in UTF-8, plus the following special
@@ -2078,14 +2079,14 @@ secretsmanager_rotate_secret <- function(SecretId, ClientRequestToken = NULL, Ro
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   secretsmanager:TagResource
+#'   - secretsmanager:TagResource
 #' 
 #' **Related operations**
 #' 
-#' -   To remove one or more tags from the collection attached to a secret,
+#'   - To remove one or more tags from the collection attached to a secret,
 #'     use [`untag_resource`][secretsmanager_untag_resource].
 #' 
-#' -   To view the list of tags attached to a secret, use
+#'   - To view the list of tags attached to a secret, use
 #'     [`describe_secret`][secretsmanager_describe_secret].
 #'
 #' @usage
@@ -2196,14 +2197,14 @@ secretsmanager_tag_resource <- function(SecretId, Tags) {
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   secretsmanager:UntagResource
+#'   - secretsmanager:UntagResource
 #' 
 #' **Related operations**
 #' 
-#' -   To add one or more tags to the collection attached to a secret, use
+#'   - To add one or more tags to the collection attached to a secret, use
 #'     [`tag_resource`][secretsmanager_tag_resource].
 #' 
-#' -   To view the list of tags attached to a secret, use
+#'   - To view the list of tags attached to a secret, use
 #'     [`describe_secret`][secretsmanager_describe_secret].
 #'
 #' @usage
@@ -2303,17 +2304,18 @@ secretsmanager_untag_resource <- function(SecretId, TagKeys) {
 #' encrypt and store binary data as part of the version of a secret, you
 #' must use either the AWS CLI or one of the AWS SDKs.
 #' 
-#' -   If a version with a `VersionId` with the same value as the
+#'   - If a version with a `VersionId` with the same value as the
 #'     `ClientRequestToken` parameter already exists, the operation results
 #'     in an error. You cannot modify an existing version, you can only
 #'     create a new version.
 #' 
-#' -   If you include `SecretString` or `SecretBinary` to create a new
+#'   - If you include `SecretString` or `SecretBinary` to create a new
 #'     secret version, Secrets Manager automatically attaches the staging
 #'     label `AWSCURRENT` to the new version.
 #' 
+#' <!-- end list -->
 #' 
-#' -   If you call an operation to encrypt or decrypt the `SecretString` or
+#'   - If you call an operation to encrypt or decrypt the `SecretString` or
 #'     `SecretBinary` for a secret in the same account as the calling user
 #'     and that secret doesn't specify a AWS KMS encryption key, Secrets
 #'     Manager uses the account's default AWS managed customer master key
@@ -2325,7 +2327,7 @@ secretsmanager_untag_resource <- function(SecretId, TagKeys) {
 #'     AWS-managed CMK, it can result in a one-time significant delay in
 #'     returning the result.
 #' 
-#' -   If the secret resides in a different AWS account from the
+#'   - If the secret resides in a different AWS account from the
 #'     credentials calling an API that requires encryption or decryption of
 #'     the secret value then you must create and use a custom AWS KMS CMK
 #'     because you can't access the default CMK for the account using
@@ -2341,28 +2343,28 @@ secretsmanager_untag_resource <- function(SecretId, TagKeys) {
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   secretsmanager:UpdateSecret
+#'   - secretsmanager:UpdateSecret
 #' 
-#' -   kms:GenerateDataKey - needed only if you use a custom AWS KMS key to
+#'   - kms:GenerateDataKey - needed only if you use a custom AWS KMS key to
 #'     encrypt the secret. You do not need this permission to use the
 #'     account's AWS managed CMK for Secrets Manager.
 #' 
-#' -   kms:Decrypt - needed only if you use a custom AWS KMS key to encrypt
+#'   - kms:Decrypt - needed only if you use a custom AWS KMS key to encrypt
 #'     the secret. You do not need this permission to use the account's AWS
 #'     managed CMK for Secrets Manager.
 #' 
 #' **Related operations**
 #' 
-#' -   To create a new secret, use
+#'   - To create a new secret, use
 #'     [`create_secret`][secretsmanager_create_secret].
 #' 
-#' -   To add only a new version to an existing secret, use
+#'   - To add only a new version to an existing secret, use
 #'     [`put_secret_value`][secretsmanager_put_secret_value].
 #' 
-#' -   To get the details for a secret, use
+#'   - To get the details for a secret, use
 #'     [`describe_secret`][secretsmanager_describe_secret].
 #' 
-#' -   To list the versions contained in a secret, use
+#'   - To list the versions contained in a secret, use
 #'     [`list_secret_version_ids`][secretsmanager_list_secret_version_ids].
 #'
 #' @usage
@@ -2412,15 +2414,15 @@ secretsmanager_untag_resource <- function(SecretId, TagKeys) {
 #' duplicate versions if there are failures and retries during the Lambda
 #' rotation function's processing.
 #' 
-#' -   If the `ClientRequestToken` value isn't already associated with a
+#'   - If the `ClientRequestToken` value isn't already associated with a
 #'     version of the secret then a new version of the secret is created.
 #' 
-#' -   If a version with this value already exists and that version's
+#'   - If a version with this value already exists and that version's
 #'     `SecretString` and `SecretBinary` values are the same as those in
 #'     the request then the request is ignored (the operation is
 #'     idempotent).
 #' 
-#' -   If a version with this value already exists and that version's
+#'   - If a version with this value already exists and that version's
 #'     `SecretString` and `SecretBinary` values are different from the
 #'     request then an error occurs because you cannot modify an existing
 #'     secret value.
@@ -2573,11 +2575,11 @@ secretsmanager_update_secret <- function(SecretId, ClientRequestToken = NULL, De
 #' 
 #' To run this command, you must have the following permissions:
 #' 
-#' -   secretsmanager:UpdateSecretVersionStage
+#'   - secretsmanager:UpdateSecretVersionStage
 #' 
 #' **Related operations**
 #' 
-#' -   To get the list of staging labels that are currently associated with
+#'   - To get the list of staging labels that are currently associated with
 #'     a version of a secret, use
 #'     [`describe_secret`][secretsmanager_describe_secret] and examine the
 #'     `SecretVersionsToStages` response value.

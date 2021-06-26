@@ -25,9 +25,9 @@ NULL
 #'   maxResults)
 #'
 #' @param eventArn &#91;required&#93; The unique identifier for the event. Format:
-#' `arn:aws:health:event-region::event/SERVICE/EVENT_TYPE_CODE/EVENT_TYPE_PLUS_ID `.
-#' Example:
-#' `Example: arn:aws:health:us-east-1::event/EC2/EC2_INSTANCE_RETIREMENT_SCHEDULED/EC2_INSTANCE_RETIREMENT_SCHEDULED_ABC123-DEF456`
+#' ` arn:aws:health:event-region::event/SERVICE/EVENT_TYPE_CODE/EVENT_TYPE_PLUS_ID
+#'  `. Example: `Example:
+#' arn:aws:health:us-east-1::event/EC2/EC2_INSTANCE_RETIREMENT_SCHEDULED/EC2_INSTANCE_RETIREMENT_SCHEDULED_ABC123-DEF456`
 #' @param nextToken If the results of a search are large, only a portion of the results are
 #' returned, and a `nextToken` pagination token is returned in the
 #' response. To retrieve the next batch of results, reissue the search
@@ -308,7 +308,8 @@ health_describe_affected_entities_for_organization <- function(organizationEntit
 #' health_describe_entity_aggregates(eventArns)
 #'
 #' @param eventArns A list of event ARNs (unique identifiers). For example:
-#' `"arn:aws:health:us-east-1::event/EC2/EC2_INSTANCE_RETIREMENT_SCHEDULED/EC2_INSTANCE_RETIREMENT_SCHEDULED_ABC123-CDE456", "arn:aws:health:us-west-1::event/EBS/AWS_EBS_LOST_VOLUME/AWS_EBS_LOST_VOLUME_CHI789_JKL101"`
+#' `"arn:aws:health:us-east-1::event/EC2/EC2_INSTANCE_RETIREMENT_SCHEDULED/EC2_INSTANCE_RETIREMENT_SCHEDULED_ABC123-CDE456",
+#' "arn:aws:health:us-west-1::event/EBS/AWS_EBS_LOST_VOLUME/AWS_EBS_LOST_VOLUME_CHI789_JKL101"`
 #'
 #' @return
 #' A list with the following syntax:
@@ -503,7 +504,8 @@ health_describe_event_aggregates <- function(filter = NULL, aggregateField, maxR
 #' health_describe_event_details(eventArns, locale)
 #'
 #' @param eventArns &#91;required&#93; A list of event ARNs (unique identifiers). For example:
-#' `"arn:aws:health:us-east-1::event/EC2/EC2_INSTANCE_RETIREMENT_SCHEDULED/EC2_INSTANCE_RETIREMENT_SCHEDULED_ABC123-CDE456", "arn:aws:health:us-west-1::event/EBS/AWS_EBS_LOST_VOLUME/AWS_EBS_LOST_VOLUME_CHI789_JKL101"`
+#' `"arn:aws:health:us-east-1::event/EC2/EC2_INSTANCE_RETIREMENT_SCHEDULED/EC2_INSTANCE_RETIREMENT_SCHEDULED_ABC123-CDE456",
+#' "arn:aws:health:us-west-1::event/EBS/AWS_EBS_LOST_VOLUME/AWS_EBS_LOST_VOLUME_CHI789_JKL101"`
 #' @param locale The locale (language) to return information in. English (en) is the
 #' default and the only supported value at this time.
 #'
@@ -605,12 +607,12 @@ health_describe_event_details <- function(eventArns, locale = NULL) {
 #' the request. Depending on the AWS Health event type, note the following
 #' differences:
 #' 
-#' -   If the event is public, the `awsAccountId` parameter must be empty.
+#'   - If the event is public, the `awsAccountId` parameter must be empty.
 #'     If you specify an account ID for a public event, then an error
 #'     message is returned. That's because the event might apply to all AWS
 #'     accounts and isn't specific to an account in your organization.
 #' 
-#' -   If the event is specific to an account, then you must specify the
+#'   - If the event is specific to an account, then you must specify the
 #'     `awsAccountId` parameter in the request. If you don't specify an
 #'     account ID, an error message returns because the event is specific
 #'     to an AWS account in your organization.
@@ -798,7 +800,7 @@ health_describe_event_types <- function(filter = NULL, locale = NULL, nextToken 
 #' If no filter criteria are specified, all events are returned. Results
 #' are sorted by `lastModifiedTime`, starting with the most recent event.
 #' 
-#' -   When you call the [`describe_events`][health_describe_events]
+#'   - When you call the [`describe_events`][health_describe_events]
 #'     operation and specify an entity for the `entityValues` parameter,
 #'     AWS Health might return public events that aren't specific to that
 #'     resource. For example, if you call
@@ -809,7 +811,7 @@ health_describe_event_types <- function(filter = NULL, locale = NULL, nextToken 
 #'     parameter in the `filter` object. For more information, see
 #'     [Event](https://docs.aws.amazon.com/health/latest/APIReference/API_Event.html).
 #' 
-#' -   This API operation uses pagination. Specify the `nextToken`
+#'   - This API operation uses pagination. Specify the `nextToken`
 #'     parameter in the next request to return more results.
 #'
 #' @usage
@@ -959,11 +961,11 @@ health_describe_events <- function(filter = NULL, nextToken = NULL, maxResults =
 #' metadata that depends on the event type, or any affected resources. To
 #' retrieve that information, use the following operations:
 #' 
-#' -   [`describe_affected_accounts_for_organization`][health_describe_affected_accounts_for_organization]
+#'   - [`describe_affected_accounts_for_organization`][health_describe_affected_accounts_for_organization]
 #' 
-#' -   [`describe_event_details_for_organization`][health_describe_event_details_for_organization]
+#'   - [`describe_event_details_for_organization`][health_describe_event_details_for_organization]
 #' 
-#' -   [`describe_affected_entities_for_organization`][health_describe_affected_entities_for_organization]
+#'   - [`describe_affected_entities_for_organization`][health_describe_affected_entities_for_organization]
 #' 
 #' If you don't specify a `filter`, the `DescribeEventsForOrganizations`
 #' returns all events across your organization. Results are sorted by

@@ -44,7 +44,7 @@ group deployment will fail. If you don't specify an instance type in a
 launch template or for \code{instanceTypes}, then \code{t3.medium} is used, by
 default. If you specify \code{Spot} for \code{capacityType}, then we recommend
 specifying multiple values for \code{instanceTypes}. For more information,
-see Managed node group capacity types and \href{https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html}{Launch template support}
+see <span>Managed node group capacity types</span> and \href{https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html}{Launch template support}
 in the \emph{Amazon EKS User Guide}.}
 
 \item{amiType}{The AMI type for your node group. GPU instance types should use the
@@ -68,8 +68,8 @@ AWS APIs on your behalf. Worker nodes receive permissions for these API
 calls through an IAM instance profile and associated policies. Before
 you can launch worker nodes and register them into a cluster, you must
 create an IAM role for those worker nodes to use when they are launched.
-For more information, see \href{https://docs.aws.amazon.com/eks/latest/userguide/}{Amazon EKS Worker Node IAM Role} in the \strong{Amazon
-EKS User Guide} . If you specify \code{launchTemplate}, then don't specify
+For more information, see \href{https://docs.aws.amazon.com/eks/latest/userguide/}{Amazon EKS Worker Node IAM Role} in the \emph{\emph{Amazon
+EKS User Guide}} . If you specify \code{launchTemplate}, then don't specify
 \href{https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IamInstanceProfile.html}{\code{IamInstanceProfile}}
 in your launch template, or the node group deployment will fail. For
 more information about using launch templates with Amazon EKS, see

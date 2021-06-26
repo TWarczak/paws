@@ -19,7 +19,7 @@ of the following:
 \item An object group that defines which objects to include in the group.
 The definition can be a path or a file name, but it can't have more
 than 900 characters. Valid characters are: a-z, A-Z, 0-9, _
-(underscore), = (equal), : (colon), . (period), - (hyphen), ~
+(underscore), = (equal), : (colon), . (period), - (hyphen), \~
 (tilde), / (forward slash), and * (asterisk). Wildcards (*) are
 acceptable.
 \item An object group name that allows you to refer to the object group.

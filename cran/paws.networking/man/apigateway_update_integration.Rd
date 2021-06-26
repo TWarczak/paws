@@ -8,7 +8,8 @@ apigateway_update_integration(restApiId, resourceId, httpMethod,
   patchOperations)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
 \item{resourceId}{[required] [Required] Represents an update integration request's resource
 identifier.}

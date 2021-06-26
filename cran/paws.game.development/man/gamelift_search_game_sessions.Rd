@@ -36,8 +36,7 @@ String values are case sensitive and must be enclosed in single
 quotes. Special characters must be escaped. Boolean and string
 values can only be used with the comparators \code{=} and \verb{<>}. For
 example, the following filter expression searches on
-\code{gameSessionName}:
-"\verb{FilterExpression\\": \\"gameSessionName = \\'Matt\\\\\\'s Awesome Game 1\\'\\"}.
+\code{gameSessionName}: "\verb{FilterExpression\\": \\"gameSessionName = \\'Matt\\\\\\'s Awesome Game 1\\'\\"}.
 }
 
 To chain multiple conditions in a single expression, use the logical
@@ -55,8 +54,7 @@ following precedence rules:
 }
 
 For example, this filter expression retrieves game sessions hosting at
-least ten players that have an open player slot:
-\code{"maximumSessions>=10 AND hasAvailablePlayerSessions=true"}.}
+least ten players that have an open player slot: \code{"maximumSessions>=10 AND hasAvailablePlayerSessions=true"}.}
 
 \item{SortExpression}{Instructions on how to sort the search results. If no sort expression is
 included, the request returns results in random order. A sort expression
@@ -164,9 +162,9 @@ before a player can join.
 
 To search or sort, specify either a fleet ID or an alias ID, and provide
 a search filter expression, a sort expression, or both. If successful, a
-collection of GameSession objects matching the request is returned. Use
-the pagination parameters to retrieve results as a set of sequential
-pages.
+collection of <span>GameSession</span> objects matching the request is
+returned. Use the pagination parameters to retrieve results as a set of
+sequential pages.
 
 You can search for game sessions one fleet at a time only. To find game
 sessions across multiple fleets, you must search each fleet separately

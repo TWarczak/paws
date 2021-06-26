@@ -7,7 +7,8 @@
 apigateway_get_integration(restApiId, resourceId, httpMethod)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
 \item{resourceId}{[required] [Required] Specifies a get integration request's resource identifier}
 

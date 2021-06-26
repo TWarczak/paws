@@ -39,10 +39,8 @@ If the target of a logical directory entry does not exist in Amazon S3,
 the entry will be ignored. As a workaround, you can use the Amazon S3
 API to create 0 byte objects as place holders for your directory. If
 using the CLI, use the \code{s3api} call instead of \code{s3} so you can use the
-put-object operation. For example, you use the following:
-\verb{aws s3api put-object --bucket bucketname --key path/to/folder/}. Make
-sure that the end of the key name ends in a / for it to be considered a
-folder.}
+put-object operation. For example, you use the following: \verb{aws s3api put-object --bucket bucketname --key path/to/folder/}. Make sure that
+the end of the key name ends in a / for it to be considered a folder.}
 
 \item{Policy}{Allows you to supply a scope-down policy for your user so you can use
 the same IAM role across multiple users. The policy scopes down user

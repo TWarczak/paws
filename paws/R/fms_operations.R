@@ -155,18 +155,18 @@ fms_delete_notification_channel <- function() {
 #' For AWS WAF and Shield Advanced policies, the cleanup does the
 #' following:
 #' 
-#' -   Deletes rule groups created by AWS Firewall Manager
+#'   - Deletes rule groups created by AWS Firewall Manager
 #' 
-#' -   Removes web ACLs from in-scope resources
+#'   - Removes web ACLs from in-scope resources
 #' 
-#' -   Deletes web ACLs that contain no rules or rule groups
+#'   - Deletes web ACLs that contain no rules or rule groups
 #' 
 #' For security group policies, the cleanup does the following for each
 #' security group in the policy:
 #' 
-#' -   Disassociates the security group from in-scope resources
+#'   - Disassociates the security group from in-scope resources
 #' 
-#' -   Deletes the security group if it was created through Firewall
+#'   - Deletes the security group if it was created through Firewall
 #'     Manager and if it's no longer associated with any resources through
 #'     another policy
 #' 
@@ -1534,19 +1534,19 @@ fms_put_notification_channel <- function(SnsTopicArn, SnsRoleName) {
 #' 
 #' Firewall Manager provides the following types of policies:
 #' 
-#' -   An AWS WAF policy (type WAFV2), which defines rule groups to run
+#'   - An AWS WAF policy (type WAFV2), which defines rule groups to run
 #'     first in the corresponding AWS WAF web ACL and rule groups to run
 #'     last in the web ACL.
 #' 
-#' -   An AWS WAF Classic policy (type WAF), which defines a rule group.
+#'   - An AWS WAF Classic policy (type WAF), which defines a rule group.
 #' 
-#' -   A Shield Advanced policy, which applies Shield Advanced protection
+#'   - A Shield Advanced policy, which applies Shield Advanced protection
 #'     to specified accounts and resources.
 #' 
-#' -   A security group policy, which manages VPC security groups across
+#'   - A security group policy, which manages VPC security groups across
 #'     your AWS organization.
 #' 
-#' -   An AWS Network Firewall policy, which provides firewall rules to
+#'   - An AWS Network Firewall policy, which provides firewall rules to
 #'     filter network traffic in specified Amazon VPCs.
 #' 
 #' Each policy is specific to one of the types. If you want to enforce more

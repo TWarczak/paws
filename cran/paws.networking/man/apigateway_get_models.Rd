@@ -7,7 +7,8 @@
 apigateway_get_models(restApiId, position, limit)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
 \item{position}{The current pagination position in the paged result set.}
 
@@ -30,7 +31,8 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Describes existing Models defined for a RestApi resource.
+Describes existing <span>Models</span> defined for a
+<span>RestApi</span> resource.
 }
 \section{Request syntax}{
 \preformatted{svc$get_models(

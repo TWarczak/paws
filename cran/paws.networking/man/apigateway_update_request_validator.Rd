@@ -8,9 +8,11 @@ apigateway_update_request_validator(restApiId, requestValidatorId,
   patchOperations)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
-\item{requestValidatorId}{[required] [Required] The identifier of RequestValidator to be updated.}
+\item{requestValidatorId}{[required] [Required] The identifier of <span>RequestValidator</span> to be
+updated.}
 
 \item{patchOperations}{A list of update operations to be applied to the specified resource and
 in the order specified in this list.}
@@ -25,7 +27,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Updates a RequestValidator of a given RestApi.
+Updates a <span>RequestValidator</span> of a given <span>RestApi</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$update_request_validator(

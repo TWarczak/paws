@@ -16,18 +16,18 @@ NULL
 #' 
 #' Use the following links to get started on the Amazon AppFlow API:
 #' 
-#' -   [Actions](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_Operations.html):
+#'   - [Actions](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_Operations.html):
 #'     An alphabetical list of all Amazon AppFlow API operations.
 #' 
-#' -   [Data
+#'   - [Data
 #'     types](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_Types.html):
 #'     An alphabetical list of all Amazon AppFlow data types.
 #' 
-#' -   [Common
+#'   - [Common
 #'     parameters](https://docs.aws.amazon.com/appflow/1.0/APIReference/CommonParameters.html):
 #'     Parameters that all Query operations can use.
 #' 
-#' -   [Common
+#'   - [Common
 #'     errors](https://docs.aws.amazon.com/appflow/1.0/APIReference/CommonErrors.html):
 #'     Client and server errors that all operations can return.
 #' 
@@ -39,8 +39,8 @@ NULL
 #' and include applicable OAuth attributes (such as `auth-code` and
 #' `redirecturi`) with the connector-specific `ConnectorProfileProperties`
 #' when creating a new connector profile using Amazon AppFlow API
-#' operations. For example, Salesforce users can refer to the *Authorize
-#' Apps with OAuth* documentation.
+#' operations. For example, Salesforce users can refer to the
+#' <span>*Authorize Apps with OAuth*</span> documentation.
 #'
 #' @param
 #' config
@@ -93,6 +93,12 @@ NULL
 #'  \link[=appflow_update_connector_profile]{update_connector_profile} \tab Updates a given connector profile associated with your account\cr
 #'  \link[=appflow_update_flow]{update_flow} \tab Updates an existing flow
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname appflow
 #' @export

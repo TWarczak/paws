@@ -8,11 +8,13 @@ type on the given RestApi and resets it with the default settings}
 apigateway_delete_gateway_response(restApiId, responseType)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
 \item{responseType}{[required] [Required]
 
-The response type of the associated GatewayResponse. Valid values are
+The response type of the associated <span>GatewayResponse</span>. Valid
+values are
 \itemize{
 \item ACCESS_DENIED
 \item API_CONFIGURATION_ERROR
@@ -40,8 +42,9 @@ The response type of the associated GatewayResponse. Valid values are
 An empty list.
 }
 \description{
-Clears any customization of a GatewayResponse of a specified response
-type on the given RestApi and resets it with the default settings.
+Clears any customization of a <span>GatewayResponse</span> of a
+specified response type on the given <span>RestApi</span> and resets it
+with the default settings.
 }
 \section{Request syntax}{
 \preformatted{svc$delete_gateway_response(

@@ -2,7 +2,7 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_list_ip_sets}
 \alias{wafregional_list_ip_sets}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 wafregional_list_ip_sets(NextMarker, Limit)
 }
@@ -40,7 +40,7 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Returns an array of IPSetSummary objects in the response.
+Returns an array of <span>IPSetSummary</span> objects in the response.
 }
 \section{Request syntax}{
 \preformatted{svc$list_ip_sets(

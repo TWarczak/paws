@@ -66,7 +66,7 @@ documents. To create a classifier, you provide a set of training
 documents that labeled with the categories that you want to use. After
 the classifier is trained you can use it to categorize a set of labeled
 documents into the categories. For more information, see
-how-document-classification.
+<span>how-document-classification</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$create_document_classifier(

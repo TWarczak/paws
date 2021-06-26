@@ -34,8 +34,7 @@ file is 5 MB.
 
 When using the AWS CLI tool to create a script, this parameter is set to
 the zip file name. It must be prepended with the string "fileb://" to
-indicate that the file data is a binary object. For example:
-\verb{--zip-file fileb://myRealtimeScript.zip}.}
+indicate that the file data is a binary object. For example: \verb{--zip-file fileb://myRealtimeScript.zip}.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

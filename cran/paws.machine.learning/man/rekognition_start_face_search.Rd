@@ -41,8 +41,8 @@ A list with the following syntax:\preformatted{list(
 Starts the asynchronous search for faces in a collection that match the
 faces of persons detected in a stored video.
 
-The video must be stored in an Amazon S3 bucket. Use Video to specify
-the bucket name and the filename of the video.
+The video must be stored in an Amazon S3 bucket. Use <span>Video</span>
+to specify the bucket name and the filename of the video.
 \code{\link[=rekognition_start_face_search]{start_face_search}} returns a job
 identifier (\code{JobId}) which you use to get the search results once the
 search has completed. When searching is finished, Amazon Rekognition
@@ -53,7 +53,7 @@ Amazon SNS topic is \code{SUCCEEDED}. If so, call
 \code{\link[=rekognition_get_face_search]{get_face_search}} and pass the job
 identifier (\code{JobId}) from the initial call to
 \code{\link[=rekognition_start_face_search]{start_face_search}}. For more
-information, see procedure-person-search-videos.
+information, see <span>procedure-person-search-videos</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$start_face_search(

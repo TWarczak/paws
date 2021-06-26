@@ -230,31 +230,32 @@ snowball_create_address <- function(Address) {
 #' represents how quickly each device moves to its destination while in
 #' transit. Regional shipping speeds are as follows:
 #' 
-#' -   In Australia, you have access to express shipping. Typically, Snow
+#'   - In Australia, you have access to express shipping. Typically, Snow
 #'     devices shipped express are delivered in about a day.
 #' 
-#' -   In the European Union (EU), you have access to express shipping.
+#'   - In the European Union (EU), you have access to express shipping.
 #'     Typically, Snow devices shipped express are delivered in about a
 #'     day. In addition, most countries in the EU have access to standard
 #'     shipping, which typically takes less than a week, one way.
 #' 
-#' -   In India, Snow device are delivered in one to seven days.
+#'   - In India, Snow device are delivered in one to seven days.
 #' 
-#' -   In the United States of America (US), you have access to one-day
+#'   - In the United States of America (US), you have access to one-day
 #'     shipping and two-day shipping.
 #' 
+#' <!-- end list -->
 #' 
-#' -   In Australia, you have access to express shipping. Typically,
+#'   - In Australia, you have access to express shipping. Typically,
 #'     devices shipped express are delivered in about a day.
 #' 
-#' -   In the European Union (EU), you have access to express shipping.
+#'   - In the European Union (EU), you have access to express shipping.
 #'     Typically, Snow devices shipped express are delivered in about a
 #'     day. In addition, most countries in the EU have access to standard
 #'     shipping, which typically takes less than a week, one way.
 #' 
-#' -   In India, Snow device are delivered in one to seven days.
+#'   - In India, Snow device are delivered in one to seven days.
 #' 
-#' -   In the US, you have access to one-day shipping and two-day shipping.
+#'   - In the US, you have access to one-day shipping and two-day shipping.
 #' @param Notification The Amazon Simple Notification Service (Amazon SNS) notification
 #' settings for this cluster.
 #' @param ForwardingAddressId The forwarding address ID for a cluster. This field is not supported in
@@ -423,17 +424,17 @@ snowball_create_cluster <- function(JobType, Resources, Description = NULL, Addr
 #' device moves to its destination while in transit. Regional shipping
 #' speeds are as follows:
 #' 
-#' -   In Australia, you have access to express shipping. Typically, Snow
+#'   - In Australia, you have access to express shipping. Typically, Snow
 #'     devices shipped express are delivered in about a day.
 #' 
-#' -   In the European Union (EU), you have access to express shipping.
+#'   - In the European Union (EU), you have access to express shipping.
 #'     Typically, Snow devices shipped express are delivered in about a
 #'     day. In addition, most countries in the EU have access to standard
 #'     shipping, which typically takes less than a week, one way.
 #' 
-#' -   In India, Snow devices are delivered in one to seven days.
+#'   - In India, Snow devices are delivered in one to seven days.
 #' 
-#' -   In the US, you have access to one-day shipping and two-day shipping.
+#'   - In the US, you have access to one-day shipping and two-day shipping.
 #' @param Notification Defines the Amazon Simple Notification Service (Amazon SNS) notification
 #' settings for this job.
 #' @param ClusterId The ID of a cluster. If you're creating a job for a node in a cluster,
@@ -1753,12 +1754,13 @@ snowball_list_jobs <- function(MaxResults = NULL, NextToken = NULL) {
 #' [CreateRole](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html)
 #' API action in AWS Identity and Access Management (IAM).
 #' @param Description The updated description of this cluster.
-#' @param Resources The updated arrays of JobResource objects that can include updated
-#' S3Resource objects or LambdaResource objects.
-#' @param AddressId The ID of the updated Address object.
-#' @param ShippingOption The updated shipping option value of this cluster's ShippingDetails
-#' object.
-#' @param Notification The new or updated Notification object.
+#' @param Resources The updated arrays of <span>JobResource</span> objects that can include
+#' updated <span>S3Resource</span> objects or <span>LambdaResource</span>
+#' objects.
+#' @param AddressId The ID of the updated <span>Address</span> object.
+#' @param ShippingOption The updated shipping option value of this cluster's
+#' <span>ShippingDetails</span> object.
+#' @param Notification The new or updated <span>Notification</span> object.
 #' @param ForwardingAddressId The updated ID for the forwarding address for a cluster. This field is
 #' not supported in most regions.
 #'
@@ -1863,13 +1865,16 @@ snowball_update_cluster <- function(ClusterId, RoleARN = NULL, Description = NUL
 #' this job. To create a role ARN, use the
 #' [CreateRole](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html)AWS
 #' Identity and Access Management (IAM) API action.
-#' @param Notification The new or updated Notification object.
-#' @param Resources The updated `JobResource` object, or the updated JobResource object.
-#' @param AddressId The ID of the updated Address object.
-#' @param ShippingOption The updated shipping option value of this job's ShippingDetails object.
-#' @param Description The updated description of this job's JobMetadata object.
-#' @param SnowballCapacityPreference The updated `SnowballCapacityPreference` of this job's JobMetadata
-#' object. The 50 TB Snowballs are only available in the US regions.
+#' @param Notification The new or updated <span>Notification</span> object.
+#' @param Resources The updated `JobResource` object, or the updated
+#' <span>JobResource</span> object.
+#' @param AddressId The ID of the updated <span>Address</span> object.
+#' @param ShippingOption The updated shipping option value of this job's
+#' <span>ShippingDetails</span> object.
+#' @param Description The updated description of this job's <span>JobMetadata</span> object.
+#' @param SnowballCapacityPreference The updated `SnowballCapacityPreference` of this job's
+#' <span>JobMetadata</span> object. The 50 TB Snowballs are only available
+#' in the US regions.
 #' @param ForwardingAddressId The updated ID for the forwarding address for a job. This field is not
 #' supported in most regions.
 #'

@@ -113,10 +113,10 @@ same facial details that the \code{\link[=rekognition_detect_faces]{detect_faces
 operation provides.
 
 \code{\link[=rekognition_detect_labels]{detect_labels}} returns bounding boxes for
-instances of common object labels in an array of Instance objects. An
-\code{Instance} object contains a BoundingBox object, for the location of the
-label on the image. It also includes the confidence by which the
-bounding box was detected.
+instances of common object labels in an array of <span>Instance</span>
+objects. An \code{Instance} object contains a <span>BoundingBox</span>
+object, for the location of the label on the image. It also includes the
+confidence by which the bounding box was detected.
 
 \code{\link[=rekognition_detect_labels]{detect_labels}} also returns a hierarchical
 taxonomy of detected labels. For example, a detected car might be

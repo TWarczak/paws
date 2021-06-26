@@ -2,7 +2,7 @@
 % Please edit documentation in R/sagemaker_operations.R
 \name{sagemaker_create_artifact}
 \alias{sagemaker_create_artifact}
-\title{Creates an artifact}
+\title{Creates an \emph{artifact}}
 \usage{
 sagemaker_create_artifact(ArtifactName, Source, ArtifactType,
   Properties, MetadataProperties, Tags)

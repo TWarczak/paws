@@ -20,8 +20,8 @@ either the queue name or ARN value.}
 
 \item{GameProperties}{Set of custom properties for a game session, formatted as key:value
 pairs. These properties are passed to a game server process in the
-GameSession object with a request to start a new game session (see
-\href{https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession}{Start a Game Session}).}
+<span>GameSession</span> object with a request to start a new game
+session (see \href{https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession}{Start a Game Session}).}
 
 \item{MaximumPlayerSessionCount}{[required] The maximum number of players that can be connected simultaneously to
 the game session.}
@@ -37,8 +37,9 @@ offer the best possible gameplay experience for the players.}
 \item{DesiredPlayerSessions}{Set of information on each player to create a player session for.}
 
 \item{GameSessionData}{Set of custom game session properties, formatted as a single string
-value. This data is passed to a game server process in the GameSession
-object with a request to start a new game session (see \href{https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession}{Start a Game Session}).}
+value. This data is passed to a game server process in the
+<span>GameSession</span> object with a request to start a new game
+session (see \href{https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession}{Start a Game Session}).}
 }
 \value{
 A list with the following syntax:\preformatted{list(

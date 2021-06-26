@@ -28,8 +28,7 @@ deletion status by calling the
 \code{\link[=efs_describe_file_systems]{describe_file_systems}} operation, which
 returns a list of file systems in your account. If you pass file system
 ID or creation token for the deleted file system, the
-\code{\link[=efs_describe_file_systems]{describe_file_systems}} returns a
-\verb{404 FileSystemNotFound} error.
+\code{\link[=efs_describe_file_systems]{describe_file_systems}} returns a \verb{404 FileSystemNotFound} error.
 
 This operation requires permissions for the
 \code{elasticfilesystem:DeleteFileSystem} action.

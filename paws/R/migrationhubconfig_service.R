@@ -10,17 +10,17 @@ NULL
 #' determine a home region, as well as to create and work with controls
 #' that describe the home region.
 #' 
-#' -   You must make API calls for write actions (create, notify,
+#'   - You must make API calls for write actions (create, notify,
 #'     associate, disassociate, import, or put) while in your home region,
 #'     or a `HomeRegionNotSetException` error is returned.
 #' 
-#' -   API calls for read actions (list, describe, stop, and delete) are
+#'   - API calls for read actions (list, describe, stop, and delete) are
 #'     permitted outside of your home region.
 #' 
-#' -   If you call a write API outside the home region, an
+#'   - If you call a write API outside the home region, an
 #'     `InvalidInputException` is returned.
 #' 
-#' -   You can call [`get_home_region`][migrationhubconfig_get_home_region]
+#'   - You can call [`get_home_region`][migrationhubconfig_get_home_region]
 #'     action to obtain the account's Migration Hub home region.
 #' 
 #' For specific API usage, see the sections that follow in this AWS
@@ -62,6 +62,12 @@ NULL
 #'  \link[=migrationhubconfig_describe_home_region_controls]{describe_home_region_controls} \tab This API permits filtering on the ControlId and HomeRegion fields\cr
 #'  \link[=migrationhubconfig_get_home_region]{get_home_region} \tab Returns the calling account’s home region, if configured
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname migrationhubconfig
 #' @export

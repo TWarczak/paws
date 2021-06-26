@@ -2,23 +2,23 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_list_xss_match_sets}
 \alias{wafregional_list_xss_match_sets}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 wafregional_list_xss_match_sets(NextMarker, Limit)
 }
 \arguments{
-\item{NextMarker}{If you specify a value for \code{Limit} and you have more XssMatchSet objects
-than the value of \code{Limit}, AWS WAF returns a \code{NextMarker} value in the
-response that allows you to list another group of \code{XssMatchSets}. For
-the second and subsequent
+\item{NextMarker}{If you specify a value for \code{Limit} and you have more
+<span>XssMatchSet</span> objects than the value of \code{Limit}, AWS WAF
+returns a \code{NextMarker} value in the response that allows you to list
+another group of \code{XssMatchSets}. For the second and subsequent
 \code{\link[=wafregional_list_xss_match_sets]{list_xss_match_sets}} requests,
 specify the value of \code{NextMarker} from the previous response to get
 information about another batch of \code{XssMatchSets}.}
 
-\item{Limit}{Specifies the number of XssMatchSet objects that you want AWS WAF to
-return for this request. If you have more \code{XssMatchSet} objects than the
-number you specify for \code{Limit}, the response includes a \code{NextMarker}
-value that you can use to get another batch of \code{Rules}.}
+\item{Limit}{Specifies the number of <span>XssMatchSet</span> objects that you want
+AWS WAF to return for this request. If you have more \code{XssMatchSet}
+objects than the number you specify for \code{Limit}, the response includes a
+\code{NextMarker} value that you can use to get another batch of \code{Rules}.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -42,7 +42,7 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Returns an array of XssMatchSet objects.
+Returns an array of <span>XssMatchSet</span> objects.
 }
 \section{Request syntax}{
 \preformatted{svc$list_xss_match_sets(

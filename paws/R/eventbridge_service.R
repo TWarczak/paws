@@ -12,15 +12,15 @@ NULL
 #' also use rules to take action on a predetermined schedule. For example,
 #' you can configure rules to:
 #' 
-#' -   Automatically invoke an AWS Lambda function to update DNS entries
+#'   - Automatically invoke an AWS Lambda function to update DNS entries
 #'     when an event notifies you that Amazon EC2 instance enters the
 #'     running state.
 #' 
-#' -   Direct specific API records from AWS CloudTrail to an Amazon Kinesis
+#'   - Direct specific API records from AWS CloudTrail to an Amazon Kinesis
 #'     data stream for detailed analysis of potential security or
 #'     availability risks.
 #' 
-#' -   Periodically invoke a built-in target to create a snapshot of an
+#'   - Periodically invoke a built-in target to create a snapshot of an
 #'     Amazon EBS volume.
 #' 
 #' For more information about the features of Amazon EventBridge, see the
@@ -89,7 +89,7 @@ NULL
 #'  \link[=eventbridge_list_targets_by_rule]{list_targets_by_rule} \tab Lists the targets assigned to the specified rule\cr
 #'  \link[=eventbridge_put_events]{put_events} \tab Sends custom events to Amazon EventBridge so that they can be matched to rules\cr
 #'  \link[=eventbridge_put_partner_events]{put_partner_events} \tab This is used by SaaS partners to write events to a customer's partner event bus\cr
-#'  \link[=eventbridge_put_permission]{put_permission} \tab Running PutPermission permits the specified AWS account or AWS organization to put events to the specified event bus\cr
+#'  \link[=eventbridge_put_permission]{put_permission} \tab Running PutPermission permits the specified AWS account or AWS organization to put events to the specified _event bus_\cr
 #'  \link[=eventbridge_put_rule]{put_rule} \tab Creates or updates the specified rule\cr
 #'  \link[=eventbridge_put_targets]{put_targets} \tab Adds the specified targets to the specified rule, or updates the targets if they are already associated with the rule\cr
 #'  \link[=eventbridge_remove_permission]{remove_permission} \tab Revokes the permission of another AWS account to be able to put events to the specified event bus\cr
@@ -100,6 +100,12 @@ NULL
 #'  \link[=eventbridge_untag_resource]{untag_resource} \tab Removes one or more tags from the specified EventBridge resource\cr
 #'  \link[=eventbridge_update_archive]{update_archive} \tab Updates the specified archive
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname eventbridge
 #' @export
@@ -119,7 +125,7 @@ eventbridge <- function(config = list()) {
   endpoints = list("*" = list(endpoint = "events.{region}.amazonaws.com", global = FALSE), "cn-*" = list(endpoint = "events.{region}.amazonaws.com.cn", global = FALSE), "us-iso-*" = list(endpoint = "events.{region}.c2s.ic.gov", global = FALSE), "us-isob-*" = list(endpoint = "events.{region}.sc2s.sgov.gov", global = FALSE)),
   service_id = "EventBridge",
   api_version = "2015-10-07",
-  signing_name = NULL,
+  signing_name = "events",
   json_version = "1.1",
   target_prefix = "AWSEvents"
 )

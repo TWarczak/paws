@@ -181,10 +181,12 @@ from your organization later, you can do so only after you provide
 the missing information. Follow the steps at \href{https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info}{To leave an organization as a member account}
 in the \emph{AWS Organizations User Guide.}
 \item If you get an exception that indicates that you exceeded your
-account limits for the organization, contact AWS Support.
+account limits for the organization, contact <span>AWS
+Support</span>.
 \item If you get an exception that indicates that the operation failed
 because your organization is still initializing, wait one hour and
-then try again. If the error persists, contact AWS Support.
+then try again. If the error persists, contact <span>AWS
+Support</span>.
 \item Using
 \code{\link[=organizations_create_gov_cloud_account]{create_gov_cloud_account}}
 to create multiple temporary accounts isn't recommended. You can

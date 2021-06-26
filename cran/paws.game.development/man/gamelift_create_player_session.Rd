@@ -49,8 +49,8 @@ player reservation and accept the player.
 
 To create a player session, specify a game session ID, player ID, and
 optionally a string of player data. If successful, a slot is reserved in
-the game session for the player and a new PlayerSession object is
-returned. Player sessions cannot be updated.
+the game session for the player and a new <span>PlayerSession</span>
+object is returned. Player sessions cannot be updated.
 
 \emph{Available in Amazon GameLift Local.}
 \itemize{

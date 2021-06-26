@@ -28,10 +28,10 @@ must have the \code{iam:PassRole} permission.}
 resources in different ways, for example, by purpose, owner, or
 environment. For more information, see \href{https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html}{Tagging AWS Resources}.}
 
-\item{VpcConfig}{A VpcConfig object that specifies the VPC that you want your model to
-connect to. Control access to and from your model container by
-configuring the VPC. \code{VpcConfig} is used in hosting services and in
-batch transform. For more information, see \href{https://docs.aws.amazon.com/sagemaker/latest/dg/host-vpc.html}{Protect Endpoints by Using an Amazon Virtual Private Cloud}
+\item{VpcConfig}{A <span>VpcConfig</span> object that specifies the VPC that you want
+your model to connect to. Control access to and from your model
+container by configuring the VPC. \code{VpcConfig} is used in hosting
+services and in batch transform. For more information, see \href{https://docs.aws.amazon.com/sagemaker/latest/dg/host-vpc.html}{Protect Endpoints by Using an Amazon Virtual Private Cloud}
 and \href{https://docs.aws.amazon.com/sagemaker/latest/dg/batch-vpc.html}{Protect Data in Batch Transform Jobs by Using an Amazon Virtual Private Cloud}.}
 
 \item{EnableNetworkIsolation}{Isolates the model container. No inbound or outbound network calls can

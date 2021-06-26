@@ -133,6 +133,12 @@ NULL
 #'  \link[=secretsmanager_validate_resource_policy]{validate_resource_policy} \tab Validates the JSON text of the resource-based policy document attached to the specified secret
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname secretsmanager
 #' @export
 secretsmanager <- function(config = list()) {

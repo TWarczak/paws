@@ -2,14 +2,14 @@
 % Please edit documentation in R/gamelift_operations.R
 \name{gamelift_suspend_game_server_group}
 \alias{gamelift_suspend_game_server_group}
-\title{This operation is used with the Amazon GameLift FleetIQ solution and
-game server groups}
+\title{THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND
+GAME SERVER GROUPS}
 \usage{
 gamelift_suspend_game_server_group(GameServerGroupName, SuspendActions)
 }
 \arguments{
 \item{GameServerGroupName}{[required] A unique identifier for the game server group. Use either the
-GameServerGroup name or ARN value.}
+<span>GameServerGroup</span> name or ARN value.}
 
 \item{SuspendActions}{[required] The activity to suspend for this game server group.}
 }
@@ -64,8 +64,9 @@ metrics, and capacity scaling activities continue to be active.
 }
 
 To suspend activity, specify a game server group ARN and the type of
-activity to be suspended. If successful, a GameServerGroup object is
-returned showing that the activity is listed in \code{SuspendedActions}.
+activity to be suspended. If successful, a <span>GameServerGroup</span>
+object is returned showing that the activity is listed in
+\code{SuspendedActions}.
 
 \strong{Learn more}
 

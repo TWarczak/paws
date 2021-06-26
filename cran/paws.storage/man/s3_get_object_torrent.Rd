@@ -15,8 +15,7 @@ torrent files.}
 \item{RequestPayer}{}
 
 \item{ExpectedBucketOwner}{The account id of the expected bucket owner. If the bucket is owned by a
-different account, the request will fail with an HTTP
-\verb{403 (Access Denied)} error.}
+different account, the request will fail with an HTTP \verb{403 (Access Denied)} error.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -28,7 +27,7 @@ A list with the following syntax:\preformatted{list(
 \description{
 Returns torrent files from a bucket. BitTorrent can save you bandwidth
 when you're distributing large files. For more information about
-BitTorrent, see \href{https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3Torrent.html}{Using BitTorrent with Amazon S3}.
+BitTorrent, see \href{https://docs.aws.amazon.com/AmazonS3/latest/userguide/uploading-downloading-objects.html}{Using BitTorrent with Amazon S3}.
 
 You can get torrent only for objects that are less than 5 GB in size,
 and that are not encrypted using server-side encryption with a

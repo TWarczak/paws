@@ -13,9 +13,9 @@ shield_associate_drt_role(RoleArn)
 your AWS account.
 
 Prior to making the \code{\link[=shield_associate_drt_role]{associate_drt_role}}
-request, you must attach the AWSShieldDRTAccessPolicy managed policy to
-this role. For more information see Attaching and Detaching IAM
-Policies.}
+request, you must attach the <span>AWSShieldDRTAccessPolicy</span>
+managed policy to this role. For more information see <span>Attaching
+and Detaching IAM Policies</span>.}
 }
 \value{
 An empty list.
@@ -32,11 +32,10 @@ an account that already has an associated role, the new \code{RoleArn} will
 replace the existing \code{RoleArn}.
 
 Prior to making the \code{\link[=shield_associate_drt_role]{associate_drt_role}}
-request, you must attach the AWSShieldDRTAccessPolicy managed policy to
-the role you will specify in the request. For more information see
-Attaching and Detaching IAM Policies. The role must also trust the
-service principal \code{ drt.shield.amazonaws.com}. For more information, see
-\href{https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html}{IAM JSON Policy Elements: Principal}.
+request, you must attach the <span>AWSShieldDRTAccessPolicy</span>
+managed policy to the role you will specify in the request. For more
+information see <span>Attaching and Detaching IAM Policies</span>. The
+role must also trust the service principal \code{ drt.shield.amazonaws.com}. For more information, see \href{https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html}{IAM JSON Policy Elements: Principal}.
 
 The DRT will have access only to your AWS WAF and Shield resources. By
 submitting this request, you authorize the DRT to inspect your AWS WAF

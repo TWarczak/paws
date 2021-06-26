@@ -48,8 +48,8 @@ Updates the specified attribute for a load balancer. You can only update
 one attribute at a time.
 
 The \verb{update load balancer attribute} operation supports tag-based access
-control via resource tags applied to the resource identified by
-\verb{load balancer name}. For more information, see the Lightsail Dev Guide.
+control via resource tags applied to the resource identified by \verb{load balancer name}. For more information, see the <span>Lightsail Dev
+Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$update_load_balancer_attribute(

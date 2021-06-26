@@ -7,8 +7,8 @@
 apigateway_get_base_path_mapping(domainName, basePath)
 }
 \arguments{
-\item{domainName}{[required] [Required] The domain name of the BasePathMapping resource to be
-described.}
+\item{domainName}{[required] [Required] The domain name of the <span>BasePathMapping</span>
+resource to be described.}
 
 \item{basePath}{[required] [Required] The base path name that callers of the API must provide as
 part of the URL after the domain name. This value must be unique for all
@@ -24,7 +24,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Describe a BasePathMapping resource.
+Describe a <span>BasePathMapping</span> resource.
 }
 \section{Request syntax}{
 \preformatted{svc$get_base_path_mapping(

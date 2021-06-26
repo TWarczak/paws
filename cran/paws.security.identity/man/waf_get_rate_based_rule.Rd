@@ -2,14 +2,15 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_get_rate_based_rule}
 \alias{waf_get_rate_based_rule}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_get_rate_based_rule(RuleId)
 }
 \arguments{
-\item{RuleId}{[required] The \code{RuleId} of the RateBasedRule that you want to get. \code{RuleId} is
-returned by \code{\link[=waf_create_rate_based_rule]{create_rate_based_rule}} and
-by \code{\link[=waf_list_rate_based_rules]{list_rate_based_rules}}.}
+\item{RuleId}{[required] The \code{RuleId} of the <span>RateBasedRule</span> that you want to get.
+\code{RuleId} is returned by
+\code{\link[=waf_create_rate_based_rule]{create_rate_based_rule}} and by
+\code{\link[=waf_list_rate_based_rules]{list_rate_based_rules}}.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -40,9 +41,9 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Returns the RateBasedRule that is specified by the \code{RuleId} that you
-included in the \code{\link[=waf_get_rate_based_rule]{get_rate_based_rule}}
-request.
+Returns the <span>RateBasedRule</span> that is specified by the \code{RuleId}
+that you included in the
+\code{\link[=waf_get_rate_based_rule]{get_rate_based_rule}} request.
 }
 \section{Request syntax}{
 \preformatted{svc$get_rate_based_rule(

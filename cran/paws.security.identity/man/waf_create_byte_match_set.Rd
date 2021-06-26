@@ -2,13 +2,13 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_create_byte_match_set}
 \alias{waf_create_byte_match_set}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_create_byte_match_set(Name, ChangeToken)
 }
 \arguments{
-\item{Name}{[required] A friendly name or description of the ByteMatchSet. You can't change
-\code{Name} after you create a \code{ByteMatchSet}.}
+\item{Name}{[required] A friendly name or description of the <span>ByteMatchSet</span>. You
+can't change \code{Name} after you create a \code{ByteMatchSet}.}
 
 \item{ChangeToken}{[required] The value returned by the most recent call to
 \code{\link[=waf_get_change_token]{get_change_token}}.}

@@ -33,21 +33,21 @@ NULL
 #' The following throttling limits apply to using Security Hub API
 #' operations.
 #' 
-#' -   [`batch_enable_standards`][securityhub_batch_enable_standards] -
+#'   - [`batch_enable_standards`][securityhub_batch_enable_standards] -
 #'     `RateLimit` of 1 request per second, `BurstLimit` of 1 request per
 #'     second.
 #' 
-#' -   [`get_findings`][securityhub_get_findings] - `RateLimit` of 3
+#'   - [`get_findings`][securityhub_get_findings] - `RateLimit` of 3
 #'     requests per second. `BurstLimit` of 6 requests per second.
 #' 
-#' -   [`update_findings`][securityhub_update_findings] - `RateLimit` of 1
+#'   - [`update_findings`][securityhub_update_findings] - `RateLimit` of 1
 #'     request per second. `BurstLimit` of 5 requests per second.
 #' 
-#' -   [`update_standards_control`][securityhub_update_standards_control] -
+#'   - [`update_standards_control`][securityhub_update_standards_control] -
 #'     `RateLimit` of 1 request per second, `BurstLimit` of 5 requests per
 #'     second.
 #' 
-#' -   All other operations - `RateLimit` of 10 requests per second.
+#'   - All other operations - `RateLimit` of 10 requests per second.
 #'     `BurstLimit` of 30 requests per second.
 #'
 #' @param
@@ -131,6 +131,12 @@ NULL
 #'  \link[=securityhub_update_security_hub_configuration]{update_security_hub_configuration} \tab Updates configuration options for Security Hub\cr
 #'  \link[=securityhub_update_standards_control]{update_standards_control} \tab Used to control whether an individual security standard control is enabled or disabled
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname securityhub
 #' @export

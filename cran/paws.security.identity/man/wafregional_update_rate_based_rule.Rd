@@ -2,7 +2,7 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_update_rate_based_rule}
 \alias{wafregional_update_rate_based_rule}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 wafregional_update_rate_based_rule(RuleId, ChangeToken, Updates,
   RateLimit)
@@ -17,7 +17,7 @@ returned by
 \code{\link[=wafregional_get_change_token]{get_change_token}}.}
 
 \item{Updates}{[required] An array of \code{RuleUpdate} objects that you want to insert into or delete
-from a RateBasedRule.}
+from a <span>RateBasedRule</span>.}
 
 \item{RateLimit}{[required] The maximum number of requests, which have an identical value in the
 field specified by the \code{RateKey}, allowed in a five-minute period. If
@@ -41,13 +41,13 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Inserts or deletes Predicate objects in a rule and updates the
-\code{RateLimit} in the rule.
+Inserts or deletes <span>Predicate</span> objects in a rule and updates
+the \code{RateLimit} in the rule.
 
-Each \code{Predicate} object identifies a predicate, such as a ByteMatchSet
-or an IPSet, that specifies the web requests that you want to block or
-count. The \code{RateLimit} specifies the number of requests every five
-minutes that triggers the rule.
+Each \code{Predicate} object identifies a predicate, such as a
+<span>ByteMatchSet</span> or an <span>IPSet</span>, that specifies the
+web requests that you want to block or count. The \code{RateLimit} specifies
+the number of requests every five minutes that triggers the rule.
 
 If you add more than one predicate to a \code{RateBasedRule}, a request must
 match all the predicates and exceed the \code{RateLimit} to be counted or

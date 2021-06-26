@@ -67,15 +67,13 @@ You can specify the type of source (\code{SourceType}) you want to be
 notified of, provide a list of AWS DMS source IDs (\code{SourceIds}) that
 triggers the events, and provide a list of event categories
 (\code{EventCategories}) for events you want to be notified of. If you
-specify both the \code{SourceType} and \code{SourceIds}, such as
-\code{SourceType = replication-instance} and
-\code{SourceIdentifier = my-replinstance}, you will be notified of all the
-replication instance events for the specified source. If you specify a
-\code{SourceType} but don't specify a \code{SourceIdentifier}, you receive notice
-of the events for that source type for all your AWS DMS sources. If you
-don't specify either \code{SourceType} nor \code{SourceIdentifier}, you will be
-notified of events generated from all AWS DMS sources belonging to your
-customer account.
+specify both the \code{SourceType} and \code{SourceIds}, such as \code{SourceType = replication-instance} and \code{SourceIdentifier = my-replinstance}, you will
+be notified of all the replication instance events for the specified
+source. If you specify a \code{SourceType} but don't specify a
+\code{SourceIdentifier}, you receive notice of the events for that source
+type for all your AWS DMS sources. If you don't specify either
+\code{SourceType} nor \code{SourceIdentifier}, you will be notified of events
+generated from all AWS DMS sources belonging to your customer account.
 
 For more information about AWS DMS events, see \href{https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html}{Working with Events and Notifications}
 in the \emph{AWS Database Migration Service User Guide.}

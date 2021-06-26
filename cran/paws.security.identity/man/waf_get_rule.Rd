@@ -2,13 +2,14 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_get_rule}
 \alias{waf_get_rule}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_get_rule(RuleId)
 }
 \arguments{
-\item{RuleId}{[required] The \code{RuleId} of the Rule that you want to get. \code{RuleId} is returned by
-\code{\link[=waf_create_rule]{create_rule}} and by \code{\link[=waf_list_rules]{list_rules}}.}
+\item{RuleId}{[required] The \code{RuleId} of the <span>Rule</span> that you want to get. \code{RuleId} is
+returned by \code{\link[=waf_create_rule]{create_rule}} and by
+\code{\link[=waf_list_rules]{list_rules}}.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -37,8 +38,8 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Returns the Rule that is specified by the \code{RuleId} that you included in
-the \code{\link[=waf_get_rule]{get_rule}} request.
+Returns the <span>Rule</span> that is specified by the \code{RuleId} that you
+included in the \code{\link[=waf_get_rule]{get_rule}} request.
 }
 \section{Request syntax}{
 \preformatted{svc$get_rule(

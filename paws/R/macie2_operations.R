@@ -128,10 +128,10 @@ macie2_batch_get_custom_data_identifiers <- function(ids = NULL) {
 #' after the job is created.
 #' @param jobType &#91;required&#93; The schedule for running the job. Valid values are:
 #' 
-#' -   ONE_TIME - Run the job only once. If you specify this value, don't
+#'   - ONE_TIME - Run the job only once. If you specify this value, don't
 #'     specify a value for the scheduleFrequency property.
 #' 
-#' -   SCHEDULED - Run the job on a daily, weekly, or monthly basis. If you
+#'   - SCHEDULED - Run the job on a daily, weekly, or monthly basis. If you
 #'     specify this value, use the scheduleFrequency property to define the
 #'     recurrence pattern for the job.
 #' @param name &#91;required&#93; A custom name for the job. The name can contain as many as 500
@@ -1688,16 +1688,16 @@ macie2_get_custom_data_identifier <- function(id) {
 #' @param groupBy &#91;required&#93; The finding property to use to group the query results. Valid values
 #' are:
 #' 
-#' -   classificationDetails.jobId - The unique identifier for the
+#'   - classificationDetails.jobId - The unique identifier for the
 #'     classification job that produced the finding.
 #' 
-#' -   resourcesAffected.s3Bucket.name - The name of the S3 bucket that the
+#'   - resourcesAffected.s3Bucket.name - The name of the S3 bucket that the
 #'     finding applies to.
 #' 
-#' -   severity.description - The severity level of the finding, such as
+#'   - severity.description - The severity level of the finding, such as
 #'     High or Medium.
 #' 
-#' -   type - The type of finding, such as Policy:IAMUser/S3BucketPublic
+#'   - type - The type of finding, such as Policy:IAMUser/S3BucketPublic
 #'     and SensitiveData:S3Object/Personal.
 #' @param size The maximum number of items to include in each page of the response.
 #' @param sortCriteria The criteria to use to sort the query results.
@@ -3356,28 +3356,28 @@ macie2_untag_resource <- function(resourceArn, tagKeys) {
 #' @param jobId &#91;required&#93; The unique identifier for the classification job.
 #' @param jobStatus &#91;required&#93; The new status for the job. Valid values are:
 #' 
-#' -   CANCELLED - Stops the job permanently and cancels it. This value is
+#'   - CANCELLED - Stops the job permanently and cancels it. This value is
 #'     valid only if the job's current status is IDLE, PAUSED, RUNNING, or
 #'     USER_PAUSED.
-#' 
+#'     
 #'     If you specify this value and the job's current status is RUNNING,
 #'     Amazon Macie immediately begins to stop all processing tasks for the
 #'     job. You can't resume or restart a job after you cancel it.
 #' 
-#' -   RUNNING - Resumes the job. This value is valid only if the job's
+#'   - RUNNING - Resumes the job. This value is valid only if the job's
 #'     current status is USER_PAUSED.
-#' 
+#'     
 #'     If you paused the job while it was actively running and you specify
 #'     this value less than 30 days after you paused the job, Macie
 #'     immediately resumes processing from the point where you paused the
 #'     job. Otherwise, Macie resumes the job according to the schedule and
 #'     other settings for the job.
 #' 
-#' -   USER_PAUSED - Pauses the job temporarily. This value is valid only
+#'   - USER_PAUSED - Pauses the job temporarily. This value is valid only
 #'     if the job's current status is IDLE or RUNNING. If you specify this
 #'     value and the job's current status is RUNNING, Macie immediately
 #'     begins to pause all processing tasks for the job.
-#' 
+#'     
 #'     If you pause a one-time job and you don't resume it within 30 days,
 #'     the job expires and Macie cancels the job. If you pause a recurring
 #'     job when its status is RUNNING and you don't resume it within 30

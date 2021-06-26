@@ -2,7 +2,7 @@
 % Please edit documentation in R/sagemaker_operations.R
 \name{sagemaker_create_action}
 \alias{sagemaker_create_action}
-\title{Creates an action}
+\title{Creates an \emph{action}}
 \usage{
 sagemaker_create_action(ActionName, Source, ActionType, Description,
   Status, Properties, MetadataProperties, Tags)

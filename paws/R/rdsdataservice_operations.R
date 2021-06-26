@@ -28,9 +28,9 @@ NULL
 #' sets provided. To execute a SQL statement with no parameters, use one of
 #' the following options:
 #' 
-#' -   Specify one or more empty parameter sets.
+#'   - Specify one or more empty parameter sets.
 #' 
-#' -   Use the [`execute_statement`][rdsdataservice_execute_statement]
+#'   - Use the [`execute_statement`][rdsdataservice_execute_statement]
 #'     operation instead of the
 #'     [`batch_execute_statement`][rdsdataservice_batch_execute_statement]
 #'     operation.
@@ -156,7 +156,9 @@ rdsdataservice_batch_execute_statement <- function(database = NULL, parameterSet
 #' @description
 #' Starts a SQL transaction.
 #' 
-#'      <important> <p>A transaction can run for a maximum of 24 hours. A transaction is terminated and rolled back automatically after 24 hours.</p> <p>A transaction times out if no calls use its transaction ID in three minutes. If a transaction times out before it's committed, it's rolled back automatically.</p> <p>DDL statements inside a transaction cause an implicit commit. We recommend that you run each DDL statement in a separate <code>ExecuteStatement</code> call with <code>continueAfterTimeout</code> enabled.</p> </important> 
+#' ``` 
+#'  <important> <p>A transaction can run for a maximum of 24 hours. A transaction is terminated and rolled back automatically after 24 hours.</p> <p>A transaction times out if no calls use its transaction ID in three minutes. If a transaction times out before it's committed, it's rolled back automatically.</p> <p>DDL statements inside a transaction cause an implicit commit. We recommend that you run each DDL statement in a separate <code>ExecuteStatement</code> call with <code>continueAfterTimeout</code> enabled.</p> </important> 
+#' ```
 #'
 #' @usage
 #' rdsdataservice_begin_transaction(database, resourceArn, schema,

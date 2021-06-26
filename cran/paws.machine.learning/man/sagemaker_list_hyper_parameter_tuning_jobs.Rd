@@ -78,8 +78,8 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Gets a list of HyperParameterTuningJobSummary objects that describe the
-hyperparameter tuning jobs launched in your account.
+Gets a list of <span>HyperParameterTuningJobSummary</span> objects that
+describe the hyperparameter tuning jobs launched in your account.
 }
 \section{Request syntax}{
 \preformatted{svc$list_hyper_parameter_tuning_jobs(

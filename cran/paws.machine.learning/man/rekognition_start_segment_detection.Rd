@@ -40,19 +40,20 @@ A list with the following syntax:\preformatted{list(
 Starts asynchronous detection of segment detection in a stored video.
 
 Amazon Rekognition Video can detect segments in a video stored in an
-Amazon S3 bucket. Use Video to specify the bucket name and the filename
-of the video.
+Amazon S3 bucket. Use <span>Video</span> to specify the bucket name and
+the filename of the video.
 \code{\link[=rekognition_start_segment_detection]{start_segment_detection}} returns
 a job identifier (\code{JobId}) which you use to get the results of the
 operation. When segment detection is finished, Amazon Rekognition Video
 publishes a completion status to the Amazon Simple Notification Service
 topic that you specify in \code{NotificationChannel}.
 
-You can use the \code{Filters} (StartSegmentDetectionFilters) input parameter
-to specify the minimum detection confidence returned in the response.
-Within \code{Filters}, use \code{ShotFilter} (StartShotDetectionFilter) to filter
-detected shots. Use \code{TechnicalCueFilter}
-(StartTechnicalCueDetectionFilter) to filter technical cues.
+You can use the \code{Filters} (<span>StartSegmentDetectionFilters</span>)
+input parameter to specify the minimum detection confidence returned in
+the response. Within \code{Filters}, use \code{ShotFilter}
+(<span>StartShotDetectionFilter</span>) to filter detected shots. Use
+\code{TechnicalCueFilter} (<span>StartTechnicalCueDetectionFilter</span>) to
+filter technical cues.
 
 To get the results of the segment detection operation, first check that
 the status value published to the Amazon SNS topic is \code{SUCCEEDED}. if

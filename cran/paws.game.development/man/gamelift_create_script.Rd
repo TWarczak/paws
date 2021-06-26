@@ -32,8 +32,7 @@ file is 5 MB.
 
 When using the AWS CLI tool to create a script, this parameter is set to
 the zip file name. It must be prepended with the string "fileb://" to
-indicate that the file data is a binary object. For example:
-\verb{--zip-file fileb://myRealtimeScript.zip}.}
+indicate that the file data is a binary object. For example: \verb{--zip-file fileb://myRealtimeScript.zip}.}
 
 \item{Tags}{A list of labels to assign to the new script resource. Tags are
 developer-defined key-value pairs. Tagging AWS resources are useful for

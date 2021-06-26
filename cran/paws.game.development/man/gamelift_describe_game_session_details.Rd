@@ -78,8 +78,8 @@ request properties for all game sessions running on a fleet.
 To get game session record(s), specify just one of the following: game
 session ID, fleet ID, or alias ID. You can filter this request by game
 session status. Use the pagination parameters to retrieve results as a
-set of sequential pages. If successful, a GameSessionDetail object is
-returned for each session matching the request.
+set of sequential pages. If successful, a <span>GameSessionDetail</span>
+object is returned for each session matching the request.
 \itemize{
 \item \code{\link[=gamelift_create_game_session]{create_game_session}}
 \item \code{\link[=gamelift_describe_game_sessions]{describe_game_sessions}}

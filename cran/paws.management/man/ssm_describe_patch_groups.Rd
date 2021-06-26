@@ -19,7 +19,7 @@ keys include the following:
 accepted.
 \item \code{OPERATING_SYSTEM}: The supported operating system type to return
 results for. For valid operating system values, see
-GetDefaultPatchBaselineRequest$OperatingSystem in
+<span>GetDefaultPatchBaselineRequest$OperatingSystem</span> in
 \code{\link[=ssm_create_patch_baseline]{create_patch_baseline}}.
 
 Examples:

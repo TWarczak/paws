@@ -7,14 +7,14 @@
 apigateway_delete_client_certificate(clientCertificateId)
 }
 \arguments{
-\item{clientCertificateId}{[required] [Required] The identifier of the ClientCertificate resource to be
-deleted.}
+\item{clientCertificateId}{[required] [Required] The identifier of the <span>ClientCertificate</span>
+resource to be deleted.}
 }
 \value{
 An empty list.
 }
 \description{
-Deletes the ClientCertificate resource.
+Deletes the <span>ClientCertificate</span> resource.
 }
 \section{Request syntax}{
 \preformatted{svc$delete_client_certificate(

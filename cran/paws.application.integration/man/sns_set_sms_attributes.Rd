@@ -21,10 +21,10 @@ crossed. During that interval, if you continue to send SMS messages, you
 will incur costs that exceed your limit.
 
 By default, the spend limit is set to the maximum allowed by Amazon SNS.
-If you want to raise the limit, submit an SNS Limit Increase case. For
-\strong{New limit value}, enter your desired monthly spend limit. In the
-\strong{Use Case Description} field, explain that you are requesting an SMS
-monthly spend limit increase.
+If you want to raise the limit, submit an <span>SNS Limit Increase
+case</span>. For \strong{New limit value}, enter your desired monthly spend
+limit. In the \strong{Use Case Description} field, explain that you are
+requesting an SMS monthly spend limit increase.
 
 \code{DeliveryStatusIAMRole} – The ARN of the IAM role that allows Amazon SNS
 to write logs about SMS deliveries in CloudWatch Logs. For each SMS

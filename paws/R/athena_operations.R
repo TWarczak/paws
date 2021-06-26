@@ -10,13 +10,14 @@ NULL
 #' Returns the details of a single named query or a list of up to 50
 #' queries, which you provide as an array of query ID strings. Requires you
 #' to have access to the workgroup in which the queries were saved. Use
-#' ListNamedQueriesInput to get the list of named query IDs in the
-#' specified workgroup. If information could not be retrieved for a
+#' <span>ListNamedQueriesInput</span> to get the list of named query IDs in
+#' the specified workgroup. If information could not be retrieved for a
 #' submitted query ID, information about the query ID submitted is listed
-#' under UnprocessedNamedQueryId. Named queries differ from executed
-#' queries. Use BatchGetQueryExecutionInput to get details about each
-#' unique query execution, and ListQueryExecutionsInput to get a list of
-#' query execution IDs.
+#' under <span>UnprocessedNamedQueryId</span>. Named queries differ from
+#' executed queries. Use <span>BatchGetQueryExecutionInput</span> to get
+#' details about each unique query execution, and
+#' <span>ListQueryExecutionsInput</span> to get a list of query execution
+#' IDs.
 #'
 #' @usage
 #' athena_batch_get_named_query(NamedQueryIds)
@@ -85,9 +86,9 @@ athena_batch_get_named_query <- function(NamedQueryIds) {
 #' query executions, which you provide as an array of query execution ID
 #' strings. Requires you to have access to the workgroup in which the
 #' queries ran. To get a list of query execution IDs, use
-#' ListQueryExecutionsInput$WorkGroup. Query executions differ from named
-#' (saved) queries. Use BatchGetNamedQueryInput to get details about named
-#' queries.
+#' <span>ListQueryExecutionsInput$WorkGroup</span>. Query executions differ
+#' from named (saved) queries. Use <span>BatchGetNamedQueryInput</span> to
+#' get details about named queries.
 #'
 #' @usage
 #' athena_batch_get_query_execution(QueryExecutionIds)
@@ -195,29 +196,29 @@ athena_batch_get_query_execution <- function(QueryExecutionIds) {
 #' @param Parameters Specifies the Lambda function or functions to use for creating the data
 #' catalog. This is a mapping whose values depend on the catalog type.
 #' 
-#' -   For the `HIVE` data catalog type, use the following syntax. The
+#'   - For the `HIVE` data catalog type, use the following syntax. The
 #'     `metadata-function` parameter is required. `The sdk-version`
 #'     parameter is optional and defaults to the currently supported
 #'     version.
+#'     
+#'     ` metadata-function=lambda_arn, sdk-version=version_number  `
 #' 
-#'     `metadata-function=lambda_arn, sdk-version=version_number `
-#' 
-#' -   For the `LAMBDA` data catalog type, use one of the following sets of
+#'   - For the `LAMBDA` data catalog type, use one of the following sets of
 #'     required parameters, but not both.
-#' 
-#'     -   If you have one Lambda function that processes metadata and
+#'     
+#'       - If you have one Lambda function that processes metadata and
 #'         another for reading the actual data, use the following syntax.
 #'         Both parameters are required.
-#' 
-#'         `metadata-function=lambda_arn, record-function=lambda_arn `
-#' 
-#'     -   If you have a composite Lambda function that processes both
+#'         
+#'         ` metadata-function=lambda_arn, record-function=lambda_arn  `
+#'     
+#'       - If you have a composite Lambda function that processes both
 #'         metadata and data, use the following syntax to specify your
 #'         Lambda function.
+#'         
+#'         ` function=lambda_arn  `
 #' 
-#'         `function=lambda_arn `
-#' 
-#' -   The `GLUE` type has no parameters.
+#'   - The `GLUE` type has no parameters.
 #' @param Tags A list of comma separated tags to add to the data catalog that is
 #' created.
 #'
@@ -349,7 +350,7 @@ athena_create_named_query <- function(Name, Description = NULL, Database, QueryS
 #' scanned (cutoff) per query, if it is specified, and whether workgroup's
 #' settings (specified with EnforceWorkGroupConfiguration) in the
 #' WorkGroupConfiguration override client-side settings. See
-#' WorkGroupConfiguration$EnforceWorkGroupConfiguration.
+#' <span>WorkGroupConfiguration$EnforceWorkGroupConfiguration</span>.
 #' @param Description The workgroup description.
 #' @param Tags A list of comma separated tags to add to the workgroup that is created.
 #'
@@ -1506,7 +1507,7 @@ athena_list_work_groups <- function(NextToken = NULL, MaxResults = NULL) {
 #' location. The workgroup settings override is specified in
 #' EnforceWorkGroupConfiguration (true/false) in the
 #' WorkGroupConfiguration. See
-#' WorkGroupConfiguration$EnforceWorkGroupConfiguration.
+#' <span>WorkGroupConfiguration$EnforceWorkGroupConfiguration</span>.
 #' @param WorkGroup The name of the workgroup in which the query is being started.
 #'
 #' @return
@@ -1727,29 +1728,29 @@ athena_untag_resource <- function(ResourceARN, TagKeys) {
 #' @param Parameters Specifies the Lambda function or functions to use for updating the data
 #' catalog. This is a mapping whose values depend on the catalog type.
 #' 
-#' -   For the `HIVE` data catalog type, use the following syntax. The
+#'   - For the `HIVE` data catalog type, use the following syntax. The
 #'     `metadata-function` parameter is required. `The sdk-version`
 #'     parameter is optional and defaults to the currently supported
 #'     version.
+#'     
+#'     ` metadata-function=lambda_arn, sdk-version=version_number  `
 #' 
-#'     `metadata-function=lambda_arn, sdk-version=version_number `
-#' 
-#' -   For the `LAMBDA` data catalog type, use one of the following sets of
+#'   - For the `LAMBDA` data catalog type, use one of the following sets of
 #'     required parameters, but not both.
-#' 
-#'     -   If you have one Lambda function that processes metadata and
+#'     
+#'       - If you have one Lambda function that processes metadata and
 #'         another for reading the actual data, use the following syntax.
 #'         Both parameters are required.
-#' 
-#'         `metadata-function=lambda_arn, record-function=lambda_arn `
-#' 
-#'     -   If you have a composite Lambda function that processes both
+#'         
+#'         ` metadata-function=lambda_arn, record-function=lambda_arn  `
+#'     
+#'       - If you have a composite Lambda function that processes both
 #'         metadata and data, use the following syntax to specify your
 #'         Lambda function.
+#'         
+#'         ` function=lambda_arn  `
 #' 
-#'         `function=lambda_arn `
-#' 
-#' -   The `GLUE` type has no parameters.
+#'   - The `GLUE` type has no parameters.
 #'
 #' @return
 #' An empty list.

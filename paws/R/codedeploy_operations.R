@@ -554,13 +554,13 @@ codedeploy_batch_get_deployment_instances <- function(deploymentId, instanceIds)
 #' The type of targets returned depends on the deployment's compute
 #' platform or deployment method:
 #' 
-#' -   **EC2/On-premises**: Information about EC2 instance targets.
+#'   - **EC2/On-premises**: Information about EC2 instance targets.
 #' 
-#' -   **AWS Lambda**: Information about Lambda functions targets.
+#'   - **AWS Lambda**: Information about Lambda functions targets.
 #' 
-#' -   **Amazon ECS**: Information about Amazon ECS service targets.
+#'   - **Amazon ECS**: Information about Amazon ECS service targets.
 #' 
-#' -   **CloudFormation**: Information about targets of blue/green
+#'   - **CloudFormation**: Information about targets of blue/green
 #'     deployments initiated by a CloudFormation stack update.
 #'
 #' @usage
@@ -571,20 +571,20 @@ codedeploy_batch_get_deployment_instances <- function(deploymentId, instanceIds)
 #' deployment determines the type of the targets and their formats. The
 #' maximum number of deployment target IDs you can specify is 25.
 #' 
-#' -   For deployments that use the EC2/On-premises compute platform, the
+#'   - For deployments that use the EC2/On-premises compute platform, the
 #'     target IDs are EC2 or on-premises instances IDs, and their target
 #'     type is `instanceTarget`.
 #' 
-#' -   For deployments that use the AWS Lambda compute platform, the target
+#'   - For deployments that use the AWS Lambda compute platform, the target
 #'     IDs are the names of Lambda functions, and their target type is
 #'     `instanceTarget`.
 #' 
-#' -   For deployments that use the Amazon ECS compute platform, the target
+#'   - For deployments that use the Amazon ECS compute platform, the target
 #'     IDs are pairs of Amazon ECS clusters and services specified using
 #'     the format `<clustername>:<servicename>`. Their target type is
 #'     `ecsTarget`.
 #' 
-#' -   For deployments that are deployed with AWS CloudFormation, the
+#'   - For deployments that are deployed with AWS CloudFormation, the
 #'     target IDs are CloudFormation stack IDs. Their target type is
 #'     `cloudFormationTarget`.
 #'
@@ -1219,14 +1219,14 @@ codedeploy_create_application <- function(applicationName, computePlatform = NUL
 #' 
 #' The `fileExistsBehavior` parameter takes any of the following values:
 #' 
-#' -   DISALLOW: The deployment fails. This is also the default behavior if
+#'   - DISALLOW: The deployment fails. This is also the default behavior if
 #'     no option is specified.
 #' 
-#' -   OVERWRITE: The version of the file from the application revision
+#'   - OVERWRITE: The version of the file from the application revision
 #'     currently being deployed replaces the version already on the
 #'     instance.
 #' 
-#' -   RETAIN: The version of the file already on the instance is kept and
+#'   - RETAIN: The version of the file already on the instance is kept and
 #'     used as part of the new deployment.
 #'
 #' @return
@@ -1337,10 +1337,10 @@ codedeploy_create_deployment <- function(applicationName, deploymentGroupName = 
 #' 
 #' The type parameter takes either of the following values:
 #' 
-#' -   HOST_COUNT: The value parameter represents the minimum number of
+#'   - HOST_COUNT: The value parameter represents the minimum number of
 #'     healthy instances as an absolute value.
 #' 
-#' -   FLEET_PERCENT: The value parameter represents the minimum number of
+#'   - FLEET_PERCENT: The value parameter represents the minimum number of
 #'     healthy instances as a percentage of the total number of instances
 #'     in the deployment. If you specify FLEET_PERCENT, at the start of
 #'     the deployment, AWS CodeDeploy converts the percentage to the
@@ -2887,22 +2887,22 @@ codedeploy_get_on_premises_instance <- function(instanceName) {
 #' or AWS account.
 #' @param sortBy The column name to use to sort the list results:
 #' 
-#' -   `registerTime`: Sort by the time the revisions were registered with
+#'   - `registerTime`: Sort by the time the revisions were registered with
 #'     AWS CodeDeploy.
 #' 
-#' -   `firstUsedTime`: Sort by the time the revisions were first used in a
+#'   - `firstUsedTime`: Sort by the time the revisions were first used in a
 #'     deployment.
 #' 
-#' -   `lastUsedTime`: Sort by the time the revisions were last used in a
+#'   - `lastUsedTime`: Sort by the time the revisions were last used in a
 #'     deployment.
 #' 
 #' If not specified or set to null, the results are returned in an
 #' arbitrary order.
 #' @param sortOrder The order in which to sort the list results:
 #' 
-#' -   `ascending`: ascending order.
+#'   - `ascending`: ascending order.
 #' 
-#' -   `descending`: descending order.
+#'   - `descending`: descending order.
 #' 
 #' If not specified, the results are sorted in ascending order.
 #' 
@@ -2915,13 +2915,13 @@ codedeploy_get_on_premises_instance <- function(instanceName) {
 #' @param deployed Whether to list revisions based on whether the revision is the target
 #' revision of a deployment group:
 #' 
-#' -   `include`: List revisions that are target revisions of a deployment
+#'   - `include`: List revisions that are target revisions of a deployment
 #'     group.
 #' 
-#' -   `exclude`: Do not list revisions that are target revisions of a
+#'   - `exclude`: Do not list revisions that are target revisions of a
 #'     deployment group.
 #' 
-#' -   `ignore`: List all revisions.
+#'   - `ignore`: List all revisions.
 #' @param nextToken An identifier returned from the previous
 #' [`list_application_revisions`][codedeploy_list_application_revisions]
 #' call. It can be used to return the next set of applications in the list.
@@ -3170,18 +3170,18 @@ codedeploy_list_deployment_groups <- function(applicationName, nextToken = NULL)
 #' list.
 #' @param instanceStatusFilter A subset of instances to list by status:
 #' 
-#' -   `Pending`: Include those instances with pending deployments.
+#'   - `Pending`: Include those instances with pending deployments.
 #' 
-#' -   `InProgress`: Include those instances where deployments are still in
+#'   - `InProgress`: Include those instances where deployments are still in
 #'     progress.
 #' 
-#' -   `Succeeded`: Include those instances with successful deployments.
+#'   - `Succeeded`: Include those instances with successful deployments.
 #' 
-#' -   `Failed`: Include those instances with failed deployments.
+#'   - `Failed`: Include those instances with failed deployments.
 #' 
-#' -   `Skipped`: Include those instances with skipped deployments.
+#'   - `Skipped`: Include those instances with skipped deployments.
 #' 
-#' -   `Unknown`: Include those instances with deployments in an unknown
+#'   - `Unknown`: Include those instances with deployments in an unknown
 #'     state.
 #' @param instanceTypeFilter The set of instances in a blue/green deployment, either those in the
 #' original environment ("BLUE") or those in the replacement environment
@@ -3247,11 +3247,11 @@ codedeploy_list_deployment_instances <- function(deploymentId, nextToken = NULL,
 #' can be used to return the next set of deployment targets in the list.
 #' @param targetFilters A key used to filter the returned targets. The two valid values are:
 #' 
-#' -   `TargetStatus` - A `TargetStatus` filter string can be `Failed`,
+#'   - `TargetStatus` - A `TargetStatus` filter string can be `Failed`,
 #'     `InProgress`, `Pending`, `Ready`, `Skipped`, `Succeeded`, or
 #'     `Unknown`.
 #' 
-#' -   `ServerInstanceLabel` - A `ServerInstanceLabel` filter string can be
+#'   - `ServerInstanceLabel` - A `ServerInstanceLabel` filter string can be
 #'     `Blue` or `Green`.
 #'
 #' @return
@@ -3324,18 +3324,18 @@ codedeploy_list_deployment_targets <- function(deploymentId = NULL, nextToken = 
 #' to the external resource.
 #' @param includeOnlyStatuses A subset of deployments to list by status:
 #' 
-#' -   `Created`: Include created deployments in the resulting list.
+#'   - `Created`: Include created deployments in the resulting list.
 #' 
-#' -   `Queued`: Include queued deployments in the resulting list.
+#'   - `Queued`: Include queued deployments in the resulting list.
 #' 
-#' -   `In Progress`: Include in-progress deployments in the resulting
+#'   - `In Progress`: Include in-progress deployments in the resulting
 #'     list.
 #' 
-#' -   `Succeeded`: Include successful deployments in the resulting list.
+#'   - `Succeeded`: Include successful deployments in the resulting list.
 #' 
-#' -   `Failed`: Include failed deployments in the resulting list.
+#'   - `Failed`: Include failed deployments in the resulting list.
 #' 
-#' -   `Stopped`: Include stopped deployments in the resulting list.
+#'   - `Stopped`: Include stopped deployments in the resulting list.
 #' @param createTimeRange A time range (start and end) for returning a subset of the list of
 #' deployments.
 #' @param nextToken An identifier returned from the previous list deployments call. It can
@@ -3458,10 +3458,10 @@ codedeploy_list_git_hub_account_token_names <- function(nextToken = NULL) {
 #'
 #' @param registrationStatus The registration status of the on-premises instances:
 #' 
-#' -   `Deregistered`: Include deregistered on-premises instances in the
+#'   - `Deregistered`: Include deregistered on-premises instances in the
 #'     resulting list.
 #' 
-#' -   `Registered`: Include registered on-premises instances in the
+#'   - `Registered`: Include registered on-premises instances in the
 #'     resulting list.
 #' @param tagFilters The on-premises instance tags that are used to restrict the on-premises
 #' instance names returned.

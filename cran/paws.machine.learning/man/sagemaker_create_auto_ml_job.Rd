@@ -23,9 +23,9 @@ candidates. Options include: BinaryClassification,
 MulticlassClassification, and Regression.}
 
 \item{AutoMLJobObjective}{Defines the objective of a an AutoML job. You provide a
-AutoMLJobObjective$MetricName and Autopilot infers whether to minimize
-or maximize it. If a metric is not specified, the most commonly used
-ObjectiveMetric for problem type is automaically selected.}
+<span>AutoMLJobObjective$MetricName</span> and Autopilot infers whether
+to minimize or maximize it. If a metric is not specified, the most
+commonly used ObjectiveMetric for problem type is automaically selected.}
 
 \item{AutoMLJobConfig}{Contains CompletionCriteria and SecurityConfig.}
 

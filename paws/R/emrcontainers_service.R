@@ -17,15 +17,15 @@ NULL
 #' *Amazon EMR containers* is the API name for Amazon EMR on EKS. The
 #' `emr-containers` prefix is used in the following scenarios:
 #' 
-#' -   It is the prefix in the CLI commands for Amazon EMR on EKS. For
+#'   - It is the prefix in the CLI commands for Amazon EMR on EKS. For
 #'     example, `aws emr-containers start-job-run`.
 #' 
-#' -   It is the prefix before IAM policy actions for Amazon EMR on EKS.
+#'   - It is the prefix before IAM policy actions for Amazon EMR on EKS.
 #'     For example, `"Action": [ "emr-containers:StartJobRun"]`. For more
 #'     information, see [Policy actions for Amazon EMR on
 #'     EKS](https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-actions).
 #' 
-#' -   It is the prefix used in Amazon EMR on EKS service endpoints. For
+#'   - It is the prefix used in Amazon EMR on EKS service endpoints. For
 #'     example, `emr-containers.us-east-2.amazonaws.com`. For more
 #'     information, see [Amazon EMR on EKS Service
 #'     Endpoints](https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/service-quotas.html#service-endpoints).
@@ -78,6 +78,12 @@ NULL
 #'  \link[=emrcontainers_tag_resource]{tag_resource} \tab Assigns tags to resources\cr
 #'  \link[=emrcontainers_untag_resource]{untag_resource} \tab Removes tags from resources
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname emrcontainers
 #' @export

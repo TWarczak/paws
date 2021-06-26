@@ -122,8 +122,7 @@ those reservations matching the specified product description.}
 \item{OfferingType}{The offering type filter value. Use this parameter to show only the
 available offerings matching the specified offering type.
 
-Valid values:
-\code{"Light Utilization"|"Medium Utilization"|"Heavy Utilization"|"All Upfront"|"Partial Upfront"| "No Upfront"}}
+Valid values: \code{"Light Utilization"|"Medium Utilization"|"Heavy Utilization"|"All Upfront"|"Partial Upfront"| "No Upfront"}}
 
 \item{MaxRecords}{The maximum number of records to include in the response. If more
 records exist than the specified \code{MaxRecords} value, a marker is

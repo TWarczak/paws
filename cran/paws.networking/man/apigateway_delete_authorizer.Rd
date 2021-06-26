@@ -7,15 +7,16 @@
 apigateway_delete_authorizer(restApiId, authorizerId)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
-\item{authorizerId}{[required] [Required] The identifier of the Authorizer resource.}
+\item{authorizerId}{[required] [Required] The identifier of the <span>Authorizer</span> resource.}
 }
 \value{
 An empty list.
 }
 \description{
-Deletes an existing Authorizer resource.<div class="seeAlso">
+Deletes an existing <span>Authorizer</span> resource.<div class="seeAlso">
 
 
 \href{https://docs.aws.amazon.com/cli/latest/reference/apigateway/delete-authorizer.html}{AWS CLI}</div>

@@ -34,22 +34,22 @@ NULL
 #' 
 #' AppConfig supports multiple use cases. Here are some examples.
 #' 
-#' -   **Application tuning**: Use AppConfig to carefully introduce changes
+#'   - **Application tuning**: Use AppConfig to carefully introduce changes
 #'     to your application that can only be tested with production traffic.
 #' 
-#' -   **Feature toggle**: Use AppConfig to turn on new features that
+#'   - **Feature toggle**: Use AppConfig to turn on new features that
 #'     require a timely deployment, such as a product launch or
 #'     announcement.
 #' 
-#' -   **Allow list**: Use AppConfig to allow premium subscribers to access
+#'   - **Allow list**: Use AppConfig to allow premium subscribers to access
 #'     paid content.
 #' 
-#' -   **Operational issues**: Use AppConfig to reduce stress on your
+#'   - **Operational issues**: Use AppConfig to reduce stress on your
 #'     application when a dependency or other external factor impacts the
 #'     system.
 #' 
 #' This reference is intended to be used with the [AWS AppConfig User
-#' Guide](https://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html).
+#' Guide](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig.html).
 #'
 #' @param
 #' config
@@ -117,6 +117,12 @@ NULL
 #'  \link[=appconfig_update_environment]{update_environment} \tab Updates an environment\cr
 #'  \link[=appconfig_validate_configuration]{validate_configuration} \tab Uses the validators in a configuration profile to validate a configuration
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname appconfig
 #' @export

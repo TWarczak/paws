@@ -19,11 +19,11 @@ NULL
 #' 
 #' **Constraints:**
 #' 
-#' -   A name must contain from 1 to 20 alphanumeric characters or hyphens.
+#'   - A name must contain from 1 to 20 alphanumeric characters or hyphens.
 #' 
-#' -   The first character must be a letter.
+#'   - The first character must be a letter.
 #' 
-#' -   A name cannot end with a hyphen or contain two consecutive hyphens.
+#'   - A name cannot end with a hyphen or contain two consecutive hyphens.
 #' @param NodeType &#91;required&#93; The compute and memory capacity of the nodes in the cluster.
 #' @param Description A description of the cluster.
 #' @param ReplicationFactor &#91;required&#93; The number of nodes in the DAX cluster. A replication factor of 1 will
@@ -54,19 +54,19 @@ NULL
 #' ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window
 #' is a 60 minute period. Valid values for `ddd` are:
 #' 
-#' -   `sun`
+#'   - `sun`
 #' 
-#' -   `mon`
+#'   - `mon`
 #' 
-#' -   `tue`
+#'   - `tue`
 #' 
-#' -   `wed`
+#'   - `wed`
 #' 
-#' -   `thu`
+#'   - `thu`
 #' 
-#' -   `fri`
+#'   - `fri`
 #' 
-#' -   `sat`
+#'   - `sat`
 #' 
 #' Example: `sun:05:00-sun:09:00`
 #' 

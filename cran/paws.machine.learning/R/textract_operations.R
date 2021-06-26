@@ -10,17 +10,17 @@ NULL
 #' 
 #' The types of information returned are as follows:
 #' 
-#' -   Form data (key-value pairs). The related information is returned in
-#'     two Block objects, each of type `KEY_VALUE_SET`: a KEY `Block`
-#'     object and a VALUE `Block` object. For example, *Name: Ana Silva
-#'     Carolina* contains a key and value. *Name:* is the key. *Ana Silva
-#'     Carolina* is the value.
+#'   - Form data (key-value pairs). The related information is returned in
+#'     two <span>Block</span> objects, each of type `KEY_VALUE_SET`: a KEY
+#'     `Block` object and a VALUE `Block` object. For example, *Name: Ana
+#'     Silva Carolina* contains a key and value. *Name:* is the key. *Ana
+#'     Silva Carolina* is the value.
 #' 
-#' -   Table and table cell data. A TABLE `Block` object contains
+#'   - Table and table cell data. A TABLE `Block` object contains
 #'     information about a detected table. A CELL `Block` object is
 #'     returned for each cell in a table.
 #' 
-#' -   Lines and words of text. A LINE `Block` object contains one or more
+#'   - Lines and words of text. A LINE `Block` object contains one or more
 #'     WORD `Block` objects. All lines and words that are detected in the
 #'     document are returned (including text that doesn't have a
 #'     relationship with the value of `FeatureTypes`).
@@ -171,7 +171,7 @@ textract_analyze_document <- function(Document, FeatureTypes, HumanLoopConfig = 
 #' text and the words that make up a line of text. The input document must
 #' be an image in JPEG or PNG format.
 #' [`detect_document_text`][textract_detect_document_text] returns the
-#' detected text in an array of Block objects.
+#' detected text in an array of <span>Block</span> objects.
 #' 
 #' Each document page has as an associated `Block` of type PAGE. Each PAGE
 #' `Block` object is the parent of LINE `Block` objects that represent the
@@ -302,19 +302,20 @@ textract_detect_document_text <- function(Document) {
 #' [`start_document_analysis`][textract_start_document_analysis].
 #' 
 #' [`get_document_analysis`][textract_get_document_analysis] returns an
-#' array of Block objects. The following types of information are returned:
+#' array of <span>Block</span> objects. The following types of information
+#' are returned:
 #' 
-#' -   Form data (key-value pairs). The related information is returned in
-#'     two Block objects, each of type `KEY_VALUE_SET`: a KEY `Block`
-#'     object and a VALUE `Block` object. For example, *Name: Ana Silva
-#'     Carolina* contains a key and value. *Name:* is the key. *Ana Silva
-#'     Carolina* is the value.
+#'   - Form data (key-value pairs). The related information is returned in
+#'     two <span>Block</span> objects, each of type `KEY_VALUE_SET`: a KEY
+#'     `Block` object and a VALUE `Block` object. For example, *Name: Ana
+#'     Silva Carolina* contains a key and value. *Name:* is the key. *Ana
+#'     Silva Carolina* is the value.
 #' 
-#' -   Table and table cell data. A TABLE `Block` object contains
+#'   - Table and table cell data. A TABLE `Block` object contains
 #'     information about a detected table. A CELL `Block` object is
 #'     returned for each cell in a table.
 #' 
-#' -   Lines and words of text. A LINE `Block` object contains one or more
+#'   - Lines and words of text. A LINE `Block` object contains one or more
 #'     WORD `Block` objects. All lines and words that are detected in the
 #'     document are returned (including text that doesn't have a
 #'     relationship with the value of the
@@ -467,7 +468,7 @@ textract_get_document_analysis <- function(JobId, MaxResults = NULL, NextToken =
 #' [`start_document_text_detection`][textract_start_document_text_detection].
 #' 
 #' [`get_document_text_detection`][textract_get_document_text_detection]
-#' returns an array of Block objects.
+#' returns an array of <span>Block</span> objects.
 #' 
 #' Each document page has as an associated `Block` of type PAGE. Each PAGE
 #' `Block` object is the parent of LINE `Block` objects that represent the
@@ -606,8 +607,9 @@ textract_get_document_text_detection <- function(JobId, MaxResults = NULL, NextT
 #' 
 #' [`start_document_analysis`][textract_start_document_analysis] can
 #' analyze text in documents that are in JPEG, PNG, and PDF format. The
-#' documents are stored in an Amazon S3 bucket. Use DocumentLocation to
-#' specify the bucket name and file name of the document.
+#' documents are stored in an Amazon S3 bucket. Use
+#' <span>DocumentLocation</span> to specify the bucket name and file name
+#' of the document.
 #' 
 #' [`start_document_analysis`][textract_start_document_analysis] returns a
 #' job identifier (`JobId`) that you use to get the results of the
@@ -719,8 +721,9 @@ textract_start_document_analysis <- function(DocumentLocation, FeatureTypes, Cli
 #' 
 #' [`start_document_text_detection`][textract_start_document_text_detection]
 #' can analyze text in documents that are in JPEG, PNG, and PDF format. The
-#' documents are stored in an Amazon S3 bucket. Use DocumentLocation to
-#' specify the bucket name and file name of the document.
+#' documents are stored in an Amazon S3 bucket. Use
+#' <span>DocumentLocation</span> to specify the bucket name and file name
+#' of the document.
 #' 
 #' `StartTextDetection` returns a job identifier (`JobId`) that you use to
 #' get the results of the operation. When text detection is finished,

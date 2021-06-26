@@ -2,13 +2,13 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_get_rate_based_rule}
 \alias{wafregional_get_rate_based_rule}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 wafregional_get_rate_based_rule(RuleId)
 }
 \arguments{
-\item{RuleId}{[required] The \code{RuleId} of the RateBasedRule that you want to get. \code{RuleId} is
-returned by
+\item{RuleId}{[required] The \code{RuleId} of the <span>RateBasedRule</span> that you want to get.
+\code{RuleId} is returned by
 \code{\link[=wafregional_create_rate_based_rule]{create_rate_based_rule}} and by
 \code{\link[=wafregional_list_rate_based_rules]{list_rate_based_rules}}.}
 }
@@ -41,9 +41,9 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Returns the RateBasedRule that is specified by the \code{RuleId} that you
-included in the \code{\link[=wafregional_get_rate_based_rule]{get_rate_based_rule}}
-request.
+Returns the <span>RateBasedRule</span> that is specified by the \code{RuleId}
+that you included in the
+\code{\link[=wafregional_get_rate_based_rule]{get_rate_based_rule}} request.
 }
 \section{Request syntax}{
 \preformatted{svc$get_rate_based_rule(

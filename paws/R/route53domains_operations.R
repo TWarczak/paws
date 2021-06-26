@@ -15,8 +15,8 @@ NULL
 #' [`get_operation_detail`][route53domains_get_operation_detail] to
 #' determine whether the operation succeeded.
 #' [`get_operation_detail`][route53domains_get_operation_detail] provides
-#' additional information, for example,
-#' `Domain Transfer from Aws Account 111122223333 has been cancelled`.
+#' additional information, for example, `Domain Transfer from Aws
+#' Account 111122223333 has been cancelled`.
 #'
 #' @usage
 #' route53domains_accept_domain_transfer_from_another_aws_account(
@@ -82,8 +82,8 @@ route53domains_accept_domain_transfer_from_another_aws_account <- function(Domai
 #' [`get_operation_detail`][route53domains_get_operation_detail] to
 #' determine whether the operation succeeded.
 #' [`get_operation_detail`][route53domains_get_operation_detail] provides
-#' additional information, for example,
-#' `Domain Transfer from Aws Account 111122223333 has been cancelled`.
+#' additional information, for example, `Domain Transfer from Aws
+#' Account 111122223333 has been cancelled`.
 #'
 #' @usage
 #' route53domains_cancel_domain_transfer_to_another_aws_account(DomainName)
@@ -139,27 +139,27 @@ route53domains_cancel_domain_transfer_to_another_aws_account <- function(DomainN
 #' @param DomainName &#91;required&#93; The name of the domain that you want to get availability for. The
 #' top-level domain (TLD), such as .com, must be a TLD that Route 53
 #' supports. For a list of supported TLDs, see [Domains that You Can
-#' Register with Amazon Route
-#' 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html)
+#' Register with Amazon
+#' Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html)
 #' in the *Amazon Route 53 Developer Guide*.
 #' 
 #' The domain name can contain only the following characters:
 #' 
-#' -   Letters a through z. Domain names are not case sensitive.
+#'   - Letters a through z. Domain names are not case sensitive.
 #' 
-#' -   Numbers 0 through 9.
+#'   - Numbers 0 through 9.
 #' 
-#' -   Hyphen (-). You can't specify a hyphen at the beginning or end of a
+#'   - Hyphen (-). You can't specify a hyphen at the beginning or end of a
 #'     label.
 #' 
-#' -   Period (.) to separate the labels in the name, such as the `.` in
+#'   - Period (.) to separate the labels in the name, such as the `.` in
 #'     `example.com`.
 #' 
 #' Internationalized domain names are not supported for some top-level
 #' domains. To determine whether the TLD that you want to use supports
 #' internationalized domain names, see [Domains that You Can Register with
-#' Amazon Route
-#' 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html).
+#' Amazon
+#' Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html).
 #' For more information, see [Formatting Internationalized Domain
 #' Names](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DomainNameFormat.html#domain-name-format-idns).
 #' @param IdnLangCode Reserved for future use.
@@ -211,20 +211,20 @@ route53domains_check_domain_availability <- function(DomainName, IdnLangCode = N
 #' @param DomainName &#91;required&#93; The name of the domain that you want to transfer to Route 53. The
 #' top-level domain (TLD), such as .com, must be a TLD that Route 53
 #' supports. For a list of supported TLDs, see [Domains that You Can
-#' Register with Amazon Route
-#' 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html)
+#' Register with Amazon
+#' Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html)
 #' in the *Amazon Route 53 Developer Guide*.
 #' 
 #' The domain name can contain only the following characters:
 #' 
-#' -   Letters a through z. Domain names are not case sensitive.
+#'   - Letters a through z. Domain names are not case sensitive.
 #' 
-#' -   Numbers 0 through 9.
+#'   - Numbers 0 through 9.
 #' 
-#' -   Hyphen (-). You can't specify a hyphen at the beginning or end of a
+#'   - Hyphen (-). You can't specify a hyphen at the beginning or end of a
 #'     label.
 #' 
-#' -   Period (.) to separate the labels in the name, such as the `.` in
+#'   - Period (.) to separate the labels in the name, such as the `.` in
 #'     `example.com`.
 #' @param AuthCode If the registrar for the top-level domain (TLD) requires an
 #' authorization code to transfer the domain, the code that you got from
@@ -419,8 +419,8 @@ route53domains_disable_domain_transfer_lock <- function(DomainName) {
 #' 
 #' The period during which you can renew a domain name varies by TLD. For a
 #' list of TLDs and their renewal policies, see [Domains That You Can
-#' Register with Amazon Route
-#' 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html)
+#' Register with Amazon
+#' Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html)
 #' in the *Amazon Route 53 Developer Guide*. Route 53 requires that you
 #' renew before the end of the renewal period so we can complete processing
 #' before the deadline.
@@ -724,27 +724,27 @@ route53domains_get_domain_detail <- function(DomainName) {
 #' @param DomainName &#91;required&#93; A domain name that you want to use as the basis for a list of possible
 #' domain names. The top-level domain (TLD), such as .com, must be a TLD
 #' that Route 53 supports. For a list of supported TLDs, see [Domains that
-#' You Can Register with Amazon Route
-#' 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html)
+#' You Can Register with Amazon
+#' Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html)
 #' in the *Amazon Route 53 Developer Guide*.
 #' 
 #' The domain name can contain only the following characters:
 #' 
-#' -   Letters a through z. Domain names are not case sensitive.
+#'   - Letters a through z. Domain names are not case sensitive.
 #' 
-#' -   Numbers 0 through 9.
+#'   - Numbers 0 through 9.
 #' 
-#' -   Hyphen (-). You can't specify a hyphen at the beginning or end of a
+#'   - Hyphen (-). You can't specify a hyphen at the beginning or end of a
 #'     label.
 #' 
-#' -   Period (.) to separate the labels in the name, such as the `.` in
+#'   - Period (.) to separate the labels in the name, such as the `.` in
 #'     `example.com`.
 #' 
 #' Internationalized domain names are not supported for some top-level
 #' domains. To determine whether the TLD that you want to use supports
 #' internationalized domain names, see [Domains that You Can Register with
-#' Amazon Route
-#' 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html).
+#' Amazon
+#' Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html).
 #' @param SuggestionCount &#91;required&#93; The number of suggested domain names that you want Route 53 to return.
 #' Specify a value between 1 and 50.
 #' @param OnlyAvailable &#91;required&#93; If `OnlyAvailable` is `true`, Route 53 returns only domain names that
@@ -1060,28 +1060,28 @@ route53domains_list_tags_for_domain <- function(DomainName) {
 #' 
 #' When you register a domain, Amazon Route 53 does the following:
 #' 
-#' -   Creates a Route 53 hosted zone that has the same name as the domain.
+#'   - Creates a Route 53 hosted zone that has the same name as the domain.
 #'     Route 53 assigns four name servers to your hosted zone and
 #'     automatically updates your domain registration with the names of
 #'     these name servers.
 #' 
-#' -   Enables autorenew, so your domain registration will renew
+#'   - Enables autorenew, so your domain registration will renew
 #'     automatically each year. We'll notify you in advance of the renewal
 #'     date so you can choose whether to renew the registration.
 #' 
-#' -   Optionally enables privacy protection, so WHOIS queries return
+#'   - Optionally enables privacy protection, so WHOIS queries return
 #'     contact information either for Amazon Registrar (for .com, .net, and
 #'     .org domains) or for our registrar associate, Gandi (for all other
 #'     TLDs). If you don't enable privacy protection, WHOIS queries return
 #'     the information that you entered for the registrant, admin, and tech
 #'     contacts.
 #' 
-#' -   If registration is successful, returns an operation ID that you can
+#'   - If registration is successful, returns an operation ID that you can
 #'     use to track the progress and completion of the action. If the
 #'     request is not completed successfully, the domain registrant is
 #'     notified by email.
 #' 
-#' -   Charges your AWS account an amount based on the top-level domain.
+#'   - Charges your AWS account an amount based on the top-level domain.
 #'     For more information, see [Amazon Route 53
 #'     Pricing](https://aws.amazon.com/route53/pricing/).
 #'
@@ -1093,35 +1093,35 @@ route53domains_list_tags_for_domain <- function(DomainName) {
 #'
 #' @param DomainName &#91;required&#93; The domain name that you want to register. The top-level domain (TLD),
 #' such as .com, must be a TLD that Route 53 supports. For a list of
-#' supported TLDs, see [Domains that You Can Register with Amazon Route
-#' 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html)
+#' supported TLDs, see [Domains that You Can Register with Amazon
+#' Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html)
 #' in the *Amazon Route 53 Developer Guide*.
 #' 
 #' The domain name can contain only the following characters:
 #' 
-#' -   Letters a through z. Domain names are not case sensitive.
+#'   - Letters a through z. Domain names are not case sensitive.
 #' 
-#' -   Numbers 0 through 9.
+#'   - Numbers 0 through 9.
 #' 
-#' -   Hyphen (-). You can't specify a hyphen at the beginning or end of a
+#'   - Hyphen (-). You can't specify a hyphen at the beginning or end of a
 #'     label.
 #' 
-#' -   Period (.) to separate the labels in the name, such as the `.` in
+#'   - Period (.) to separate the labels in the name, such as the `.` in
 #'     `example.com`.
 #' 
 #' Internationalized domain names are not supported for some top-level
 #' domains. To determine whether the TLD that you want to use supports
 #' internationalized domain names, see [Domains that You Can Register with
-#' Amazon Route
-#' 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html).
+#' Amazon
+#' Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html).
 #' For more information, see [Formatting Internationalized Domain
 #' Names](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DomainNameFormat.html#domain-name-format-idns).
 #' @param IdnLangCode Reserved for future use.
 #' @param DurationInYears &#91;required&#93; The number of years that you want to register the domain for. Domains
 #' are registered for a minimum of one year. The maximum period depends on
 #' the top-level domain. For the range of valid values for your domain, see
-#' [Domains that You Can Register with Amazon Route
-#' 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html)
+#' [Domains that You Can Register with Amazon
+#' Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html)
 #' in the *Amazon Route 53 Developer Guide*.
 #' 
 #' Default: 1
@@ -1280,8 +1280,8 @@ route53domains_register_domain <- function(DomainName, IdnLangCode = NULL, Durat
 #' [`get_operation_detail`][route53domains_get_operation_detail] to
 #' determine whether the operation succeeded.
 #' [`get_operation_detail`][route53domains_get_operation_detail] provides
-#' additional information, for example,
-#' `Domain Transfer from Aws Account 111122223333 has been cancelled`.
+#' additional information, for example, `Domain Transfer from Aws
+#' Account 111122223333 has been cancelled`.
 #'
 #' @usage
 #' route53domains_reject_domain_transfer_from_another_aws_account(
@@ -1349,8 +1349,7 @@ route53domains_reject_domain_transfer_from_another_aws_account <- function(Domai
 #' @param DurationInYears The number of years that you want to renew the domain for. The maximum
 #' number of years depends on the top-level domain. For the range of valid
 #' values for your domain, see [Domains that You Can Register with Amazon
-#' Route
-#' 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html)
+#' Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html)
 #' in the *Amazon Route 53 Developer Guide*.
 #' 
 #' Default: 1
@@ -1505,18 +1504,17 @@ route53domains_retrieve_domain_auth_code <- function(DomainName) {
 #' For more information about transferring domains, see the following
 #' topics:
 #' 
-#' -   For transfer requirements, a detailed procedure, and information
+#'   - For transfer requirements, a detailed procedure, and information
 #'     about viewing the status of a domain that you're transferring to
 #'     Route 53, see [Transferring Registration for a Domain to Amazon
-#'     Route
-#'     53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-to-route-53.html)
+#'     Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-to-route-53.html)
 #'     in the *Amazon Route 53 Developer Guide*.
 #' 
-#' -   For information about how to transfer a domain from one AWS account
+#'   - For information about how to transfer a domain from one AWS account
 #'     to another, see
 #'     [`transfer_domain_to_another_aws_account`][route53domains_transfer_domain_to_another_aws_account].
 #' 
-#' -   For information about how to transfer a domain to another domain
+#'   - For information about how to transfer a domain to another domain
 #'     registrar, see [Transferring a Domain from Amazon Route 53 to
 #'     Another
 #'     Registrar](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-from-route-53.html)
@@ -1549,20 +1547,20 @@ route53domains_retrieve_domain_auth_code <- function(DomainName) {
 #' @param DomainName &#91;required&#93; The name of the domain that you want to transfer to Route 53. The
 #' top-level domain (TLD), such as .com, must be a TLD that Route 53
 #' supports. For a list of supported TLDs, see [Domains that You Can
-#' Register with Amazon Route
-#' 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html)
+#' Register with Amazon
+#' Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html)
 #' in the *Amazon Route 53 Developer Guide*.
 #' 
 #' The domain name can contain only the following characters:
 #' 
-#' -   Letters a through z. Domain names are not case sensitive.
+#'   - Letters a through z. Domain names are not case sensitive.
 #' 
-#' -   Numbers 0 through 9.
+#'   - Numbers 0 through 9.
 #' 
-#' -   Hyphen (-). You can't specify a hyphen at the beginning or end of a
+#'   - Hyphen (-). You can't specify a hyphen at the beginning or end of a
 #'     label.
 #' 
-#' -   Period (.) to separate the labels in the name, such as the `.` in
+#'   - Period (.) to separate the labels in the name, such as the `.` in
 #'     `example.com`.
 #' @param IdnLangCode Reserved for future use.
 #' @param DurationInYears &#91;required&#93; The number of years that you want to register the domain for. Domains
@@ -1724,15 +1722,15 @@ route53domains_transfer_domain <- function(DomainName, IdnLangCode = NULL, Durat
 #' Transfers a domain from the current AWS account to another AWS account.
 #' Note the following:
 #' 
-#' -   The AWS account that you're transferring the domain to must accept
+#'   - The AWS account that you're transferring the domain to must accept
 #'     the transfer. If the other account doesn't accept the transfer
 #'     within 3 days, we cancel the transfer. See
 #'     [`accept_domain_transfer_from_another_aws_account`][route53domains_accept_domain_transfer_from_another_aws_account].
 #' 
-#' -   You can cancel the transfer before the other account accepts it. See
+#'   - You can cancel the transfer before the other account accepts it. See
 #'     [`cancel_domain_transfer_to_another_aws_account`][route53domains_cancel_domain_transfer_to_another_aws_account].
 #' 
-#' -   The other account can reject the transfer. See
+#'   - The other account can reject the transfer. See
 #'     [`reject_domain_transfer_from_another_aws_account`][route53domains_reject_domain_transfer_from_another_aws_account].
 #' 
 #' When you transfer a domain from one AWS account to another, Route 53
@@ -1748,8 +1746,8 @@ route53domains_transfer_domain <- function(DomainName, IdnLangCode = NULL, Durat
 #' [`get_operation_detail`][route53domains_get_operation_detail] to
 #' determine whether the operation succeeded.
 #' [`get_operation_detail`][route53domains_get_operation_detail] provides
-#' additional information, for example,
-#' `Domain Transfer from Aws Account 111122223333 has been cancelled`.
+#' additional information, for example, `Domain Transfer from Aws
+#' Account 111122223333 has been cancelled`.
 #'
 #' @usage
 #' route53domains_transfer_domain_to_another_aws_account(DomainName,

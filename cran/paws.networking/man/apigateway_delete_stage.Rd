@@ -7,15 +7,16 @@
 apigateway_delete_stage(restApiId, stageName)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
-\item{stageName}{[required] [Required] The name of the Stage resource to delete.}
+\item{stageName}{[required] [Required] The name of the <span>Stage</span> resource to delete.}
 }
 \value{
 An empty list.
 }
 \description{
-Deletes a Stage resource.
+Deletes a <span>Stage</span> resource.
 }
 \section{Request syntax}{
 \preformatted{svc$delete_stage(

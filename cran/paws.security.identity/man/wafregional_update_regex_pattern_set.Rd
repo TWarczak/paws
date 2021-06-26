@@ -2,19 +2,19 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_update_regex_pattern_set}
 \alias{wafregional_update_regex_pattern_set}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 wafregional_update_regex_pattern_set(RegexPatternSetId, Updates,
   ChangeToken)
 }
 \arguments{
-\item{RegexPatternSetId}{[required] The \code{RegexPatternSetId} of the RegexPatternSet that you want to update.
-\code{RegexPatternSetId} is returned by
+\item{RegexPatternSetId}{[required] The \code{RegexPatternSetId} of the <span>RegexPatternSet</span> that you
+want to update. \code{RegexPatternSetId} is returned by
 \code{\link[=wafregional_create_regex_pattern_set]{create_regex_pattern_set}} and
 by \code{\link[=wafregional_list_regex_pattern_sets]{list_regex_pattern_sets}}.}
 
 \item{Updates}{[required] An array of \code{RegexPatternSetUpdate} objects that you want to insert into
-or delete from a RegexPatternSet.}
+or delete from a <span>RegexPatternSet</span>.}
 
 \item{ChangeToken}{[required] The value returned by the most recent call to
 \code{\link[=wafregional_get_change_token]{get_change_token}}.}
@@ -35,12 +35,13 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Inserts or deletes \code{RegexPatternString} objects in a RegexPatternSet.
-For each \code{RegexPatternString} object, you specify the following values:
+Inserts or deletes \code{RegexPatternString} objects in a
+<span>RegexPatternSet</span>. For each \code{RegexPatternString} object, you
+specify the following values:
 \itemize{
 \item Whether to insert or delete the \code{RegexPatternString}.
 \item The regular expression pattern that you want to insert or delete.
-For more information, see RegexPatternSet.
+For more information, see <span>RegexPatternSet</span>.
 }
 
 For example, you can create a \code{RegexPatternString} such as

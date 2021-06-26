@@ -80,7 +80,7 @@ comprehend_batch_detect_dominant_language <- function(TextList) {
 #' @description
 #' Inspects the text of a batch of documents for named entities and returns
 #' information about them. For more information about named entities, see
-#' how-entities
+#' <span>how-entities</span>
 #'
 #' @usage
 #' comprehend_batch_detect_entities(TextList, LanguageCode)
@@ -301,7 +301,7 @@ comprehend_batch_detect_sentiment <- function(TextList, LanguageCode) {
 #' @description
 #' Inspects the text of a batch of documents for the syntax and part of
 #' speech of the words in the document and returns information about them.
-#' For more information, see how-syntax.
+#' For more information, see <span>how-syntax</span>.
 #'
 #' @usage
 #' comprehend_batch_detect_syntax(TextList, LanguageCode)
@@ -446,7 +446,7 @@ comprehend_classify_document <- function(Text, EndpointArn) {
 #' documents that labeled with the categories that you want to use. After
 #' the classifier is trained you can use it to categorize a set of labeled
 #' documents into the categories. For more information, see
-#' how-document-classification.
+#' <span>how-document-classification</span>.
 #'
 #' @usage
 #' comprehend_create_document_classifier(DocumentClassifierName,
@@ -474,9 +474,9 @@ comprehend_classify_document <- function(Text, EndpointArn) {
 #' instance(s) that process the analysis job. The VolumeKmsKeyId can be
 #' either of the following formats:
 #' 
-#' -   KMS Key ID: `"1234abcd-12ab-34cd-56ef-1234567890ab"`
+#'   - KMS Key ID: `"1234abcd-12ab-34cd-56ef-1234567890ab"`
 #' 
-#' -   Amazon Resource Name (ARN) of a KMS Key:
+#'   - Amazon Resource Name (ARN) of a KMS Key:
 #'     `"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"`
 #' @param VpcConfig Configuration parameters for an optional private Virtual Private Cloud
 #' (VPC) containing the resources you are using for your custom classifier.
@@ -666,9 +666,9 @@ comprehend_create_endpoint <- function(EndpointName, ModelArn, DesiredInferenceU
 #' instance(s) that process the analysis job. The VolumeKmsKeyId can be
 #' either of the following formats:
 #' 
-#' -   KMS Key ID: `"1234abcd-12ab-34cd-56ef-1234567890ab"`
+#'   - KMS Key ID: `"1234abcd-12ab-34cd-56ef-1234567890ab"`
 #' 
-#' -   Amazon Resource Name (ARN) of a KMS Key:
+#'   - Amazon Resource Name (ARN) of a KMS Key:
 #'     `"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"`
 #' @param VpcConfig Configuration parameters for an optional private Virtual Private Cloud
 #' (VPC) containing the resources you are using for your custom entity
@@ -1840,7 +1840,8 @@ comprehend_detect_dominant_language <- function(Text) {
 #'
 #' @description
 #' Inspects text for named entities, and returns information about them.
-#' For more information, about named entities, see how-entities.
+#' For more information, about named entities, see
+#' <span>how-entities</span>.
 #'
 #' @usage
 #' comprehend_detect_entities(Text, LanguageCode, EndpointArn)
@@ -2084,7 +2085,7 @@ comprehend_detect_sentiment <- function(Text, LanguageCode) {
 #'
 #' @description
 #' Inspects text for syntax and the part of speech of words in the
-#' document. For more information, how-syntax.
+#' document. For more information, <span>how-syntax</span>.
 #'
 #' @usage
 #' comprehend_detect_syntax(Text, LanguageCode)
@@ -3314,9 +3315,9 @@ comprehend_list_topics_detection_jobs <- function(Filter = NULL, NextToken = NUL
 #' instance(s) that process the analysis job. The VolumeKmsKeyId can be
 #' either of the following formats:
 #' 
-#' -   KMS Key ID: `"1234abcd-12ab-34cd-56ef-1234567890ab"`
+#'   - KMS Key ID: `"1234abcd-12ab-34cd-56ef-1234567890ab"`
 #' 
-#' -   Amazon Resource Name (ARN) of a KMS Key:
+#'   - Amazon Resource Name (ARN) of a KMS Key:
 #'     `"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"`
 #' @param VpcConfig Configuration parameters for an optional private Virtual Private Cloud
 #' (VPC) containing the resources you are using for your document
@@ -3405,9 +3406,9 @@ comprehend_start_document_classification_job <- function(JobName = NULL, Documen
 #' instance(s) that process the analysis job. The VolumeKmsKeyId can be
 #' either of the following formats:
 #' 
-#' -   KMS Key ID: `"1234abcd-12ab-34cd-56ef-1234567890ab"`
+#'   - KMS Key ID: `"1234abcd-12ab-34cd-56ef-1234567890ab"`
 #' 
-#' -   Amazon Resource Name (ARN) of a KMS Key:
+#'   - Amazon Resource Name (ARN) of a KMS Key:
 #'     `"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"`
 #' @param VpcConfig Configuration parameters for an optional private Virtual Private Cloud
 #' (VPC) containing the resources you are using for your dominant language
@@ -3509,9 +3510,9 @@ comprehend_start_dominant_language_detection_job <- function(InputDataConfig, Ou
 #' instance(s) that process the analysis job. The VolumeKmsKeyId can be
 #' either of the following formats:
 #' 
-#' -   KMS Key ID: `"1234abcd-12ab-34cd-56ef-1234567890ab"`
+#'   - KMS Key ID: `"1234abcd-12ab-34cd-56ef-1234567890ab"`
 #' 
-#' -   Amazon Resource Name (ARN) of a KMS Key:
+#'   - Amazon Resource Name (ARN) of a KMS Key:
 #'     `"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"`
 #' @param VpcConfig Configuration parameters for an optional private Virtual Private Cloud
 #' (VPC) containing the resources you are using for your entity detection
@@ -3675,9 +3676,9 @@ comprehend_start_events_detection_job <- function(InputDataConfig, OutputDataCon
 #' instance(s) that process the analysis job. The VolumeKmsKeyId can be
 #' either of the following formats:
 #' 
-#' -   KMS Key ID: `"1234abcd-12ab-34cd-56ef-1234567890ab"`
+#'   - KMS Key ID: `"1234abcd-12ab-34cd-56ef-1234567890ab"`
 #' 
-#' -   Amazon Resource Name (ARN) of a KMS Key:
+#'   - Amazon Resource Name (ARN) of a KMS Key:
 #'     `"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"`
 #' @param VpcConfig Configuration parameters for an optional private Virtual Private Cloud
 #' (VPC) containing the resources you are using for your key phrases
@@ -3853,9 +3854,9 @@ comprehend_start_pii_entities_detection_job <- function(InputDataConfig, OutputD
 #' instance(s) that process the analysis job. The VolumeKmsKeyId can be
 #' either of the following formats:
 #' 
-#' -   KMS Key ID: `"1234abcd-12ab-34cd-56ef-1234567890ab"`
+#'   - KMS Key ID: `"1234abcd-12ab-34cd-56ef-1234567890ab"`
 #' 
-#' -   Amazon Resource Name (ARN) of a KMS Key:
+#'   - Amazon Resource Name (ARN) of a KMS Key:
 #'     `"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"`
 #' @param VpcConfig Configuration parameters for an optional private Virtual Private Cloud
 #' (VPC) containing the resources you are using for your sentiment
@@ -3947,9 +3948,9 @@ comprehend_start_sentiment_detection_job <- function(InputDataConfig, OutputData
 #' instance(s) that process the analysis job. The VolumeKmsKeyId can be
 #' either of the following formats:
 #' 
-#' -   KMS Key ID: `"1234abcd-12ab-34cd-56ef-1234567890ab"`
+#'   - KMS Key ID: `"1234abcd-12ab-34cd-56ef-1234567890ab"`
 #' 
-#' -   Amazon Resource Name (ARN) of a KMS Key:
+#'   - Amazon Resource Name (ARN) of a KMS Key:
 #'     `"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"`
 #' @param VpcConfig Configuration parameters for an optional private Virtual Private Cloud
 #' (VPC) containing the resources you are using for your topic detection

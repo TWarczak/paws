@@ -36,15 +36,15 @@ NULL
 #' 
 #' A name must *not* contain:
 #' 
-#' -   white space
+#'   - white space
 #' 
-#' -   brackets `< > { } [ ]`
+#'   - brackets `< > { } [ ]`
 #' 
-#' -   wildcard characters `? *`
+#'   - wildcard characters `? *`
 #' 
-#' -   special characters `` \" # % \ ^ | ~ \` $ & , ; : / ``
+#'   - special characters ``\" # % \ ^ | ~ \` $ & , ; : /``
 #' 
-#' -   control characters (`U+0000-001F`, `U+007F-009F`)
+#'   - control characters (`U+0000-001F`, `U+007F-009F`)
 #' 
 #' To enable logging with CloudWatch Logs, the name should only contain
 #' 0-9, A-Z, a-z, - and _.
@@ -137,15 +137,15 @@ sfn_create_activity <- function(name, tags = NULL) {
 #' 
 #' A name must *not* contain:
 #' 
-#' -   white space
+#'   - white space
 #' 
-#' -   brackets `< > { } [ ]`
+#'   - brackets `< > { } [ ]`
 #' 
-#' -   wildcard characters `? *`
+#'   - wildcard characters `? *`
 #' 
-#' -   special characters `` \" # % \ ^ | ~ \` $ & , ; : / ``
+#'   - special characters ``\" # % \ ^ | ~ \` $ & , ; : /``
 #' 
-#' -   control characters (`U+0000-001F`, `U+007F-009F`)
+#'   - control characters (`U+0000-001F`, `U+007F-009F`)
 #' 
 #' To enable logging with CloudWatch Logs, the name should only contain
 #' 0-9, A-Z, a-z, - and _.
@@ -1223,7 +1223,7 @@ sfn_list_tags_for_resource <- function(resourceArn) {
 #' Functions when tasks are assigned to a worker, or in the [context
 #' object](https://docs.aws.amazon.com/step-functions/latest/dg/input-output-contextobject.html)
 #' when a workflow enters a task state. See
-#' GetActivityTaskOutput$taskToken.
+#' <span>GetActivityTaskOutput$taskToken</span>.
 #' @param error The error code of the failure.
 #' @param cause A more detailed explanation of the cause of the failure.
 #'
@@ -1292,7 +1292,7 @@ sfn_send_task_failure <- function(taskToken, error = NULL, cause = NULL) {
 #' Functions when tasks are assigned to a worker, or in the [context
 #' object](https://docs.aws.amazon.com/step-functions/latest/dg/input-output-contextobject.html)
 #' when a workflow enters a task state. See
-#' GetActivityTaskOutput$taskToken.
+#' <span>GetActivityTaskOutput$taskToken</span>.
 #'
 #' @return
 #' An empty list.
@@ -1340,7 +1340,7 @@ sfn_send_task_heartbeat <- function(taskToken) {
 #' Functions when tasks are assigned to a worker, or in the [context
 #' object](https://docs.aws.amazon.com/step-functions/latest/dg/input-output-contextobject.html)
 #' when a workflow enters a task state. See
-#' GetActivityTaskOutput$taskToken.
+#' <span>GetActivityTaskOutput$taskToken</span>.
 #' @param output &#91;required&#93; The JSON output of the task. Length constraints apply to the payload
 #' size, and are expressed as bytes in UTF-8 encoding.
 #'
@@ -1399,15 +1399,15 @@ sfn_send_task_success <- function(taskToken, output) {
 #' 
 #' A name must *not* contain:
 #' 
-#' -   white space
+#'   - white space
 #' 
-#' -   brackets `< > { } [ ]`
+#'   - brackets `< > { } [ ]`
 #' 
-#' -   wildcard characters `? *`
+#'   - wildcard characters `? *`
 #' 
-#' -   special characters `` \" # % \ ^ | ~ \` $ & , ; : / ``
+#'   - special characters ``\" # % \ ^ | ~ \` $ & , ; : /``
 #' 
-#' -   control characters (`U+0000-001F`, `U+007F-009F`)
+#'   - control characters (`U+0000-001F`, `U+007F-009F`)
 #' 
 #' To enable logging with CloudWatch Logs, the name should only contain
 #' 0-9, A-Z, a-z, - and _.

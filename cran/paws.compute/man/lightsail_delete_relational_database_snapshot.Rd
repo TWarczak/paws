@@ -43,8 +43,8 @@ Deletes a database snapshot in Amazon Lightsail.
 
 The \verb{delete relational database snapshot} operation supports tag-based
 access control via resource tags applied to the resource identified by
-relationalDatabaseName. For more information, see the Lightsail Dev
-Guide.
+relationalDatabaseName. For more information, see the <span>Lightsail
+Dev Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$delete_relational_database_snapshot(

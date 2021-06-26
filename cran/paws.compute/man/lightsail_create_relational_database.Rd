@@ -23,21 +23,17 @@ Constraints:
 \verb{us-east-2a} case-sensitive format.
 
 You can get a list of Availability Zones by using the \verb{get regions}
-operation. Be sure to add the
-\verb{include relational database Availability Zones} parameter to your
-request.}
+operation. Be sure to add the \verb{include relational database Availability Zones} parameter to your request.}
 
 \item{relationalDatabaseBlueprintId}{[required] The blueprint ID for your new database. A blueprint describes the major
 engine version of a database.
 
-You can get a list of database blueprints IDs by using the
-\verb{get relational database blueprints} operation.}
+You can get a list of database blueprints IDs by using the \verb{get relational database blueprints} operation.}
 
 \item{relationalDatabaseBundleId}{[required] The bundle ID for your new database. A bundle describes the performance
 specifications for your database.
 
-You can get a list of database bundle IDs by using the
-\verb{get relational database bundles} operation.}
+You can get a list of database bundle IDs by using the \verb{get relational database bundles} operation.}
 
 \item{masterDatabaseName}{[required] The name of the master database created when the Lightsail database
 resource is created.
@@ -58,7 +54,9 @@ Constraints:
 \item Cannot be a reserved word for the database engine you choose.
 
 For more information about reserved words in MySQL 5.6 or 5.7, see
-the Keywords and Reserved Words articles for \href{https://dev.mysql.com/doc/refman/5.6/en/keywords.html}{MySQL 5.6} or
+the Keywords and Reserved Words articles for
+\href{https://dev.mysql.com/doc/refman/5.6/en/keywords.html}{MySQL 5.6}
+or
 \href{https://dev.mysql.com/doc/refman/5.7/en/keywords.html}{MySQL 5.7}
 respectively.
 }}
@@ -146,8 +144,8 @@ A list with the following syntax:\preformatted{list(
 Creates a new database in Amazon Lightsail.
 
 The \verb{create relational database} operation supports tag-based access
-control via request tags. For more information, see the Lightsail Dev
-Guide.
+control via request tags. For more information, see the <span>Lightsail
+Dev Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$create_relational_database(

@@ -2,7 +2,7 @@
 % Please edit documentation in R/sagemaker_operations.R
 \name{sagemaker_create_trial}
 \alias{sagemaker_create_trial}
-\title{Creates an Amazon SageMaker trial}
+\title{Creates an Amazon SageMaker \emph{trial}}
 \usage{
 sagemaker_create_trial(TrialName, DisplayName, ExperimentName,
   MetadataProperties, Tags)

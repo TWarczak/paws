@@ -118,7 +118,7 @@ datasync_cancel_task_execution <- function(TaskExecutionArn) {
 #' For a data transfer to work, the agent must be able to route to all
 #' these four network interfaces.
 #' @param SecurityGroupArns The ARNs of the security groups used to protect your data transfer task
-#' subnets. See CreateAgentRequest$SubnetArns.
+#' subnets. See <span>CreateAgentRequest$SubnetArns</span>.
 #'
 #' @return
 #' A list with the following syntax:
@@ -194,16 +194,16 @@ datasync_create_agent <- function(ActivationKey, AgentName = NULL, Tags = NULL, 
 #' and security group S (which you provide for DataSync to use at this
 #' stage) is as follows:
 #' 
-#' -   Security group M (which you associate with the mount target) must
+#'   - Security group M (which you associate with the mount target) must
 #'     allow inbound access for the Transmission Control Protocol (TCP) on
 #'     the NFS port (2049) from security group S. You can enable inbound
 #'     connections either by IP address (CIDR range) or security group.
 #' 
-#' -   Security group S (provided to DataSync to access EFS) should have a
+#'   - Security group S (provided to DataSync to access EFS) should have a
 #'     rule that enables outbound connections to the NFS port on one of the
 #'     file system’s mount targets. You can enable outbound connections
 #'     either by IP address (CIDR range) or security group.
-#' 
+#'     
 #'     For information about security groups and mount targets, see
 #'     Security Groups for Amazon EC2 Instances and Mount Targets in the
 #'     *Amazon EFS User Guide.*
@@ -352,11 +352,11 @@ datasync_create_location_fsx_windows <- function(Subdirectory = NULL, FsxFilesys
 #' subdirectory of that path. The path should be such that it can be
 #' mounted by other NFS clients in your network.
 #' 
-#' To see all the paths exported by your NFS server, run
-#' "`showmount -e nfs-server-name`" from an NFS client that has access to
-#' your server. You can specify any directory that appears in the results,
-#' and any subdirectory of that directory. Ensure that the NFS export is
-#' accessible without Kerberos authentication.
+#' To see all the paths exported by your NFS server, run "`showmount -e
+#' nfs-server-name`" from an NFS client that has access to your server. You
+#' can specify any directory that appears in the results, and any
+#' subdirectory of that directory. Ensure that the NFS export is accessible
+#' without Kerberos authentication.
 #' 
 #' To transfer all the data in the folder you specified, DataSync needs to
 #' have permissions to read all the data. To ensure this, either configure
@@ -451,7 +451,7 @@ datasync_create_location_nfs <- function(Subdirectory, ServerHostname, OnPremCon
 #' @description
 #' Creates an endpoint for a self-managed object storage bucket. For more
 #' information about self-managed object storage locations, see
-#' create-object-location.
+#' <span>create-object-location</span>.
 #'
 #' @usage
 #' datasync_create_location_object_storage(ServerHostname, ServerPort,
@@ -562,12 +562,12 @@ datasync_create_location_object_storage <- function(ServerHostname, ServerPort =
 #' For more information about S3 storage classes, see [Amazon S3 Storage
 #' Classes](https://aws.amazon.com/s3/storage-classes/). Some storage
 #' classes have behaviors that can affect your S3 storage cost. For
-#' detailed information, see using-storage-classes.
+#' detailed information, see <span>using-storage-classes</span>.
 #' @param S3Config &#91;required&#93; 
 #' @param AgentArns If you are using DataSync on an AWS Outpost, specify the Amazon Resource
 #' Names (ARNs) of the DataSync agents deployed on your Outpost. For more
 #' information about launching a DataSync agent on an AWS Outpost, see
-#' outposts-agent.
+#' <span>outposts-agent</span>.
 #' @param Tags The key-value pair that represents the tag that you want to add to the
 #' location. The value can be an empty string. We recommend using tags to
 #' name your resources.
@@ -767,7 +767,7 @@ datasync_create_location_smb <- function(Subdirectory, ServerHostname, User, Dom
 #' pipe), for example, `"/folder1|/folder2"`.
 #' @param Schedule Specifies a schedule used to periodically transfer files from a source
 #' to a destination location. The schedule should be specified in UTC time.
-#' For more information, see task-scheduling.
+#' For more information, see <span>task-scheduling</span>.
 #' @param Tags The key-value pair that represents the tag that you want to add to the
 #' resource. The value can be an empty string.
 #'
@@ -1208,7 +1208,7 @@ datasync_describe_location_nfs <- function(LocationArn) {
 #' @description
 #' Returns metadata about a self-managed object storage server location.
 #' For more information about self-managed object storage locations, see
-#' create-object-location.
+#' <span>create-object-location</span>.
 #'
 #' @usage
 #' datasync_describe_location_object_storage(LocationArn)
@@ -2110,7 +2110,7 @@ datasync_update_agent <- function(AgentArn, Name = NULL) {
 #' to a destination location. You can configure your task to execute
 #' hourly, daily, weekly or on specific days of the week. You control when
 #' in the day or hour you want the task to execute. The time you specify is
-#' UTC time. For more information, see task-scheduling.
+#' UTC time. For more information, see <span>task-scheduling</span>.
 #' @param Name The name of the task to update.
 #' @param CloudWatchLogGroupArn The Amazon Resource Name (ARN) of the resource name of the CloudWatch
 #' LogGroup.
@@ -2177,12 +2177,12 @@ datasync_update_task <- function(TaskArn, Options = NULL, Excludes = NULL, Sched
 #' Updates execution of a task.
 #' 
 #' You can modify bandwidth throttling for a task execution that is running
-#' or queued. For more information, see Adjusting Bandwidth Throttling for
-#' a Task Execution.
+#' or queued. For more information, see <span>Adjusting Bandwidth
+#' Throttling for a Task Execution</span>.
 #' 
 #' The only `Option` that can be modified by
-#' [`update_task_execution`][datasync_update_task_execution] is
-#' ` BytesPerSecond `.
+#' [`update_task_execution`][datasync_update_task_execution] is ` 
+#' BytesPerSecond  `.
 #'
 #' @usage
 #' datasync_update_task_execution(TaskExecutionArn, Options)

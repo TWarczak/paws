@@ -13,42 +13,44 @@ NULL
 #' Discovery Service offers three ways of performing discovery and
 #' collecting data about your on-premises servers:
 #' 
-#' -   **Agentless discovery** is recommended for environments that use
+#'   - **Agentless discovery** is recommended for environments that use
 #'     VMware vCenter Server. This mode doesn't require you to install an
 #'     agent on each host. It does not work in non-VMware environments.
-#' 
-#'     -   Agentless discovery gathers server information regardless of the
+#'     
+#'       - Agentless discovery gathers server information regardless of the
 #'         operating systems, which minimizes the time required for initial
 #'         on-premises infrastructure assessment.
-#' 
-#'     -   Agentless discovery doesn't collect information about network
+#'     
+#'       - Agentless discovery doesn't collect information about network
 #'         dependencies, only agent-based discovery collects that
 #'         information.
 #' 
+#' <!-- end list -->
 #' 
-#' -   **Agent-based discovery** collects a richer set of data than
+#'   - **Agent-based discovery** collects a richer set of data than
 #'     agentless discovery by using the AWS Application Discovery Agent,
 #'     which you install on one or more hosts in your data center.
-#' 
-#'     -   The agent captures infrastructure and application information,
+#'     
+#'       - The agent captures infrastructure and application information,
 #'         including an inventory of running processes, system performance
 #'         information, resource utilization, and network dependencies.
-#' 
-#'     -   The information collected by agents is secured at rest and in
+#'     
+#'       - The information collected by agents is secured at rest and in
 #'         transit to the Application Discovery Service database in the
 #'         cloud.
 #' 
+#' <!-- end list -->
 #' 
-#' -   **AWS Partner Network (APN) solutions** integrate with Application
+#'   - **AWS Partner Network (APN) solutions** integrate with Application
 #'     Discovery Service, enabling you to import details of your
 #'     on-premises environment directly into Migration Hub without using
 #'     the discovery connector or discovery agent.
-#' 
-#'     -   Third-party application discovery tools can query AWS
+#'     
+#'       - Third-party application discovery tools can query AWS
 #'         Application Discovery Service, and they can write to the
 #'         Application Discovery Service database using the public API.
-#' 
-#'     -   In this way, you can import data into Migration Hub and view it,
+#'     
+#'       - In this way, you can import data into Migration Hub and view it,
 #'         so that you can associate applications with servers and track
 #'         migrations.
 #' 
@@ -71,21 +73,21 @@ NULL
 #' using. For more information, see [AWS
 #' SDKs](https://aws.amazon.com/tools/#SDKs).
 #' 
-#' -   Remember that you must set your Migration Hub home region before you
+#'   - Remember that you must set your Migration Hub home region before you
 #'     call any of these APIs.
 #' 
-#' -   You must make API calls for write actions (create, notify,
+#'   - You must make API calls for write actions (create, notify,
 #'     associate, disassociate, import, or put) while in your home region,
 #'     or a `HomeRegionNotSetException` error is returned.
 #' 
-#' -   API calls for read actions (list, describe, stop, and delete) are
+#'   - API calls for read actions (list, describe, stop, and delete) are
 #'     permitted outside of your home region.
 #' 
-#' -   Although it is unlikely, the Migration Hub home region could change.
+#'   - Although it is unlikely, the Migration Hub home region could change.
 #'     If you call APIs outside the home region, an `InvalidInputException`
 #'     is returned.
 #' 
-#' -   You must call `GetHomeRegion` to obtain the latest Migration Hub
+#'   - You must call `GetHomeRegion` to obtain the latest Migration Hub
 #'     home region.
 #' 
 #' This guide is intended for use with the [AWS Application Discovery
@@ -156,6 +158,12 @@ NULL
 #'  \link[=applicationdiscoveryservice_update_application]{update_application} \tab Updates metadata about an application
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname applicationdiscoveryservice
 #' @export
 applicationdiscoveryservice <- function(config = list()) {
@@ -174,7 +182,7 @@ applicationdiscoveryservice <- function(config = list()) {
   endpoints = list("*" = list(endpoint = "discovery.{region}.amazonaws.com", global = FALSE), "cn-*" = list(endpoint = "discovery.{region}.amazonaws.com.cn", global = FALSE), "us-iso-*" = list(endpoint = "discovery.{region}.c2s.ic.gov", global = FALSE), "us-isob-*" = list(endpoint = "discovery.{region}.sc2s.sgov.gov", global = FALSE)),
   service_id = "Application Discovery Service",
   api_version = "2015-11-01",
-  signing_name = NULL,
+  signing_name = "discovery",
   json_version = "1.1",
   target_prefix = "AWSPoseidonService_V2015_11_01"
 )

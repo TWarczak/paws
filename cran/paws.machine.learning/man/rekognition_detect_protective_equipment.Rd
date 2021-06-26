@@ -86,8 +86,8 @@ parts (face, head, left-hand, right-hand). For each body part, an array
 of detected items of PPE is returned, including an indicator of whether
 or not the PPE covers the body part. The API returns the confidence it
 has in each detection (person, PPE, body part and body part coverage).
-It also returns a bounding box (BoundingBox) for each detected person
-and each detected item of PPE.
+It also returns a bounding box (<span>BoundingBox</span>) for each
+detected person and each detected item of PPE.
 
 You can optionally request a summary of detected PPE items with the
 \code{SummarizationAttributes} input parameter. The summary provides the

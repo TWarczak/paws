@@ -293,8 +293,8 @@ associated with a collection, call
 \code{\link[=rekognition_describe_collection]{describe_collection}}.
 
 Information about faces detected in an image, but not indexed, is
-returned in an array of UnindexedFace objects, \code{UnindexedFaces}. Faces
-aren't indexed for reasons such as:
+returned in an array of <span>UnindexedFace</span> objects,
+\code{UnindexedFaces}. Faces aren't indexed for reasons such as:
 \itemize{
 \item The number of faces detected exceeds the value of the \code{MaxFaces}
 request parameter.

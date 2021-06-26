@@ -18,8 +18,8 @@ You should generate a random, strong password to use for this parameter.}
 \item{OrganizationalUnitDistinguishedName}{The fully-qualified distinguished name of the organizational unit to
 place the computer account in.}
 
-\item{ComputerAttributes}{An array of Attribute objects that contain any LDAP attributes to apply
-to the computer account.}
+\item{ComputerAttributes}{An array of <span>Attribute</span> objects that contain any LDAP
+attributes to apply to the computer account.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

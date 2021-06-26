@@ -12,7 +12,8 @@ fleet referenced in the VPC peering connection record. You can use
 either the fleet ID or ARN value.}
 
 \item{VpcPeeringConnectionId}{[required] A unique identifier for a VPC peering connection. This value is included
-in the VpcPeeringConnection object, which can be retrieved by calling
+in the <span>VpcPeeringConnection</span> object, which can be retrieved
+by calling
 \code{\link[=gamelift_describe_vpc_peering_connections]{describe_vpc_peering_connections}}.}
 }
 \value{

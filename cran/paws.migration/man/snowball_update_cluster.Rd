@@ -19,15 +19,16 @@ API action in AWS Identity and Access Management (IAM).}
 
 \item{Description}{The updated description of this cluster.}
 
-\item{Resources}{The updated arrays of JobResource objects that can include updated
-S3Resource objects or LambdaResource objects.}
+\item{Resources}{The updated arrays of <span>JobResource</span> objects that can include
+updated <span>S3Resource</span> objects or <span>LambdaResource</span>
+objects.}
 
-\item{AddressId}{The ID of the updated Address object.}
+\item{AddressId}{The ID of the updated <span>Address</span> object.}
 
-\item{ShippingOption}{The updated shipping option value of this cluster's ShippingDetails
-object.}
+\item{ShippingOption}{The updated shipping option value of this cluster's
+<span>ShippingDetails</span> object.}
 
-\item{Notification}{The new or updated Notification object.}
+\item{Notification}{The new or updated <span>Notification</span> object.}
 
 \item{ForwardingAddressId}{The updated ID for the forwarding address for a cluster. This field is
 not supported in most regions.}

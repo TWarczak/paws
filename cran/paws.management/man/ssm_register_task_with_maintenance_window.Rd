@@ -53,7 +53,7 @@ Systems Manager User Guide}:
 task when it runs, instead use the \code{Parameters} option in the
 \code{TaskInvocationParameters} structure. For information about how Systems
 Manager handles these options for the supported maintenance window task
-types, see MaintenanceWindowTaskInvocationParameters.}
+types, see <span>MaintenanceWindowTaskInvocationParameters</span>.}
 
 \item{TaskInvocationParameters}{The parameters that the task should use during execution. Populate only
 the fields that match the task type. All other fields should be empty.}
@@ -86,7 +86,7 @@ logs, instead use the \code{OutputS3BucketName} and \code{OutputS3KeyPrefix}
 options in the \code{TaskInvocationParameters} structure. For information
 about how Systems Manager handles these options for the supported
 maintenance window task types, see
-MaintenanceWindowTaskInvocationParameters.}
+<span>MaintenanceWindowTaskInvocationParameters</span>.}
 
 \item{Name}{An optional name for the task.}
 

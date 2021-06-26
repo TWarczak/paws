@@ -45,8 +45,8 @@ A list with the following syntax:\preformatted{list(
 Starts asynchronous detection of unsafe content in a stored video.
 
 Amazon Rekognition Video can moderate content in a video stored in an
-Amazon S3 bucket. Use Video to specify the bucket name and the filename
-of the video.
+Amazon S3 bucket. Use <span>Video</span> to specify the bucket name and
+the filename of the video.
 \code{\link[=rekognition_start_content_moderation]{start_content_moderation}}
 returns a job identifier (\code{JobId}) which you use to get the results of
 the analysis. When unsafe content analysis is finished, Amazon

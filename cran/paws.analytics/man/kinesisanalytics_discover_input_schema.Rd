@@ -68,7 +68,7 @@ A list with the following syntax:\preformatted{list(
 This documentation is for version 1 of the Amazon Kinesis Data Analytics
 API, which only supports SQL applications. Version 2 of the API supports
 SQL and Java applications. For more information about version 2, see
-Amazon Kinesis Data Analytics API V2 Documentation.
+<span>Amazon Kinesis Data Analytics API V2 Documentation</span>.
 
 Infers a schema by evaluating sample records on the specified streaming
 source (Amazon Kinesis stream or Amazon Kinesis Firehose delivery

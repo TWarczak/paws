@@ -133,8 +133,9 @@ autoscalingplans_create_scaling_plan <- function(ScalingPlanName, ApplicationSou
 #' @description
 #' Deletes the specified scaling plan.
 #' 
-#' Deleting a scaling plan deletes the underlying ScalingInstruction for
-#' all of the scalable resources that are covered by the plan.
+#' Deleting a scaling plan deletes the underlying
+#' <span>ScalingInstruction</span> for all of the scalable resources that
+#' are covered by the plan.
 #' 
 #' If the plan has launched resources or has scaling activities in
 #' progress, you must delete those resources separately.
@@ -453,16 +454,16 @@ autoscalingplans_describe_scaling_plans <- function(ScalingPlanNames = NULL, Sca
 #' `autoscaling:autoScalingGroup:DesiredCapacity`.
 #' @param ForecastDataType &#91;required&#93; The type of forecast data to get.
 #' 
-#' -   `LoadForecast`: The load metric forecast.
+#'   - `LoadForecast`: The load metric forecast.
 #' 
-#' -   `CapacityForecast`: The capacity forecast.
+#'   - `CapacityForecast`: The capacity forecast.
 #' 
-#' -   `ScheduledActionMinCapacity`: The minimum capacity for each
+#'   - `ScheduledActionMinCapacity`: The minimum capacity for each
 #'     scheduled scaling action. This data is calculated as the larger of
 #'     two values: the capacity forecast or the minimum capacity in the
 #'     scaling instruction.
 #' 
-#' -   `ScheduledActionMaxCapacity`: The maximum capacity for each
+#'   - `ScheduledActionMaxCapacity`: The maximum capacity for each
 #'     scheduled scaling action. The calculation used is determined by the
 #'     predictive scaling maximum capacity behavior setting in the scaling
 #'     instruction.

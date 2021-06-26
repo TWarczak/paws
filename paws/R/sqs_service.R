@@ -21,33 +21,33 @@ NULL
 #' Amazon SQS using your favorite programming language. The SDKs perform
 #' tasks such as the following automatically:
 #' 
-#' -   Cryptographically sign your service requests
+#'   - Cryptographically sign your service requests
 #' 
-#' -   Retry requests
+#'   - Retry requests
 #' 
-#' -   Handle error responses
+#'   - Handle error responses
 #' 
 #' **Additional Information**
 #' 
-#' -   [Amazon SQS Product Page](https://aws.amazon.com/sqs/)
+#'   - [Amazon SQS Product Page](https://aws.amazon.com/sqs/)
 #' 
-#' -   *Amazon Simple Queue Service Developer Guide*
-#' 
-#'     -   [Making API
+#'   - *Amazon Simple Queue Service Developer Guide*
+#'     
+#'       - [Making API
 #'         Requests](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-making-api-requests.html)
-#' 
-#'     -   [Amazon SQS Message
+#'     
+#'       - [Amazon SQS Message
 #'         Attributes](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-message-metadata.html#sqs-message-attributes)
-#' 
-#'     -   [Amazon SQS Dead-Letter
+#'     
+#'       - [Amazon SQS Dead-Letter
 #'         Queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html)
 #' 
-#' -   [Amazon SQS in the *AWS CLI Command
+#'   - [Amazon SQS in the *AWS CLI Command
 #'     Reference*](https://docs.aws.amazon.com/cli/latest/reference/sqs/index.html)
 #' 
-#' -   *Amazon Web Services General Reference*
-#' 
-#'     -   [Regions and
+#'   - *Amazon Web Services General Reference*
+#'     
+#'       - [Regions and
 #'         Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#sqs_region)
 #'
 #' @param
@@ -104,6 +104,12 @@ NULL
 #'  \link[=sqs_untag_queue]{untag_queue} \tab Remove cost allocation tags from the specified Amazon SQS queue
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname sqs
 #' @export
 sqs <- function(config = list()) {
@@ -122,7 +128,7 @@ sqs <- function(config = list()) {
   endpoints = list("*" = list(endpoint = "sqs.{region}.amazonaws.com", global = FALSE), "cn-*" = list(endpoint = "sqs.{region}.amazonaws.com.cn", global = FALSE), "us-iso-*" = list(endpoint = "sqs.{region}.c2s.ic.gov", global = FALSE), "us-isob-*" = list(endpoint = "sqs.{region}.sc2s.sgov.gov", global = FALSE)),
   service_id = "SQS",
   api_version = "2012-11-05",
-  signing_name = NULL,
+  signing_name = "sqs",
   json_version = "",
   target_prefix = ""
 )

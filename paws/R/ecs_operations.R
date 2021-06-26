@@ -29,24 +29,24 @@ NULL
 #' 
 #' The following basic restrictions apply to tags:
 #' 
-#' -   Maximum number of tags per resource - 50
+#'   - Maximum number of tags per resource - 50
 #' 
-#' -   For each resource, each tag key must be unique, and each tag key can
+#'   - For each resource, each tag key must be unique, and each tag key can
 #'     have only one value.
 #' 
-#' -   Maximum key length - 128 Unicode characters in UTF-8
+#'   - Maximum key length - 128 Unicode characters in UTF-8
 #' 
-#' -   Maximum value length - 256 Unicode characters in UTF-8
+#'   - Maximum value length - 256 Unicode characters in UTF-8
 #' 
-#' -   If your tagging schema is used across multiple services and
+#'   - If your tagging schema is used across multiple services and
 #'     resources, remember that other services may have restrictions on
 #'     allowed characters. Generally allowed characters are: letters,
 #'     numbers, and spaces representable in UTF-8, and the following
 #'     characters: + - = . _ : / @@.
 #' 
-#' -   Tag keys and values are case-sensitive.
+#'   - Tag keys and values are case-sensitive.
 #' 
-#' -   Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
+#'   - Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
 #'     such as a prefix for either keys or values as it is reserved for AWS
 #'     use. You cannot edit or delete tag keys or values with this prefix.
 #'     Tags with this prefix do not count against your tags per resource
@@ -158,24 +158,24 @@ ecs_create_capacity_provider <- function(name, autoScalingGroupProvider, tags = 
 #' 
 #' The following basic restrictions apply to tags:
 #' 
-#' -   Maximum number of tags per resource - 50
+#'   - Maximum number of tags per resource - 50
 #' 
-#' -   For each resource, each tag key must be unique, and each tag key can
+#'   - For each resource, each tag key must be unique, and each tag key can
 #'     have only one value.
 #' 
-#' -   Maximum key length - 128 Unicode characters in UTF-8
+#'   - Maximum key length - 128 Unicode characters in UTF-8
 #' 
-#' -   Maximum value length - 256 Unicode characters in UTF-8
+#'   - Maximum value length - 256 Unicode characters in UTF-8
 #' 
-#' -   If your tagging schema is used across multiple services and
+#'   - If your tagging schema is used across multiple services and
 #'     resources, remember that other services may have restrictions on
 #'     allowed characters. Generally allowed characters are: letters,
 #'     numbers, and spaces representable in UTF-8, and the following
 #'     characters: + - = . _ : / @@.
 #' 
-#' -   Tag keys and values are case-sensitive.
+#'   - Tag keys and values are case-sensitive.
 #' 
-#' -   Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
+#'   - Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
 #'     such as a prefix for either keys or values as it is reserved for AWS
 #'     use. You cannot edit or delete tag keys or values with this prefix.
 #'     Tags with this prefix do not count against your tags per resource
@@ -373,7 +373,7 @@ ecs_create_cluster <- function(clusterName = NULL, tags = NULL, settings = NULL,
 #' 
 #' There are two service scheduler strategies available:
 #' 
-#' -   `REPLICA` - The replica scheduling strategy places and maintains the
+#'   - `REPLICA` - The replica scheduling strategy places and maintains the
 #'     desired number of tasks across your cluster. By default, the service
 #'     scheduler spreads tasks across Availability Zones. You can use task
 #'     placement strategies and constraints to customize task placement
@@ -381,7 +381,7 @@ ecs_create_cluster <- function(clusterName = NULL, tags = NULL, settings = NULL,
 #'     Concepts](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html)
 #'     in the *Amazon Elastic Container Service Developer Guide*.
 #' 
-#' -   `DAEMON` - The daemon scheduling strategy deploys exactly one task
+#'   - `DAEMON` - The daemon scheduling strategy deploys exactly one task
 #'     on each active container instance that meets all of the task
 #'     placement constraints that you specify in your cluster. The service
 #'     scheduler also evaluates the task placement constraints for running
@@ -448,23 +448,23 @@ ecs_create_cluster <- function(clusterName = NULL, tags = NULL, settings = NULL,
 #' When the service scheduler launches new tasks, it determines task
 #' placement in your cluster using the following logic:
 #' 
-#' -   Determine which of the container instances in your cluster can
+#'   - Determine which of the container instances in your cluster can
 #'     support your service's task definition (for example, they have the
 #'     required CPU, memory, ports, and container instance attributes).
 #' 
-#' -   By default, the service scheduler attempts to balance tasks across
+#'   - By default, the service scheduler attempts to balance tasks across
 #'     Availability Zones in this manner (although you can choose a
 #'     different placement strategy) with the `placementStrategy`
 #'     parameter):
-#' 
-#'     -   Sort the valid container instances, giving priority to instances
+#'     
+#'       - Sort the valid container instances, giving priority to instances
 #'         that have the fewest number of running tasks for this service in
 #'         their respective Availability Zone. For example, if zone A has
 #'         one running service task and zones B and C each have zero, valid
 #'         container instances in either zone B or C are considered optimal
 #'         for placement.
-#' 
-#'     -   Place the new service task on a valid container instance in an
+#'     
+#'       - Place the new service task on a valid container instance in an
 #'         optimal Availability Zone (based on the previous steps),
 #'         favoring container instances with the fewest number of running
 #'         tasks for this service.
@@ -661,14 +661,14 @@ ecs_create_cluster <- function(clusterName = NULL, tags = NULL, settings = NULL,
 #' 
 #' There are two service scheduler strategies available:
 #' 
-#' -   `REPLICA`-The replica scheduling strategy places and maintains the
+#'   - `REPLICA`-The replica scheduling strategy places and maintains the
 #'     desired number of tasks across your cluster. By default, the service
 #'     scheduler spreads tasks across Availability Zones. You can use task
 #'     placement strategies and constraints to customize task placement
 #'     decisions. This scheduler strategy is required if the service is
 #'     using the `CODE_DEPLOY` or `EXTERNAL` deployment controller types.
 #' 
-#' -   `DAEMON`-The daemon scheduling strategy deploys exactly one task on
+#'   - `DAEMON`-The daemon scheduling strategy deploys exactly one task on
 #'     each active container instance that meets all of the task placement
 #'     constraints that you specify in your cluster. The service scheduler
 #'     also evaluates the task placement constraints for running tasks and
@@ -676,7 +676,7 @@ ecs_create_cluster <- function(clusterName = NULL, tags = NULL, settings = NULL,
 #'     you're using this strategy, you don't need to specify a desired
 #'     number of tasks, a task placement strategy, or use Service Auto
 #'     Scaling policies.
-#' 
+#'     
 #'     Tasks using the Fargate launch type or the `CODE_DEPLOY` or
 #'     `EXTERNAL` deployment controller types don't support the `DAEMON`
 #'     scheduling strategy.
@@ -688,24 +688,24 @@ ecs_create_cluster <- function(clusterName = NULL, tags = NULL, settings = NULL,
 #' 
 #' The following basic restrictions apply to tags:
 #' 
-#' -   Maximum number of tags per resource - 50
+#'   - Maximum number of tags per resource - 50
 #' 
-#' -   For each resource, each tag key must be unique, and each tag key can
+#'   - For each resource, each tag key must be unique, and each tag key can
 #'     have only one value.
 #' 
-#' -   Maximum key length - 128 Unicode characters in UTF-8
+#'   - Maximum key length - 128 Unicode characters in UTF-8
 #' 
-#' -   Maximum value length - 256 Unicode characters in UTF-8
+#'   - Maximum value length - 256 Unicode characters in UTF-8
 #' 
-#' -   If your tagging schema is used across multiple services and
+#'   - If your tagging schema is used across multiple services and
 #'     resources, remember that other services may have restrictions on
 #'     allowed characters. Generally allowed characters are: letters,
 #'     numbers, and spaces representable in UTF-8, and the following
 #'     characters: + - = . _ : / @@.
 #' 
-#' -   Tag keys and values are case-sensitive.
+#'   - Tag keys and values are case-sensitive.
 #' 
-#' -   Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
+#'   - Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
 #'     such as a prefix for either keys or values as it is reserved for AWS
 #'     use. You cannot edit or delete tag keys or values with this prefix.
 #'     Tags with this prefix do not count against your tags per resource
@@ -1143,24 +1143,24 @@ ecs_create_service <- function(cluster = NULL, serviceName, taskDefinition = NUL
 #' 
 #' The following basic restrictions apply to tags:
 #' 
-#' -   Maximum number of tags per resource - 50
+#'   - Maximum number of tags per resource - 50
 #' 
-#' -   For each resource, each tag key must be unique, and each tag key can
+#'   - For each resource, each tag key must be unique, and each tag key can
 #'     have only one value.
 #' 
-#' -   Maximum key length - 128 Unicode characters in UTF-8
+#'   - Maximum key length - 128 Unicode characters in UTF-8
 #' 
-#' -   Maximum value length - 256 Unicode characters in UTF-8
+#'   - Maximum value length - 256 Unicode characters in UTF-8
 #' 
-#' -   If your tagging schema is used across multiple services and
+#'   - If your tagging schema is used across multiple services and
 #'     resources, remember that other services may have restrictions on
 #'     allowed characters. Generally allowed characters are: letters,
 #'     numbers, and spaces representable in UTF-8, and the following
 #'     characters: + - = . _ : / @@.
 #' 
-#' -   Tag keys and values are case-sensitive.
+#'   - Tag keys and values are case-sensitive.
 #' 
-#' -   Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
+#'   - Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
 #'     such as a prefix for either keys or values as it is reserved for AWS
 #'     use. You cannot edit or delete tag keys or values with this prefix.
 #'     Tags with this prefix do not count against your tags per resource
@@ -2701,21 +2701,21 @@ ecs_describe_capacity_providers <- function(capacityProviders = NULL, include = 
 #' If `STATISTICS` is specified, the following additional information,
 #' separated by launch type, is included:
 #' 
-#' -   runningEC2TasksCount
+#'   - runningEC2TasksCount
 #' 
-#' -   runningFargateTasksCount
+#'   - runningFargateTasksCount
 #' 
-#' -   pendingEC2TasksCount
+#'   - pendingEC2TasksCount
 #' 
-#' -   pendingFargateTasksCount
+#'   - pendingFargateTasksCount
 #' 
-#' -   activeEC2ServiceCount
+#'   - activeEC2ServiceCount
 #' 
-#' -   activeFargateServiceCount
+#'   - activeFargateServiceCount
 #' 
-#' -   drainingEC2ServiceCount
+#'   - drainingEC2ServiceCount
 #' 
-#' -   drainingFargateServiceCount
+#'   - drainingFargateServiceCount
 #' 
 #' If `TAGS` is specified, the metadata tags associated with the cluster
 #' are included.
@@ -5323,12 +5323,12 @@ ecs_put_cluster_capacity_providers <- function(cluster, capacityProviders, defau
 #' cluster, the default cluster is assumed.
 #' @param instanceIdentityDocument The instance identity document for the EC2 instance to register. This
 #' document can be found by running the following command from the
-#' instance:
-#' `curl http://169.254.169.254/latest/dynamic/instance-identity/document/`
+#' instance: `curl
+#' http://169.254.169.254/latest/dynamic/instance-identity/document/`
 #' @param instanceIdentityDocumentSignature The instance identity document signature for the EC2 instance to
 #' register. This signature can be found by running the following command
-#' from the instance:
-#' `curl http://169.254.169.254/latest/dynamic/instance-identity/signature/`
+#' from the instance: `curl
+#' http://169.254.169.254/latest/dynamic/instance-identity/signature/`
 #' @param totalResources The resources available on the instance.
 #' @param versionInfo The version information for the Amazon ECS container agent and Docker
 #' daemon running on the container instance.
@@ -5342,24 +5342,24 @@ ecs_put_cluster_capacity_providers <- function(cluster, capacityProviders, defau
 #' 
 #' The following basic restrictions apply to tags:
 #' 
-#' -   Maximum number of tags per resource - 50
+#'   - Maximum number of tags per resource - 50
 #' 
-#' -   For each resource, each tag key must be unique, and each tag key can
+#'   - For each resource, each tag key must be unique, and each tag key can
 #'     have only one value.
 #' 
-#' -   Maximum key length - 128 Unicode characters in UTF-8
+#'   - Maximum key length - 128 Unicode characters in UTF-8
 #' 
-#' -   Maximum value length - 256 Unicode characters in UTF-8
+#'   - Maximum value length - 256 Unicode characters in UTF-8
 #' 
-#' -   If your tagging schema is used across multiple services and
+#'   - If your tagging schema is used across multiple services and
 #'     resources, remember that other services may have restrictions on
 #'     allowed characters. Generally allowed characters are: letters,
 #'     numbers, and spaces representable in UTF-8, and the following
 #'     characters: + - = . _ : / @@.
 #' 
-#' -   Tag keys and values are case-sensitive.
+#'   - Tag keys and values are case-sensitive.
 #' 
-#' -   Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
+#'   - Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
 #'     such as a prefix for either keys or values as it is reserved for AWS
 #'     use. You cannot edit or delete tag keys or values with this prefix.
 #'     Tags with this prefix do not count against your tags per resource
@@ -5535,8 +5535,8 @@ ecs_register_container_instance <- function(cluster = NULL, instanceIdentityDocu
 #' settings](https://docs.docker.com/engine/reference/run/#/network-settings)
 #' in the Docker run reference. If you specify the `awsvpc` network mode,
 #' the task is allocated an elastic network interface, and you must specify
-#' a NetworkConfiguration when you create a service or run a task with the
-#' task definition. For more information, see [Task
+#' a <span>NetworkConfiguration</span> when you create a service or run a
+#' task with the task definition. For more information, see [Task
 #' Networking](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html)
 #' in the *Amazon Elastic Container Service Developer Guide*.
 #'
@@ -5587,9 +5587,9 @@ ecs_register_container_instance <- function(cluster = NULL, instanceIdentityDocu
 #' user.
 #' 
 #' If the network mode is `awsvpc`, the task is allocated an elastic
-#' network interface, and you must specify a NetworkConfiguration value
-#' when you create a service or run a task with the task definition. For
-#' more information, see [Task
+#' network interface, and you must specify a
+#' <span>NetworkConfiguration</span> value when you create a service or run
+#' a task with the task definition. For more information, see [Task
 #' Networking](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html)
 #' in the *Amazon Elastic Container Service Developer Guide*.
 #' 
@@ -5639,19 +5639,19 @@ ecs_register_container_instance <- function(cluster = NULL, instanceIdentityDocu
 #' must use one of the following values, which determines your range of
 #' supported values for the `memory` parameter:
 #' 
-#' -   256 (.25 vCPU) - Available `memory` values: 512 (0.5 GB), 1024 (1
+#'   - 256 (.25 vCPU) - Available `memory` values: 512 (0.5 GB), 1024 (1
 #'     GB), 2048 (2 GB)
 #' 
-#' -   512 (.5 vCPU) - Available `memory` values: 1024 (1 GB), 2048 (2 GB),
+#'   - 512 (.5 vCPU) - Available `memory` values: 1024 (1 GB), 2048 (2 GB),
 #'     3072 (3 GB), 4096 (4 GB)
 #' 
-#' -   1024 (1 vCPU) - Available `memory` values: 2048 (2 GB), 3072 (3 GB),
+#'   - 1024 (1 vCPU) - Available `memory` values: 2048 (2 GB), 3072 (3 GB),
 #'     4096 (4 GB), 5120 (5 GB), 6144 (6 GB), 7168 (7 GB), 8192 (8 GB)
 #' 
-#' -   2048 (2 vCPU) - Available `memory` values: Between 4096 (4 GB) and
+#'   - 2048 (2 vCPU) - Available `memory` values: Between 4096 (4 GB) and
 #'     16384 (16 GB) in increments of 1024 (1 GB)
 #' 
-#' -   4096 (4 vCPU) - Available `memory` values: Between 8192 (8 GB) and
+#'   - 4096 (4 vCPU) - Available `memory` values: Between 8192 (8 GB) and
 #'     30720 (30 GB) in increments of 1024 (1 GB)
 #' @param memory The amount of memory (in MiB) used by the task. It can be expressed as
 #' an integer using MiB, for example `1024`, or as a string using GB, for
@@ -5669,19 +5669,19 @@ ecs_register_container_instance <- function(cluster = NULL, instanceIdentityDocu
 #' use one of the following values, which determines your range of
 #' supported values for the `cpu` parameter:
 #' 
-#' -   512 (0.5 GB), 1024 (1 GB), 2048 (2 GB) - Available `cpu` values: 256
+#'   - 512 (0.5 GB), 1024 (1 GB), 2048 (2 GB) - Available `cpu` values: 256
 #'     (.25 vCPU)
 #' 
-#' -   1024 (1 GB), 2048 (2 GB), 3072 (3 GB), 4096 (4 GB) - Available `cpu`
+#'   - 1024 (1 GB), 2048 (2 GB), 3072 (3 GB), 4096 (4 GB) - Available `cpu`
 #'     values: 512 (.5 vCPU)
 #' 
-#' -   2048 (2 GB), 3072 (3 GB), 4096 (4 GB), 5120 (5 GB), 6144 (6 GB),
+#'   - 2048 (2 GB), 3072 (3 GB), 4096 (4 GB), 5120 (5 GB), 6144 (6 GB),
 #'     7168 (7 GB), 8192 (8 GB) - Available `cpu` values: 1024 (1 vCPU)
 #' 
-#' -   Between 4096 (4 GB) and 16384 (16 GB) in increments of 1024 (1 GB) -
+#'   - Between 4096 (4 GB) and 16384 (16 GB) in increments of 1024 (1 GB) -
 #'     Available `cpu` values: 2048 (2 vCPU)
 #' 
-#' -   Between 8192 (8 GB) and 30720 (30 GB) in increments of 1024 (1 GB) -
+#'   - Between 8192 (8 GB) and 30720 (30 GB) in increments of 1024 (1 GB) -
 #'     Available `cpu` values: 4096 (4 vCPU)
 #' @param tags The metadata that you apply to the task definition to help you
 #' categorize and organize them. Each tag consists of a key and an optional
@@ -5689,24 +5689,24 @@ ecs_register_container_instance <- function(cluster = NULL, instanceIdentityDocu
 #' 
 #' The following basic restrictions apply to tags:
 #' 
-#' -   Maximum number of tags per resource - 50
+#'   - Maximum number of tags per resource - 50
 #' 
-#' -   For each resource, each tag key must be unique, and each tag key can
+#'   - For each resource, each tag key must be unique, and each tag key can
 #'     have only one value.
 #' 
-#' -   Maximum key length - 128 Unicode characters in UTF-8
+#'   - Maximum key length - 128 Unicode characters in UTF-8
 #' 
-#' -   Maximum value length - 256 Unicode characters in UTF-8
+#'   - Maximum value length - 256 Unicode characters in UTF-8
 #' 
-#' -   If your tagging schema is used across multiple services and
+#'   - If your tagging schema is used across multiple services and
 #'     resources, remember that other services may have restrictions on
 #'     allowed characters. Generally allowed characters are: letters,
 #'     numbers, and spaces representable in UTF-8, and the following
 #'     characters: + - = . _ : / @@.
 #' 
-#' -   Tag keys and values are case-sensitive.
+#'   - Tag keys and values are case-sensitive.
 #' 
-#' -   Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
+#'   - Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
 #'     such as a prefix for either keys or values as it is reserved for AWS
 #'     use. You cannot edit or delete tag keys or values with this prefix.
 #'     Tags with this prefix do not count against your tags per resource
@@ -5752,10 +5752,10 @@ ecs_register_container_instance <- function(cluster = NULL, instanceIdentityDocu
 #' Controls](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html)
 #' in the *Amazon Elastic Container Service Developer Guide*.
 #' 
-#' -   For tasks that use the `host` IPC mode, IPC namespace related
+#'   - For tasks that use the `host` IPC mode, IPC namespace related
 #'     `systemControls` are not supported.
 #' 
-#' -   For tasks that use the `task` IPC mode, IPC namespace related
+#'   - For tasks that use the `task` IPC mode, IPC namespace related
 #'     `systemControls` will apply to all containers within a task.
 #' 
 #' This parameter is not supported for Windows containers or tasks using
@@ -6355,7 +6355,7 @@ ecs_register_task_definition <- function(family, taskRoleArn = NULL, executionRo
 #' 
 #' To manage eventual consistency, you can do the following:
 #' 
-#' -   Confirm the state of the resource before you run a command to modify
+#'   - Confirm the state of the resource before you run a command to modify
 #'     it. Run the DescribeTasks command using an exponential backoff
 #'     algorithm to ensure that you allow enough time for the previous
 #'     command to propagate through the system. To do this, run the
@@ -6363,7 +6363,7 @@ ecs_register_task_definition <- function(family, taskRoleArn = NULL, executionRo
 #'     of wait time and increasing gradually up to five minutes of wait
 #'     time.
 #' 
-#' -   Add wait time between subsequent commands, even if the DescribeTasks
+#'   - Add wait time between subsequent commands, even if the DescribeTasks
 #'     command returns an accurate response. Apply an exponential backoff
 #'     algorithm starting with a couple of seconds of wait time, and
 #'     increase gradually up to about five minutes of wait time.
@@ -6475,24 +6475,24 @@ ecs_register_task_definition <- function(family, taskRoleArn = NULL, executionRo
 #' 
 #' The following basic restrictions apply to tags:
 #' 
-#' -   Maximum number of tags per resource - 50
+#'   - Maximum number of tags per resource - 50
 #' 
-#' -   For each resource, each tag key must be unique, and each tag key can
+#'   - For each resource, each tag key must be unique, and each tag key can
 #'     have only one value.
 #' 
-#' -   Maximum key length - 128 Unicode characters in UTF-8
+#'   - Maximum key length - 128 Unicode characters in UTF-8
 #' 
-#' -   Maximum value length - 256 Unicode characters in UTF-8
+#'   - Maximum value length - 256 Unicode characters in UTF-8
 #' 
-#' -   If your tagging schema is used across multiple services and
+#'   - If your tagging schema is used across multiple services and
 #'     resources, remember that other services may have restrictions on
 #'     allowed characters. Generally allowed characters are: letters,
 #'     numbers, and spaces representable in UTF-8, and the following
 #'     characters: + - = . _ : / @@.
 #' 
-#' -   Tag keys and values are case-sensitive.
+#'   - Tag keys and values are case-sensitive.
 #' 
-#' -   Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
+#'   - Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
 #'     such as a prefix for either keys or values as it is reserved for AWS
 #'     use. You cannot edit or delete tag keys or values with this prefix.
 #'     Tags with this prefix do not count against your tags per resource
@@ -6856,24 +6856,24 @@ ecs_run_task <- function(capacityProviderStrategy = NULL, cluster = NULL, count 
 #' 
 #' The following basic restrictions apply to tags:
 #' 
-#' -   Maximum number of tags per resource - 50
+#'   - Maximum number of tags per resource - 50
 #' 
-#' -   For each resource, each tag key must be unique, and each tag key can
+#'   - For each resource, each tag key must be unique, and each tag key can
 #'     have only one value.
 #' 
-#' -   Maximum key length - 128 Unicode characters in UTF-8
+#'   - Maximum key length - 128 Unicode characters in UTF-8
 #' 
-#' -   Maximum value length - 256 Unicode characters in UTF-8
+#'   - Maximum value length - 256 Unicode characters in UTF-8
 #' 
-#' -   If your tagging schema is used across multiple services and
+#'   - If your tagging schema is used across multiple services and
 #'     resources, remember that other services may have restrictions on
 #'     allowed characters. Generally allowed characters are: letters,
 #'     numbers, and spaces representable in UTF-8, and the following
 #'     characters: + - = . _ : / @@.
 #' 
-#' -   Tag keys and values are case-sensitive.
+#'   - Tag keys and values are case-sensitive.
 #' 
-#' -   Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
+#'   - Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
 #'     such as a prefix for either keys or values as it is reserved for AWS
 #'     use. You cannot edit or delete tag keys or values with this prefix.
 #'     Tags with this prefix do not count against your tags per resource
@@ -7610,24 +7610,24 @@ ecs_submit_task_state_change <- function(cluster = NULL, task = NULL, status = N
 #' 
 #' The following basic restrictions apply to tags:
 #' 
-#' -   Maximum number of tags per resource - 50
+#'   - Maximum number of tags per resource - 50
 #' 
-#' -   For each resource, each tag key must be unique, and each tag key can
+#'   - For each resource, each tag key must be unique, and each tag key can
 #'     have only one value.
 #' 
-#' -   Maximum key length - 128 Unicode characters in UTF-8
+#'   - Maximum key length - 128 Unicode characters in UTF-8
 #' 
-#' -   Maximum value length - 256 Unicode characters in UTF-8
+#'   - Maximum value length - 256 Unicode characters in UTF-8
 #' 
-#' -   If your tagging schema is used across multiple services and
+#'   - If your tagging schema is used across multiple services and
 #'     resources, remember that other services may have restrictions on
 #'     allowed characters. Generally allowed characters are: letters,
 #'     numbers, and spaces representable in UTF-8, and the following
 #'     characters: + - = . _ : / @@.
 #' 
-#' -   Tag keys and values are case-sensitive.
+#'   - Tag keys and values are case-sensitive.
 #' 
-#' -   Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
+#'   - Do not use `aws:`, `AWS:`, or any upper or lowercase combination of
 #'     such as a prefix for either keys or values as it is reserved for AWS
 #'     use. You cannot edit or delete tag keys or values with this prefix.
 #'     Tags with this prefix do not count against your tags per resource
@@ -8087,7 +8087,7 @@ ecs_update_container_agent <- function(cluster = NULL, containerInstance) {
 #' You can change the deployment configuration of your service using
 #' [`update_service`][ecs_update_service].
 #' 
-#' -   If `minimumHealthyPercent` is below 100%, the scheduler can ignore
+#'   - If `minimumHealthyPercent` is below 100%, the scheduler can ignore
 #'     `desiredCount` temporarily during task replacement. For example,
 #'     `desiredCount` is four tasks, a minimum of 50% allows the scheduler
 #'     to stop two existing tasks before starting two new tasks. If the
@@ -8099,7 +8099,7 @@ ecs_update_container_agent <- function(cluster = NULL, containerInstance) {
 #'     and the container instance they are hosted on is reported as healthy
 #'     by the load balancer.
 #' 
-#' -   The `maximumPercent` parameter represents an upper limit on the
+#'   - The `maximumPercent` parameter represents an upper limit on the
 #'     number of running tasks during task replacement, which enables you
 #'     to define the replacement batch size. For example, if `desiredCount`
 #'     is four tasks, a maximum of 200% starts four new tasks before
@@ -8313,7 +8313,7 @@ ecs_update_container_instances_state <- function(cluster = NULL, containerInstan
 #' `minimumHealthyPercent` and `maximumPercent`, to determine the
 #' deployment strategy.
 #' 
-#' -   If `minimumHealthyPercent` is below 100%, the scheduler can ignore
+#'   - If `minimumHealthyPercent` is below 100%, the scheduler can ignore
 #'     `desiredCount` temporarily during a deployment. For example, if
 #'     `desiredCount` is four tasks, a minimum of 50% allows the scheduler
 #'     to stop two existing tasks before starting two new tasks. Tasks for
@@ -8323,7 +8323,7 @@ ecs_update_container_instances_state <- function(cluster = NULL, containerInstan
 #'     and the container instance they are hosted on is reported as healthy
 #'     by the load balancer.
 #' 
-#' -   The `maximumPercent` parameter represents an upper limit on the
+#'   - The `maximumPercent` parameter represents an upper limit on the
 #'     number of running tasks during a deployment, which enables you to
 #'     define the deployment batch size. For example, if `desiredCount` is
 #'     four tasks, a maximum of 200% starts four new tasks before stopping
@@ -8340,21 +8340,21 @@ ecs_update_container_instances_state <- function(cluster = NULL, containerInstan
 #' When the service scheduler launches new tasks, it determines task
 #' placement in your cluster with the following logic:
 #' 
-#' -   Determine which of the container instances in your cluster can
+#'   - Determine which of the container instances in your cluster can
 #'     support your service's task definition (for example, they have the
 #'     required CPU, memory, ports, and container instance attributes).
 #' 
-#' -   By default, the service scheduler attempts to balance tasks across
+#'   - By default, the service scheduler attempts to balance tasks across
 #'     Availability Zones in this manner (although you can choose a
 #'     different placement strategy):
-#' 
-#'     -   Sort the valid container instances by the fewest number of
+#'     
+#'       - Sort the valid container instances by the fewest number of
 #'         running tasks for this service in the same Availability Zone as
 #'         the instance. For example, if zone A has one running service
 #'         task and zones B and C each have zero, valid container instances
 #'         in either zone B or C are considered optimal for placement.
-#' 
-#'     -   Place the new service task on a valid container instance in an
+#'     
+#'       - Place the new service task on a valid container instance in an
 #'         optimal Availability Zone (based on the previous steps),
 #'         favoring container instances with the fewest number of running
 #'         tasks for this service.
@@ -8363,13 +8363,13 @@ ecs_update_container_instances_state <- function(cluster = NULL, containerInstan
 #' balance across the Availability Zones in your cluster using the
 #' following logic:
 #' 
-#' -   Sort the container instances by the largest number of running tasks
+#'   - Sort the container instances by the largest number of running tasks
 #'     for this service in the same Availability Zone as the instance. For
 #'     example, if zone A has one running service task and zones B and C
 #'     each have two, container instances in either zone B or C are
 #'     considered optimal for termination.
 #' 
-#' -   Stop the task on a container instance in an optimal Availability
+#'   - Stop the task on a container instance in an optimal Availability
 #'     Zone (based on the previous steps), favoring container instances
 #'     with the largest number of running tasks for this service.
 #'

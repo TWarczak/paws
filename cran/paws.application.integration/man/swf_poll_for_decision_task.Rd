@@ -487,11 +487,11 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Used by deciders to get a DecisionTask from the specified decision
-\code{taskList}. A decision task may be returned for any open workflow
-execution that is using the specified task list. The task includes a
-paginated view of the history of the workflow execution. The decider
-should use the workflow type and the history to determine how to
+Used by deciders to get a <span>DecisionTask</span> from the specified
+decision \code{taskList}. A decision task may be returned for any open
+workflow execution that is using the specified task list. The task
+includes a paginated view of the history of the workflow execution. The
+decider should use the workflow type and the history to determine how to
 properly handle the task.
 
 This action initiates a long poll, where the service holds the HTTP

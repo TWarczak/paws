@@ -420,44 +420,44 @@ acm_get_certificate <- function(CertificateArn) {
 #' 
 #' Note the following guidelines when importing third party certificates:
 #' 
-#' -   You must enter the private key that matches the certificate you are
+#'   - You must enter the private key that matches the certificate you are
 #'     importing.
 #' 
-#' -   The private key must be unencrypted. You cannot import a private key
+#'   - The private key must be unencrypted. You cannot import a private key
 #'     that is protected by a password or a passphrase.
 #' 
-#' -   If the certificate you are importing is not self-signed, you must
+#'   - If the certificate you are importing is not self-signed, you must
 #'     enter its certificate chain.
 #' 
-#' -   If a certificate chain is included, the issuer must be the subject
+#'   - If a certificate chain is included, the issuer must be the subject
 #'     of one of the certificates in the chain.
 #' 
-#' -   The certificate, private key, and certificate chain must be
+#'   - The certificate, private key, and certificate chain must be
 #'     PEM-encoded.
 #' 
-#' -   The current time must be between the `Not Before` and `Not After`
+#'   - The current time must be between the `Not Before` and `Not After`
 #'     certificate fields.
 #' 
-#' -   The `Issuer` field must not be empty.
+#'   - The `Issuer` field must not be empty.
 #' 
-#' -   The OCSP authority URL, if present, must not exceed 1000 characters.
+#'   - The OCSP authority URL, if present, must not exceed 1000 characters.
 #' 
-#' -   To import a new certificate, omit the `CertificateArn` argument.
+#'   - To import a new certificate, omit the `CertificateArn` argument.
 #'     Include this argument only when you want to replace a previously
 #'     imported certifica
 #' 
-#' -   When you import a certificate by using the CLI, you must specify the
+#'   - When you import a certificate by using the CLI, you must specify the
 #'     certificate, the certificate chain, and the private key by their
 #'     file names preceded by `file://`. For example, you can specify a
 #'     certificate saved in the `C:\temp` folder as
 #'     `file://C:\temp\certificate_to_import.pem`. If you are making an
 #'     HTTP or HTTPS Query request, include these arguments as BLOBs.
 #' 
-#' -   When you import a certificate by using an SDK, you must specify the
+#'   - When you import a certificate by using an SDK, you must specify the
 #'     certificate, the certificate chain, and the private key files in the
 #'     manner required by the programming language you're using.
 #' 
-#' -   The cryptographic algorithm of an imported certificate must match
+#'   - The cryptographic algorithm of an imported certificate must match
 #'     the algorithm of the signing CA. For example, if the signing CA key
 #'     type is RSA, then the certificate key type must also be RSA.
 #' 
@@ -530,15 +530,16 @@ acm_import_certificate <- function(CertificateArn = NULL, Certificate, PrivateKe
 #' Retrieves a list of certificate ARNs and domain names. You can request
 #' that only certificates that match a specific status be listed. You can
 #' also filter by specific attributes of the certificate. Default filtering
-#' returns only `RSA_2048` certificates. For more information, see Filters.
+#' returns only `RSA_2048` certificates. For more information, see
+#' <span>Filters</span>.
 #'
 #' @usage
 #' acm_list_certificates(CertificateStatuses, Includes, NextToken,
 #'   MaxItems)
 #'
 #' @param CertificateStatuses Filter the certificate list by status value.
-#' @param Includes Filter the certificate list. For more information, see the Filters
-#' structure.
+#' @param Includes Filter the certificate list. For more information, see the
+#' <span>Filters</span> structure.
 #' @param NextToken Use this parameter only when paginating results and only in a subsequent
 #' request after you receive a response with truncated results. Set it to
 #' the value of `NextToken` from the response you just received.
@@ -740,8 +741,8 @@ acm_remove_tags_from_certificate <- function(CertificateArn, Tags) {
 #' principal permission to do
 #' so](https://docs.aws.amazon.com/acm-pca/latest/userguide/). For more
 #' information, see [Testing Managed
-#' Renewal](https://docs.aws.amazon.com/acm/latest/userguide/) in the ACM
-#' User Guide.
+#' Renewal](https://docs.aws.amazon.com/acm/latest/userguide/manual-renewal.html)
+#' in the ACM User Guide.
 #'
 #' @usage
 #' acm_renew_certificate(CertificateArn)
@@ -797,9 +798,10 @@ acm_renew_certificate <- function(CertificateArn) {
 #' required. If you are requesting a public certificate, each domain name
 #' that you specify must be validated to verify that you own or control the
 #' domain. You can use [DNS
-#' validation](https://docs.aws.amazon.com/acm/latest/userguide/) or [email
-#' validation](https://docs.aws.amazon.com/acm/latest/userguide/). We
-#' recommend that you use DNS validation. ACM issues public certificates
+#' validation](https://docs.aws.amazon.com/acm/latest/userguide/dns-validation.html)
+#' or [email
+#' validation](https://docs.aws.amazon.com/acm/latest/userguide/email-validation.html).
+#' We recommend that you use DNS validation. ACM issues public certificates
 #' after receiving approval from the domain owner.
 #'
 #' @usage
@@ -818,9 +820,10 @@ acm_renew_certificate <- function(CertificateArn) {
 #' up to 253 octets in length.
 #' @param ValidationMethod The method you want to use if you are requesting a public certificate to
 #' validate that you own or control domain. You can [validate with
-#' DNS](https://docs.aws.amazon.com/acm/latest/userguide/) or [validate
-#' with email](https://docs.aws.amazon.com/acm/latest/userguide/). We
-#' recommend that you use DNS validation.
+#' DNS](https://docs.aws.amazon.com/acm/latest/userguide/dns-validation.html)
+#' or [validate with
+#' email](https://docs.aws.amazon.com/acm/latest/userguide/email-validation.html).
+#' We recommend that you use DNS validation.
 #' @param SubjectAlternativeNames Additional FQDNs to be included in the Subject Alternative Name
 #' extension of the ACM certificate. For example, add the name
 #' www.example.net to a certificate for which the `DomainName` field is
@@ -835,15 +838,15 @@ acm_renew_certificate <- function(CertificateArn) {
 #' of multiple labels separated by periods. No label can be longer than 63
 #' octets. Consider the following examples:
 #' 
-#' -   `(63 octets).(63 octets).(63 octets).(61 octets)` is legal because
+#'   - `(63 octets).(63 octets).(63 octets).(61 octets)` is legal because
 #'     the total length is 253 octets (63+1+63+1+63+1+61) and no label
 #'     exceeds 63 octets.
 #' 
-#' -   `(64 octets).(63 octets).(63 octets).(61 octets)` is not legal
+#'   - `(64 octets).(63 octets).(63 octets).(61 octets)` is not legal
 #'     because the total length exceeds 253 octets (64+1+63+1+63+1+61) and
 #'     the first label exceeds 63 octets.
 #' 
-#' -   `(63 octets).(63 octets).(63 octets).(62 octets)` is not legal
+#'   - `(63 octets).(63 octets).(63 octets).(62 octets)` is not legal
 #'     because the total length of the DNS name (63+1+63+1+63+1+62) exceeds
 #'     253 octets.
 #' @param IdempotencyToken Customer chosen string that can be used to distinguish between calls to
@@ -967,15 +970,15 @@ acm_request_certificate <- function(DomainName, ValidationMethod = NULL, Subject
 #' the domain registrant, technical contact, and administrative contact in
 #' WHOIS and the following five addresses:
 #' 
-#' -   admin@@subdomain.example.com
+#'   - admin@@subdomain.example.com
 #' 
-#' -   administrator@@subdomain.example.com
+#'   - administrator@@subdomain.example.com
 #' 
-#' -   hostmaster@@subdomain.example.com
+#'   - hostmaster@@subdomain.example.com
 #' 
-#' -   postmaster@@subdomain.example.com
+#'   - postmaster@@subdomain.example.com
 #' 
-#' -   webmaster@@subdomain.example.com
+#'   - webmaster@@subdomain.example.com
 #'
 #' @return
 #' An empty list.
@@ -1023,7 +1026,8 @@ acm_resend_validation_email <- function(CertificateArn, Domain, ValidationDomain
 #'
 #' @param CertificateArn &#91;required&#93; ARN of the requested certificate to update. This must be of the form:
 #' 
-#' `arn:aws:acm:us-east-1:account:certificate/12345678-1234-1234-1234-123456789012 `
+#' ` arn:aws:acm:us-east-1:account:certificate/12345678-1234-1234-1234-123456789012
+#'  `
 #' @param Options &#91;required&#93; Use to update the options for your certificate. Currently, you can
 #' specify whether to add your certificate to a transparency log.
 #' Certificate transparency makes it possible to detect SSL/TLS

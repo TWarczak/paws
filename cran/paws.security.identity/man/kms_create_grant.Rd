@@ -48,7 +48,7 @@ in the Example ARNs section of the \emph{AWS General Reference}.}
 only when the encryption context matches or includes the encryption
 context specified in this structure. For more information about
 encryption context, see \href{https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context}{Encryption Context}
-in the \strong{AWS Key Management Service Developer Guide} .
+in the \emph{\emph{AWS Key Management Service Developer Guide}} .
 
 Grant constraints are not applied to operations that do not support an
 encryption context, such as cryptographic operations with asymmetric
@@ -93,7 +93,8 @@ key policies.
 
 To create a grant that allows a \href{https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations}{cryptographic operation}
 only when the request includes a particular \href{https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context}{encryption context},
-use the \code{Constraints} parameter. For details, see GrantConstraints.
+use the \code{Constraints} parameter. For details, see
+<span>GrantConstraints</span>.
 
 You can create grants on symmetric and asymmetric CMKs. However, if the
 grant allows an operation that the CMK does not support,
@@ -125,7 +126,7 @@ For information about symmetric and asymmetric CMKs, see \href{https://docs.aws.
 in the \emph{AWS Key Management Service Developer Guide}. For more
 information about grants, see
 \href{https://docs.aws.amazon.com/kms/latest/developerguide/grants.html}{Grants}
-in the \strong{AWS Key Management Service Developer Guide} .
+in the \emph{\emph{AWS Key Management Service Developer Guide}} .
 
 The CMK that you use for this operation must be in a compatible key
 state. For details, see \href{https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html}{How Key State Affects Use of a Customer Master Key}

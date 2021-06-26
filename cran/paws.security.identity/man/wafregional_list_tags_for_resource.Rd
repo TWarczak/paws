@@ -2,7 +2,7 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_list_tags_for_resource}
 \alias{wafregional_list_tags_for_resource}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 wafregional_list_tags_for_resource(NextMarker, Limit, ResourceARN)
 }

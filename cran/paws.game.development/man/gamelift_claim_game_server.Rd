@@ -2,17 +2,18 @@
 % Please edit documentation in R/gamelift_operations.R
 \name{gamelift_claim_game_server}
 \alias{gamelift_claim_game_server}
-\title{This operation is used with the Amazon GameLift FleetIQ solution and
-game server groups}
+\title{THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND
+GAME SERVER GROUPS}
 \usage{
 gamelift_claim_game_server(GameServerGroupName, GameServerId,
   GameServerData)
 }
 \arguments{
 \item{GameServerGroupName}{[required] A unique identifier for the game server group where the game server is
-running. Use either the GameServerGroup name or ARN value.. If you are
-not specifying a game server to claim, this value identifies where you
-want GameLift FleetIQ to look for an available game server to claim.}
+running. Use either the <span>GameServerGroup</span> name or ARN value..
+If you are not specifying a game server to claim, this value identifies
+where you want GameLift FleetIQ to look for an available game server to
+claim.}
 
 \item{GameServerId}{A custom string that uniquely identifies the game server to claim. If
 this parameter is left empty, GameLift FleetIQ searches for an available

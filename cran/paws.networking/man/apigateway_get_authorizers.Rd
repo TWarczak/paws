@@ -7,7 +7,8 @@
 apigateway_get_authorizers(restApiId, position, limit)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
 \item{position}{The current pagination position in the paged result set.}
 
@@ -37,7 +38,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Describe an existing Authorizers resource.<div class="seeAlso">
+Describe an existing <span>Authorizers</span> resource.<div class="seeAlso">
 
 
 \href{https://docs.aws.amazon.com/cli/latest/reference/apigateway/get-authorizers.html}{AWS CLI}</div>

@@ -17,9 +17,9 @@ NULL
 #' 
 #' Related actions include:
 #' 
-#' -   [`delete_endpoint`][s3outposts_delete_endpoint]
+#'   - [`delete_endpoint`][s3outposts_delete_endpoint]
 #' 
-#' -   [`list_endpoints`][s3outposts_list_endpoints]
+#'   - [`list_endpoints`][s3outposts_list_endpoints]
 #'
 #' @usage
 #' s3outposts_create_endpoint(OutpostId, SubnetId, SecurityGroupId)
@@ -78,9 +78,9 @@ s3outposts_create_endpoint <- function(OutpostId, SubnetId, SecurityGroupId) {
 #' 
 #' Related actions include:
 #' 
-#' -   [`create_endpoint`][s3outposts_create_endpoint]
+#'   - [`create_endpoint`][s3outposts_create_endpoint]
 #' 
-#' -   [`list_endpoints`][s3outposts_list_endpoints]
+#'   - [`list_endpoints`][s3outposts_list_endpoints]
 #'
 #' @usage
 #' s3outposts_delete_endpoint(EndpointId, OutpostId)
@@ -132,9 +132,9 @@ s3outposts_delete_endpoint <- function(EndpointId, OutpostId) {
 #' 
 #' Related actions include:
 #' 
-#' -   [`create_endpoint`][s3outposts_create_endpoint]
+#'   - [`create_endpoint`][s3outposts_create_endpoint]
 #' 
-#' -   [`delete_endpoint`][s3outposts_delete_endpoint]
+#'   - [`delete_endpoint`][s3outposts_delete_endpoint]
 #'
 #' @usage
 #' s3outposts_list_endpoints(NextToken, MaxResults)

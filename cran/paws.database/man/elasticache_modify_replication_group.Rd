@@ -143,7 +143,7 @@ length
 '\%'
 }
 
-For more information, see AUTH password at AUTH.}
+For more information, see AUTH password at <span>AUTH</span>.}
 
 \item{AuthTokenUpdateStrategy}{Specifies the strategy to use to update the AUTH token. This parameter
 must be specified with the \code{auth-token} parameter. Possible values:

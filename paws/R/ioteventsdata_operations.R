@@ -16,8 +16,8 @@ NULL
 #' @usage
 #' ioteventsdata_batch_put_message(messages)
 #'
-#' @param messages &#91;required&#93; The list of messages to send. Each message has the following format:
-#' `'{ "messageId": "string", "inputName": "string", "payload": "string"}'`
+#' @param messages &#91;required&#93; The list of messages to send. Each message has the following format: `'{
+#' "messageId": "string", "inputName": "string", "payload": "string"}'`
 #'
 #' @return
 #' A list with the following syntax:

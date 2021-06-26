@@ -103,11 +103,11 @@ codeguruprofiler_add_notification_channels <- function(channels, profilingGroupN
 #' the most granular available resolution after the target resolution.
 #' There are 3 valid values.
 #' 
-#' -   `P1D` — 1 day
+#'   - `P1D` — 1 day
 #' 
-#' -   `PT1H` — 1 hour
+#'   - `PT1H` — 1 hour
 #' 
-#' -   `PT5M` — 5 minutes
+#'   - `PT5M` — 5 minutes
 #'
 #' @return
 #' A list with the following syntax:
@@ -218,29 +218,29 @@ codeguruprofiler_batch_get_frame_metric_data <- function(endTime = NULL, frameMe
 #' @param metadata Metadata captured about the compute platform the agent is running on. It
 #' includes information about sampling and reporting. The valid fields are:
 #' 
-#' -   `COMPUTE_PLATFORM` - The compute platform on which the agent is
+#'   - `COMPUTE_PLATFORM` - The compute platform on which the agent is
 #'     running
 #' 
-#' -   `AGENT_ID` - The ID for an agent instance.
+#'   - `AGENT_ID` - The ID for an agent instance.
 #' 
-#' -   `AWS_REQUEST_ID` - The AWS request ID of a Lambda invocation.
+#'   - `AWS_REQUEST_ID` - The AWS request ID of a Lambda invocation.
 #' 
-#' -   `EXECUTION_ENVIRONMENT` - The execution environment a Lambda
+#'   - `EXECUTION_ENVIRONMENT` - The execution environment a Lambda
 #'     function is running on.
 #' 
-#' -   `LAMBDA_FUNCTION_ARN` - The Amazon Resource Name (ARN) that is used
+#'   - `LAMBDA_FUNCTION_ARN` - The Amazon Resource Name (ARN) that is used
 #'     to invoke a Lambda function.
 #' 
-#' -   `LAMBDA_MEMORY_LIMIT_IN_MB` - The memory allocated to a Lambda
+#'   - `LAMBDA_MEMORY_LIMIT_IN_MB` - The memory allocated to a Lambda
 #'     function.
 #' 
-#' -   `LAMBDA_REMAINING_TIME_IN_MILLISECONDS` - The time in milliseconds
+#'   - `LAMBDA_REMAINING_TIME_IN_MILLISECONDS` - The time in milliseconds
 #'     before execution of a Lambda function times out.
 #' 
-#' -   `LAMBDA_TIME_GAP_BETWEEN_INVOKES_IN_MILLISECONDS` - The time in
+#'   - `LAMBDA_TIME_GAP_BETWEEN_INVOKES_IN_MILLISECONDS` - The time in
 #'     milliseconds between two invocations of a Lambda function.
 #' 
-#' -   `LAMBDA_PREVIOUS_EXECUTION_TIME_IN_MILLISECONDS` - The time in
+#'   - `LAMBDA_PREVIOUS_EXECUTION_TIME_IN_MILLISECONDS` - The time in
 #'     milliseconds for the previous Lambda invocation.
 #' @param profilingGroupName &#91;required&#93; The name of the profiling group for which the configured agent is
 #' collecting profiling data.
@@ -701,7 +701,9 @@ codeguruprofiler_get_policy <- function(profilingGroupName) {
 #' range. Amazon CodeGuru Profiler collects posted agent profiles for a
 #' profiling group into aggregated profiles.
 #' 
-#'      <note> <p> Because aggregated profiles expire over time <code>GetProfile</code> is not idempotent. </p> </note> <p> Specify the time range for the requested aggregated profile using 1 or 2 of the following parameters: <code>startTime</code>, <code>endTime</code>, <code>period</code>. The maximum time range allowed is 7 days. If you specify all 3 parameters, an exception is thrown. If you specify only <code>period</code>, the latest aggregated profile is returned. </p> <p> Aggregated profiles are available with aggregation periods of 5 minutes, 1 hour, and 1 day, aligned to UTC. The aggregation period of an aggregated profile determines how long it is retained. For more information, see <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_AggregatedProfileTime.html"> <code>AggregatedProfileTime</code> </a>. The aggregated profile's aggregation period determines how long it is retained by CodeGuru Profiler. </p> <ul> <li> <p> If the aggregation period is 5 minutes, the aggregated profile is retained for 15 days. </p> </li> <li> <p> If the aggregation period is 1 hour, the aggregated profile is retained for 60 days. </p> </li> <li> <p> If the aggregation period is 1 day, the aggregated profile is retained for 3 years. </p> </li> </ul> <p>There are two use cases for calling <code>GetProfile</code>.</p> <ol> <li> <p> If you want to return an aggregated profile that already exists, use <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_ListProfileTimes.html"> <code>ListProfileTimes</code> </a> to view the time ranges of existing aggregated profiles. Use them in a <code>GetProfile</code> request to return a specific, existing aggregated profile. </p> </li> <li> <p> If you want to return an aggregated profile for a time range that doesn't align with an existing aggregated profile, then CodeGuru Profiler makes a best effort to combine existing aggregated profiles from the requested time range and return them as one aggregated profile. </p> <p> If aggregated profiles do not exist for the full time range requested, then aggregated profiles for a smaller time range are returned. For example, if the requested time range is from 00:00 to 00:20, and the existing aggregated profiles are from 00:15 and 00:25, then the aggregated profiles from 00:15 to 00:20 are returned. </p> </li> </ol> 
+#' ``` 
+#'  <note> <p> Because aggregated profiles expire over time <code>GetProfile</code> is not idempotent. </p> </note> <p> Specify the time range for the requested aggregated profile using 1 or 2 of the following parameters: <code>startTime</code>, <code>endTime</code>, <code>period</code>. The maximum time range allowed is 7 days. If you specify all 3 parameters, an exception is thrown. If you specify only <code>period</code>, the latest aggregated profile is returned. </p> <p> Aggregated profiles are available with aggregation periods of 5 minutes, 1 hour, and 1 day, aligned to UTC. The aggregation period of an aggregated profile determines how long it is retained. For more information, see <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_AggregatedProfileTime.html"> <code>AggregatedProfileTime</code> </a>. The aggregated profile's aggregation period determines how long it is retained by CodeGuru Profiler. </p> <ul> <li> <p> If the aggregation period is 5 minutes, the aggregated profile is retained for 15 days. </p> </li> <li> <p> If the aggregation period is 1 hour, the aggregated profile is retained for 60 days. </p> </li> <li> <p> If the aggregation period is 1 day, the aggregated profile is retained for 3 years. </p> </li> </ul> <p>There are two use cases for calling <code>GetProfile</code>.</p> <ol> <li> <p> If you want to return an aggregated profile that already exists, use <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_ListProfileTimes.html"> <code>ListProfileTimes</code> </a> to view the time ranges of existing aggregated profiles. Use them in a <code>GetProfile</code> request to return a specific, existing aggregated profile. </p> </li> <li> <p> If you want to return an aggregated profile for a time range that doesn't align with an existing aggregated profile, then CodeGuru Profiler makes a best effort to combine existing aggregated profiles from the requested time range and return them as one aggregated profile. </p> <p> If aggregated profiles do not exist for the full time range requested, then aggregated profiles for a smaller time range are returned. For example, if the requested time range is from 00:00 to 00:20, and the existing aggregated profiles are from 00:15 and 00:25, then the aggregated profiles from 00:15 to 00:20 are returned. </p> </li> </ol> 
+#' ```
 #'
 #' @usage
 #' codeguruprofiler_get_profile(accept, endTime, maxDepth, period,
@@ -711,7 +713,9 @@ codeguruprofiler_get_policy <- function(profilingGroupName) {
 #' `Accept` and `Content-Type` headers of the HTTP request. You can specify
 #' one of the following: or the default .
 #' 
-#'      <ul> <li> <p> <code>application/json</code> — standard JSON format </p> </li> <li> <p> <code>application/x-amzn-ion</code> — the Amazon Ion data format. For more information, see <a href="http://amzn.github.io/ion-docs/">Amazon Ion</a>. </p> </li> </ul> 
+#' ``` 
+#'  <ul> <li> <p> <code>application/json</code> — standard JSON format </p> </li> <li> <p> <code>application/x-amzn-ion</code> — the Amazon Ion data format. For more information, see <a href="http://amzn.github.io/ion-docs/">Amazon Ion</a>. </p> </li> </ul> 
+#' ```
 #' @param endTime The end time of the requested profile. Specify using the ISO 8601
 #' format. For example, 2020-06-01T13:15:02.001Z represents 1 millisecond
 #' past June 1, 2020 1:15:02 PM UTC.
@@ -727,13 +731,17 @@ codeguruprofiler_get_policy <- function(profilingGroupName) {
 #' returned aggregated profile. Specify using the ISO 8601 format. For
 #' example, `P1DT1H1M1S`.
 #' 
-#'      <p> To get the latest aggregated profile, specify only <code>period</code>. </p> 
+#' ``` 
+#'  <p> To get the latest aggregated profile, specify only <code>period</code>. </p> 
+#' ```
 #' @param profilingGroupName &#91;required&#93; The name of the profiling group to get.
 #' @param startTime The start time of the profile to get. Specify using the ISO 8601 format.
 #' For example, 2020-06-01T13:15:02.001Z represents 1 millisecond past June
 #' 1, 2020 1:15:02 PM UTC.
 #' 
-#'      <p> If you specify <code>startTime</code>, then you must also specify <code>period</code> or <code>endTime</code>, but not both. </p> 
+#' ``` 
+#'  <p> If you specify <code>startTime</code>, then you must also specify <code>period</code> or <code>endTime</code>, but not both. </p> 
+#' ```
 #'
 #' @return
 #' A list with the following syntax:
@@ -804,27 +812,27 @@ codeguruprofiler_get_profile <- function(accept = NULL, endTime = NULL, maxDepth
 #' @param locale The language used to provide analysis. Specify using a string that is
 #' one of the following `BCP 47` language codes.
 #' 
-#' -   `de-DE` - German, Germany
+#'   - `de-DE` - German, Germany
 #' 
-#' -   `en-GB` - English, United Kingdom
+#'   - `en-GB` - English, United Kingdom
 #' 
-#' -   `en-US` - English, United States
+#'   - `en-US` - English, United States
 #' 
-#' -   `es-ES` - Spanish, Spain
+#'   - `es-ES` - Spanish, Spain
 #' 
-#' -   `fr-FR` - French, France
+#'   - `fr-FR` - French, France
 #' 
-#' -   `it-IT` - Italian, Italy
+#'   - `it-IT` - Italian, Italy
 #' 
-#' -   `ja-JP` - Japanese, Japan
+#'   - `ja-JP` - Japanese, Japan
 #' 
-#' -   `ko-KR` - Korean, Republic of Korea
+#'   - `ko-KR` - Korean, Republic of Korea
 #' 
-#' -   `pt-BR` - Portugese, Brazil
+#'   - `pt-BR` - Portugese, Brazil
 #' 
-#' -   `zh-CN` - Chinese, China
+#'   - `zh-CN` - Chinese, China
 #' 
-#' -   `zh-TW` - Chinese, Taiwan
+#'   - `zh-TW` - Chinese, Taiwan
 #' @param profilingGroupName &#91;required&#93; The name of the profiling group to get analysis data about.
 #' @param startTime &#91;required&#93; The end time of the profile to get analysis data about. You must specify
 #' `startTime` and `endTime`. This is specified using the ISO 8601 format.
@@ -1074,11 +1082,11 @@ codeguruprofiler_list_findings_reports <- function(dailyReportsOnly = NULL, endT
 #' aggregation profile collects posted agent profiles for a profiling
 #' group. There are 3 valid values.
 #' 
-#' -   `P1D` — 1 day
+#'   - `P1D` — 1 day
 #' 
-#' -   `PT1H` — 1 hour
+#'   - `PT1H` — 1 hour
 #' 
-#' -   `PT5M` — 5 minutes
+#'   - `PT5M` — 5 minutes
 #' @param profilingGroupName &#91;required&#93; The name of the profiling group.
 #' @param startTime &#91;required&#93; The start time of the time range from which to list the profiles.
 #'
@@ -1307,7 +1315,9 @@ codeguruprofiler_list_tags_for_resource <- function(resourceArn) {
 #' `Accept` and `Content-Type` headers of the HTTP request. You can specify
 #' one of the following: or the default .
 #' 
-#'      <ul> <li> <p> <code>application/json</code> — standard JSON format </p> </li> <li> <p> <code>application/x-amzn-ion</code> — the Amazon Ion data format. For more information, see <a href="http://amzn.github.io/ion-docs/">Amazon Ion</a>. </p> </li> </ul> 
+#' ``` 
+#'  <ul> <li> <p> <code>application/json</code> — standard JSON format </p> </li> <li> <p> <code>application/x-amzn-ion</code> — the Amazon Ion data format. For more information, see <a href="http://amzn.github.io/ion-docs/">Amazon Ion</a>. </p> </li> </ul> 
+#' ```
 #' @param profileToken Amazon CodeGuru Profiler uses this universally unique identifier (UUID)
 #' to prevent the accidental submission of duplicate profiling data if
 #' there are failures and retries.
@@ -1356,7 +1366,9 @@ codeguruprofiler_post_agent_profile <- function(agentProfile, contentType, profi
 #' resource-based policy, one is created for it using the permissions in
 #' the action group and the roles and users in the `principals` parameter.
 #' 
-#'      <p> The one supported action group that can be added is <code>agentPermission</code> which grants <code>ConfigureAgent</code> and <code>PostAgent</code> permissions. For more information, see <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-ug/resource-based-policies.html">Resource-based policies in CodeGuru Profiler</a> in the <i>Amazon CodeGuru Profiler User Guide</i>, <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_ConfigureAgent.html"> <code>ConfigureAgent</code> </a>, and <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_PostAgentProfile.html"> <code>PostAgentProfile</code> </a>. </p> <p> The first time you call <code>PutPermission</code> on a profiling group, do not specify a <code>revisionId</code> because it doesn't have a resource-based policy. Subsequent calls must provide a <code>revisionId</code> to specify which revision of the resource-based policy to add the permissions to. </p> <p> The response contains the profiling group's JSON-formatted resource policy. </p> 
+#' ``` 
+#'  <p> The one supported action group that can be added is <code>agentPermission</code> which grants <code>ConfigureAgent</code> and <code>PostAgent</code> permissions. For more information, see <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-ug/resource-based-policies.html">Resource-based policies in CodeGuru Profiler</a> in the <i>Amazon CodeGuru Profiler User Guide</i>, <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_ConfigureAgent.html"> <code>ConfigureAgent</code> </a>, and <a href="https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_PostAgentProfile.html"> <code>PostAgentProfile</code> </a>. </p> <p> The first time you call <code>PutPermission</code> on a profiling group, do not specify a <code>revisionId</code> because it doesn't have a resource-based policy. Subsequent calls must provide a <code>revisionId</code> to specify which revision of the resource-based policy to add the permissions to. </p> <p> The response contains the profiling group's JSON-formatted resource policy. </p> 
+#' ```
 #'
 #' @usage
 #' codeguruprofiler_put_permission(actionGroup, principals,

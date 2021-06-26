@@ -2,7 +2,7 @@
 % Please edit documentation in R/cloudhsm_operations.R
 \name{cloudhsm_create_hsm}
 \alias{cloudhsm_create_hsm}
-\title{This is documentation for AWS CloudHSM Classic}
+\title{This is documentation for AWS CLOUDHSM CLASSIC}
 \usage{
 cloudhsm_create_hsm(SubnetId, SshKey, EniIp, IamRoleArn, ExternalId,
   SubscriptionType, ClientToken, SyslogIp)
@@ -50,8 +50,8 @@ There is an upfront fee charged for each HSM instance that you create
 with the \code{\link[=cloudhsm_create_hsm]{create_hsm}} operation. If you
 accidentally provision an HSM and want to request a refund, delete the
 instance using the \code{\link[=cloudhsm_delete_hsm]{delete_hsm}} operation, go to
-the AWS Support Center, create a new case, and select \strong{Account and
-Billing Support}.
+the <span>AWS Support Center</span>, create a new case, and select
+\strong{Account and Billing Support}.
 
 It can take up to 20 minutes to create and provision an HSM. You can
 monitor the status of the HSM with the

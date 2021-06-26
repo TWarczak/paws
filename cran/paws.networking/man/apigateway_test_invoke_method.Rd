@@ -10,7 +10,8 @@ apigateway_test_invoke_method(restApiId, resourceId, httpMethod,
   clientCertificateId, stageVariables)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
 \item{resourceId}{[required] [Required] Specifies a test invoke method request's resource ID.}
 
@@ -27,12 +28,12 @@ parameters.}
 \item{multiValueHeaders}{The headers as a map from string to list of values to simulate an
 incoming invocation request.}
 
-\item{clientCertificateId}{A ClientCertificate identifier to use in the test invocation. API
-Gateway will use the certificate when making the HTTPS request to the
-defined back-end endpoint.}
+\item{clientCertificateId}{A <span>ClientCertificate</span> identifier to use in the test
+invocation. API Gateway will use the certificate when making the HTTPS
+request to the defined back-end endpoint.}
 
 \item{stageVariables}{A key-value map of stage variables to simulate an invocation on a
-deployed Stage.}
+deployed <span>Stage</span>.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -52,8 +53,9 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Simulate the execution of a Method in your RestApi with headers,
-parameters, and an incoming request body.
+Simulate the execution of a <span>Method</span> in your
+<span>RestApi</span> with headers, parameters, and an incoming request
+body.
 }
 \section{Request syntax}{
 \preformatted{svc$test_invoke_method(

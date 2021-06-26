@@ -25,8 +25,8 @@ response.}
 API returns up to 1,000 key names. The response might contain fewer keys
 but will never contain more. If additional keys satisfy the search
 criteria, but were not returned because max-keys was exceeded, the
-response contains <isTruncated>true</isTruncated>. To return
-the additional keys, see key-marker and version-id-marker.}
+response contains \<isTruncated\>true\</isTruncated\>. To return the
+additional keys, see key-marker and version-id-marker.}
 
 \item{Prefix}{Use this parameter to select only those keys that begin with the
 specified prefix. You can use prefixes to separate a bucket into
@@ -38,8 +38,7 @@ under CommonPrefixes.}
 \item{VersionIdMarker}{Specifies the object version you want to start listing from.}
 
 \item{ExpectedBucketOwner}{The account id of the expected bucket owner. If the bucket is owned by a
-different account, the request will fail with an HTTP
-\verb{403 (Access Denied)} error.}
+different account, the request will fail with an HTTP \verb{403 (Access Denied)} error.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

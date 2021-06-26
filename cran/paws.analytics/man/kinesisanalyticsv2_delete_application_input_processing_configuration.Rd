@@ -30,7 +30,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Deletes an InputProcessingConfiguration from an input.
+Deletes an <span>InputProcessingConfiguration</span> from an input.
 }
 \section{Request syntax}{
 \preformatted{svc$delete_application_input_processing_configuration(

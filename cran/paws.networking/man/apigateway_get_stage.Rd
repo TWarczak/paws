@@ -7,9 +7,11 @@
 apigateway_get_stage(restApiId, stageName)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
-\item{stageName}{[required] [Required] The name of the Stage resource to get information about.}
+\item{stageName}{[required] [Required] The name of the <span>Stage</span> resource to get
+information about.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -65,7 +67,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Gets information about a Stage resource.
+Gets information about a <span>Stage</span> resource.
 }
 \section{Request syntax}{
 \preformatted{svc$get_stage(

@@ -10,7 +10,7 @@ clouddirectory_publish_schema(DevelopmentSchemaArn, Version,
 }
 \arguments{
 \item{DevelopmentSchemaArn}{[required] The Amazon Resource Name (ARN) that is associated with the development
-schema. For more information, see arns.}
+schema. For more information, see <span>arns</span>.}
 
 \item{Version}{[required] The major version under which the schema will be published. Schemas have
 both a major and minor version associated with them.}

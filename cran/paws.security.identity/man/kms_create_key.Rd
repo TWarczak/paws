@@ -19,7 +19,7 @@ policy must allow the principal that is making the
 \code{\link[=kms_put_key_policy]{put_key_policy}} request on the CMK. This
 reduces the risk that the CMK becomes unmanageable. For more
 information, refer to the scenario in the \href{https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam}{Default Key Policy}
-section of the \strong{AWS Key Management Service Developer Guide} .
+section of the \emph{\emph{AWS Key Management Service Developer Guide}} .
 \item Each statement in the key policy must contain one or more
 principals. The principals in the key policy must exist and be
 visible to AWS KMS. When you create a new AWS principal (for
@@ -37,7 +37,7 @@ in the \emph{AWS Key Management Service Developer Guide}.
 The key policy size quota is 32 kilobytes (32768 bytes).
 
 For help writing and formatting a JSON policy document, see the \href{https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html}{IAM JSON Policy Reference}
-in the \strong{IAM User Guide} .}
+in the \emph{\emph{IAM User Guide}} .}
 
 \item{Description}{A description of the CMK.
 
@@ -150,7 +150,7 @@ Setting this value to true increases the risk that the CMK becomes
 unmanageable. Do not set this value to true indiscriminately.
 
 For more information, refer to the scenario in the \href{https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam}{Default Key Policy}
-section in the \strong{AWS Key Management Service Developer Guide} .
+section in the \emph{\emph{AWS Key Management Service Developer Guide}} .
 
 Use this parameter only when you include a policy in the request and you
 intend to prevent the principal that is making the request from making a
@@ -265,7 +265,7 @@ your key material. Then, use
 \code{\link[=kms_import_key_material]{import_key_material}} with your import token
 to import the key material. For step-by-step instructions, see
 \href{https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html}{Importing Key Material}
-in the \strong{AWS Key Management Service Developer Guide} . You cannot
+in the \emph{\emph{AWS Key Management Service Developer Guide}} . You cannot
 import the key material into an asymmetric CMK.
 }
 
@@ -280,7 +280,7 @@ the AWS Region.
 
 You cannot create an asymmetric CMK in a custom key store. For
 information about custom key stores in AWS KMS see \href{https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html}{Using Custom Key Stores}
-in the \strong{AWS Key Management Service Developer Guide} .
+in the \emph{\emph{AWS Key Management Service Developer Guide}} .
 
 \strong{Cross-account use}: No. You cannot use this operation to create a CMK
 in a different AWS account.

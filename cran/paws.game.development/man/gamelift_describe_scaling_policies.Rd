@@ -62,8 +62,8 @@ Retrieves all scaling policies applied to a fleet.
 To get a fleet's scaling policies, specify the fleet ID. You can filter
 this request by policy status, such as to retrieve only active scaling
 policies. Use the pagination parameters to retrieve results as a set of
-sequential pages. If successful, set of ScalingPolicy objects is
-returned for the fleet.
+sequential pages. If successful, set of <span>ScalingPolicy</span>
+objects is returned for the fleet.
 
 A fleet may have all of its scaling policies suspended
 (\code{\link[=gamelift_stop_fleet_actions]{stop_fleet_actions}}). This operation

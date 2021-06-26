@@ -155,10 +155,10 @@ gluedatabrew_create_dataset <- function(Name, FormatOptions = NULL, Input, Tags 
 #' protect the job.
 #' @param EncryptionMode The encryption mode for the job, which can be one of the following:
 #' 
-#' -   `SSE-KMS` - para&gt;`SSE-KMS` - server-side encryption with AWS
+#'   - `SSE-KMS` - para\>`SSE-KMS` - server-side encryption with AWS
 #'     KMS-managed keys.
 #' 
-#' -   `SSE-S3` - Server-side encryption with keys managed by Amazon S3.
+#'   - `SSE-S3` - Server-side encryption with keys managed by Amazon S3.
 #' @param Name &#91;required&#93; The name of the job to be created.
 #' @param LogSubscription A value that enables or disables Amazon CloudWatch logging for the
 #' current AWS account. If logging is enabled, CloudWatch writes one log
@@ -374,9 +374,9 @@ gluedatabrew_create_recipe <- function(Description = NULL, Name, Steps, Tags = N
 #' protect the job.
 #' @param EncryptionMode The encryption mode for the job, which can be one of the following:
 #' 
-#' -   `SSE-KMS` - Server-side encryption with AWS KMS-managed keys.
+#'   - `SSE-KMS` - Server-side encryption with AWS KMS-managed keys.
 #' 
-#' -   `SSE-S3` - Server-side encryption with keys managed by Amazon S3.
+#'   - `SSE-S3` - Server-side encryption with keys managed by Amazon S3.
 #' @param Name &#91;required&#93; A unique name for the job.
 #' @param LogSubscription A value that enables or disables Amazon CloudWatch logging for the
 #' current AWS account. If logging is enabled, CloudWatch writes one log
@@ -2276,9 +2276,9 @@ gluedatabrew_update_dataset <- function(Name, FormatOptions = NULL, Input) {
 #' protect the job.
 #' @param EncryptionMode The encryption mode for the job, which can be one of the following:
 #' 
-#' -   `SSE-KMS` - Server-side encryption with AWS KMS-managed keys.
+#'   - `SSE-KMS` - Server-side encryption with AWS KMS-managed keys.
 #' 
-#' -   `SSE-S3` - Server-side encryption with keys managed by Amazon S3.
+#'   - `SSE-S3` - Server-side encryption with keys managed by Amazon S3.
 #' @param Name &#91;required&#93; The name of the job to be updated.
 #' @param LogSubscription A value that enables or disables Amazon CloudWatch logging for the
 #' current AWS account. If logging is enabled, CloudWatch writes one log
@@ -2479,9 +2479,9 @@ gluedatabrew_update_recipe <- function(Description = NULL, Name, Steps = NULL) {
 #' protect the job.
 #' @param EncryptionMode The encryption mode for the job, which can be one of the following:
 #' 
-#' -   `SSE-KMS` - Server-side encryption with AWS KMS-managed keys.
+#'   - `SSE-KMS` - Server-side encryption with AWS KMS-managed keys.
 #' 
-#' -   `SSE-S3` - Server-side encryption with keys managed by Amazon S3.
+#'   - `SSE-S3` - Server-side encryption with keys managed by Amazon S3.
 #' @param Name &#91;required&#93; The name of the job to update.
 #' @param LogSubscription A value that enables or disables Amazon CloudWatch logging for the
 #' current AWS account. If logging is enabled, CloudWatch writes one log

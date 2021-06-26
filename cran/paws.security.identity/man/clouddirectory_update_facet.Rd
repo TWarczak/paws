@@ -8,17 +8,17 @@ clouddirectory_update_facet(SchemaArn, Name, AttributeUpdates,
   ObjectType)
 }
 \arguments{
-\item{SchemaArn}{[required] The Amazon Resource Name (ARN) that is associated with the Facet. For
-more information, see arns.}
+\item{SchemaArn}{[required] The Amazon Resource Name (ARN) that is associated with the
+<span>Facet</span>. For more information, see <span>arns</span>.}
 
 \item{Name}{[required] The name of the facet.}
 
-\item{AttributeUpdates}{List of attributes that need to be updated in a given schema Facet. Each
-attribute is followed by \code{AttributeAction}, which specifies the type of
-update operation to perform.}
+\item{AttributeUpdates}{List of attributes that need to be updated in a given schema
+<span>Facet</span>. Each attribute is followed by \code{AttributeAction},
+which specifies the type of update operation to perform.}
 
 \item{ObjectType}{The object type that is associated with the facet. See
-CreateFacetRequest$ObjectType for more details.}
+<span>CreateFacetRequest$ObjectType</span> for more details.}
 }
 \value{
 An empty list.

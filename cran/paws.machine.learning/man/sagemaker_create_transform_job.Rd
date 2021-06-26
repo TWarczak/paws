@@ -43,7 +43,7 @@ feature works only in supported algorithms. Currently, Amazon SageMaker
 built-in algorithms do not support HTTP chunked encoding.}
 
 \item{BatchStrategy}{Specifies the number of records to include in a mini-batch for an HTTP
-inference request. A \emph{record} is a single unit of input data that
+inference request. A \emph{record} ** is a single unit of input data that
 inference can be made on. For example, a single line in a CSV file is a
 record.
 

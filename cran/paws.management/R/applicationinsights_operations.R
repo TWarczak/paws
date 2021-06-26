@@ -16,8 +16,8 @@ NULL
 #' @param OpsCenterEnabled When set to `true`, creates opsItems for any problems detected on an
 #' application.
 #' @param CWEMonitorEnabled Indicates whether Application Insights can listen to CloudWatch events
-#' for the application resources, such as `instance terminated`,
-#' `failed deployment`, and others.
+#' for the application resources, such as `instance terminated`, `failed
+#' deployment`, and others.
 #' @param OpsItemSNSTopicArn The SNS topic provided to Application Insights that is associated to the
 #' created opsItem. Allows you to receive notifications for updates to the
 #' opsItem.
@@ -996,12 +996,12 @@ applicationinsights_list_components <- function(ResourceGroupName, MaxResults = 
 #' updates performed by Application Insights. Examples of events
 #' represented are:
 #' 
-#' -   INFO: creating a new alarm or updating an alarm threshold.
+#'   - INFO: creating a new alarm or updating an alarm threshold.
 #' 
-#' -   WARN: alarm not created due to insufficient data points used to
+#'   - WARN: alarm not created due to insufficient data points used to
 #'     predict thresholds.
 #' 
-#' -   ERROR: alarm not created due to permission errors or exceeding
+#'   - ERROR: alarm not created due to permission errors or exceeding
 #'     quotas.
 #'
 #' @usage
@@ -1471,8 +1471,8 @@ applicationinsights_untag_resource <- function(ResourceARN, TagKeys) {
 #' @param OpsCenterEnabled When set to `true`, creates opsItems for any problems detected on an
 #' application.
 #' @param CWEMonitorEnabled Indicates whether Application Insights can listen to CloudWatch events
-#' for the application resources, such as `instance terminated`,
-#' `failed deployment`, and others.
+#' for the application resources, such as `instance terminated`, `failed
+#' deployment`, and others.
 #' @param OpsItemSNSTopicArn The SNS topic provided to Application Insights that is associated to the
 #' created opsItem. Allows you to receive notifications for updates to the
 #' opsItem.

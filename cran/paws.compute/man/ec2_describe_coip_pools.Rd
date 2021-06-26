@@ -13,6 +13,9 @@ ec2_describe_coip_pools(PoolIds, Filters, MaxResults, NextToken, DryRun)
 \item{Filters}{The filters. The following are the possible values:
 \itemize{
 \item \code{coip-pool.pool-id}
+}<!-- end list -->
+
+\itemize{
 \item \code{coip-pool.local-gateway-route-table-id}
 }}
 

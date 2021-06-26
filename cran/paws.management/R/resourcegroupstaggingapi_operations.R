@@ -86,13 +86,13 @@ resourcegroupstaggingapi_describe_report_creation <- function() {
 #' embedded in a resource's Amazon Resource Name (ARN). Consult the *AWS
 #' General Reference* for the following:
 #' 
-#' -   For a list of service name strings, see [AWS Service
+#'   - For a list of service name strings, see [AWS Service
 #'     Namespaces](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#genref-aws-service-namespaces).
 #' 
-#' -   For resource type strings, see [Example
+#'   - For resource type strings, see [Example
 #'     ARNs](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arns-syntax).
 #' 
-#' -   For more information about ARNs, see [Amazon Resource Names (ARNs)
+#'   - For more information about ARNs, see [Amazon Resource Names (ARNs)
 #'     and AWS Service
 #'     Namespaces](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html).
 #' 
@@ -181,11 +181,11 @@ resourcegroupstaggingapi_get_compliance_summary <- function(TargetIdFilters = NU
 #' Depending on what information you want returned, you can also specify
 #' the following:
 #' 
-#' -   *Filters* that specify what tags and resource types you want
+#'   - *Filters* that specify what tags and resource types you want
 #'     returned. The response includes all tags that are associated with
 #'     the requested resources.
 #' 
-#' -   Information about compliance with the account's effective tag
+#'   - Information about compliance with the account's effective tag
 #'     policy. For more information on tag policies, see [Tag
 #'     Policies](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies.html)
 #'     in the *AWS Organizations User Guide.*
@@ -210,39 +210,39 @@ resourcegroupstaggingapi_get_compliance_summary <- function(TargetIdFilters = NU
 #' 
 #' Note the following when deciding how to use TagFilters:
 #' 
-#' -   If you *do* specify a TagFilter, the response returns only those
+#'   - If you *do* specify a TagFilter, the response returns only those
 #'     resources that are currently associated with the specified tag.
 #' 
-#' -   If you *don't* specify a TagFilter, the response includes all
+#'   - If you *don't* specify a TagFilter, the response includes all
 #'     resources that were ever associated with tags. Resources that
 #'     currently don't have associated tags are shown with an empty tag
 #'     set, like this: `"Tags": []`.
 #' 
-#' -   If you specify more than one filter in a single request, the
+#'   - If you specify more than one filter in a single request, the
 #'     response returns only those resources that satisfy all specified
 #'     filters.
 #' 
-#' -   If you specify a filter that contains more than one value for a key,
+#'   - If you specify a filter that contains more than one value for a key,
 #'     the response returns resources that match any of the specified
 #'     values for that key.
 #' 
-#' -   If you don't specify any values for a key, the response returns
+#'   - If you don't specify any values for a key, the response returns
 #'     resources that are tagged with that key irrespective of the value.
-#' 
+#'     
 #'     For example, for filters: filter1 = \{key1, \{value1\}\},
 #'     filter2 = \{key2, \{value2,value3,value4\}\} , filter3 =
 #'     \{key3\}:
-#' 
-#'     -   GetResources( \{filter1\} ) returns resources tagged with
+#'     
+#'       - GetResources( \{filter1\} ) returns resources tagged with
 #'         key1=value1
-#' 
-#'     -   GetResources( \{filter2\} ) returns resources tagged with
+#'     
+#'       - GetResources( \{filter2\} ) returns resources tagged with
 #'         key2=value2 or key2=value3 or key2=value4
-#' 
-#'     -   GetResources( \{filter3\} ) returns resources tagged with any
+#'     
+#'       - GetResources( \{filter3\} ) returns resources tagged with any
 #'         tag containing key3 as its tag key, irrespective of its value
-#' 
-#'     -   GetResources( \{filter1,filter2,filter3\} ) returns resources
+#'     
+#'       - GetResources( \{filter1,filter2,filter3\} ) returns resources
 #'         tagged with ( key1=value1) and ( key2=value2 or key2=value3 or
 #'         key2=value4) and (key3, irrespective of the value)
 #' @param ResourcesPerPage A limit that restricts the number of resources returned by GetResources
@@ -278,13 +278,13 @@ resourcegroupstaggingapi_get_compliance_summary <- function(TargetIdFilters = NU
 #' embedded in a resource's Amazon Resource Name (ARN). Consult the *AWS
 #' General Reference* for the following:
 #' 
-#' -   For a list of service name strings, see [AWS Service
+#'   - For a list of service name strings, see [AWS Service
 #'     Namespaces](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#genref-aws-service-namespaces).
 #' 
-#' -   For resource type strings, see [Example
+#'   - For resource type strings, see [Example
 #'     ARNs](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arns-syntax).
 #' 
-#' -   For more information about ARNs, see [Amazon Resource Names (ARNs)
+#'   - For more information about ARNs, see [Amazon Resource Names (ARNs)
 #'     and AWS Service
 #'     Namespaces](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html).
 #' 
@@ -540,19 +540,19 @@ resourcegroupstaggingapi_start_report_creation <- function(S3Bucket) {
 #' @description
 #' Applies one or more tags to the specified resources. Note the following:
 #' 
-#' -   Not all resources can have tags. For a list of services that support
+#'   - Not all resources can have tags. For a list of services that support
 #'     tagging, see [this
 #'     list](https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/).
 #' 
-#' -   Each resource can have up to 50 tags. For other limits, see [Tag
+#'   - Each resource can have up to 50 tags. For other limits, see [Tag
 #'     Naming and Usage
 #'     Conventions](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html#tag-conventions)
 #'     in the *AWS General Reference.*
 #' 
-#' -   You can only tag resources that are located in the specified Region
+#'   - You can only tag resources that are located in the specified Region
 #'     for the AWS account.
 #' 
-#' -   To add tags to a resource, you need the necessary permissions for
+#'   - To add tags to a resource, you need the necessary permissions for
 #'     the service that the resource belongs to as well as permissions for
 #'     adding tags. For more information, see [this
 #'     list](https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/).
@@ -627,12 +627,12 @@ resourcegroupstaggingapi_tag_resources <- function(ResourceARNList, Tags) {
 #' value. The operation succeeds even if you attempt to remove tags from a
 #' resource that were already removed. Note the following:
 #' 
-#' -   To remove tags from a resource, you need the necessary permissions
+#'   - To remove tags from a resource, you need the necessary permissions
 #'     for the service that the resource belongs to as well as permissions
 #'     for removing tags. For more information, see [this
 #'     list](https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/).
 #' 
-#' -   You can only tag resources that are located in the specified Region
+#'   - You can only tag resources that are located in the specified Region
 #'     for the AWS account.
 #'
 #' @usage

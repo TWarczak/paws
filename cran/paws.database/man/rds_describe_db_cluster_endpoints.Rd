@@ -19,8 +19,7 @@ output. The filters are specified as name-value pairs, in the format
 \verb{Name=endpoint_type,Values=endpoint_type1,endpoint_type2,...}. \code{Name}
 can be one of: \code{db-cluster-endpoint-type},
 \code{db-cluster-endpoint-custom-type}, \code{db-cluster-endpoint-id},
-\code{db-cluster-endpoint-status}. \code{Values} for the
-\code{ db-cluster-endpoint-type} filter can be one or more of: \code{reader},
+\code{db-cluster-endpoint-status}. \code{Values} for the \code{ db-cluster-endpoint-type} filter can be one or more of: \code{reader},
 \code{writer}, \code{custom}. \code{Values} for the \code{db-cluster-endpoint-custom-type}
 filter can be one or more of: \code{reader}, \code{any}. \code{Values} for the
 \code{db-cluster-endpoint-status} filter can be one or more of: \code{available},

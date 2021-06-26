@@ -55,7 +55,7 @@ NULL
 #'  \link[=iotthingsgraph_delete_namespace]{delete_namespace} \tab Deletes the specified namespace\cr
 #'  \link[=iotthingsgraph_delete_system_instance]{delete_system_instance} \tab Deletes a system instance\cr
 #'  \link[=iotthingsgraph_delete_system_template]{delete_system_template} \tab Deletes a system\cr
-#'  \link[=iotthingsgraph_deploy_system_instance]{deploy_system_instance} \tab Greengrass and Cloud Deployments\cr
+#'  \link[=iotthingsgraph_deploy_system_instance]{deploy_system_instance} \tab GREENGRASS AND CLOUD DEPLOYMENTS\cr
 #'  \link[=iotthingsgraph_deprecate_flow_template]{deprecate_flow_template} \tab Deprecates the specified workflow\cr
 #'  \link[=iotthingsgraph_deprecate_system_template]{deprecate_system_template} \tab Deprecates the specified system\cr
 #'  \link[=iotthingsgraph_describe_namespace]{describe_namespace} \tab Gets the latest version of the user's namespace and the public version that it is tracking\cr
@@ -83,6 +83,12 @@ NULL
 #'  \link[=iotthingsgraph_update_system_template]{update_system_template} \tab Updates the specified system\cr
 #'  \link[=iotthingsgraph_upload_entity_definitions]{upload_entity_definitions} \tab Asynchronously uploads one or more entity definitions to the user's namespace
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname iotthingsgraph
 #' @export

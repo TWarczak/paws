@@ -17,10 +17,9 @@ this element.}
 that Amazon S3 returned in the \code{NextToken} element of the
 \code{ListJobsResult} from the previous \verb{List Jobs} request.}
 
-\item{MaxResults}{The maximum number of jobs that Amazon S3 will include in the
-\verb{List Jobs} response. If there are more jobs than this number, the
-response will include a pagination token in the \code{NextToken} field to
-enable you to retrieve the next page of results.}
+\item{MaxResults}{The maximum number of jobs that Amazon S3 will include in the \verb{List Jobs} response. If there are more jobs than this number, the response
+will include a pagination token in the \code{NextToken} field to enable you
+to retrieve the next page of results.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -51,8 +50,8 @@ A list with the following syntax:\preformatted{list(
 \description{
 Lists current S3 Batch Operations jobs and jobs that have ended within
 the last 30 days for the AWS account making the request. For more
-information, see \href{https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops-basics.html}{S3 Batch Operations}
-in the \emph{Amazon Simple Storage Service Developer Guide}.
+information, see \href{https://docs.aws.amazon.com/AmazonS3/latest/userguide/}{S3 Batch Operations} in
+the \emph{Amazon Simple Storage Service Developer Guide}.
 
 Related actions include:
 \itemize{

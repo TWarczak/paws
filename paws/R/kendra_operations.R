@@ -99,11 +99,11 @@ kendra_batch_delete_document <- function(IndexId, DocumentIdList, DataSourceSync
 #' 
 #' Documents have the following file size limits.
 #' 
-#' -   5 MB total size for inline documents
+#'   - 5 MB total size for inline documents
 #' 
-#' -   50 MB total size for files from an S3 bucket
+#'   - 50 MB total size for files from an S3 bucket
 #' 
-#' -   5 MB extracted text for any file
+#'   - 5 MB extracted text for any file
 #' 
 #' For more information about file size and transaction per second quotas,
 #' see [Quotas](https://docs.aws.amazon.com/kendra/latest/dg/quotas.html).
@@ -2111,11 +2111,11 @@ kendra_list_thesauri <- function(IndexId, NextToken = NULL, MaxResults = NULL) {
 #' answer (FAQ) content. By default the response contains three types of
 #' results.
 #' 
-#' -   Relevant passages
+#'   - Relevant passages
 #' 
-#' -   Matching FAQs
+#'   - Matching FAQs
 #' 
-#' -   Relevant documents
+#'   - Relevant documents
 #' 
 #' You can specify that the query return only one type of result using the
 #' `QueryResultTypeConfig` parameter.

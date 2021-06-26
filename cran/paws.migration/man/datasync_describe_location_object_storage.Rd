@@ -29,7 +29,7 @@ A list with the following syntax:\preformatted{list(
 \description{
 Returns metadata about a self-managed object storage server location.
 For more information about self-managed object storage locations, see
-create-object-location.
+<span>create-object-location</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$describe_location_object_storage(

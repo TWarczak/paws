@@ -12,7 +12,7 @@ acmpca_import_certificate_authority_certificate(CertificateAuthorityArn,
 \code{\link[=acmpca_create_certificate_authority]{create_certificate_authority}}.
 This must be of the form:
 
-\code{arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012 }}
+\code{arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012}}
 
 \item{Certificate}{[required] The PEM-encoded certificate for a private CA. This may be a self-signed
 certificate in the case of a root CA, or it may be signed by another CA

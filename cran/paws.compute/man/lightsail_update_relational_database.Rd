@@ -120,8 +120,8 @@ maintenance window.
 
 The \verb{update relational database} operation supports tag-based access
 control via resource tags applied to the resource identified by
-relationalDatabaseName. For more information, see the Lightsail Dev
-Guide.
+relationalDatabaseName. For more information, see the <span>Lightsail
+Dev Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$update_relational_database(

@@ -2,7 +2,7 @@
 % Please edit documentation in R/swf_operations.R
 \name{swf_register_activity_type}
 \alias{swf_register_activity_type}
-\title{Registers a new activity type along with its configuration settings in
+\title{Registers a new \emph{activity type} along with its configuration settings in
 the specified domain}
 \usage{
 swf_register_activity_type(domain, name, version, description,
@@ -34,7 +34,8 @@ the literal string \code{arn}.}
 
 \item{defaultTaskStartToCloseTimeout}{If set, specifies the default maximum duration that a worker can take to
 process tasks of this activity type. This default can be overridden when
-scheduling an activity task using the \code{ScheduleActivityTask} Decision.
+scheduling an activity task using the \code{ScheduleActivityTask}
+<span>Decision</span>.
 
 The duration is specified in seconds, an integer greater than or equal
 to \code{0}. You can use \code{NONE} to specify unlimited duration.}
@@ -44,9 +45,9 @@ processing a task of this type must report progress by calling
 \code{\link[=swf_record_activity_task_heartbeat]{record_activity_task_heartbeat}}.
 If the timeout is exceeded, the activity task is automatically timed
 out. This default can be overridden when scheduling an activity task
-using the \code{ScheduleActivityTask} Decision. If the activity worker
-subsequently attempts to record a heartbeat or returns a result, the
-activity worker receives an \code{UnknownResource} fault. In this case,
+using the \code{ScheduleActivityTask} <span>Decision</span>. If the activity
+worker subsequently attempts to record a heartbeat or returns a result,
+the activity worker receives an \code{UnknownResource} fault. In this case,
 Amazon SWF no longer considers the activity task to be valid; the
 activity worker should clean up the activity task.
 
@@ -56,7 +57,7 @@ to \code{0}. You can use \code{NONE} to specify unlimited duration.}
 \item{defaultTaskList}{If set, specifies the default task list to use for scheduling tasks of
 this activity type. This default task list is used if a task list isn't
 provided when a task is scheduled through the \code{ScheduleActivityTask}
-Decision.}
+<span>Decision</span>.}
 
 \item{defaultTaskPriority}{The default task priority to assign to the activity type. If not
 assigned, then \code{0} is used. Valid values are integers that range from
@@ -69,14 +70,14 @@ in the \emph{in the \emph{Amazon SWF Developer Guide}.}.}
 \item{defaultTaskScheduleToStartTimeout}{If set, specifies the default maximum duration that a task of this
 activity type can wait before being assigned to a worker. This default
 can be overridden when scheduling an activity task using the
-\code{ScheduleActivityTask} Decision.
+\code{ScheduleActivityTask} <span>Decision</span>.
 
 The duration is specified in seconds, an integer greater than or equal
 to \code{0}. You can use \code{NONE} to specify unlimited duration.}
 
 \item{defaultTaskScheduleToCloseTimeout}{If set, specifies the default maximum duration for a task of this
 activity type. This default can be overridden when scheduling an
-activity task using the \code{ScheduleActivityTask} Decision.
+activity task using the \code{ScheduleActivityTask} <span>Decision</span>.
 
 The duration is specified in seconds, an integer greater than or equal
 to \code{0}. You can use \code{NONE} to specify unlimited duration.}

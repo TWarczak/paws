@@ -104,7 +104,7 @@ for that edge location.
 
 The name of each log stream is in the following format:
 
-\verb{hosted zone ID/edge location code}
+\verb{ hosted zone ID/edge location code }
 
 The edge location code is a three-letter code and an arbitrarily
 assigned number, for example, DFW3. The three-letter code typically

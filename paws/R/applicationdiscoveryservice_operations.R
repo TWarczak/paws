@@ -414,13 +414,13 @@ applicationdiscoveryservice_describe_agents <- function(agentIds = NULL, filters
 #' All of the supplied IDs must be for the same asset type from one of the
 #' following:
 #' 
-#' -   server
+#'   - server
 #' 
-#' -   application
+#'   - application
 #' 
-#' -   process
+#'   - process
 #' 
-#' -   connection
+#'   - connection
 #' 
 #' Output fields are specific to the asset type specified. For example, the
 #' output for a *server* configuration item includes a list of attributes
@@ -641,7 +641,7 @@ applicationdiscoveryservice_describe_export_configurations <- function(exportIds
 #' request.
 #' @param filters One or more filters.
 #' 
-#' -   `AgentId` - ID of the agent whose collected data will be exported
+#'   - `AgentId` - ID of the agent whose collected data will be exported
 #' @param maxResults The maximum number of volume results returned by
 #' [`describe_export_tasks`][applicationdiscoveryservice_describe_export_tasks]
 #' in paginated output. When this parameter is used,
@@ -819,11 +819,11 @@ applicationdiscoveryservice_describe_import_tasks <- function(filters = NULL, ma
 #' 
 #' There are three valid tag filter names:
 #' 
-#' -   tagKey
+#'   - tagKey
 #' 
-#' -   tagValue
+#'   - tagValue
 #' 
-#' -   configurationId
+#'   - configurationId
 #' 
 #' Also, all configuration items associated with your user account that
 #' have tags can be listed if you call

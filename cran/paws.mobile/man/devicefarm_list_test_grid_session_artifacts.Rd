@@ -8,7 +8,7 @@ devicefarm_list_test_grid_session_artifacts(sessionArn, type, maxResult,
   nextToken)
 }
 \arguments{
-\item{sessionArn}{[required] The ARN of a TestGridSession.}
+\item{sessionArn}{[required] The ARN of a <span>TestGridSession</span>.}
 
 \item{type}{Limit results to a specified type of artifact.}
 

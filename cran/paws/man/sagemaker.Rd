@@ -9,6 +9,12 @@ sagemaker(config = list())
 \arguments{
 \item{config}{Optional configuration of credentials, endpoint, and/or region.}
 }
+\value{
+A client for the service. You can call the service's operations using
+syntax like \code{svc$operation(...)}, where \code{svc} is the name you've assigned
+to the client. The available operations are listed in the
+Operations section.
+}
 \description{
 Provides APIs for creating and managing Amazon SageMaker resources.
 
@@ -39,25 +45,25 @@ Other Resources:
 \section{Operations}{
 
 \tabular{ll}{
-\link[=sagemaker_add_association]{add_association} \tab Creates an association between the source and the destination\cr
+\link[=sagemaker_add_association]{add_association} \tab Creates an \emph{association} between the source and the destination\cr
 \link[=sagemaker_add_tags]{add_tags} \tab Adds or overwrites one or more tags for the specified Amazon SageMaker resource\cr
 \link[=sagemaker_associate_trial_component]{associate_trial_component} \tab Associates a trial component with a trial\cr
-\link[=sagemaker_create_action]{create_action} \tab Creates an action\cr
+\link[=sagemaker_create_action]{create_action} \tab Creates an \emph{action}\cr
 \link[=sagemaker_create_algorithm]{create_algorithm} \tab Create a machine learning algorithm that you can use in Amazon SageMaker and list in the AWS Marketplace\cr
 \link[=sagemaker_create_app]{create_app} \tab Creates a running App for the specified UserProfile\cr
 \link[=sagemaker_create_app_image_config]{create_app_image_config} \tab Creates a configuration for running a SageMaker image as a KernelGateway app\cr
-\link[=sagemaker_create_artifact]{create_artifact} \tab Creates an artifact\cr
+\link[=sagemaker_create_artifact]{create_artifact} \tab Creates an \emph{artifact}\cr
 \link[=sagemaker_create_auto_ml_job]{create_auto_ml_job} \tab Creates an Autopilot job\cr
 \link[=sagemaker_create_code_repository]{create_code_repository} \tab Creates a Git repository as a resource in your Amazon SageMaker account\cr
 \link[=sagemaker_create_compilation_job]{create_compilation_job} \tab Starts a model compilation job\cr
-\link[=sagemaker_create_context]{create_context} \tab Creates a context\cr
+\link[=sagemaker_create_context]{create_context} \tab Creates a \emph{context}\cr
 \link[=sagemaker_create_data_quality_job_definition]{create_data_quality_job_definition} \tab Creates a definition for a job that monitors data quality and drift\cr
 \link[=sagemaker_create_device_fleet]{create_device_fleet} \tab Creates a device fleet\cr
 \link[=sagemaker_create_domain]{create_domain} \tab Creates a Domain used by Amazon SageMaker Studio\cr
 \link[=sagemaker_create_edge_packaging_job]{create_edge_packaging_job} \tab Starts a SageMaker Edge Manager model packaging job\cr
 \link[=sagemaker_create_endpoint]{create_endpoint} \tab Creates an endpoint using the endpoint configuration specified in the request\cr
 \link[=sagemaker_create_endpoint_config]{create_endpoint_config} \tab Creates an endpoint configuration that Amazon SageMaker hosting services uses to deploy models\cr
-\link[=sagemaker_create_experiment]{create_experiment} \tab Creates an SageMaker experiment\cr
+\link[=sagemaker_create_experiment]{create_experiment} \tab Creates an SageMaker \emph{experiment}\cr
 \link[=sagemaker_create_feature_group]{create_feature_group} \tab Create a new FeatureGroup\cr
 \link[=sagemaker_create_flow_definition]{create_flow_definition} \tab Creates a flow definition\cr
 \link[=sagemaker_create_human_task_ui]{create_human_task_ui} \tab Defines the settings you will use for the human review workflow user interface\cr
@@ -81,8 +87,8 @@ Other Resources:
 \link[=sagemaker_create_project]{create_project} \tab Creates a machine learning (ML) project that can contain one or more templates that set up an ML pipeline from training to deploying an approved model\cr
 \link[=sagemaker_create_training_job]{create_training_job} \tab Starts a model training job\cr
 \link[=sagemaker_create_transform_job]{create_transform_job} \tab Starts a transform job\cr
-\link[=sagemaker_create_trial]{create_trial} \tab Creates an Amazon SageMaker trial\cr
-\link[=sagemaker_create_trial_component]{create_trial_component} \tab Creates a trial component, which is a stage of a machine learning trial\cr
+\link[=sagemaker_create_trial]{create_trial} \tab Creates an Amazon SageMaker \emph{trial}\cr
+\link[=sagemaker_create_trial_component]{create_trial_component} \tab Creates a \emph{trial component}, which is a stage of a machine learning \emph{trial}\cr
 \link[=sagemaker_create_user_profile]{create_user_profile} \tab Creates a user profile\cr
 \link[=sagemaker_create_workforce]{create_workforce} \tab Use this operation to create a workforce\cr
 \link[=sagemaker_create_workteam]{create_workteam} \tab Creates a new work team for labeling your data\cr

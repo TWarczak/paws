@@ -139,8 +139,8 @@ Creates an Amazon Lightsail content delivery network (CDN) distribution.
 
 A distribution is a globally distributed network of caching servers that
 improve the performance of your website or web application hosted on a
-Lightsail instance. For more information, see Content delivery networks
-in Amazon Lightsail.
+Lightsail instance. For more information, see <span>Content delivery
+networks in Amazon Lightsail</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$create_distribution(

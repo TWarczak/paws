@@ -19,13 +19,13 @@ NULL
 #' 
 #' AWS CodeBuild supports these operations:
 #' 
-#' -   [`batch_delete_builds`][codebuild_batch_delete_builds]: Deletes one
+#'   - [`batch_delete_builds`][codebuild_batch_delete_builds]: Deletes one
 #'     or more builds.
 #' 
-#' -   [`batch_get_builds`][codebuild_batch_get_builds]: Gets information
+#'   - [`batch_get_builds`][codebuild_batch_get_builds]: Gets information
 #'     about one or more builds.
 #' 
-#' -   [`batch_get_projects`][codebuild_batch_get_projects]: Gets
+#'   - [`batch_get_projects`][codebuild_batch_get_projects]: Gets
 #'     information about one or more build projects. A *build project*
 #'     defines how AWS CodeBuild runs a build. This includes information
 #'     such as where to get the source code to build, the build environment
@@ -35,111 +35,111 @@ NULL
 #'     uses to run a build. You can add tags to build projects to help
 #'     manage your resources and costs.
 #' 
-#' -   [`batch_get_report_groups`][codebuild_batch_get_report_groups]:
+#'   - [`batch_get_report_groups`][codebuild_batch_get_report_groups]:
 #'     Returns an array of report groups.
 #' 
-#' -   [`batch_get_reports`][codebuild_batch_get_reports]: Returns an array
+#'   - [`batch_get_reports`][codebuild_batch_get_reports]: Returns an array
 #'     of reports.
 #' 
-#' -   [`create_project`][codebuild_create_project]: Creates a build
+#'   - [`create_project`][codebuild_create_project]: Creates a build
 #'     project.
 #' 
-#' -   [`create_report_group`][codebuild_create_report_group]: Creates a
+#'   - [`create_report_group`][codebuild_create_report_group]: Creates a
 #'     report group. A report group contains a collection of reports.
 #' 
-#' -   [`create_webhook`][codebuild_create_webhook]: For an existing AWS
+#'   - [`create_webhook`][codebuild_create_webhook]: For an existing AWS
 #'     CodeBuild build project that has its source code stored in a GitHub
 #'     or Bitbucket repository, enables AWS CodeBuild to start rebuilding
 #'     the source code every time a code change is pushed to the
 #'     repository.
 #' 
-#' -   [`delete_project`][codebuild_delete_project]: Deletes a build
+#'   - [`delete_project`][codebuild_delete_project]: Deletes a build
 #'     project.
 #' 
-#' -   [`delete_report`][codebuild_delete_report]: Deletes a report.
+#'   - [`delete_report`][codebuild_delete_report]: Deletes a report.
 #' 
-#' -   [`delete_report_group`][codebuild_delete_report_group]: Deletes a
+#'   - [`delete_report_group`][codebuild_delete_report_group]: Deletes a
 #'     report group.
 #' 
-#' -   [`delete_resource_policy`][codebuild_delete_resource_policy]:
+#'   - [`delete_resource_policy`][codebuild_delete_resource_policy]:
 #'     Deletes a resource policy that is identified by its resource ARN.
 #' 
-#' -   [`delete_source_credentials`][codebuild_delete_source_credentials]:
+#'   - [`delete_source_credentials`][codebuild_delete_source_credentials]:
 #'     Deletes a set of GitHub, GitHub Enterprise, or Bitbucket source
 #'     credentials.
 #' 
-#' -   [`delete_webhook`][codebuild_delete_webhook]: For an existing AWS
+#'   - [`delete_webhook`][codebuild_delete_webhook]: For an existing AWS
 #'     CodeBuild build project that has its source code stored in a GitHub
 #'     or Bitbucket repository, stops AWS CodeBuild from rebuilding the
 #'     source code every time a code change is pushed to the repository.
 #' 
-#' -   [`describe_test_cases`][codebuild_describe_test_cases]: Returns a
+#'   - [`describe_test_cases`][codebuild_describe_test_cases]: Returns a
 #'     list of details about test cases for a report.
 #' 
-#' -   [`get_resource_policy`][codebuild_get_resource_policy]: Gets a
+#'   - [`get_resource_policy`][codebuild_get_resource_policy]: Gets a
 #'     resource policy that is identified by its resource ARN.
 #' 
-#' -   [`import_source_credentials`][codebuild_import_source_credentials]:
+#'   - [`import_source_credentials`][codebuild_import_source_credentials]:
 #'     Imports the source repository credentials for an AWS CodeBuild
 #'     project that has its source code stored in a GitHub, GitHub
 #'     Enterprise, or Bitbucket repository.
 #' 
-#' -   [`invalidate_project_cache`][codebuild_invalidate_project_cache]:
+#'   - [`invalidate_project_cache`][codebuild_invalidate_project_cache]:
 #'     Resets the cache for a project.
 #' 
-#' -   [`list_builds`][codebuild_list_builds]: Gets a list of build IDs,
+#'   - [`list_builds`][codebuild_list_builds]: Gets a list of build IDs,
 #'     with each build ID representing a single build.
 #' 
-#' -   [`list_builds_for_project`][codebuild_list_builds_for_project]: Gets
+#'   - [`list_builds_for_project`][codebuild_list_builds_for_project]: Gets
 #'     a list of build IDs for the specified build project, with each build
 #'     ID representing a single build.
 #' 
-#' -   [`list_curated_environment_images`][codebuild_list_curated_environment_images]:
+#'   - [`list_curated_environment_images`][codebuild_list_curated_environment_images]:
 #'     Gets information about Docker images that are managed by AWS
 #'     CodeBuild.
 #' 
-#' -   [`list_projects`][codebuild_list_projects]: Gets a list of build
+#'   - [`list_projects`][codebuild_list_projects]: Gets a list of build
 #'     project names, with each build project name representing a single
 #'     build project.
 #' 
-#' -   [`list_report_groups`][codebuild_list_report_groups]: Gets a list
+#'   - [`list_report_groups`][codebuild_list_report_groups]: Gets a list
 #'     ARNs for the report groups in the current AWS account.
 #' 
-#' -   [`list_reports`][codebuild_list_reports]: Gets a list ARNs for the
+#'   - [`list_reports`][codebuild_list_reports]: Gets a list ARNs for the
 #'     reports in the current AWS account.
 #' 
-#' -   [`list_reports_for_report_group`][codebuild_list_reports_for_report_group]:
+#'   - [`list_reports_for_report_group`][codebuild_list_reports_for_report_group]:
 #'     Returns a list of ARNs for the reports that belong to a
 #'     `ReportGroup`.
 #' 
-#' -   [`list_shared_projects`][codebuild_list_shared_projects]: Gets a
+#'   - [`list_shared_projects`][codebuild_list_shared_projects]: Gets a
 #'     list of ARNs associated with projects shared with the current AWS
 #'     account or user.
 #' 
-#' -   [`list_shared_report_groups`][codebuild_list_shared_report_groups]:
+#'   - [`list_shared_report_groups`][codebuild_list_shared_report_groups]:
 #'     Gets a list of ARNs associated with report groups shared with the
 #'     current AWS account or user
 #' 
-#' -   [`list_source_credentials`][codebuild_list_source_credentials]:
+#'   - [`list_source_credentials`][codebuild_list_source_credentials]:
 #'     Returns a list of `SourceCredentialsInfo` objects. Each
 #'     `SourceCredentialsInfo` object includes the authentication type,
 #'     token ARN, and type of source provider for one set of credentials.
 #' 
-#' -   [`put_resource_policy`][codebuild_put_resource_policy]: Stores a
+#'   - [`put_resource_policy`][codebuild_put_resource_policy]: Stores a
 #'     resource policy for the ARN of a `Project` or `ReportGroup` object.
 #' 
-#' -   [`start_build`][codebuild_start_build]: Starts running a build.
+#'   - [`start_build`][codebuild_start_build]: Starts running a build.
 #' 
-#' -   [`stop_build`][codebuild_stop_build]: Attempts to stop running a
+#'   - [`stop_build`][codebuild_stop_build]: Attempts to stop running a
 #'     build.
 #' 
-#' -   [`update_project`][codebuild_update_project]: Changes the settings
+#'   - [`update_project`][codebuild_update_project]: Changes the settings
 #'     of an existing build project.
 #' 
-#' -   [`update_report_group`][codebuild_update_report_group]: Changes a
+#'   - [`update_report_group`][codebuild_update_report_group]: Changes a
 #'     report group.
 #' 
-#' -   [`update_webhook`][codebuild_update_webhook]: Changes the settings
+#'   - [`update_webhook`][codebuild_update_webhook]: Changes the settings
 #'     of an existing webhook.
 #'
 #' @param
@@ -225,6 +225,12 @@ NULL
 #'  \link[=codebuild_update_webhook]{update_webhook} \tab Updates the webhook associated with an AWS CodeBuild build project
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname codebuild
 #' @export
 codebuild <- function(config = list()) {
@@ -243,7 +249,7 @@ codebuild <- function(config = list()) {
   endpoints = list("*" = list(endpoint = "codebuild.{region}.amazonaws.com", global = FALSE), "cn-*" = list(endpoint = "codebuild.{region}.amazonaws.com.cn", global = FALSE), "us-iso-*" = list(endpoint = "codebuild.{region}.c2s.ic.gov", global = FALSE), "us-isob-*" = list(endpoint = "codebuild.{region}.sc2s.sgov.gov", global = FALSE)),
   service_id = "CodeBuild",
   api_version = "2016-10-06",
-  signing_name = NULL,
+  signing_name = "codebuild",
   json_version = "1.1",
   target_prefix = "CodeBuild_20161006"
 )

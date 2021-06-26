@@ -17,7 +17,7 @@ value here, the latest version available in Amazon EKS is used.}
 \item{roleArn}{[required] The Amazon Resource Name (ARN) of the IAM role that provides permissions
 for the Kubernetes control plane to make calls to AWS API operations on
 your behalf. For more information, see \href{https://docs.aws.amazon.com/eks/latest/userguide/service_IAM_role.html}{Amazon EKS Service IAM Role}
-in the \strong{Amazon EKS User Guide} .}
+in the \emph{\emph{Amazon EKS User Guide}} .}
 
 \item{resourcesVpcConfig}{[required] The VPC configuration used by the cluster control plane. Amazon EKS VPC
 resources have specific requirements to work properly with Kubernetes.
@@ -32,7 +32,7 @@ use a dedicated security group for your cluster control plane.}
 \item{logging}{Enable or disable exporting the Kubernetes control plane logs for your
 cluster to CloudWatch Logs. By default, cluster control plane logs
 aren't exported to CloudWatch Logs. For more information, see \href{https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html}{Amazon EKS Cluster Control Plane Logs}
-in the \strong{Amazon EKS User Guide} .
+in the \emph{\emph{Amazon EKS User Guide}} .
 
 CloudWatch Logs ingestion, archive storage, and data scanning rates
 apply to exported control plane logs. For more information, see \href{https://aws.amazon.com/cloudwatch/pricing/}{Amazon CloudWatch Pricing}.}
@@ -139,13 +139,13 @@ parameters to enable or disable public and private access to your
 cluster's Kubernetes API server endpoint. By default, public access is
 enabled, and private access is disabled. For more information, see
 \href{https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html}{Amazon EKS Cluster Endpoint Access Control}
-in the \strong{Amazon EKS User Guide} .
+in the \emph{\emph{Amazon EKS User Guide}} .
 
 You can use the \code{logging} parameter to enable or disable exporting the
 Kubernetes control plane logs for your cluster to CloudWatch Logs. By
 default, cluster control plane logs aren't exported to CloudWatch Logs.
 For more information, see \href{https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html}{Amazon EKS Cluster Control Plane Logs}
-in the \strong{Amazon EKS User Guide} .
+in the \emph{\emph{Amazon EKS User Guide}} .
 
 CloudWatch Logs ingestion, archive storage, and data scanning rates
 apply to exported control plane logs. For more information, see \href{https://aws.amazon.com/cloudwatch/pricing/}{Amazon CloudWatch Pricing}.

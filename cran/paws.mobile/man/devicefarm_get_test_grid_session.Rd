@@ -14,7 +14,7 @@ devicefarm_get_test_grid_session(projectArn, sessionId, sessionArn)
 
 \item{sessionId}{An ID associated with this session.}
 
-\item{sessionArn}{An ARN that uniquely identifies a TestGridSession.}
+\item{sessionArn}{An ARN that uniquely identifies a <span>TestGridSession</span>.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -35,13 +35,14 @@ A list with the following syntax:\preformatted{list(
 }
 \description{
 A session is an instance of a browser created through a
-\code{RemoteWebDriver} with the URL from CreateTestGridUrlResult$url. You can
-use the following to look up sessions:
+\code{RemoteWebDriver} with the URL from
+<span>CreateTestGridUrlResult$url</span>. You can use the following to
+look up sessions:
 \itemize{
-\item The session ARN (GetTestGridSessionRequest$sessionArn).
+\item The session ARN (<span>GetTestGridSessionRequest$sessionArn</span>).
 \item The project ARN and a session ID
-(GetTestGridSessionRequest$projectArn and
-GetTestGridSessionRequest$sessionId).
+(<span>GetTestGridSessionRequest$projectArn</span> and
+<span>GetTestGridSessionRequest$sessionId</span>).
 }
 }
 \section{Request syntax}{

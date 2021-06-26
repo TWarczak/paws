@@ -8,9 +8,10 @@ apigateway_get_export(restApiId, stageName, exportType, parameters,
   accepts)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
-\item{stageName}{[required] [Required] The name of the Stage that will be exported.}
+\item{stageName}{[required] [Required] The name of the <span>Stage</span> that will be exported.}
 
 \item{exportType}{[required] [Required] The type of export. Acceptable values are 'oas30' for
 OpenAPI 3.0.x and 'swagger' for Swagger/OpenAPI 2.0.}
@@ -38,7 +39,8 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Exports a deployed version of a RestApi in a specified format.
+Exports a deployed version of a <span>RestApi</span> in a specified
+format.
 }
 \section{Request syntax}{
 \preformatted{svc$get_export(

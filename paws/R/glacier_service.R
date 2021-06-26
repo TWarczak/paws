@@ -29,15 +29,15 @@ NULL
 #' reading the following sections in the *Amazon S3 Glacier Developer
 #' Guide*:
 #' 
-#' -   [What is Amazon S3
-#'     Glacier](https://docs.aws.amazon.com/amazonglacier/latest/dev/introduction.html) -
-#'     This section of the Developer Guide describes the underlying data
+#'   - [What is Amazon S3
+#'     Glacier](https://docs.aws.amazon.com/amazonglacier/latest/dev/introduction.html)
+#'     - This section of the Developer Guide describes the underlying data
 #'     model, the operations it supports, and the AWS SDKs that you can use
 #'     to interact with the service.
 #' 
-#' -   [Getting Started with Amazon S3
-#'     Glacier](https://docs.aws.amazon.com/amazonglacier/latest/dev/amazon-glacier-getting-started.html) -
-#'     The Getting Started section walks you through the process of
+#'   - [Getting Started with Amazon S3
+#'     Glacier](https://docs.aws.amazon.com/amazonglacier/latest/dev/amazon-glacier-getting-started.html)
+#'     - The Getting Started section walks you through the process of
 #'     creating a vault, uploading archives, creating jobs to download
 #'     archives, retrieving the job output, and deleting archives.
 #'
@@ -112,6 +112,12 @@ NULL
 #'  \link[=glacier_upload_multipart_part]{upload_multipart_part} \tab This operation uploads a part of an archive
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname glacier
 #' @export
 glacier <- function(config = list()) {
@@ -130,7 +136,7 @@ glacier <- function(config = list()) {
   endpoints = list("*" = list(endpoint = "glacier.{region}.amazonaws.com", global = FALSE), "cn-*" = list(endpoint = "glacier.{region}.amazonaws.com.cn", global = FALSE), "us-iso-*" = list(endpoint = "glacier.{region}.c2s.ic.gov", global = FALSE), "us-isob-*" = list(endpoint = "glacier.{region}.sc2s.sgov.gov", global = FALSE)),
   service_id = "Glacier",
   api_version = "2012-06-01",
-  signing_name = NULL,
+  signing_name = "glacier",
   json_version = "",
   target_prefix = ""
 )

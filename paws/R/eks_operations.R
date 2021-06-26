@@ -147,14 +147,14 @@ eks_create_addon <- function(clusterName, addonName, addonVersion = NULL, servic
 #' enabled, and private access is disabled. For more information, see
 #' [Amazon EKS Cluster Endpoint Access
 #' Control](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html)
-#' in the **Amazon EKS User Guide** .
+#' in the *_Amazon EKS User Guide_* .
 #' 
 #' You can use the `logging` parameter to enable or disable exporting the
 #' Kubernetes control plane logs for your cluster to CloudWatch Logs. By
 #' default, cluster control plane logs aren't exported to CloudWatch Logs.
 #' For more information, see [Amazon EKS Cluster Control Plane
 #' Logs](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html)
-#' in the **Amazon EKS User Guide** .
+#' in the *_Amazon EKS User Guide_* .
 #' 
 #' CloudWatch Logs ingestion, archive storage, and data scanning rates
 #' apply to exported control plane logs. For more information, see [Amazon
@@ -181,7 +181,7 @@ eks_create_addon <- function(clusterName, addonName, addonVersion = NULL, servic
 #' for the Kubernetes control plane to make calls to AWS API operations on
 #' your behalf. For more information, see [Amazon EKS Service IAM
 #' Role](https://docs.aws.amazon.com/eks/latest/userguide/service_IAM_role.html)
-#' in the **Amazon EKS User Guide** .
+#' in the *_Amazon EKS User Guide_* .
 #' @param resourcesVpcConfig &#91;required&#93; The VPC configuration used by the cluster control plane. Amazon EKS VPC
 #' resources have specific requirements to work properly with Kubernetes.
 #' For more information, see [Cluster VPC
@@ -197,7 +197,7 @@ eks_create_addon <- function(clusterName, addonName, addonVersion = NULL, servic
 #' aren't exported to CloudWatch Logs. For more information, see [Amazon
 #' EKS Cluster Control Plane
 #' Logs](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html)
-#' in the **Amazon EKS User Guide** .
+#' in the *_Amazon EKS User Guide_* .
 #' 
 #' CloudWatch Logs ingestion, archive storage, and data scanning rates
 #' apply to exported control plane logs. For more information, see [Amazon
@@ -568,7 +568,7 @@ eks_create_fargate_profile <- function(fargateProfileName, clusterName, podExecu
 #' launch template or for `instanceTypes`, then `t3.medium` is used, by
 #' default. If you specify `Spot` for `capacityType`, then we recommend
 #' specifying multiple values for `instanceTypes`. For more information,
-#' see Managed node group capacity types and [Launch template
+#' see <span>Managed node group capacity types</span> and [Launch template
 #' support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html)
 #' in the *Amazon EKS User Guide*.
 #' @param amiType The AMI type for your node group. GPU instance types should use the
@@ -594,8 +594,8 @@ eks_create_fargate_profile <- function(fargateProfileName, clusterName, podExecu
 #' you can launch worker nodes and register them into a cluster, you must
 #' create an IAM role for those worker nodes to use when they are launched.
 #' For more information, see [Amazon EKS Worker Node IAM
-#' Role](https://docs.aws.amazon.com/eks/latest/userguide/) in the **Amazon
-#' EKS User Guide** . If you specify `launchTemplate`, then don't specify
+#' Role](https://docs.aws.amazon.com/eks/latest/userguide/) in the *_Amazon
+#' EKS User Guide_* . If you specify `launchTemplate`, then don't specify
 #' [`IamInstanceProfile`](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IamInstanceProfile.html)
 #' in your launch template, or the node group deployment will fail. For
 #' more information about using launch templates with Amazon EKS, see
@@ -2335,7 +2335,7 @@ eks_update_addon <- function(clusterName, addonName, addonVersion = NULL, servic
 #' default, cluster control plane logs aren't exported to CloudWatch Logs.
 #' For more information, see [Amazon EKS Cluster Control Plane
 #' Logs](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html)
-#' in the **Amazon EKS User Guide** .
+#' in the *_Amazon EKS User Guide_* .
 #' 
 #' CloudWatch Logs ingestion, archive storage, and data scanning rates
 #' apply to exported control plane logs. For more information, see [Amazon
@@ -2346,7 +2346,7 @@ eks_update_addon <- function(clusterName, addonName, addonVersion = NULL, servic
 #' default, public access is enabled, and private access is disabled. For
 #' more information, see [Amazon EKS Cluster Endpoint Access
 #' Control](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html)
-#' in the **Amazon EKS User Guide** .
+#' in the *_Amazon EKS User Guide_* .
 #' 
 #' At this time, you can not update the subnets or security group IDs for
 #' an existing cluster.
@@ -2367,7 +2367,7 @@ eks_update_addon <- function(clusterName, addonName, addonVersion = NULL, servic
 #' aren't exported to CloudWatch Logs. For more information, see [Amazon
 #' EKS Cluster Control Plane
 #' Logs](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html)
-#' in the **Amazon EKS User Guide** .
+#' in the *_Amazon EKS User Guide_* .
 #' 
 #' CloudWatch Logs ingestion, archive storage, and data scanning rates
 #' apply to exported control plane logs. For more information, see [Amazon

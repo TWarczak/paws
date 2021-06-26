@@ -1965,16 +1965,16 @@ elb_enable_availability_zones_for_load_balancer <- function(LoadBalancerName, Av
 #' For more information, see the following in the *Classic Load Balancers
 #' Guide*:
 #' 
-#' -   [Cross-Zone Load
+#'   - [Cross-Zone Load
 #'     Balancing](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-disable-crosszone-lb.html)
 #' 
-#' -   [Connection
+#'   - [Connection
 #'     Draining](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/config-conn-drain.html)
 #' 
-#' -   [Access
+#'   - [Access
 #'     Logs](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/access-log-collection.html)
 #' 
-#' -   [Idle Connection
+#'   - [Idle Connection
 #'     Timeout](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/config-idle-timeout.html)
 #'
 #' @usage

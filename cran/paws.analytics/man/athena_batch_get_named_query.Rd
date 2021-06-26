@@ -36,13 +36,14 @@ A list with the following syntax:\preformatted{list(
 Returns the details of a single named query or a list of up to 50
 queries, which you provide as an array of query ID strings. Requires you
 to have access to the workgroup in which the queries were saved. Use
-ListNamedQueriesInput to get the list of named query IDs in the
-specified workgroup. If information could not be retrieved for a
+<span>ListNamedQueriesInput</span> to get the list of named query IDs in
+the specified workgroup. If information could not be retrieved for a
 submitted query ID, information about the query ID submitted is listed
-under UnprocessedNamedQueryId. Named queries differ from executed
-queries. Use BatchGetQueryExecutionInput to get details about each
-unique query execution, and ListQueryExecutionsInput to get a list of
-query execution IDs.
+under <span>UnprocessedNamedQueryId</span>. Named queries differ from
+executed queries. Use <span>BatchGetQueryExecutionInput</span> to get
+details about each unique query execution, and
+<span>ListQueryExecutionsInput</span> to get a list of query execution
+IDs.
 }
 \section{Request syntax}{
 \preformatted{svc$batch_get_named_query(

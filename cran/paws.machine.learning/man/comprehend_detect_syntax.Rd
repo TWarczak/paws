@@ -34,7 +34,7 @@ A list with the following syntax:\preformatted{list(
 }
 \description{
 Inspects text for syntax and the part of speech of words in the
-document. For more information, how-syntax.
+document. For more information, <span>how-syntax</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$detect_syntax(

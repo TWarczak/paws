@@ -66,7 +66,8 @@ A list with the following syntax:\preformatted{list(
 Creates an SSH key pair.
 
 The \verb{create key pair} operation supports tag-based access control via
-request tags. For more information, see the Lightsail Dev Guide.
+request tags. For more information, see the <span>Lightsail Dev
+Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$create_key_pair(

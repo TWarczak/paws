@@ -2372,11 +2372,11 @@ pinpointemail_put_email_identity_feedback_attributes <- function(EmailIdentity, 
 #' @param MailFromDomain The custom MAIL FROM domain that you want the verified identity to use.
 #' The MAIL FROM domain must meet the following criteria:
 #' 
-#' -   It has to be a subdomain of the verified identity.
+#'   - It has to be a subdomain of the verified identity.
 #' 
-#' -   It can't be used to receive email.
+#'   - It can't be used to receive email.
 #' 
-#' -   It can't be used in a "From" address if the MAIL FROM domain is a
+#'   - It can't be used in a "From" address if the MAIL FROM domain is a
 #'     destination for feedback forwarding emails.
 #' @param BehaviorOnMxFailure The action that you want Amazon Pinpoint to take if it can't read the
 #' required MX record when you send an email. When you set this value to
@@ -2426,11 +2426,11 @@ pinpointemail_put_email_identity_mail_from_attributes <- function(EmailIdentity,
 #' Sends an email message. You can use the Amazon Pinpoint Email API to
 #' send two types of messages:
 #' 
-#' -   **Simple** – A standard email message. When you create this type of
+#'   - **Simple** – A standard email message. When you create this type of
 #'     message, you specify the sender, the recipient, and the message
 #'     body, and Amazon Pinpoint assembles the message for you.
 #' 
-#' -   **Raw** – A raw, MIME-formatted email message. When you send this
+#'   - **Raw** – A raw, MIME-formatted email message. When you send this
 #'     type of email, you have to specify all of the message headers, as
 #'     well as the message body. You can use this message type to send
 #'     messages that contain attachments. The message that you specify has

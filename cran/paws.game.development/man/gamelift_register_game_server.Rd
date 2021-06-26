@@ -2,15 +2,15 @@
 % Please edit documentation in R/gamelift_operations.R
 \name{gamelift_register_game_server}
 \alias{gamelift_register_game_server}
-\title{This operation is used with the Amazon GameLift FleetIQ solution and
-game server groups}
+\title{THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND
+GAME SERVER GROUPS}
 \usage{
 gamelift_register_game_server(GameServerGroupName, GameServerId,
   InstanceId, ConnectionInfo, GameServerData)
 }
 \arguments{
 \item{GameServerGroupName}{[required] A unique identifier for the game server group where the game server is
-running. Use either the GameServerGroup name or ARN value.}
+running. Use either the <span>GameServerGroup</span> name or ARN value.}
 
 \item{GameServerId}{[required] A custom string that uniquely identifies the game server to register.
 Game server IDs are developer-defined and must be unique across all game

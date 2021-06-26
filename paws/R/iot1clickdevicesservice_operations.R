@@ -511,8 +511,8 @@ iot1clickdevicesservice_list_tags_for_resource <- function(ResourceArn) {
 #' Adds or updates the tags associated with the resource ARN
 #'
 #' @description
-#' Adds or updates the tags associated with the resource ARN. See [AWS IoT
-#' 1-Click Service
+#' Adds or updates the tags associated with the resource ARN. See [AWS
+#' IoT 1-Click Service
 #' Limits](https://docs.aws.amazon.com/iot-1-click/latest/developerguide/1click-appendix.html#1click-limits)
 #' for the maximum number of tags allowed per resource.
 #'

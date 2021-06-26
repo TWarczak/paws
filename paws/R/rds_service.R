@@ -35,24 +35,24 @@ NULL
 #' 
 #' **Amazon RDS API Reference**
 #' 
-#' -   For the alphabetical list of API actions, see [API
+#'   - For the alphabetical list of API actions, see [API
 #'     Actions](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Operations.html).
 #' 
-#' -   For the alphabetical list of data types, see [Data
+#'   - For the alphabetical list of data types, see [Data
 #'     Types](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Types.html).
 #' 
-#' -   For a list of common query parameters, see [Common
+#'   - For a list of common query parameters, see [Common
 #'     Parameters](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/CommonParameters.html).
 #' 
-#' -   For descriptions of the error codes, see [Common
+#'   - For descriptions of the error codes, see [Common
 #'     Errors](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/CommonErrors.html).
 #' 
 #' **Amazon RDS User Guide**
 #' 
-#' -   For a summary of the Amazon RDS interfaces, see [Available RDS
+#'   - For a summary of the Amazon RDS interfaces, see [Available RDS
 #'     Interfaces](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html#Welcome.Interfaces).
 #' 
-#' -   For more information about how to use the Query API, see [Using the
+#'   - For more information about how to use the Query API, see [Using the
 #'     Query
 #'     API](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Using_the_Query_API.html).
 #'
@@ -223,6 +223,12 @@ NULL
 #'  \link[=rds_stop_db_instance_automated_backups_replication]{stop_db_instance_automated_backups_replication} \tab Stops automated backup replication for a DB instance
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname rds
 #' @export
 rds <- function(config = list()) {
@@ -241,7 +247,7 @@ rds <- function(config = list()) {
   endpoints = list("*" = list(endpoint = "rds.{region}.amazonaws.com", global = FALSE), "cn-*" = list(endpoint = "rds.{region}.amazonaws.com.cn", global = FALSE), "us-iso-*" = list(endpoint = "rds.{region}.c2s.ic.gov", global = FALSE), "us-isob-*" = list(endpoint = "rds.{region}.sc2s.sgov.gov", global = FALSE)),
   service_id = "RDS",
   api_version = "2014-10-31",
-  signing_name = NULL,
+  signing_name = "rds",
   json_version = "",
   target_prefix = ""
 )

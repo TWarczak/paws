@@ -18,8 +18,8 @@ the AWS Management Console under account settings.}
 
 \item{PeerVpcId}{[required] A unique identifier for a VPC with resources to be accessed by your
 Amazon GameLift fleet. The VPC must be in the same Region where your
-fleet is deployed. Look up a VPC ID using the \href{https://console.aws.amazon.com/vpc/home}{VPC Dashboard} in the AWS
-Management Console. Learn more about VPC peering in \href{https://docs.aws.amazon.com/gamelift/latest/developerguide/vpc-peering.html}{VPC Peering with Amazon GameLift Fleets}.}
+fleet is deployed. Look up a VPC ID using the <span>VPC Dashboard</span>
+in the AWS Management Console. Learn more about VPC peering in \href{https://docs.aws.amazon.com/gamelift/latest/developerguide/vpc-peering.html}{VPC Peering with Amazon GameLift Fleets}.}
 }
 \value{
 An empty list.
@@ -46,9 +46,9 @@ that is used to manage the Amazon GameLift fleets. Identify the
 following values: (1) The ID of the fleet you want to be enable a VPC
 peering connection for; (2) The AWS account with the VPC that you want
 to peer with; and (3) The ID of the VPC you want to peer with. This
-operation is asynchronous. If successful, a VpcPeeringConnection request
-is created. You can use continuous polling to track the request's status
-using
+operation is asynchronous. If successful, a
+<span>VpcPeeringConnection</span> request is created. You can use
+continuous polling to track the request's status using
 \code{\link[=gamelift_describe_vpc_peering_connections]{describe_vpc_peering_connections}},
 or by monitoring fleet events for success or failure using
 \code{\link[=gamelift_describe_fleet_events]{describe_fleet_events}}.

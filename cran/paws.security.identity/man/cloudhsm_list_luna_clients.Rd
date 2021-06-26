@@ -2,7 +2,7 @@
 % Please edit documentation in R/cloudhsm_operations.R
 \name{cloudhsm_list_luna_clients}
 \alias{cloudhsm_list_luna_clients}
-\title{This is documentation for AWS CloudHSM Classic}
+\title{This is documentation for AWS CLOUDHSM CLASSIC}
 \usage{
 cloudhsm_list_luna_clients(NextToken)
 }

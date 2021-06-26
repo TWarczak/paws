@@ -203,7 +203,8 @@ acmpca_create_certificate_authority <- function(CertificateAuthorityConfiguratio
 #' @param CertificateAuthorityArn &#91;required&#93; The Amazon Resource Name (ARN) of the CA to be audited. This is of the
 #' form:
 #' 
-#' `arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012 `.
+#' ` arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012
+#'  `.
 #' @param S3BucketName &#91;required&#93; The name of the S3 bucket that will contain the audit report.
 #' @param AuditReportResponseFormat &#91;required&#93; The format in which to create the report. This can be either **JSON** or
 #' **CSV**.
@@ -261,16 +262,16 @@ acmpca_create_certificate_authority_audit_report <- function(CertificateAuthorit
 #' 
 #' **About Permissions**
 #' 
-#' -   If the private CA and the certificates it issues reside in the same
+#'   - If the private CA and the certificates it issues reside in the same
 #'     account, you can use [`create_permission`][acmpca_create_permission]
 #'     to grant permissions for ACM to carry out automatic certificate
 #'     renewals.
 #' 
-#' -   For automatic certificate renewal to succeed, the ACM service
+#'   - For automatic certificate renewal to succeed, the ACM service
 #'     principal needs permissions to create, retrieve, and list
 #'     certificates.
 #' 
-#' -   If the private CA and the ACM certificates reside in different
+#'   - If the private CA and the ACM certificates reside in different
 #'     accounts, then permissions cannot be used to enable automatic
 #'     renewals. Instead, the ACM certificate owner must set up a
 #'     resource-based policy to enable cross-account issuance and renewals.
@@ -287,7 +288,8 @@ acmpca_create_certificate_authority_audit_report <- function(CertificateAuthorit
 #' [`list_certificate_authorities`][acmpca_list_certificate_authorities]
 #' action. This must have the following form:
 #' 
-#' `arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012 `.
+#' ` arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012
+#'  `.
 #' @param Principal &#91;required&#93; The AWS service or identity that receives the permission. At this time,
 #' the only valid principal is `acm.amazonaws.com`.
 #' @param SourceAccount The ID of the calling account.
@@ -376,7 +378,8 @@ acmpca_create_permission <- function(CertificateAuthorityArn, Principal, SourceA
 #' [`create_certificate_authority`][acmpca_create_certificate_authority].
 #' This must have the following form:
 #' 
-#' `arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012 `.
+#' ` arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012
+#'  `.
 #' @param PermanentDeletionTimeInDays The number of days to make a CA restorable after it has been deleted.
 #' This can be anywhere from 7 to 30 days, with 30 being the default.
 #'
@@ -429,16 +432,16 @@ acmpca_delete_certificate_authority <- function(CertificateAuthorityArn, Permane
 #' 
 #' **About Permissions**
 #' 
-#' -   If the private CA and the certificates it issues reside in the same
+#'   - If the private CA and the certificates it issues reside in the same
 #'     account, you can use [`create_permission`][acmpca_create_permission]
 #'     to grant permissions for ACM to carry out automatic certificate
 #'     renewals.
 #' 
-#' -   For automatic certificate renewal to succeed, the ACM service
+#'   - For automatic certificate renewal to succeed, the ACM service
 #'     principal needs permissions to create, retrieve, and list
 #'     certificates.
 #' 
-#' -   If the private CA and the ACM certificates reside in different
+#'   - If the private CA and the ACM certificates reside in different
 #'     accounts, then permissions cannot be used to enable automatic
 #'     renewals. Instead, the ACM certificate owner must set up a
 #'     resource-based policy to enable cross-account issuance and renewals.
@@ -455,7 +458,8 @@ acmpca_delete_certificate_authority <- function(CertificateAuthorityArn, Permane
 #' [`list_certificate_authorities`][acmpca_list_certificate_authorities]
 #' action. This must have the following form:
 #' 
-#' `arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012 `.
+#' ` arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012
+#'  `.
 #' @param Principal &#91;required&#93; The AWS service or identity that will have its CA permissions revoked.
 #' At this time, the only valid service principal is `acm.amazonaws.com`
 #' @param SourceAccount The AWS account that calls this action.
@@ -511,23 +515,23 @@ acmpca_delete_permission <- function(CertificateAuthorityArn, Principal, SourceA
 #' 
 #' **About Policies**
 #' 
-#' -   A policy grants access on a private CA to an AWS customer account,
+#'   - A policy grants access on a private CA to an AWS customer account,
 #'     to AWS Organizations, or to an AWS Organizations unit. Policies are
 #'     under the control of a CA administrator. For more information, see
 #'     [Using a Resource Based Policy with ACM Private
 #'     CA](https://docs.aws.amazon.com/acm-pca/latest/userguide/pca-rbp.html).
 #' 
-#' -   A policy permits a user of AWS Certificate Manager (ACM) to issue
+#'   - A policy permits a user of AWS Certificate Manager (ACM) to issue
 #'     ACM certificates signed by a CA in another account.
 #' 
-#' -   For ACM to manage automatic renewal of these certificates, the ACM
+#'   - For ACM to manage automatic renewal of these certificates, the ACM
 #'     user must configure a Service Linked Role (SLR). The SLR allows the
 #'     ACM service to assume the identity of the user, subject to
 #'     confirmation against the ACM Private CA policy. For more
 #'     information, see [Using a Service Linked Role with
 #'     ACM](https://docs.aws.amazon.com/acm/latest/userguide/acm-slr.html).
 #' 
-#' -   Updates made in AWS Resource Manager (RAM) are reflected in
+#'   - Updates made in AWS Resource Manager (RAM) are reflected in
 #'     policies. For more information, see [Attach a Policy for
 #'     Cross-Account
 #'     Access](https://docs.aws.amazon.com/acm-pca/latest/userguide/pca-ram.html).
@@ -580,25 +584,25 @@ acmpca_delete_policy <- function(ResourceArn) {
 #' its ARN (Amazon Resource Name). The output contains the status of your
 #' CA. This can be any of the following:
 #' 
-#' -   `CREATING` - ACM Private CA is creating your private certificate
+#'   - `CREATING` - ACM Private CA is creating your private certificate
 #'     authority.
 #' 
-#' -   `PENDING_CERTIFICATE` - The certificate is pending. You must use
+#'   - `PENDING_CERTIFICATE` - The certificate is pending. You must use
 #'     your ACM Private CA-hosted or on-premises root or subordinate CA to
 #'     sign your private CA CSR and then import it into PCA.
 #' 
-#' -   `ACTIVE` - Your private CA is active.
+#'   - `ACTIVE` - Your private CA is active.
 #' 
-#' -   `DISABLED` - Your private CA has been disabled.
+#'   - `DISABLED` - Your private CA has been disabled.
 #' 
-#' -   `EXPIRED` - Your private CA certificate has expired.
+#'   - `EXPIRED` - Your private CA certificate has expired.
 #' 
-#' -   `FAILED` - Your private CA has failed. Your CA can fail because of
+#'   - `FAILED` - Your private CA has failed. Your CA can fail because of
 #'     problems such a network outage or backend AWS failure or other
 #'     errors. A failed CA can never return to the pending state. You must
 #'     create a new CA.
 #' 
-#' -   `DELETED` - Your private CA is within the restoration period, after
+#'   - `DELETED` - Your private CA is within the restoration period, after
 #'     which it is permanently deleted. The length of time remaining in the
 #'     CA's restoration period is also included in this action's output.
 #'
@@ -609,7 +613,8 @@ acmpca_delete_policy <- function(ResourceArn) {
 #' [`create_certificate_authority`][acmpca_create_certificate_authority].
 #' This must be of the form:
 #' 
-#' `arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012 `.
+#' ` arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012
+#'  `.
 #'
 #' @return
 #' A list with the following syntax:
@@ -766,7 +771,8 @@ acmpca_describe_certificate_authority <- function(CertificateAuthorityArn) {
 #' @param CertificateAuthorityArn &#91;required&#93; The Amazon Resource Name (ARN) of the private CA. This must be of the
 #' form:
 #' 
-#' `arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012 `.
+#' ` arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012
+#'  `.
 #' @param AuditReportId &#91;required&#93; The report ID returned by calling the
 #' [`create_certificate_authority_audit_report`][acmpca_create_certificate_authority_audit_report]
 #' action.
@@ -833,11 +839,13 @@ acmpca_describe_certificate_authority_audit_report <- function(CertificateAuthor
 #' [`create_certificate_authority`][acmpca_create_certificate_authority].
 #' This must be of the form:
 #' 
-#' `arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012 `.
+#' ` arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012
+#'  `.
 #' @param CertificateArn &#91;required&#93; The ARN of the issued certificate. The ARN contains the certificate
 #' serial number and must be in the following form:
 #' 
-#' `arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012/certificate/286535153982981100925020015808220737245 `
+#' ` arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012/certificate/286535153982981100925020015808220737245
+#'  `
 #'
 #' @return
 #' A list with the following syntax:
@@ -891,7 +899,8 @@ acmpca_get_certificate <- function(CertificateAuthorityArn, CertificateArn) {
 #'
 #' @param CertificateAuthorityArn &#91;required&#93; The Amazon Resource Name (ARN) of your private CA. This is of the form:
 #' 
-#' `arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012 `.
+#' ` arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012
+#'  `.
 #'
 #' @return
 #' A list with the following syntax:
@@ -949,7 +958,8 @@ acmpca_get_certificate_authority_certificate <- function(CertificateAuthorityArn
 #' [`create_certificate_authority`][acmpca_create_certificate_authority]
 #' action. This must be of the form:
 #' 
-#' `arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012 `
+#' ` arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012
+#'  `
 #'
 #' @return
 #' A list with the following syntax:
@@ -999,23 +1009,23 @@ acmpca_get_certificate_authority_csr <- function(CertificateAuthorityArn) {
 #' 
 #' **About Policies**
 #' 
-#' -   A policy grants access on a private CA to an AWS customer account,
+#'   - A policy grants access on a private CA to an AWS customer account,
 #'     to AWS Organizations, or to an AWS Organizations unit. Policies are
 #'     under the control of a CA administrator. For more information, see
 #'     [Using a Resource Based Policy with ACM Private
 #'     CA](https://docs.aws.amazon.com/acm-pca/latest/userguide/pca-rbp.html).
 #' 
-#' -   A policy permits a user of AWS Certificate Manager (ACM) to issue
+#'   - A policy permits a user of AWS Certificate Manager (ACM) to issue
 #'     ACM certificates signed by a CA in another account.
 #' 
-#' -   For ACM to manage automatic renewal of these certificates, the ACM
+#'   - For ACM to manage automatic renewal of these certificates, the ACM
 #'     user must configure a Service Linked Role (SLR). The SLR allows the
 #'     ACM service to assume the identity of the user, subject to
 #'     confirmation against the ACM Private CA policy. For more
 #'     information, see [Using a Service Linked Role with
 #'     ACM](https://docs.aws.amazon.com/acm/latest/userguide/acm-slr.html).
 #' 
-#' -   Updates made in AWS Resource Manager (RAM) are reflected in
+#'   - Updates made in AWS Resource Manager (RAM) are reflected in
 #'     policies. For more information, see [Attach a Policy for
 #'     Cross-Account
 #'     Access](https://docs.aws.amazon.com/acm-pca/latest/userguide/pca-ram.html).
@@ -1087,78 +1097,78 @@ acmpca_get_policy <- function(ResourceArn) {
 #' 
 #' ACM Private CA supports three scenarios for installing a CA certificate:
 #' 
-#' -   Installing a certificate for a root CA hosted by ACM Private CA.
+#'   - Installing a certificate for a root CA hosted by ACM Private CA.
 #' 
-#' -   Installing a subordinate CA certificate whose parent authority is
+#'   - Installing a subordinate CA certificate whose parent authority is
 #'     hosted by ACM Private CA.
 #' 
-#' -   Installing a subordinate CA certificate whose parent authority is
+#'   - Installing a subordinate CA certificate whose parent authority is
 #'     externally hosted.
 #' 
 #' The following addtitional requirements apply when you import a CA
 #' certificate.
 #' 
-#' -   Only a self-signed certificate can be imported as a root CA.
+#'   - Only a self-signed certificate can be imported as a root CA.
 #' 
-#' -   A self-signed certificate cannot be imported as a subordinate CA.
+#'   - A self-signed certificate cannot be imported as a subordinate CA.
 #' 
-#' -   Your certificate chain must not include the private CA certificate
+#'   - Your certificate chain must not include the private CA certificate
 #'     that you are importing.
 #' 
-#' -   Your root CA must be the last certificate in your chain. The
+#'   - Your root CA must be the last certificate in your chain. The
 #'     subordinate certificate, if any, that your root CA signed must be
 #'     next to last. The subordinate certificate signed by the preceding
 #'     subordinate CA must come next, and so on until your chain is built.
 #' 
-#' -   The chain must be PEM-encoded.
+#'   - The chain must be PEM-encoded.
 #' 
-#' -   The maximum allowed size of a certificate is 32 KB.
+#'   - The maximum allowed size of a certificate is 32 KB.
 #' 
-#' -   The maximum allowed size of a certificate chain is 2 MB.
+#'   - The maximum allowed size of a certificate chain is 2 MB.
 #' 
 #' *Enforcement of Critical Constraints*
 #' 
 #' ACM Private CA allows the following extensions to be marked critical in
 #' the imported CA certificate or chain.
 #' 
-#' -   Basic constraints (*must* be marked critical)
+#'   - Basic constraints (*must* be marked critical)
 #' 
-#' -   Subject alternative names
+#'   - Subject alternative names
 #' 
-#' -   Key usage
+#'   - Key usage
 #' 
-#' -   Extended key usage
+#'   - Extended key usage
 #' 
-#' -   Authority key identifier
+#'   - Authority key identifier
 #' 
-#' -   Subject key identifier
+#'   - Subject key identifier
 #' 
-#' -   Issuer alternative name
+#'   - Issuer alternative name
 #' 
-#' -   Subject directory attributes
+#'   - Subject directory attributes
 #' 
-#' -   Subject information access
+#'   - Subject information access
 #' 
-#' -   Certificate policies
+#'   - Certificate policies
 #' 
-#' -   Policy mappings
+#'   - Policy mappings
 #' 
-#' -   Inhibit anyPolicy
+#'   - Inhibit anyPolicy
 #' 
 #' ACM Private CA rejects the following extensions when they are marked
 #' critical in an imported CA certificate or chain.
 #' 
-#' -   Name constraints
+#'   - Name constraints
 #' 
-#' -   Policy constraints
+#'   - Policy constraints
 #' 
-#' -   CRL distribution points
+#'   - CRL distribution points
 #' 
-#' -   Authority information access
+#'   - Authority information access
 #' 
-#' -   Freshest CRL
+#'   - Freshest CRL
 #' 
-#' -   Any other extension
+#'   - Any other extension
 #'
 #' @usage
 #' acmpca_import_certificate_authority_certificate(CertificateAuthorityArn,
@@ -1168,7 +1178,8 @@ acmpca_get_policy <- function(ResourceArn) {
 #' [`create_certificate_authority`][acmpca_create_certificate_authority].
 #' This must be of the form:
 #' 
-#' `arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012 `
+#' ` arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012
+#'  `
 #' @param Certificate &#91;required&#93; The PEM-encoded certificate for a private CA. This may be a self-signed
 #' certificate in the case of a root CA, or it may be signed by another CA
 #' that you control.
@@ -1233,18 +1244,22 @@ acmpca_import_certificate_authority_certificate <- function(CertificateAuthority
 #' [`create_certificate_authority`][acmpca_create_certificate_authority].
 #' This must be of the form:
 #' 
-#' `arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012 `
+#' ` arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012
+#'  `
 #' @param Csr &#91;required&#93; The certificate signing request (CSR) for the certificate you want to
 #' issue. You can use the following OpenSSL command to create the CSR and a
 #' 2048 bit RSA private key.
 #' 
-#' `openssl req -new -newkey rsa:2048 -days 365 -keyout private/test_cert_priv_key.pem -out csr/test_cert_.csr`
+#' `openssl req -new -newkey rsa:2048 -days 365 -keyout
+#' private/test_cert_priv_key.pem -out csr/test_cert_.csr`
 #' 
 #' If you have a configuration file, you can use the following OpenSSL
 #' command. The `usr_cert` block in the configuration file contains your
 #' X509 version 3 extensions.
 #' 
-#' `openssl req -new -config openssl_rsa.cnf -extensions usr_cert -newkey rsa:2048 -days -365 -keyout private/test_cert_priv_key.pem -out csr/test_cert_.csr`
+#' `openssl req -new -config openssl_rsa.cnf -extensions usr_cert -newkey
+#' rsa:2048 -days -365 -keyout private/test_cert_priv_key.pem -out
+#' csr/test_cert_.csr`
 #' 
 #' Note: A CSR must provide either a *subject name* or a *subject
 #' alternative name* or the request will be rejected.
@@ -1267,35 +1282,35 @@ acmpca_import_certificate_authority_certificate <- function(CertificateAuthority
 #' The following service-owned `TemplateArn` values are supported by ACM
 #' Private CA:
 #' 
-#' -   arn:aws:acm-pca:::template/CodeSigningCertificate/V1
+#'   - arn:aws:acm-pca:::template/CodeSigningCertificate/V1
 #' 
-#' -   arn:aws:acm-pca:::template/CodeSigningCertificate_CSRPassthrough/V1
+#'   - arn:aws:acm-pca:::template/CodeSigningCertificate_CSRPassthrough/V1
 #' 
-#' -   arn:aws:acm-pca:::template/EndEntityCertificate/V1
+#'   - arn:aws:acm-pca:::template/EndEntityCertificate/V1
 #' 
-#' -   arn:aws:acm-pca:::template/EndEntityCertificate_CSRPassthrough/V1
+#'   - arn:aws:acm-pca:::template/EndEntityCertificate_CSRPassthrough/V1
 #' 
-#' -   arn:aws:acm-pca:::template/EndEntityClientAuthCertificate/V1
+#'   - arn:aws:acm-pca:::template/EndEntityClientAuthCertificate/V1
 #' 
-#' -   arn:aws:acm-pca:::template/EndEntityClientAuthCertificate_CSRPassthrough/V1
+#'   - arn:aws:acm-pca:::template/EndEntityClientAuthCertificate_CSRPassthrough/V1
 #' 
-#' -   arn:aws:acm-pca:::template/EndEntityServerAuthCertificate/V1
+#'   - arn:aws:acm-pca:::template/EndEntityServerAuthCertificate/V1
 #' 
-#' -   arn:aws:acm-pca:::template/EndEntityServerAuthCertificate_CSRPassthrough/V1
+#'   - arn:aws:acm-pca:::template/EndEntityServerAuthCertificate_CSRPassthrough/V1
 #' 
-#' -   arn:aws:acm-pca:::template/OCSPSigningCertificate/V1
+#'   - arn:aws:acm-pca:::template/OCSPSigningCertificate/V1
 #' 
-#' -   arn:aws:acm-pca:::template/OCSPSigningCertificate_CSRPassthrough/V1
+#'   - arn:aws:acm-pca:::template/OCSPSigningCertificate_CSRPassthrough/V1
 #' 
-#' -   arn:aws:acm-pca:::template/RootCACertificate/V1
+#'   - arn:aws:acm-pca:::template/RootCACertificate/V1
 #' 
-#' -   arn:aws:acm-pca:::template/SubordinateCACertificate_PathLen0/V1
+#'   - arn:aws:acm-pca:::template/SubordinateCACertificate_PathLen0/V1
 #' 
-#' -   arn:aws:acm-pca:::template/SubordinateCACertificate_PathLen1/V1
+#'   - arn:aws:acm-pca:::template/SubordinateCACertificate_PathLen1/V1
 #' 
-#' -   arn:aws:acm-pca:::template/SubordinateCACertificate_PathLen2/V1
+#'   - arn:aws:acm-pca:::template/SubordinateCACertificate_PathLen2/V1
 #' 
-#' -   arn:aws:acm-pca:::template/SubordinateCACertificate_PathLen3/V1
+#'   - arn:aws:acm-pca:::template/SubordinateCACertificate_PathLen3/V1
 #' 
 #' For more information, see [Using
 #' Templates](https://docs.aws.amazon.com/acm-pca/latest/userguide/UsingTemplates.html).
@@ -1540,16 +1555,16 @@ acmpca_list_certificate_authorities <- function(NextToken = NULL, MaxResults = N
 #' 
 #' **About Permissions**
 #' 
-#' -   If the private CA and the certificates it issues reside in the same
+#'   - If the private CA and the certificates it issues reside in the same
 #'     account, you can use [`create_permission`][acmpca_create_permission]
 #'     to grant permissions for ACM to carry out automatic certificate
 #'     renewals.
 #' 
-#' -   For automatic certificate renewal to succeed, the ACM service
+#'   - For automatic certificate renewal to succeed, the ACM service
 #'     principal needs permissions to create, retrieve, and list
 #'     certificates.
 #' 
-#' -   If the private CA and the ACM certificates reside in different
+#'   - If the private CA and the ACM certificates reside in different
 #'     accounts, then permissions cannot be used to enable automatic
 #'     renewals. Instead, the ACM certificate owner must set up a
 #'     resource-based policy to enable cross-account issuance and renewals.
@@ -1648,7 +1663,8 @@ acmpca_list_permissions <- function(CertificateAuthorityArn, NextToken = NULL, M
 #' [`create_certificate_authority`][acmpca_create_certificate_authority]
 #' action. This must be of the form:
 #' 
-#' `arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012 `
+#' ` arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012
+#'  `
 #' @param NextToken Use this parameter when paginating results in a subsequent request after
 #' you receive a response with truncated results. Set it to the value of
 #' **NextToken** from the response you just received.
@@ -1716,23 +1732,23 @@ acmpca_list_tags <- function(CertificateAuthorityArn, NextToken = NULL, MaxResul
 #' 
 #' **About Policies**
 #' 
-#' -   A policy grants access on a private CA to an AWS customer account,
+#'   - A policy grants access on a private CA to an AWS customer account,
 #'     to AWS Organizations, or to an AWS Organizations unit. Policies are
 #'     under the control of a CA administrator. For more information, see
 #'     [Using a Resource Based Policy with ACM Private
 #'     CA](https://docs.aws.amazon.com/acm-pca/latest/userguide/pca-rbp.html).
 #' 
-#' -   A policy permits a user of AWS Certificate Manager (ACM) to issue
+#'   - A policy permits a user of AWS Certificate Manager (ACM) to issue
 #'     ACM certificates signed by a CA in another account.
 #' 
-#' -   For ACM to manage automatic renewal of these certificates, the ACM
+#'   - For ACM to manage automatic renewal of these certificates, the ACM
 #'     user must configure a Service Linked Role (SLR). The SLR allows the
 #'     ACM service to assume the identity of the user, subject to
 #'     confirmation against the ACM Private CA policy. For more
 #'     information, see [Using a Service Linked Role with
 #'     ACM](https://docs.aws.amazon.com/acm/latest/userguide/acm-slr.html).
 #' 
-#' -   Updates made in AWS Resource Manager (RAM) are reflected in
+#'   - Updates made in AWS Resource Manager (RAM) are reflected in
 #'     policies. For more information, see [Attach a Policy for
 #'     Cross-Account
 #'     Access](https://docs.aws.amazon.com/acm-pca/latest/userguide/pca-ram.html).
@@ -1815,7 +1831,8 @@ acmpca_put_policy <- function(ResourceArn, Policy) {
 #' [`create_certificate_authority`][acmpca_create_certificate_authority]
 #' action. This must be of the form:
 #' 
-#' `arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012 `
+#' ` arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012
+#'  `
 #'
 #' @return
 #' An empty list.
@@ -1881,7 +1898,8 @@ acmpca_restore_certificate_authority <- function(CertificateAuthorityArn) {
 #' @param CertificateAuthorityArn &#91;required&#93; Amazon Resource Name (ARN) of the private CA that issued the certificate
 #' to be revoked. This must be of the form:
 #' 
-#' `arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012 `
+#' ` arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012
+#'  `
 #' @param CertificateSerial &#91;required&#93; Serial number of the certificate to be revoked. This must be in
 #' hexadecimal format. You can retrieve the serial number by calling
 #' [`get_certificate`][acmpca_get_certificate] with the Amazon Resource
@@ -1951,7 +1969,8 @@ acmpca_revoke_certificate <- function(CertificateAuthorityArn, CertificateSerial
 #' [`create_certificate_authority`][acmpca_create_certificate_authority].
 #' This must be of the form:
 #' 
-#' `arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012 `
+#' ` arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012
+#'  `
 #' @param Tags &#91;required&#93; List of tags to be associated with the CA.
 #'
 #' @return
@@ -2009,7 +2028,8 @@ acmpca_tag_certificate_authority <- function(CertificateAuthorityArn, Tags) {
 #' [`create_certificate_authority`][acmpca_create_certificate_authority].
 #' This must be of the form:
 #' 
-#' `arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012 `
+#' ` arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012
+#'  `
 #' @param Tags &#91;required&#93; List of tags to be removed from the CA.
 #'
 #' @return
@@ -2070,7 +2090,8 @@ acmpca_untag_certificate_authority <- function(CertificateAuthorityArn, Tags) {
 #' @param CertificateAuthorityArn &#91;required&#93; Amazon Resource Name (ARN) of the private CA that issued the certificate
 #' to be revoked. This must be of the form:
 #' 
-#' `arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012 `
+#' ` arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012
+#'  `
 #' @param RevocationConfiguration Revocation information for your private CA.
 #' @param Status Status of your private CA.
 #'

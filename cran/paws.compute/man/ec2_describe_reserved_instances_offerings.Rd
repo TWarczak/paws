@@ -30,16 +30,9 @@ Instance Marketplace are listed.
 \item \code{product-description} - The Reserved Instance product platform
 description. Instances that include \verb{(Amazon VPC)} in the product
 platform description will only be displayed to EC2-Classic account
-holders and are for use with Amazon VPC. (\code{Linux/UNIX} |
-\verb{Linux/UNIX (Amazon VPC)} | \verb{SUSE Linux} | \verb{SUSE Linux (Amazon VPC)}
-| \verb{Red Hat Enterprise Linux} |
-\verb{Red Hat Enterprise Linux (Amazon VPC)} | \code{Windows} |
-\verb{Windows (Amazon VPC)} | \verb{Windows with SQL Server Standard} |
-\verb{Windows with SQL Server Standard (Amazon VPC)} |
-\verb{Windows with SQL Server Web} |
-\verb{ Windows with SQL Server Web (Amazon VPC)} |
-\verb{Windows with SQL Server Enterprise} |
-\verb{Windows with SQL Server Enterprise (Amazon VPC)})
+holders and are for use with Amazon VPC. (\code{Linux/UNIX} | \verb{Linux/UNIX (Amazon VPC)} | \verb{SUSE Linux} | \verb{SUSE Linux (Amazon VPC)} | \verb{Red Hat Enterprise Linux} | \verb{Red Hat Enterprise Linux (Amazon VPC)} |
+\code{Windows} | \verb{Windows (Amazon VPC)} | \verb{Windows with SQL Server Standard} | \verb{Windows with SQL Server Standard (Amazon VPC)} |
+\verb{Windows with SQL Server Web} | \verb{ Windows with SQL Server Web (Amazon VPC)} | \verb{Windows with SQL Server Enterprise} | \verb{Windows with SQL Server Enterprise (Amazon VPC)})
 \item \code{reserved-instances-offering-id} - The Reserved Instances offering
 ID.
 \item \code{scope} - The scope of the Reserved Instance (\verb{Availability Zone} or
@@ -100,8 +93,7 @@ Default: 100}
 \item{NextToken}{The token to retrieve the next page of results.}
 
 \item{OfferingType}{The Reserved Instance offering type. If you are using tools that predate
-the 2011-11-01 API version, you only have access to the
-\verb{Medium Utilization} Reserved Instance offering type.}
+the 2011-11-01 API version, you only have access to the \verb{Medium Utilization} Reserved Instance offering type.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

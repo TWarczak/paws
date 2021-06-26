@@ -68,8 +68,7 @@ for patches, or \code{Failed} for associations.
 \item DocumentName: A SSM document name. For example,
 AWS-RunPatchBaseline.
 \item DocumentVersion: An SSM document version number. For example, 4.
-\item Classification: A patch classification. For example,
-\verb{security updates}.
+\item Classification: A patch classification. For example, \verb{security updates}.
 \item PatchBaselineId: A patch baseline ID.
 \item PatchSeverity: A patch severity. For example, \code{Critical}.
 \item PatchState: A patch state. For example,

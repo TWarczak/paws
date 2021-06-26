@@ -9,6 +9,12 @@ pinpoint(config = list())
 \arguments{
 \item{config}{Optional configuration of credentials, endpoint, and/or region.}
 }
+\value{
+A client for the service. You can call the service's operations using
+syntax like \code{svc$operation(...)}, where \code{svc} is the name you've assigned
+to the client. The available operations are listed in the
+Operations section.
+}
 \description{
 Doc Engage API - Amazon Pinpoint API
 }
@@ -142,7 +148,7 @@ Doc Engage API - Amazon Pinpoint API
 \link[=pinpoint_update_segment]{update_segment} \tab Creates a new segment for an application or updates the configuration, dimension, and other settings for an existing segment that's associated with an application\cr
 \link[=pinpoint_update_sms_channel]{update_sms_channel} \tab Enables the SMS channel for an application or updates the status and settings of the SMS channel for an application\cr
 \link[=pinpoint_update_sms_template]{update_sms_template} \tab Updates an existing message template for messages that are sent through the SMS channel\cr
-\link[=pinpoint_update_template_active_version]{update_template_active_version} \tab Changes the status of a specific version of a message template to active\cr
+\link[=pinpoint_update_template_active_version]{update_template_active_version} \tab Changes the status of a specific version of a message template to \emph{active}\cr
 \link[=pinpoint_update_voice_channel]{update_voice_channel} \tab Enables the voice channel for an application or updates the status and settings of the voice channel for an application\cr
 \link[=pinpoint_update_voice_template]{update_voice_template} \tab Updates an existing message template for messages that are sent through the voice channel
 }

@@ -9,21 +9,21 @@ NULL
 #' developers who need detailed information about the Network Firewall API
 #' actions, data types, and errors.
 #' 
-#' -   The REST API requires you to handle connection details, such as
+#'   - The REST API requires you to handle connection details, such as
 #'     calculating signatures, handling request retries, and error
 #'     handling. For general information about using the AWS REST APIs, see
 #'     [AWS
 #'     APIs](https://docs.aws.amazon.com/general/latest/gr/aws-apis.html).
-#' 
+#'     
 #'     To access Network Firewall using the REST API endpoint:
-#'     `https://network-firewall.<region>.amazonaws.com `
+#'     ` https://network-firewall.<region>.amazonaws.com  `
 #' 
-#' -   Alternatively, you can use one of the AWS SDKs to access an API
+#'   - Alternatively, you can use one of the AWS SDKs to access an API
 #'     that's tailored to the programming language or platform that you're
 #'     using. For more information, see [AWS
 #'     SDKs](https://aws.amazon.com/tools/#SDKs).
 #' 
-#' -   For descriptions of Network Firewall features, including and
+#'   - For descriptions of Network Firewall features, including and
 #'     step-by-step instructions on how to use them through the Network
 #'     Firewall console, see the [Network Firewall Developer
 #'     Guide](https://docs.aws.amazon.com/network-firewall/latest/developerguide/).
@@ -36,23 +36,23 @@ NULL
 #' Connect. Network Firewall uses rules that are compatible with Suricata,
 #' a free, open source intrusion detection system (IDS) engine. For
 #' information about Suricata, see the [Suricata
-#' website](https://suricata-ids.org/).
+#' website](https://suricata.io/).
 #' 
 #' You can use Network Firewall to monitor and protect your VPC traffic in
 #' a number of ways. The following are just a few examples:
 #' 
-#' -   Allow domains or IP addresses for known AWS service endpoints, such
+#'   - Allow domains or IP addresses for known AWS service endpoints, such
 #'     as Amazon S3, and block all other forms of traffic.
 #' 
-#' -   Use custom lists of known bad domains to limit the types of domain
+#'   - Use custom lists of known bad domains to limit the types of domain
 #'     names that your applications can access.
 #' 
-#' -   Perform deep packet inspection on traffic entering or leaving your
+#'   - Perform deep packet inspection on traffic entering or leaving your
 #'     VPC.
 #' 
-#' -   Rate limit traffic going from AWS to on-premises IP destinations.
+#'   - Rate limit traffic going from AWS to on-premises IP destinations.
 #' 
-#' -   Use stateful protocol detection to filter protocols like HTTPS,
+#'   - Use stateful protocol detection to filter protocols like HTTPS,
 #'     regardless of the port used.
 #' 
 #' To enable Network Firewall for your VPCs, you perform steps in both
@@ -146,6 +146,12 @@ NULL
 #'  \link[=networkfirewall_update_rule_group]{update_rule_group} \tab Updates the rule settings for the specified rule group\cr
 #'  \link[=networkfirewall_update_subnet_change_protection]{update_subnet_change_protection} \tab Update subnet change protection
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname networkfirewall
 #' @export

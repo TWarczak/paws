@@ -10,7 +10,7 @@ clouddirectory_remove_facet_from_object(DirectoryArn, SchemaFacet,
 \arguments{
 \item{DirectoryArn}{[required] The ARN of the directory in which the object resides.}
 
-\item{SchemaFacet}{[required] The facet to remove. See SchemaFacet for details.}
+\item{SchemaFacet}{[required] The facet to remove. See <span>SchemaFacet</span> for details.}
 
 \item{ObjectReference}{[required] A reference to the object to remove the facet from.}
 }

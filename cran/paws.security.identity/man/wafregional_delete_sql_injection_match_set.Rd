@@ -2,14 +2,14 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_delete_sql_injection_match_set}
 \alias{wafregional_delete_sql_injection_match_set}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 wafregional_delete_sql_injection_match_set(SqlInjectionMatchSetId,
   ChangeToken)
 }
 \arguments{
-\item{SqlInjectionMatchSetId}{[required] The \code{SqlInjectionMatchSetId} of the SqlInjectionMatchSet that you want
-to delete. \code{SqlInjectionMatchSetId} is returned by
+\item{SqlInjectionMatchSetId}{[required] The \code{SqlInjectionMatchSetId} of the <span>SqlInjectionMatchSet</span>
+that you want to delete. \code{SqlInjectionMatchSetId} is returned by
 \code{\link[=wafregional_create_sql_injection_match_set]{create_sql_injection_match_set}}
 and by
 \code{\link[=wafregional_list_sql_injection_match_sets]{list_sql_injection_match_sets}}.}
@@ -33,9 +33,9 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Permanently deletes a SqlInjectionMatchSet. You can't delete a
-\code{SqlInjectionMatchSet} if it's still used in any \code{Rules} or if it still
-contains any SqlInjectionMatchTuple objects.
+Permanently deletes a <span>SqlInjectionMatchSet</span>. You can't
+delete a \code{SqlInjectionMatchSet} if it's still used in any \code{Rules} or if
+it still contains any <span>SqlInjectionMatchTuple</span> objects.
 
 If you just want to remove a \code{SqlInjectionMatchSet} from a \code{Rule}, use
 \code{\link[=wafregional_update_rule]{update_rule}}.

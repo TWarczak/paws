@@ -2,7 +2,7 @@
 % Please edit documentation in R/swf_operations.R
 \name{swf_undeprecate_activity_type}
 \alias{swf_undeprecate_activity_type}
-\title{Undeprecates a previously deprecated activity type}
+\title{Undeprecates a previously deprecated \emph{activity type}}
 \usage{
 swf_undeprecate_activity_type(domain, activityType)
 }

@@ -151,10 +151,10 @@ Rekognition Developer Guide.
 
 \code{\link[=rekognition_get_celebrity_recognition]{get_celebrity_recognition}}
 returns detected celebrities and the time(s) they are detected in an
-array (\code{Celebrities}) of CelebrityRecognition objects. Each
+array (\code{Celebrities}) of <span>CelebrityRecognition</span> objects. Each
 \code{CelebrityRecognition} contains information about the celebrity in a
-CelebrityDetail object and the time, \code{Timestamp}, the celebrity was
-detected.
+<span>CelebrityDetail</span> object and the time, \code{Timestamp}, the
+celebrity was detected.
 
 \code{\link[=rekognition_get_celebrity_recognition]{get_celebrity_recognition}}
 only returns the default facial attributes (\code{BoundingBox}, \code{Confidence},

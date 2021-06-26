@@ -33,7 +33,7 @@ A list with the following syntax:\preformatted{list(
 Creates an Amazon QuickSight group.
 
 The permissions resource is
-\verb{arn:aws:quicksight:us-east-1:<relevant-aws-account-id>:group/default/<group-name> }.
+\verb{arn:aws:quicksight:us-east-1:<relevant-aws-account-id>:group/default/<group-name>}.
 
 The response is a group object.
 }

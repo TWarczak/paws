@@ -953,8 +953,8 @@ sesv2_delete_contact_list <- function(ContactListName) {
 #' Deletes an existing custom verification email template.
 #' 
 #' For more information about custom verification email templates, see
-#' Using Custom Verification Email Templates in the *Amazon SES Developer
-#' Guide*.
+#' <span>Using Custom Verification Email Templates</span> in the *Amazon
+#' SES Developer Guide*.
 #' 
 #' You can execute this operation no more than once per second.
 #'
@@ -3508,11 +3508,11 @@ sesv2_put_account_sending_attributes <- function(SendingEnabled = NULL) {
 #' automatically added to the suppression list for your account. This list
 #' can contain any or all of the following:
 #' 
-#' -   `COMPLAINT` – Amazon SES adds an email address to the suppression
+#'   - `COMPLAINT` – Amazon SES adds an email address to the suppression
 #'     list for your account when a message sent to that address results in
 #'     a complaint.
 #' 
-#' -   `BOUNCE` – Amazon SES adds an email address to the suppression list
+#'   - `BOUNCE` – Amazon SES adds an email address to the suppression list
 #'     for your account when a message sent to that address results in a
 #'     hard bounce.
 #'
@@ -3712,11 +3712,11 @@ sesv2_put_configuration_set_sending_options <- function(ConfigurationSetName, Se
 #' added to the suppression list for your account. This list can contain
 #' any or all of the following:
 #' 
-#' -   `COMPLAINT` – Amazon SES adds an email address to the suppression
+#'   - `COMPLAINT` – Amazon SES adds an email address to the suppression
 #'     list for your account when a message sent to that address results in
 #'     a complaint.
 #' 
-#' -   `BOUNCE` – Amazon SES adds an email address to the suppression list
+#'   - `BOUNCE` – Amazon SES adds an email address to the suppression list
 #'     for your account when a message sent to that address results in a
 #'     hard bounce.
 #'
@@ -4016,16 +4016,16 @@ sesv2_put_email_identity_dkim_attributes <- function(EmailIdentity, SigningEnabl
 #' email domain identity. You can use this operation to do any of the
 #' following:
 #' 
-#' -   Update the signing attributes for an identity that uses Bring Your
+#'   - Update the signing attributes for an identity that uses Bring Your
 #'     Own DKIM (BYODKIM).
 #' 
-#' -   Change from using no DKIM authentication to using Easy DKIM.
+#'   - Change from using no DKIM authentication to using Easy DKIM.
 #' 
-#' -   Change from using no DKIM authentication to using BYODKIM.
+#'   - Change from using no DKIM authentication to using BYODKIM.
 #' 
-#' -   Change from using Easy DKIM to using BYODKIM.
+#'   - Change from using Easy DKIM to using BYODKIM.
 #' 
-#' -   Change from using BYODKIM to using Easy DKIM.
+#'   - Change from using BYODKIM to using Easy DKIM.
 #'
 #' @usage
 #' sesv2_put_email_identity_dkim_signing_attributes(EmailIdentity,
@@ -4035,10 +4035,10 @@ sesv2_put_email_identity_dkim_attributes <- function(EmailIdentity, SigningEnabl
 #' @param SigningAttributesOrigin &#91;required&#93; The method that you want to use to configure DKIM for the identity.
 #' There are two possible values:
 #' 
-#' -   `AWS_SES` – Configure DKIM for the identity by using [Easy
+#'   - `AWS_SES` – Configure DKIM for the identity by using [Easy
 #'     DKIM](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-authentication-dkim-easy.html).
 #' 
-#' -   `EXTERNAL` – Configure DKIM for the identity by using Bring Your Own
+#'   - `EXTERNAL` – Configure DKIM for the identity by using Bring Your Own
 #'     DKIM (BYODKIM).
 #' @param SigningAttributes An object that contains information about the private key and selector
 #' that you want to use to configure DKIM for the identity. This object is
@@ -4170,11 +4170,11 @@ sesv2_put_email_identity_feedback_attributes <- function(EmailIdentity, EmailFor
 #' @param MailFromDomain The custom MAIL FROM domain that you want the verified identity to use.
 #' The MAIL FROM domain must meet the following criteria:
 #' 
-#' -   It has to be a subdomain of the verified identity.
+#'   - It has to be a subdomain of the verified identity.
 #' 
-#' -   It can't be used to receive email.
+#'   - It can't be used to receive email.
 #' 
-#' -   It can't be used in a "From" address if the MAIL FROM domain is a
+#'   - It can't be used in a "From" address if the MAIL FROM domain is a
 #'     destination for feedback forwarding emails.
 #' @param BehaviorOnMxFailure The action that you want to take if the required MX record isn't found
 #' when you send an email. When you set this value to `UseDefaultValue`,
@@ -4475,17 +4475,17 @@ sesv2_send_custom_verification_email <- function(EmailAddress, TemplateName, Con
 #' Sends an email message. You can use the Amazon SES API v2 to send two
 #' types of messages:
 #' 
-#' -   **Simple** – A standard email message. When you create this type of
+#'   - **Simple** – A standard email message. When you create this type of
 #'     message, you specify the sender, the recipient, and the message
 #'     body, and Amazon SES assembles the message for you.
 #' 
-#' -   **Raw** – A raw, MIME-formatted email message. When you send this
+#'   - **Raw** – A raw, MIME-formatted email message. When you send this
 #'     type of email, you have to specify all of the message headers, as
 #'     well as the message body. You can use this message type to send
 #'     messages that contain attachments. The message that you specify has
 #'     to be a valid MIME message.
 #' 
-#' -   **Templated** – A message that contains personalization tags. When
+#'   - **Templated** – A message that contains personalization tags. When
 #'     you send this type of email, Amazon SES API v2 automatically
 #'     replaces the tags with values that you specify.
 #'

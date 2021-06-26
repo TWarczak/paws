@@ -39,7 +39,7 @@ A list with the following syntax:\preformatted{list(
 \description{
 Creates a batch inference job. The operation can handle up to 50 million
 records and the input file must be in JSON format. For more information,
-see recommendations-batch.
+see <span>recommendations-batch</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$create_batch_inference_job(

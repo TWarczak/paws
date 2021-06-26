@@ -341,9 +341,9 @@ connectparticipant_get_transcript <- function(ContactId = NULL, MaxResults = NUL
 #'
 #' @param ContentType &#91;required&#93; The content type of the request. Supported types are:
 #' 
-#' -   application/vnd.amazonaws.connect.event.typing
+#'   - application/vnd.amazonaws.connect.event.typing
 #' 
-#' -   application/vnd.amazonaws.connect.event.connection.acknowledged
+#'   - application/vnd.amazonaws.connect.event.connection.acknowledged
 #' @param Content The content of the event to be sent (for example, message text). This is
 #' not yet supported.
 #' @param ClientToken A unique, case-sensitive identifier that you provide to ensure the

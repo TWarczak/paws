@@ -754,7 +754,7 @@ translate_list_text_translation_jobs <- function(Filter = NULL, NextToken = NULL
 #' @description
 #' Starts an asynchronous batch translation job. Batch translation jobs can
 #' be used to translate large volumes of text across multiple documents at
-#' once. For more information, see async.
+#' once. For more information, see <span>async</span>.
 #' 
 #' Batch translation jobs can be described with the
 #' [`describe_text_translation_job`][translate_describe_text_translation_job]
@@ -778,9 +778,9 @@ translate_list_text_translation_jobs <- function(Filter = NULL, NextToken = NULL
 #' @param OutputDataConfig &#91;required&#93; Specifies the S3 folder to which your job output will be saved.
 #' @param DataAccessRoleArn &#91;required&#93; The Amazon Resource Name (ARN) of an AWS Identity Access and Management
 #' (IAM) role that grants Amazon Translate read access to your input data.
-#' For more nformation, see identity-and-access-management.
+#' For more nformation, see <span>identity-and-access-management</span>.
 #' @param SourceLanguageCode &#91;required&#93; The language code of the input language. For a list of language codes,
-#' see what-is-languages.
+#' see <span>what-is-languages</span>.
 #' 
 #' Amazon Translate does not automatically detect a source language during
 #' batch translation jobs.
@@ -912,7 +912,7 @@ translate_stop_text_translation_job <- function(JobId) {
 #' @description
 #' Translates input text from the source language to the target language.
 #' For a list of available languages and language codes, see
-#' what-is-languages.
+#' <span>what-is-languages</span>.
 #'
 #' @usage
 #' translate_translate_text(Text, TerminologyNames, SourceLanguageCode,
@@ -927,7 +927,7 @@ translate_stop_text_translation_job <- function(JobId) {
 #' can contain a maximum of 256 terms.
 #' @param SourceLanguageCode &#91;required&#93; The language code for the language of the source text. The language must
 #' be a language supported by Amazon Translate. For a list of language
-#' codes, see what-is-languages.
+#' codes, see <span>what-is-languages</span>.
 #' 
 #' To have Amazon Translate determine the source language of your text, you
 #' can specify `auto` in the `SourceLanguageCode` field. If you specify

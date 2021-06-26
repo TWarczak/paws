@@ -31,46 +31,46 @@ NULL
 #' 
 #' You can work with connections by calling:
 #' 
-#' -   [`create_connection`][codestarconnections_create_connection], which
+#'   - [`create_connection`][codestarconnections_create_connection], which
 #'     creates a uniquely named connection that can be referenced by
 #'     services such as CodePipeline.
 #' 
-#' -   [`delete_connection`][codestarconnections_delete_connection], which
+#'   - [`delete_connection`][codestarconnections_delete_connection], which
 #'     deletes the specified connection.
 #' 
-#' -   [`get_connection`][codestarconnections_get_connection], which
+#'   - [`get_connection`][codestarconnections_get_connection], which
 #'     returns information about the connection, including the connection
 #'     status.
 #' 
-#' -   [`list_connections`][codestarconnections_list_connections], which
+#'   - [`list_connections`][codestarconnections_list_connections], which
 #'     lists the connections associated with your account.
 #' 
 #' You can work with hosts by calling:
 #' 
-#' -   [`create_host`][codestarconnections_create_host], which creates a
+#'   - [`create_host`][codestarconnections_create_host], which creates a
 #'     host that represents the infrastructure where your provider is
 #'     installed.
 #' 
-#' -   [`delete_host`][codestarconnections_delete_host], which deletes the
+#'   - [`delete_host`][codestarconnections_delete_host], which deletes the
 #'     specified host.
 #' 
-#' -   [`get_host`][codestarconnections_get_host], which returns
+#'   - [`get_host`][codestarconnections_get_host], which returns
 #'     information about the host, including the setup status.
 #' 
-#' -   [`list_hosts`][codestarconnections_list_hosts], which lists the
+#'   - [`list_hosts`][codestarconnections_list_hosts], which lists the
 #'     hosts associated with your account.
 #' 
 #' You can work with tags in AWS CodeStar Connections by calling the
 #' following:
 #' 
-#' -   [`list_tags_for_resource`][codestarconnections_list_tags_for_resource],
+#'   - [`list_tags_for_resource`][codestarconnections_list_tags_for_resource],
 #'     which gets information about AWS tags for a specified Amazon
 #'     Resource Name (ARN) in AWS CodeStar Connections.
 #' 
-#' -   [`tag_resource`][codestarconnections_tag_resource], which adds or
+#'   - [`tag_resource`][codestarconnections_tag_resource], which adds or
 #'     updates tags for a resource in AWS CodeStar Connections.
 #' 
-#' -   [`untag_resource`][codestarconnections_untag_resource], which
+#'   - [`untag_resource`][codestarconnections_untag_resource], which
 #'     removes tags for a resource in AWS CodeStar Connections.
 #' 
 #' For information about how to use AWS CodeStar Connections, see the
@@ -122,6 +122,12 @@ NULL
 #'  \link[=codestarconnections_untag_resource]{untag_resource} \tab Removes tags from an AWS resource\cr
 #'  \link[=codestarconnections_update_host]{update_host} \tab Updates a specified host with the provided configurations
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname codestarconnections
 #' @export

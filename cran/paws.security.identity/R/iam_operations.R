@@ -665,7 +665,7 @@ iam_create_account_alias <- function(AccountAlias) {
 #' pattern](https://en.wikipedia.org/wiki/Regex)) a string of characters
 #' consisting of either a forward slash (/) by itself or a string that must
 #' begin and end with forward slashes. In addition, it can contain any
-#' ASCII character from the ! (`\u0021`) through the DEL character
+#' ASCII character from the \! (`\u0021`) through the DEL character
 #' (`\u007F`), including most punctuation characters, digits, and upper and
 #' lowercased letters.
 #' @param GroupName &#91;required&#93; The name of the group to create. Do not include the path in this value.
@@ -759,7 +759,7 @@ iam_create_group <- function(Path = NULL, GroupName) {
 #' pattern](https://en.wikipedia.org/wiki/Regex)) a string of characters
 #' consisting of either a forward slash (/) by itself or a string that must
 #' begin and end with forward slashes. In addition, it can contain any
-#' ASCII character from the ! (`\u0021`) through the DEL character
+#' ASCII character from the \! (`\u0021`) through the DEL character
 #' (`\u007F`), including most punctuation characters, digits, and upper and
 #' lowercased letters.
 #'
@@ -948,13 +948,13 @@ iam_create_login_profile <- function(UserName, Password, PasswordResetRequired =
 #' 
 #' When you create the IAM OIDC provider, you specify the following:
 #' 
-#' -   The URL of the OIDC identity provider (IdP) to trust
+#'   - The URL of the OIDC identity provider (IdP) to trust
 #' 
-#' -   A list of client IDs (also known as audiences) that identify the
+#'   - A list of client IDs (also known as audiences) that identify the
 #'     application or applications that are allowed to authenticate using
 #'     the OIDC provider
 #' 
-#' -   A list of thumbprints of one or more server certificates that the
+#'   - A list of thumbprints of one or more server certificates that the
 #'     IdP uses
 #' 
 #' You get all of this information from the OIDC IdP that you want to use
@@ -1106,7 +1106,7 @@ iam_create_open_id_connect_provider <- function(Url, ClientIDList = NULL, Thumbp
 #' pattern](https://en.wikipedia.org/wiki/Regex)) a string of characters
 #' consisting of either a forward slash (/) by itself or a string that must
 #' begin and end with forward slashes. In addition, it can contain any
-#' ASCII character from the ! (`\u0021`) through the DEL character
+#' ASCII character from the \! (`\u0021`) through the DEL character
 #' (`\u007F`), including most punctuation characters, digits, and upper and
 #' lowercased letters.
 #' @param PolicyDocument &#91;required&#93; The JSON policy document that you want to use as the content for the new
@@ -1121,13 +1121,13 @@ iam_create_open_id_connect_provider <- function(Url, ClientIDList = NULL, Thumbp
 #' validate this parameter is a string of characters consisting of the
 #' following:
 #' 
-#' -   Any printable ASCII character ranging from the space character
+#'   - Any printable ASCII character ranging from the space character
 #'     (`\u0020`) through the end of the ASCII character range
 #' 
-#' -   The printable characters in the Basic Latin and Latin-1 Supplement
+#'   - The printable characters in the Basic Latin and Latin-1 Supplement
 #'     character set (through `\u00FF`)
 #' 
-#' -   The special characters tab (`\u0009`), line feed (`\u000A`), and
+#'   - The special characters tab (`\u0009`), line feed (`\u000A`), and
 #'     carriage return (`\u000D`)
 #' @param Description A friendly description of the policy.
 #' 
@@ -1232,13 +1232,13 @@ iam_create_policy <- function(PolicyName, Path = NULL, PolicyDocument, Descripti
 #' validate this parameter is a string of characters consisting of the
 #' following:
 #' 
-#' -   Any printable ASCII character ranging from the space character
+#'   - Any printable ASCII character ranging from the space character
 #'     (`\u0020`) through the end of the ASCII character range
 #' 
-#' -   The printable characters in the Basic Latin and Latin-1 Supplement
+#'   - The printable characters in the Basic Latin and Latin-1 Supplement
 #'     character set (through `\u00FF`)
 #' 
-#' -   The special characters tab (`\u0009`), line feed (`\u000A`), and
+#'   - The special characters tab (`\u0009`), line feed (`\u000A`), and
 #'     carriage return (`\u000D`)
 #' @param SetAsDefault Specifies whether to set this version as the policy's default version.
 #' 
@@ -1321,7 +1321,7 @@ iam_create_policy_version <- function(PolicyArn, PolicyDocument, SetAsDefault = 
 #' pattern](https://en.wikipedia.org/wiki/Regex)) a string of characters
 #' consisting of either a forward slash (/) by itself or a string that must
 #' begin and end with forward slashes. In addition, it can contain any
-#' ASCII character from the ! (`\u0021`) through the DEL character
+#' ASCII character from the \! (`\u0021`) through the DEL character
 #' (`\u007F`), including most punctuation characters, digits, and upper and
 #' lowercased letters.
 #' @param RoleName &#91;required&#93; The name of the role to create.
@@ -1341,13 +1341,13 @@ iam_create_policy_version <- function(PolicyArn, PolicyDocument, SetAsDefault = 
 #' validate this parameter is a string of characters consisting of the
 #' following:
 #' 
-#' -   Any printable ASCII character ranging from the space character
+#'   - Any printable ASCII character ranging from the space character
 #'     (`\u0020`) through the end of the ASCII character range
 #' 
-#' -   The printable characters in the Basic Latin and Latin-1 Supplement
+#'   - The printable characters in the Basic Latin and Latin-1 Supplement
 #'     character set (through `\u00FF`)
 #' 
-#' -   The special characters tab (`\u0009`), line feed (`\u000A`), and
+#'   - The special characters tab (`\u0009`), line feed (`\u000A`), and
 #'     carriage return (`\u000D`)
 #' 
 #' Upon success, the response includes the same trust policy in JSON
@@ -1487,8 +1487,8 @@ iam_create_role <- function(Path = NULL, RoleName, AssumeRolePolicyDocument, Des
 #' generate the metadata document using the identity management software
 #' that is used as your organization's IdP.
 #' 
-#' This operation requires [Signature Version
-#' 4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html).
+#' This operation requires [Signature
+#' Version 4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html).
 #' 
 #' For more information, see [Enabling SAML 2.0 Federated Users to Access
 #' the AWS Management
@@ -1767,7 +1767,7 @@ iam_create_service_specific_credential <- function(UserName, ServiceName) {
 #' pattern](https://en.wikipedia.org/wiki/Regex)) a string of characters
 #' consisting of either a forward slash (/) by itself or a string that must
 #' begin and end with forward slashes. In addition, it can contain any
-#' ASCII character from the ! (`\u0021`) through the DEL character
+#' ASCII character from the \! (`\u0021`) through the DEL character
 #' (`\u007F`), including most punctuation characters, digits, and upper and
 #' lowercased letters.
 #' @param UserName &#91;required&#93; The name of the user to create.
@@ -1896,7 +1896,7 @@ iam_create_user <- function(Path = NULL, UserName, PermissionsBoundary = NULL, T
 #' pattern](https://en.wikipedia.org/wiki/Regex)) a string of characters
 #' consisting of either a forward slash (/) by itself or a string that must
 #' begin and end with forward slashes. In addition, it can contain any
-#' ASCII character from the ! (`\u0021`) through the DEL character
+#' ASCII character from the \! (`\u0021`) through the DEL character
 #' (`\u007F`), including most punctuation characters, digits, and upper and
 #' lowercased letters.
 #' @param VirtualMFADeviceName &#91;required&#93; The name of the virtual MFA device. Use with path to uniquely identify a
@@ -2506,7 +2506,7 @@ iam_delete_open_id_connect_provider <- function(OpenIDConnectProviderArn) {
 #' you must delete all the policy's versions. The following steps describe
 #' the process for deleting a managed policy:
 #' 
-#' -   Detach the policy from all users, groups, and roles that the policy
+#'   - Detach the policy from all users, groups, and roles that the policy
 #'     is attached to, using the
 #'     [`detach_user_policy`][iam_detach_user_policy],
 #'     [`detach_group_policy`][iam_detach_group_policy], or
@@ -2514,7 +2514,7 @@ iam_delete_open_id_connect_provider <- function(OpenIDConnectProviderArn) {
 #'     list all the users, groups, and roles that a policy is attached to,
 #'     use [`list_entities_for_policy`][iam_list_entities_for_policy].
 #' 
-#' -   Delete all versions of the policy using
+#'   - Delete all versions of the policy using
 #'     [`delete_policy_version`][iam_delete_policy_version]. To list the
 #'     policy's versions, use
 #'     [`list_policy_versions`][iam_list_policy_versions]. You cannot use
@@ -2522,7 +2522,7 @@ iam_delete_open_id_connect_provider <- function(OpenIDConnectProviderArn) {
 #'     version that is marked as the default version. You delete the
 #'     policy's default version in the next step of the process.
 #' 
-#' -   Delete the policy (this automatically deletes the policy's default
+#'   - Delete the policy (this automatically deletes the policy's default
 #'     version) using this API.
 #' 
 #' For information about managed policies, see [Managed Policies and Inline
@@ -2826,8 +2826,8 @@ iam_delete_role_policy <- function(RoleName, PolicyName) {
 #' policies. Any attempt to assume a role that references a non-existent
 #' provider resource ARN fails.
 #' 
-#' This operation requires [Signature Version
-#' 4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html).
+#' This operation requires [Signature
+#' Version 4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html).
 #'
 #' @usage
 #' iam_delete_saml_provider(SAMLProviderArn)
@@ -3186,29 +3186,29 @@ iam_delete_signing_certificate <- function(UserName = NULL, CertificateId) {
 #' User](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_manage.html#id_users_deleting_cli).
 #' Before attempting to delete a user, remove the following items:
 #' 
-#' -   Password ([`delete_login_profile`][iam_delete_login_profile])
+#'   - Password ([`delete_login_profile`][iam_delete_login_profile])
 #' 
-#' -   Access keys ([`delete_access_key`][iam_delete_access_key])
+#'   - Access keys ([`delete_access_key`][iam_delete_access_key])
 #' 
-#' -   Signing certificate
+#'   - Signing certificate
 #'     ([`delete_signing_certificate`][iam_delete_signing_certificate])
 #' 
-#' -   SSH public key
+#'   - SSH public key
 #'     ([`delete_ssh_public_key`][iam_delete_ssh_public_key])
 #' 
-#' -   Git credentials
+#'   - Git credentials
 #'     ([`delete_service_specific_credential`][iam_delete_service_specific_credential])
 #' 
-#' -   Multi-factor authentication (MFA) device
+#'   - Multi-factor authentication (MFA) device
 #'     ([`deactivate_mfa_device`][iam_deactivate_mfa_device],
 #'     [`delete_virtual_mfa_device`][iam_delete_virtual_mfa_device])
 #' 
-#' -   Inline policies ([`delete_user_policy`][iam_delete_user_policy])
+#'   - Inline policies ([`delete_user_policy`][iam_delete_user_policy])
 #' 
-#' -   Attached managed policies
+#'   - Attached managed policies
 #'     ([`detach_user_policy`][iam_detach_user_policy])
 #' 
-#' -   Group memberships
+#'   - Group memberships
 #'     ([`remove_user_from_group`][iam_remove_user_from_group])
 #'
 #' @usage
@@ -3797,25 +3797,25 @@ iam_generate_credential_report <- function() {
 #' The type of entity that you specify determines the data returned in the
 #' report.
 #' 
-#' -   **Root** – When you specify the organizations root as the entity,
+#'   - **Root** – When you specify the organizations root as the entity,
 #'     the resulting report lists all of the services allowed by SCPs that
 #'     are attached to your root. For each service, the report includes
 #'     data for all accounts in your organization except the master
 #'     account, because the master account is not limited by SCPs.
 #' 
-#' -   **OU** – When you specify an organizational unit (OU) as the entity,
+#'   - **OU** – When you specify an organizational unit (OU) as the entity,
 #'     the resulting report lists all of the services allowed by SCPs that
 #'     are attached to the OU and its parents. For each service, the report
 #'     includes data for all accounts in the OU or its children. This data
 #'     excludes the master account, because the master account is not
 #'     limited by SCPs.
 #' 
-#' -   **Master account** – When you specify the master account, the
+#'   - **Master account** – When you specify the master account, the
 #'     resulting report lists all AWS services, because the master account
 #'     is not limited by SCPs. For each service, the report includes data
 #'     for only the master account.
 #' 
-#' -   **Account** – When you specify another account as the entity, the
+#'   - **Account** – When you specify another account as the entity, the
 #'     resulting report lists all of the services allowed by SCPs that are
 #'     attached to the account and its parents. For each service, the
 #'     report includes data for only the specified account.
@@ -3824,7 +3824,7 @@ iam_generate_credential_report <- function() {
 #' entity path and the optional AWS Organizations policy ID. The type of
 #' entity that you specify determines the data returned for each service.
 #' 
-#' -   **Root** – When you specify the root entity and a policy ID, the
+#'   - **Root** – When you specify the root entity and a policy ID, the
 #'     resulting report lists all of the services that are allowed by the
 #'     specified SCP. For each service, the report includes data for all
 #'     accounts in your organization to which the SCP applies. This data
@@ -3833,7 +3833,7 @@ iam_generate_credential_report <- function() {
 #'     organization, then the report will return a list of services with no
 #'     data.
 #' 
-#' -   **OU** – When you specify an OU entity and a policy ID, the
+#'   - **OU** – When you specify an OU entity and a policy ID, the
 #'     resulting report lists all of the services that are allowed by the
 #'     specified SCP. For each service, the report includes data for all
 #'     accounts in the OU or its children to which the SCP applies. This
@@ -3843,13 +3843,13 @@ iam_generate_credential_report <- function() {
 #'     SCP is not attached to the OU or one of its children, the report
 #'     will return a list of services with no data.
 #' 
-#' -   **Master account** – When you specify the master account, the
+#'   - **Master account** – When you specify the master account, the
 #'     resulting report lists all AWS services, because the master account
 #'     is not limited by SCPs. If you specify a policy ID in the CLI or
 #'     API, the policy is ignored. For each service, the report includes
 #'     data for only the master account.
 #' 
-#' -   **Account** – When you specify another account entity and a policy
+#'   - **Account** – When you specify another account entity and a policy
 #'     ID, the resulting report lists all of the services that are allowed
 #'     by the specified SCP. For each service, the report includes data for
 #'     only the specified account. This means that other accounts in the
@@ -3963,17 +3963,17 @@ iam_generate_organizations_access_report <- function(EntityPath, OrganizationsPo
 #' operation returns a `JobId`. Use this parameter in the following
 #' operations to retrieve the following details from your report:
 #' 
-#' -   [`get_service_last_accessed_details`][iam_get_service_last_accessed_details]
+#'   - [`get_service_last_accessed_details`][iam_get_service_last_accessed_details]
 #'     – Use this operation for users, groups, roles, or policies to list
 #'     every AWS service that the resource could access using permissions
 #'     policies. For each service, the response includes information about
 #'     the most recent access attempt.
-#' 
+#'     
 #'     The `JobId` returned by `GenerateServiceLastAccessedDetail` must be
 #'     used by the same role within a session, or by the same user when
 #'     used to call `GetServiceLastAccessedDetail`.
 #' 
-#' -   [`get_service_last_accessed_details_with_entities`][iam_get_service_last_accessed_details_with_entities]
+#'   - [`get_service_last_accessed_details_with_entities`][iam_get_service_last_accessed_details_with_entities]
 #'     – Use this operation for groups and policies to list information
 #'     about the associated entities (users or roles) that attempted to
 #'     access a specific AWS service.
@@ -4128,10 +4128,10 @@ iam_get_access_key_last_used <- function(AccessKeyId) {
 #' this API to obtain a snapshot of the configuration of IAM permissions
 #' (users, groups, roles, and policies) in your account.
 #' 
-#' Policies returned by this API are URL-encoded compliant with [RFC
-#' 3986](https://tools.ietf.org/html/rfc3986). You can use a URL decoding
-#' method to convert the policy back to plain JSON text. For example, if
-#' you use Java, you can use the `decode` method of the
+#' Policies returned by this API are URL-encoded compliant with
+#' [RFC 3986](https://datatracker.ietf.org/doc/html/rfc3986). You can use a
+#' URL decoding method to convert the policy back to plain JSON text. For
+#' example, if you use Java, you can use the `decode` method of the
 #' `java.net.URLDecoder` utility class in the Java SDK. Other languages and
 #' SDKs provide similar functionality.
 #' 
@@ -4517,13 +4517,13 @@ iam_get_account_summary <- function() {
 #' validate this parameter is a string of characters consisting of the
 #' following:
 #' 
-#' -   Any printable ASCII character ranging from the space character
+#'   - Any printable ASCII character ranging from the space character
 #'     (`\u0020`) through the end of the ASCII character range
 #' 
-#' -   The printable characters in the Basic Latin and Latin-1 Supplement
+#'   - The printable characters in the Basic Latin and Latin-1 Supplement
 #'     character set (through `\u00FF`)
 #' 
-#' -   The special characters tab (`\u0009`), line feed (`\u000A`), and
+#'   - The special characters tab (`\u0009`), line feed (`\u000A`), and
 #'     carriage return (`\u000D`)
 #'
 #' @return
@@ -4618,13 +4618,13 @@ iam_get_context_keys_for_custom_policy <- function(PolicyInputList) {
 #' validate this parameter is a string of characters consisting of the
 #' following:
 #' 
-#' -   Any printable ASCII character ranging from the space character
+#'   - Any printable ASCII character ranging from the space character
 #'     (`\u0020`) through the end of the ASCII character range
 #' 
-#' -   The printable characters in the Basic Latin and Latin-1 Supplement
+#'   - The printable characters in the Basic Latin and Latin-1 Supplement
 #'     character set (through `\u00FF`)
 #' 
-#' -   The special characters tab (`\u0009`), line feed (`\u000A`), and
+#'   - The special characters tab (`\u0009`), line feed (`\u000A`), and
 #'     carriage return (`\u000D`)
 #'
 #' @return
@@ -4821,10 +4821,10 @@ iam_get_group <- function(GroupName, Marker = NULL, MaxItems = NULL) {
 #' Retrieves the specified inline policy document that is embedded in the
 #' specified IAM group.
 #' 
-#' Policies returned by this API are URL-encoded compliant with [RFC
-#' 3986](https://tools.ietf.org/html/rfc3986). You can use a URL decoding
-#' method to convert the policy back to plain JSON text. For example, if
-#' you use Java, you can use the `decode` method of the
+#' Policies returned by this API are URL-encoded compliant with
+#' [RFC 3986](https://datatracker.ietf.org/doc/html/rfc3986). You can use a
+#' URL decoding method to convert the policy back to plain JSON text. For
+#' example, if you use Java, you can use the `decode` method of the
 #' `java.net.URLDecoder` utility class in the Java SDK. Other languages and
 #' SDKs provide similar functionality.
 #' 
@@ -5348,10 +5348,10 @@ iam_get_policy <- function(PolicyArn) {
 #' Retrieves information about the specified version of the specified
 #' managed policy, including the policy document.
 #' 
-#' Policies returned by this API are URL-encoded compliant with [RFC
-#' 3986](https://tools.ietf.org/html/rfc3986). You can use a URL decoding
-#' method to convert the policy back to plain JSON text. For example, if
-#' you use Java, you can use the `decode` method of the
+#' Policies returned by this API are URL-encoded compliant with
+#' [RFC 3986](https://datatracker.ietf.org/doc/html/rfc3986). You can use a
+#' URL decoding method to convert the policy back to plain JSON text. For
+#' example, if you use Java, you can use the `decode` method of the
 #' `java.net.URLDecoder` utility class in the Java SDK. Other languages and
 #' SDKs provide similar functionality.
 #' 
@@ -5445,10 +5445,10 @@ iam_get_policy_version <- function(PolicyArn, VersionId) {
 #' assume the role. For more information about roles, see [Working with
 #' Roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html).
 #' 
-#' Policies returned by this API are URL-encoded compliant with [RFC
-#' 3986](https://tools.ietf.org/html/rfc3986). You can use a URL decoding
-#' method to convert the policy back to plain JSON text. For example, if
-#' you use Java, you can use the `decode` method of the
+#' Policies returned by this API are URL-encoded compliant with
+#' [RFC 3986](https://datatracker.ietf.org/doc/html/rfc3986). You can use a
+#' URL decoding method to convert the policy back to plain JSON text. For
+#' example, if you use Java, you can use the `decode` method of the
 #' `java.net.URLDecoder` utility class in the Java SDK. Other languages and
 #' SDKs provide similar functionality.
 #'
@@ -5539,10 +5539,10 @@ iam_get_role <- function(RoleName) {
 #' Retrieves the specified inline policy document that is embedded with the
 #' specified IAM role.
 #' 
-#' Policies returned by this API are URL-encoded compliant with [RFC
-#' 3986](https://tools.ietf.org/html/rfc3986). You can use a URL decoding
-#' method to convert the policy back to plain JSON text. For example, if
-#' you use Java, you can use the `decode` method of the
+#' Policies returned by this API are URL-encoded compliant with
+#' [RFC 3986](https://datatracker.ietf.org/doc/html/rfc3986). You can use a
+#' URL decoding method to convert the policy back to plain JSON text. For
+#' example, if you use Java, you can use the `decode` method of the
 #' `java.net.URLDecoder` utility class in the Java SDK. Other languages and
 #' SDKs provide similar functionality.
 #' 
@@ -5621,8 +5621,8 @@ iam_get_role_policy <- function(RoleName, PolicyName) {
 #' Returns the SAML provider metadocument that was uploaded when the IAM
 #' SAML provider resource object was created or updated.
 #' 
-#' This operation requires [Signature Version
-#' 4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html).
+#' This operation requires [Signature
+#' Version 4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html).
 #'
 #' @usage
 #' iam_get_saml_provider(SAMLProviderArn)
@@ -5864,14 +5864,14 @@ iam_get_server_certificate <- function(ServerCertificateName) {
 #' of the last attempt. It also returns the ARN of the following entity,
 #' depending on the resource ARN that you used to generate the report:
 #' 
-#' -   **User** – Returns the user ARN that you used to generate the report
+#'   - **User** – Returns the user ARN that you used to generate the report
 #' 
-#' -   **Group** – Returns the ARN of the group member (user) that last
+#'   - **Group** – Returns the ARN of the group member (user) that last
 #'     attempted to access the service
 #' 
-#' -   **Role** – Returns the role ARN that you used to generate the report
+#'   - **Role** – Returns the role ARN that you used to generate the report
 #' 
-#' -   **Policy** – Returns the ARN of the user or role that last used the
+#'   - **Policy** – Returns the ARN of the user or role that last used the
 #'     policy to attempt to access the service
 #' 
 #' By default, the list is sorted by service namespace.
@@ -6002,11 +6002,11 @@ iam_get_service_last_accessed_details <- function(JobId, MaxItems = NULL, Marker
 #' entities that could have used group or policy permissions to access the
 #' specified service.
 #' 
-#' -   **Group** – For a group report, this operation returns a list of
+#'   - **Group** – For a group report, this operation returns a list of
 #'     users in the group that could have used the group’s policies in an
 #'     attempt to access the service.
 #' 
-#' -   **Policy** – For a policy report, this operation returns a list of
+#'   - **Policy** – For a policy report, this operation returns a list of
 #'     entities (users or roles) that could have used the policy in an
 #'     attempt to access the service.
 #' 
@@ -6287,10 +6287,10 @@ iam_get_user <- function(UserName = NULL) {
 #' Retrieves the specified inline policy document that is embedded in the
 #' specified IAM user.
 #' 
-#' Policies returned by this API are URL-encoded compliant with [RFC
-#' 3986](https://tools.ietf.org/html/rfc3986). You can use a URL decoding
-#' method to convert the policy back to plain JSON text. For example, if
-#' you use Java, you can use the `decode` method of the
+#' Policies returned by this API are URL-encoded compliant with
+#' [RFC 3986](https://datatracker.ietf.org/doc/html/rfc3986). You can use a
+#' URL decoding method to convert the policy back to plain JSON text. For
+#' example, if you use Java, you can use the `decode` method of the
 #' `java.net.URLDecoder` utility class in the Java SDK. Other languages and
 #' SDKs provide similar functionality.
 #' 
@@ -6567,7 +6567,7 @@ iam_list_account_aliases <- function(Marker = NULL, MaxItems = NULL) {
 #' pattern](https://en.wikipedia.org/wiki/Regex)) a string of characters
 #' consisting of either a forward slash (/) by itself or a string that must
 #' begin and end with forward slashes. In addition, it can contain any
-#' ASCII character from the ! (`\u0021`) through the DEL character
+#' ASCII character from the \! (`\u0021`) through the DEL character
 #' (`\u007F`), including most punctuation characters, digits, and upper and
 #' lowercased letters.
 #' @param Marker Use this parameter only when paginating results and only after you
@@ -6664,7 +6664,7 @@ iam_list_attached_group_policies <- function(GroupName, PathPrefix = NULL, Marke
 #' pattern](https://en.wikipedia.org/wiki/Regex)) a string of characters
 #' consisting of either a forward slash (/) by itself or a string that must
 #' begin and end with forward slashes. In addition, it can contain any
-#' ASCII character from the ! (`\u0021`) through the DEL character
+#' ASCII character from the \! (`\u0021`) through the DEL character
 #' (`\u007F`), including most punctuation characters, digits, and upper and
 #' lowercased letters.
 #' @param Marker Use this parameter only when paginating results and only after you
@@ -6761,7 +6761,7 @@ iam_list_attached_role_policies <- function(RoleName, PathPrefix = NULL, Marker 
 #' pattern](https://en.wikipedia.org/wiki/Regex)) a string of characters
 #' consisting of either a forward slash (/) by itself or a string that must
 #' begin and end with forward slashes. In addition, it can contain any
-#' ASCII character from the ! (`\u0021`) through the DEL character
+#' ASCII character from the \! (`\u0021`) through the DEL character
 #' (`\u007F`), including most punctuation characters, digits, and upper and
 #' lowercased letters.
 #' @param Marker Use this parameter only when paginating results and only after you
@@ -6863,7 +6863,7 @@ iam_list_attached_user_policies <- function(UserName, PathPrefix = NULL, Marker 
 #' pattern](https://en.wikipedia.org/wiki/Regex)) a string of characters
 #' consisting of either a forward slash (/) by itself or a string that must
 #' begin and end with forward slashes. In addition, it can contain any
-#' ASCII character from the ! (`\u0021`) through the DEL character
+#' ASCII character from the \! (`\u0021`) through the DEL character
 #' (`\u007F`), including most punctuation characters, digits, and upper and
 #' lowercased letters.
 #' @param PolicyUsageFilter The policy usage method to use for filtering the results.
@@ -7059,7 +7059,7 @@ iam_list_group_policies <- function(GroupName, Marker = NULL, MaxItems = NULL) {
 #' pattern](https://en.wikipedia.org/wiki/Regex)) a string of characters
 #' consisting of either a forward slash (/) by itself or a string that must
 #' begin and end with forward slashes. In addition, it can contain any
-#' ASCII character from the ! (`\u0021`) through the DEL character
+#' ASCII character from the \! (`\u0021`) through the DEL character
 #' (`\u007F`), including most punctuation characters, digits, and upper and
 #' lowercased letters.
 #' @param Marker Use this parameter only when paginating results and only after you
@@ -7243,7 +7243,7 @@ iam_list_groups_for_user <- function(UserName, Marker = NULL, MaxItems = NULL) {
 #' its [regex pattern](https://en.wikipedia.org/wiki/Regex)) a string of
 #' characters consisting of either a forward slash (/) by itself or a
 #' string that must begin and end with forward slashes. In addition, it can
-#' contain any ASCII character from the ! (`\u0021`) through the DEL
+#' contain any ASCII character from the \! (`\u0021`) through the DEL
 #' character (`\u007F`), including most punctuation characters, digits, and
 #' upper and lowercased letters.
 #' @param Marker Use this parameter only when paginating results and only after you
@@ -7627,7 +7627,7 @@ iam_list_open_id_connect_providers <- function() {
 #' pattern](https://en.wikipedia.org/wiki/Regex)) a string of characters
 #' consisting of either a forward slash (/) by itself or a string that must
 #' begin and end with forward slashes. In addition, it can contain any
-#' ASCII character from the ! (`\u0021`) through the DEL character
+#' ASCII character from the \! (`\u0021`) through the DEL character
 #' (`\u007F`), including most punctuation characters, digits, and upper and
 #' lowercased letters.
 #' @param PolicyUsageFilter The policy usage method to use for filtering the results.
@@ -7732,16 +7732,16 @@ iam_list_policies <- function(Scope = NULL, OnlyAttached = NULL, PathPrefix = NU
 #' The list of policies returned by the operation depends on the ARN of the
 #' identity that you provide.
 #' 
-#' -   **User** – The list of policies includes the managed and inline
+#'   - **User** – The list of policies includes the managed and inline
 #'     policies that are attached to the user directly. The list also
 #'     includes any additional managed and inline policies that are
 #'     attached to the group to which the user belongs.
 #' 
-#' -   **Group** – The list of policies includes only the managed and
+#'   - **Group** – The list of policies includes only the managed and
 #'     inline policies that are attached to the group directly. Policies
 #'     that are attached to the group’s user are not included.
 #' 
-#' -   **Role** – The list of policies includes only the managed and inline
+#'   - **Role** – The list of policies includes only the managed and inline
 #'     policies that are attached to the role.
 #' 
 #' For each managed policy, this operation returns the ARN and policy name.
@@ -8122,7 +8122,7 @@ iam_list_role_tags <- function(RoleName, Marker = NULL, MaxItems = NULL) {
 #' pattern](https://en.wikipedia.org/wiki/Regex)) a string of characters
 #' consisting of either a forward slash (/) by itself or a string that must
 #' begin and end with forward slashes. In addition, it can contain any
-#' ASCII character from the ! (`\u0021`) through the DEL character
+#' ASCII character from the \! (`\u0021`) through the DEL character
 #' (`\u007F`), including most punctuation characters, digits, and upper and
 #' lowercased letters.
 #' @param Marker Use this parameter only when paginating results and only after you
@@ -8212,8 +8212,8 @@ iam_list_roles <- function(PathPrefix = NULL, Marker = NULL, MaxItems = NULL) {
 #' @description
 #' Lists the SAML provider resource objects defined in IAM in the account.
 #' 
-#' This operation requires [Signature Version
-#' 4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html).
+#' This operation requires [Signature
+#' Version 4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html).
 #'
 #' @usage
 #' iam_list_saml_providers()
@@ -8379,9 +8379,9 @@ iam_list_ssh_public_keys <- function(UserName = NULL, Marker = NULL, MaxItems = 
 #' (through its [regex pattern](https://en.wikipedia.org/wiki/Regex)) a
 #' string of characters consisting of either a forward slash (/) by itself
 #' or a string that must begin and end with forward slashes. In addition,
-#' it can contain any ASCII character from the ! (`\u0021`) through the DEL
-#' character (`\u007F`), including most punctuation characters, digits, and
-#' upper and lowercased letters.
+#' it can contain any ASCII character from the \! (`\u0021`) through the
+#' DEL character (`\u007F`), including most punctuation characters, digits,
+#' and upper and lowercased letters.
 #' @param Marker Use this parameter only when paginating results and only after you
 #' receive a response indicating that the results are truncated. Set it to
 #' the value of the `Marker` element in the response that you received to
@@ -8810,7 +8810,7 @@ iam_list_user_tags <- function(UserName, Marker = NULL, MaxItems = NULL) {
 #' [regex pattern](https://en.wikipedia.org/wiki/Regex)) a string of
 #' characters consisting of either a forward slash (/) by itself or a
 #' string that must begin and end with forward slashes. In addition, it can
-#' contain any ASCII character from the ! (`\u0021`) through the DEL
+#' contain any ASCII character from the \! (`\u0021`) through the DEL
 #' character (`\u007F`), including most punctuation characters, digits, and
 #' upper and lowercased letters.
 #' @param Marker Use this parameter only when paginating results and only after you
@@ -9056,13 +9056,13 @@ iam_list_virtual_mfa_devices <- function(AssignmentStatus = NULL, Marker = NULL,
 #' validate this parameter is a string of characters consisting of the
 #' following:
 #' 
-#' -   Any printable ASCII character ranging from the space character
+#'   - Any printable ASCII character ranging from the space character
 #'     (`\u0020`) through the end of the ASCII character range
 #' 
-#' -   The printable characters in the Basic Latin and Latin-1 Supplement
+#'   - The printable characters in the Basic Latin and Latin-1 Supplement
 #'     character set (through `\u00FF`)
 #' 
-#' -   The special characters tab (`\u0009`), line feed (`\u000A`), and
+#'   - The special characters tab (`\u0009`), line feed (`\u000A`), and
 #'     carriage return (`\u000D`)
 #'
 #' @return
@@ -9228,13 +9228,13 @@ iam_put_role_permissions_boundary <- function(RoleName, PermissionsBoundary) {
 #' validate this parameter is a string of characters consisting of the
 #' following:
 #' 
-#' -   Any printable ASCII character ranging from the space character
+#'   - Any printable ASCII character ranging from the space character
 #'     (`\u0020`) through the end of the ASCII character range
 #' 
-#' -   The printable characters in the Basic Latin and Latin-1 Supplement
+#'   - The printable characters in the Basic Latin and Latin-1 Supplement
 #'     character set (through `\u00FF`)
 #' 
-#' -   The special characters tab (`\u0009`), line feed (`\u000A`), and
+#'   - The special characters tab (`\u0009`), line feed (`\u000A`), and
 #'     carriage return (`\u000D`)
 #'
 #' @return
@@ -9389,13 +9389,13 @@ iam_put_user_permissions_boundary <- function(UserName, PermissionsBoundary) {
 #' validate this parameter is a string of characters consisting of the
 #' following:
 #' 
-#' -   Any printable ASCII character ranging from the space character
+#'   - Any printable ASCII character ranging from the space character
 #'     (`\u0020`) through the end of the ASCII character range
 #' 
-#' -   The printable characters in the Basic Latin and Latin-1 Supplement
+#'   - The printable characters in the Basic Latin and Latin-1 Supplement
 #'     character set (through `\u00FF`)
 #' 
-#' -   The special characters tab (`\u0009`), line feed (`\u000A`), and
+#'   - The special characters tab (`\u0009`), line feed (`\u000A`), and
 #'     carriage return (`\u000D`)
 #'
 #' @return
@@ -9972,13 +9972,13 @@ iam_set_security_token_service_preferences <- function(GlobalEndpointTokenVersio
 #' validate this parameter is a string of characters consisting of the
 #' following:
 #' 
-#' -   Any printable ASCII character ranging from the space character
+#'   - Any printable ASCII character ranging from the space character
 #'     (`\u0020`) through the end of the ASCII character range
 #' 
-#' -   The printable characters in the Basic Latin and Latin-1 Supplement
+#'   - The printable characters in the Basic Latin and Latin-1 Supplement
 #'     character set (through `\u00FF`)
 #' 
-#' -   The special characters tab (`\u0009`), line feed (`\u000A`), and
+#'   - The special characters tab (`\u0009`), line feed (`\u000A`), and
 #'     carriage return (`\u000D`)
 #' @param PermissionsBoundaryPolicyInputList The IAM permissions boundary policy to simulate. The permissions
 #' boundary sets the maximum permissions that an IAM entity can have. You
@@ -9993,13 +9993,13 @@ iam_set_security_token_service_preferences <- function(GlobalEndpointTokenVersio
 #' validate this parameter is a string of characters consisting of the
 #' following:
 #' 
-#' -   Any printable ASCII character ranging from the space character
+#'   - Any printable ASCII character ranging from the space character
 #'     (`\u0020`) through the end of the ASCII character range
 #' 
-#' -   The printable characters in the Basic Latin and Latin-1 Supplement
+#'   - The printable characters in the Basic Latin and Latin-1 Supplement
 #'     character set (through `\u00FF`)
 #' 
-#' -   The special characters tab (`\u0009`), line feed (`\u000A`), and
+#'   - The special characters tab (`\u0009`), line feed (`\u000A`), and
 #'     carriage return (`\u000D`)
 #' @param ActionNames &#91;required&#93; A list of names of API operations to evaluate in the simulation. Each
 #' operation is evaluated against each resource. Each operation must
@@ -10033,13 +10033,13 @@ iam_set_security_token_service_preferences <- function(GlobalEndpointTokenVersio
 #' validate this parameter is a string of characters consisting of the
 #' following:
 #' 
-#' -   Any printable ASCII character ranging from the space character
+#'   - Any printable ASCII character ranging from the space character
 #'     (`\u0020`) through the end of the ASCII character range
 #' 
-#' -   The printable characters in the Basic Latin and Latin-1 Supplement
+#'   - The printable characters in the Basic Latin and Latin-1 Supplement
 #'     character set (through `\u00FF`)
 #' 
-#' -   The special characters tab (`\u0009`), line feed (`\u000A`), and
+#'   - The special characters tab (`\u0009`), line feed (`\u000A`), and
 #'     carriage return (`\u000D`)
 #' @param ResourceOwner An ARN representing the AWS account ID that specifies the owner of any
 #' simulated resource that does not identify its owner in the resource ARN.
@@ -10084,28 +10084,28 @@ iam_set_security_token_service_preferences <- function(GlobalEndpointTokenVersio
 #' Platforms](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-classic-platform.html)
 #' in the *Amazon EC2 User Guide*.
 #' 
-#' -   **EC2-Classic-InstanceStore**
-#' 
+#'   - **EC2-Classic-InstanceStore**
+#'     
 #'     instance, image, security-group
 #' 
-#' -   **EC2-Classic-EBS**
-#' 
+#'   - **EC2-Classic-EBS**
+#'     
 #'     instance, image, security-group, volume
 #' 
-#' -   **EC2-VPC-InstanceStore**
-#' 
+#'   - **EC2-VPC-InstanceStore**
+#'     
 #'     instance, image, security-group, network-interface
 #' 
-#' -   **EC2-VPC-InstanceStore-Subnet**
-#' 
+#'   - **EC2-VPC-InstanceStore-Subnet**
+#'     
 #'     instance, image, security-group, network-interface, subnet
 #' 
-#' -   **EC2-VPC-EBS**
-#' 
+#'   - **EC2-VPC-EBS**
+#'     
 #'     instance, image, security-group, network-interface, volume
 #' 
-#' -   **EC2-VPC-EBS-Subnet**
-#' 
+#'   - **EC2-VPC-EBS-Subnet**
+#'     
 #'     instance, image, security-group, network-interface, subnet, volume
 #' @param MaxItems Use this only when paginating results to indicate the maximum number of
 #' items you want in the response. If additional items exist beyond the
@@ -10307,13 +10307,13 @@ iam_simulate_custom_policy <- function(PolicyInputList, PermissionsBoundaryPolic
 #' validate this parameter is a string of characters consisting of the
 #' following:
 #' 
-#' -   Any printable ASCII character ranging from the space character
+#'   - Any printable ASCII character ranging from the space character
 #'     (`\u0020`) through the end of the ASCII character range
 #' 
-#' -   The printable characters in the Basic Latin and Latin-1 Supplement
+#'   - The printable characters in the Basic Latin and Latin-1 Supplement
 #'     character set (through `\u00FF`)
 #' 
-#' -   The special characters tab (`\u0009`), line feed (`\u000A`), and
+#'   - The special characters tab (`\u0009`), line feed (`\u000A`), and
 #'     carriage return (`\u000D`)
 #' @param PermissionsBoundaryPolicyInputList The IAM permissions boundary policy to simulate. The permissions
 #' boundary sets the maximum permissions that the entity can have. You can
@@ -10333,13 +10333,13 @@ iam_simulate_custom_policy <- function(PolicyInputList, PermissionsBoundaryPolic
 #' validate this parameter is a string of characters consisting of the
 #' following:
 #' 
-#' -   Any printable ASCII character ranging from the space character
+#'   - Any printable ASCII character ranging from the space character
 #'     (`\u0020`) through the end of the ASCII character range
 #' 
-#' -   The printable characters in the Basic Latin and Latin-1 Supplement
+#'   - The printable characters in the Basic Latin and Latin-1 Supplement
 #'     character set (through `\u00FF`)
 #' 
-#' -   The special characters tab (`\u0009`), line feed (`\u000A`), and
+#'   - The special characters tab (`\u0009`), line feed (`\u000A`), and
 #'     carriage return (`\u000D`)
 #' @param ActionNames &#91;required&#93; A list of names of API operations to evaluate in the simulation. Each
 #' operation is evaluated for each resource. Each operation must include
@@ -10368,13 +10368,13 @@ iam_simulate_custom_policy <- function(PolicyInputList, PermissionsBoundaryPolic
 #' validate this parameter is a string of characters consisting of the
 #' following:
 #' 
-#' -   Any printable ASCII character ranging from the space character
+#'   - Any printable ASCII character ranging from the space character
 #'     (`\u0020`) through the end of the ASCII character range
 #' 
-#' -   The printable characters in the Basic Latin and Latin-1 Supplement
+#'   - The printable characters in the Basic Latin and Latin-1 Supplement
 #'     character set (through `\u00FF`)
 #' 
-#' -   The special characters tab (`\u0009`), line feed (`\u000A`), and
+#'   - The special characters tab (`\u0009`), line feed (`\u000A`), and
 #'     carriage return (`\u000D`)
 #' @param ResourceOwner An AWS account ID that specifies the owner of any simulated resource
 #' that does not identify its owner in the resource ARN. Examples of
@@ -10427,28 +10427,28 @@ iam_simulate_custom_policy <- function(PolicyInputList, PermissionsBoundaryPolic
 #' Platforms](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-classic-platform.html)
 #' in the *Amazon EC2 User Guide*.
 #' 
-#' -   **EC2-Classic-InstanceStore**
-#' 
+#'   - **EC2-Classic-InstanceStore**
+#'     
 #'     instance, image, security group
 #' 
-#' -   **EC2-Classic-EBS**
-#' 
+#'   - **EC2-Classic-EBS**
+#'     
 #'     instance, image, security group, volume
 #' 
-#' -   **EC2-VPC-InstanceStore**
-#' 
+#'   - **EC2-VPC-InstanceStore**
+#'     
 #'     instance, image, security group, network interface
 #' 
-#' -   **EC2-VPC-InstanceStore-Subnet**
-#' 
+#'   - **EC2-VPC-InstanceStore-Subnet**
+#'     
 #'     instance, image, security group, network interface, subnet
 #' 
-#' -   **EC2-VPC-EBS**
-#' 
+#'   - **EC2-VPC-EBS**
+#'     
 #'     instance, image, security group, network interface, volume
 #' 
-#' -   **EC2-VPC-EBS-Subnet**
-#' 
+#'   - **EC2-VPC-EBS-Subnet**
+#'     
 #'     instance, image, security group, network interface, subnet, volume
 #' @param MaxItems Use this only when paginating results to indicate the maximum number of
 #' items you want in the response. If additional items exist beyond the
@@ -10599,13 +10599,13 @@ iam_simulate_principal_policy <- function(PolicySourceArn, PolicyInputList = NUL
 #' A tag consists of a key name and an associated value. By assigning tags
 #' to your resources, you can do the following:
 #' 
-#' -   **Administrative grouping and discovery** - Attach tags to resources
+#'   - **Administrative grouping and discovery** - Attach tags to resources
 #'     to aid in organization and search. For example, you could search for
 #'     all resources with the key name *Project* and the value
 #'     *MyImportantProject*. Or search for all resources with the key name
 #'     *Cost Center* and the value *41200*.
 #' 
-#' -   **Access control** - Reference tags in IAM user-based and
+#'   - **Access control** - Reference tags in IAM user-based and
 #'     resource-based policies. You can use tags to restrict access to only
 #'     an IAM user or role that has a specified tag attached. You can also
 #'     restrict access to only those resources that have a certain tag
@@ -10614,15 +10614,16 @@ iam_simulate_principal_policy <- function(PolicySourceArn, PolicyInputList = NUL
 #'     Tags](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_tags.html)
 #'     in the *IAM User Guide*.
 #' 
-#' -   **Cost allocation** - Use tags to help track which individuals and
+#'   - **Cost allocation** - Use tags to help track which individuals and
 #'     teams are using which AWS resources.
 #' 
+#' <!-- end list -->
 #' 
-#' -   Make sure that you have no invalid tags and that you do not exceed
+#'   - Make sure that you have no invalid tags and that you do not exceed
 #'     the allowed number of tags per role. In either case, the entire
 #'     request fails and *no* tags are added to the role.
 #' 
-#' -   AWS always interprets the tag `Value` as a single string. If you
+#'   - AWS always interprets the tag `Value` as a single string. If you
 #'     need to store an array, you can store comma-separated values in the
 #'     string. However, you must interpret the value in your code.
 #' 
@@ -10706,13 +10707,13 @@ iam_tag_role <- function(RoleName, Tags) {
 #' A tag consists of a key name and an associated value. By assigning tags
 #' to your resources, you can do the following:
 #' 
-#' -   **Administrative grouping and discovery** - Attach tags to resources
+#'   - **Administrative grouping and discovery** - Attach tags to resources
 #'     to aid in organization and search. For example, you could search for
 #'     all resources with the key name *Project* and the value
 #'     *MyImportantProject*. Or search for all resources with the key name
 #'     *Cost Center* and the value *41200*.
 #' 
-#' -   **Access control** - Reference tags in IAM user-based and
+#'   - **Access control** - Reference tags in IAM user-based and
 #'     resource-based policies. You can use tags to restrict access to only
 #'     an IAM requesting user or to a role that has a specified tag
 #'     attached. You can also restrict access to only those resources that
@@ -10721,15 +10722,16 @@ iam_tag_role <- function(RoleName, Tags) {
 #'     Tags](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_tags.html)
 #'     in the *IAM User Guide*.
 #' 
-#' -   **Cost allocation** - Use tags to help track which individuals and
+#'   - **Cost allocation** - Use tags to help track which individuals and
 #'     teams are using which AWS resources.
 #' 
+#' <!-- end list -->
 #' 
-#' -   Make sure that you have no invalid tags and that you do not exceed
+#'   - Make sure that you have no invalid tags and that you do not exceed
 #'     the allowed number of tags per role. In either case, the entire
 #'     request fails and *no* tags are added to the role.
 #' 
-#' -   AWS always interprets the tag `Value` as a single string. If you
+#'   - AWS always interprets the tag `Value` as a single string. If you
 #'     need to store an array, you can store comma-separated values in the
 #'     string. However, you must interpret the value in your code.
 #' 
@@ -11017,7 +11019,7 @@ iam_update_access_key <- function(UserName = NULL, AccessKeyId, Status) {
 #' @description
 #' Updates the password policy settings for the AWS account.
 #' 
-#' -   This operation does not support partial updates. No parameters are
+#'   - This operation does not support partial updates. No parameters are
 #'     required, but if you do not specify a parameter, that parameter's
 #'     value reverts to its default value. See the **Request Parameters**
 #'     section for each parameter's default value. Also note that some
@@ -11043,7 +11045,7 @@ iam_update_access_key <- function(UserName = NULL, AccessKeyId, Status) {
 #' @param RequireSymbols Specifies whether IAM user passwords must contain at least one of the
 #' following non-alphanumeric characters:
 #' 
-#' ! @@ \# $ % ^ & * ( ) _ + - = \[ \] \{ \} | '
+#' \! @@ \# $ % ^ & * ( ) _ + - = \[ \] \{ \} | '
 #' 
 #' If you do not specify a value for this parameter, then the operation
 #' uses the default value of `false`. The result is that passwords do not
@@ -11174,13 +11176,13 @@ iam_update_account_password_policy <- function(MinimumPasswordLength = NULL, Req
 #' validate this parameter is a string of characters consisting of the
 #' following:
 #' 
-#' -   Any printable ASCII character ranging from the space character
+#'   - Any printable ASCII character ranging from the space character
 #'     (`\u0020`) through the end of the ASCII character range
 #' 
-#' -   The printable characters in the Basic Latin and Latin-1 Supplement
+#'   - The printable characters in the Basic Latin and Latin-1 Supplement
 #'     character set (through `\u00FF`)
 #' 
-#' -   The special characters tab (`\u0009`), line feed (`\u000A`), and
+#'   - The special characters tab (`\u0009`), line feed (`\u000A`), and
 #'     carriage return (`\u000D`)
 #'
 #' @return
@@ -11260,7 +11262,7 @@ iam_update_assume_role_policy <- function(RoleName, PolicyDocument) {
 #' pattern](https://en.wikipedia.org/wiki/Regex)) a string of characters
 #' consisting of either a forward slash (/) by itself or a string that must
 #' begin and end with forward slashes. In addition, it can contain any
-#' ASCII character from the ! (`\u0021`) through the DEL character
+#' ASCII character from the \! (`\u0021`) through the DEL character
 #' (`\u007F`), including most punctuation characters, digits, and upper and
 #' lowercased letters.
 #' @param NewGroupName New name for the IAM group. Only include this if changing the group's
@@ -11337,13 +11339,13 @@ iam_update_group <- function(GroupName, NewPath = NULL, NewGroupName = NULL) {
 #' validate this parameter is a string of characters consisting of the
 #' following:
 #' 
-#' -   Any printable ASCII character ranging from the space character
+#'   - Any printable ASCII character ranging from the space character
 #'     (`\u0020`) through the end of the ASCII character range
 #' 
-#' -   The printable characters in the Basic Latin and Latin-1 Supplement
+#'   - The printable characters in the Basic Latin and Latin-1 Supplement
 #'     character set (through `\u00FF`)
 #' 
-#' -   The special characters tab (`\u0009`), line feed (`\u000A`), and
+#'   - The special characters tab (`\u0009`), line feed (`\u000A`), and
 #'     carriage return (`\u000D`)
 #' 
 #' However, the format can be further restricted by the account
@@ -11614,8 +11616,8 @@ iam_update_role_description <- function(RoleName, Description) {
 #' Updates the metadata document for an existing SAML provider resource
 #' object.
 #' 
-#' This operation requires [Signature Version
-#' 4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html).
+#' This operation requires [Signature
+#' Version 4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html).
 #'
 #' @usage
 #' iam_update_saml_provider(SAMLMetadataDocument, SAMLProviderArn)
@@ -11779,7 +11781,7 @@ iam_update_ssh_public_key <- function(UserName, SSHPublicKeyId, Status) {
 #' pattern](https://en.wikipedia.org/wiki/Regex)) a string of characters
 #' consisting of either a forward slash (/) by itself or a string that must
 #' begin and end with forward slashes. In addition, it can contain any
-#' ASCII character from the ! (`\u0021`) through the DEL character
+#' ASCII character from the \! (`\u0021`) through the DEL character
 #' (`\u007F`), including most punctuation characters, digits, and upper and
 #' lowercased letters.
 #' @param NewServerCertificateName The new name for the server certificate. Include this only if you are
@@ -11994,7 +11996,7 @@ iam_update_signing_certificate <- function(UserName = NULL, CertificateId, Statu
 #' pattern](https://en.wikipedia.org/wiki/Regex)) a string of characters
 #' consisting of either a forward slash (/) by itself or a string that must
 #' begin and end with forward slashes. In addition, it can contain any
-#' ASCII character from the ! (`\u0021`) through the DEL character
+#' ASCII character from the \! (`\u0021`) through the DEL character
 #' (`\u007F`), including most punctuation characters, digits, and upper and
 #' lowercased letters.
 #' @param NewUserName New name for the user. Include this parameter only if you're changing
@@ -12076,13 +12078,13 @@ iam_update_user <- function(UserName, NewPath = NULL, NewUserName = NULL) {
 #' validate this parameter is a string of characters consisting of the
 #' following:
 #' 
-#' -   Any printable ASCII character ranging from the space character
+#'   - Any printable ASCII character ranging from the space character
 #'     (`\u0020`) through the end of the ASCII character range
 #' 
-#' -   The printable characters in the Basic Latin and Latin-1 Supplement
+#'   - The printable characters in the Basic Latin and Latin-1 Supplement
 #'     character set (through `\u00FF`)
 #' 
-#' -   The special characters tab (`\u0009`), line feed (`\u000A`), and
+#'   - The special characters tab (`\u0009`), line feed (`\u000A`), and
 #'     carriage return (`\u000D`)
 #'
 #' @return
@@ -12181,7 +12183,7 @@ iam_upload_ssh_public_key <- function(UserName, SSHPublicKeyBody) {
 #' pattern](https://en.wikipedia.org/wiki/Regex)) a string of characters
 #' consisting of either a forward slash (/) by itself or a string that must
 #' begin and end with forward slashes. In addition, it can contain any
-#' ASCII character from the ! (`\u0021`) through the DEL character
+#' ASCII character from the \! (`\u0021`) through the DEL character
 #' (`\u007F`), including most punctuation characters, digits, and upper and
 #' lowercased letters.
 #' 
@@ -12202,13 +12204,13 @@ iam_upload_ssh_public_key <- function(UserName, SSHPublicKeyBody) {
 #' validate this parameter is a string of characters consisting of the
 #' following:
 #' 
-#' -   Any printable ASCII character ranging from the space character
+#'   - Any printable ASCII character ranging from the space character
 #'     (`\u0020`) through the end of the ASCII character range
 #' 
-#' -   The printable characters in the Basic Latin and Latin-1 Supplement
+#'   - The printable characters in the Basic Latin and Latin-1 Supplement
 #'     character set (through `\u00FF`)
 #' 
-#' -   The special characters tab (`\u0009`), line feed (`\u000A`), and
+#'   - The special characters tab (`\u0009`), line feed (`\u000A`), and
 #'     carriage return (`\u000D`)
 #' @param PrivateKey &#91;required&#93; The contents of the private key in PEM-encoded format.
 #' 
@@ -12216,13 +12218,13 @@ iam_upload_ssh_public_key <- function(UserName, SSHPublicKeyBody) {
 #' validate this parameter is a string of characters consisting of the
 #' following:
 #' 
-#' -   Any printable ASCII character ranging from the space character
+#'   - Any printable ASCII character ranging from the space character
 #'     (`\u0020`) through the end of the ASCII character range
 #' 
-#' -   The printable characters in the Basic Latin and Latin-1 Supplement
+#'   - The printable characters in the Basic Latin and Latin-1 Supplement
 #'     character set (through `\u00FF`)
 #' 
-#' -   The special characters tab (`\u0009`), line feed (`\u000A`), and
+#'   - The special characters tab (`\u0009`), line feed (`\u000A`), and
 #'     carriage return (`\u000D`)
 #' @param CertificateChain The contents of the certificate chain. This is typically a concatenation
 #' of the PEM-encoded public key certificates of the chain.
@@ -12231,13 +12233,13 @@ iam_upload_ssh_public_key <- function(UserName, SSHPublicKeyBody) {
 #' validate this parameter is a string of characters consisting of the
 #' following:
 #' 
-#' -   Any printable ASCII character ranging from the space character
+#'   - Any printable ASCII character ranging from the space character
 #'     (`\u0020`) through the end of the ASCII character range
 #' 
-#' -   The printable characters in the Basic Latin and Latin-1 Supplement
+#'   - The printable characters in the Basic Latin and Latin-1 Supplement
 #'     character set (through `\u00FF`)
 #' 
-#' -   The special characters tab (`\u0009`), line feed (`\u000A`), and
+#'   - The special characters tab (`\u0009`), line feed (`\u000A`), and
 #'     carriage return (`\u000D`)
 #'
 #' @return
@@ -12342,13 +12344,13 @@ iam_upload_server_certificate <- function(Path = NULL, ServerCertificateName, Ce
 #' validate this parameter is a string of characters consisting of the
 #' following:
 #' 
-#' -   Any printable ASCII character ranging from the space character
+#'   - Any printable ASCII character ranging from the space character
 #'     (`\u0020`) through the end of the ASCII character range
 #' 
-#' -   The printable characters in the Basic Latin and Latin-1 Supplement
+#'   - The printable characters in the Basic Latin and Latin-1 Supplement
 #'     character set (through `\u00FF`)
 #' 
-#' -   The special characters tab (`\u0009`), line feed (`\u000A`), and
+#'   - The special characters tab (`\u0009`), line feed (`\u000A`), and
 #'     carriage return (`\u000D`)
 #'
 #' @return

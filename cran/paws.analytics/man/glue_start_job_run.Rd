@@ -32,8 +32,8 @@ topic in the developer guide.}
 The number of AWS Glue data processing units (DPUs) to allocate to this
 JobRun. From 2 to 100 DPUs can be allocated; the default is 10. A DPU is
 a relative measure of processing power that consists of 4 vCPUs of
-compute capacity and 16 GB of memory. For more information, see the AWS
-Glue pricing page.}
+compute capacity and 16 GB of memory. For more information, see the
+<span>AWS Glue pricing page</span>.}
 
 \item{Timeout}{The \code{JobRun} timeout in minutes. This is the maximum time that a job run
 can consume resources before it is terminated and enters \code{TIMEOUT}
@@ -43,7 +43,7 @@ timeout value set in the parent job.}
 \item{MaxCapacity}{The number of AWS Glue data processing units (DPUs) that can be
 allocated when this job runs. A DPU is a relative measure of processing
 power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
-For more information, see the AWS Glue pricing page.
+For more information, see the <span>AWS Glue pricing page</span>.
 
 Do not set \verb{Max Capacity} if using \code{WorkerType} and \code{NumberOfWorkers}.
 

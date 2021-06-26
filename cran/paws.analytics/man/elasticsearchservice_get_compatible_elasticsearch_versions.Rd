@@ -24,7 +24,7 @@ A list with the following syntax:\preformatted{list(
 }
 \description{
 Returns a list of upgrade compatible Elastisearch versions. You can
-optionally pass a \code{DomainName} to get all upgrade compatible
+optionally pass a \code{ DomainName } to get all upgrade compatible
 Elasticsearch versions for that specific domain.
 }
 \section{Request syntax}{

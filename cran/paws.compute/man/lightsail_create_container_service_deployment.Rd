@@ -130,8 +130,9 @@ the health check configuration.
 
 You can deploy containers to your container service using container
 images from a public registry like Docker Hub, or from your local
-machine. For more information, see Creating container images for your
-Amazon Lightsail container services in the \emph{Lightsail Dev Guide}.
+machine. For more information, see <span>Creating container images for
+your Amazon Lightsail container services</span> in the \emph{Lightsail Dev
+Guide}.
 }
 \section{Request syntax}{
 \preformatted{svc$create_container_service_deployment(

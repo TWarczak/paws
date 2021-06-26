@@ -20,7 +20,7 @@ NULL
 #' Developer
 #' Guide](https://docs.aws.amazon.com/gamelift/latest/developerguide/).
 #' 
-#' -   Managed GameLift -- GameLift offers a fully managed service to set
+#'   - Managed GameLift -- GameLift offers a fully managed service to set
 #'     up and maintain computing machines for hosting, manage game session
 #'     and player session life cycle, and handle security, storage, and
 #'     performance tracking. You can use automatic scaling tools to balance
@@ -28,12 +28,12 @@ NULL
 #'     session management to minimize player latency, or add FlexMatch for
 #'     matchmaking.
 #' 
-#' -   Managed GameLift with Realtime Servers – With GameLift Realtime
+#'   - Managed GameLift with Realtime Servers – With GameLift Realtime
 #'     Servers, you can quickly configure and set up game servers for your
 #'     game. Realtime Servers provides a game server framework with core
 #'     Amazon GameLift infrastructure already built in.
 #' 
-#' -   GameLift FleetIQ – Use GameLift FleetIQ as a standalone feature
+#'   - GameLift FleetIQ – Use GameLift FleetIQ as a standalone feature
 #'     while managing your own EC2 instances and Auto Scaling groups for
 #'     game hosting. GameLift FleetIQ provides optimizations that make
 #'     low-cost Spot Instances viable for game hosting.
@@ -44,10 +44,10 @@ NULL
 #' GameLift. You can find links to language-specific SDK guides and the AWS
 #' CLI reference with each operation and data type topic. Useful links:
 #' 
-#' -   [GameLift API operations listed by
+#'   - [GameLift API operations listed by
 #'     tasks](https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-awssdk.html)
 #' 
-#' -   [GameLift tools and
+#'   - [GameLift tools and
 #'     resources](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-components.html)
 #'
 #' @param
@@ -83,11 +83,11 @@ NULL
 #' @section Operations:
 #' \tabular{ll}{
 #'  \link[=gamelift_accept_match]{accept_match} \tab Registers a player's acceptance or rejection of a proposed FlexMatch match\cr
-#'  \link[=gamelift_claim_game_server]{claim_game_server} \tab This operation is used with the Amazon GameLift FleetIQ solution and game server groups\cr
+#'  \link[=gamelift_claim_game_server]{claim_game_server} \tab THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND GAME SERVER GROUPS\cr
 #'  \link[=gamelift_create_alias]{create_alias} \tab Creates an alias for a fleet\cr
 #'  \link[=gamelift_create_build]{create_build} \tab Creates a new Amazon GameLift build resource for your game server binary files\cr
 #'  \link[=gamelift_create_fleet]{create_fleet} \tab Creates a new fleet to run your game servers\cr
-#'  \link[=gamelift_create_game_server_group]{create_game_server_group} \tab This operation is used with the Amazon GameLift FleetIQ solution and game server groups\cr
+#'  \link[=gamelift_create_game_server_group]{create_game_server_group} \tab THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND GAME SERVER GROUPS\cr
 #'  \link[=gamelift_create_game_session]{create_game_session} \tab Creates a multiplayer game session for players\cr
 #'  \link[=gamelift_create_game_session_queue]{create_game_session_queue} \tab Establishes a new queue for processing requests to place new game sessions\cr
 #'  \link[=gamelift_create_matchmaking_configuration]{create_matchmaking_configuration} \tab Defines a new matchmaking configuration for use with FlexMatch\cr
@@ -100,7 +100,7 @@ NULL
 #'  \link[=gamelift_delete_alias]{delete_alias} \tab Deletes an alias\cr
 #'  \link[=gamelift_delete_build]{delete_build} \tab Deletes a build\cr
 #'  \link[=gamelift_delete_fleet]{delete_fleet} \tab Deletes everything related to a fleet\cr
-#'  \link[=gamelift_delete_game_server_group]{delete_game_server_group} \tab This operation is used with the Amazon GameLift FleetIQ solution and game server groups\cr
+#'  \link[=gamelift_delete_game_server_group]{delete_game_server_group} \tab THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND GAME SERVER GROUPS\cr
 #'  \link[=gamelift_delete_game_session_queue]{delete_game_session_queue} \tab Deletes a game session queue\cr
 #'  \link[=gamelift_delete_matchmaking_configuration]{delete_matchmaking_configuration} \tab Permanently removes a FlexMatch matchmaking configuration\cr
 #'  \link[=gamelift_delete_matchmaking_rule_set]{delete_matchmaking_rule_set} \tab Deletes an existing matchmaking rule set\cr
@@ -108,7 +108,7 @@ NULL
 #'  \link[=gamelift_delete_script]{delete_script} \tab Deletes a Realtime script\cr
 #'  \link[=gamelift_delete_vpc_peering_authorization]{delete_vpc_peering_authorization} \tab Cancels a pending VPC peering authorization for the specified VPC\cr
 #'  \link[=gamelift_delete_vpc_peering_connection]{delete_vpc_peering_connection} \tab Removes a VPC peering connection\cr
-#'  \link[=gamelift_deregister_game_server]{deregister_game_server} \tab This operation is used with the Amazon GameLift FleetIQ solution and game server groups\cr
+#'  \link[=gamelift_deregister_game_server]{deregister_game_server} \tab THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND GAME SERVER GROUPS\cr
 #'  \link[=gamelift_describe_alias]{describe_alias} \tab Retrieves properties for an alias\cr
 #'  \link[=gamelift_describe_build]{describe_build} \tab Retrieves properties for a custom game build\cr
 #'  \link[=gamelift_describe_ec2_instance_limits]{describe_ec2_instance_limits} \tab Retrieves the following information for the specified EC2 instance type:\cr
@@ -117,9 +117,9 @@ NULL
 #'  \link[=gamelift_describe_fleet_events]{describe_fleet_events} \tab Retrieves entries from the specified fleet's event log\cr
 #'  \link[=gamelift_describe_fleet_port_settings]{describe_fleet_port_settings} \tab Retrieves a fleet's inbound connection permissions\cr
 #'  \link[=gamelift_describe_fleet_utilization]{describe_fleet_utilization} \tab Retrieves utilization statistics for one or more fleets\cr
-#'  \link[=gamelift_describe_game_server]{describe_game_server} \tab This operation is used with the Amazon GameLift FleetIQ solution and game server groups\cr
-#'  \link[=gamelift_describe_game_server_group]{describe_game_server_group} \tab This operation is used with the Amazon GameLift FleetIQ solution and game server groups\cr
-#'  \link[=gamelift_describe_game_server_instances]{describe_game_server_instances} \tab This operation is used with the Amazon GameLift FleetIQ solution and game server groups\cr
+#'  \link[=gamelift_describe_game_server]{describe_game_server} \tab THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND GAME SERVER GROUPS\cr
+#'  \link[=gamelift_describe_game_server_group]{describe_game_server_group} \tab THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND GAME SERVER GROUPS\cr
+#'  \link[=gamelift_describe_game_server_instances]{describe_game_server_instances} \tab THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND GAME SERVER GROUPS\cr
 #'  \link[=gamelift_describe_game_session_details]{describe_game_session_details} \tab Retrieves properties, including the protection policy in force, for one or more game sessions\cr
 #'  \link[=gamelift_describe_game_session_placement]{describe_game_session_placement} \tab Retrieves properties and current status of a game session placement request\cr
 #'  \link[=gamelift_describe_game_session_queues]{describe_game_session_queues} \tab Retrieves the properties for one or more game session queues\cr
@@ -139,15 +139,15 @@ NULL
 #'  \link[=gamelift_list_aliases]{list_aliases} \tab Retrieves all aliases for this AWS account\cr
 #'  \link[=gamelift_list_builds]{list_builds} \tab Retrieves build resources for all builds associated with the AWS account in use\cr
 #'  \link[=gamelift_list_fleets]{list_fleets} \tab Retrieves a collection of fleet resources for this AWS account\cr
-#'  \link[=gamelift_list_game_server_groups]{list_game_server_groups} \tab This operation is used with the Amazon GameLift FleetIQ solution and game server groups\cr
-#'  \link[=gamelift_list_game_servers]{list_game_servers} \tab This operation is used with the Amazon GameLift FleetIQ solution and game server groups\cr
+#'  \link[=gamelift_list_game_server_groups]{list_game_server_groups} \tab THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND GAME SERVER GROUPS\cr
+#'  \link[=gamelift_list_game_servers]{list_game_servers} \tab THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND GAME SERVER GROUPS\cr
 #'  \link[=gamelift_list_scripts]{list_scripts} \tab Retrieves script records for all Realtime scripts that are associated with the AWS account in use\cr
 #'  \link[=gamelift_list_tags_for_resource]{list_tags_for_resource} \tab Retrieves all tags that are assigned to a GameLift resource\cr
 #'  \link[=gamelift_put_scaling_policy]{put_scaling_policy} \tab Creates or updates a scaling policy for a fleet\cr
-#'  \link[=gamelift_register_game_server]{register_game_server} \tab This operation is used with the Amazon GameLift FleetIQ solution and game server groups\cr
+#'  \link[=gamelift_register_game_server]{register_game_server} \tab THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND GAME SERVER GROUPS\cr
 #'  \link[=gamelift_request_upload_credentials]{request_upload_credentials} \tab Retrieves a fresh set of credentials for use when uploading a new set of game build files to Amazon GameLift's Amazon S3\cr
 #'  \link[=gamelift_resolve_alias]{resolve_alias} \tab Retrieves the fleet ID that an alias is currently pointing to\cr
-#'  \link[=gamelift_resume_game_server_group]{resume_game_server_group} \tab This operation is used with the Amazon GameLift FleetIQ solution and game server groups\cr
+#'  \link[=gamelift_resume_game_server_group]{resume_game_server_group} \tab THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND GAME SERVER GROUPS\cr
 #'  \link[=gamelift_search_game_sessions]{search_game_sessions} \tab Retrieves all active game sessions that match a set of search criteria and sorts them in a specified order\cr
 #'  \link[=gamelift_start_fleet_actions]{start_fleet_actions} \tab Resumes activity on a fleet that was suspended with StopFleetActions\cr
 #'  \link[=gamelift_start_game_session_placement]{start_game_session_placement} \tab Places a request for a new game session in a queue (see CreateGameSessionQueue)\cr
@@ -156,7 +156,7 @@ NULL
 #'  \link[=gamelift_stop_fleet_actions]{stop_fleet_actions} \tab Suspends activity on a fleet\cr
 #'  \link[=gamelift_stop_game_session_placement]{stop_game_session_placement} \tab Cancels a game session placement that is in PENDING status\cr
 #'  \link[=gamelift_stop_matchmaking]{stop_matchmaking} \tab Cancels a matchmaking ticket or match backfill ticket that is currently being processed\cr
-#'  \link[=gamelift_suspend_game_server_group]{suspend_game_server_group} \tab This operation is used with the Amazon GameLift FleetIQ solution and game server groups\cr
+#'  \link[=gamelift_suspend_game_server_group]{suspend_game_server_group} \tab THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND GAME SERVER GROUPS\cr
 #'  \link[=gamelift_tag_resource]{tag_resource} \tab Assigns a tag to a GameLift resource\cr
 #'  \link[=gamelift_untag_resource]{untag_resource} \tab Removes a tag that is assigned to a GameLift resource\cr
 #'  \link[=gamelift_update_alias]{update_alias} \tab Updates properties for an alias\cr
@@ -164,8 +164,8 @@ NULL
 #'  \link[=gamelift_update_fleet_attributes]{update_fleet_attributes} \tab Updates fleet properties, including name and description, for a fleet\cr
 #'  \link[=gamelift_update_fleet_capacity]{update_fleet_capacity} \tab Updates capacity settings for a fleet\cr
 #'  \link[=gamelift_update_fleet_port_settings]{update_fleet_port_settings} \tab Updates port settings for a fleet\cr
-#'  \link[=gamelift_update_game_server]{update_game_server} \tab This operation is used with the Amazon GameLift FleetIQ solution and game server groups\cr
-#'  \link[=gamelift_update_game_server_group]{update_game_server_group} \tab This operation is used with the Amazon GameLift FleetIQ solution and game server groups\cr
+#'  \link[=gamelift_update_game_server]{update_game_server} \tab THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND GAME SERVER GROUPS\cr
+#'  \link[=gamelift_update_game_server_group]{update_game_server_group} \tab THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND GAME SERVER GROUPS\cr
 #'  \link[=gamelift_update_game_session]{update_game_session} \tab Updates game session properties\cr
 #'  \link[=gamelift_update_game_session_queue]{update_game_session_queue} \tab Updates settings for a game session queue, which determines how new game session requests in the queue are processed\cr
 #'  \link[=gamelift_update_matchmaking_configuration]{update_matchmaking_configuration} \tab Updates settings for a FlexMatch matchmaking configuration\cr
@@ -173,6 +173,12 @@ NULL
 #'  \link[=gamelift_update_script]{update_script} \tab Updates Realtime script metadata and content\cr
 #'  \link[=gamelift_validate_matchmaking_rule_set]{validate_matchmaking_rule_set} \tab Validates the syntax of a matchmaking rule or rule set
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname gamelift
 #' @export
@@ -192,7 +198,7 @@ gamelift <- function(config = list()) {
   endpoints = list("*" = list(endpoint = "gamelift.{region}.amazonaws.com", global = FALSE), "cn-*" = list(endpoint = "gamelift.{region}.amazonaws.com.cn", global = FALSE), "us-iso-*" = list(endpoint = "gamelift.{region}.c2s.ic.gov", global = FALSE), "us-isob-*" = list(endpoint = "gamelift.{region}.sc2s.sgov.gov", global = FALSE)),
   service_id = "GameLift",
   api_version = "2015-10-01",
-  signing_name = NULL,
+  signing_name = "gamelift",
   json_version = "1.1",
   target_prefix = "GameLift"
 )

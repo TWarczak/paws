@@ -21,7 +21,7 @@ A list with the following syntax:\preformatted{list(
 \description{
 Tells the search domain to start indexing its documents using the latest
 indexing options. This operation must be invoked to activate options
-whose OptionStatus is \code{RequiresIndexDocuments}.
+whose <span>OptionStatus</span> is \code{RequiresIndexDocuments}.
 }
 \section{Request syntax}{
 \preformatted{svc$index_documents(

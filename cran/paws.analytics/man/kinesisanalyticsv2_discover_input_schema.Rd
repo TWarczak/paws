@@ -22,8 +22,8 @@ records from the specified streaming source discovery purposes.}
 \item{S3Configuration}{Specify this parameter to discover a schema from data in an Amazon S3
 object.}
 
-\item{InputProcessingConfiguration}{The InputProcessingConfiguration to use to preprocess the records before
-discovering the schema of the records.}
+\item{InputProcessingConfiguration}{The <span>InputProcessingConfiguration</span> to use to preprocess the
+records before discovering the schema of the records.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

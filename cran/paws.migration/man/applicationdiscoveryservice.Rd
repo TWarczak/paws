@@ -9,6 +9,12 @@ applicationdiscoveryservice(config = list())
 \arguments{
 \item{config}{Optional configuration of credentials, endpoint, and/or region.}
 }
+\value{
+A client for the service. You can call the service's operations using
+syntax like \code{svc$operation(...)}, where \code{svc} is the name you've assigned
+to the client. The available operations are listed in the
+Operations section.
+}
 \description{
 AWS Application Discovery Service helps you plan application migration
 projects. It automatically identifies servers, virtual machines (VMs),
@@ -28,6 +34,9 @@ on-premises infrastructure assessment.
 dependencies, only agent-based discovery collects that
 information.
 }
+}<!-- end list -->
+
+\itemize{
 \item \strong{Agent-based discovery} collects a richer set of data than
 agentless discovery by using the AWS Application Discovery Agent,
 which you install on one or more hosts in your data center.
@@ -39,6 +48,9 @@ information, resource utilization, and network dependencies.
 transit to the Application Discovery Service database in the
 cloud.
 }
+}<!-- end list -->
+
+\itemize{
 \item \strong{AWS Partner Network (APN) solutions} integrate with Application
 Discovery Service, enabling you to import details of your
 on-premises environment directly into Migration Hub without using

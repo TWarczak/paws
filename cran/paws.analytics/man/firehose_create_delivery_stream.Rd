@@ -27,9 +27,9 @@ stream as a source.
 }}
 
 \item{KinesisStreamSourceConfiguration}{When a Kinesis data stream is used as the source for the delivery
-stream, a KinesisStreamSourceConfiguration containing the Kinesis data
-stream Amazon Resource Name (ARN) and the role ARN for the source
-stream.}
+stream, a <span>KinesisStreamSourceConfiguration</span> containing the
+Kinesis data stream Amazon Resource Name (ARN) and the role ARN for the
+source stream.}
 
 \item{DeliveryStreamEncryptionConfigurationInput}{Used to specify the type and Amazon Resource Name (ARN) of the KMS key
 needed for Server-Side Encryption (SSE).}
@@ -96,8 +96,8 @@ Name (ARN) and role ARN in the \code{KinesisStreamSourceConfiguration}
 parameter.
 
 To create a delivery stream with server-side encryption (SSE) enabled,
-include DeliveryStreamEncryptionConfigurationInput in your request. This
-is optional. You can also invoke
+include <span>DeliveryStreamEncryptionConfigurationInput</span> in your
+request. This is optional. You can also invoke
 \code{\link[=firehose_start_delivery_stream_encryption]{start_delivery_stream_encryption}}
 to turn on SSE for an existing delivery stream that doesn't have SSE
 enabled.

@@ -92,9 +92,7 @@ does not specify a primary private IP address).
 \item If the request provides \code{SecurityGroups}, this network interface
 is associated with those security groups. Otherwise, it belongs
 to the default security group for the subnet's VPC.
-\item Assigns the description
-\verb{Mount target fsmt-id for file system fs-id } where \code{fsmt-id}
-is the mount target ID, and \code{fs-id} is the \code{FileSystemId}.
+\item Assigns the description \verb{Mount target fsmt-id for file system fs-id } where \code{ fsmt-id } is the mount target ID, and \code{ fs-id } is the \code{FileSystemId}.
 \item Sets the \code{requesterManaged} property of the network interface to
 \code{true}, and the \code{requesterId} value to \code{EFS}.
 }

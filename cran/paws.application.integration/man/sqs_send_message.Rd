@@ -92,8 +92,7 @@ after the message is received and deleted.
 
 The maximum length of \code{MessageDeduplicationId} is 128 characters.
 \code{MessageDeduplicationId} can contain alphanumeric characters (\code{a-z},
-\code{A-Z}, \code{0-9}) and punctuation
-(\verb{!\\"#$\%&\\'()*+,-./:;<=>?@[\]^_\\`\{|\}~}).
+\code{A-Z}, \code{0-9}) and punctuation (\verb{!\\"#$\%&\\'()*+,-./:;<=>?@[\]^_\\`\{|\}~}).
 
 For best practices of using \code{MessageDeduplicationId}, see \href{https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/using-messagededuplicationid-property.html}{Using the MessageDeduplicationId Property}
 in the \emph{Amazon Simple Queue Service Developer Guide}.

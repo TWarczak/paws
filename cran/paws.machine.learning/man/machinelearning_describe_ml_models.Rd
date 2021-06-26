@@ -12,7 +12,7 @@ machinelearning_describe_ml_models(FilterVariable, EQ, GT, LT, GE, LE,
 \itemize{
 \item \code{CreatedAt} - Sets the search criteria to \code{MLModel} creation date.
 \item \code{Status} - Sets the search criteria to \code{MLModel} status.
-\item \code{Name} - Sets the search criteria to the contents of \code{MLModel}
+\item \code{Name} - Sets the search criteria to the contents of \code{MLModel} ****
 \code{Name}.
 \item \code{IAMUser} - Sets the search criteria to the user account that
 invoked the \code{MLModel} creation.

@@ -44,7 +44,7 @@ A list with the following syntax:\preformatted{list(
 }
 \description{
 Deletes an automatic snapshot of an instance or disk. For more
-information, see the Lightsail Dev Guide.
+information, see the <span>Lightsail Dev Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$delete_auto_snapshot(

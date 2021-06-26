@@ -164,7 +164,7 @@ machinelearning_create_batch_prediction <- function(BatchPredictionId, BatchPred
 #' `DataSource` status to `PENDING`. After the `DataSource` is created and
 #' ready for use, Amazon ML sets the `Status` parameter to `COMPLETED`.
 #' `DataSource` in the `COMPLETED` or `PENDING` state can be used only to
-#' perform `>CreateMLModel`&gt;,
+#' perform `>CreateMLModel`\>,
 #' [`create_evaluation`][machinelearning_create_evaluation], or
 #' [`create_batch_prediction`][machinelearning_create_batch_prediction]
 #' operations.
@@ -183,60 +183,60 @@ machinelearning_create_batch_prediction <- function(BatchPredictionId, BatchPred
 #' @param DataSourceName A user-supplied name or description of the `DataSource`.
 #' @param RDSData &#91;required&#93; The data specification of an Amazon RDS `DataSource`:
 #' 
-#' -   DatabaseInformation -
-#' 
-#'     -   `DatabaseName` - The name of the Amazon RDS database.
-#'     -   `InstanceIdentifier ` - A unique identifier for the Amazon RDS
+#'   - DatabaseInformation -
+#'     
+#'       - `DatabaseName` - The name of the Amazon RDS database.
+#'       - ` InstanceIdentifier  ` - A unique identifier for the Amazon RDS
 #'         database instance.
 #' 
-#' -   DatabaseCredentials - AWS Identity and Access Management (IAM)
+#'   - DatabaseCredentials - AWS Identity and Access Management (IAM)
 #'     credentials that are used to connect to the Amazon RDS database.
 #' 
-#' -   ResourceRole - A role (DataPipelineDefaultResourceRole) assumed by
+#'   - ResourceRole - A role (DataPipelineDefaultResourceRole) assumed by
 #'     an EC2 instance to carry out the copy task from Amazon RDS to Amazon
 #'     Simple Storage Service (Amazon S3). For more information, see [Role
 #'     templates](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-iam-roles.html)
 #'     for data pipelines.
 #' 
-#' -   ServiceRole - A role (DataPipelineDefaultRole) assumed by the AWS
+#'   - ServiceRole - A role (DataPipelineDefaultRole) assumed by the AWS
 #'     Data Pipeline service to monitor the progress of the copy task from
 #'     Amazon RDS to Amazon S3. For more information, see [Role
 #'     templates](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-iam-roles.html)
 #'     for data pipelines.
 #' 
-#' -   SecurityInfo - The security information to use to access an RDS DB
+#'   - SecurityInfo - The security information to use to access an RDS DB
 #'     instance. You need to set up appropriate ingress rules for the
 #'     security entity IDs provided to allow access to the Amazon RDS
 #'     instance. Specify a \[`SubnetId`, `SecurityGroupIds`\] pair for a
 #'     VPC-based RDS DB instance.
 #' 
-#' -   SelectSqlQuery - A query that is used to retrieve the observation
+#'   - SelectSqlQuery - A query that is used to retrieve the observation
 #'     data for the `Datasource`.
 #' 
-#' -   S3StagingLocation - The Amazon S3 location for staging Amazon RDS
+#'   - S3StagingLocation - The Amazon S3 location for staging Amazon RDS
 #'     data. The data retrieved from Amazon RDS using `SelectSqlQuery` is
 #'     stored in this location.
 #' 
-#' -   DataSchemaUri - The Amazon S3 location of the `DataSchema`.
+#'   - DataSchemaUri - The Amazon S3 location of the `DataSchema`.
 #' 
-#' -   DataSchema - A JSON string representing the schema. This is not
+#'   - DataSchema - A JSON string representing the schema. This is not
 #'     required if `DataSchemaUri` is specified.
 #' 
-#' -   DataRearrangement - A JSON string that represents the splitting and
+#'   - DataRearrangement - A JSON string that represents the splitting and
 #'     rearrangement requirements for the `Datasource`.
-#' 
+#'     
 #'       
-#' 
-#'     Sample -
-#'     ` "{\"splitting\":{\"percentBegin\":10,\"percentEnd\":60}}"`
+#'     
+#'     Sample - ` 
+#'     "{\"splitting\":{\"percentBegin\":10,\"percentEnd\":60}}" `
 #' @param RoleARN &#91;required&#93; The role that Amazon ML assumes on behalf of the user to create and
 #' activate a data pipeline in the user's account and copy data using the
 #' `SelectSqlQuery` query from Amazon RDS to Amazon S3.
 #' @param ComputeStatistics The compute statistics for a `DataSource`. The statistics are generated
 #' from the observation data referenced by a `DataSource`. Amazon ML uses
 #' the statistics internally during `MLModel` training. This parameter must
-#' be set to `true` if the ``DataSource`` needs to be used for `MLModel`
-#' training.
+#' be set to `true` if the `  `DataSource`  ` needs to be used for
+#' `MLModel` training.
 #'
 #' @return
 #' A list with the following syntax:
@@ -355,41 +355,41 @@ machinelearning_create_data_source_from_rds <- function(DataSourceId, DataSource
 #' @param DataSourceName A user-supplied name or description of the `DataSource`.
 #' @param DataSpec &#91;required&#93; The data specification of an Amazon Redshift `DataSource`:
 #' 
-#' -   DatabaseInformation -
-#' 
-#'     -   `DatabaseName` - The name of the Amazon Redshift database.
-#'     -   ` ClusterIdentifier` - The unique ID for the Amazon Redshift
+#'   - DatabaseInformation -
+#'     
+#'       - `DatabaseName` - The name of the Amazon Redshift database.
+#'       - `  ClusterIdentifier ` - The unique ID for the Amazon Redshift
 #'         cluster.
 #' 
-#' -   DatabaseCredentials - The AWS Identity and Access Management (IAM)
+#'   - DatabaseCredentials - The AWS Identity and Access Management (IAM)
 #'     credentials that are used to connect to the Amazon Redshift
 #'     database.
 #' 
-#' -   SelectSqlQuery - The query that is used to retrieve the observation
+#'   - SelectSqlQuery - The query that is used to retrieve the observation
 #'     data for the `Datasource`.
 #' 
-#' -   S3StagingLocation - The Amazon Simple Storage Service (Amazon S3)
+#'   - S3StagingLocation - The Amazon Simple Storage Service (Amazon S3)
 #'     location for staging Amazon Redshift data. The data retrieved from
 #'     Amazon Redshift using the `SelectSqlQuery` query is stored in this
 #'     location.
 #' 
-#' -   DataSchemaUri - The Amazon S3 location of the `DataSchema`.
+#'   - DataSchemaUri - The Amazon S3 location of the `DataSchema`.
 #' 
-#' -   DataSchema - A JSON string representing the schema. This is not
+#'   - DataSchema - A JSON string representing the schema. This is not
 #'     required if `DataSchemaUri` is specified.
 #' 
-#' -   DataRearrangement - A JSON string that represents the splitting and
+#'   - DataRearrangement - A JSON string that represents the splitting and
 #'     rearrangement requirements for the `DataSource`.
-#' 
-#'     Sample -
-#'     ` "{\"splitting\":{\"percentBegin\":10,\"percentEnd\":60}}"`
+#'     
+#'     Sample - ` 
+#'     "{\"splitting\":{\"percentBegin\":10,\"percentEnd\":60}}" `
 #' @param RoleARN &#91;required&#93; A fully specified role Amazon Resource Name (ARN). Amazon ML assumes the
 #' role on behalf of the user to create the following:
 #' 
-#' -   A security group to allow Amazon ML to execute the `SelectSqlQuery`
+#'   - A security group to allow Amazon ML to execute the `SelectSqlQuery`
 #'     query on an Amazon Redshift cluster
 #' 
-#' -   An Amazon S3 bucket policy to grant Amazon ML read/write permissions
+#'   - An Amazon S3 bucket policy to grant Amazon ML read/write permissions
 #'     on the `S3StagingLocation`
 #' @param ComputeStatistics The compute statistics for a `DataSource`. The statistics are generated
 #' from the observation data referenced by a `DataSource`. Amazon ML uses
@@ -502,23 +502,23 @@ machinelearning_create_data_source_from_redshift <- function(DataSourceId, DataS
 #' @param DataSourceName A user-supplied name or description of the `DataSource`.
 #' @param DataSpec &#91;required&#93; The data specification of a `DataSource`:
 #' 
-#' -   DataLocationS3 - The Amazon S3 location of the observation data.
+#'   - DataLocationS3 - The Amazon S3 location of the observation data.
 #' 
-#' -   DataSchemaLocationS3 - The Amazon S3 location of the `DataSchema`.
+#'   - DataSchemaLocationS3 - The Amazon S3 location of the `DataSchema`.
 #' 
-#' -   DataSchema - A JSON string representing the schema. This is not
+#'   - DataSchema - A JSON string representing the schema. This is not
 #'     required if `DataSchemaUri` is specified.
 #' 
-#' -   DataRearrangement - A JSON string that represents the splitting and
+#'   - DataRearrangement - A JSON string that represents the splitting and
 #'     rearrangement requirements for the `Datasource`.
-#' 
-#'     Sample -
-#'     ` "{\"splitting\":{\"percentBegin\":10,\"percentEnd\":60}}"`
+#'     
+#'     Sample - ` 
+#'     "{\"splitting\":{\"percentBegin\":10,\"percentEnd\":60}}" `
 #' @param ComputeStatistics The compute statistics for a `DataSource`. The statistics are generated
 #' from the observation data referenced by a `DataSource`. Amazon ML uses
 #' the statistics internally during `MLModel` training. This parameter must
-#' be set to `true` if the ``DataSource`` needs to be used for `MLModel`
-#' training.
+#' be set to `true` if the `  `DataSource`  ` needs to be used for
+#' `MLModel` training.
 #'
 #' @return
 #' A list with the following syntax:
@@ -677,10 +677,10 @@ machinelearning_create_evaluation <- function(EvaluationId, EvaluationName = NUL
 #' @param MLModelType &#91;required&#93; The category of supervised learning that this `MLModel` will address.
 #' Choose from the following types:
 #' 
-#' -   Choose `REGRESSION` if the `MLModel` will be used to predict a
+#'   - Choose `REGRESSION` if the `MLModel` will be used to predict a
 #'     numeric value.
-#' -   Choose `BINARY` if the `MLModel` result has two possible values.
-#' -   Choose `MULTICLASS` if the `MLModel` result has a limited number of
+#'   - Choose `BINARY` if the `MLModel` result has two possible values.
+#'   - Choose `MULTICLASS` if the `MLModel` result has a limited number of
 #'     values.
 #' 
 #' For more information, see the [Amazon Machine Learning Developer
@@ -690,39 +690,39 @@ machinelearning_create_evaluation <- function(EvaluationId, EvaluationName = NUL
 #' 
 #' The following is the current set of training parameters:
 #' 
-#' -   `sgd.maxMLModelSizeInBytes` - The maximum allowed size of the model.
+#'   - `sgd.maxMLModelSizeInBytes` - The maximum allowed size of the model.
 #'     Depending on the input data, the size of the model might affect its
 #'     performance.
-#' 
+#'     
 #'     The value is an integer that ranges from `100000` to `2147483648`.
 #'     The default value is `33554432`.
 #' 
-#' -   `sgd.maxPasses` - The number of times that the training process
+#'   - `sgd.maxPasses` - The number of times that the training process
 #'     traverses the observations to build the `MLModel`. The value is an
 #'     integer that ranges from `1` to `10000`. The default value is `10`.
 #' 
-#' -   `sgd.shuffleType` - Whether Amazon ML shuffles the training data.
+#'   - `sgd.shuffleType` - Whether Amazon ML shuffles the training data.
 #'     Shuffling the data improves a model's ability to find the optimal
 #'     solution for a variety of data types. The valid values are `auto`
 #'     and `none`. The default value is `none`. We strongly recommend that
 #'     you shuffle your data.
 #' 
-#' -   `sgd.l1RegularizationAmount` - The coefficient regularization L1
+#'   - `sgd.l1RegularizationAmount` - The coefficient regularization L1
 #'     norm. It controls overfitting the data by penalizing large
 #'     coefficients. This tends to drive coefficients to zero, resulting in
 #'     a sparse feature set. If you use this parameter, start by specifying
 #'     a small value, such as `1.0E-08`.
-#' 
+#'     
 #'     The value is a double that ranges from `0` to `MAX_DOUBLE`. The
 #'     default is to not use L1 normalization. This parameter can't be used
 #'     when `L2` is specified. Use this parameter sparingly.
 #' 
-#' -   `sgd.l2RegularizationAmount` - The coefficient regularization L2
+#'   - `sgd.l2RegularizationAmount` - The coefficient regularization L2
 #'     norm. It controls overfitting the data by penalizing large
 #'     coefficients. This tends to drive coefficients to small, nonzero
 #'     values. If you use this parameter, start by specifying a small
 #'     value, such as `1.0E-08`.
-#' 
+#'     
 #'     The value is a double that ranges from `0` to `MAX_DOUBLE`. The
 #'     default is to not use L2 normalization. This parameter can't be used
 #'     when `L1` is specified. Use this parameter sparingly.
@@ -1176,18 +1176,18 @@ machinelearning_delete_tags <- function(TagKeys, ResourceId, ResourceType) {
 #' @param FilterVariable Use one of the following variables to filter a list of
 #' `BatchPrediction`:
 #' 
-#' -   `CreatedAt` - Sets the search criteria to the `BatchPrediction`
+#'   - `CreatedAt` - Sets the search criteria to the `BatchPrediction`
 #'     creation date.
-#' -   `Status` - Sets the search criteria to the `BatchPrediction` status.
-#' -   `Name` - Sets the search criteria to the contents of the
-#'     `BatchPrediction` `Name`.
-#' -   `IAMUser` - Sets the search criteria to the user account that
+#'   - `Status` - Sets the search criteria to the `BatchPrediction` status.
+#'   - `Name` - Sets the search criteria to the contents of the
+#'     `BatchPrediction` **** `Name`.
+#'   - `IAMUser` - Sets the search criteria to the user account that
 #'     invoked the `BatchPrediction` creation.
-#' -   `MLModelId` - Sets the search criteria to the `MLModel` used in the
+#'   - `MLModelId` - Sets the search criteria to the `MLModel` used in the
 #'     `BatchPrediction`.
-#' -   `DataSourceId` - Sets the search criteria to the `DataSource` used
+#'   - `DataSourceId` - Sets the search criteria to the `DataSource` used
 #'     in the `BatchPrediction`.
-#' -   `DataURI` - Sets the search criteria to the data file(s) used in the
+#'   - `DataURI` - Sets the search criteria to the data file(s) used in the
 #'     `BatchPrediction`. The URL can identify either a file or an Amazon
 #'     Simple Storage Solution (Amazon S3) bucket or directory.
 #' @param EQ The equal to operator. The `BatchPrediction` results will have
@@ -1215,16 +1215,16 @@ machinelearning_delete_tags <- function(TagKeys, ResourceId, ResourceType) {
 #' select `Name` for the `FilterVariable` and any of the following strings
 #' for the `Prefix`:
 #' 
-#' -   2014-09
+#'   - 2014-09
 #' 
-#' -   2014-09-09
+#'   - 2014-09-09
 #' 
-#' -   2014-09-09-Holiday
+#'   - 2014-09-09-Holiday
 #' @param SortOrder A two-value parameter that determines the sequence of the resulting list
 #' of `MLModel`s.
 #' 
-#' -   `asc` - Arranges the list in ascending order (A-Z, 0-9).
-#' -   `dsc` - Arranges the list in descending order (Z-A, 9-0).
+#'   - `asc` - Arranges the list in ascending order (A-Z, 0-9).
+#'   - `dsc` - Arranges the list in descending order (Z-A, 9-0).
 #' 
 #' Results are sorted by `FilterVariable`.
 #' @param NextToken An ID of the page in the paginated results.
@@ -1317,15 +1317,15 @@ machinelearning_describe_batch_predictions <- function(FilterVariable = NULL, EQ
 #'
 #' @param FilterVariable Use one of the following variables to filter a list of `DataSource`:
 #' 
-#' -   `CreatedAt` - Sets the search criteria to `DataSource` creation
+#'   - `CreatedAt` - Sets the search criteria to `DataSource` creation
 #'     dates.
-#' -   `Status` - Sets the search criteria to `DataSource` statuses.
-#' -   `Name` - Sets the search criteria to the contents of `DataSource`
-#'     `Name`.
-#' -   `DataUri` - Sets the search criteria to the URI of data files used
+#'   - `Status` - Sets the search criteria to `DataSource` statuses.
+#'   - `Name` - Sets the search criteria to the contents of `DataSource`
+#'     **** `Name`.
+#'   - `DataUri` - Sets the search criteria to the URI of data files used
 #'     to create the `DataSource`. The URI can identify either a file or an
 #'     Amazon Simple Storage Service (Amazon S3) bucket or directory.
-#' -   `IAMUser` - Sets the search criteria to the user account that
+#'   - `IAMUser` - Sets the search criteria to the user account that
 #'     invoked the `DataSource` creation.
 #' @param EQ The equal to operator. The `DataSource` results will have
 #' `FilterVariable` values that exactly match the value specified with
@@ -1352,16 +1352,16 @@ machinelearning_describe_batch_predictions <- function(FilterVariable = NULL, EQ
 #' `Name` for the `FilterVariable` and any of the following strings for the
 #' `Prefix`:
 #' 
-#' -   2014-09
+#'   - 2014-09
 #' 
-#' -   2014-09-09
+#'   - 2014-09-09
 #' 
-#' -   2014-09-09-Holiday
+#'   - 2014-09-09-Holiday
 #' @param SortOrder A two-value parameter that determines the sequence of the resulting list
 #' of `DataSource`.
 #' 
-#' -   `asc` - Arranges the list in ascending order (A-Z, 0-9).
-#' -   `dsc` - Arranges the list in descending order (Z-A, 9-0).
+#'   - `asc` - Arranges the list in ascending order (A-Z, 0-9).
+#'   - `dsc` - Arranges the list in descending order (Z-A, 9-0).
 #' 
 #' Results are sorted by `FilterVariable`.
 #' @param NextToken The ID of the page in the paginated results.
@@ -1474,18 +1474,18 @@ machinelearning_describe_data_sources <- function(FilterVariable = NULL, EQ = NU
 #' @param FilterVariable Use one of the following variable to filter a list of `Evaluation`
 #' objects:
 #' 
-#' -   `CreatedAt` - Sets the search criteria to the `Evaluation` creation
+#'   - `CreatedAt` - Sets the search criteria to the `Evaluation` creation
 #'     date.
-#' -   `Status` - Sets the search criteria to the `Evaluation` status.
-#' -   `Name` - Sets the search criteria to the contents of `Evaluation`
-#'     `Name`.
-#' -   `IAMUser` - Sets the search criteria to the user account that
+#'   - `Status` - Sets the search criteria to the `Evaluation` status.
+#'   - `Name` - Sets the search criteria to the contents of `Evaluation`
+#'     **** `Name`.
+#'   - `IAMUser` - Sets the search criteria to the user account that
 #'     invoked an `Evaluation`.
-#' -   `MLModelId` - Sets the search criteria to the `MLModel` that was
+#'   - `MLModelId` - Sets the search criteria to the `MLModel` that was
 #'     evaluated.
-#' -   `DataSourceId` - Sets the search criteria to the `DataSource` used
+#'   - `DataSourceId` - Sets the search criteria to the `DataSource` used
 #'     in `Evaluation`.
-#' -   `DataUri` - Sets the search criteria to the data file(s) used in
+#'   - `DataUri` - Sets the search criteria to the data file(s) used in
 #'     `Evaluation`. The URL can identify either a file or an Amazon Simple
 #'     Storage Solution (Amazon S3) bucket or directory.
 #' @param EQ The equal to operator. The `Evaluation` results will have
@@ -1513,16 +1513,16 @@ machinelearning_describe_data_sources <- function(FilterVariable = NULL, EQ = NU
 #' `Name` for the `FilterVariable` and any of the following strings for the
 #' `Prefix`:
 #' 
-#' -   2014-09
+#'   - 2014-09
 #' 
-#' -   2014-09-09
+#'   - 2014-09-09
 #' 
-#' -   2014-09-09-Holiday
+#'   - 2014-09-09-Holiday
 #' @param SortOrder A two-value parameter that determines the sequence of the resulting list
 #' of `Evaluation`.
 #' 
-#' -   `asc` - Arranges the list in ascending order (A-Z, 0-9).
-#' -   `dsc` - Arranges the list in descending order (Z-A, 9-0).
+#'   - `asc` - Arranges the list in ascending order (A-Z, 0-9).
+#'   - `dsc` - Arranges the list in descending order (Z-A, 9-0).
 #' 
 #' Results are sorted by `FilterVariable`.
 #' @param NextToken The ID of the page in the paginated results.
@@ -1615,21 +1615,21 @@ machinelearning_describe_evaluations <- function(FilterVariable = NULL, EQ = NUL
 #'
 #' @param FilterVariable Use one of the following variables to filter a list of `MLModel`:
 #' 
-#' -   `CreatedAt` - Sets the search criteria to `MLModel` creation date.
-#' -   `Status` - Sets the search criteria to `MLModel` status.
-#' -   `Name` - Sets the search criteria to the contents of `MLModel`
+#'   - `CreatedAt` - Sets the search criteria to `MLModel` creation date.
+#'   - `Status` - Sets the search criteria to `MLModel` status.
+#'   - `Name` - Sets the search criteria to the contents of `MLModel` ****
 #'     `Name`.
-#' -   `IAMUser` - Sets the search criteria to the user account that
+#'   - `IAMUser` - Sets the search criteria to the user account that
 #'     invoked the `MLModel` creation.
-#' -   `TrainingDataSourceId` - Sets the search criteria to the
+#'   - `TrainingDataSourceId` - Sets the search criteria to the
 #'     `DataSource` used to train one or more `MLModel`.
-#' -   `RealtimeEndpointStatus` - Sets the search criteria to the `MLModel`
+#'   - `RealtimeEndpointStatus` - Sets the search criteria to the `MLModel`
 #'     real-time endpoint status.
-#' -   `MLModelType` - Sets the search criteria to `MLModel` type: binary,
+#'   - `MLModelType` - Sets the search criteria to `MLModel` type: binary,
 #'     regression, or multi-class.
-#' -   `Algorithm` - Sets the search criteria to the algorithm that the
+#'   - `Algorithm` - Sets the search criteria to the algorithm that the
 #'     `MLModel` uses.
-#' -   `TrainingDataURI` - Sets the search criteria to the data file(s)
+#'   - `TrainingDataURI` - Sets the search criteria to the data file(s)
 #'     used in training a `MLModel`. The URL can identify either a file or
 #'     an Amazon Simple Storage Service (Amazon S3) bucket or directory.
 #' @param EQ The equal to operator. The `MLModel` results will have `FilterVariable`
@@ -1655,16 +1655,16 @@ machinelearning_describe_evaluations <- function(FilterVariable = NULL, EQ = NUL
 #' `Name` for the `FilterVariable` and any of the following strings for the
 #' `Prefix`:
 #' 
-#' -   2014-09
+#'   - 2014-09
 #' 
-#' -   2014-09-09
+#'   - 2014-09-09
 #' 
-#' -   2014-09-09-Holiday
+#'   - 2014-09-09-Holiday
 #' @param SortOrder A two-value parameter that determines the sequence of the resulting list
 #' of `MLModel`.
 #' 
-#' -   `asc` - Arranges the list in ascending order (A-Z, 0-9).
-#' -   `dsc` - Arranges the list in descending order (Z-A, 9-0).
+#'   - `asc` - Arranges the list in ascending order (A-Z, 0-9).
+#'   - `dsc` - Arranges the list in descending order (Z-A, 9-0).
 #' 
 #' Results are sorted by `FilterVariable`.
 #' @param NextToken The ID of the page in the paginated results.
@@ -2160,8 +2160,8 @@ machinelearning_get_ml_model <- function(MLModelId, Verbose = NULL) {
 #' Generates a prediction for the observation using the specified ML Model
 #'
 #' @description
-#' Generates a prediction for the observation using the specified
-#' `ML Model`.
+#' Generates a prediction for the observation using the specified `ML
+#' Model`.
 #' 
 #' Note
 #' 

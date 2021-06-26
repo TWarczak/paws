@@ -1085,31 +1085,31 @@ cloudwatch_get_dashboard <- function(DashboardName) {
 #' You can also optionally return one or more statistics about each data
 #' point in the time series. These statistics can include the following:
 #' 
-#' -   `UniqueContributors` -- the number of unique contributors for each
+#'   - `UniqueContributors` -- the number of unique contributors for each
 #'     data point.
 #' 
-#' -   `MaxContributorValue` -- the value of the top contributor for each
+#'   - `MaxContributorValue` -- the value of the top contributor for each
 #'     data point. The identity of the contributor might change for each
 #'     data point in the graph.
-#' 
+#'     
 #'     If this rule aggregates by COUNT, the top contributor for each data
 #'     point is the contributor with the most occurrences in that period.
 #'     If the rule aggregates by SUM, the top contributor is the
 #'     contributor with the highest sum in the log field specified by the
 #'     rule's `Value`, during that period.
 #' 
-#' -   `SampleCount` -- the number of data points matched by the rule.
+#'   - `SampleCount` -- the number of data points matched by the rule.
 #' 
-#' -   `Sum` -- the sum of the values from all contributors during the time
+#'   - `Sum` -- the sum of the values from all contributors during the time
 #'     period represented by that data point.
 #' 
-#' -   `Minimum` -- the minimum value from a single observation during the
+#'   - `Minimum` -- the minimum value from a single observation during the
 #'     time period represented by that data point.
 #' 
-#' -   `Maximum` -- the maximum value from a single observation during the
+#'   - `Maximum` -- the maximum value from a single observation during the
 #'     time period represented by that data point.
 #' 
-#' -   `Average` -- the average value from all contributors during the time
+#'   - `Average` -- the average value from all contributors during the time
 #'     period represented by that data point.
 #'
 #' @usage
@@ -1130,31 +1130,31 @@ cloudwatch_get_dashboard <- function(DashboardName) {
 #' @param Metrics Specifies which metrics to use for aggregation of contributor values for
 #' the report. You can specify one or more of the following metrics:
 #' 
-#' -   `UniqueContributors` -- the number of unique contributors for each
+#'   - `UniqueContributors` -- the number of unique contributors for each
 #'     data point.
 #' 
-#' -   `MaxContributorValue` -- the value of the top contributor for each
+#'   - `MaxContributorValue` -- the value of the top contributor for each
 #'     data point. The identity of the contributor might change for each
 #'     data point in the graph.
-#' 
+#'     
 #'     If this rule aggregates by COUNT, the top contributor for each data
 #'     point is the contributor with the most occurrences in that period.
 #'     If the rule aggregates by SUM, the top contributor is the
 #'     contributor with the highest sum in the log field specified by the
 #'     rule's `Value`, during that period.
 #' 
-#' -   `SampleCount` -- the number of data points matched by the rule.
+#'   - `SampleCount` -- the number of data points matched by the rule.
 #' 
-#' -   `Sum` -- the sum of the values from all contributors during the time
+#'   - `Sum` -- the sum of the values from all contributors during the time
 #'     period represented by that data point.
 #' 
-#' -   `Minimum` -- the minimum value from a single observation during the
+#'   - `Minimum` -- the minimum value from a single observation during the
 #'     time period represented by that data point.
 #' 
-#' -   `Maximum` -- the maximum value from a single observation during the
+#'   - `Maximum` -- the maximum value from a single observation during the
 #'     time period represented by that data point.
 #' 
-#' -   `Average` -- the average value from all contributors during the time
+#'   - `Average` -- the average value from all contributors during the time
 #'     period represented by that data point.
 #' @param OrderBy Determines what statistic to use to rank the contributors. Valid values
 #' are SUM and MAXIMUM.
@@ -1265,18 +1265,18 @@ cloudwatch_get_insight_rule_report <- function(RuleName, StartTime, EndTime, Per
 #' 
 #' Amazon CloudWatch retains metric data as follows:
 #' 
-#' -   Data points with a period of less than 60 seconds are available for
+#'   - Data points with a period of less than 60 seconds are available for
 #'     3 hours. These data points are high-resolution metrics and are
 #'     available only for custom metrics that have been defined with a
 #'     `StorageResolution` of 1.
 #' 
-#' -   Data points with a period of 60 seconds (1-minute) are available for
+#'   - Data points with a period of 60 seconds (1-minute) are available for
 #'     15 days.
 #' 
-#' -   Data points with a period of 300 seconds (5-minute) are available
+#'   - Data points with a period of 300 seconds (5-minute) are available
 #'     for 63 days.
 #' 
-#' -   Data points with a period of 3600 seconds (1 hour) are available for
+#'   - Data points with a period of 3600 seconds (1 hour) are available for
 #'     455 days (15 months).
 #' 
 #' Data points that are initially published with a shorter period are
@@ -1311,14 +1311,14 @@ cloudwatch_get_insight_rule_report <- function(RuleName, StartTime, EndTime, Per
 #' 
 #' CloudWatch rounds the specified time stamp as follows:
 #' 
-#' -   Start time less than 15 days ago - Round down to the nearest whole
+#'   - Start time less than 15 days ago - Round down to the nearest whole
 #'     minute. For example, 12:32:34 is rounded down to 12:32:00.
 #' 
-#' -   Start time between 15 and 63 days ago - Round down to the nearest
+#'   - Start time between 15 and 63 days ago - Round down to the nearest
 #'     5-minute clock interval. For example, 12:32:34 is rounded down to
 #'     12:30:00.
 #' 
-#' -   Start time greater than 63 days ago - Round down to the nearest
+#'   - Start time greater than 63 days ago - Round down to the nearest
 #'     1-hour clock interval. For example, 12:32:34 is rounded down to
 #'     12:00:00.
 #' 
@@ -1473,27 +1473,27 @@ cloudwatch_get_metric_data <- function(MetricDataQueries, StartTime, EndTime, Ne
 #' percentile statistics for this data if one of the following conditions
 #' is true:
 #' 
-#' -   The SampleCount value of the statistic set is 1.
+#'   - The SampleCount value of the statistic set is 1.
 #' 
-#' -   The Min and the Max values of the statistic set are equal.
+#'   - The Min and the Max values of the statistic set are equal.
 #' 
 #' Percentile statistics are not available for metrics when any of the
 #' metric values are negative numbers.
 #' 
 #' Amazon CloudWatch retains metric data as follows:
 #' 
-#' -   Data points with a period of less than 60 seconds are available for
+#'   - Data points with a period of less than 60 seconds are available for
 #'     3 hours. These data points are high-resolution metrics and are
 #'     available only for custom metrics that have been defined with a
 #'     `StorageResolution` of 1.
 #' 
-#' -   Data points with a period of 60 seconds (1-minute) are available for
+#'   - Data points with a period of 60 seconds (1-minute) are available for
 #'     15 days.
 #' 
-#' -   Data points with a period of 300 seconds (5-minute) are available
+#'   - Data points with a period of 300 seconds (5-minute) are available
 #'     for 63 days.
 #' 
-#' -   Data points with a period of 3600 seconds (1 hour) are available for
+#'   - Data points with a period of 3600 seconds (1 hour) are available for
 #'     455 days (15 months).
 #' 
 #' Data points that are initially published with a shorter period are
@@ -1539,14 +1539,14 @@ cloudwatch_get_metric_data <- function(MetricDataQueries, StartTime, EndTime, Ne
 #' 
 #' CloudWatch rounds the specified time stamp as follows:
 #' 
-#' -   Start time less than 15 days ago - Round down to the nearest whole
+#'   - Start time less than 15 days ago - Round down to the nearest whole
 #'     minute. For example, 12:32:34 is rounded down to 12:32:00.
 #' 
-#' -   Start time between 15 and 63 days ago - Round down to the nearest
+#'   - Start time between 15 and 63 days ago - Round down to the nearest
 #'     5-minute clock interval. For example, 12:32:34 is rounded down to
 #'     12:30:00.
 #' 
-#' -   Start time greater than 63 days ago - Round down to the nearest
+#'   - Start time greater than 63 days ago - Round down to the nearest
 #'     1-hour clock interval. For example, 12:32:34 is rounded down to
 #'     12:00:00.
 #' 
@@ -1575,13 +1575,13 @@ cloudwatch_get_metric_data <- function(MetricDataQueries, StartTime, EndTime, Ne
 #' 3 hours ago, you must specify the period as follows or no data points in
 #' that time range is returned:
 #' 
-#' -   Start time between 3 hours and 15 days ago - Use a multiple of 60
+#'   - Start time between 3 hours and 15 days ago - Use a multiple of 60
 #'     seconds (1 minute).
 #' 
-#' -   Start time between 15 and 63 days ago - Use a multiple of 300
+#'   - Start time between 15 and 63 days ago - Use a multiple of 300
 #'     seconds (5 minutes).
 #' 
-#' -   Start time greater than 63 days ago - Use a multiple of 3600 seconds
+#'   - Start time greater than 63 days ago - Use a multiple of 3600 seconds
 #'     (1 hour).
 #' @param Statistics The metric statistics, other than percentile. For percentile statistics,
 #' use `ExtendedStatistics`. When calling
@@ -1691,9 +1691,9 @@ cloudwatch_get_metric_statistics <- function(Namespace, MetricName, Dimensions =
 #' [`get_metric_widget_image`][cloudwatch_get_metric_widget_image] action
 #' has the following limits:
 #' 
-#' -   As many as 100 metrics in the graph.
+#'   - As many as 100 metrics in the graph.
 #' 
-#' -   Up to 100 KB uncompressed payload.
+#'   - Up to 100 KB uncompressed payload.
 #'
 #' @usage
 #' cloudwatch_get_metric_widget_image(MetricWidget, OutputFormat)
@@ -1717,23 +1717,23 @@ cloudwatch_get_metric_statistics <- function(Namespace, MetricName, Dimensions =
 #' response with the content-type set to `text/xml`. The image data is in a
 #' `MetricWidgetImage` field. For example:
 #' 
-#' ` <GetMetricWidgetImageResponse xmlns=<URLstring>>`
+#' `  <GetMetricWidgetImageResponse xmlns=<URLstring>> `
 #' 
-#' ` <GetMetricWidgetImageResult>`
+#' `  <GetMetricWidgetImageResult> `
 #' 
-#' ` <MetricWidgetImage>`
+#' `  <MetricWidgetImage> `
 #' 
-#' ` iVBORw0KGgoAAAANSUhEUgAAAlgAAAGQEAYAAAAip...`
+#' `  iVBORw0KGgoAAAANSUhEUgAAAlgAAAGQEAYAAAAip... `
 #' 
-#' ` </MetricWidgetImage>`
+#' `  </MetricWidgetImage> `
 #' 
-#' ` </GetMetricWidgetImageResult>`
+#' `  </GetMetricWidgetImageResult> `
 #' 
-#' ` <ResponseMetadata>`
+#' `  <ResponseMetadata> `
 #' 
-#' ` <RequestId>6f0d4192-4d42-11e8-82c1-f539a07e0e3b</RequestId>`
+#' `  <RequestId>6f0d4192-4d42-11e8-82c1-f539a07e0e3b</RequestId> `
 #' 
-#' ` </ResponseMetadata>`
+#' `  </ResponseMetadata> `
 #' 
 #' `</GetMetricWidgetImageResponse>`
 #' 
@@ -1958,10 +1958,10 @@ cloudwatch_list_metrics <- function(Namespace = NULL, MetricName = NULL, Dimensi
 #' @param ResourceARN &#91;required&#93; The ARN of the CloudWatch resource that you want to view tags for.
 #' 
 #' The ARN format of an alarm is
-#' `arn:aws:cloudwatch:Region:account-id:alarm:alarm-name `
+#' ` arn:aws:cloudwatch:Region:account-id:alarm:alarm-name  `
 #' 
 #' The ARN format of a Contributor Insights rule is
-#' `arn:aws:cloudwatch:Region:account-id:insight-rule:insight-rule-name `
+#' ` arn:aws:cloudwatch:Region:account-id:insight-rule:insight-rule-name  `
 #' 
 #' For more information about ARN format, see [Resource Types Defined by
 #' Amazon
@@ -2083,7 +2083,7 @@ cloudwatch_put_anomaly_detector <- function(Namespace, MetricName, Dimensions = 
 }
 .cloudwatch$operations$put_anomaly_detector <- cloudwatch_put_anomaly_detector
 
-#' Creates or updates a composite alarm
+#' Creates or updates a _composite alarm_
 #'
 #' @description
 #' Creates or updates a *composite alarm*. When you create a composite
@@ -2142,8 +2142,8 @@ cloudwatch_put_anomaly_detector <- function(Namespace, MetricName, Dimensions = 
 #' from any other state. Each action is specified as an Amazon Resource
 #' Name (ARN).
 #' 
-#' Valid Values: `arn:aws:sns:region:account-id:sns-topic-name ` |
-#' `arn:aws:ssm:region:account-id:opsitem:severity `
+#' Valid Values: ` arn:aws:sns:region:account-id:sns-topic-name  ` |
+#' ` arn:aws:ssm:region:account-id:opsitem:severity  `
 #' @param AlarmDescription The description for the composite alarm.
 #' @param AlarmName &#91;required&#93; The name for the composite alarm. This name must be unique within the
 #' Region.
@@ -2160,18 +2160,18 @@ cloudwatch_put_anomaly_detector <- function(Namespace, MetricName, Dimensions = 
 #' 
 #' Functions can include the following:
 #' 
-#' -   `ALARM("alarm-name or alarm-ARN")` is TRUE if the named alarm is in
+#'   - `ALARM("alarm-name or alarm-ARN")` is TRUE if the named alarm is in
 #'     ALARM state.
 #' 
-#' -   `OK("alarm-name or alarm-ARN")` is TRUE if the named alarm is in OK
+#'   - `OK("alarm-name or alarm-ARN")` is TRUE if the named alarm is in OK
 #'     state.
 #' 
-#' -   `INSUFFICIENT_DATA("alarm-name or alarm-ARN")` is TRUE if the named
+#'   - `INSUFFICIENT_DATA("alarm-name or alarm-ARN")` is TRUE if the named
 #'     alarm is in INSUFFICIENT_DATA state.
 #' 
-#' -   `TRUE` always evaluates to TRUE.
+#'   - `TRUE` always evaluates to TRUE.
 #' 
-#' -   `FALSE` always evaluates to FALSE.
+#'   - `FALSE` always evaluates to FALSE.
 #' 
 #' TRUE and FALSE are useful for testing a complex `AlarmRule` structure,
 #' and for testing your alarm actions.
@@ -2181,24 +2181,24 @@ cloudwatch_put_anomaly_detector <- function(Namespace, MetricName, Dimensions = 
 #' 
 #' The following are some examples of `AlarmRule`:
 #' 
-#' -   `ALARM(CPUUtilizationTooHigh) AND ALARM(DiskReadOpsTooHigh)`
+#'   - `ALARM(CPUUtilizationTooHigh) AND ALARM(DiskReadOpsTooHigh)`
 #'     specifies that the composite alarm goes into ALARM state only if
 #'     both CPUUtilizationTooHigh and DiskReadOpsTooHigh alarms are in
 #'     ALARM state.
 #' 
-#' -   `ALARM(CPUUtilizationTooHigh) AND NOT ALARM(DeploymentInProgress)`
+#'   - `ALARM(CPUUtilizationTooHigh) AND NOT ALARM(DeploymentInProgress)`
 #'     specifies that the alarm goes to ALARM state if
 #'     CPUUtilizationTooHigh is in ALARM state and DeploymentInProgress is
 #'     not in ALARM state. This example reduces alarm noise during a known
 #'     deployment window.
 #' 
-#' -   `(ALARM(CPUUtilizationTooHigh) OR ALARM(DiskReadOpsTooHigh)) AND OK(NetworkOutTooHigh)`
-#'     goes into ALARM state if CPUUtilizationTooHigh OR DiskReadOpsTooHigh
-#'     is in ALARM state, and if NetworkOutTooHigh is in OK state. This
-#'     provides another example of using a composite alarm to prevent
-#'     noise. This rule ensures that you are not notified with an alarm
-#'     action on high CPU or disk usage if a known network problem is also
-#'     occurring.
+#'   - `(ALARM(CPUUtilizationTooHigh) OR ALARM(DiskReadOpsTooHigh)) AND
+#'     OK(NetworkOutTooHigh)` goes into ALARM state if
+#'     CPUUtilizationTooHigh OR DiskReadOpsTooHigh is in ALARM state, and
+#'     if NetworkOutTooHigh is in OK state. This provides another example
+#'     of using a composite alarm to prevent noise. This rule ensures that
+#'     you are not notified with an alarm action on high CPU or disk usage
+#'     if a known network problem is also occurring.
 #' 
 #' The `AlarmRule` can specify as many as 100 "children" alarms. The
 #' `AlarmRule` expression can have as many as 500 elements. Elements are
@@ -2207,12 +2207,12 @@ cloudwatch_put_anomaly_detector <- function(Namespace, MetricName, Dimensions = 
 #' `INSUFFICIENT_DATA` state from any other state. Each action is specified
 #' as an Amazon Resource Name (ARN).
 #' 
-#' Valid Values: `arn:aws:sns:region:account-id:sns-topic-name `
+#' Valid Values: ` arn:aws:sns:region:account-id:sns-topic-name  `
 #' @param OKActions The actions to execute when this alarm transitions to an `OK` state from
 #' any other state. Each action is specified as an Amazon Resource Name
 #' (ARN).
 #' 
-#' Valid Values: `arn:aws:sns:region:account-id:sns-topic-name `
+#' Valid Values: ` arn:aws:sns:region:account-id:sns-topic-name  `
 #' @param Tags A list of key-value pairs to associate with the composite alarm. You can
 #' associate as many as 50 tags with an alarm.
 #' 
@@ -2448,9 +2448,9 @@ cloudwatch_put_insight_rule <- function(RuleName, RuleState = NULL, RuleDefiniti
 #' If you are an IAM user, you must have Amazon EC2 permissions for some
 #' alarm operations:
 #' 
-#' -   The `iam:CreateServiceLinkedRole` for all alarms with EC2 actions
+#'   - The `iam:CreateServiceLinkedRole` for all alarms with EC2 actions
 #' 
-#' -   The `iam:CreateServiceLinkedRole` to create an alarm with Systems
+#'   - The `iam:CreateServiceLinkedRole` to create an alarm with Systems
 #'     Manager OpsItem actions.
 #' 
 #' The first time you create an alarm in the AWS Management Console, the
@@ -2481,8 +2481,9 @@ cloudwatch_put_insight_rule <- function(RuleName, RuleState = NULL, RuleDefiniti
 #' `arn:aws:automate:region:ec2:terminate` |
 #' `arn:aws:automate:region:ec2:recover` |
 #' `arn:aws:automate:region:ec2:reboot` |
-#' `arn:aws:sns:region:account-id:sns-topic-name ` |
-#' `arn:aws:autoscaling:region:account-id:scalingPolicy:policy-id:autoScalingGroupName/group-friendly-name:policyName/policy-friendly-name `
+#' ` arn:aws:sns:region:account-id:sns-topic-name  ` |
+#' ` arn:aws:autoscaling:region:account-id:scalingPolicy:policy-id:autoScalingGroupName/group-friendly-name:policyName/policy-friendly-name
+#'  `
 #' 
 #' Valid Values (for use with IAM roles):
 #' `arn:aws:swf:region:account-id:action/actions/AWS_EC2.InstanceId.Stop/1.0`
@@ -2498,9 +2499,9 @@ cloudwatch_put_insight_rule <- function(RuleName, RuleState = NULL, RuleDefiniti
 #' `arn:aws:automate:region:ec2:terminate` |
 #' `arn:aws:automate:region:ec2:recover` |
 #' `arn:aws:automate:region:ec2:reboot` |
-#' `arn:aws:sns:region:account-id:sns-topic-name ` |
-#' `arn:aws:autoscaling:region:account-id:scalingPolicy:policy-id:autoScalingGroupName/group-friendly-name:policyName/policy-friendly-name `
-#' | `arn:aws:ssm:region:account-id:opsitem:severity `
+#' ` arn:aws:sns:region:account-id:sns-topic-name  ` |
+#' ` arn:aws:autoscaling:region:account-id:scalingPolicy:policy-id:autoScalingGroupName/group-friendly-name:policyName/policy-friendly-name
+#'  ` | ` arn:aws:ssm:region:account-id:opsitem:severity  `
 #' 
 #' Valid Values (for use with IAM roles):
 #' `arn:aws:swf:region:account-id:action/actions/AWS_EC2.InstanceId.Stop/1.0`
@@ -2516,8 +2517,9 @@ cloudwatch_put_insight_rule <- function(RuleName, RuleState = NULL, RuleDefiniti
 #' `arn:aws:automate:region:ec2:terminate` |
 #' `arn:aws:automate:region:ec2:recover` |
 #' `arn:aws:automate:region:ec2:reboot` |
-#' `arn:aws:sns:region:account-id:sns-topic-name ` |
-#' `arn:aws:autoscaling:region:account-id:scalingPolicy:policy-id:autoScalingGroupName/group-friendly-name:policyName/policy-friendly-name `
+#' ` arn:aws:sns:region:account-id:sns-topic-name  ` |
+#' ` arn:aws:autoscaling:region:account-id:scalingPolicy:policy-id:autoScalingGroupName/group-friendly-name:policyName/policy-friendly-name
+#'  `
 #' 
 #' Valid Values (for use with IAM roles):
 #' `>arn:aws:swf:region:account-id:action/actions/AWS_EC2.InstanceId.Stop/1.0`
@@ -2806,10 +2808,10 @@ cloudwatch_put_metric_alarm <- function(AlarmName, AlarmDescription = NULL, Acti
 #' percentile statistics for this data if one of the following conditions
 #' is true:
 #' 
-#' -   The `SampleCount` value of the statistic set is 1 and `Min`, `Max`,
+#'   - The `SampleCount` value of the statistic set is 1 and `Min`, `Max`,
 #'     and `Sum` are all equal.
 #' 
-#' -   The `Min` and `Max` are equal, and `Sum` is equal to `Min`
+#'   - The `Min` and `Max` are equal, and `Sum` is equal to `Min`
 #'     multiplied by `SampleCount`.
 #'
 #' @usage
@@ -2983,10 +2985,10 @@ cloudwatch_set_alarm_state <- function(AlarmName, StateValue, StateReason, State
 #' @param ResourceARN &#91;required&#93; The ARN of the CloudWatch resource that you're adding tags to.
 #' 
 #' The ARN format of an alarm is
-#' `arn:aws:cloudwatch:Region:account-id:alarm:alarm-name `
+#' ` arn:aws:cloudwatch:Region:account-id:alarm:alarm-name  `
 #' 
 #' The ARN format of a Contributor Insights rule is
-#' `arn:aws:cloudwatch:Region:account-id:insight-rule:insight-rule-name `
+#' ` arn:aws:cloudwatch:Region:account-id:insight-rule:insight-rule-name  `
 #' 
 #' For more information about ARN format, see [Resource Types Defined by
 #' Amazon
@@ -3041,10 +3043,10 @@ cloudwatch_tag_resource <- function(ResourceARN, Tags) {
 #' @param ResourceARN &#91;required&#93; The ARN of the CloudWatch resource that you're removing tags from.
 #' 
 #' The ARN format of an alarm is
-#' `arn:aws:cloudwatch:Region:account-id:alarm:alarm-name `
+#' ` arn:aws:cloudwatch:Region:account-id:alarm:alarm-name  `
 #' 
 #' The ARN format of a Contributor Insights rule is
-#' `arn:aws:cloudwatch:Region:account-id:insight-rule:insight-rule-name `
+#' ` arn:aws:cloudwatch:Region:account-id:insight-rule:insight-rule-name  `
 #' 
 #' For more information about ARN format, see [Resource Types Defined by
 #' Amazon

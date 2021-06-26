@@ -126,8 +126,7 @@ destination bucket is owned by a different account, the request will
 fail with an HTTP \verb{403 (Access Denied)} error.}
 
 \item{ExpectedSourceBucketOwner}{The account id of the expected source bucket owner. If the source bucket
-is owned by a different account, the request will fail with an HTTP
-\verb{403 (Access Denied)} error.}
+is owned by a different account, the request will fail with an HTTP \verb{403 (Access Denied)} error.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

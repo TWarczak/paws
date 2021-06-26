@@ -7,7 +7,8 @@
 apigateway_get_rest_api(restApiId)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -43,7 +44,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Lists the RestApi resource in the collection.
+Lists the <span>RestApi</span> resource in the collection.
 }
 \section{Request syntax}{
 \preformatted{svc$get_rest_api(

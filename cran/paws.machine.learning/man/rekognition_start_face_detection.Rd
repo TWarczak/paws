@@ -42,14 +42,15 @@ A list with the following syntax:\preformatted{list(
 Starts asynchronous detection of faces in a stored video.
 
 Amazon Rekognition Video can detect faces in a video stored in an Amazon
-S3 bucket. Use Video to specify the bucket name and the filename of the
-video. \code{\link[=rekognition_start_face_detection]{start_face_detection}}
-returns a job identifier (\code{JobId}) that you use to get the results of
-the operation. When face detection is finished, Amazon Rekognition Video
-publishes a completion status to the Amazon Simple Notification Service
-topic that you specify in \code{NotificationChannel}. To get the results of
-the face detection operation, first check that the status value
-published to the Amazon SNS topic is \code{SUCCEEDED}. If so, call
+S3 bucket. Use <span>Video</span> to specify the bucket name and the
+filename of the video.
+\code{\link[=rekognition_start_face_detection]{start_face_detection}} returns a job
+identifier (\code{JobId}) that you use to get the results of the operation.
+When face detection is finished, Amazon Rekognition Video publishes a
+completion status to the Amazon Simple Notification Service topic that
+you specify in \code{NotificationChannel}. To get the results of the face
+detection operation, first check that the status value published to the
+Amazon SNS topic is \code{SUCCEEDED}. If so, call
 \code{\link[=rekognition_get_face_detection]{get_face_detection}} and pass the job
 identifier (\code{JobId}) from the initial call to
 \code{\link[=rekognition_start_face_detection]{start_face_detection}}.

@@ -14,7 +14,7 @@ permissions. You can find the CA's ARN by calling the
 \code{\link[=acmpca_list_certificate_authorities]{list_certificate_authorities}}
 action. This must have the following form:
 
-\code{arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012 }.}
+\code{arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012}.}
 
 \item{Principal}{[required] The AWS service or identity that will have its CA permissions revoked.
 At this time, the only valid service principal is \code{acm.amazonaws.com}}

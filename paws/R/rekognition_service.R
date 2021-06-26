@@ -53,7 +53,7 @@ NULL
 #'
 #' @section Operations:
 #' \tabular{ll}{
-#'  \link[=rekognition_compare_faces]{compare_faces} \tab Compares a face in the source input image with each of the 100 largest faces detected in the target input image\cr
+#'  \link[=rekognition_compare_faces]{compare_faces} \tab Compares a face in the _source_ input image with each of the 100 largest faces detected in the _target_ input image\cr
 #'  \link[=rekognition_create_collection]{create_collection} \tab Creates a collection in an AWS Region\cr
 #'  \link[=rekognition_create_project]{create_project} \tab Creates a new Amazon Rekognition Custom Labels project\cr
 #'  \link[=rekognition_create_project_version]{create_project_version} \tab Creates a new version of a model and begins training\cr
@@ -103,6 +103,12 @@ NULL
 #'  \link[=rekognition_stop_stream_processor]{stop_stream_processor} \tab Stops a running stream processor that was created by CreateStreamProcessor
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname rekognition
 #' @export
 rekognition <- function(config = list()) {
@@ -121,7 +127,7 @@ rekognition <- function(config = list()) {
   endpoints = list("*" = list(endpoint = "rekognition.{region}.amazonaws.com", global = FALSE), "cn-*" = list(endpoint = "rekognition.{region}.amazonaws.com.cn", global = FALSE), "us-iso-*" = list(endpoint = "rekognition.{region}.c2s.ic.gov", global = FALSE), "us-isob-*" = list(endpoint = "rekognition.{region}.sc2s.sgov.gov", global = FALSE)),
   service_id = "Rekognition",
   api_version = "2016-06-27",
-  signing_name = NULL,
+  signing_name = "rekognition",
   json_version = "1.1",
   target_prefix = "RekognitionService"
 )

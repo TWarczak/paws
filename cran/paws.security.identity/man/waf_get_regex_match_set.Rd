@@ -2,13 +2,13 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_get_regex_match_set}
 \alias{waf_get_regex_match_set}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_get_regex_match_set(RegexMatchSetId)
 }
 \arguments{
-\item{RegexMatchSetId}{[required] The \code{RegexMatchSetId} of the RegexMatchSet that you want to get.
-\code{RegexMatchSetId} is returned by
+\item{RegexMatchSetId}{[required] The \code{RegexMatchSetId} of the <span>RegexMatchSet</span> that you want to
+get. \code{RegexMatchSetId} is returned by
 \code{\link[=waf_create_regex_match_set]{create_regex_match_set}} and by
 \code{\link[=waf_list_regex_match_sets]{list_regex_match_sets}}.}
 }
@@ -41,7 +41,7 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Returns the RegexMatchSet specified by \code{RegexMatchSetId}.
+Returns the <span>RegexMatchSet</span> specified by \code{RegexMatchSetId}.
 }
 \section{Request syntax}{
 \preformatted{svc$get_regex_match_set(

@@ -47,7 +47,7 @@ the protocol.
 The \code{\link[=lightsail_open_instance_public_ports]{open_instance_public_ports}}
 action supports tag-based access control via resource tags applied to
 the resource identified by \code{instanceName}. For more information, see the
-Lightsail Dev Guide.
+<span>Lightsail Dev Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$open_instance_public_ports(

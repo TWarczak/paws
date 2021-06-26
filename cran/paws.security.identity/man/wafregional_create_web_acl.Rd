@@ -2,14 +2,14 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_create_web_acl}
 \alias{wafregional_create_web_acl}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 wafregional_create_web_acl(Name, MetricName, DefaultAction, ChangeToken,
   Tags)
 }
 \arguments{
-\item{Name}{[required] A friendly name or description of the WebACL. You can't change \code{Name}
-after you create the \code{WebACL}.}
+\item{Name}{[required] A friendly name or description of the <span>WebACL</span>. You can't
+change \code{Name} after you create the \code{WebACL}.}
 
 \item{MetricName}{[required] A friendly name or description for the metrics for this \code{WebACL}.The
 name can contain only alphanumeric characters (A-Z, a-z, 0-9), with

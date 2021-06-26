@@ -94,8 +94,8 @@ project. A \code{ProjectFileSystemLocation} object specifies the
 \code{identifier}, \code{location}, \code{mountOptions}, \code{mountPoint}, and \code{type} of a
 file system created using Amazon Elastic File System.}
 
-\item{buildBatchConfig}{A ProjectBuildBatchConfig object that defines the batch build options
-for the project.}
+\item{buildBatchConfig}{A <span>ProjectBuildBatchConfig</span> object that defines the batch
+build options for the project.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

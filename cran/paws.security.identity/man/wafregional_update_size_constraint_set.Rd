@@ -2,14 +2,14 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_update_size_constraint_set}
 \alias{wafregional_update_size_constraint_set}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 wafregional_update_size_constraint_set(SizeConstraintSetId, ChangeToken,
   Updates)
 }
 \arguments{
-\item{SizeConstraintSetId}{[required] The \code{SizeConstraintSetId} of the SizeConstraintSet that you want to
-update. \code{SizeConstraintSetId} is returned by
+\item{SizeConstraintSetId}{[required] The \code{SizeConstraintSetId} of the <span>SizeConstraintSet</span> that you
+want to update. \code{SizeConstraintSetId} is returned by
 \code{\link[=wafregional_create_size_constraint_set]{create_size_constraint_set}}
 and by
 \code{\link[=wafregional_list_size_constraint_sets]{list_size_constraint_sets}}.}
@@ -18,13 +18,14 @@ and by
 \code{\link[=wafregional_get_change_token]{get_change_token}}.}
 
 \item{Updates}{[required] An array of \code{SizeConstraintSetUpdate} objects that you want to insert
-into or delete from a SizeConstraintSet. For more information, see the
-applicable data types:
+into or delete from a <span>SizeConstraintSet</span>. For more
+information, see the applicable data types:
 \itemize{
-\item SizeConstraintSetUpdate: Contains \code{Action} and \code{SizeConstraint}
-\item SizeConstraint: Contains \code{FieldToMatch}, \code{TextTransformation},
-\code{ComparisonOperator}, and \code{Size}
-\item FieldToMatch: Contains \code{Data} and \code{Type}
+\item <span>SizeConstraintSetUpdate</span>: Contains \code{Action} and
+\code{SizeConstraint}
+\item <span>SizeConstraint</span>: Contains \code{FieldToMatch},
+\code{TextTransformation}, \code{ComparisonOperator}, and \code{Size}
+\item <span>FieldToMatch</span>: Contains \code{Data} and \code{Type}
 }}
 }
 \value{
@@ -43,9 +44,9 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Inserts or deletes SizeConstraint objects (filters) in a
-SizeConstraintSet. For each \code{SizeConstraint} object, you specify the
-following values:
+Inserts or deletes <span>SizeConstraint</span> objects (filters) in a
+<span>SizeConstraintSet</span>. For each \code{SizeConstraint} object, you
+specify the following values:
 \itemize{
 \item Whether to insert or delete the object from the array. If you want
 to change a \code{SizeConstraintSetUpdate} object, you delete the

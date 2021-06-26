@@ -454,9 +454,9 @@ glacier_complete_vault_lock <- function(accountId, vaultName, lockId) {
 #' 
 #' You must use the following guidelines when naming a vault.
 #' 
-#' -   Names can be between 1 and 255 characters long.
+#'   - Names can be between 1 and 255 characters long.
 #' 
-#' -   Allowed characters are a-z, A-Z, 0-9, '_' (underscore), '-'
+#'   - Allowed characters are a-z, A-Z, 0-9, '_' (underscore), '-'
 #'     (hyphen), and '.' (period).
 #' 
 #' This operation is idempotent.
@@ -539,11 +539,11 @@ glacier_create_vault <- function(accountId, vaultName) {
 #' are in progress for this archive ID may or may not succeed according to
 #' the following scenarios:
 #' 
-#' -   If the archive retrieval job is actively preparing the data for
+#'   - If the archive retrieval job is actively preparing the data for
 #'     download when Amazon S3 Glacier receives the delete archive request,
 #'     the archival retrieval operation might fail.
 #' 
-#' -   If the archive retrieval job has successfully prepared the archive
+#'   - If the archive retrieval job has successfully prepared the archive
 #'     for download when Amazon S3 Glacier receives the delete archive
 #'     request, you will be able to download the output.
 #' 
@@ -1403,15 +1403,15 @@ glacier_get_vault_access_policy <- function(accountId, vaultName) {
 #' This operation retrieves the following attributes from the `lock-policy`
 #' subresource set on the specified vault:
 #' 
-#' -   The vault lock policy set on the vault.
+#'   - The vault lock policy set on the vault.
 #' 
-#' -   The state of the vault lock, which is either `InProgess` or
+#'   - The state of the vault lock, which is either `InProgess` or
 #'     `Locked`.
 #' 
-#' -   When the lock ID expires. The lock ID is used to complete the vault
+#'   - When the lock ID expires. The lock ID is used to complete the vault
 #'     locking process.
 #' 
-#' -   When the vault lock was initiated and put into the `InProgress`
+#'   - When the vault lock was initiated and put into the `InProgress`
 #'     state.
 #' 
 #' A vault lock is put into the `InProgress` state by calling
@@ -1840,11 +1840,11 @@ glacier_initiate_multipart_upload <- function(accountId, vaultName, archiveDescr
 #' This operation initiates the vault locking process by doing the
 #' following:
 #' 
-#' -   Installing a vault lock policy on the specified vault.
+#'   - Installing a vault lock policy on the specified vault.
 #' 
-#' -   Setting the lock state of vault lock to `InProgress`.
+#'   - Setting the lock state of vault lock to `InProgress`.
 #' 
-#' -   Returning a lock ID, which is used to complete the vault locking
+#'   - Returning a lock ID, which is used to complete the vault locking
 #'     process.
 #' 
 #' You can set one vault lock policy for each vault and this policy can be
@@ -2889,14 +2889,14 @@ glacier_set_vault_access_policy <- function(accountId, vaultName, policy = NULL)
 #' publish notifications to the topic. You can configure a vault to publish
 #' a notification for the following vault events:
 #' 
-#' -   **ArchiveRetrievalCompleted** This event occurs when a job that was
+#'   - **ArchiveRetrievalCompleted** This event occurs when a job that was
 #'     initiated for an archive retrieval is completed
 #'     ([`initiate_job`][glacier_initiate_job]). The status of the
 #'     completed job can be "Succeeded" or "Failed". The notification sent
 #'     to the SNS topic is the same output as returned from
 #'     [`describe_job`][glacier_describe_job].
 #' 
-#' -   **InventoryRetrievalCompleted** This event occurs when a job that
+#'   - **InventoryRetrievalCompleted** This event occurs when a job that
 #'     was initiated for an inventory retrieval is completed
 #'     ([`initiate_job`][glacier_initiate_job]). The status of the
 #'     completed job can be "Succeeded" or "Failed". The notification sent
@@ -3106,7 +3106,7 @@ glacier_upload_archive <- function(vaultName, accountId, archiveDescription = NU
 #' Amazon Glacier rejects your upload part request if any of the following
 #' conditions is true:
 #' 
-#' -   **SHA256 tree hash does not match**To ensure that part data is not
+#'   - **SHA256 tree hash does not match**To ensure that part data is not
 #'     corrupted in transmission, you compute a SHA256 tree hash of the
 #'     part and include it in your request. Upon receiving the part data,
 #'     Amazon S3 Glacier also computes a SHA256 tree hash. If these hash
@@ -3114,18 +3114,18 @@ glacier_upload_archive <- function(vaultName, accountId, archiveDescription = NU
 #'     computing a SHA256 tree hash, see [Computing
 #'     Checksums](https://docs.aws.amazon.com/amazonglacier/latest/dev/checksum-calculations.html).
 #' 
-#' -   **Part size does not match**The size of each part except the last
+#'   - **Part size does not match**The size of each part except the last
 #'     must match the size specified in the corresponding
 #'     [`initiate_multipart_upload`][glacier_initiate_multipart_upload]
 #'     request. The size of the last part must be the same size as, or
 #'     smaller than, the specified size.
-#' 
+#'     
 #'     If you upload a part whose size is smaller than the part size you
 #'     specified in your initiate multipart upload request and that part is
 #'     not the last part, then the upload part request will succeed.
 #'     However, the subsequent Complete Multipart Upload request will fail.
 #' 
-#' -   **Range does not align**The byte range value in the request does not
+#'   - **Range does not align**The byte range value in the request does not
 #'     align with the part size specified in the corresponding initiate
 #'     request. For example, if you specify a part size of 4194304 bytes (4
 #'     MB), then 0 to 4194303 bytes (4 MB - 1) and 4194304 (4 MB) to

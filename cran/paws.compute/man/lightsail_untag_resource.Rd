@@ -49,7 +49,8 @@ specified Amazon Lightsail resource.
 
 The \verb{untag resource} operation supports tag-based access control via
 request tags and resource tags applied to the resource identified by
-\verb{resource name}. For more information, see the Lightsail Dev Guide.
+\verb{resource name}. For more information, see the <span>Lightsail Dev
+Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$untag_resource(

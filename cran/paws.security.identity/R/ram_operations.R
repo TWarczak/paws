@@ -1366,9 +1366,9 @@ ram_list_resources <- function(resourceOwner, principal = NULL, resourceType = N
 #' Use this API action to promote the resource share. When you promote the
 #' resource share, it becomes:
 #' 
-#' -   Visible to all principals that it is shared with.
+#'   - Visible to all principals that it is shared with.
 #' 
-#' -   Modifiable in AWS RAM.
+#'   - Modifiable in AWS RAM.
 #'
 #' @usage
 #' ram_promote_resource_share_created_from_policy(resourceShareArn)

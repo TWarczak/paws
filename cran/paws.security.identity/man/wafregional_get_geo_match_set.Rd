@@ -2,13 +2,13 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_get_geo_match_set}
 \alias{wafregional_get_geo_match_set}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 wafregional_get_geo_match_set(GeoMatchSetId)
 }
 \arguments{
-\item{GeoMatchSetId}{[required] The \code{GeoMatchSetId} of the GeoMatchSet that you want to get.
-\code{GeoMatchSetId} is returned by
+\item{GeoMatchSetId}{[required] The \code{GeoMatchSetId} of the <span>GeoMatchSet</span> that you want to
+get. \code{GeoMatchSetId} is returned by
 \code{\link[=wafregional_create_geo_match_set]{create_geo_match_set}} and by
 \code{\link[=wafregional_list_geo_match_sets]{list_geo_match_sets}}.}
 }
@@ -37,7 +37,8 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Returns the GeoMatchSet that is specified by \code{GeoMatchSetId}.
+Returns the <span>GeoMatchSet</span> that is specified by
+\code{GeoMatchSetId}.
 }
 \section{Request syntax}{
 \preformatted{svc$get_geo_match_set(

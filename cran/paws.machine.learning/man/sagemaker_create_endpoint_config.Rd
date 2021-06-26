@@ -88,8 +88,7 @@ SageMaker hosting services, see \href{https://docs.aws.amazon.com/sagemaker/late
 
 When you call \code{\link[=sagemaker_create_endpoint]{create_endpoint}}, a load
 call is made to DynamoDB to verify that your endpoint configuration
-exists. When you read data from a DynamoDB table supporting
-\href{https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html}{\verb{Eventually Consistent Reads}}
+exists. When you read data from a DynamoDB table supporting \href{https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadConsistency.html}{\verb{Eventually Consistent Reads}}
 , the response might not reflect the results of a recently completed
 write operation. The response might include some stale data. If the
 dependent entities are not yet in DynamoDB, this causes a validation

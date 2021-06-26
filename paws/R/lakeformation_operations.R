@@ -581,8 +581,8 @@ lakeformation_get_effective_permissions_for_path <- function(CatalogId = NULL, R
 #' Grants permissions to the principal to access metadata in the Data
 #' Catalog and data organized in underlying data storage such as Amazon S3.
 #' 
-#' For information about permissions, see Security and Access Control to
-#' Metadata and Data.
+#' For information about permissions, see <span>Security and Access Control
+#' to Metadata and Data</span>.
 #'
 #' @usage
 #' lakeformation_grant_permissions(CatalogId, Principal, Resource,
@@ -691,8 +691,8 @@ lakeformation_grant_permissions <- function(CatalogId = NULL, Principal, Resourc
 #' This operation returns only those permissions that have been explicitly
 #' granted.
 #' 
-#' For information about permissions, see Security and Access Control to
-#' Metadata and Data.
+#' For information about permissions, see <span>Security and Access Control
+#' to Metadata and Data</span>.
 #'
 #' @usage
 #' lakeformation_list_permissions(CatalogId, Principal, ResourceType,
@@ -1019,7 +1019,8 @@ lakeformation_put_data_lake_settings <- function(CatalogId = NULL, DataLakeSetti
 #' role is a unique type of IAM role that is linked directly to Lake
 #' Formation.
 #' 
-#' For more information, see Using Service-Linked Roles for Lake Formation.
+#' For more information, see <span>Using Service-Linked Roles for Lake
+#' Formation</span>.
 #' @param RoleArn The identifier for the role that registers the resource.
 #'
 #' @return
@@ -1072,8 +1073,8 @@ lakeformation_register_resource <- function(ResourceArn, UseServiceLinkedRole = 
 #' @param Principal &#91;required&#93; The principal to be revoked permissions on the resource.
 #' @param Resource &#91;required&#93; The resource to which permissions are to be revoked.
 #' @param Permissions &#91;required&#93; The permissions revoked to the principal on the resource. For
-#' information about permissions, see Security and Access Control to
-#' Metadata and Data.
+#' information about permissions, see <span>Security and Access Control to
+#' Metadata and Data</span>.
 #' @param PermissionsWithGrantOption Indicates a list of permissions for which to revoke the grant option
 #' allowing the principal to pass permissions to other principals.
 #'

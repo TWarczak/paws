@@ -2,7 +2,7 @@
 % Please edit documentation in R/lightsail_operations.R
 \name{lightsail_create_instance_snapshot}
 \alias{lightsail_create_instance_snapshot}
-\title{Creates a snapshot of a specific virtual private server, or instance}
+\title{Creates a snapshot of a specific virtual private server, or \emph{instance}}
 \usage{
 lightsail_create_instance_snapshot(instanceSnapshotName, instanceName,
   tags)
@@ -51,8 +51,8 @@ You can use a snapshot to create a new instance that is based on that
 snapshot.
 
 The \verb{create instance snapshot} operation supports tag-based access
-control via request tags. For more information, see the Lightsail Dev
-Guide.
+control via request tags. For more information, see the <span>Lightsail
+Dev Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$create_instance_snapshot(

@@ -2,13 +2,13 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_get_sql_injection_match_set}
 \alias{waf_get_sql_injection_match_set}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_get_sql_injection_match_set(SqlInjectionMatchSetId)
 }
 \arguments{
-\item{SqlInjectionMatchSetId}{[required] The \code{SqlInjectionMatchSetId} of the SqlInjectionMatchSet that you want
-to get. \code{SqlInjectionMatchSetId} is returned by
+\item{SqlInjectionMatchSetId}{[required] The \code{SqlInjectionMatchSetId} of the <span>SqlInjectionMatchSet</span>
+that you want to get. \code{SqlInjectionMatchSetId} is returned by
 \code{\link[=waf_create_sql_injection_match_set]{create_sql_injection_match_set}}
 and by
 \code{\link[=waf_list_sql_injection_match_sets]{list_sql_injection_match_sets}}.}
@@ -41,7 +41,7 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Returns the SqlInjectionMatchSet that is specified by
+Returns the <span>SqlInjectionMatchSet</span> that is specified by
 \code{SqlInjectionMatchSetId}.
 }
 \section{Request syntax}{

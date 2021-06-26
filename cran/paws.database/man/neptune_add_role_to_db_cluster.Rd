@@ -17,7 +17,7 @@ Neptune DB cluster, for example
 
 \item{FeatureName}{The name of the feature for the Neptune DB cluster that the IAM role is
 to be associated with. For the list of supported feature names, see
-DBEngineVersion.}
+<span>DBEngineVersion</span>.}
 }
 \value{
 An empty list.

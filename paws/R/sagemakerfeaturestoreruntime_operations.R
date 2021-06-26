@@ -132,13 +132,13 @@ sagemakerfeaturestoreruntime_get_record <- function(FeatureGroupName, RecordIden
 #' @param Record &#91;required&#93; List of FeatureValues to be inserted. This will be a full over-write. If
 #' you only want to update few of the feature values, do the following:
 #' 
-#' -   Use [`get_record`][sagemakerfeaturestoreruntime_get_record] to
+#'   - Use [`get_record`][sagemakerfeaturestoreruntime_get_record] to
 #'     retrieve the latest record.
 #' 
-#' -   Update the record returned from
+#'   - Update the record returned from
 #'     [`get_record`][sagemakerfeaturestoreruntime_get_record].
 #' 
-#' -   Use [`put_record`][sagemakerfeaturestoreruntime_put_record] to
+#'   - Use [`put_record`][sagemakerfeaturestoreruntime_put_record] to
 #'     update feature values.
 #'
 #' @return

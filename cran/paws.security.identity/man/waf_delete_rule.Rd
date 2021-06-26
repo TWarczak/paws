@@ -2,13 +2,13 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_delete_rule}
 \alias{waf_delete_rule}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_delete_rule(RuleId, ChangeToken)
 }
 \arguments{
-\item{RuleId}{[required] The \code{RuleId} of the Rule that you want to delete. \code{RuleId} is returned
-by \code{\link[=waf_create_rule]{create_rule}} and by
+\item{RuleId}{[required] The \code{RuleId} of the <span>Rule</span> that you want to delete. \code{RuleId}
+is returned by \code{\link[=waf_create_rule]{create_rule}} and by
 \code{\link[=waf_list_rules]{list_rules}}.}
 
 \item{ChangeToken}{[required] The value returned by the most recent call to
@@ -30,9 +30,9 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Permanently deletes a Rule. You can't delete a \code{Rule} if it's still used
-in any \code{WebACL} objects or if it still includes any predicates, such as
-\code{ByteMatchSet} objects.
+Permanently deletes a <span>Rule</span>. You can't delete a \code{Rule} if
+it's still used in any \code{WebACL} objects or if it still includes any
+predicates, such as \code{ByteMatchSet} objects.
 
 If you just want to remove a \code{Rule} from a \code{WebACL}, use
 \code{\link[=waf_update_web_acl]{update_web_acl}}.

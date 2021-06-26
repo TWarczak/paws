@@ -59,18 +59,19 @@ configuration.}
 
 \item{GameProperties}{A set of custom properties for a game session, formatted as key-value
 pairs. These properties are passed to a game server process in the
-GameSession object with a request to start a new game session (see
-\href{https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession}{Start a Game Session}).
-This information is added to the new GameSession object that is created
-for a successful match. This parameter is not used if \code{FlexMatchMode} is
-set to \code{STANDALONE}.}
+<span>GameSession</span> object with a request to start a new game
+session (see \href{https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession}{Start a Game Session}).
+This information is added to the new <span>GameSession</span> object
+that is created for a successful match. This parameter is not used if
+\code{FlexMatchMode} is set to \code{STANDALONE}.}
 
 \item{GameSessionData}{A set of custom game session properties, formatted as a single string
-value. This data is passed to a game server process in the GameSession
-object with a request to start a new game session (see \href{https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession}{Start a Game Session}).
-This information is added to the new GameSession object that is created
-for a successful match. This parameter is not used if \code{FlexMatchMode} is
-set to \code{STANDALONE}.}
+value. This data is passed to a game server process in the
+<span>GameSession</span> object with a request to start a new game
+session (see \href{https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession}{Start a Game Session}).
+This information is added to the new <span>GameSession</span> object
+that is created for a successful match. This parameter is not used if
+\code{FlexMatchMode} is set to \code{STANDALONE}.}
 
 \item{BackfillMode}{The method used to backfill game sessions that are created with this
 matchmaking configuration. Specify \code{MANUAL} when your game manages

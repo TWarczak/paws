@@ -24,7 +24,7 @@ NULL
 #' that you can use to interact with Amazon A2I programmatically. Use this
 #' guide to:
 #' 
-#' -   Start a human loop with the
+#'   - Start a human loop with the
 #'     [`start_human_loop`][augmentedairuntime_start_human_loop] operation
 #'     when using Amazon A2I with a *custom task type*. To learn more about
 #'     the difference between custom and built-in task types, see [Use Task
@@ -34,7 +34,7 @@ NULL
 #'     Type](https://docs.aws.amazon.com/sagemaker/latest/dg/a2i-start-human-loop.html#a2i-instructions-starthumanloop)
 #'     in the Amazon SageMaker Developer Guide.
 #' 
-#' -   Manage your human loops. You can list all human loops that you have
+#'   - Manage your human loops. You can list all human loops that you have
 #'     created, describe individual human loops, and stop and delete human
 #'     loops. To learn more, see [Monitor and Manage Your Human
 #'     Loop](https://docs.aws.amazon.com/sagemaker/latest/dg/a2i-monitor-humanloop-results.html)
@@ -84,6 +84,12 @@ NULL
 #'  \link[=augmentedairuntime_start_human_loop]{start_human_loop} \tab Starts a human loop, provided that at least one activation condition is met\cr
 #'  \link[=augmentedairuntime_stop_human_loop]{stop_human_loop} \tab Stops the specified human loop
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname augmentedairuntime
 #' @export

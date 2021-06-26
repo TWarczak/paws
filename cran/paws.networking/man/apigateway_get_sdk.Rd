@@ -7,9 +7,10 @@
 apigateway_get_sdk(restApiId, stageName, sdkType, parameters)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
-\item{stageName}{[required] [Required] The name of the Stage that the SDK will use.}
+\item{stageName}{[required] [Required] The name of the <span>Stage</span> that the SDK will use.}
 
 \item{sdkType}{[required] [Required] The language for the generated SDK. Currently \code{java},
 \code{javascript}, \code{android}, \code{objectivec} (for iOS), \code{swift} (for iOS), and
@@ -31,7 +32,8 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Generates a client SDK for a RestApi and Stage.
+Generates a client SDK for a <span>RestApi</span> and
+<span>Stage</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$get_sdk(

@@ -149,19 +149,19 @@ ivs_batch_get_stream_key <- function(arns) {
 #' you exceed the allowable resolution or bitrate, the stream probably will
 #' disconnect immediately.* Valid values:
 #' 
-#' -   `STANDARD`: Multiple qualities are generated from the original
+#'   - `STANDARD`: Multiple qualities are generated from the original
 #'     input, to automatically give viewers the best experience for their
 #'     devices and network conditions. Vertical resolution can be up to
 #'     1080 and bitrate can be up to 8.5 Mbps.
 #' 
-#' -   `BASIC`: Amazon IVS delivers the original input to viewers. The
+#'   - `BASIC`: Amazon IVS delivers the original input to viewers. The
 #'     viewer’s video-quality choice is limited to the original input.
 #'     Vertical resolution can be up to 480 and bitrate can be up to 1.5
 #'     Mbps.
 #' 
 #' Default: `STANDARD`.
 #' @param authorized Whether the channel is authorized. Default: `false`.
-#' @param tags See Channel$tags.
+#' @param tags See <span>Channel$tags</span>.
 #'
 #' @return
 #' A list with the following syntax:
@@ -240,7 +240,7 @@ ivs_create_channel <- function(name = NULL, latencyMode = NULL, type = NULL, aut
 #' ivs_create_stream_key(channelArn, tags)
 #'
 #' @param channelArn &#91;required&#93; ARN of the channel for which to create the stream key.
-#' @param tags See Channel$tags.
+#' @param tags See <span>Channel$tags</span>.
 #'
 #' @return
 #' A list with the following syntax:
@@ -1183,12 +1183,12 @@ ivs_untag_resource <- function(resourceArn, tagKeys) {
 #' you exceed the allowable resolution or bitrate, the stream probably will
 #' disconnect immediately.* Valid values:
 #' 
-#' -   `STANDARD`: Multiple qualities are generated from the original
+#'   - `STANDARD`: Multiple qualities are generated from the original
 #'     input, to automatically give viewers the best experience for their
 #'     devices and network conditions. Vertical resolution can be up to
 #'     1080 and bitrate can be up to 8.5 Mbps.
 #' 
-#' -   `BASIC`: Amazon IVS delivers the original input to viewers. The
+#'   - `BASIC`: Amazon IVS delivers the original input to viewers. The
 #'     viewer’s video-quality choice is limited to the original input.
 #'     Vertical resolution can be up to 480 and bitrate can be up to 1.5
 #'     Mbps.

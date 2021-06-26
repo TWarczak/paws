@@ -2,7 +2,7 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_get_sampled_requests}
 \alias{waf_get_sampled_requests}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_get_sampled_requests(WebAclId, RuleId, TimeWindow, MaxItems)
 }

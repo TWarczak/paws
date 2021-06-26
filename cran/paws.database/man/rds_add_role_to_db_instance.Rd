@@ -15,7 +15,7 @@ instance, for example \verb{arn:aws:iam::123456789012:role/AccessRole}.}
 
 \item{FeatureName}{[required] The name of the feature for the DB instance that the IAM role is to be
 associated with. For the list of supported feature names, see
-DBEngineVersion.}
+<span>DBEngineVersion</span>.}
 }
 \value{
 An empty list.

@@ -31,11 +31,9 @@ The AWS Systems Manager automation document version. For example,
 \subsection{AssumeRole}{
 
 The Amazon Resource Name (ARN) of the role that performs the
-self-service actions on your behalf. For example,
-\code{"AssumeRole": "arn:aws:iam::12345678910:role/ActionRole"}.
+self-service actions on your behalf. For example, \code{"AssumeRole": "arn:aws:iam::12345678910:role/ActionRole"}.
 
-To reuse the provisioned product launch role, set to
-\code{"AssumeRole": "LAUNCH_ROLE"}.
+To reuse the provisioned product launch role, set to \code{"AssumeRole": "LAUNCH_ROLE"}.
 }
 
 \subsection{Parameters}{

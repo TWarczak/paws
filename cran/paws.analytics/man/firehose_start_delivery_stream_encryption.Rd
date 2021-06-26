@@ -24,15 +24,15 @@ This operation is asynchronous. It returns immediately. When you invoke
 it, Kinesis Data Firehose first sets the encryption status of the stream
 to \code{ENABLING}, and then to \code{ENABLED}. The encryption status of a
 delivery stream is the \code{Status} property in
-DeliveryStreamEncryptionConfiguration. If the operation fails, the
-encryption status changes to \code{ENABLING_FAILED}. You can continue to read
-and write data to your delivery stream while the encryption status is
-\code{ENABLING}, but the data is not encrypted. It can take up to 5 seconds
-after the encryption status changes to \code{ENABLED} before all records
-written to the delivery stream are encrypted. To find out whether a
-record or a batch of records was encrypted, check the response elements
-PutRecordOutput$Encrypted and PutRecordBatchOutput$Encrypted,
-respectively.
+<span>DeliveryStreamEncryptionConfiguration</span>. If the operation
+fails, the encryption status changes to \code{ENABLING_FAILED}. You can
+continue to read and write data to your delivery stream while the
+encryption status is \code{ENABLING}, but the data is not encrypted. It can
+take up to 5 seconds after the encryption status changes to \code{ENABLED}
+before all records written to the delivery stream are encrypted. To find
+out whether a record or a batch of records was encrypted, check the
+response elements <span>PutRecordOutput$Encrypted</span> and
+<span>PutRecordBatchOutput$Encrypted</span>, respectively.
 
 To check the encryption status of a delivery stream, use
 \code{\link[=firehose_describe_delivery_stream]{describe_delivery_stream}}.

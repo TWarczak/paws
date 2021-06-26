@@ -38,10 +38,10 @@ Creates an Amazon Chime Voice Connector under the administrator's AWS
 account. You can choose to create an Amazon Chime Voice Connector in a
 specific AWS Region.
 
-Enabling CreateVoiceConnectorRequest$RequireEncryption configures your
-Amazon Chime Voice Connector to use TLS transport for SIP signaling and
-Secure RTP (SRTP) for media. Inbound calls use TLS transport, and
-unencrypted outbound calls are blocked.
+Enabling <span>CreateVoiceConnectorRequest$RequireEncryption</span>
+configures your Amazon Chime Voice Connector to use TLS transport for
+SIP signaling and Secure RTP (SRTP) for media. Inbound calls use TLS
+transport, and unencrypted outbound calls are blocked.
 }
 \section{Request syntax}{
 \preformatted{svc$create_voice_connector(

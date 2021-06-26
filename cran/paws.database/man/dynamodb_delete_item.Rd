@@ -56,8 +56,7 @@ set to \code{NONE} (the default), no statistics are returned.}
 
 An expression can contain any of the following:
 \itemize{
-\item Functions:
-\code{attribute_exists | attribute_not_exists | attribute_type | contains | begins_with | size}
+\item Functions: \code{attribute_exists | attribute_not_exists | attribute_type | contains | begins_with | size}
 
 These function names are case-sensitive.
 \item Comparison operators: \verb{= | <> | < | > | <= | >= | BETWEEN | IN }

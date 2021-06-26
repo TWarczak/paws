@@ -71,9 +71,9 @@ A list with the following syntax:\preformatted{list(
 }
 \description{
 Creates a Lightsail load balancer. To learn more about deciding whether
-to load balance your application, see Configure your Lightsail instances
-for load balancing. You can create up to 5 load balancers per AWS Region
-in your account.
+to load balance your application, see <span>Configure your Lightsail
+instances for load balancing</span>. You can create up to 5 load
+balancers per AWS Region in your account.
 
 When you create a load balancer, you can specify a unique name and port
 settings. To change additional load balancer settings, use the
@@ -81,7 +81,8 @@ settings. To change additional load balancer settings, use the
 operation.
 
 The \verb{create load balancer} operation supports tag-based access control
-via request tags. For more information, see the Lightsail Dev Guide.
+via request tags. For more information, see the <span>Lightsail Dev
+Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$create_load_balancer(

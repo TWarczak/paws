@@ -535,7 +535,7 @@ redshift_cancel_resize <- function(ClusterIdentifier) {
 #' 
 #' Constraints:
 #' 
-#' -   Must be the identifier for a valid automated snapshot whose state is
+#'   - Must be the identifier for a valid automated snapshot whose state is
 #'     `available`.
 #' @param SourceSnapshotClusterIdentifier The identifier of the cluster the source snapshot was created from. This
 #' parameter is required if your IAM user has a policy containing a
@@ -544,20 +544,20 @@ redshift_cancel_resize <- function(ClusterIdentifier) {
 #' 
 #' Constraints:
 #' 
-#' -   Must be the identifier for a valid cluster.
+#'   - Must be the identifier for a valid cluster.
 #' @param TargetSnapshotIdentifier &#91;required&#93; The identifier given to the new manual snapshot.
 #' 
 #' Constraints:
 #' 
-#' -   Cannot be null, empty, or blank.
+#'   - Cannot be null, empty, or blank.
 #' 
-#' -   Must contain from 1 to 255 alphanumeric characters or hyphens.
+#'   - Must contain from 1 to 255 alphanumeric characters or hyphens.
 #' 
-#' -   First character must be a letter.
+#'   - First character must be a letter.
 #' 
-#' -   Cannot end with a hyphen or contain two consecutive hyphens.
+#'   - Cannot end with a hyphen or contain two consecutive hyphens.
 #' 
-#' -   Must be unique for the AWS account that is making the request.
+#'   - Must be unique for the AWS account that is making the request.
 #' @param ManualSnapshotRetentionPeriod The number of days that a manual snapshot is retained. If the value is
 #' -1, the manual snapshot is retained indefinitely.
 #' 
@@ -693,11 +693,11 @@ redshift_copy_cluster_snapshot <- function(SourceSnapshotIdentifier, SourceSnaps
 #' 
 #' Constraints:
 #' 
-#' -   Must contain 1 to 64 alphanumeric characters.
+#'   - Must contain 1 to 64 alphanumeric characters.
 #' 
-#' -   Must contain only lowercase letters.
+#'   - Must contain only lowercase letters.
 #' 
-#' -   Cannot be a word that is reserved by the service. A list of reserved
+#'   - Cannot be a word that is reserved by the service. A list of reserved
 #'     words can be found in [Reserved
 #'     Words](https://docs.aws.amazon.com/redshift/latest/dg/r_pg_keywords.html)
 #'     in the Amazon Redshift Database Developer Guide.
@@ -707,22 +707,22 @@ redshift_copy_cluster_snapshot <- function(SourceSnapshotIdentifier, SourceSnaps
 #' 
 #' Constraints:
 #' 
-#' -   Must contain from 1 to 63 alphanumeric characters or hyphens.
+#'   - Must contain from 1 to 63 alphanumeric characters or hyphens.
 #' 
-#' -   Alphabetic characters must be lowercase.
+#'   - Alphabetic characters must be lowercase.
 #' 
-#' -   First character must be a letter.
+#'   - First character must be a letter.
 #' 
-#' -   Cannot end with a hyphen or contain two consecutive hyphens.
+#'   - Cannot end with a hyphen or contain two consecutive hyphens.
 #' 
-#' -   Must be unique for all clusters within an AWS account.
+#'   - Must be unique for all clusters within an AWS account.
 #' 
 #' Example: `myexamplecluster`
 #' @param ClusterType The type of the cluster. When cluster type is specified as
 #' 
-#' -   `single-node`, the **NumberOfNodes** parameter is not required.
+#'   - `single-node`, the **NumberOfNodes** parameter is not required.
 #' 
-#' -   `multi-node`, the **NumberOfNodes** parameter is required.
+#'   - `multi-node`, the **NumberOfNodes** parameter is required.
 #' 
 #' Valid Values: `multi-node` | `single-node`
 #' 
@@ -740,12 +740,12 @@ redshift_copy_cluster_snapshot <- function(SourceSnapshotIdentifier, SourceSnaps
 #' 
 #' Constraints:
 #' 
-#' -   Must be 1 - 128 alphanumeric characters. The user name can't be
+#'   - Must be 1 - 128 alphanumeric characters. The user name can't be
 #'     `PUBLIC`.
 #' 
-#' -   First character must be a letter.
+#'   - First character must be a letter.
 #' 
-#' -   Cannot be a reserved word. A list of reserved words can be found in
+#'   - Cannot be a reserved word. A list of reserved words can be found in
 #'     [Reserved
 #'     Words](https://docs.aws.amazon.com/redshift/latest/dg/r_pg_keywords.html)
 #'     in the Amazon Redshift Database Developer Guide.
@@ -754,15 +754,15 @@ redshift_copy_cluster_snapshot <- function(SourceSnapshotIdentifier, SourceSnaps
 #' 
 #' Constraints:
 #' 
-#' -   Must be between 8 and 64 characters in length.
+#'   - Must be between 8 and 64 characters in length.
 #' 
-#' -   Must contain at least one uppercase letter.
+#'   - Must contain at least one uppercase letter.
 #' 
-#' -   Must contain at least one lowercase letter.
+#'   - Must contain at least one lowercase letter.
 #' 
-#' -   Must contain one number.
+#'   - Must contain one number.
 #' 
-#' -   Can be any printable ASCII character (ASCII code 33 to 126) except '
+#'   - Can be any printable ASCII character (ASCII code 33 to 126) except '
 #'     (single quote), " (double quote), \\, /, @@, or space.
 #' @param ClusterSecurityGroups A list of security groups to be associated with this cluster.
 #' 
@@ -810,11 +810,11 @@ redshift_copy_cluster_snapshot <- function(SourceSnapshotIdentifier, SourceSnaps
 #' 
 #' Constraints:
 #' 
-#' -   Must be 1 to 255 alphanumeric characters or hyphens.
+#'   - Must be 1 to 255 alphanumeric characters or hyphens.
 #' 
-#' -   First character must be a letter.
+#'   - First character must be a letter.
 #' 
-#' -   Cannot end with a hyphen or contain two consecutive hyphens.
+#'   - Cannot end with a hyphen or contain two consecutive hyphens.
 #' @param AutomatedSnapshotRetentionPeriod The number of days that automated snapshots are retained. If the value
 #' is 0, automated snapshots are disabled. Even if automated snapshots are
 #' disabled, you can still create manual snapshots when you want with
@@ -1167,13 +1167,13 @@ redshift_create_cluster <- function(DBName = NULL, ClusterIdentifier, ClusterTyp
 #' 
 #' Constraints:
 #' 
-#' -   Must be 1 to 255 alphanumeric characters or hyphens
+#'   - Must be 1 to 255 alphanumeric characters or hyphens
 #' 
-#' -   First character must be a letter.
+#'   - First character must be a letter.
 #' 
-#' -   Cannot end with a hyphen or contain two consecutive hyphens.
+#'   - Cannot end with a hyphen or contain two consecutive hyphens.
 #' 
-#' -   Must be unique withing your AWS account.
+#'   - Must be unique withing your AWS account.
 #' 
 #' This value is stored as a lower-case string.
 #' @param ParameterGroupFamily &#91;required&#93; The Amazon Redshift engine version to which the cluster parameter group
@@ -1262,11 +1262,11 @@ redshift_create_cluster_parameter_group <- function(ParameterGroupName, Paramete
 #' 
 #' Constraints:
 #' 
-#' -   Must contain no more than 255 alphanumeric characters or hyphens.
+#'   - Must contain no more than 255 alphanumeric characters or hyphens.
 #' 
-#' -   Must not be "Default".
+#'   - Must not be "Default".
 #' 
-#' -   Must be unique for all security groups that are created by your AWS
+#'   - Must be unique for all security groups that are created by your AWS
 #'     account.
 #' 
 #' Example: `examplesecuritygroup`
@@ -1369,13 +1369,13 @@ redshift_create_cluster_security_group <- function(ClusterSecurityGroupName, Des
 #' 
 #' Constraints:
 #' 
-#' -   Cannot be null, empty, or blank
+#'   - Cannot be null, empty, or blank
 #' 
-#' -   Must contain from 1 to 255 alphanumeric characters or hyphens
+#'   - Must contain from 1 to 255 alphanumeric characters or hyphens
 #' 
-#' -   First character must be a letter
+#'   - First character must be a letter
 #' 
-#' -   Cannot end with a hyphen or contain two consecutive hyphens
+#'   - Cannot end with a hyphen or contain two consecutive hyphens
 #' 
 #' Example: `my-snapshot-id`
 #' @param ClusterIdentifier &#91;required&#93; The cluster identifier for which you want a snapshot.
@@ -1504,11 +1504,11 @@ redshift_create_cluster_snapshot <- function(SnapshotIdentifier, ClusterIdentifi
 #' 
 #' Constraints:
 #' 
-#' -   Must contain no more than 255 alphanumeric characters or hyphens.
+#'   - Must contain no more than 255 alphanumeric characters or hyphens.
 #' 
-#' -   Must not be "Default".
+#'   - Must not be "Default".
 #' 
-#' -   Must be unique for all subnet groups that are created by your AWS
+#'   - Must be unique for all subnet groups that are created by your AWS
 #'     account.
 #' 
 #' Example: `examplesubnetgroup`
@@ -1623,13 +1623,13 @@ redshift_create_cluster_subnet_group <- function(ClusterSubnetGroupName, Descrip
 #' 
 #' Constraints:
 #' 
-#' -   Cannot be null, empty, or blank.
+#'   - Cannot be null, empty, or blank.
 #' 
-#' -   Must contain from 1 to 255 alphanumeric characters or hyphens.
+#'   - Must contain from 1 to 255 alphanumeric characters or hyphens.
 #' 
-#' -   First character must be a letter.
+#'   - First character must be a letter.
 #' 
-#' -   Cannot end with a hyphen or contain two consecutive hyphens.
+#'   - Cannot end with a hyphen or contain two consecutive hyphens.
 #' @param SnsTopicArn &#91;required&#93; The Amazon Resource Name (ARN) of the Amazon SNS topic used to transmit
 #' the event notifications. The ARN is created by Amazon SNS when you
 #' create a topic and subscribe to it.
@@ -1916,24 +1916,25 @@ redshift_create_hsm_configuration <- function(HsmConfigurationIdentifier, Descri
 #'   Enable)
 #'
 #' @param ScheduledActionName &#91;required&#93; The name of the scheduled action. The name must be unique within an
-#' account. For more information about this parameter, see ScheduledAction.
+#' account. For more information about this parameter, see
+#' <span>ScheduledAction</span>.
 #' @param TargetAction &#91;required&#93; A JSON format string of the Amazon Redshift API operation with input
 #' parameters. For more information about this parameter, see
-#' ScheduledAction.
+#' <span>ScheduledAction</span>.
 #' @param Schedule &#91;required&#93; The schedule in `at( )` or `cron( )` format. For more information about
-#' this parameter, see ScheduledAction.
+#' this parameter, see <span>ScheduledAction</span>.
 #' @param IamRole &#91;required&#93; The IAM role to assume to run the target action. For more information
-#' about this parameter, see ScheduledAction.
+#' about this parameter, see <span>ScheduledAction</span>.
 #' @param ScheduledActionDescription The description of the scheduled action.
 #' @param StartTime The start time in UTC of the scheduled action. Before this time, the
 #' scheduled action does not trigger. For more information about this
-#' parameter, see ScheduledAction.
+#' parameter, see <span>ScheduledAction</span>.
 #' @param EndTime The end time in UTC of the scheduled action. After this time, the
 #' scheduled action does not trigger. For more information about this
-#' parameter, see ScheduledAction.
+#' parameter, see <span>ScheduledAction</span>.
 #' @param Enable If true, the schedule is enabled. If false, the scheduled action does
 #' not trigger. For more information about `state` of the scheduled action,
-#' see ScheduledAction.
+#' see <span>ScheduledAction</span>.
 #'
 #' @return
 #' A list with the following syntax:
@@ -2048,15 +2049,15 @@ redshift_create_scheduled_action <- function(ScheduledActionName, TargetAction, 
 #' 
 #' Constraints:
 #' 
-#' -   Must contain from 1 to 63 alphanumeric characters or hyphens.
+#'   - Must contain from 1 to 63 alphanumeric characters or hyphens.
 #' 
-#' -   Alphabetic characters must be lowercase.
+#'   - Alphabetic characters must be lowercase.
 #' 
-#' -   First character must be a letter.
+#'   - First character must be a letter.
 #' 
-#' -   Cannot end with a hyphen or contain two consecutive hyphens.
+#'   - Cannot end with a hyphen or contain two consecutive hyphens.
 #' 
-#' -   Must be unique for all clusters within an AWS account.
+#'   - Must be unique for all clusters within an AWS account.
 #' @param KmsKeyId The unique identifier of the customer master key (CMK) to which to grant
 #' Amazon Redshift permission. If no key is specified, the default key is
 #' used.
@@ -2223,8 +2224,8 @@ redshift_create_snapshot_schedule <- function(ScheduleDefinitions = NULL, Schedu
 #' Each tag name is passed in with the parameter `Key` and the
 #' corresponding value is passed in with the parameter `Value`. The `Key`
 #' and `Value` parameters are separated by a comma (,). Separate multiple
-#' tags with a space. For example,
-#' `--tags "Key"="owner","Value"="admin" "Key"="environment","Value"="test" "Key"="version","Value"="1.0"`.
+#' tags with a space. For example, `--tags "Key"="owner","Value"="admin"
+#' "Key"="environment","Value"="test" "Key"="version","Value"="1.0"`.
 #'
 #' @return
 #' An empty list.
@@ -2287,7 +2288,7 @@ redshift_create_tags <- function(ResourceName, Tags) {
 #' Sunday. The default is `monthly`.
 #' @param BreachAction The action that Amazon Redshift takes when the limit is reached. The
 #' default is log. For more information about this parameter, see
-#' UsageLimit.
+#' <span>UsageLimit</span>.
 #' @param Tags A list of tag instances.
 #'
 #' @return
@@ -2382,13 +2383,13 @@ redshift_create_usage_limit <- function(ClusterIdentifier, FeatureType, LimitTyp
 #' 
 #' Constraints:
 #' 
-#' -   Must contain lowercase characters.
+#'   - Must contain lowercase characters.
 #' 
-#' -   Must contain from 1 to 63 alphanumeric characters or hyphens.
+#'   - Must contain from 1 to 63 alphanumeric characters or hyphens.
 #' 
-#' -   First character must be a letter.
+#'   - First character must be a letter.
 #' 
-#' -   Cannot end with a hyphen or contain two consecutive hyphens.
+#'   - Cannot end with a hyphen or contain two consecutive hyphens.
 #' @param SkipFinalClusterSnapshot Determines whether a final snapshot of the cluster is created before
 #' Amazon Redshift deletes the cluster. If `true`, a final cluster snapshot
 #' is not created. If `false`, a final cluster snapshot is created before
@@ -2404,11 +2405,11 @@ redshift_create_usage_limit <- function(ClusterIdentifier, FeatureType, LimitTyp
 #' 
 #' Constraints:
 #' 
-#' -   Must be 1 to 255 alphanumeric characters.
+#'   - Must be 1 to 255 alphanumeric characters.
 #' 
-#' -   First character must be a letter.
+#'   - First character must be a letter.
 #' 
-#' -   Cannot end with a hyphen or contain two consecutive hyphens.
+#'   - Cannot end with a hyphen or contain two consecutive hyphens.
 #' @param FinalClusterSnapshotRetentionPeriod The number of days that a manual snapshot is retained. If the value is
 #' -1, the manual snapshot is retained indefinitely.
 #' 
@@ -2622,9 +2623,9 @@ redshift_delete_cluster <- function(ClusterIdentifier, SkipFinalClusterSnapshot 
 #' 
 #' Constraints:
 #' 
-#' -   Must be the name of an existing cluster parameter group.
+#'   - Must be the name of an existing cluster parameter group.
 #' 
-#' -   Cannot delete a default cluster parameter group.
+#'   - Cannot delete a default cluster parameter group.
 #'
 #' @return
 #' An empty list.
@@ -3779,18 +3780,18 @@ redshift_describe_cluster_security_groups <- function(ClusterSecurityGroupName =
 #' an existing cluster, that is, a cluster that has not been deleted.
 #' Values for this parameter work as follows:
 #' 
-#' -   If `ClusterExists` is set to `true`, `ClusterIdentifier` is
+#'   - If `ClusterExists` is set to `true`, `ClusterIdentifier` is
 #'     required.
 #' 
-#' -   If `ClusterExists` is set to `false` and `ClusterIdentifier` isn't
+#'   - If `ClusterExists` is set to `false` and `ClusterIdentifier` isn't
 #'     specified, all snapshots associated with deleted clusters (orphaned
 #'     snapshots) are returned.
 #' 
-#' -   If `ClusterExists` is set to `false` and `ClusterIdentifier` is
+#'   - If `ClusterExists` is set to `false` and `ClusterIdentifier` is
 #'     specified for a deleted cluster, snapshots associated with that
 #'     cluster are returned.
 #' 
-#' -   If `ClusterExists` is set to `false` and `ClusterIdentifier` is
+#'   - If `ClusterExists` is set to `false` and `ClusterIdentifier` is
 #'     specified for an existing cluster, no snapshots are returned.
 #' @param SortingEntities 
 #'
@@ -4129,11 +4130,11 @@ redshift_describe_cluster_tracks <- function(MaintenanceTrackName = NULL, MaxRec
 #' 
 #' Constraints:
 #' 
-#' -   Must be 1 to 255 alphanumeric characters
+#'   - Must be 1 to 255 alphanumeric characters
 #' 
-#' -   First character must be a letter
+#'   - First character must be a letter
 #' 
-#' -   Cannot end with a hyphen or contain two consecutive hyphens
+#'   - Cannot end with a hyphen or contain two consecutive hyphens
 #' @param MaxRecords The maximum number of response records to return in each call. If the
 #' number of remaining response records exceeds the specified `MaxRecords`
 #' value, a value is returned in a `marker` field of the response. You can
@@ -4759,15 +4760,15 @@ redshift_describe_event_subscriptions <- function(SubscriptionName = NULL, MaxRe
 #' 
 #' If *SourceIdentifier* is supplied, *SourceType* must also be provided.
 #' 
-#' -   Specify a cluster identifier when *SourceType* is `cluster`.
+#'   - Specify a cluster identifier when *SourceType* is `cluster`.
 #' 
-#' -   Specify a cluster security group name when *SourceType* is
+#'   - Specify a cluster security group name when *SourceType* is
 #'     `cluster-security-group`.
 #' 
-#' -   Specify a cluster parameter group name when *SourceType* is
+#'   - Specify a cluster parameter group name when *SourceType* is
 #'     `cluster-parameter-group`.
 #' 
-#' -   Specify a cluster snapshot identifier when *SourceType* is
+#'   - Specify a cluster snapshot identifier when *SourceType* is
 #'     `cluster-snapshot`.
 #' @param SourceType The event source to retrieve events for. If no value is specified, all
 #' events are returned.
@@ -4776,15 +4777,15 @@ redshift_describe_event_subscriptions <- function(SubscriptionName = NULL, MaxRe
 #' 
 #' If *SourceType* is supplied, *SourceIdentifier* must also be provided.
 #' 
-#' -   Specify `cluster` when *SourceIdentifier* is a cluster identifier.
+#'   - Specify `cluster` when *SourceIdentifier* is a cluster identifier.
 #' 
-#' -   Specify `cluster-security-group` when *SourceIdentifier* is a
+#'   - Specify `cluster-security-group` when *SourceIdentifier* is a
 #'     cluster security group name.
 #' 
-#' -   Specify `cluster-parameter-group` when *SourceIdentifier* is a
+#'   - Specify `cluster-parameter-group` when *SourceIdentifier* is a
 #'     cluster parameter group name.
 #' 
-#' -   Specify `cluster-snapshot` when *SourceIdentifier* is a cluster
+#'   - Specify `cluster-snapshot` when *SourceIdentifier* is a cluster
 #'     snapshot identifier.
 #' @param StartTime The beginning of the time interval to retrieve events for, specified in
 #' ISO 8601 format. For more information about ISO 8601, go to the [ISO8601
@@ -6089,13 +6090,13 @@ redshift_describe_table_restore_status <- function(ClusterIdentifier = NULL, Tab
 #' The following are limitations for
 #' [`describe_tags`][redshift_describe_tags]:
 #' 
-#' -   You cannot specify an ARN and a resource-type value together in the
+#'   - You cannot specify an ARN and a resource-type value together in the
 #'     same request.
 #' 
-#' -   You cannot use the `MaxRecords` and `Marker` parameters together
+#'   - You cannot use the `MaxRecords` and `Marker` parameters together
 #'     with the ARN parameter.
 #' 
-#' -   The `MaxRecords` parameter can be a range from 10 to 50 results to
+#'   - The `MaxRecords` parameter can be a range from 10 to 50 results to
 #'     return in a request.
 #' 
 #' If you specify both tag keys and tag values in the same request, Amazon
@@ -6117,25 +6118,25 @@ redshift_describe_table_restore_status <- function(ClusterIdentifier = NULL, Tab
 #' @param ResourceType The type of resource with which you want to view tags. Valid resource
 #' types are:
 #' 
-#' -   Cluster
+#'   - Cluster
 #' 
-#' -   CIDR/IP
+#'   - CIDR/IP
 #' 
-#' -   EC2 security group
+#'   - EC2 security group
 #' 
-#' -   Snapshot
+#'   - Snapshot
 #' 
-#' -   Cluster security group
+#'   - Cluster security group
 #' 
-#' -   Subnet group
+#'   - Subnet group
 #' 
-#' -   HSM connection
+#'   - HSM connection
 #' 
-#' -   HSM certificate
+#'   - HSM certificate
 #' 
-#' -   Parameter group
+#'   - Parameter group
 #' 
-#' -   Snapshot copy grant
+#'   - Snapshot copy grant
 #' 
 #' For more information about Amazon Redshift resource types and
 #' constructing ARNs, go to [Specifying Policy Elements: Actions, Effects,
@@ -6227,17 +6228,17 @@ redshift_describe_tags <- function(ResourceName = NULL, ResourceType = NULL, Max
 #' combination of input usage limit identifier, cluster identifier, and
 #' feature type parameters:
 #' 
-#' -   If usage limit identifier, cluster identifier, and feature type are
+#'   - If usage limit identifier, cluster identifier, and feature type are
 #'     not provided, then all usage limit objects for the current account
 #'     in the current region are returned.
 #' 
-#' -   If usage limit identifier is provided, then the corresponding usage
+#'   - If usage limit identifier is provided, then the corresponding usage
 #'     limit object is returned.
 #' 
-#' -   If cluster identifier is provided, then all usage limit objects for
+#'   - If cluster identifier is provided, then all usage limit objects for
 #'     the specified cluster are returned.
 #' 
-#' -   If cluster identifier and feature type are provided, then all usage
+#'   - If cluster identifier and feature type are provided, then all usage
 #'     limit objects for the combination of cluster and feature are
 #'     returned.
 #'
@@ -6627,28 +6628,28 @@ redshift_disable_snapshot_copy <- function(ClusterIdentifier) {
 #' 
 #' Constraints:
 #' 
-#' -   Must be in the same region as the cluster
+#'   - Must be in the same region as the cluster
 #' 
-#' -   The cluster must have read bucket and put object permissions
+#'   - The cluster must have read bucket and put object permissions
 #' @param S3KeyPrefix The prefix applied to the log file names.
 #' 
 #' Constraints:
 #' 
-#' -   Cannot exceed 512 characters
+#'   - Cannot exceed 512 characters
 #' 
-#' -   Cannot contain spaces( ), double quotes ("), single quotes ('), a
+#'   - Cannot contain spaces( ), double quotes ("), single quotes ('), a
 #'     backslash (\\), or control characters. The hexadecimal codes for
 #'     invalid characters are:
-#' 
-#'     -   x00 to x20
-#' 
-#'     -   x22
-#' 
-#'     -   x27
-#' 
-#'     -   x5c
-#' 
-#'     -   x7f or larger
+#'     
+#'       - x00 to x20
+#'     
+#'       - x22
+#'     
+#'       - x27
+#'     
+#'       - x5c
+#'     
+#'       - x7f or larger
 #'
 #' @return
 #' A list with the following syntax:
@@ -6975,17 +6976,17 @@ redshift_enable_snapshot_copy <- function(ClusterIdentifier, DestinationRegion, 
 #' 
 #' Constraints:
 #' 
-#' -   Must be 1 to 64 alphanumeric characters or hyphens. The user name
+#'   - Must be 1 to 64 alphanumeric characters or hyphens. The user name
 #'     can't be `PUBLIC`.
 #' 
-#' -   Must contain only lowercase letters, numbers, underscore, plus sign,
+#'   - Must contain only lowercase letters, numbers, underscore, plus sign,
 #'     period (dot), at symbol (@@), or hyphen.
 #' 
-#' -   First character must be a letter.
+#'   - First character must be a letter.
 #' 
-#' -   Must not contain a colon ( : ) or slash ( / ).
+#'   - Must not contain a colon ( : ) or slash ( / ).
 #' 
-#' -   Cannot be a reserved word. A list of reserved words can be found in
+#'   - Cannot be a reserved word. A list of reserved words can be found in
 #'     [Reserved
 #'     Words](https://docs.aws.amazon.com/redshift/latest/dg/r_pg_keywords.html)
 #'     in the Amazon Redshift Database Developer Guide.
@@ -6994,16 +6995,16 @@ redshift_enable_snapshot_copy <- function(ClusterIdentifier, DestinationRegion, 
 #' 
 #' Constraints:
 #' 
-#' -   Must be 1 to 64 alphanumeric characters or hyphens
+#'   - Must be 1 to 64 alphanumeric characters or hyphens
 #' 
-#' -   Must contain only lowercase letters, numbers, underscore, plus sign,
+#'   - Must contain only lowercase letters, numbers, underscore, plus sign,
 #'     period (dot), at symbol (@@), or hyphen.
 #' 
-#' -   First character must be a letter.
+#'   - First character must be a letter.
 #' 
-#' -   Must not contain a colon ( : ) or slash ( / ).
+#'   - Must not contain a colon ( : ) or slash ( / ).
 #' 
-#' -   Cannot be a reserved word. A list of reserved words can be found in
+#'   - Cannot be a reserved word. A list of reserved words can be found in
 #'     [Reserved
 #'     Words](https://docs.aws.amazon.com/redshift/latest/dg/r_pg_keywords.html)
 #'     in the Amazon Redshift Database Developer Guide.
@@ -7023,16 +7024,16 @@ redshift_enable_snapshot_copy <- function(ClusterIdentifier, DestinationRegion, 
 #' 
 #' Database group name constraints
 #' 
-#' -   Must be 1 to 64 alphanumeric characters or hyphens
+#'   - Must be 1 to 64 alphanumeric characters or hyphens
 #' 
-#' -   Must contain only lowercase letters, numbers, underscore, plus sign,
+#'   - Must contain only lowercase letters, numbers, underscore, plus sign,
 #'     period (dot), at symbol (@@), or hyphen.
 #' 
-#' -   First character must be a letter.
+#'   - First character must be a letter.
 #' 
-#' -   Must not contain a colon ( : ) or slash ( / ).
+#'   - Must not contain a colon ( : ) or slash ( / ).
 #' 
-#' -   Cannot be a reserved word. A list of reserved words can be found in
+#'   - Cannot be a reserved word. A list of reserved words can be found in
 #'     [Reserved
 #'     Words](https://docs.aws.amazon.com/redshift/latest/dg/r_pg_keywords.html)
 #'     in the Amazon Redshift Database Developer Guide.
@@ -7198,7 +7199,7 @@ redshift_get_reserved_node_exchange_offerings <- function(ReservedNodeId, MaxRec
 #' new cluster. You can use [`describe_resize`][redshift_describe_resize]
 #' to track the progress of the resize request.
 #' 
-#' Valid Values: ` multi-node | single-node `
+#' Valid Values: `  multi-node | single-node  `
 #' @param NodeType The new node type of the cluster. If you specify a new node type, you
 #' must also specify the number of nodes parameter.
 #' 
@@ -7227,11 +7228,11 @@ redshift_get_reserved_node_exchange_offerings <- function(ReservedNodeId, MaxRec
 #' 
 #' Constraints:
 #' 
-#' -   Must be 1 to 255 alphanumeric characters or hyphens
+#'   - Must be 1 to 255 alphanumeric characters or hyphens
 #' 
-#' -   First character must be a letter
+#'   - First character must be a letter
 #' 
-#' -   Cannot end with a hyphen or contain two consecutive hyphens
+#'   - Cannot end with a hyphen or contain two consecutive hyphens
 #' @param VpcSecurityGroupIds A list of virtual private cloud (VPC) security groups to be associated
 #' with the cluster. This change is asynchronously applied as soon as
 #' possible.
@@ -7249,15 +7250,15 @@ redshift_get_reserved_node_exchange_offerings <- function(ReservedNodeId, MaxRec
 #' 
 #' Constraints:
 #' 
-#' -   Must be between 8 and 64 characters in length.
+#'   - Must be between 8 and 64 characters in length.
 #' 
-#' -   Must contain at least one uppercase letter.
+#'   - Must contain at least one uppercase letter.
 #' 
-#' -   Must contain at least one lowercase letter.
+#'   - Must contain at least one lowercase letter.
 #' 
-#' -   Must contain one number.
+#'   - Must contain one number.
 #' 
-#' -   Can be any printable ASCII character (ASCII code 33 to 126) except '
+#'   - Can be any printable ASCII character (ASCII code 33 to 126) except '
 #'     (single quote), " (double quote), \\, /, @@, or space.
 #' @param ClusterParameterGroupName The name of the cluster parameter group to apply to this cluster. This
 #' change is applied only after the cluster is rebooted. To reboot a
@@ -7328,15 +7329,15 @@ redshift_get_reserved_node_exchange_offerings <- function(ReservedNodeId, MaxRec
 #' 
 #' Constraints:
 #' 
-#' -   Must contain from 1 to 63 alphanumeric characters or hyphens.
+#'   - Must contain from 1 to 63 alphanumeric characters or hyphens.
 #' 
-#' -   Alphabetic characters must be lowercase.
+#'   - Alphabetic characters must be lowercase.
 #' 
-#' -   First character must be a letter.
+#'   - First character must be a letter.
 #' 
-#' -   Cannot end with a hyphen or contain two consecutive hyphens.
+#'   - Cannot end with a hyphen or contain two consecutive hyphens.
 #' 
-#' -   Must be unique for all clusters within an AWS account.
+#'   - Must be unique for all clusters within an AWS account.
 #' 
 #' Example: `examplecluster`
 #' @param PubliclyAccessible If `true`, the cluster can be accessed from a public network. Only
@@ -8675,16 +8676,16 @@ redshift_modify_event_subscription <- function(SubscriptionName, SnsTopicArn = N
 #'
 #' @param ScheduledActionName &#91;required&#93; The name of the scheduled action to modify.
 #' @param TargetAction A modified JSON format of the scheduled action. For more information
-#' about this parameter, see ScheduledAction.
+#' about this parameter, see <span>ScheduledAction</span>.
 #' @param Schedule A modified schedule in either `at( )` or `cron( )` format. For more
-#' information about this parameter, see ScheduledAction.
+#' information about this parameter, see <span>ScheduledAction</span>.
 #' @param IamRole A different IAM role to assume to run the target action. For more
-#' information about this parameter, see ScheduledAction.
+#' information about this parameter, see <span>ScheduledAction</span>.
 #' @param ScheduledActionDescription A modified description of the scheduled action.
 #' @param StartTime A modified start time of the scheduled action. For more information
-#' about this parameter, see ScheduledAction.
+#' about this parameter, see <span>ScheduledAction</span>.
 #' @param EndTime A modified end time of the scheduled action. For more information about
-#' this parameter, see ScheduledAction.
+#' this parameter, see <span>ScheduledAction</span>.
 #' @param Enable A modified enable flag of the scheduled action. If true, the scheduled
 #' action is active. If false, the scheduled action is disabled.
 #'
@@ -9103,9 +9104,9 @@ redshift_modify_snapshot_schedule <- function(ScheduleIdentifier, ScheduleDefini
 #'
 #' @param UsageLimitId &#91;required&#93; The identifier of the usage limit to modify.
 #' @param Amount The new limit amount. For more information about this parameter, see
-#' UsageLimit.
+#' <span>UsageLimit</span>.
 #' @param BreachAction The new action that Amazon Redshift takes when the limit is reached. For
-#' more information about this parameter, see UsageLimit.
+#' more information about this parameter, see <span>UsageLimit</span>.
 #'
 #' @return
 #' A list with the following syntax:
@@ -9731,27 +9732,27 @@ redshift_reset_cluster_parameter_group <- function(ParameterGroupName, ResetAllP
 #' 
 #' Elastic resize operations have the following restrictions:
 #' 
-#' -   You can only resize clusters of the following types:
+#'   - You can only resize clusters of the following types:
+#'     
+#'       - dc1.large (if your cluster is in a VPC)
+#'     
+#'       - dc1.8xlarge (if your cluster is in a VPC)
+#'     
+#'       - dc2.large
+#'     
+#'       - dc2.8xlarge
+#'     
+#'       - ds2.xlarge
+#'     
+#'       - ds2.8xlarge
+#'     
+#'       - ra3.xlplus
+#'     
+#'       - ra3.4xlarge
+#'     
+#'       - ra3.16xlarge
 #' 
-#'     -   dc1.large (if your cluster is in a VPC)
-#' 
-#'     -   dc1.8xlarge (if your cluster is in a VPC)
-#' 
-#'     -   dc2.large
-#' 
-#'     -   dc2.8xlarge
-#' 
-#'     -   ds2.xlarge
-#' 
-#'     -   ds2.8xlarge
-#' 
-#'     -   ra3.xlplus
-#' 
-#'     -   ra3.4xlarge
-#' 
-#'     -   ra3.16xlarge
-#' 
-#' -   The type of nodes that you add must match the node type for the
+#'   - The type of nodes that you add must match the node type for the
 #'     cluster.
 #'
 #' @usage
@@ -9999,15 +10000,15 @@ redshift_resize_cluster <- function(ClusterIdentifier, ClusterType = NULL, NodeT
 #' 
 #' Constraints:
 #' 
-#' -   Must contain from 1 to 63 alphanumeric characters or hyphens.
+#'   - Must contain from 1 to 63 alphanumeric characters or hyphens.
 #' 
-#' -   Alphabetic characters must be lowercase.
+#'   - Alphabetic characters must be lowercase.
 #' 
-#' -   First character must be a letter.
+#'   - First character must be a letter.
 #' 
-#' -   Cannot end with a hyphen or contain two consecutive hyphens.
+#'   - Cannot end with a hyphen or contain two consecutive hyphens.
 #' 
-#' -   Must be unique for all clusters within an AWS account.
+#'   - Must be unique for all clusters within an AWS account.
 #' @param SnapshotIdentifier &#91;required&#93; The name of the snapshot from which to create the new cluster. This
 #' parameter isn't case sensitive.
 #' 
@@ -10053,11 +10054,11 @@ redshift_resize_cluster <- function(ClusterIdentifier, ClusterType = NULL, NodeT
 #' 
 #' Constraints:
 #' 
-#' -   Must be 1 to 255 alphanumeric characters or hyphens.
+#'   - Must be 1 to 255 alphanumeric characters or hyphens.
 #' 
-#' -   First character must be a letter.
+#'   - First character must be a letter.
 #' 
-#' -   Cannot end with a hyphen or contain two consecutive hyphens.
+#'   - Cannot end with a hyphen or contain two consecutive hyphens.
 #' @param ClusterSecurityGroups A list of security groups to be associated with this cluster.
 #' 
 #' Default: The default cluster security group for Amazon Redshift.

@@ -42,15 +42,15 @@ NULL
 #' 
 #' **Related operations**
 #' 
-#' -   [`start_matchmaking`][gamelift_start_matchmaking]
+#'   - [`start_matchmaking`][gamelift_start_matchmaking]
 #' 
-#' -   [`describe_matchmaking`][gamelift_describe_matchmaking]
+#'   - [`describe_matchmaking`][gamelift_describe_matchmaking]
 #' 
-#' -   [`stop_matchmaking`][gamelift_stop_matchmaking]
+#'   - [`stop_matchmaking`][gamelift_stop_matchmaking]
 #' 
-#' -   [`accept_match`][gamelift_accept_match]
+#'   - [`accept_match`][gamelift_accept_match]
 #' 
-#' -   [`start_match_backfill`][gamelift_start_match_backfill]
+#'   - [`start_match_backfill`][gamelift_start_match_backfill]
 #'
 #' @usage
 #' gamelift_accept_match(TicketId, PlayerIds, AcceptanceType)
@@ -95,8 +95,8 @@ gamelift_accept_match <- function(TicketId, PlayerIds, AcceptanceType) {
 }
 .gamelift$operations$accept_match <- gamelift_accept_match
 
-#' This operation is used with the Amazon GameLift FleetIQ solution and
-#' game server groups
+#' THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND
+#' GAME SERVER GROUPS
 #'
 #' @description
 #' **This operation is used with the Amazon GameLift FleetIQ solution and
@@ -129,9 +129,9 @@ gamelift_accept_match <- function(TicketId, PlayerIds, AcceptanceType) {
 #' If you try to claim a specific game server, this request will fail in
 #' the following cases:
 #' 
-#' -   If the game server utilization status is `UTILIZED`.
+#'   - If the game server utilization status is `UTILIZED`.
 #' 
-#' -   If the game server claim status is `CLAIMED`.
+#'   - If the game server claim status is `CLAIMED`.
 #' 
 #' When claiming a specific game server, this request will succeed even if
 #' the game server is running on an instance in `DRAINING` status. To avoid
@@ -145,26 +145,27 @@ gamelift_accept_match <- function(TicketId, PlayerIds, AcceptanceType) {
 #' 
 #' **Related operations**
 #' 
-#' -   [`register_game_server`][gamelift_register_game_server]
+#'   - [`register_game_server`][gamelift_register_game_server]
 #' 
-#' -   [`list_game_servers`][gamelift_list_game_servers]
+#'   - [`list_game_servers`][gamelift_list_game_servers]
 #' 
-#' -   [`claim_game_server`][gamelift_claim_game_server]
+#'   - [`claim_game_server`][gamelift_claim_game_server]
 #' 
-#' -   [`describe_game_server`][gamelift_describe_game_server]
+#'   - [`describe_game_server`][gamelift_describe_game_server]
 #' 
-#' -   [`update_game_server`][gamelift_update_game_server]
+#'   - [`update_game_server`][gamelift_update_game_server]
 #' 
-#' -   [`deregister_game_server`][gamelift_deregister_game_server]
+#'   - [`deregister_game_server`][gamelift_deregister_game_server]
 #'
 #' @usage
 #' gamelift_claim_game_server(GameServerGroupName, GameServerId,
 #'   GameServerData)
 #'
 #' @param GameServerGroupName &#91;required&#93; A unique identifier for the game server group where the game server is
-#' running. Use either the GameServerGroup name or ARN value.. If you are
-#' not specifying a game server to claim, this value identifies where you
-#' want GameLift FleetIQ to look for an available game server to claim.
+#' running. Use either the <span>GameServerGroup</span> name or ARN value..
+#' If you are not specifying a game server to claim, this value identifies
+#' where you want GameLift FleetIQ to look for an available game server to
+#' claim.
 #' @param GameServerId A custom string that uniquely identifies the game server to claim. If
 #' this parameter is left empty, GameLift FleetIQ searches for an available
 #' game server in the specified game server group.
@@ -250,17 +251,17 @@ gamelift_claim_game_server <- function(GameServerGroupName, GameServerId = NULL,
 #' returned, including an alias ID and an ARN. You can reassign an alias to
 #' another fleet by calling [`update_alias`][gamelift_update_alias].
 #' 
-#' -   [`create_alias`][gamelift_create_alias]
+#'   - [`create_alias`][gamelift_create_alias]
 #' 
-#' -   [`list_aliases`][gamelift_list_aliases]
+#'   - [`list_aliases`][gamelift_list_aliases]
 #' 
-#' -   [`describe_alias`][gamelift_describe_alias]
+#'   - [`describe_alias`][gamelift_describe_alias]
 #' 
-#' -   [`update_alias`][gamelift_update_alias]
+#'   - [`update_alias`][gamelift_update_alias]
 #' 
-#' -   [`delete_alias`][gamelift_delete_alias]
+#'   - [`delete_alias`][gamelift_delete_alias]
 #' 
-#' -   [`resolve_alias`][gamelift_resolve_alias]
+#'   - [`resolve_alias`][gamelift_resolve_alias]
 #'
 #' @usage
 #' gamelift_create_alias(Name, Description, RoutingStrategy, Tags)
@@ -363,14 +364,14 @@ gamelift_create_alias <- function(Name, Description = NULL, RoutingStrategy, Tag
 #' The [`create_build`][gamelift_create_build] operation can used in the
 #' following scenarios:
 #' 
-#' -   To create a new game build with build files that are in an S3
+#'   - To create a new game build with build files that are in an S3
 #'     location under an AWS account that you control. To use this option,
 #'     you must first give Amazon GameLift access to the S3 bucket. With
 #'     permissions in place, call [`create_build`][gamelift_create_build]
 #'     and specify a build name, operating system, and the S3 storage
 #'     location of your game build.
 #' 
-#' -   To directly upload your build files to a GameLift S3 location. To
+#'   - To directly upload your build files to a GameLift S3 location. To
 #'     use this option, first call [`create_build`][gamelift_create_build]
 #'     and specify a build name and operating system. This operation
 #'     creates a new build resource and also returns an S3 location with
@@ -395,15 +396,15 @@ gamelift_create_alias <- function(Name, Description = NULL, RoutingStrategy, Tag
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_build`][gamelift_create_build]
+#'   - [`create_build`][gamelift_create_build]
 #' 
-#' -   [`list_builds`][gamelift_list_builds]
+#'   - [`list_builds`][gamelift_list_builds]
 #' 
-#' -   [`describe_build`][gamelift_describe_build]
+#'   - [`describe_build`][gamelift_describe_build]
 #' 
-#' -   [`update_build`][gamelift_update_build]
+#'   - [`update_build`][gamelift_update_build]
 #' 
-#' -   [`delete_build`][gamelift_delete_build]
+#'   - [`delete_build`][gamelift_delete_build]
 #'
 #' @usage
 #' gamelift_create_build(Name, Version, StorageLocation, OperatingSystem,
@@ -534,23 +535,23 @@ gamelift_create_build <- function(Name = NULL, Version = NULL, StorageLocation =
 #' of a fleet by checking the fleet status or by monitoring fleet creation
 #' events:
 #' 
-#' -   Creates a fleet resource. Status: `NEW`.
+#'   - Creates a fleet resource. Status: `NEW`.
 #' 
-#' -   Begins writing events to the fleet event log, which can be accessed
+#'   - Begins writing events to the fleet event log, which can be accessed
 #'     in the Amazon GameLift console.
 #' 
-#' -   Sets the fleet's target capacity to 1 (desired instances), which
+#'   - Sets the fleet's target capacity to 1 (desired instances), which
 #'     triggers Amazon GameLift to start one new EC2 instance.
 #' 
-#' -   Downloads the game build or Realtime script to the new instance and
+#'   - Downloads the game build or Realtime script to the new instance and
 #'     installs it. Statuses: `DOWNLOADING`, `VALIDATING`, `BUILDING`.
 #' 
-#' -   Starts launching server processes on the instance. If the fleet is
+#'   - Starts launching server processes on the instance. If the fleet is
 #'     configured to run multiple server processes per instance, Amazon
 #'     GameLift staggers each process launch by a few seconds. Status:
 #'     `ACTIVATING`.
 #' 
-#' -   Sets the fleet's status to `ACTIVE` as soon as one server process is
+#'   - Sets the fleet's status to `ACTIVE` as soon as one server process is
 #'     ready to host a game session.
 #' 
 #' **Learn more**
@@ -563,17 +564,17 @@ gamelift_create_build <- function(Name = NULL, Version = NULL, StorageLocation =
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_fleet`][gamelift_create_fleet]
+#'   - [`create_fleet`][gamelift_create_fleet]
 #' 
-#' -   [`list_fleets`][gamelift_list_fleets]
+#'   - [`list_fleets`][gamelift_list_fleets]
 #' 
-#' -   [`delete_fleet`][gamelift_delete_fleet]
+#'   - [`delete_fleet`][gamelift_delete_fleet]
 #' 
-#' -   [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
+#'   - [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
 #' 
-#' -   [`update_fleet_attributes`][gamelift_update_fleet_attributes]
+#'   - [`update_fleet_attributes`][gamelift_update_fleet_attributes]
 #' 
-#' -   [`start_fleet_actions`][gamelift_start_fleet_actions] or
+#'   - [`start_fleet_actions`][gamelift_start_fleet_actions] or
 #'     [`stop_fleet_actions`][gamelift_stop_fleet_actions]
 #'
 #' @usage
@@ -630,10 +631,10 @@ gamelift_create_build <- function(Name = NULL, Version = NULL, StorageLocation =
 #' can also set protection for individual instances using
 #' [`update_game_session`][gamelift_update_game_session].
 #' 
-#' -   **NoProtection** - The game session can be terminated during a
+#'   - **NoProtection** - The game session can be terminated during a
 #'     scale-down event.
 #' 
-#' -   **FullProtection** - If the game session is in an `ACTIVE` status,
+#'   - **FullProtection** - If the game session is in an `ACTIVE` status,
 #'     it cannot be terminated during a scale-down event.
 #' @param RuntimeConfiguration Instructions for launching server processes on each instance in the
 #' fleet. Server processes run either a custom game build executable or a
@@ -661,8 +662,7 @@ gamelift_create_build <- function(Name = NULL, Version = NULL, StorageLocation =
 #' the AWS Management Console under account settings.
 #' @param PeerVpcId A unique identifier for a VPC with resources to be accessed by your
 #' Amazon GameLift fleet. The VPC must be in the same Region as your fleet.
-#' To look up a VPC ID, use the [VPC
-#' Dashboard](https://console.aws.amazon.com/vpc/home) in the AWS
+#' To look up a VPC ID, use the <span>VPC Dashboard</span> in the AWS
 #' Management Console. Learn more about VPC peering in [VPC Peering with
 #' Amazon GameLift
 #' Fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/vpc-peering.html).
@@ -697,9 +697,9 @@ gamelift_create_build <- function(Name = NULL, Version = NULL, StorageLocation =
 #' 
 #' Valid values include:
 #' 
-#' -   **GENERATED** - Generate a TLS/SSL certificate for this fleet.
+#'   - **GENERATED** - Generate a TLS/SSL certificate for this fleet.
 #' 
-#' -   **DISABLED** - (default) Do not generate a TLS/SSL certificate for
+#'   - **DISABLED** - (default) Do not generate a TLS/SSL certificate for
 #'     this fleet.
 #' @param Tags A list of labels to assign to the new fleet resource. Tags are
 #' developer-defined key-value pairs. Tagging AWS resources are useful for
@@ -836,8 +836,8 @@ gamelift_create_fleet <- function(Name, Description = NULL, BuildId = NULL, Scri
 }
 .gamelift$operations$create_fleet <- gamelift_create_fleet
 
-#' This operation is used with the Amazon GameLift FleetIQ solution and
-#' game server groups
+#' THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND
+#' GAME SERVER GROUPS
 #'
 #' @description
 #' **This operation is used with the Amazon GameLift FleetIQ solution and
@@ -852,13 +852,13 @@ gamelift_create_fleet <- function(Name, Description = NULL, BuildId = NULL, Scri
 #' 
 #' Before creating a new game server group, you must have the following:
 #' 
-#' -   An Amazon EC2 launch template that specifies how to launch Amazon
+#'   - An Amazon EC2 launch template that specifies how to launch Amazon
 #'     EC2 instances with your game server build. For more information, see
 #'     [Launching an Instance from a Launch
 #'     Template](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html)
 #'     in the *Amazon EC2 User Guide*.
 #' 
-#' -   An IAM role that extends limited access to your AWS account to allow
+#'   - An IAM role that extends limited access to your AWS account to allow
 #'     GameLift FleetIQ to create and interact with the Auto Scaling group.
 #'     For more information, see [Create IAM roles for cross-service
 #'     interaction](https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-iam-permissions-roles.html)
@@ -887,21 +887,21 @@ gamelift_create_fleet <- function(Name, Description = NULL, BuildId = NULL, Scri
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_game_server_group`][gamelift_create_game_server_group]
+#'   - [`create_game_server_group`][gamelift_create_game_server_group]
 #' 
-#' -   [`list_game_server_groups`][gamelift_list_game_server_groups]
+#'   - [`list_game_server_groups`][gamelift_list_game_server_groups]
 #' 
-#' -   [`describe_game_server_group`][gamelift_describe_game_server_group]
+#'   - [`describe_game_server_group`][gamelift_describe_game_server_group]
 #' 
-#' -   [`update_game_server_group`][gamelift_update_game_server_group]
+#'   - [`update_game_server_group`][gamelift_update_game_server_group]
 #' 
-#' -   [`delete_game_server_group`][gamelift_delete_game_server_group]
+#'   - [`delete_game_server_group`][gamelift_delete_game_server_group]
 #' 
-#' -   [`resume_game_server_group`][gamelift_resume_game_server_group]
+#'   - [`resume_game_server_group`][gamelift_resume_game_server_group]
 #' 
-#' -   [`suspend_game_server_group`][gamelift_suspend_game_server_group]
+#'   - [`suspend_game_server_group`][gamelift_suspend_game_server_group]
 #' 
-#' -   [`describe_game_server_instances`][gamelift_describe_game_server_instances]
+#'   - [`describe_game_server_instances`][gamelift_describe_game_server_instances]
 #'
 #' @usage
 #' gamelift_create_game_server_group(GameServerGroupName, RoleArn, MinSize,
@@ -956,21 +956,21 @@ gamelift_create_fleet <- function(Name, Description = NULL, BuildId = NULL, Scri
 #' On-Demand Instances in the game server group. Method options include the
 #' following:
 #' 
-#' -   `SPOT_ONLY` - Only Spot Instances are used in the game server group.
+#'   - `SPOT_ONLY` - Only Spot Instances are used in the game server group.
 #'     If Spot Instances are unavailable or not viable for game hosting,
 #'     the game server group provides no hosting capacity until Spot
 #'     Instances can again be used. Until then, no new instances are
 #'     started, and the existing nonviable Spot Instances are terminated
 #'     (after current gameplay ends) and are not replaced.
 #' 
-#' -   `SPOT_PREFERRED` - (default value) Spot Instances are used whenever
+#'   - `SPOT_PREFERRED` - (default value) Spot Instances are used whenever
 #'     available in the game server group. If Spot Instances are
 #'     unavailable, the game server group continues to provide hosting
 #'     capacity by falling back to On-Demand Instances. Existing nonviable
 #'     Spot Instances are terminated (after current gameplay ends) and are
 #'     replaced with new On-Demand Instances.
 #' 
-#' -   `ON_DEMAND_ONLY` - Only On-Demand Instances are used in the game
+#'   - `ON_DEMAND_ONLY` - Only On-Demand Instances are used in the game
 #'     server group. No Spot Instances are used, even when available, while
 #'     this balancing strategy is in force.
 #' @param GameServerProtectionPolicy A flag that indicates whether instances in the game server group are
@@ -1102,8 +1102,8 @@ gamelift_create_game_server_group <- function(GameServerGroupName, RoleArn, MinS
 #' To create a game session, specify either fleet ID or alias ID and
 #' indicate a maximum number of players to allow in the game session. You
 #' can also provide a name and game-specific properties for this game
-#' session. If successful, a GameSession object is returned containing the
-#' game session properties and other settings you specified.
+#' session. If successful, a <span>GameSession</span> object is returned
+#' containing the game session properties and other settings you specified.
 #' 
 #' **Idempotency tokens.** You can add a token that uniquely identifies
 #' game session requests. This is useful for ensuring that game session
@@ -1129,25 +1129,25 @@ gamelift_create_game_server_group <- function(GameServerGroupName, RoleArn, MinS
 #' 
 #' *Available in Amazon GameLift Local.*
 #' 
-#' -   [`create_game_session`][gamelift_create_game_session]
+#'   - [`create_game_session`][gamelift_create_game_session]
 #' 
-#' -   [`describe_game_sessions`][gamelift_describe_game_sessions]
+#'   - [`describe_game_sessions`][gamelift_describe_game_sessions]
 #' 
-#' -   [`describe_game_session_details`][gamelift_describe_game_session_details]
+#'   - [`describe_game_session_details`][gamelift_describe_game_session_details]
 #' 
-#' -   [`search_game_sessions`][gamelift_search_game_sessions]
+#'   - [`search_game_sessions`][gamelift_search_game_sessions]
 #' 
-#' -   [`update_game_session`][gamelift_update_game_session]
+#'   - [`update_game_session`][gamelift_update_game_session]
 #' 
-#' -   [`get_game_session_log_url`][gamelift_get_game_session_log_url]
+#'   - [`get_game_session_log_url`][gamelift_get_game_session_log_url]
 #' 
-#' -   Game session placements
-#' 
-#'     -   [`start_game_session_placement`][gamelift_start_game_session_placement]
-#' 
-#'     -   [`describe_game_session_placement`][gamelift_describe_game_session_placement]
-#' 
-#'     -   [`stop_game_session_placement`][gamelift_stop_game_session_placement]
+#'   - Game session placements
+#'     
+#'       - [`start_game_session_placement`][gamelift_start_game_session_placement]
+#'     
+#'       - [`describe_game_session_placement`][gamelift_describe_game_session_placement]
+#'     
+#'       - [`stop_game_session_placement`][gamelift_stop_game_session_placement]
 #'
 #' @usage
 #' gamelift_create_game_session(FleetId, AliasId,
@@ -1166,8 +1166,8 @@ gamelift_create_game_server_group <- function(GameServerGroupName, RoleArn, MinS
 #' names do not need to be unique.
 #' @param GameProperties Set of custom properties for a game session, formatted as key:value
 #' pairs. These properties are passed to a game server process in the
-#' GameSession object with a request to start a new game session (see
-#' [Start a Game
+#' <span>GameSession</span> object with a request to start a new game
+#' session (see [Start a Game
 #' Session](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession)).
 #' @param CreatorId A unique identifier for a player or entity creating the game session.
 #' This ID is used to enforce a resource protection policy (if one exists)
@@ -1177,19 +1177,19 @@ gamelift_create_game_server_group <- function(GameServerGroupName, RoleArn, MinS
 #' instead.* Custom string that uniquely identifies a request for a new
 #' game session. Maximum token length is 48 characters. If provided, this
 #' string is included in the new game session's ID. (A game session ARN has
-#' the following format:
-#' `arn:aws:gamelift:<region>::gamesession/<fleet ID>/<custom ID string or idempotency token>`.)
+#' the following format: `arn:aws:gamelift:<region>::gamesession/<fleet
+#' ID>/<custom ID string or idempotency token>`.)
 #' @param IdempotencyToken Custom string that uniquely identifies a request for a new game session.
 #' Maximum token length is 48 characters. If provided, this string is
 #' included in the new game session's ID. (A game session ARN has the
-#' following format:
-#' `arn:aws:gamelift:<region>::gamesession/<fleet ID>/<custom ID string or idempotency token>`.)
-#' Idempotency tokens remain in use for 30 days after a game session has
-#' ended; game session objects are retained for this time period and then
-#' deleted.
+#' following format: `arn:aws:gamelift:<region>::gamesession/<fleet
+#' ID>/<custom ID string or idempotency token>`.) Idempotency tokens remain
+#' in use for 30 days after a game session has ended; game session objects
+#' are retained for this time period and then deleted.
 #' @param GameSessionData Set of custom game session properties, formatted as a single string
-#' value. This data is passed to a game server process in the GameSession
-#' object with a request to start a new game session (see [Start a Game
+#' value. This data is passed to a game server process in the
+#' <span>GameSession</span> object with a request to start a new game
+#' session (see [Start a Game
 #' Session](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession)).
 #'
 #' @return
@@ -1316,13 +1316,13 @@ gamelift_create_game_session <- function(FleetId = NULL, AliasId = NULL, Maximum
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_game_session_queue`][gamelift_create_game_session_queue]
+#'   - [`create_game_session_queue`][gamelift_create_game_session_queue]
 #' 
-#' -   [`describe_game_session_queues`][gamelift_describe_game_session_queues]
+#'   - [`describe_game_session_queues`][gamelift_describe_game_session_queues]
 #' 
-#' -   [`update_game_session_queue`][gamelift_update_game_session_queue]
+#'   - [`update_game_session_queue`][gamelift_update_game_session_queue]
 #' 
-#' -   [`delete_game_session_queue`][gamelift_delete_game_session_queue]
+#'   - [`delete_game_session_queue`][gamelift_delete_game_session_queue]
 #'
 #' @usage
 #' gamelift_create_game_session_queue(Name, TimeoutInSeconds,
@@ -1470,21 +1470,21 @@ gamelift_create_game_session_queue <- function(Name, TimeoutInSeconds = NULL, Pl
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_matchmaking_configuration`][gamelift_create_matchmaking_configuration]
+#'   - [`create_matchmaking_configuration`][gamelift_create_matchmaking_configuration]
 #' 
-#' -   [`describe_matchmaking_configurations`][gamelift_describe_matchmaking_configurations]
+#'   - [`describe_matchmaking_configurations`][gamelift_describe_matchmaking_configurations]
 #' 
-#' -   [`update_matchmaking_configuration`][gamelift_update_matchmaking_configuration]
+#'   - [`update_matchmaking_configuration`][gamelift_update_matchmaking_configuration]
 #' 
-#' -   [`delete_matchmaking_configuration`][gamelift_delete_matchmaking_configuration]
+#'   - [`delete_matchmaking_configuration`][gamelift_delete_matchmaking_configuration]
 #' 
-#' -   [`create_matchmaking_rule_set`][gamelift_create_matchmaking_rule_set]
+#'   - [`create_matchmaking_rule_set`][gamelift_create_matchmaking_rule_set]
 #' 
-#' -   [`describe_matchmaking_rule_sets`][gamelift_describe_matchmaking_rule_sets]
+#'   - [`describe_matchmaking_rule_sets`][gamelift_describe_matchmaking_rule_sets]
 #' 
-#' -   [`validate_matchmaking_rule_set`][gamelift_validate_matchmaking_rule_set]
+#'   - [`validate_matchmaking_rule_set`][gamelift_validate_matchmaking_rule_set]
 #' 
-#' -   [`delete_matchmaking_rule_set`][gamelift_delete_matchmaking_rule_set]
+#'   - [`delete_matchmaking_rule_set`][gamelift_delete_matchmaking_rule_set]
 #'
 #' @usage
 #' gamelift_create_matchmaking_configuration(Name, Description,
@@ -1531,19 +1531,20 @@ gamelift_create_game_session_queue <- function(Name, TimeoutInSeconds = NULL, Pl
 #' configuration.
 #' @param GameProperties A set of custom properties for a game session, formatted as key-value
 #' pairs. These properties are passed to a game server process in the
-#' GameSession object with a request to start a new game session (see
-#' [Start a Game
+#' <span>GameSession</span> object with a request to start a new game
+#' session (see [Start a Game
 #' Session](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession)).
-#' This information is added to the new GameSession object that is created
-#' for a successful match. This parameter is not used if `FlexMatchMode` is
-#' set to `STANDALONE`.
+#' This information is added to the new <span>GameSession</span> object
+#' that is created for a successful match. This parameter is not used if
+#' `FlexMatchMode` is set to `STANDALONE`.
 #' @param GameSessionData A set of custom game session properties, formatted as a single string
-#' value. This data is passed to a game server process in the GameSession
-#' object with a request to start a new game session (see [Start a Game
+#' value. This data is passed to a game server process in the
+#' <span>GameSession</span> object with a request to start a new game
+#' session (see [Start a Game
 #' Session](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession)).
-#' This information is added to the new GameSession object that is created
-#' for a successful match. This parameter is not used if `FlexMatchMode` is
-#' set to `STANDALONE`.
+#' This information is added to the new <span>GameSession</span> object
+#' that is created for a successful match. This parameter is not used if
+#' `FlexMatchMode` is set to `STANDALONE`.
 #' @param BackfillMode The method used to backfill game sessions that are created with this
 #' matchmaking configuration. Specify `MANUAL` when your game manages
 #' backfill requests manually or does not use the match backfill feature.
@@ -1557,12 +1558,12 @@ gamelift_create_game_session_queue <- function(Name, TimeoutInSeconds = NULL, Pl
 #' @param FlexMatchMode Indicates whether this matchmaking configuration is being used with
 #' GameLift hosting or as a standalone matchmaking solution.
 #' 
-#' -   **STANDALONE** - FlexMatch forms matches and returns match
+#'   - **STANDALONE** - FlexMatch forms matches and returns match
 #'     information, including players and team assignments, in a
 #'     [MatchmakingSucceeded](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-events.html#match-events-matchmakingsucceeded)
 #'     event.
 #' 
-#' -   **WITH_QUEUE** - FlexMatch forms matches and uses the specified
+#'   - **WITH_QUEUE** - FlexMatch forms matches and uses the specified
 #'     GameLift queue to start a game session for the match.
 #' @param Tags A list of labels to assign to the new matchmaking configuration
 #' resource. Tags are developer-defined key-value pairs. Tagging AWS
@@ -1671,7 +1672,7 @@ gamelift_create_matchmaking_configuration <- function(Name, Description = NULL, 
 #' the type of match to create, such as the number and size of teams. It
 #' also sets the parameters for acceptable player matches, such as minimum
 #' skill level or character type. A rule set is used by a
-#' MatchmakingConfiguration.
+#' <span>MatchmakingConfiguration</span>.
 #' 
 #' To create a matchmaking rule set, provide unique rule set name and the
 #' rule set body in JSON format. Rule sets must be defined in the same
@@ -1684,32 +1685,32 @@ gamelift_create_matchmaking_configuration <- function(Name, Description = NULL, 
 #' 
 #' **Learn more**
 #' 
-#' -   [Build a Rule
+#'   - [Build a Rule
 #'     Set](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-rulesets.html)
 #' 
-#' -   [Design a
+#'   - [Design a
 #'     Matchmaker](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-configuration.html)
 #' 
-#' -   [Matchmaking with
+#'   - [Matchmaking with
 #'     FlexMatch](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-intro.html)
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_matchmaking_configuration`][gamelift_create_matchmaking_configuration]
+#'   - [`create_matchmaking_configuration`][gamelift_create_matchmaking_configuration]
 #' 
-#' -   [`describe_matchmaking_configurations`][gamelift_describe_matchmaking_configurations]
+#'   - [`describe_matchmaking_configurations`][gamelift_describe_matchmaking_configurations]
 #' 
-#' -   [`update_matchmaking_configuration`][gamelift_update_matchmaking_configuration]
+#'   - [`update_matchmaking_configuration`][gamelift_update_matchmaking_configuration]
 #' 
-#' -   [`delete_matchmaking_configuration`][gamelift_delete_matchmaking_configuration]
+#'   - [`delete_matchmaking_configuration`][gamelift_delete_matchmaking_configuration]
 #' 
-#' -   [`create_matchmaking_rule_set`][gamelift_create_matchmaking_rule_set]
+#'   - [`create_matchmaking_rule_set`][gamelift_create_matchmaking_rule_set]
 #' 
-#' -   [`describe_matchmaking_rule_sets`][gamelift_describe_matchmaking_rule_sets]
+#'   - [`describe_matchmaking_rule_sets`][gamelift_describe_matchmaking_rule_sets]
 #' 
-#' -   [`validate_matchmaking_rule_set`][gamelift_validate_matchmaking_rule_set]
+#'   - [`validate_matchmaking_rule_set`][gamelift_validate_matchmaking_rule_set]
 #' 
-#' -   [`delete_matchmaking_rule_set`][gamelift_delete_matchmaking_rule_set]
+#'   - [`delete_matchmaking_rule_set`][gamelift_delete_matchmaking_rule_set]
 #'
 #' @usage
 #' gamelift_create_matchmaking_rule_set(Name, RuleSetBody, Tags)
@@ -1795,24 +1796,24 @@ gamelift_create_matchmaking_rule_set <- function(Name, RuleSetBody, Tags = NULL)
 #' 
 #' To create a player session, specify a game session ID, player ID, and
 #' optionally a string of player data. If successful, a slot is reserved in
-#' the game session for the player and a new PlayerSession object is
-#' returned. Player sessions cannot be updated.
+#' the game session for the player and a new <span>PlayerSession</span>
+#' object is returned. Player sessions cannot be updated.
 #' 
 #' *Available in Amazon GameLift Local.*
 #' 
-#' -   [`create_player_session`][gamelift_create_player_session]
+#'   - [`create_player_session`][gamelift_create_player_session]
 #' 
-#' -   [`create_player_sessions`][gamelift_create_player_sessions]
+#'   - [`create_player_sessions`][gamelift_create_player_sessions]
 #' 
-#' -   [`describe_player_sessions`][gamelift_describe_player_sessions]
+#'   - [`describe_player_sessions`][gamelift_describe_player_sessions]
 #' 
-#' -   Game session placements
-#' 
-#'     -   [`start_game_session_placement`][gamelift_start_game_session_placement]
-#' 
-#'     -   [`describe_game_session_placement`][gamelift_describe_game_session_placement]
-#' 
-#'     -   [`stop_game_session_placement`][gamelift_stop_game_session_placement]
+#'   - Game session placements
+#'     
+#'       - [`start_game_session_placement`][gamelift_start_game_session_placement]
+#'     
+#'       - [`describe_game_session_placement`][gamelift_describe_game_session_placement]
+#'     
+#'       - [`stop_game_session_placement`][gamelift_stop_game_session_placement]
 #'
 #' @usage
 #' gamelift_create_player_session(GameSessionId, PlayerId, PlayerData)
@@ -1891,23 +1892,24 @@ gamelift_create_player_session <- function(GameSessionId, PlayerId, PlayerData =
 #' To create player sessions, specify a game session ID, a list of player
 #' IDs, and optionally a set of player data strings. If successful, a slot
 #' is reserved in the game session for each player and a set of new
-#' PlayerSession objects is returned. Player sessions cannot be updated.
+#' <span>PlayerSession</span> objects is returned. Player sessions cannot
+#' be updated.
 #' 
 #' *Available in Amazon GameLift Local.*
 #' 
-#' -   [`create_player_session`][gamelift_create_player_session]
+#'   - [`create_player_session`][gamelift_create_player_session]
 #' 
-#' -   [`create_player_sessions`][gamelift_create_player_sessions]
+#'   - [`create_player_sessions`][gamelift_create_player_sessions]
 #' 
-#' -   [`describe_player_sessions`][gamelift_describe_player_sessions]
+#'   - [`describe_player_sessions`][gamelift_describe_player_sessions]
 #' 
-#' -   Game session placements
-#' 
-#'     -   [`start_game_session_placement`][gamelift_start_game_session_placement]
-#' 
-#'     -   [`describe_game_session_placement`][gamelift_describe_game_session_placement]
-#' 
-#'     -   [`stop_game_session_placement`][gamelift_stop_game_session_placement]
+#'   - Game session placements
+#'     
+#'       - [`start_game_session_placement`][gamelift_start_game_session_placement]
+#'     
+#'       - [`describe_game_session_placement`][gamelift_describe_game_session_placement]
+#'     
+#'       - [`stop_game_session_placement`][gamelift_stop_game_session_placement]
 #'
 #' @usage
 #' gamelift_create_player_sessions(GameSessionId, PlayerIds, PlayerDataMap)
@@ -1994,10 +1996,10 @@ gamelift_create_player_sessions <- function(GameSessionId, PlayerIds, PlayerData
 #' into a single file. You can pull the zip file from either of these
 #' locations:
 #' 
-#' -   A locally available directory. Use the *ZipFile* parameter for this
+#'   - A locally available directory. Use the *ZipFile* parameter for this
 #'     option.
 #' 
-#' -   An Amazon Simple Storage Service (Amazon S3) bucket under your AWS
+#'   - An Amazon Simple Storage Service (Amazon S3) bucket under your AWS
 #'     account. Use the *StorageLocation* parameter for this option. You'll
 #'     need to have an Identity Access Management (IAM) role that allows
 #'     the Amazon GameLift service to access your S3 bucket.
@@ -2019,15 +2021,15 @@ gamelift_create_player_sessions <- function(GameSessionId, PlayerIds, PlayerData
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_script`][gamelift_create_script]
+#'   - [`create_script`][gamelift_create_script]
 #' 
-#' -   [`list_scripts`][gamelift_list_scripts]
+#'   - [`list_scripts`][gamelift_list_scripts]
 #' 
-#' -   [`describe_script`][gamelift_describe_script]
+#'   - [`describe_script`][gamelift_describe_script]
 #' 
-#' -   [`update_script`][gamelift_update_script]
+#'   - [`update_script`][gamelift_update_script]
 #' 
-#' -   [`delete_script`][gamelift_delete_script]
+#'   - [`delete_script`][gamelift_delete_script]
 #'
 #' @usage
 #' gamelift_create_script(Name, Version, StorageLocation, ZipFile, Tags)
@@ -2055,8 +2057,8 @@ gamelift_create_player_sessions <- function(GameSessionId, PlayerIds, PlayerData
 #' 
 #' When using the AWS CLI tool to create a script, this parameter is set to
 #' the zip file name. It must be prepended with the string "fileb://" to
-#' indicate that the file data is a binary object. For example:
-#' `--zip-file fileb://myRealtimeScript.zip`.
+#' indicate that the file data is a binary object. For example: `--zip-file
+#' fileb://myRealtimeScript.zip`.
 #' @param Tags A list of labels to assign to the new script resource. Tags are
 #' developer-defined key-value pairs. Tagging AWS resources are useful for
 #' resource management, access management and cost allocation. For more
@@ -2173,17 +2175,17 @@ gamelift_create_script <- function(Name = NULL, Version = NULL, StorageLocation 
 #' You must create or delete the peering connection while the authorization
 #' is valid.
 #' 
-#' -   [`create_vpc_peering_authorization`][gamelift_create_vpc_peering_authorization]
+#'   - [`create_vpc_peering_authorization`][gamelift_create_vpc_peering_authorization]
 #' 
-#' -   [`describe_vpc_peering_authorizations`][gamelift_describe_vpc_peering_authorizations]
+#'   - [`describe_vpc_peering_authorizations`][gamelift_describe_vpc_peering_authorizations]
 #' 
-#' -   [`delete_vpc_peering_authorization`][gamelift_delete_vpc_peering_authorization]
+#'   - [`delete_vpc_peering_authorization`][gamelift_delete_vpc_peering_authorization]
 #' 
-#' -   [`create_vpc_peering_connection`][gamelift_create_vpc_peering_connection]
+#'   - [`create_vpc_peering_connection`][gamelift_create_vpc_peering_connection]
 #' 
-#' -   [`describe_vpc_peering_connections`][gamelift_describe_vpc_peering_connections]
+#'   - [`describe_vpc_peering_connections`][gamelift_describe_vpc_peering_connections]
 #' 
-#' -   [`delete_vpc_peering_connection`][gamelift_delete_vpc_peering_connection]
+#'   - [`delete_vpc_peering_connection`][gamelift_delete_vpc_peering_connection]
 #'
 #' @usage
 #' gamelift_create_vpc_peering_authorization(GameLiftAwsAccountId,
@@ -2194,10 +2196,9 @@ gamelift_create_script <- function(Name = NULL, Version = NULL, StorageLocation 
 #' Management Console under account settings.
 #' @param PeerVpcId &#91;required&#93; A unique identifier for a VPC with resources to be accessed by your
 #' Amazon GameLift fleet. The VPC must be in the same Region where your
-#' fleet is deployed. Look up a VPC ID using the [VPC
-#' Dashboard](https://console.aws.amazon.com/vpc/home) in the AWS
-#' Management Console. Learn more about VPC peering in [VPC Peering with
-#' Amazon GameLift
+#' fleet is deployed. Look up a VPC ID using the <span>VPC Dashboard</span>
+#' in the AWS Management Console. Learn more about VPC peering in [VPC
+#' Peering with Amazon GameLift
 #' Fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/vpc-peering.html).
 #'
 #' @return
@@ -2272,24 +2273,24 @@ gamelift_create_vpc_peering_authorization <- function(GameLiftAwsAccountId, Peer
 #' following values: (1) The ID of the fleet you want to be enable a VPC
 #' peering connection for; (2) The AWS account with the VPC that you want
 #' to peer with; and (3) The ID of the VPC you want to peer with. This
-#' operation is asynchronous. If successful, a VpcPeeringConnection request
-#' is created. You can use continuous polling to track the request's status
-#' using
+#' operation is asynchronous. If successful, a
+#' <span>VpcPeeringConnection</span> request is created. You can use
+#' continuous polling to track the request's status using
 #' [`describe_vpc_peering_connections`][gamelift_describe_vpc_peering_connections],
 #' or by monitoring fleet events for success or failure using
 #' [`describe_fleet_events`][gamelift_describe_fleet_events].
 #' 
-#' -   [`create_vpc_peering_authorization`][gamelift_create_vpc_peering_authorization]
+#'   - [`create_vpc_peering_authorization`][gamelift_create_vpc_peering_authorization]
 #' 
-#' -   [`describe_vpc_peering_authorizations`][gamelift_describe_vpc_peering_authorizations]
+#'   - [`describe_vpc_peering_authorizations`][gamelift_describe_vpc_peering_authorizations]
 #' 
-#' -   [`delete_vpc_peering_authorization`][gamelift_delete_vpc_peering_authorization]
+#'   - [`delete_vpc_peering_authorization`][gamelift_delete_vpc_peering_authorization]
 #' 
-#' -   [`create_vpc_peering_connection`][gamelift_create_vpc_peering_connection]
+#'   - [`create_vpc_peering_connection`][gamelift_create_vpc_peering_connection]
 #' 
-#' -   [`describe_vpc_peering_connections`][gamelift_describe_vpc_peering_connections]
+#'   - [`describe_vpc_peering_connections`][gamelift_describe_vpc_peering_connections]
 #' 
-#' -   [`delete_vpc_peering_connection`][gamelift_delete_vpc_peering_connection]
+#'   - [`delete_vpc_peering_connection`][gamelift_delete_vpc_peering_connection]
 #'
 #' @usage
 #' gamelift_create_vpc_peering_connection(FleetId, PeerVpcAwsAccountId,
@@ -2302,10 +2303,9 @@ gamelift_create_vpc_peering_authorization <- function(GameLiftAwsAccountId, Peer
 #' the AWS Management Console under account settings.
 #' @param PeerVpcId &#91;required&#93; A unique identifier for a VPC with resources to be accessed by your
 #' Amazon GameLift fleet. The VPC must be in the same Region where your
-#' fleet is deployed. Look up a VPC ID using the [VPC
-#' Dashboard](https://console.aws.amazon.com/vpc/home) in the AWS
-#' Management Console. Learn more about VPC peering in [VPC Peering with
-#' Amazon GameLift
+#' fleet is deployed. Look up a VPC ID using the <span>VPC Dashboard</span>
+#' in the AWS Management Console. Learn more about VPC peering in [VPC
+#' Peering with Amazon GameLift
 #' Fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/vpc-peering.html).
 #'
 #' @return
@@ -2348,17 +2348,17 @@ gamelift_create_vpc_peering_connection <- function(FleetId, PeerVpcAwsAccountId,
 #' receive an error. To delete an alias, specify the alias ID to be
 #' deleted.
 #' 
-#' -   [`create_alias`][gamelift_create_alias]
+#'   - [`create_alias`][gamelift_create_alias]
 #' 
-#' -   [`list_aliases`][gamelift_list_aliases]
+#'   - [`list_aliases`][gamelift_list_aliases]
 #' 
-#' -   [`describe_alias`][gamelift_describe_alias]
+#'   - [`describe_alias`][gamelift_describe_alias]
 #' 
-#' -   [`update_alias`][gamelift_update_alias]
+#'   - [`update_alias`][gamelift_update_alias]
 #' 
-#' -   [`delete_alias`][gamelift_delete_alias]
+#'   - [`delete_alias`][gamelift_delete_alias]
 #' 
-#' -   [`resolve_alias`][gamelift_resolve_alias]
+#'   - [`resolve_alias`][gamelift_resolve_alias]
 #'
 #' @usage
 #' gamelift_delete_alias(AliasId)
@@ -2413,15 +2413,15 @@ gamelift_delete_alias <- function(AliasId) {
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_build`][gamelift_create_build]
+#'   - [`create_build`][gamelift_create_build]
 #' 
-#' -   [`list_builds`][gamelift_list_builds]
+#'   - [`list_builds`][gamelift_list_builds]
 #' 
-#' -   [`describe_build`][gamelift_describe_build]
+#'   - [`describe_build`][gamelift_describe_build]
 #' 
-#' -   [`update_build`][gamelift_update_build]
+#'   - [`update_build`][gamelift_update_build]
 #' 
-#' -   [`delete_build`][gamelift_delete_build]
+#'   - [`delete_build`][gamelift_delete_build]
 #'
 #' @usage
 #' gamelift_delete_build(BuildId)
@@ -2482,17 +2482,17 @@ gamelift_delete_build <- function(BuildId) {
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_fleet`][gamelift_create_fleet]
+#'   - [`create_fleet`][gamelift_create_fleet]
 #' 
-#' -   [`list_fleets`][gamelift_list_fleets]
+#'   - [`list_fleets`][gamelift_list_fleets]
 #' 
-#' -   [`delete_fleet`][gamelift_delete_fleet]
+#'   - [`delete_fleet`][gamelift_delete_fleet]
 #' 
-#' -   [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
+#'   - [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
 #' 
-#' -   [`update_fleet_attributes`][gamelift_update_fleet_attributes]
+#'   - [`update_fleet_attributes`][gamelift_update_fleet_attributes]
 #' 
-#' -   [`start_fleet_actions`][gamelift_start_fleet_actions] or
+#'   - [`start_fleet_actions`][gamelift_start_fleet_actions] or
 #'     [`stop_fleet_actions`][gamelift_stop_fleet_actions]
 #'
 #' @usage
@@ -2531,8 +2531,8 @@ gamelift_delete_fleet <- function(FleetId) {
 }
 .gamelift$operations$delete_fleet <- gamelift_delete_fleet
 
-#' This operation is used with the Amazon GameLift FleetIQ solution and
-#' game server groups
+#' THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND
+#' GAME SERVER GROUPS
 #'
 #' @description
 #' **This operation is used with the Amazon GameLift FleetIQ solution and
@@ -2543,11 +2543,11 @@ gamelift_delete_fleet <- function(FleetId) {
 #' impacted when deleting the game server group. Depending on the type of
 #' delete operation selected, this operation might affect these resources:
 #' 
-#' -   The game server group
+#'   - The game server group
 #' 
-#' -   The corresponding Auto Scaling group
+#'   - The corresponding Auto Scaling group
 #' 
-#' -   All game servers that are currently running in the group
+#'   - All game servers that are currently running in the group
 #' 
 #' To delete a game server group, identify the game server group to delete
 #' and specify the type of delete operation to initiate. Game server groups
@@ -2570,38 +2570,38 @@ gamelift_delete_fleet <- function(FleetId) {
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_game_server_group`][gamelift_create_game_server_group]
+#'   - [`create_game_server_group`][gamelift_create_game_server_group]
 #' 
-#' -   [`list_game_server_groups`][gamelift_list_game_server_groups]
+#'   - [`list_game_server_groups`][gamelift_list_game_server_groups]
 #' 
-#' -   [`describe_game_server_group`][gamelift_describe_game_server_group]
+#'   - [`describe_game_server_group`][gamelift_describe_game_server_group]
 #' 
-#' -   [`update_game_server_group`][gamelift_update_game_server_group]
+#'   - [`update_game_server_group`][gamelift_update_game_server_group]
 #' 
-#' -   [`delete_game_server_group`][gamelift_delete_game_server_group]
+#'   - [`delete_game_server_group`][gamelift_delete_game_server_group]
 #' 
-#' -   [`resume_game_server_group`][gamelift_resume_game_server_group]
+#'   - [`resume_game_server_group`][gamelift_resume_game_server_group]
 #' 
-#' -   [`suspend_game_server_group`][gamelift_suspend_game_server_group]
+#'   - [`suspend_game_server_group`][gamelift_suspend_game_server_group]
 #' 
-#' -   [`describe_game_server_instances`][gamelift_describe_game_server_instances]
+#'   - [`describe_game_server_instances`][gamelift_describe_game_server_instances]
 #'
 #' @usage
 #' gamelift_delete_game_server_group(GameServerGroupName, DeleteOption)
 #'
 #' @param GameServerGroupName &#91;required&#93; A unique identifier for the game server group. Use either the
-#' GameServerGroup name or ARN value.
+#' <span>GameServerGroup</span> name or ARN value.
 #' @param DeleteOption The type of delete to perform. Options include the following:
 #' 
-#' -   `SAFE_DELETE` – (default) Terminates the game server group and EC2
+#'   - `SAFE_DELETE` – (default) Terminates the game server group and EC2
 #'     Auto Scaling group only when it has no game servers that are in
 #'     `UTILIZED` status.
 #' 
-#' -   `FORCE_DELETE` – Terminates the game server group, including all
+#'   - `FORCE_DELETE` – Terminates the game server group, including all
 #'     active game servers regardless of their utilization status, and the
 #'     EC2 Auto Scaling group.
 #' 
-#' -   `RETAIN` – Does a safe delete of the game server group but retains
+#'   - `RETAIN` – Does a safe delete of the game server group but retains
 #'     the EC2 Auto Scaling group as is.
 #'
 #' @return
@@ -2680,13 +2680,13 @@ gamelift_delete_game_server_group <- function(GameServerGroupName, DeleteOption 
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_game_session_queue`][gamelift_create_game_session_queue]
+#'   - [`create_game_session_queue`][gamelift_create_game_session_queue]
 #' 
-#' -   [`describe_game_session_queues`][gamelift_describe_game_session_queues]
+#'   - [`describe_game_session_queues`][gamelift_describe_game_session_queues]
 #' 
-#' -   [`update_game_session_queue`][gamelift_update_game_session_queue]
+#'   - [`update_game_session_queue`][gamelift_update_game_session_queue]
 #' 
-#' -   [`delete_game_session_queue`][gamelift_delete_game_session_queue]
+#'   - [`delete_game_session_queue`][gamelift_delete_game_session_queue]
 #'
 #' @usage
 #' gamelift_delete_game_session_queue(Name)
@@ -2734,21 +2734,21 @@ gamelift_delete_game_session_queue <- function(Name) {
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_matchmaking_configuration`][gamelift_create_matchmaking_configuration]
+#'   - [`create_matchmaking_configuration`][gamelift_create_matchmaking_configuration]
 #' 
-#' -   [`describe_matchmaking_configurations`][gamelift_describe_matchmaking_configurations]
+#'   - [`describe_matchmaking_configurations`][gamelift_describe_matchmaking_configurations]
 #' 
-#' -   [`update_matchmaking_configuration`][gamelift_update_matchmaking_configuration]
+#'   - [`update_matchmaking_configuration`][gamelift_update_matchmaking_configuration]
 #' 
-#' -   [`delete_matchmaking_configuration`][gamelift_delete_matchmaking_configuration]
+#'   - [`delete_matchmaking_configuration`][gamelift_delete_matchmaking_configuration]
 #' 
-#' -   [`create_matchmaking_rule_set`][gamelift_create_matchmaking_rule_set]
+#'   - [`create_matchmaking_rule_set`][gamelift_create_matchmaking_rule_set]
 #' 
-#' -   [`describe_matchmaking_rule_sets`][gamelift_describe_matchmaking_rule_sets]
+#'   - [`describe_matchmaking_rule_sets`][gamelift_describe_matchmaking_rule_sets]
 #' 
-#' -   [`validate_matchmaking_rule_set`][gamelift_validate_matchmaking_rule_set]
+#'   - [`validate_matchmaking_rule_set`][gamelift_validate_matchmaking_rule_set]
 #' 
-#' -   [`delete_matchmaking_rule_set`][gamelift_delete_matchmaking_rule_set]
+#'   - [`delete_matchmaking_rule_set`][gamelift_delete_matchmaking_rule_set]
 #'
 #' @usage
 #' gamelift_delete_matchmaking_configuration(Name)
@@ -2795,26 +2795,26 @@ gamelift_delete_matchmaking_configuration <- function(Name) {
 #' 
 #' **Learn more**
 #' 
-#' -   [Build a Rule
+#'   - [Build a Rule
 #'     Set](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-rulesets.html)
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_matchmaking_configuration`][gamelift_create_matchmaking_configuration]
+#'   - [`create_matchmaking_configuration`][gamelift_create_matchmaking_configuration]
 #' 
-#' -   [`describe_matchmaking_configurations`][gamelift_describe_matchmaking_configurations]
+#'   - [`describe_matchmaking_configurations`][gamelift_describe_matchmaking_configurations]
 #' 
-#' -   [`update_matchmaking_configuration`][gamelift_update_matchmaking_configuration]
+#'   - [`update_matchmaking_configuration`][gamelift_update_matchmaking_configuration]
 #' 
-#' -   [`delete_matchmaking_configuration`][gamelift_delete_matchmaking_configuration]
+#'   - [`delete_matchmaking_configuration`][gamelift_delete_matchmaking_configuration]
 #' 
-#' -   [`create_matchmaking_rule_set`][gamelift_create_matchmaking_rule_set]
+#'   - [`create_matchmaking_rule_set`][gamelift_create_matchmaking_rule_set]
 #' 
-#' -   [`describe_matchmaking_rule_sets`][gamelift_describe_matchmaking_rule_sets]
+#'   - [`describe_matchmaking_rule_sets`][gamelift_describe_matchmaking_rule_sets]
 #' 
-#' -   [`validate_matchmaking_rule_set`][gamelift_validate_matchmaking_rule_set]
+#'   - [`validate_matchmaking_rule_set`][gamelift_validate_matchmaking_rule_set]
 #' 
-#' -   [`delete_matchmaking_rule_set`][gamelift_delete_matchmaking_rule_set]
+#'   - [`delete_matchmaking_rule_set`][gamelift_delete_matchmaking_rule_set]
 #'
 #' @usage
 #' gamelift_delete_matchmaking_rule_set(Name)
@@ -2865,28 +2865,28 @@ gamelift_delete_matchmaking_rule_set <- function(Name) {
 #' [`stop_fleet_actions`][gamelift_stop_fleet_actions]. This operation
 #' suspends all policies for the fleet.
 #' 
-#' -   [`describe_fleet_capacity`][gamelift_describe_fleet_capacity]
+#'   - [`describe_fleet_capacity`][gamelift_describe_fleet_capacity]
 #' 
-#' -   [`update_fleet_capacity`][gamelift_update_fleet_capacity]
+#'   - [`update_fleet_capacity`][gamelift_update_fleet_capacity]
 #' 
-#' -   [`describe_ec2_instance_limits`][gamelift_describe_ec2_instance_limits]
+#'   - [`describe_ec2_instance_limits`][gamelift_describe_ec2_instance_limits]
 #' 
-#' -   Manage scaling policies:
-#' 
-#'     -   [`put_scaling_policy`][gamelift_put_scaling_policy]
+#'   - Manage scaling policies:
+#'     
+#'       - [`put_scaling_policy`][gamelift_put_scaling_policy]
+#'         (auto-scaling)
+#'     
+#'       - [`describe_scaling_policies`][gamelift_describe_scaling_policies]
+#'         (auto-scaling)
+#'     
+#'       - [`delete_scaling_policy`][gamelift_delete_scaling_policy]
 #'         (auto-scaling)
 #' 
-#'     -   [`describe_scaling_policies`][gamelift_describe_scaling_policies]
-#'         (auto-scaling)
-#' 
-#'     -   [`delete_scaling_policy`][gamelift_delete_scaling_policy]
-#'         (auto-scaling)
-#' 
-#' -   Manage fleet actions:
-#' 
-#'     -   [`start_fleet_actions`][gamelift_start_fleet_actions]
-#' 
-#'     -   [`stop_fleet_actions`][gamelift_stop_fleet_actions]
+#'   - Manage fleet actions:
+#'     
+#'       - [`start_fleet_actions`][gamelift_start_fleet_actions]
+#'     
+#'       - [`stop_fleet_actions`][gamelift_stop_fleet_actions]
 #'
 #' @usage
 #' gamelift_delete_scaling_policy(Name, FleetId)
@@ -2947,15 +2947,15 @@ gamelift_delete_scaling_policy <- function(Name, FleetId) {
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_script`][gamelift_create_script]
+#'   - [`create_script`][gamelift_create_script]
 #' 
-#' -   [`list_scripts`][gamelift_list_scripts]
+#'   - [`list_scripts`][gamelift_list_scripts]
 #' 
-#' -   [`describe_script`][gamelift_describe_script]
+#'   - [`describe_script`][gamelift_describe_script]
 #' 
-#' -   [`update_script`][gamelift_update_script]
+#'   - [`update_script`][gamelift_update_script]
 #' 
-#' -   [`delete_script`][gamelift_delete_script]
+#'   - [`delete_script`][gamelift_delete_script]
 #'
 #' @usage
 #' gamelift_delete_script(ScriptId)
@@ -3000,17 +3000,17 @@ gamelift_delete_script <- function(ScriptId) {
 #' you need to delete an existing VPC peering connection, call
 #' [`delete_vpc_peering_connection`][gamelift_delete_vpc_peering_connection].
 #' 
-#' -   [`create_vpc_peering_authorization`][gamelift_create_vpc_peering_authorization]
+#'   - [`create_vpc_peering_authorization`][gamelift_create_vpc_peering_authorization]
 #' 
-#' -   [`describe_vpc_peering_authorizations`][gamelift_describe_vpc_peering_authorizations]
+#'   - [`describe_vpc_peering_authorizations`][gamelift_describe_vpc_peering_authorizations]
 #' 
-#' -   [`delete_vpc_peering_authorization`][gamelift_delete_vpc_peering_authorization]
+#'   - [`delete_vpc_peering_authorization`][gamelift_delete_vpc_peering_authorization]
 #' 
-#' -   [`create_vpc_peering_connection`][gamelift_create_vpc_peering_connection]
+#'   - [`create_vpc_peering_connection`][gamelift_create_vpc_peering_connection]
 #' 
-#' -   [`describe_vpc_peering_connections`][gamelift_describe_vpc_peering_connections]
+#'   - [`describe_vpc_peering_connections`][gamelift_describe_vpc_peering_connections]
 #' 
-#' -   [`delete_vpc_peering_connection`][gamelift_delete_vpc_peering_connection]
+#'   - [`delete_vpc_peering_connection`][gamelift_delete_vpc_peering_connection]
 #'
 #' @usage
 #' gamelift_delete_vpc_peering_authorization(GameLiftAwsAccountId,
@@ -3021,10 +3021,9 @@ gamelift_delete_script <- function(ScriptId) {
 #' Management Console under account settings.
 #' @param PeerVpcId &#91;required&#93; A unique identifier for a VPC with resources to be accessed by your
 #' Amazon GameLift fleet. The VPC must be in the same Region where your
-#' fleet is deployed. Look up a VPC ID using the [VPC
-#' Dashboard](https://console.aws.amazon.com/vpc/home) in the AWS
-#' Management Console. Learn more about VPC peering in [VPC Peering with
-#' Amazon GameLift
+#' fleet is deployed. Look up a VPC ID using the <span>VPC Dashboard</span>
+#' in the AWS Management Console. Learn more about VPC peering in [VPC
+#' Peering with Amazon GameLift
 #' Fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/vpc-peering.html).
 #'
 #' @return
@@ -3073,17 +3072,17 @@ gamelift_delete_vpc_peering_authorization <- function(GameLiftAwsAccountId, Peer
 #' connection to delete by the connection ID and fleet ID. If successful,
 #' the connection is removed.
 #' 
-#' -   [`create_vpc_peering_authorization`][gamelift_create_vpc_peering_authorization]
+#'   - [`create_vpc_peering_authorization`][gamelift_create_vpc_peering_authorization]
 #' 
-#' -   [`describe_vpc_peering_authorizations`][gamelift_describe_vpc_peering_authorizations]
+#'   - [`describe_vpc_peering_authorizations`][gamelift_describe_vpc_peering_authorizations]
 #' 
-#' -   [`delete_vpc_peering_authorization`][gamelift_delete_vpc_peering_authorization]
+#'   - [`delete_vpc_peering_authorization`][gamelift_delete_vpc_peering_authorization]
 #' 
-#' -   [`create_vpc_peering_connection`][gamelift_create_vpc_peering_connection]
+#'   - [`create_vpc_peering_connection`][gamelift_create_vpc_peering_connection]
 #' 
-#' -   [`describe_vpc_peering_connections`][gamelift_describe_vpc_peering_connections]
+#'   - [`describe_vpc_peering_connections`][gamelift_describe_vpc_peering_connections]
 #' 
-#' -   [`delete_vpc_peering_connection`][gamelift_delete_vpc_peering_connection]
+#'   - [`delete_vpc_peering_connection`][gamelift_delete_vpc_peering_connection]
 #'
 #' @usage
 #' gamelift_delete_vpc_peering_connection(FleetId, VpcPeeringConnectionId)
@@ -3092,7 +3091,8 @@ gamelift_delete_vpc_peering_authorization <- function(GameLiftAwsAccountId, Peer
 #' fleet referenced in the VPC peering connection record. You can use
 #' either the fleet ID or ARN value.
 #' @param VpcPeeringConnectionId &#91;required&#93; A unique identifier for a VPC peering connection. This value is included
-#' in the VpcPeeringConnection object, which can be retrieved by calling
+#' in the <span>VpcPeeringConnection</span> object, which can be retrieved
+#' by calling
 #' [`describe_vpc_peering_connections`][gamelift_describe_vpc_peering_connections].
 #'
 #' @return
@@ -3126,8 +3126,8 @@ gamelift_delete_vpc_peering_connection <- function(FleetId, VpcPeeringConnection
 }
 .gamelift$operations$delete_vpc_peering_connection <- gamelift_delete_vpc_peering_connection
 
-#' This operation is used with the Amazon GameLift FleetIQ solution and
-#' game server groups
+#' THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND
+#' GAME SERVER GROUPS
 #'
 #' @description
 #' **This operation is used with the Amazon GameLift FleetIQ solution and
@@ -3148,23 +3148,23 @@ gamelift_delete_vpc_peering_connection <- function(FleetId, VpcPeeringConnection
 #' 
 #' **Related operations**
 #' 
-#' -   [`register_game_server`][gamelift_register_game_server]
+#'   - [`register_game_server`][gamelift_register_game_server]
 #' 
-#' -   [`list_game_servers`][gamelift_list_game_servers]
+#'   - [`list_game_servers`][gamelift_list_game_servers]
 #' 
-#' -   [`claim_game_server`][gamelift_claim_game_server]
+#'   - [`claim_game_server`][gamelift_claim_game_server]
 #' 
-#' -   [`describe_game_server`][gamelift_describe_game_server]
+#'   - [`describe_game_server`][gamelift_describe_game_server]
 #' 
-#' -   [`update_game_server`][gamelift_update_game_server]
+#'   - [`update_game_server`][gamelift_update_game_server]
 #' 
-#' -   [`deregister_game_server`][gamelift_deregister_game_server]
+#'   - [`deregister_game_server`][gamelift_deregister_game_server]
 #'
 #' @usage
 #' gamelift_deregister_game_server(GameServerGroupName, GameServerId)
 #'
 #' @param GameServerGroupName &#91;required&#93; A unique identifier for the game server group where the game server is
-#' running. Use either the GameServerGroup name or ARN value.
+#' running. Use either the <span>GameServerGroup</span> name or ARN value.
 #' @param GameServerId &#91;required&#93; A custom string that uniquely identifies the game server to deregister.
 #'
 #' @return
@@ -3208,17 +3208,17 @@ gamelift_deregister_game_server <- function(GameServerGroupName, GameServerId) {
 #' To get alias properties, specify the alias ID. If successful, the
 #' requested alias record is returned.
 #' 
-#' -   [`create_alias`][gamelift_create_alias]
+#'   - [`create_alias`][gamelift_create_alias]
 #' 
-#' -   [`list_aliases`][gamelift_list_aliases]
+#'   - [`list_aliases`][gamelift_list_aliases]
 #' 
-#' -   [`describe_alias`][gamelift_describe_alias]
+#'   - [`describe_alias`][gamelift_describe_alias]
 #' 
-#' -   [`update_alias`][gamelift_update_alias]
+#'   - [`update_alias`][gamelift_update_alias]
 #' 
-#' -   [`delete_alias`][gamelift_delete_alias]
+#'   - [`delete_alias`][gamelift_delete_alias]
 #' 
-#' -   [`resolve_alias`][gamelift_resolve_alias]
+#'   - [`resolve_alias`][gamelift_resolve_alias]
 #'
 #' @usage
 #' gamelift_describe_alias(AliasId)
@@ -3291,15 +3291,15 @@ gamelift_describe_alias <- function(AliasId) {
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_build`][gamelift_create_build]
+#'   - [`create_build`][gamelift_create_build]
 #' 
-#' -   [`list_builds`][gamelift_list_builds]
+#'   - [`list_builds`][gamelift_list_builds]
 #' 
-#' -   [`describe_build`][gamelift_describe_build]
+#'   - [`describe_build`][gamelift_describe_build]
 #' 
-#' -   [`update_build`][gamelift_update_build]
+#'   - [`update_build`][gamelift_update_build]
 #' 
-#' -   [`delete_build`][gamelift_delete_build]
+#'   - [`delete_build`][gamelift_delete_build]
 #'
 #' @usage
 #' gamelift_describe_build(BuildId)
@@ -3358,9 +3358,9 @@ gamelift_describe_build <- function(BuildId) {
 #' @description
 #' Retrieves the following information for the specified EC2 instance type:
 #' 
-#' -   Maximum number of instances allowed per AWS account (service limit).
+#'   - Maximum number of instances allowed per AWS account (service limit).
 #' 
-#' -   Current usage for the AWS account.
+#'   - Current usage for the AWS account.
 #' 
 #' To learn more about the capabilities of each instance type, see [Amazon
 #' EC2 Instance Types](https://aws.amazon.com/ec2/instance-types/). Note
@@ -3373,17 +3373,17 @@ gamelift_describe_build <- function(BuildId) {
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_fleet`][gamelift_create_fleet]
+#'   - [`create_fleet`][gamelift_create_fleet]
 #' 
-#' -   [`list_fleets`][gamelift_list_fleets]
+#'   - [`list_fleets`][gamelift_list_fleets]
 #' 
-#' -   [`delete_fleet`][gamelift_delete_fleet]
+#'   - [`delete_fleet`][gamelift_delete_fleet]
 #' 
-#' -   [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
+#'   - [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
 #' 
-#' -   [`update_fleet_attributes`][gamelift_update_fleet_attributes]
+#'   - [`update_fleet_attributes`][gamelift_update_fleet_attributes]
 #' 
-#' -   [`start_fleet_actions`][gamelift_start_fleet_actions] or
+#'   - [`start_fleet_actions`][gamelift_start_fleet_actions] or
 #'     [`stop_fleet_actions`][gamelift_stop_fleet_actions]
 #'
 #' @usage
@@ -3449,8 +3449,8 @@ gamelift_describe_ec2_instance_limits <- function(EC2InstanceType = NULL) {
 #' fleet ARNs. To get attributes for all fleets, do not specify a fleet
 #' identifier. When requesting attributes for multiple fleets, use the
 #' pagination parameters to retrieve results as a set of sequential pages.
-#' If successful, a FleetAttributes object is returned for each fleet
-#' requested, unless the fleet identifier is not found.
+#' If successful, a <span>FleetAttributes</span> object is returned for
+#' each fleet requested, unless the fleet identifier is not found.
 #' 
 #' Some API operations may limit the number of fleet IDs allowed in one
 #' request. If a request exceeds this limit, the request fails and the
@@ -3463,31 +3463,31 @@ gamelift_describe_ec2_instance_limits <- function(EC2InstanceType = NULL) {
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_fleet`][gamelift_create_fleet]
+#'   - [`create_fleet`][gamelift_create_fleet]
 #' 
-#' -   [`list_fleets`][gamelift_list_fleets]
+#'   - [`list_fleets`][gamelift_list_fleets]
 #' 
-#' -   [`delete_fleet`][gamelift_delete_fleet]
+#'   - [`delete_fleet`][gamelift_delete_fleet]
 #' 
-#' -   Describe fleets:
+#'   - Describe fleets:
+#'     
+#'       - [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
+#'     
+#'       - [`describe_fleet_capacity`][gamelift_describe_fleet_capacity]
+#'     
+#'       - [`describe_fleet_port_settings`][gamelift_describe_fleet_port_settings]
+#'     
+#'       - [`describe_fleet_utilization`][gamelift_describe_fleet_utilization]
+#'     
+#'       - [`describe_runtime_configuration`][gamelift_describe_runtime_configuration]
+#'     
+#'       - [`describe_ec2_instance_limits`][gamelift_describe_ec2_instance_limits]
+#'     
+#'       - [`describe_fleet_events`][gamelift_describe_fleet_events]
 #' 
-#'     -   [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
+#'   - [`update_fleet_attributes`][gamelift_update_fleet_attributes]
 #' 
-#'     -   [`describe_fleet_capacity`][gamelift_describe_fleet_capacity]
-#' 
-#'     -   [`describe_fleet_port_settings`][gamelift_describe_fleet_port_settings]
-#' 
-#'     -   [`describe_fleet_utilization`][gamelift_describe_fleet_utilization]
-#' 
-#'     -   [`describe_runtime_configuration`][gamelift_describe_runtime_configuration]
-#' 
-#'     -   [`describe_ec2_instance_limits`][gamelift_describe_ec2_instance_limits]
-#' 
-#'     -   [`describe_fleet_events`][gamelift_describe_fleet_events]
-#' 
-#' -   [`update_fleet_attributes`][gamelift_update_fleet_attributes]
-#' 
-#' -   [`start_fleet_actions`][gamelift_start_fleet_actions] or
+#'   - [`start_fleet_actions`][gamelift_start_fleet_actions] or
 #'     [`stop_fleet_actions`][gamelift_stop_fleet_actions]
 #'
 #' @usage
@@ -3600,9 +3600,9 @@ gamelift_describe_fleet_attributes <- function(FleetIds = NULL, Limit = NULL, Ne
 #' You can request capacity for all fleets or specify a list of one or more
 #' fleet identifiers. When requesting multiple fleets, use the pagination
 #' parameters to retrieve results as a set of sequential pages. If
-#' successful, a FleetCapacity object is returned for each requested fleet
-#' ID. When a list of fleet IDs is provided, attribute objects are returned
-#' only for fleets that currently exist.
+#' successful, a <span>FleetCapacity</span> object is returned for each
+#' requested fleet ID. When a list of fleet IDs is provided, attribute
+#' objects are returned only for fleets that currently exist.
 #' 
 #' Some API operations may limit the number of fleet IDs allowed in one
 #' request. If a request exceeds this limit, the request fails and the
@@ -3618,31 +3618,31 @@ gamelift_describe_fleet_attributes <- function(FleetIds = NULL, Limit = NULL, Ne
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_fleet`][gamelift_create_fleet]
+#'   - [`create_fleet`][gamelift_create_fleet]
 #' 
-#' -   [`list_fleets`][gamelift_list_fleets]
+#'   - [`list_fleets`][gamelift_list_fleets]
 #' 
-#' -   [`delete_fleet`][gamelift_delete_fleet]
+#'   - [`delete_fleet`][gamelift_delete_fleet]
 #' 
-#' -   Describe fleets:
+#'   - Describe fleets:
+#'     
+#'       - [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
+#'     
+#'       - [`describe_fleet_capacity`][gamelift_describe_fleet_capacity]
+#'     
+#'       - [`describe_fleet_port_settings`][gamelift_describe_fleet_port_settings]
+#'     
+#'       - [`describe_fleet_utilization`][gamelift_describe_fleet_utilization]
+#'     
+#'       - [`describe_runtime_configuration`][gamelift_describe_runtime_configuration]
+#'     
+#'       - [`describe_ec2_instance_limits`][gamelift_describe_ec2_instance_limits]
+#'     
+#'       - [`describe_fleet_events`][gamelift_describe_fleet_events]
 #' 
-#'     -   [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
+#'   - [`update_fleet_attributes`][gamelift_update_fleet_attributes]
 #' 
-#'     -   [`describe_fleet_capacity`][gamelift_describe_fleet_capacity]
-#' 
-#'     -   [`describe_fleet_port_settings`][gamelift_describe_fleet_port_settings]
-#' 
-#'     -   [`describe_fleet_utilization`][gamelift_describe_fleet_utilization]
-#' 
-#'     -   [`describe_runtime_configuration`][gamelift_describe_runtime_configuration]
-#' 
-#'     -   [`describe_ec2_instance_limits`][gamelift_describe_ec2_instance_limits]
-#' 
-#'     -   [`describe_fleet_events`][gamelift_describe_fleet_events]
-#' 
-#' -   [`update_fleet_attributes`][gamelift_update_fleet_attributes]
-#' 
-#' -   [`start_fleet_actions`][gamelift_start_fleet_actions] or
+#'   - [`start_fleet_actions`][gamelift_start_fleet_actions] or
 #'     [`stop_fleet_actions`][gamelift_stop_fleet_actions]
 #'
 #' @usage
@@ -3728,31 +3728,31 @@ gamelift_describe_fleet_capacity <- function(FleetIds = NULL, Limit = NULL, Next
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_fleet`][gamelift_create_fleet]
+#'   - [`create_fleet`][gamelift_create_fleet]
 #' 
-#' -   [`list_fleets`][gamelift_list_fleets]
+#'   - [`list_fleets`][gamelift_list_fleets]
 #' 
-#' -   [`delete_fleet`][gamelift_delete_fleet]
+#'   - [`delete_fleet`][gamelift_delete_fleet]
 #' 
-#' -   Describe fleets:
+#'   - Describe fleets:
+#'     
+#'       - [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
+#'     
+#'       - [`describe_fleet_capacity`][gamelift_describe_fleet_capacity]
+#'     
+#'       - [`describe_fleet_port_settings`][gamelift_describe_fleet_port_settings]
+#'     
+#'       - [`describe_fleet_utilization`][gamelift_describe_fleet_utilization]
+#'     
+#'       - [`describe_runtime_configuration`][gamelift_describe_runtime_configuration]
+#'     
+#'       - [`describe_ec2_instance_limits`][gamelift_describe_ec2_instance_limits]
+#'     
+#'       - [`describe_fleet_events`][gamelift_describe_fleet_events]
 #' 
-#'     -   [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
+#'   - [`update_fleet_attributes`][gamelift_update_fleet_attributes]
 #' 
-#'     -   [`describe_fleet_capacity`][gamelift_describe_fleet_capacity]
-#' 
-#'     -   [`describe_fleet_port_settings`][gamelift_describe_fleet_port_settings]
-#' 
-#'     -   [`describe_fleet_utilization`][gamelift_describe_fleet_utilization]
-#' 
-#'     -   [`describe_runtime_configuration`][gamelift_describe_runtime_configuration]
-#' 
-#'     -   [`describe_ec2_instance_limits`][gamelift_describe_ec2_instance_limits]
-#' 
-#'     -   [`describe_fleet_events`][gamelift_describe_fleet_events]
-#' 
-#' -   [`update_fleet_attributes`][gamelift_update_fleet_attributes]
-#' 
-#' -   [`start_fleet_actions`][gamelift_start_fleet_actions] or
+#'   - [`start_fleet_actions`][gamelift_start_fleet_actions] or
 #'     [`stop_fleet_actions`][gamelift_stop_fleet_actions]
 #'
 #' @usage
@@ -3840,9 +3840,9 @@ gamelift_describe_fleet_events <- function(FleetId, StartTime = NULL, EndTime = 
 #' fall in this range.
 #' 
 #' To get a fleet's inbound connection permissions, specify the fleet's
-#' unique identifier. If successful, a collection of IpPermission objects
-#' is returned for the requested fleet ID. If the requested fleet has been
-#' deleted, the result set is empty.
+#' unique identifier. If successful, a collection of
+#' <span>IpPermission</span> objects is returned for the requested fleet
+#' ID. If the requested fleet has been deleted, the result set is empty.
 #' 
 #' **Learn more**
 #' 
@@ -3851,31 +3851,31 @@ gamelift_describe_fleet_events <- function(FleetId, StartTime = NULL, EndTime = 
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_fleet`][gamelift_create_fleet]
+#'   - [`create_fleet`][gamelift_create_fleet]
 #' 
-#' -   [`list_fleets`][gamelift_list_fleets]
+#'   - [`list_fleets`][gamelift_list_fleets]
 #' 
-#' -   [`delete_fleet`][gamelift_delete_fleet]
+#'   - [`delete_fleet`][gamelift_delete_fleet]
 #' 
-#' -   Describe fleets:
+#'   - Describe fleets:
+#'     
+#'       - [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
+#'     
+#'       - [`describe_fleet_capacity`][gamelift_describe_fleet_capacity]
+#'     
+#'       - [`describe_fleet_port_settings`][gamelift_describe_fleet_port_settings]
+#'     
+#'       - [`describe_fleet_utilization`][gamelift_describe_fleet_utilization]
+#'     
+#'       - [`describe_runtime_configuration`][gamelift_describe_runtime_configuration]
+#'     
+#'       - [`describe_ec2_instance_limits`][gamelift_describe_ec2_instance_limits]
+#'     
+#'       - [`describe_fleet_events`][gamelift_describe_fleet_events]
 #' 
-#'     -   [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
+#'   - [`update_fleet_attributes`][gamelift_update_fleet_attributes]
 #' 
-#'     -   [`describe_fleet_capacity`][gamelift_describe_fleet_capacity]
-#' 
-#'     -   [`describe_fleet_port_settings`][gamelift_describe_fleet_port_settings]
-#' 
-#'     -   [`describe_fleet_utilization`][gamelift_describe_fleet_utilization]
-#' 
-#'     -   [`describe_runtime_configuration`][gamelift_describe_runtime_configuration]
-#' 
-#'     -   [`describe_ec2_instance_limits`][gamelift_describe_ec2_instance_limits]
-#' 
-#'     -   [`describe_fleet_events`][gamelift_describe_fleet_events]
-#' 
-#' -   [`update_fleet_attributes`][gamelift_update_fleet_attributes]
-#' 
-#' -   [`start_fleet_actions`][gamelift_start_fleet_actions] or
+#'   - [`start_fleet_actions`][gamelift_start_fleet_actions] or
 #'     [`stop_fleet_actions`][gamelift_stop_fleet_actions]
 #'
 #' @usage
@@ -3937,8 +3937,8 @@ gamelift_describe_fleet_port_settings <- function(FleetId) {
 #' You can request utilization data for all fleets, or specify a list of
 #' one or more fleet IDs. When requesting multiple fleets, use the
 #' pagination parameters to retrieve results as a set of sequential pages.
-#' If successful, a FleetUtilization object is returned for each requested
-#' fleet ID, unless the fleet identifier is not found.
+#' If successful, a <span>FleetUtilization</span> object is returned for
+#' each requested fleet ID, unless the fleet identifier is not found.
 #' 
 #' Some API operations may limit the number of fleet IDs allowed in one
 #' request. If a request exceeds this limit, the request fails and the
@@ -3954,31 +3954,31 @@ gamelift_describe_fleet_port_settings <- function(FleetId) {
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_fleet`][gamelift_create_fleet]
+#'   - [`create_fleet`][gamelift_create_fleet]
 #' 
-#' -   [`list_fleets`][gamelift_list_fleets]
+#'   - [`list_fleets`][gamelift_list_fleets]
 #' 
-#' -   [`delete_fleet`][gamelift_delete_fleet]
+#'   - [`delete_fleet`][gamelift_delete_fleet]
 #' 
-#' -   Describe fleets:
+#'   - Describe fleets:
+#'     
+#'       - [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
+#'     
+#'       - [`describe_fleet_capacity`][gamelift_describe_fleet_capacity]
+#'     
+#'       - [`describe_fleet_port_settings`][gamelift_describe_fleet_port_settings]
+#'     
+#'       - [`describe_fleet_utilization`][gamelift_describe_fleet_utilization]
+#'     
+#'       - [`describe_runtime_configuration`][gamelift_describe_runtime_configuration]
+#'     
+#'       - [`describe_ec2_instance_limits`][gamelift_describe_ec2_instance_limits]
+#'     
+#'       - [`describe_fleet_events`][gamelift_describe_fleet_events]
 #' 
-#'     -   [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
+#'   - [`update_fleet_attributes`][gamelift_update_fleet_attributes]
 #' 
-#'     -   [`describe_fleet_capacity`][gamelift_describe_fleet_capacity]
-#' 
-#'     -   [`describe_fleet_port_settings`][gamelift_describe_fleet_port_settings]
-#' 
-#'     -   [`describe_fleet_utilization`][gamelift_describe_fleet_utilization]
-#' 
-#'     -   [`describe_runtime_configuration`][gamelift_describe_runtime_configuration]
-#' 
-#'     -   [`describe_ec2_instance_limits`][gamelift_describe_ec2_instance_limits]
-#' 
-#'     -   [`describe_fleet_events`][gamelift_describe_fleet_events]
-#' 
-#' -   [`update_fleet_attributes`][gamelift_update_fleet_attributes]
-#' 
-#' -   [`start_fleet_actions`][gamelift_start_fleet_actions] or
+#'   - [`start_fleet_actions`][gamelift_start_fleet_actions] or
 #'     [`stop_fleet_actions`][gamelift_stop_fleet_actions]
 #'
 #' @usage
@@ -4046,8 +4046,8 @@ gamelift_describe_fleet_utilization <- function(FleetIds = NULL, Limit = NULL, N
 }
 .gamelift$operations$describe_fleet_utilization <- gamelift_describe_fleet_utilization
 
-#' This operation is used with the Amazon GameLift FleetIQ solution and
-#' game server groups
+#' THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND
+#' GAME SERVER GROUPS
 #'
 #' @description
 #' **This operation is used with the Amazon GameLift FleetIQ solution and
@@ -4067,23 +4067,23 @@ gamelift_describe_fleet_utilization <- function(FleetIds = NULL, Limit = NULL, N
 #' 
 #' **Related operations**
 #' 
-#' -   [`register_game_server`][gamelift_register_game_server]
+#'   - [`register_game_server`][gamelift_register_game_server]
 #' 
-#' -   [`list_game_servers`][gamelift_list_game_servers]
+#'   - [`list_game_servers`][gamelift_list_game_servers]
 #' 
-#' -   [`claim_game_server`][gamelift_claim_game_server]
+#'   - [`claim_game_server`][gamelift_claim_game_server]
 #' 
-#' -   [`describe_game_server`][gamelift_describe_game_server]
+#'   - [`describe_game_server`][gamelift_describe_game_server]
 #' 
-#' -   [`update_game_server`][gamelift_update_game_server]
+#'   - [`update_game_server`][gamelift_update_game_server]
 #' 
-#' -   [`deregister_game_server`][gamelift_deregister_game_server]
+#'   - [`deregister_game_server`][gamelift_deregister_game_server]
 #'
 #' @usage
 #' gamelift_describe_game_server(GameServerGroupName, GameServerId)
 #'
 #' @param GameServerGroupName &#91;required&#93; A unique identifier for the game server group where the game server is
-#' running. Use either the GameServerGroup name or ARN value.
+#' running. Use either the <span>GameServerGroup</span> name or ARN value.
 #' @param GameServerId &#91;required&#93; A custom string that uniquely identifies the game server information to
 #' be retrieved.
 #'
@@ -4141,8 +4141,8 @@ gamelift_describe_game_server <- function(GameServerGroupName, GameServerId) {
 }
 .gamelift$operations$describe_game_server <- gamelift_describe_game_server
 
-#' This operation is used with the Amazon GameLift FleetIQ solution and
-#' game server groups
+#' THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND
+#' GAME SERVER GROUPS
 #'
 #' @description
 #' **This operation is used with the Amazon GameLift FleetIQ solution and
@@ -4155,7 +4155,7 @@ gamelift_describe_game_server <- function(GameServerGroupName, GameServerId) {
 #' the Auto Scaling group directly.
 #' 
 #' To get attributes for a game server group, provide a group name or ARN
-#' value. If successful, a GameServerGroup object is returned.
+#' value. If successful, a <span>GameServerGroup</span> object is returned.
 #' 
 #' **Learn more**
 #' 
@@ -4164,27 +4164,27 @@ gamelift_describe_game_server <- function(GameServerGroupName, GameServerId) {
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_game_server_group`][gamelift_create_game_server_group]
+#'   - [`create_game_server_group`][gamelift_create_game_server_group]
 #' 
-#' -   [`list_game_server_groups`][gamelift_list_game_server_groups]
+#'   - [`list_game_server_groups`][gamelift_list_game_server_groups]
 #' 
-#' -   [`describe_game_server_group`][gamelift_describe_game_server_group]
+#'   - [`describe_game_server_group`][gamelift_describe_game_server_group]
 #' 
-#' -   [`update_game_server_group`][gamelift_update_game_server_group]
+#'   - [`update_game_server_group`][gamelift_update_game_server_group]
 #' 
-#' -   [`delete_game_server_group`][gamelift_delete_game_server_group]
+#'   - [`delete_game_server_group`][gamelift_delete_game_server_group]
 #' 
-#' -   [`resume_game_server_group`][gamelift_resume_game_server_group]
+#'   - [`resume_game_server_group`][gamelift_resume_game_server_group]
 #' 
-#' -   [`suspend_game_server_group`][gamelift_suspend_game_server_group]
+#'   - [`suspend_game_server_group`][gamelift_suspend_game_server_group]
 #' 
-#' -   [`describe_game_server_instances`][gamelift_describe_game_server_instances]
+#'   - [`describe_game_server_instances`][gamelift_describe_game_server_instances]
 #'
 #' @usage
 #' gamelift_describe_game_server_group(GameServerGroupName)
 #'
 #' @param GameServerGroupName &#91;required&#93; A unique identifier for the game server group. Use either the
-#' GameServerGroup name or ARN value.
+#' <span>GameServerGroup</span> name or ARN value.
 #'
 #' @return
 #' A list with the following syntax:
@@ -4245,8 +4245,8 @@ gamelift_describe_game_server_group <- function(GameServerGroupName) {
 }
 .gamelift$operations$describe_game_server_group <- gamelift_describe_game_server_group
 
-#' This operation is used with the Amazon GameLift FleetIQ solution and
-#' game server groups
+#' THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND
+#' GAME SERVER GROUPS
 #'
 #' @description
 #' **This operation is used with the Amazon GameLift FleetIQ solution and
@@ -4277,28 +4277,28 @@ gamelift_describe_game_server_group <- function(GameServerGroupName) {
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_game_server_group`][gamelift_create_game_server_group]
+#'   - [`create_game_server_group`][gamelift_create_game_server_group]
 #' 
-#' -   [`list_game_server_groups`][gamelift_list_game_server_groups]
+#'   - [`list_game_server_groups`][gamelift_list_game_server_groups]
 #' 
-#' -   [`describe_game_server_group`][gamelift_describe_game_server_group]
+#'   - [`describe_game_server_group`][gamelift_describe_game_server_group]
 #' 
-#' -   [`update_game_server_group`][gamelift_update_game_server_group]
+#'   - [`update_game_server_group`][gamelift_update_game_server_group]
 #' 
-#' -   [`delete_game_server_group`][gamelift_delete_game_server_group]
+#'   - [`delete_game_server_group`][gamelift_delete_game_server_group]
 #' 
-#' -   [`resume_game_server_group`][gamelift_resume_game_server_group]
+#'   - [`resume_game_server_group`][gamelift_resume_game_server_group]
 #' 
-#' -   [`suspend_game_server_group`][gamelift_suspend_game_server_group]
+#'   - [`suspend_game_server_group`][gamelift_suspend_game_server_group]
 #' 
-#' -   [`describe_game_server_instances`][gamelift_describe_game_server_instances]
+#'   - [`describe_game_server_instances`][gamelift_describe_game_server_instances]
 #'
 #' @usage
 #' gamelift_describe_game_server_instances(GameServerGroupName,
 #'   InstanceIds, Limit, NextToken)
 #'
 #' @param GameServerGroupName &#91;required&#93; A unique identifier for the game server group. Use either the
-#' GameServerGroup name or ARN value.
+#' <span>GameServerGroup</span> name or ARN value.
 #' @param InstanceIds The EC2 instance IDs that you want to retrieve status on. EC2 instance
 #' IDs use a 17-character format, for example: `i-1234567890abcdef0`. To
 #' retrieve all instances in the game server group, leave this parameter
@@ -4371,28 +4371,28 @@ gamelift_describe_game_server_instances <- function(GameServerGroupName, Instanc
 #' To get game session record(s), specify just one of the following: game
 #' session ID, fleet ID, or alias ID. You can filter this request by game
 #' session status. Use the pagination parameters to retrieve results as a
-#' set of sequential pages. If successful, a GameSessionDetail object is
-#' returned for each session matching the request.
+#' set of sequential pages. If successful, a <span>GameSessionDetail</span>
+#' object is returned for each session matching the request.
 #' 
-#' -   [`create_game_session`][gamelift_create_game_session]
+#'   - [`create_game_session`][gamelift_create_game_session]
 #' 
-#' -   [`describe_game_sessions`][gamelift_describe_game_sessions]
+#'   - [`describe_game_sessions`][gamelift_describe_game_sessions]
 #' 
-#' -   [`describe_game_session_details`][gamelift_describe_game_session_details]
+#'   - [`describe_game_session_details`][gamelift_describe_game_session_details]
 #' 
-#' -   [`search_game_sessions`][gamelift_search_game_sessions]
+#'   - [`search_game_sessions`][gamelift_search_game_sessions]
 #' 
-#' -   [`update_game_session`][gamelift_update_game_session]
+#'   - [`update_game_session`][gamelift_update_game_session]
 #' 
-#' -   [`get_game_session_log_url`][gamelift_get_game_session_log_url]
+#'   - [`get_game_session_log_url`][gamelift_get_game_session_log_url]
 #' 
-#' -   Game session placements
-#' 
-#'     -   [`start_game_session_placement`][gamelift_start_game_session_placement]
-#' 
-#'     -   [`describe_game_session_placement`][gamelift_describe_game_session_placement]
-#' 
-#'     -   [`stop_game_session_placement`][gamelift_stop_game_session_placement]
+#'   - Game session placements
+#'     
+#'       - [`start_game_session_placement`][gamelift_start_game_session_placement]
+#'     
+#'       - [`describe_game_session_placement`][gamelift_describe_game_session_placement]
+#'     
+#'       - [`stop_game_session_placement`][gamelift_stop_game_session_placement]
 #'
 #' @usage
 #' gamelift_describe_game_session_details(FleetId, GameSessionId, AliasId,
@@ -4492,27 +4492,28 @@ gamelift_describe_game_session_details <- function(FleetId = NULL, GameSessionId
 #' @description
 #' Retrieves properties and current status of a game session placement
 #' request. To get game session placement details, specify the placement
-#' ID. If successful, a GameSessionPlacement object is returned.
+#' ID. If successful, a <span>GameSessionPlacement</span> object is
+#' returned.
 #' 
-#' -   [`create_game_session`][gamelift_create_game_session]
+#'   - [`create_game_session`][gamelift_create_game_session]
 #' 
-#' -   [`describe_game_sessions`][gamelift_describe_game_sessions]
+#'   - [`describe_game_sessions`][gamelift_describe_game_sessions]
 #' 
-#' -   [`describe_game_session_details`][gamelift_describe_game_session_details]
+#'   - [`describe_game_session_details`][gamelift_describe_game_session_details]
 #' 
-#' -   [`search_game_sessions`][gamelift_search_game_sessions]
+#'   - [`search_game_sessions`][gamelift_search_game_sessions]
 #' 
-#' -   [`update_game_session`][gamelift_update_game_session]
+#'   - [`update_game_session`][gamelift_update_game_session]
 #' 
-#' -   [`get_game_session_log_url`][gamelift_get_game_session_log_url]
+#'   - [`get_game_session_log_url`][gamelift_get_game_session_log_url]
 #' 
-#' -   Game session placements
-#' 
-#'     -   [`start_game_session_placement`][gamelift_start_game_session_placement]
-#' 
-#'     -   [`describe_game_session_placement`][gamelift_describe_game_session_placement]
-#' 
-#'     -   [`stop_game_session_placement`][gamelift_stop_game_session_placement]
+#'   - Game session placements
+#'     
+#'       - [`start_game_session_placement`][gamelift_start_game_session_placement]
+#'     
+#'       - [`describe_game_session_placement`][gamelift_describe_game_session_placement]
+#'     
+#'       - [`stop_game_session_placement`][gamelift_stop_game_session_placement]
 #'
 #' @usage
 #' gamelift_describe_game_session_placement(PlacementId)
@@ -4598,10 +4599,10 @@ gamelift_describe_game_session_placement <- function(PlacementId) {
 #' @description
 #' Retrieves the properties for one or more game session queues. When
 #' requesting multiple queues, use the pagination parameters to retrieve
-#' results as a set of sequential pages. If successful, a GameSessionQueue
-#' object is returned for each requested queue. When specifying a list of
-#' queues, objects are returned only for queues that currently exist in the
-#' Region.
+#' results as a set of sequential pages. If successful, a
+#' <span>GameSessionQueue</span> object is returned for each requested
+#' queue. When specifying a list of queues, objects are returned only for
+#' queues that currently exist in the Region.
 #' 
 #' **Learn more**
 #' 
@@ -4610,13 +4611,13 @@ gamelift_describe_game_session_placement <- function(PlacementId) {
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_game_session_queue`][gamelift_create_game_session_queue]
+#'   - [`create_game_session_queue`][gamelift_create_game_session_queue]
 #' 
-#' -   [`describe_game_session_queues`][gamelift_describe_game_session_queues]
+#'   - [`describe_game_session_queues`][gamelift_describe_game_session_queues]
 #' 
-#' -   [`update_game_session_queue`][gamelift_update_game_session_queue]
+#'   - [`update_game_session_queue`][gamelift_update_game_session_queue]
 #' 
-#' -   [`delete_game_session_queue`][gamelift_delete_game_session_queue]
+#'   - [`delete_game_session_queue`][gamelift_delete_game_session_queue]
 #'
 #' @usage
 #' gamelift_describe_game_session_queues(Names, Limit, NextToken)
@@ -4701,30 +4702,30 @@ gamelift_describe_game_session_queues <- function(Names = NULL, Limit = NULL, Ne
 #' To get game sessions, specify one of the following: game session ID,
 #' fleet ID, or alias ID. You can filter this request by game session
 #' status. Use the pagination parameters to retrieve results as a set of
-#' sequential pages. If successful, a GameSession object is returned for
-#' each game session matching the request.
+#' sequential pages. If successful, a <span>GameSession</span> object is
+#' returned for each game session matching the request.
 #' 
 #' *Available in Amazon GameLift Local.*
 #' 
-#' -   [`create_game_session`][gamelift_create_game_session]
+#'   - [`create_game_session`][gamelift_create_game_session]
 #' 
-#' -   [`describe_game_sessions`][gamelift_describe_game_sessions]
+#'   - [`describe_game_sessions`][gamelift_describe_game_sessions]
 #' 
-#' -   [`describe_game_session_details`][gamelift_describe_game_session_details]
+#'   - [`describe_game_session_details`][gamelift_describe_game_session_details]
 #' 
-#' -   [`search_game_sessions`][gamelift_search_game_sessions]
+#'   - [`search_game_sessions`][gamelift_search_game_sessions]
 #' 
-#' -   [`update_game_session`][gamelift_update_game_session]
+#'   - [`update_game_session`][gamelift_update_game_session]
 #' 
-#' -   [`get_game_session_log_url`][gamelift_get_game_session_log_url]
+#'   - [`get_game_session_log_url`][gamelift_get_game_session_log_url]
 #' 
-#' -   Game session placements
-#' 
-#'     -   [`start_game_session_placement`][gamelift_start_game_session_placement]
-#' 
-#'     -   [`describe_game_session_placement`][gamelift_describe_game_session_placement]
-#' 
-#'     -   [`stop_game_session_placement`][gamelift_stop_game_session_placement]
+#'   - Game session placements
+#'     
+#'       - [`start_game_session_placement`][gamelift_start_game_session_placement]
+#'     
+#'       - [`describe_game_session_placement`][gamelift_describe_game_session_placement]
+#'     
+#'       - [`stop_game_session_placement`][gamelift_stop_game_session_placement]
 #'
 #' @usage
 #' gamelift_describe_game_sessions(FleetId, GameSessionId, AliasId,
@@ -4825,7 +4826,7 @@ gamelift_describe_game_sessions <- function(FleetId = NULL, GameSessionId = NULL
 #' To get a specific instance, specify fleet ID and instance ID. To get all
 #' instances in a fleet, specify a fleet ID only. Use the pagination
 #' parameters to retrieve results as a set of sequential pages. If
-#' successful, an Instance object is returned for each result.
+#' successful, an <span>Instance</span> object is returned for each result.
 #' 
 #' **Learn more**
 #' 
@@ -4837,9 +4838,9 @@ gamelift_describe_game_sessions <- function(FleetId = NULL, GameSessionId = NULL
 #' 
 #' **Related operations**
 #' 
-#' -   [`describe_instances`][gamelift_describe_instances]
+#'   - [`describe_instances`][gamelift_describe_instances]
 #' 
-#' -   [`get_instance_access`][gamelift_get_instance_access]
+#'   - [`get_instance_access`][gamelift_get_instance_access]
 #'
 #' @usage
 #' gamelift_describe_instances(FleetId, InstanceId, Limit, NextToken)
@@ -4936,15 +4937,15 @@ gamelift_describe_instances <- function(FleetId, InstanceId = NULL, Limit = NULL
 #' 
 #' **Related operations**
 #' 
-#' -   [`start_matchmaking`][gamelift_start_matchmaking]
+#'   - [`start_matchmaking`][gamelift_start_matchmaking]
 #' 
-#' -   [`describe_matchmaking`][gamelift_describe_matchmaking]
+#'   - [`describe_matchmaking`][gamelift_describe_matchmaking]
 #' 
-#' -   [`stop_matchmaking`][gamelift_stop_matchmaking]
+#'   - [`stop_matchmaking`][gamelift_stop_matchmaking]
 #' 
-#' -   [`accept_match`][gamelift_accept_match]
+#'   - [`accept_match`][gamelift_accept_match]
 #' 
-#' -   [`start_match_backfill`][gamelift_start_match_backfill]
+#'   - [`start_match_backfill`][gamelift_start_match_backfill]
 #'
 #' @usage
 #' gamelift_describe_matchmaking(TicketIds)
@@ -5060,21 +5061,21 @@ gamelift_describe_matchmaking <- function(TicketIds) {
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_matchmaking_configuration`][gamelift_create_matchmaking_configuration]
+#'   - [`create_matchmaking_configuration`][gamelift_create_matchmaking_configuration]
 #' 
-#' -   [`describe_matchmaking_configurations`][gamelift_describe_matchmaking_configurations]
+#'   - [`describe_matchmaking_configurations`][gamelift_describe_matchmaking_configurations]
 #' 
-#' -   [`update_matchmaking_configuration`][gamelift_update_matchmaking_configuration]
+#'   - [`update_matchmaking_configuration`][gamelift_update_matchmaking_configuration]
 #' 
-#' -   [`delete_matchmaking_configuration`][gamelift_delete_matchmaking_configuration]
+#'   - [`delete_matchmaking_configuration`][gamelift_delete_matchmaking_configuration]
 #' 
-#' -   [`create_matchmaking_rule_set`][gamelift_create_matchmaking_rule_set]
+#'   - [`create_matchmaking_rule_set`][gamelift_create_matchmaking_rule_set]
 #' 
-#' -   [`describe_matchmaking_rule_sets`][gamelift_describe_matchmaking_rule_sets]
+#'   - [`describe_matchmaking_rule_sets`][gamelift_describe_matchmaking_rule_sets]
 #' 
-#' -   [`validate_matchmaking_rule_set`][gamelift_validate_matchmaking_rule_set]
+#'   - [`validate_matchmaking_rule_set`][gamelift_validate_matchmaking_rule_set]
 #' 
-#' -   [`delete_matchmaking_rule_set`][gamelift_delete_matchmaking_rule_set]
+#'   - [`delete_matchmaking_rule_set`][gamelift_delete_matchmaking_rule_set]
 #'
 #' @usage
 #' gamelift_describe_matchmaking_configurations(Names, RuleSetName, Limit,
@@ -5174,26 +5175,26 @@ gamelift_describe_matchmaking_configurations <- function(Names = NULL, RuleSetNa
 #' 
 #' **Learn more**
 #' 
-#' -   [Build a Rule
+#'   - [Build a Rule
 #'     Set](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-rulesets.html)
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_matchmaking_configuration`][gamelift_create_matchmaking_configuration]
+#'   - [`create_matchmaking_configuration`][gamelift_create_matchmaking_configuration]
 #' 
-#' -   [`describe_matchmaking_configurations`][gamelift_describe_matchmaking_configurations]
+#'   - [`describe_matchmaking_configurations`][gamelift_describe_matchmaking_configurations]
 #' 
-#' -   [`update_matchmaking_configuration`][gamelift_update_matchmaking_configuration]
+#'   - [`update_matchmaking_configuration`][gamelift_update_matchmaking_configuration]
 #' 
-#' -   [`delete_matchmaking_configuration`][gamelift_delete_matchmaking_configuration]
+#'   - [`delete_matchmaking_configuration`][gamelift_delete_matchmaking_configuration]
 #' 
-#' -   [`create_matchmaking_rule_set`][gamelift_create_matchmaking_rule_set]
+#'   - [`create_matchmaking_rule_set`][gamelift_create_matchmaking_rule_set]
 #' 
-#' -   [`describe_matchmaking_rule_sets`][gamelift_describe_matchmaking_rule_sets]
+#'   - [`describe_matchmaking_rule_sets`][gamelift_describe_matchmaking_rule_sets]
 #' 
-#' -   [`validate_matchmaking_rule_set`][gamelift_validate_matchmaking_rule_set]
+#'   - [`validate_matchmaking_rule_set`][gamelift_validate_matchmaking_rule_set]
 #' 
-#' -   [`delete_matchmaking_rule_set`][gamelift_delete_matchmaking_rule_set]
+#'   - [`delete_matchmaking_rule_set`][gamelift_delete_matchmaking_rule_set]
 #'
 #' @usage
 #' gamelift_describe_matchmaking_rule_sets(Names, Limit, NextToken)
@@ -5271,23 +5272,24 @@ gamelift_describe_matchmaking_rule_sets <- function(Names = NULL, Limit = NULL, 
 #' player session ID, a game session ID, or a player ID. You can filter
 #' this request by player session status. Use the pagination parameters to
 #' retrieve results as a set of sequential pages. If successful, a
-#' PlayerSession object is returned for each session matching the request.
+#' <span>PlayerSession</span> object is returned for each session matching
+#' the request.
 #' 
 #' *Available in Amazon GameLift Local.*
 #' 
-#' -   [`create_player_session`][gamelift_create_player_session]
+#'   - [`create_player_session`][gamelift_create_player_session]
 #' 
-#' -   [`create_player_sessions`][gamelift_create_player_sessions]
+#'   - [`create_player_sessions`][gamelift_create_player_sessions]
 #' 
-#' -   [`describe_player_sessions`][gamelift_describe_player_sessions]
+#'   - [`describe_player_sessions`][gamelift_describe_player_sessions]
 #' 
-#' -   Game session placements
-#' 
-#'     -   [`start_game_session_placement`][gamelift_start_game_session_placement]
-#' 
-#'     -   [`describe_game_session_placement`][gamelift_describe_game_session_placement]
-#' 
-#'     -   [`stop_game_session_placement`][gamelift_stop_game_session_placement]
+#'   - Game session placements
+#'     
+#'       - [`start_game_session_placement`][gamelift_start_game_session_placement]
+#'     
+#'       - [`describe_game_session_placement`][gamelift_describe_game_session_placement]
+#'     
+#'       - [`stop_game_session_placement`][gamelift_stop_game_session_placement]
 #'
 #' @usage
 #' gamelift_describe_player_sessions(GameSessionId, PlayerId,
@@ -5301,16 +5303,16 @@ gamelift_describe_matchmaking_rule_sets <- function(Names = NULL, Limit = NULL, 
 #' 
 #' Possible player session statuses include the following:
 #' 
-#' -   **RESERVED** -- The player session request has been received, but
+#'   - **RESERVED** -- The player session request has been received, but
 #'     the player has not yet connected to the server process and/or been
 #'     validated.
 #' 
-#' -   **ACTIVE** -- The player has been validated by the server process
+#'   - **ACTIVE** -- The player has been validated by the server process
 #'     and is currently connected.
 #' 
-#' -   **COMPLETED** -- The player connection has been dropped.
+#'   - **COMPLETED** -- The player connection has been dropped.
 #' 
-#' -   **TIMEDOUT** -- A player session request was received, but the
+#'   - **TIMEDOUT** -- A player session request was received, but the
 #'     player did not connect and/or was not validated within the timeout
 #'     limit (60 seconds).
 #' @param Limit The maximum number of results to return. Use this parameter with
@@ -5389,9 +5391,9 @@ gamelift_describe_player_sessions <- function(GameSessionId = NULL, PlayerId = N
 #' how) on each instance in the fleet.
 #' 
 #' To get a runtime configuration, specify the fleet's unique identifier.
-#' If successful, a RuntimeConfiguration object is returned for the
-#' requested fleet. If the requested fleet has been deleted, the result set
-#' is empty.
+#' If successful, a <span>RuntimeConfiguration</span> object is returned
+#' for the requested fleet. If the requested fleet has been deleted, the
+#' result set is empty.
 #' 
 #' **Learn more**
 #' 
@@ -5403,31 +5405,31 @@ gamelift_describe_player_sessions <- function(GameSessionId = NULL, PlayerId = N
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_fleet`][gamelift_create_fleet]
+#'   - [`create_fleet`][gamelift_create_fleet]
 #' 
-#' -   [`list_fleets`][gamelift_list_fleets]
+#'   - [`list_fleets`][gamelift_list_fleets]
 #' 
-#' -   [`delete_fleet`][gamelift_delete_fleet]
+#'   - [`delete_fleet`][gamelift_delete_fleet]
 #' 
-#' -   Describe fleets:
+#'   - Describe fleets:
+#'     
+#'       - [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
+#'     
+#'       - [`describe_fleet_capacity`][gamelift_describe_fleet_capacity]
+#'     
+#'       - [`describe_fleet_port_settings`][gamelift_describe_fleet_port_settings]
+#'     
+#'       - [`describe_fleet_utilization`][gamelift_describe_fleet_utilization]
+#'     
+#'       - [`describe_runtime_configuration`][gamelift_describe_runtime_configuration]
+#'     
+#'       - [`describe_ec2_instance_limits`][gamelift_describe_ec2_instance_limits]
+#'     
+#'       - [`describe_fleet_events`][gamelift_describe_fleet_events]
 #' 
-#'     -   [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
+#'   - [`update_fleet_attributes`][gamelift_update_fleet_attributes]
 #' 
-#'     -   [`describe_fleet_capacity`][gamelift_describe_fleet_capacity]
-#' 
-#'     -   [`describe_fleet_port_settings`][gamelift_describe_fleet_port_settings]
-#' 
-#'     -   [`describe_fleet_utilization`][gamelift_describe_fleet_utilization]
-#' 
-#'     -   [`describe_runtime_configuration`][gamelift_describe_runtime_configuration]
-#' 
-#'     -   [`describe_ec2_instance_limits`][gamelift_describe_ec2_instance_limits]
-#' 
-#'     -   [`describe_fleet_events`][gamelift_describe_fleet_events]
-#' 
-#' -   [`update_fleet_attributes`][gamelift_update_fleet_attributes]
-#' 
-#' -   [`start_fleet_actions`][gamelift_start_fleet_actions] or
+#'   - [`start_fleet_actions`][gamelift_start_fleet_actions] or
 #'     [`stop_fleet_actions`][gamelift_stop_fleet_actions]
 #'
 #' @usage
@@ -5489,8 +5491,8 @@ gamelift_describe_runtime_configuration <- function(FleetId) {
 #' To get a fleet's scaling policies, specify the fleet ID. You can filter
 #' this request by policy status, such as to retrieve only active scaling
 #' policies. Use the pagination parameters to retrieve results as a set of
-#' sequential pages. If successful, set of ScalingPolicy objects is
-#' returned for the fleet.
+#' sequential pages. If successful, set of <span>ScalingPolicy</span>
+#' objects is returned for the fleet.
 #' 
 #' A fleet may have all of its scaling policies suspended
 #' ([`stop_fleet_actions`][gamelift_stop_fleet_actions]). This operation
@@ -5500,28 +5502,28 @@ gamelift_describe_runtime_configuration <- function(FleetId) {
 #' [`describe_fleet_attributes`][gamelift_describe_fleet_attributes] and
 #' check the stopped actions.
 #' 
-#' -   [`describe_fleet_capacity`][gamelift_describe_fleet_capacity]
+#'   - [`describe_fleet_capacity`][gamelift_describe_fleet_capacity]
 #' 
-#' -   [`update_fleet_capacity`][gamelift_update_fleet_capacity]
+#'   - [`update_fleet_capacity`][gamelift_update_fleet_capacity]
 #' 
-#' -   [`describe_ec2_instance_limits`][gamelift_describe_ec2_instance_limits]
+#'   - [`describe_ec2_instance_limits`][gamelift_describe_ec2_instance_limits]
 #' 
-#' -   Manage scaling policies:
-#' 
-#'     -   [`put_scaling_policy`][gamelift_put_scaling_policy]
+#'   - Manage scaling policies:
+#'     
+#'       - [`put_scaling_policy`][gamelift_put_scaling_policy]
+#'         (auto-scaling)
+#'     
+#'       - [`describe_scaling_policies`][gamelift_describe_scaling_policies]
+#'         (auto-scaling)
+#'     
+#'       - [`delete_scaling_policy`][gamelift_delete_scaling_policy]
 #'         (auto-scaling)
 #' 
-#'     -   [`describe_scaling_policies`][gamelift_describe_scaling_policies]
-#'         (auto-scaling)
-#' 
-#'     -   [`delete_scaling_policy`][gamelift_delete_scaling_policy]
-#'         (auto-scaling)
-#' 
-#' -   Manage fleet actions:
-#' 
-#'     -   [`start_fleet_actions`][gamelift_start_fleet_actions]
-#' 
-#'     -   [`stop_fleet_actions`][gamelift_stop_fleet_actions]
+#'   - Manage fleet actions:
+#'     
+#'       - [`start_fleet_actions`][gamelift_start_fleet_actions]
+#'     
+#'       - [`stop_fleet_actions`][gamelift_stop_fleet_actions]
 #'
 #' @usage
 #' gamelift_describe_scaling_policies(FleetId, StatusFilter, Limit,
@@ -5532,21 +5534,21 @@ gamelift_describe_runtime_configuration <- function(FleetId) {
 #' @param StatusFilter Scaling policy status to filter results on. A scaling policy is only in
 #' force when in an `ACTIVE` status.
 #' 
-#' -   **ACTIVE** -- The scaling policy is currently in force.
+#'   - **ACTIVE** -- The scaling policy is currently in force.
 #' 
-#' -   **UPDATEREQUESTED** -- A request to update the scaling policy has
+#'   - **UPDATEREQUESTED** -- A request to update the scaling policy has
 #'     been received.
 #' 
-#' -   **UPDATING** -- A change is being made to the scaling policy.
+#'   - **UPDATING** -- A change is being made to the scaling policy.
 #' 
-#' -   **DELETEREQUESTED** -- A request to delete the scaling policy has
+#'   - **DELETEREQUESTED** -- A request to delete the scaling policy has
 #'     been received.
 #' 
-#' -   **DELETING** -- The scaling policy is being deleted.
+#'   - **DELETING** -- The scaling policy is being deleted.
 #' 
-#' -   **DELETED** -- The scaling policy has been deleted.
+#'   - **DELETED** -- The scaling policy has been deleted.
 #' 
-#' -   **ERROR** -- An error occurred in creating the policy. It should be
+#'   - **ERROR** -- An error occurred in creating the policy. It should be
 #'     removed and recreated.
 #' @param Limit The maximum number of results to return. Use this parameter with
 #' `NextToken` to get results as a set of sequential pages.
@@ -5624,15 +5626,15 @@ gamelift_describe_scaling_policies <- function(FleetId, StatusFilter = NULL, Lim
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_script`][gamelift_create_script]
+#'   - [`create_script`][gamelift_create_script]
 #' 
-#' -   [`list_scripts`][gamelift_list_scripts]
+#'   - [`list_scripts`][gamelift_list_scripts]
 #' 
-#' -   [`describe_script`][gamelift_describe_script]
+#'   - [`describe_script`][gamelift_describe_script]
 #' 
-#' -   [`update_script`][gamelift_update_script]
+#'   - [`update_script`][gamelift_update_script]
 #' 
-#' -   [`delete_script`][gamelift_delete_script]
+#'   - [`delete_script`][gamelift_delete_script]
 #'
 #' @usage
 #' gamelift_describe_script(ScriptId)
@@ -5699,17 +5701,17 @@ gamelift_describe_script <- function(ScriptId) {
 #' requests for peering. This includes those initiated and received by this
 #' account.
 #' 
-#' -   [`create_vpc_peering_authorization`][gamelift_create_vpc_peering_authorization]
+#'   - [`create_vpc_peering_authorization`][gamelift_create_vpc_peering_authorization]
 #' 
-#' -   [`describe_vpc_peering_authorizations`][gamelift_describe_vpc_peering_authorizations]
+#'   - [`describe_vpc_peering_authorizations`][gamelift_describe_vpc_peering_authorizations]
 #' 
-#' -   [`delete_vpc_peering_authorization`][gamelift_delete_vpc_peering_authorization]
+#'   - [`delete_vpc_peering_authorization`][gamelift_delete_vpc_peering_authorization]
 #' 
-#' -   [`create_vpc_peering_connection`][gamelift_create_vpc_peering_connection]
+#'   - [`create_vpc_peering_connection`][gamelift_create_vpc_peering_connection]
 #' 
-#' -   [`describe_vpc_peering_connections`][gamelift_describe_vpc_peering_connections]
+#'   - [`describe_vpc_peering_connections`][gamelift_describe_vpc_peering_connections]
 #' 
-#' -   [`delete_vpc_peering_connection`][gamelift_delete_vpc_peering_connection]
+#'   - [`delete_vpc_peering_connection`][gamelift_delete_vpc_peering_connection]
 #'
 #' @usage
 #' gamelift_describe_vpc_peering_authorizations()
@@ -5772,17 +5774,17 @@ gamelift_describe_vpc_peering_authorizations <- function() {
 #' and pending connections. Active connections identify the IpV4 CIDR block
 #' that the VPC uses to connect.
 #' 
-#' -   [`create_vpc_peering_authorization`][gamelift_create_vpc_peering_authorization]
+#'   - [`create_vpc_peering_authorization`][gamelift_create_vpc_peering_authorization]
 #' 
-#' -   [`describe_vpc_peering_authorizations`][gamelift_describe_vpc_peering_authorizations]
+#'   - [`describe_vpc_peering_authorizations`][gamelift_describe_vpc_peering_authorizations]
 #' 
-#' -   [`delete_vpc_peering_authorization`][gamelift_delete_vpc_peering_authorization]
+#'   - [`delete_vpc_peering_authorization`][gamelift_delete_vpc_peering_authorization]
 #' 
-#' -   [`create_vpc_peering_connection`][gamelift_create_vpc_peering_connection]
+#'   - [`create_vpc_peering_connection`][gamelift_create_vpc_peering_connection]
 #' 
-#' -   [`describe_vpc_peering_connections`][gamelift_describe_vpc_peering_connections]
+#'   - [`describe_vpc_peering_connections`][gamelift_describe_vpc_peering_connections]
 #' 
-#' -   [`delete_vpc_peering_connection`][gamelift_delete_vpc_peering_connection]
+#'   - [`delete_vpc_peering_connection`][gamelift_delete_vpc_peering_connection]
 #'
 #' @usage
 #' gamelift_describe_vpc_peering_connections(FleetId)
@@ -5852,25 +5854,25 @@ gamelift_describe_vpc_peering_connections <- function(FleetId = NULL) {
 #' page for maximum log file sizes. Log files that exceed this limit are
 #' not saved.
 #' 
-#' -   [`create_game_session`][gamelift_create_game_session]
+#'   - [`create_game_session`][gamelift_create_game_session]
 #' 
-#' -   [`describe_game_sessions`][gamelift_describe_game_sessions]
+#'   - [`describe_game_sessions`][gamelift_describe_game_sessions]
 #' 
-#' -   [`describe_game_session_details`][gamelift_describe_game_session_details]
+#'   - [`describe_game_session_details`][gamelift_describe_game_session_details]
 #' 
-#' -   [`search_game_sessions`][gamelift_search_game_sessions]
+#'   - [`search_game_sessions`][gamelift_search_game_sessions]
 #' 
-#' -   [`update_game_session`][gamelift_update_game_session]
+#'   - [`update_game_session`][gamelift_update_game_session]
 #' 
-#' -   [`get_game_session_log_url`][gamelift_get_game_session_log_url]
+#'   - [`get_game_session_log_url`][gamelift_get_game_session_log_url]
 #' 
-#' -   Game session placements
-#' 
-#'     -   [`start_game_session_placement`][gamelift_start_game_session_placement]
-#' 
-#'     -   [`describe_game_session_placement`][gamelift_describe_game_session_placement]
-#' 
-#'     -   [`stop_game_session_placement`][gamelift_stop_game_session_placement]
+#'   - Game session placements
+#'     
+#'       - [`start_game_session_placement`][gamelift_start_game_session_placement]
+#'     
+#'       - [`describe_game_session_placement`][gamelift_describe_game_session_placement]
+#'     
+#'       - [`stop_game_session_placement`][gamelift_stop_game_session_placement]
 #'
 #' @usage
 #' gamelift_get_game_session_log_url(GameSessionId)
@@ -5933,8 +5935,8 @@ gamelift_get_game_session_log_url <- function(GameSessionId) {
 #' instance and the fleet it belongs to. You can retrieve a fleet's
 #' instance IDs by calling
 #' [`describe_instances`][gamelift_describe_instances]. If successful, an
-#' InstanceAccess object is returned that contains the instance's IP
-#' address and a set of credentials.
+#' <span>InstanceAccess</span> object is returned that contains the
+#' instance's IP address and a set of credentials.
 #' 
 #' **Learn more**
 #' 
@@ -5946,9 +5948,9 @@ gamelift_get_game_session_log_url <- function(GameSessionId) {
 #' 
 #' **Related operations**
 #' 
-#' -   [`describe_instances`][gamelift_describe_instances]
+#'   - [`describe_instances`][gamelift_describe_instances]
 #' 
-#' -   [`get_instance_access`][gamelift_get_instance_access]
+#'   - [`get_instance_access`][gamelift_get_instance_access]
 #'
 #' @usage
 #' gamelift_get_instance_access(FleetId, InstanceId)
@@ -6015,17 +6017,17 @@ gamelift_get_instance_access <- function(FleetId, InstanceId) {
 #' 
 #' Returned aliases are not listed in any particular order.
 #' 
-#' -   [`create_alias`][gamelift_create_alias]
+#'   - [`create_alias`][gamelift_create_alias]
 #' 
-#' -   [`list_aliases`][gamelift_list_aliases]
+#'   - [`list_aliases`][gamelift_list_aliases]
 #' 
-#' -   [`describe_alias`][gamelift_describe_alias]
+#'   - [`describe_alias`][gamelift_describe_alias]
 #' 
-#' -   [`update_alias`][gamelift_update_alias]
+#'   - [`update_alias`][gamelift_update_alias]
 #' 
-#' -   [`delete_alias`][gamelift_delete_alias]
+#'   - [`delete_alias`][gamelift_delete_alias]
 #' 
-#' -   [`resolve_alias`][gamelift_resolve_alias]
+#'   - [`resolve_alias`][gamelift_resolve_alias]
 #'
 #' @usage
 #' gamelift_list_aliases(RoutingStrategyType, Name, Limit, NextToken)
@@ -6036,13 +6038,13 @@ gamelift_get_instance_access <- function(FleetId, InstanceId) {
 #' 
 #' Possible routing types include the following:
 #' 
-#' -   **SIMPLE** -- The alias resolves to one specific fleet. Use this
+#'   - **SIMPLE** -- The alias resolves to one specific fleet. Use this
 #'     type when routing to active fleets.
 #' 
-#' -   **TERMINAL** -- The alias does not resolve to a fleet but instead
+#'   - **TERMINAL** -- The alias does not resolve to a fleet but instead
 #'     can be used to display a message to the user. A terminal alias
-#'     throws a TerminalRoutingStrategyException with the RoutingStrategy
-#'     message embedded.
+#'     throws a TerminalRoutingStrategyException with the
+#'     <span>RoutingStrategy</span> message embedded.
 #' @param Name A descriptive label that is associated with an alias. Alias names do not
 #' need to be unique.
 #' @param Limit The maximum number of results to return. Use this parameter with
@@ -6126,15 +6128,15 @@ gamelift_list_aliases <- function(RoutingStrategyType = NULL, Name = NULL, Limit
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_build`][gamelift_create_build]
+#'   - [`create_build`][gamelift_create_build]
 #' 
-#' -   [`list_builds`][gamelift_list_builds]
+#'   - [`list_builds`][gamelift_list_builds]
 #' 
-#' -   [`describe_build`][gamelift_describe_build]
+#'   - [`describe_build`][gamelift_describe_build]
 #' 
-#' -   [`update_build`][gamelift_update_build]
+#'   - [`update_build`][gamelift_update_build]
 #' 
-#' -   [`delete_build`][gamelift_delete_build]
+#'   - [`delete_build`][gamelift_delete_build]
 #'
 #' @usage
 #' gamelift_list_builds(Status, Limit, NextToken)
@@ -6144,15 +6146,15 @@ gamelift_list_aliases <- function(RoutingStrategyType = NULL, Name = NULL, Limit
 #' 
 #' Possible build statuses include the following:
 #' 
-#' -   **INITIALIZED** -- A new build has been defined, but no files have
+#'   - **INITIALIZED** -- A new build has been defined, but no files have
 #'     been uploaded. You cannot create fleets for builds that are in this
 #'     status. When a build is successfully created, the build status is
 #'     set to this value.
 #' 
-#' -   **READY** -- The game build has been successfully uploaded. You can
+#'   - **READY** -- The game build has been successfully uploaded. You can
 #'     now create new fleets for this build.
 #' 
-#' -   **FAILED** -- The game build upload failed. You cannot create new
+#'   - **FAILED** -- The game build upload failed. You cannot create new
 #'     fleets for this build.
 #' @param Limit The maximum number of results to return. Use this parameter with
 #' `NextToken` to get results as a set of sequential pages.
@@ -6228,17 +6230,17 @@ gamelift_list_builds <- function(Status = NULL, Limit = NULL, NextToken = NULL) 
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_fleet`][gamelift_create_fleet]
+#'   - [`create_fleet`][gamelift_create_fleet]
 #' 
-#' -   [`list_fleets`][gamelift_list_fleets]
+#'   - [`list_fleets`][gamelift_list_fleets]
 #' 
-#' -   [`delete_fleet`][gamelift_delete_fleet]
+#'   - [`delete_fleet`][gamelift_delete_fleet]
 #' 
-#' -   [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
+#'   - [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
 #' 
-#' -   [`update_fleet_attributes`][gamelift_update_fleet_attributes]
+#'   - [`update_fleet_attributes`][gamelift_update_fleet_attributes]
 #' 
-#' -   [`start_fleet_actions`][gamelift_start_fleet_actions] or
+#'   - [`start_fleet_actions`][gamelift_start_fleet_actions] or
 #'     [`stop_fleet_actions`][gamelift_stop_fleet_actions]
 #'
 #' @usage
@@ -6299,8 +6301,8 @@ gamelift_list_fleets <- function(BuildId = NULL, ScriptId = NULL, Limit = NULL, 
 }
 .gamelift$operations$list_fleets <- gamelift_list_fleets
 
-#' This operation is used with the Amazon GameLift FleetIQ solution and
-#' game server groups
+#' THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND
+#' GAME SERVER GROUPS
 #'
 #' @description
 #' **This operation is used with the Amazon GameLift FleetIQ solution and
@@ -6317,21 +6319,21 @@ gamelift_list_fleets <- function(BuildId = NULL, ScriptId = NULL, Limit = NULL, 
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_game_server_group`][gamelift_create_game_server_group]
+#'   - [`create_game_server_group`][gamelift_create_game_server_group]
 #' 
-#' -   [`list_game_server_groups`][gamelift_list_game_server_groups]
+#'   - [`list_game_server_groups`][gamelift_list_game_server_groups]
 #' 
-#' -   [`describe_game_server_group`][gamelift_describe_game_server_group]
+#'   - [`describe_game_server_group`][gamelift_describe_game_server_group]
 #' 
-#' -   [`update_game_server_group`][gamelift_update_game_server_group]
+#'   - [`update_game_server_group`][gamelift_update_game_server_group]
 #' 
-#' -   [`delete_game_server_group`][gamelift_delete_game_server_group]
+#'   - [`delete_game_server_group`][gamelift_delete_game_server_group]
 #' 
-#' -   [`resume_game_server_group`][gamelift_resume_game_server_group]
+#'   - [`resume_game_server_group`][gamelift_resume_game_server_group]
 #' 
-#' -   [`suspend_game_server_group`][gamelift_suspend_game_server_group]
+#'   - [`suspend_game_server_group`][gamelift_suspend_game_server_group]
 #' 
-#' -   [`describe_game_server_instances`][gamelift_describe_game_server_instances]
+#'   - [`describe_game_server_instances`][gamelift_describe_game_server_instances]
 #'
 #' @usage
 #' gamelift_list_game_server_groups(Limit, NextToken)
@@ -6406,8 +6408,8 @@ gamelift_list_game_server_groups <- function(Limit = NULL, NextToken = NULL) {
 }
 .gamelift$operations$list_game_server_groups <- gamelift_list_game_server_groups
 
-#' This operation is used with the Amazon GameLift FleetIQ solution and
-#' game server groups
+#' THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND
+#' GAME SERVER GROUPS
 #'
 #' @description
 #' **This operation is used with the Amazon GameLift FleetIQ solution and
@@ -6425,24 +6427,25 @@ gamelift_list_game_server_groups <- function(Limit = NULL, NextToken = NULL) {
 #' 
 #' **Related operations**
 #' 
-#' -   [`register_game_server`][gamelift_register_game_server]
+#'   - [`register_game_server`][gamelift_register_game_server]
 #' 
-#' -   [`list_game_servers`][gamelift_list_game_servers]
+#'   - [`list_game_servers`][gamelift_list_game_servers]
 #' 
-#' -   [`claim_game_server`][gamelift_claim_game_server]
+#'   - [`claim_game_server`][gamelift_claim_game_server]
 #' 
-#' -   [`describe_game_server`][gamelift_describe_game_server]
+#'   - [`describe_game_server`][gamelift_describe_game_server]
 #' 
-#' -   [`update_game_server`][gamelift_update_game_server]
+#'   - [`update_game_server`][gamelift_update_game_server]
 #' 
-#' -   [`deregister_game_server`][gamelift_deregister_game_server]
+#'   - [`deregister_game_server`][gamelift_deregister_game_server]
 #'
 #' @usage
 #' gamelift_list_game_servers(GameServerGroupName, SortOrder, Limit,
 #'   NextToken)
 #'
 #' @param GameServerGroupName &#91;required&#93; An identifier for the game server group to retrieve a list of game
-#' servers from. Use either the GameServerGroup name or ARN value.
+#' servers from. Use either the <span>GameServerGroup</span> name or ARN
+#' value.
 #' @param SortOrder Indicates how to sort the returned data based on game server
 #' registration timestamp. Use ASCENDING to retrieve oldest game servers
 #' first, or use DESCENDING to retrieve newest game servers first. If this
@@ -6528,15 +6531,15 @@ gamelift_list_game_servers <- function(GameServerGroupName, SortOrder = NULL, Li
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_script`][gamelift_create_script]
+#'   - [`create_script`][gamelift_create_script]
 #' 
-#' -   [`list_scripts`][gamelift_list_scripts]
+#'   - [`list_scripts`][gamelift_list_scripts]
 #' 
-#' -   [`describe_script`][gamelift_describe_script]
+#'   - [`describe_script`][gamelift_describe_script]
 #' 
-#' -   [`update_script`][gamelift_update_script]
+#'   - [`update_script`][gamelift_update_script]
 #' 
-#' -   [`delete_script`][gamelift_delete_script]
+#'   - [`delete_script`][gamelift_delete_script]
 #'
 #' @usage
 #' gamelift_list_scripts(Limit, NextToken)
@@ -6609,19 +6612,19 @@ gamelift_list_scripts <- function(Limit = NULL, NextToken = NULL) {
 #' operation handles the permissions necessary to manage tags for the
 #' following GameLift resource types:
 #' 
-#' -   Build
+#'   - Build
 #' 
-#' -   Script
+#'   - Script
 #' 
-#' -   Fleet
+#'   - Fleet
 #' 
-#' -   Alias
+#'   - Alias
 #' 
-#' -   GameSessionQueue
+#'   - GameSessionQueue
 #' 
-#' -   MatchmakingConfiguration
+#'   - MatchmakingConfiguration
 #' 
-#' -   MatchmakingRuleSet
+#'   - MatchmakingRuleSet
 #' 
 #' To list tags for a resource, specify the unique ARN value for the
 #' resource.
@@ -6637,11 +6640,11 @@ gamelift_list_scripts <- function(Limit = NULL, NextToken = NULL) {
 #' 
 #' **Related operations**
 #' 
-#' -   [`tag_resource`][gamelift_tag_resource]
+#'   - [`tag_resource`][gamelift_tag_resource]
 #' 
-#' -   [`untag_resource`][gamelift_untag_resource]
+#'   - [`untag_resource`][gamelift_untag_resource]
 #' 
-#' -   [`list_tags_for_resource`][gamelift_list_tags_for_resource]
+#'   - [`list_tags_for_resource`][gamelift_list_tags_for_resource]
 #'
 #' @usage
 #' gamelift_list_tags_for_resource(ResourceARN)
@@ -6743,12 +6746,13 @@ gamelift_list_tags_for_resource <- function(ResourceARN) {
 #' 
 #' To create or update a target-based policy, specify a fleet ID and name,
 #' and set the policy type to "TargetBased". Specify the metric to track
-#' (PercentAvailableGameSessions) and reference a TargetConfiguration
-#' object with your desired buffer value. Exclude all other parameters. On
-#' a successful request, the policy name is returned. The scaling policy is
-#' automatically in force as soon as it's successfully created. If the
-#' fleet's auto-scaling actions are temporarily suspended, the new policy
-#' will be in force once the fleet actions are restarted.
+#' (PercentAvailableGameSessions) and reference a
+#' <span>TargetConfiguration</span> object with your desired buffer value.
+#' Exclude all other parameters. On a successful request, the policy name
+#' is returned. The scaling policy is automatically in force as soon as
+#' it's successfully created. If the fleet's auto-scaling actions are
+#' temporarily suspended, the new policy will be in force once the fleet
+#' actions are restarted.
 #' 
 #' **Rule-based policy**
 #' 
@@ -6781,28 +6785,28 @@ gamelift_list_tags_for_resource <- function(ResourceARN) {
 #' actions are temporarily suspended, the new policy will be in force once
 #' the fleet actions are restarted.
 #' 
-#' -   [`describe_fleet_capacity`][gamelift_describe_fleet_capacity]
+#'   - [`describe_fleet_capacity`][gamelift_describe_fleet_capacity]
 #' 
-#' -   [`update_fleet_capacity`][gamelift_update_fleet_capacity]
+#'   - [`update_fleet_capacity`][gamelift_update_fleet_capacity]
 #' 
-#' -   [`describe_ec2_instance_limits`][gamelift_describe_ec2_instance_limits]
+#'   - [`describe_ec2_instance_limits`][gamelift_describe_ec2_instance_limits]
 #' 
-#' -   Manage scaling policies:
-#' 
-#'     -   [`put_scaling_policy`][gamelift_put_scaling_policy]
+#'   - Manage scaling policies:
+#'     
+#'       - [`put_scaling_policy`][gamelift_put_scaling_policy]
+#'         (auto-scaling)
+#'     
+#'       - [`describe_scaling_policies`][gamelift_describe_scaling_policies]
+#'         (auto-scaling)
+#'     
+#'       - [`delete_scaling_policy`][gamelift_delete_scaling_policy]
 #'         (auto-scaling)
 #' 
-#'     -   [`describe_scaling_policies`][gamelift_describe_scaling_policies]
-#'         (auto-scaling)
-#' 
-#'     -   [`delete_scaling_policy`][gamelift_delete_scaling_policy]
-#'         (auto-scaling)
-#' 
-#' -   Manage fleet actions:
-#' 
-#'     -   [`start_fleet_actions`][gamelift_start_fleet_actions]
-#' 
-#'     -   [`stop_fleet_actions`][gamelift_stop_fleet_actions]
+#'   - Manage fleet actions:
+#'     
+#'       - [`start_fleet_actions`][gamelift_start_fleet_actions]
+#'     
+#'       - [`stop_fleet_actions`][gamelift_stop_fleet_actions]
 #'
 #' @usage
 #' gamelift_put_scaling_policy(Name, FleetId, ScalingAdjustment,
@@ -6817,16 +6821,16 @@ gamelift_list_tags_for_resource <- function(ResourceARN) {
 #' following statuses: ERROR or DELETING.
 #' @param ScalingAdjustment Amount of adjustment to make, based on the scaling adjustment type.
 #' @param ScalingAdjustmentType The type of adjustment to make to a fleet's instance count (see
-#' FleetCapacity):
+#' <span>FleetCapacity</span>):
 #' 
-#' -   **ChangeInCapacity** -- add (or subtract) the scaling adjustment
+#'   - **ChangeInCapacity** -- add (or subtract) the scaling adjustment
 #'     value from the current instance count. Positive values scale up
 #'     while negative values scale down.
 #' 
-#' -   **ExactCapacity** -- set the instance count to the scaling
+#'   - **ExactCapacity** -- set the instance count to the scaling
 #'     adjustment value.
 #' 
-#' -   **PercentChangeInCapacity** -- increase or reduce the current
+#'   - **PercentChangeInCapacity** -- increase or reduce the current
 #'     instance count by the scaling adjustment, read as a percentage.
 #'     Positive values scale up while negative values scale down; for
 #'     example, a value of "-10" scales the fleet down by 10%.
@@ -6840,39 +6844,39 @@ gamelift_list_tags_for_resource <- function(ResourceARN) {
 #' [Monitor Amazon GameLift with Amazon
 #' CloudWatch](https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html).
 #' 
-#' -   **ActivatingGameSessions** -- Game sessions in the process of being
+#'   - **ActivatingGameSessions** -- Game sessions in the process of being
 #'     created.
 #' 
-#' -   **ActiveGameSessions** -- Game sessions that are currently running.
+#'   - **ActiveGameSessions** -- Game sessions that are currently running.
 #' 
-#' -   **ActiveInstances** -- Fleet instances that are currently running at
+#'   - **ActiveInstances** -- Fleet instances that are currently running at
 #'     least one game session.
 #' 
-#' -   **AvailableGameSessions** -- Additional game sessions that fleet
+#'   - **AvailableGameSessions** -- Additional game sessions that fleet
 #'     could host simultaneously, given current capacity.
 #' 
-#' -   **AvailablePlayerSessions** -- Empty player slots in currently
+#'   - **AvailablePlayerSessions** -- Empty player slots in currently
 #'     active game sessions. This includes game sessions that are not
 #'     currently accepting players. Reserved player slots are not included.
 #' 
-#' -   **CurrentPlayerSessions** -- Player slots in active game sessions
+#'   - **CurrentPlayerSessions** -- Player slots in active game sessions
 #'     that are being used by a player or are reserved for a player.
 #' 
-#' -   **IdleInstances** -- Active instances that are currently hosting
+#'   - **IdleInstances** -- Active instances that are currently hosting
 #'     zero game sessions.
 #' 
-#' -   **PercentAvailableGameSessions** -- Unused percentage of the total
+#'   - **PercentAvailableGameSessions** -- Unused percentage of the total
 #'     number of game sessions that a fleet could host simultaneously,
 #'     given current capacity. Use this metric for a target-based scaling
 #'     policy.
 #' 
-#' -   **PercentIdleInstances** -- Percentage of the total number of active
+#'   - **PercentIdleInstances** -- Percentage of the total number of active
 #'     instances that are hosting zero game sessions.
 #' 
-#' -   **QueueDepth** -- Pending game session placement requests, in any
+#'   - **QueueDepth** -- Pending game session placement requests, in any
 #'     queue, where the current fleet is the top-priority destination.
 #' 
-#' -   **WaitTime** -- Current wait time for pending game session placement
+#'   - **WaitTime** -- Current wait time for pending game session placement
 #'     requests, in any queue, where the current fleet is the top-priority
 #'     destination.
 #' @param PolicyType The type of scaling policy to create. For a target-based policy, set the
@@ -6928,8 +6932,8 @@ gamelift_put_scaling_policy <- function(Name, FleetId, ScalingAdjustment = NULL,
 }
 .gamelift$operations$put_scaling_policy <- gamelift_put_scaling_policy
 
-#' This operation is used with the Amazon GameLift FleetIQ solution and
-#' game server groups
+#' THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND
+#' GAME SERVER GROUPS
 #'
 #' @description
 #' **This operation is used with the Amazon GameLift FleetIQ solution and
@@ -6961,24 +6965,24 @@ gamelift_put_scaling_policy <- function(Name, FleetId, ScalingAdjustment = NULL,
 #' 
 #' **Related operations**
 #' 
-#' -   [`register_game_server`][gamelift_register_game_server]
+#'   - [`register_game_server`][gamelift_register_game_server]
 #' 
-#' -   [`list_game_servers`][gamelift_list_game_servers]
+#'   - [`list_game_servers`][gamelift_list_game_servers]
 #' 
-#' -   [`claim_game_server`][gamelift_claim_game_server]
+#'   - [`claim_game_server`][gamelift_claim_game_server]
 #' 
-#' -   [`describe_game_server`][gamelift_describe_game_server]
+#'   - [`describe_game_server`][gamelift_describe_game_server]
 #' 
-#' -   [`update_game_server`][gamelift_update_game_server]
+#'   - [`update_game_server`][gamelift_update_game_server]
 #' 
-#' -   [`deregister_game_server`][gamelift_deregister_game_server]
+#'   - [`deregister_game_server`][gamelift_deregister_game_server]
 #'
 #' @usage
 #' gamelift_register_game_server(GameServerGroupName, GameServerId,
 #'   InstanceId, ConnectionInfo, GameServerData)
 #'
 #' @param GameServerGroupName &#91;required&#93; A unique identifier for the game server group where the game server is
-#' running. Use either the GameServerGroup name or ARN value.
+#' running. Use either the <span>GameServerGroup</span> name or ARN value.
 #' @param GameServerId &#91;required&#93; A custom string that uniquely identifies the game server to register.
 #' Game server IDs are developer-defined and must be unique across all game
 #' server groups in your AWS account.
@@ -7071,15 +7075,15 @@ gamelift_register_game_server <- function(GameServerGroupName, GameServerId, Ins
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_build`][gamelift_create_build]
+#'   - [`create_build`][gamelift_create_build]
 #' 
-#' -   [`list_builds`][gamelift_list_builds]
+#'   - [`list_builds`][gamelift_list_builds]
 #' 
-#' -   [`describe_build`][gamelift_describe_build]
+#'   - [`describe_build`][gamelift_describe_build]
 #' 
-#' -   [`update_build`][gamelift_update_build]
+#'   - [`update_build`][gamelift_update_build]
 #' 
-#' -   [`delete_build`][gamelift_delete_build]
+#'   - [`delete_build`][gamelift_delete_build]
 #'
 #' @usage
 #' gamelift_request_upload_credentials(BuildId)
@@ -7137,17 +7141,17 @@ gamelift_request_upload_credentials <- function(BuildId) {
 #' @description
 #' Retrieves the fleet ID that an alias is currently pointing to.
 #' 
-#' -   [`create_alias`][gamelift_create_alias]
+#'   - [`create_alias`][gamelift_create_alias]
 #' 
-#' -   [`list_aliases`][gamelift_list_aliases]
+#'   - [`list_aliases`][gamelift_list_aliases]
 #' 
-#' -   [`describe_alias`][gamelift_describe_alias]
+#'   - [`describe_alias`][gamelift_describe_alias]
 #' 
-#' -   [`update_alias`][gamelift_update_alias]
+#'   - [`update_alias`][gamelift_update_alias]
 #' 
-#' -   [`delete_alias`][gamelift_delete_alias]
+#'   - [`delete_alias`][gamelift_delete_alias]
 #' 
-#' -   [`resolve_alias`][gamelift_resolve_alias]
+#'   - [`resolve_alias`][gamelift_resolve_alias]
 #'
 #' @usage
 #' gamelift_resolve_alias(AliasId)
@@ -7191,8 +7195,8 @@ gamelift_resolve_alias <- function(AliasId) {
 }
 .gamelift$operations$resolve_alias <- gamelift_resolve_alias
 
-#' This operation is used with the Amazon GameLift FleetIQ solution and
-#' game server groups
+#' THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND
+#' GAME SERVER GROUPS
 #'
 #' @description
 #' **This operation is used with the Amazon GameLift FleetIQ solution and
@@ -7208,9 +7212,9 @@ gamelift_resolve_alias <- function(AliasId) {
 #' group activity is suspended.
 #' 
 #' To resume activity, specify a game server group ARN and the type of
-#' activity to be resumed. If successful, a GameServerGroup object is
-#' returned showing that the resumed activity is no longer listed in
-#' `SuspendedActions`.
+#' activity to be resumed. If successful, a <span>GameServerGroup</span>
+#' object is returned showing that the resumed activity is no longer listed
+#' in `SuspendedActions`.
 #' 
 #' **Learn more**
 #' 
@@ -7219,27 +7223,27 @@ gamelift_resolve_alias <- function(AliasId) {
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_game_server_group`][gamelift_create_game_server_group]
+#'   - [`create_game_server_group`][gamelift_create_game_server_group]
 #' 
-#' -   [`list_game_server_groups`][gamelift_list_game_server_groups]
+#'   - [`list_game_server_groups`][gamelift_list_game_server_groups]
 #' 
-#' -   [`describe_game_server_group`][gamelift_describe_game_server_group]
+#'   - [`describe_game_server_group`][gamelift_describe_game_server_group]
 #' 
-#' -   [`update_game_server_group`][gamelift_update_game_server_group]
+#'   - [`update_game_server_group`][gamelift_update_game_server_group]
 #' 
-#' -   [`delete_game_server_group`][gamelift_delete_game_server_group]
+#'   - [`delete_game_server_group`][gamelift_delete_game_server_group]
 #' 
-#' -   [`resume_game_server_group`][gamelift_resume_game_server_group]
+#'   - [`resume_game_server_group`][gamelift_resume_game_server_group]
 #' 
-#' -   [`suspend_game_server_group`][gamelift_suspend_game_server_group]
+#'   - [`suspend_game_server_group`][gamelift_suspend_game_server_group]
 #' 
-#' -   [`describe_game_server_instances`][gamelift_describe_game_server_instances]
+#'   - [`describe_game_server_instances`][gamelift_describe_game_server_instances]
 #'
 #' @usage
 #' gamelift_resume_game_server_group(GameServerGroupName, ResumeActions)
 #'
 #' @param GameServerGroupName &#91;required&#93; A unique identifier for the game server group. Use either the
-#' GameServerGroup name or ARN value.
+#' <span>GameServerGroup</span> name or ARN value.
 #' @param ResumeActions &#91;required&#93; The activity to resume for this game server group.
 #'
 #' @return
@@ -7312,16 +7316,16 @@ gamelift_resume_game_server_group <- function(GameServerGroupName, ResumeActions
 #' and sorts them in a specified order. You can search or sort by the
 #' following game session attributes:
 #' 
-#' -   **gameSessionId** -- A unique identifier for the game session. You
+#'   - **gameSessionId** -- A unique identifier for the game session. You
 #'     can use either a `GameSessionId` or `GameSessionArn` value.
 #' 
-#' -   **gameSessionName** -- Name assigned to a game session. This value
+#'   - **gameSessionName** -- Name assigned to a game session. This value
 #'     is set when requesting a new game session with
 #'     [`create_game_session`][gamelift_create_game_session] or updating
 #'     with [`update_game_session`][gamelift_update_game_session]. Game
 #'     session names do not need to be unique to a game session.
 #' 
-#' -   **gameSessionProperties** -- Custom data defined in a game session's
+#'   - **gameSessionProperties** -- Custom data defined in a game session's
 #'     `GameProperty` parameter. `GameProperty` values are stored as
 #'     key:value pairs; the filter expression must indicate the key and a
 #'     string to search the data values for. For example, to search for
@@ -7330,19 +7334,19 @@ gamelift_resume_game_server_group <- function(GameServerGroupName, ResumeActions
 #'     `gameSessionProperties.gameMode = "brawl"`. All custom data values
 #'     are searched as strings.
 #' 
-#' -   **maximumSessions** -- Maximum number of player sessions allowed for
+#'   - **maximumSessions** -- Maximum number of player sessions allowed for
 #'     a game session. This value is set when requesting a new game session
 #'     with [`create_game_session`][gamelift_create_game_session] or
 #'     updating with [`update_game_session`][gamelift_update_game_session].
 #' 
-#' -   **creationTimeMillis** -- Value indicating when a game session was
+#'   - **creationTimeMillis** -- Value indicating when a game session was
 #'     created. It is expressed in Unix time as milliseconds.
 #' 
-#' -   **playerSessionCount** -- Number of players currently connected to a
+#'   - **playerSessionCount** -- Number of players currently connected to a
 #'     game session. This value changes rapidly as players join the session
 #'     or drop out.
 #' 
-#' -   **hasAvailablePlayerSessions** -- Boolean value indicating whether a
+#'   - **hasAvailablePlayerSessions** -- Boolean value indicating whether a
 #'     game session has reached its maximum number of players. It is highly
 #'     recommended that all search requests include this filter attribute
 #'     to optimize search performance and return only sessions that players
@@ -7356,9 +7360,9 @@ gamelift_resume_game_server_group <- function(GameServerGroupName, ResumeActions
 #' 
 #' To search or sort, specify either a fleet ID or an alias ID, and provide
 #' a search filter expression, a sort expression, or both. If successful, a
-#' collection of GameSession objects matching the request is returned. Use
-#' the pagination parameters to retrieve results as a set of sequential
-#' pages.
+#' collection of <span>GameSession</span> objects matching the request is
+#' returned. Use the pagination parameters to retrieve results as a set of
+#' sequential pages.
 #' 
 #' You can search for game sessions one fleet at a time only. To find game
 #' sessions across multiple fleets, you must search each fleet separately
@@ -7367,25 +7371,25 @@ gamelift_resume_game_server_group <- function(GameServerGroupName, ResumeActions
 #' active, use
 #' [`describe_game_session_details`][gamelift_describe_game_session_details].
 #' 
-#' -   [`create_game_session`][gamelift_create_game_session]
+#'   - [`create_game_session`][gamelift_create_game_session]
 #' 
-#' -   [`describe_game_sessions`][gamelift_describe_game_sessions]
+#'   - [`describe_game_sessions`][gamelift_describe_game_sessions]
 #' 
-#' -   [`describe_game_session_details`][gamelift_describe_game_session_details]
+#'   - [`describe_game_session_details`][gamelift_describe_game_session_details]
 #' 
-#' -   [`search_game_sessions`][gamelift_search_game_sessions]
+#'   - [`search_game_sessions`][gamelift_search_game_sessions]
 #' 
-#' -   [`update_game_session`][gamelift_update_game_session]
+#'   - [`update_game_session`][gamelift_update_game_session]
 #' 
-#' -   [`get_game_session_log_url`][gamelift_get_game_session_log_url]
+#'   - [`get_game_session_log_url`][gamelift_get_game_session_log_url]
 #' 
-#' -   Game session placements
-#' 
-#'     -   [`start_game_session_placement`][gamelift_start_game_session_placement]
-#' 
-#'     -   [`describe_game_session_placement`][gamelift_describe_game_session_placement]
-#' 
-#'     -   [`stop_game_session_placement`][gamelift_stop_game_session_placement]
+#'   - Game session placements
+#'     
+#'       - [`start_game_session_placement`][gamelift_start_game_session_placement]
+#'     
+#'       - [`describe_game_session_placement`][gamelift_describe_game_session_placement]
+#'     
+#'       - [`stop_game_session_placement`][gamelift_stop_game_session_placement]
 #'
 #' @usage
 #' gamelift_search_game_sessions(FleetId, AliasId, FilterExpression,
@@ -7404,22 +7408,22 @@ gamelift_resume_game_server_group <- function(GameServerGroupName, ResumeActions
 #' A filter expression can contain one or multiple conditions. Each
 #' condition consists of the following:
 #' 
-#' -   **Operand** -- Name of a game session attribute. Valid values are
+#'   - **Operand** -- Name of a game session attribute. Valid values are
 #'     `gameSessionName`, `gameSessionId`, `gameSessionProperties`,
 #'     `maximumSessions`, `creationTimeMillis`, `playerSessionCount`,
 #'     `hasAvailablePlayerSessions`.
 #' 
-#' -   **Comparator** -- Valid comparators are: `=`, `<>`, `<`, `>`, `<=`,
+#'   - **Comparator** -- Valid comparators are: `=`, `<>`, `<`, `>`, `<=`,
 #'     `>=`.
 #' 
-#' -   **Value** -- Value to be searched for. Values may be numbers,
+#'   - **Value** -- Value to be searched for. Values may be numbers,
 #'     boolean values (true/false) or strings depending on the operand.
 #'     String values are case sensitive and must be enclosed in single
 #'     quotes. Special characters must be escaped. Boolean and string
 #'     values can only be used with the comparators `=` and `<>`. For
 #'     example, the following filter expression searches on
-#'     `gameSessionName`:
-#'     "`FilterExpression\": \"gameSessionName = \'Matt\\\'s Awesome Game 1\'\"`.
+#'     `gameSessionName`: "`FilterExpression\": \"gameSessionName =
+#'     \'Matt\\\'s Awesome Game 1\'\"`.
 #' 
 #' To chain multiple conditions in a single expression, use the logical
 #' keywords `AND`, `OR`, and `NOT` and parentheses as needed. For example:
@@ -7439,18 +7443,18 @@ gamelift_resume_game_server_group <- function(GameServerGroupName, ResumeActions
 #' 5.  OR
 #' 
 #' For example, this filter expression retrieves game sessions hosting at
-#' least ten players that have an open player slot:
-#' `"maximumSessions>=10 AND hasAvailablePlayerSessions=true"`.
+#' least ten players that have an open player slot: `"maximumSessions>=10
+#' AND hasAvailablePlayerSessions=true"`.
 #' @param SortExpression Instructions on how to sort the search results. If no sort expression is
 #' included, the request returns results in random order. A sort expression
 #' consists of the following elements:
 #' 
-#' -   **Operand** -- Name of a game session attribute. Valid values are
+#'   - **Operand** -- Name of a game session attribute. Valid values are
 #'     `gameSessionName`, `gameSessionId`, `gameSessionProperties`,
 #'     `maximumSessions`, `creationTimeMillis`, `playerSessionCount`,
 #'     `hasAvailablePlayerSessions`.
 #' 
-#' -   **Order** -- Valid sort orders are `ASC` (ascending) and `DESC`
+#'   - **Order** -- Valid sort orders are `ASC` (ascending) and `DESC`
 #'     (descending).
 #' 
 #' For example, this sort expression returns the oldest active sessions
@@ -7556,17 +7560,17 @@ gamelift_search_game_sessions <- function(FleetId = NULL, AliasId = NULL, Filter
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_fleet`][gamelift_create_fleet]
+#'   - [`create_fleet`][gamelift_create_fleet]
 #' 
-#' -   [`list_fleets`][gamelift_list_fleets]
+#'   - [`list_fleets`][gamelift_list_fleets]
 #' 
-#' -   [`delete_fleet`][gamelift_delete_fleet]
+#'   - [`delete_fleet`][gamelift_delete_fleet]
 #' 
-#' -   [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
+#'   - [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
 #' 
-#' -   [`update_fleet_attributes`][gamelift_update_fleet_attributes]
+#'   - [`update_fleet_attributes`][gamelift_update_fleet_attributes]
 #' 
-#' -   [`start_fleet_actions`][gamelift_start_fleet_actions] or
+#'   - [`start_fleet_actions`][gamelift_start_fleet_actions] or
 #'     [`stop_fleet_actions`][gamelift_stop_fleet_actions]
 #'
 #' @usage
@@ -7638,17 +7642,17 @@ gamelift_start_fleet_actions <- function(FleetId, Actions) {
 #' 
 #' To place a new game session request, specify the following:
 #' 
-#' -   The queue name and a set of game session properties and settings
+#'   - The queue name and a set of game session properties and settings
 #' 
-#' -   A unique ID (such as a UUID) for the placement. You use this ID to
+#'   - A unique ID (such as a UUID) for the placement. You use this ID to
 #'     track the status of the placement request
 #' 
-#' -   (Optional) A set of player data and a unique player ID for each
+#'   - (Optional) A set of player data and a unique player ID for each
 #'     player that you are joining to the new game session (player data is
 #'     optional, but if you include it, you must also provide a unique ID
 #'     for each player)
 #' 
-#' -   Latency data for all players (if you want to optimize game play for
+#'   - Latency data for all players (if you want to optimize game play for
 #'     the players)
 #' 
 #' If successful, a new game session placement is created.
@@ -7660,25 +7664,25 @@ gamelift_start_fleet_actions <- function(FleetId, Actions) {
 #' referenced. If the placement request times out, you can resubmit the
 #' request or retry it with a different queue.
 #' 
-#' -   [`create_game_session`][gamelift_create_game_session]
+#'   - [`create_game_session`][gamelift_create_game_session]
 #' 
-#' -   [`describe_game_sessions`][gamelift_describe_game_sessions]
+#'   - [`describe_game_sessions`][gamelift_describe_game_sessions]
 #' 
-#' -   [`describe_game_session_details`][gamelift_describe_game_session_details]
+#'   - [`describe_game_session_details`][gamelift_describe_game_session_details]
 #' 
-#' -   [`search_game_sessions`][gamelift_search_game_sessions]
+#'   - [`search_game_sessions`][gamelift_search_game_sessions]
 #' 
-#' -   [`update_game_session`][gamelift_update_game_session]
+#'   - [`update_game_session`][gamelift_update_game_session]
 #' 
-#' -   [`get_game_session_log_url`][gamelift_get_game_session_log_url]
+#'   - [`get_game_session_log_url`][gamelift_get_game_session_log_url]
 #' 
-#' -   Game session placements
-#' 
-#'     -   [`start_game_session_placement`][gamelift_start_game_session_placement]
-#' 
-#'     -   [`describe_game_session_placement`][gamelift_describe_game_session_placement]
-#' 
-#'     -   [`stop_game_session_placement`][gamelift_stop_game_session_placement]
+#'   - Game session placements
+#'     
+#'       - [`start_game_session_placement`][gamelift_start_game_session_placement]
+#'     
+#'       - [`describe_game_session_placement`][gamelift_describe_game_session_placement]
+#'     
+#'       - [`stop_game_session_placement`][gamelift_stop_game_session_placement]
 #'
 #' @usage
 #' gamelift_start_game_session_placement(PlacementId, GameSessionQueueName,
@@ -7693,8 +7697,8 @@ gamelift_start_fleet_actions <- function(FleetId, Actions) {
 #' either the queue name or ARN value.
 #' @param GameProperties Set of custom properties for a game session, formatted as key:value
 #' pairs. These properties are passed to a game server process in the
-#' GameSession object with a request to start a new game session (see
-#' [Start a Game
+#' <span>GameSession</span> object with a request to start a new game
+#' session (see [Start a Game
 #' Session](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession)).
 #' @param MaximumPlayerSessionCount &#91;required&#93; The maximum number of players that can be connected simultaneously to
 #' the game session.
@@ -7706,8 +7710,9 @@ gamelift_start_fleet_actions <- function(FleetId, Actions) {
 #' offer the best possible gameplay experience for the players.
 #' @param DesiredPlayerSessions Set of information on each player to create a player session for.
 #' @param GameSessionData Set of custom game session properties, formatted as a single string
-#' value. This data is passed to a game server process in the GameSession
-#' object with a request to start a new game session (see [Start a Game
+#' value. This data is passed to a game server process in the
+#' <span>GameSession</span> object with a request to start a new game
+#' session (see [Start a Game
 #' Session](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession)).
 #'
 #' @return
@@ -7831,9 +7836,9 @@ gamelift_start_game_session_placement <- function(PlacementId, GameSessionQueueN
 #' ticket per potential match. Once the a match is formed, the matchmaker
 #' creates player sessions for the new players. All tickets in the match
 #' are updated with the game session's connection information, and the
-#' GameSession object is updated to include matchmaker data on the new
-#' players. For more detail on how match backfill requests are processed,
-#' see [How Amazon GameLift FlexMatch
+#' <span>GameSession</span> object is updated to include matchmaker data on
+#' the new players. For more detail on how match backfill requests are
+#' processed, see [How Amazon GameLift FlexMatch
 #' Works](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/gamelift-match.html).
 #' 
 #' **Learn more**
@@ -7846,15 +7851,15 @@ gamelift_start_game_session_placement <- function(PlacementId, GameSessionQueueN
 #' 
 #' **Related operations**
 #' 
-#' -   [`start_matchmaking`][gamelift_start_matchmaking]
+#'   - [`start_matchmaking`][gamelift_start_matchmaking]
 #' 
-#' -   [`describe_matchmaking`][gamelift_describe_matchmaking]
+#'   - [`describe_matchmaking`][gamelift_describe_matchmaking]
 #' 
-#' -   [`stop_matchmaking`][gamelift_stop_matchmaking]
+#'   - [`stop_matchmaking`][gamelift_stop_matchmaking]
 #' 
-#' -   [`accept_match`][gamelift_accept_match]
+#'   - [`accept_match`][gamelift_accept_match]
 #' 
-#' -   [`start_match_backfill`][gamelift_start_match_backfill]
+#'   - [`start_match_backfill`][gamelift_start_match_backfill]
 #'
 #' @usage
 #' gamelift_start_match_backfill(TicketId, ConfigurationName,
@@ -7866,8 +7871,8 @@ gamelift_start_game_session_placement <- function(PlacementId, GameSessionQueueN
 #' retrieve match results.
 #' @param ConfigurationName &#91;required&#93; Name of the matchmaker to use for this request. You can use either the
 #' configuration name or ARN value. The ARN of the matchmaker that was used
-#' with the original game session is listed in the GameSession object,
-#' `MatchmakerData` property.
+#' with the original game session is listed in the <span>GameSession</span>
+#' object, `MatchmakerData` property.
 #' @param GameSessionArn Amazon Resource Name
 #' ([ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html))
 #' that is assigned to a game session and uniquely identifies it. This is
@@ -7876,14 +7881,14 @@ gamelift_start_game_session_placement <- function(PlacementId, GameSessionQueueN
 #' session. This information is used by the matchmaker to find new players
 #' and add them to the existing game.
 #' 
-#' -   PlayerID, PlayerAttributes, Team -\\\\- This information is
-#'     maintained in the GameSession object, `MatchmakerData` property, for
-#'     all players who are currently assigned to the game session. The
-#'     matchmaker data is in JSON syntax, formatted as a string. For more
-#'     details, see [Match
+#'   - PlayerID, PlayerAttributes, Team -\\\\- This information is
+#'     maintained in the <span>GameSession</span> object, `MatchmakerData`
+#'     property, for all players who are currently assigned to the game
+#'     session. The matchmaker data is in JSON syntax, formatted as a
+#'     string. For more details, see [Match
 #'     Data](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-server.html#match-server-data).
 #' 
-#' -   LatencyInMs -\\\\- If the matchmaker uses player latency, include a
+#'   - LatencyInMs -\\\\- If the matchmaker uses player latency, include a
 #'     latency value, in milliseconds, for the Region that the game session
 #'     is currently in. Do not include latency values for any other Region.
 #'
@@ -8034,15 +8039,15 @@ gamelift_start_match_backfill <- function(TicketId = NULL, ConfigurationName, Ga
 #' 
 #' **Related operations**
 #' 
-#' -   [`start_matchmaking`][gamelift_start_matchmaking]
+#'   - [`start_matchmaking`][gamelift_start_matchmaking]
 #' 
-#' -   [`describe_matchmaking`][gamelift_describe_matchmaking]
+#'   - [`describe_matchmaking`][gamelift_describe_matchmaking]
 #' 
-#' -   [`stop_matchmaking`][gamelift_stop_matchmaking]
+#'   - [`stop_matchmaking`][gamelift_stop_matchmaking]
 #' 
-#' -   [`accept_match`][gamelift_accept_match]
+#'   - [`accept_match`][gamelift_accept_match]
 #' 
-#' -   [`start_match_backfill`][gamelift_start_match_backfill]
+#'   - [`start_match_backfill`][gamelift_start_match_backfill]
 #'
 #' @usage
 #' gamelift_start_matchmaking(TicketId, ConfigurationName, Players)
@@ -8186,17 +8191,17 @@ gamelift_start_matchmaking <- function(TicketId = NULL, ConfigurationName, Playe
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_fleet`][gamelift_create_fleet]
+#'   - [`create_fleet`][gamelift_create_fleet]
 #' 
-#' -   [`list_fleets`][gamelift_list_fleets]
+#'   - [`list_fleets`][gamelift_list_fleets]
 #' 
-#' -   [`delete_fleet`][gamelift_delete_fleet]
+#'   - [`delete_fleet`][gamelift_delete_fleet]
 #' 
-#' -   [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
+#'   - [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
 #' 
-#' -   [`update_fleet_attributes`][gamelift_update_fleet_attributes]
+#'   - [`update_fleet_attributes`][gamelift_update_fleet_attributes]
 #' 
-#' -   [`start_fleet_actions`][gamelift_start_fleet_actions] or
+#'   - [`start_fleet_actions`][gamelift_start_fleet_actions] or
 #'     [`stop_fleet_actions`][gamelift_stop_fleet_actions]
 #'
 #' @usage
@@ -8246,25 +8251,25 @@ gamelift_stop_fleet_actions <- function(FleetId, Actions) {
 #' placement, provide the placement ID values. If successful, the placement
 #' is moved to `CANCELLED` status.
 #' 
-#' -   [`create_game_session`][gamelift_create_game_session]
+#'   - [`create_game_session`][gamelift_create_game_session]
 #' 
-#' -   [`describe_game_sessions`][gamelift_describe_game_sessions]
+#'   - [`describe_game_sessions`][gamelift_describe_game_sessions]
 #' 
-#' -   [`describe_game_session_details`][gamelift_describe_game_session_details]
+#'   - [`describe_game_session_details`][gamelift_describe_game_session_details]
 #' 
-#' -   [`search_game_sessions`][gamelift_search_game_sessions]
+#'   - [`search_game_sessions`][gamelift_search_game_sessions]
 #' 
-#' -   [`update_game_session`][gamelift_update_game_session]
+#'   - [`update_game_session`][gamelift_update_game_session]
 #' 
-#' -   [`get_game_session_log_url`][gamelift_get_game_session_log_url]
+#'   - [`get_game_session_log_url`][gamelift_get_game_session_log_url]
 #' 
-#' -   Game session placements
-#' 
-#'     -   [`start_game_session_placement`][gamelift_start_game_session_placement]
-#' 
-#'     -   [`describe_game_session_placement`][gamelift_describe_game_session_placement]
-#' 
-#'     -   [`stop_game_session_placement`][gamelift_stop_game_session_placement]
+#'   - Game session placements
+#'     
+#'       - [`start_game_session_placement`][gamelift_start_game_session_placement]
+#'     
+#'       - [`describe_game_session_placement`][gamelift_describe_game_session_placement]
+#'     
+#'       - [`stop_game_session_placement`][gamelift_stop_game_session_placement]
 #'
 #' @usage
 #' gamelift_stop_game_session_placement(PlacementId)
@@ -8370,15 +8375,15 @@ gamelift_stop_game_session_placement <- function(PlacementId) {
 #' 
 #' **Related operations**
 #' 
-#' -   [`start_matchmaking`][gamelift_start_matchmaking]
+#'   - [`start_matchmaking`][gamelift_start_matchmaking]
 #' 
-#' -   [`describe_matchmaking`][gamelift_describe_matchmaking]
+#'   - [`describe_matchmaking`][gamelift_describe_matchmaking]
 #' 
-#' -   [`stop_matchmaking`][gamelift_stop_matchmaking]
+#'   - [`stop_matchmaking`][gamelift_stop_matchmaking]
 #' 
-#' -   [`accept_match`][gamelift_accept_match]
+#'   - [`accept_match`][gamelift_accept_match]
 #' 
-#' -   [`start_match_backfill`][gamelift_start_match_backfill]
+#'   - [`start_match_backfill`][gamelift_start_match_backfill]
 #'
 #' @usage
 #' gamelift_stop_matchmaking(TicketId)
@@ -8415,8 +8420,8 @@ gamelift_stop_matchmaking <- function(TicketId) {
 }
 .gamelift$operations$stop_matchmaking <- gamelift_stop_matchmaking
 
-#' This operation is used with the Amazon GameLift FleetIQ solution and
-#' game server groups
+#' THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND
+#' GAME SERVER GROUPS
 #'
 #' @description
 #' **This operation is used with the Amazon GameLift FleetIQ solution and
@@ -8427,7 +8432,7 @@ gamelift_stop_matchmaking <- function(TicketId) {
 #' [`resume_game_server_group`][gamelift_resume_game_server_group]. You can
 #' suspend the following activity:
 #' 
-#' -   **Instance type replacement** - This activity evaluates the current
+#'   - **Instance type replacement** - This activity evaluates the current
 #'     game hosting viability of all Spot instance types that are defined
 #'     for the game server group. It updates the Auto Scaling group to
 #'     remove nonviable Spot Instance types, which have a higher chance of
@@ -8438,8 +8443,9 @@ gamelift_stop_matchmaking <- function(TicketId) {
 #'     metrics, and capacity scaling activities continue to be active.
 #' 
 #' To suspend activity, specify a game server group ARN and the type of
-#' activity to be suspended. If successful, a GameServerGroup object is
-#' returned showing that the activity is listed in `SuspendedActions`.
+#' activity to be suspended. If successful, a <span>GameServerGroup</span>
+#' object is returned showing that the activity is listed in
+#' `SuspendedActions`.
 #' 
 #' **Learn more**
 #' 
@@ -8448,27 +8454,27 @@ gamelift_stop_matchmaking <- function(TicketId) {
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_game_server_group`][gamelift_create_game_server_group]
+#'   - [`create_game_server_group`][gamelift_create_game_server_group]
 #' 
-#' -   [`list_game_server_groups`][gamelift_list_game_server_groups]
+#'   - [`list_game_server_groups`][gamelift_list_game_server_groups]
 #' 
-#' -   [`describe_game_server_group`][gamelift_describe_game_server_group]
+#'   - [`describe_game_server_group`][gamelift_describe_game_server_group]
 #' 
-#' -   [`update_game_server_group`][gamelift_update_game_server_group]
+#'   - [`update_game_server_group`][gamelift_update_game_server_group]
 #' 
-#' -   [`delete_game_server_group`][gamelift_delete_game_server_group]
+#'   - [`delete_game_server_group`][gamelift_delete_game_server_group]
 #' 
-#' -   [`resume_game_server_group`][gamelift_resume_game_server_group]
+#'   - [`resume_game_server_group`][gamelift_resume_game_server_group]
 #' 
-#' -   [`suspend_game_server_group`][gamelift_suspend_game_server_group]
+#'   - [`suspend_game_server_group`][gamelift_suspend_game_server_group]
 #' 
-#' -   [`describe_game_server_instances`][gamelift_describe_game_server_instances]
+#'   - [`describe_game_server_instances`][gamelift_describe_game_server_instances]
 #'
 #' @usage
 #' gamelift_suspend_game_server_group(GameServerGroupName, SuspendActions)
 #'
 #' @param GameServerGroupName &#91;required&#93; A unique identifier for the game server group. Use either the
-#' GameServerGroup name or ARN value.
+#' <span>GameServerGroup</span> name or ARN value.
 #' @param SuspendActions &#91;required&#93; The activity to suspend for this game server group.
 #'
 #' @return
@@ -8543,19 +8549,19 @@ gamelift_suspend_game_server_group <- function(GameServerGroupName, SuspendActio
 #' permissions necessary to manage tags for the following GameLift resource
 #' types:
 #' 
-#' -   Build
+#'   - Build
 #' 
-#' -   Script
+#'   - Script
 #' 
-#' -   Fleet
+#'   - Fleet
 #' 
-#' -   Alias
+#'   - Alias
 #' 
-#' -   GameSessionQueue
+#'   - GameSessionQueue
 #' 
-#' -   MatchmakingConfiguration
+#'   - MatchmakingConfiguration
 #' 
-#' -   MatchmakingRuleSet
+#'   - MatchmakingRuleSet
 #' 
 #' To add a tag to a resource, specify the unique ARN value for the
 #' resource and provide a tag list containing one or more tags. The
@@ -8573,11 +8579,11 @@ gamelift_suspend_game_server_group <- function(GameServerGroupName, SuspendActio
 #' 
 #' **Related operations**
 #' 
-#' -   [`tag_resource`][gamelift_tag_resource]
+#'   - [`tag_resource`][gamelift_tag_resource]
 #' 
-#' -   [`untag_resource`][gamelift_untag_resource]
+#'   - [`untag_resource`][gamelift_untag_resource]
 #' 
-#' -   [`list_tags_for_resource`][gamelift_list_tags_for_resource]
+#'   - [`list_tags_for_resource`][gamelift_list_tags_for_resource]
 #'
 #' @usage
 #' gamelift_tag_resource(ResourceARN, Tags)
@@ -8638,19 +8644,19 @@ gamelift_tag_resource <- function(ResourceARN, Tags) {
 #' handles the permissions necessary to manage tags for the following
 #' GameLift resource types:
 #' 
-#' -   Build
+#'   - Build
 #' 
-#' -   Script
+#'   - Script
 #' 
-#' -   Fleet
+#'   - Fleet
 #' 
-#' -   Alias
+#'   - Alias
 #' 
-#' -   GameSessionQueue
+#'   - GameSessionQueue
 #' 
-#' -   MatchmakingConfiguration
+#'   - MatchmakingConfiguration
 #' 
-#' -   MatchmakingRuleSet
+#'   - MatchmakingRuleSet
 #' 
 #' To remove a tag from a resource, specify the unique ARN value for the
 #' resource and provide a string list containing one or more tags to be
@@ -8668,11 +8674,11 @@ gamelift_tag_resource <- function(ResourceARN, Tags) {
 #' 
 #' **Related operations**
 #' 
-#' -   [`tag_resource`][gamelift_tag_resource]
+#'   - [`tag_resource`][gamelift_tag_resource]
 #' 
-#' -   [`untag_resource`][gamelift_untag_resource]
+#'   - [`untag_resource`][gamelift_untag_resource]
 #' 
-#' -   [`list_tags_for_resource`][gamelift_list_tags_for_resource]
+#'   - [`list_tags_for_resource`][gamelift_list_tags_for_resource]
 #'
 #' @usage
 #' gamelift_untag_resource(ResourceARN, TagKeys)
@@ -8728,17 +8734,17 @@ gamelift_untag_resource <- function(ResourceARN, TagKeys) {
 #' an alias to another fleet, provide an updated routing strategy. If
 #' successful, the updated alias record is returned.
 #' 
-#' -   [`create_alias`][gamelift_create_alias]
+#'   - [`create_alias`][gamelift_create_alias]
 #' 
-#' -   [`list_aliases`][gamelift_list_aliases]
+#'   - [`list_aliases`][gamelift_list_aliases]
 #' 
-#' -   [`describe_alias`][gamelift_describe_alias]
+#'   - [`describe_alias`][gamelift_describe_alias]
 #' 
-#' -   [`update_alias`][gamelift_update_alias]
+#'   - [`update_alias`][gamelift_update_alias]
 #' 
-#' -   [`delete_alias`][gamelift_delete_alias]
+#'   - [`delete_alias`][gamelift_delete_alias]
 #' 
-#' -   [`resolve_alias`][gamelift_resolve_alias]
+#'   - [`resolve_alias`][gamelift_resolve_alias]
 #'
 #' @usage
 #' gamelift_update_alias(AliasId, Name, Description, RoutingStrategy)
@@ -8825,15 +8831,15 @@ gamelift_update_alias <- function(AliasId, Name = NULL, Description = NULL, Rout
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_build`][gamelift_create_build]
+#'   - [`create_build`][gamelift_create_build]
 #' 
-#' -   [`list_builds`][gamelift_list_builds]
+#'   - [`list_builds`][gamelift_list_builds]
 #' 
-#' -   [`describe_build`][gamelift_describe_build]
+#'   - [`describe_build`][gamelift_describe_build]
 #' 
-#' -   [`update_build`][gamelift_update_build]
+#'   - [`update_build`][gamelift_update_build]
 #' 
-#' -   [`delete_build`][gamelift_delete_build]
+#'   - [`delete_build`][gamelift_delete_build]
 #'
 #' @usage
 #' gamelift_update_build(BuildId, Name, Version)
@@ -8908,25 +8914,25 @@ gamelift_update_build <- function(BuildId, Name = NULL, Version = NULL) {
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_fleet`][gamelift_create_fleet]
+#'   - [`create_fleet`][gamelift_create_fleet]
 #' 
-#' -   [`list_fleets`][gamelift_list_fleets]
+#'   - [`list_fleets`][gamelift_list_fleets]
 #' 
-#' -   [`delete_fleet`][gamelift_delete_fleet]
+#'   - [`delete_fleet`][gamelift_delete_fleet]
 #' 
-#' -   [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
+#'   - [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
 #' 
-#' -   Update fleets:
+#'   - Update fleets:
+#'     
+#'       - [`update_fleet_attributes`][gamelift_update_fleet_attributes]
+#'     
+#'       - [`update_fleet_capacity`][gamelift_update_fleet_capacity]
+#'     
+#'       - [`update_fleet_port_settings`][gamelift_update_fleet_port_settings]
+#'     
+#'       - [`update_runtime_configuration`][gamelift_update_runtime_configuration]
 #' 
-#'     -   [`update_fleet_attributes`][gamelift_update_fleet_attributes]
-#' 
-#'     -   [`update_fleet_capacity`][gamelift_update_fleet_capacity]
-#' 
-#'     -   [`update_fleet_port_settings`][gamelift_update_fleet_port_settings]
-#' 
-#'     -   [`update_runtime_configuration`][gamelift_update_runtime_configuration]
-#' 
-#' -   [`start_fleet_actions`][gamelift_start_fleet_actions] or
+#'   - [`start_fleet_actions`][gamelift_start_fleet_actions] or
 #'     [`stop_fleet_actions`][gamelift_stop_fleet_actions]
 #'
 #' @usage
@@ -8944,10 +8950,10 @@ gamelift_update_build <- function(BuildId, Name = NULL, Version = NULL) {
 #' protection for individual instances using
 #' [`update_game_session`][gamelift_update_game_session].
 #' 
-#' -   **NoProtection** -- The game session can be terminated during a
+#'   - **NoProtection** -- The game session can be terminated during a
 #'     scale-down event.
 #' 
-#' -   **FullProtection** -- If the game session is in an `ACTIVE` status,
+#'   - **FullProtection** -- If the game session is in an `ACTIVE` status,
 #'     it cannot be terminated during a scale-down event.
 #' @param ResourceCreationLimitPolicy Policy that limits the number of game sessions an individual player can
 #' create over a span of time.
@@ -9034,25 +9040,25 @@ gamelift_update_fleet_attributes <- function(FleetId, Name = NULL, Description =
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_fleet`][gamelift_create_fleet]
+#'   - [`create_fleet`][gamelift_create_fleet]
 #' 
-#' -   [`list_fleets`][gamelift_list_fleets]
+#'   - [`list_fleets`][gamelift_list_fleets]
 #' 
-#' -   [`delete_fleet`][gamelift_delete_fleet]
+#'   - [`delete_fleet`][gamelift_delete_fleet]
 #' 
-#' -   [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
+#'   - [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
 #' 
-#' -   Update fleets:
+#'   - Update fleets:
+#'     
+#'       - [`update_fleet_attributes`][gamelift_update_fleet_attributes]
+#'     
+#'       - [`update_fleet_capacity`][gamelift_update_fleet_capacity]
+#'     
+#'       - [`update_fleet_port_settings`][gamelift_update_fleet_port_settings]
+#'     
+#'       - [`update_runtime_configuration`][gamelift_update_runtime_configuration]
 #' 
-#'     -   [`update_fleet_attributes`][gamelift_update_fleet_attributes]
-#' 
-#'     -   [`update_fleet_capacity`][gamelift_update_fleet_capacity]
-#' 
-#'     -   [`update_fleet_port_settings`][gamelift_update_fleet_port_settings]
-#' 
-#'     -   [`update_runtime_configuration`][gamelift_update_runtime_configuration]
-#' 
-#' -   [`start_fleet_actions`][gamelift_start_fleet_actions] or
+#'   - [`start_fleet_actions`][gamelift_start_fleet_actions] or
 #'     [`stop_fleet_actions`][gamelift_stop_fleet_actions]
 #'
 #' @usage
@@ -9122,25 +9128,25 @@ gamelift_update_fleet_capacity <- function(FleetId, DesiredInstances = NULL, Min
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_fleet`][gamelift_create_fleet]
+#'   - [`create_fleet`][gamelift_create_fleet]
 #' 
-#' -   [`list_fleets`][gamelift_list_fleets]
+#'   - [`list_fleets`][gamelift_list_fleets]
 #' 
-#' -   [`delete_fleet`][gamelift_delete_fleet]
+#'   - [`delete_fleet`][gamelift_delete_fleet]
 #' 
-#' -   [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
+#'   - [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
 #' 
-#' -   Update fleets:
+#'   - Update fleets:
+#'     
+#'       - [`update_fleet_attributes`][gamelift_update_fleet_attributes]
+#'     
+#'       - [`update_fleet_capacity`][gamelift_update_fleet_capacity]
+#'     
+#'       - [`update_fleet_port_settings`][gamelift_update_fleet_port_settings]
+#'     
+#'       - [`update_runtime_configuration`][gamelift_update_runtime_configuration]
 #' 
-#'     -   [`update_fleet_attributes`][gamelift_update_fleet_attributes]
-#' 
-#'     -   [`update_fleet_capacity`][gamelift_update_fleet_capacity]
-#' 
-#'     -   [`update_fleet_port_settings`][gamelift_update_fleet_port_settings]
-#' 
-#'     -   [`update_runtime_configuration`][gamelift_update_runtime_configuration]
-#' 
-#' -   [`start_fleet_actions`][gamelift_start_fleet_actions] or
+#'   - [`start_fleet_actions`][gamelift_start_fleet_actions] or
 #'     [`stop_fleet_actions`][gamelift_stop_fleet_actions]
 #'
 #' @usage
@@ -9203,8 +9209,8 @@ gamelift_update_fleet_port_settings <- function(FleetId, InboundPermissionAuthor
 }
 .gamelift$operations$update_fleet_port_settings <- gamelift_update_fleet_port_settings
 
-#' This operation is used with the Amazon GameLift FleetIQ solution and
-#' game server groups
+#' THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND
+#' GAME SERVER GROUPS
 #'
 #' @description
 #' **This operation is used with the Amazon GameLift FleetIQ solution and
@@ -9219,12 +9225,12 @@ gamelift_update_fleet_port_settings <- function(FleetId, InboundPermissionAuthor
 #' information. You can make all three types of updates in the same
 #' request:
 #' 
-#' -   To update the game server's utilization status, identify the game
+#'   - To update the game server's utilization status, identify the game
 #'     server and game server group and specify the current utilization
 #'     status. Use this status to identify when game servers are currently
 #'     hosting games and when they are available to be claimed.
 #' 
-#' -   To report health status, identify the game server and game server
+#'   - To report health status, identify the game server and game server
 #'     group and set health check to `HEALTHY`. If a game server does not
 #'     report health status for a certain length of time, the game server
 #'     is no longer considered healthy. As a result, it will be eventually
@@ -9232,7 +9238,7 @@ gamelift_update_fleet_port_settings <- function(FleetId, InboundPermissionAuthor
 #'     utilization metrics. The best practice is to report health every 60
 #'     seconds.
 #' 
-#' -   To change game server metadata, provide updated game server data.
+#'   - To change game server metadata, provide updated game server data.
 #' 
 #' Once a game server is successfully updated, the relevant statuses and
 #' timestamps are updated.
@@ -9244,24 +9250,24 @@ gamelift_update_fleet_port_settings <- function(FleetId, InboundPermissionAuthor
 #' 
 #' **Related operations**
 #' 
-#' -   [`register_game_server`][gamelift_register_game_server]
+#'   - [`register_game_server`][gamelift_register_game_server]
 #' 
-#' -   [`list_game_servers`][gamelift_list_game_servers]
+#'   - [`list_game_servers`][gamelift_list_game_servers]
 #' 
-#' -   [`claim_game_server`][gamelift_claim_game_server]
+#'   - [`claim_game_server`][gamelift_claim_game_server]
 #' 
-#' -   [`describe_game_server`][gamelift_describe_game_server]
+#'   - [`describe_game_server`][gamelift_describe_game_server]
 #' 
-#' -   [`update_game_server`][gamelift_update_game_server]
+#'   - [`update_game_server`][gamelift_update_game_server]
 #' 
-#' -   [`deregister_game_server`][gamelift_deregister_game_server]
+#'   - [`deregister_game_server`][gamelift_deregister_game_server]
 #'
 #' @usage
 #' gamelift_update_game_server(GameServerGroupName, GameServerId,
 #'   GameServerData, UtilizationStatus, HealthCheck)
 #'
 #' @param GameServerGroupName &#91;required&#93; A unique identifier for the game server group where the game server is
-#' running. Use either the GameServerGroup name or ARN value.
+#' running. Use either the <span>GameServerGroup</span> name or ARN value.
 #' @param GameServerId &#91;required&#93; A custom string that uniquely identifies the game server to update.
 #' @param GameServerData A set of custom game server properties, formatted as a single string
 #' value. This data is passed to a game client or service when it requests
@@ -9330,8 +9336,8 @@ gamelift_update_game_server <- function(GameServerGroupName, GameServerId, GameS
 }
 .gamelift$operations$update_game_server <- gamelift_update_game_server
 
-#' This operation is used with the Amazon GameLift FleetIQ solution and
-#' game server groups
+#' THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND
+#' GAME SERVER GROUPS
 #'
 #' @description
 #' **This operation is used with the Amazon GameLift FleetIQ solution and
@@ -9345,8 +9351,8 @@ gamelift_update_game_server <- function(GameServerGroupName, GameServerId, GameS
 #' To update the game server group, specify the game server group ID and
 #' provide the updated values. Before applying the updates, the new values
 #' are validated to ensure that GameLift FleetIQ can continue to perform
-#' instance balancing activity. If successful, a GameServerGroup object is
-#' returned.
+#' instance balancing activity. If successful, a
+#' <span>GameServerGroup</span> object is returned.
 #' 
 #' **Learn more**
 #' 
@@ -9355,28 +9361,28 @@ gamelift_update_game_server <- function(GameServerGroupName, GameServerId, GameS
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_game_server_group`][gamelift_create_game_server_group]
+#'   - [`create_game_server_group`][gamelift_create_game_server_group]
 #' 
-#' -   [`list_game_server_groups`][gamelift_list_game_server_groups]
+#'   - [`list_game_server_groups`][gamelift_list_game_server_groups]
 #' 
-#' -   [`describe_game_server_group`][gamelift_describe_game_server_group]
+#'   - [`describe_game_server_group`][gamelift_describe_game_server_group]
 #' 
-#' -   [`update_game_server_group`][gamelift_update_game_server_group]
+#'   - [`update_game_server_group`][gamelift_update_game_server_group]
 #' 
-#' -   [`delete_game_server_group`][gamelift_delete_game_server_group]
+#'   - [`delete_game_server_group`][gamelift_delete_game_server_group]
 #' 
-#' -   [`resume_game_server_group`][gamelift_resume_game_server_group]
+#'   - [`resume_game_server_group`][gamelift_resume_game_server_group]
 #' 
-#' -   [`suspend_game_server_group`][gamelift_suspend_game_server_group]
+#'   - [`suspend_game_server_group`][gamelift_suspend_game_server_group]
 #' 
-#' -   [`describe_game_server_instances`][gamelift_describe_game_server_instances]
+#'   - [`describe_game_server_instances`][gamelift_describe_game_server_instances]
 #'
 #' @usage
 #' gamelift_update_game_server_group(GameServerGroupName, RoleArn,
 #'   InstanceDefinitions, GameServerProtectionPolicy, BalancingStrategy)
 #'
 #' @param GameServerGroupName &#91;required&#93; A unique identifier for the game server group. Use either the
-#' GameServerGroup name or ARN value.
+#' <span>GameServerGroup</span> name or ARN value.
 #' @param RoleArn The Amazon Resource Name
 #' ([ARN](https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-arn-format.html))
 #' for an IAM role that allows Amazon GameLift to access your EC2 Auto
@@ -9406,21 +9412,21 @@ gamelift_update_game_server <- function(GameServerGroupName, GameServerId, GameS
 #' On-Demand Instances in the game server group. Method options include the
 #' following:
 #' 
-#' -   `SPOT_ONLY` - Only Spot Instances are used in the game server group.
+#'   - `SPOT_ONLY` - Only Spot Instances are used in the game server group.
 #'     If Spot Instances are unavailable or not viable for game hosting,
 #'     the game server group provides no hosting capacity until Spot
 #'     Instances can again be used. Until then, no new instances are
 #'     started, and the existing nonviable Spot Instances are terminated
 #'     (after current gameplay ends) and are not replaced.
 #' 
-#' -   `SPOT_PREFERRED` - (default value) Spot Instances are used whenever
+#'   - `SPOT_PREFERRED` - (default value) Spot Instances are used whenever
 #'     available in the game server group. If Spot Instances are
 #'     unavailable, the game server group continues to provide hosting
 #'     capacity by falling back to On-Demand Instances. Existing nonviable
 #'     Spot Instances are terminated (after current gameplay ends) and are
 #'     replaced with new On-Demand Instances.
 #' 
-#' -   `ON_DEMAND_ONLY` - Only On-Demand Instances are used in the game
+#'   - `ON_DEMAND_ONLY` - Only On-Demand Instances are used in the game
 #'     server group. No Spot Instances are used, even when available, while
 #'     this balancing strategy is in force.
 #'
@@ -9500,28 +9506,28 @@ gamelift_update_game_server_group <- function(GameServerGroupName, RoleArn = NUL
 #' game session can be terminated during a scale-down event, and the player
 #' session creation policy, which controls whether or not new players can
 #' join the session. To update a game session, specify the game session ID
-#' and the values you want to change. If successful, an updated GameSession
-#' object is returned.
+#' and the values you want to change. If successful, an updated
+#' <span>GameSession</span> object is returned.
 #' 
-#' -   [`create_game_session`][gamelift_create_game_session]
+#'   - [`create_game_session`][gamelift_create_game_session]
 #' 
-#' -   [`describe_game_sessions`][gamelift_describe_game_sessions]
+#'   - [`describe_game_sessions`][gamelift_describe_game_sessions]
 #' 
-#' -   [`describe_game_session_details`][gamelift_describe_game_session_details]
+#'   - [`describe_game_session_details`][gamelift_describe_game_session_details]
 #' 
-#' -   [`search_game_sessions`][gamelift_search_game_sessions]
+#'   - [`search_game_sessions`][gamelift_search_game_sessions]
 #' 
-#' -   [`update_game_session`][gamelift_update_game_session]
+#'   - [`update_game_session`][gamelift_update_game_session]
 #' 
-#' -   [`get_game_session_log_url`][gamelift_get_game_session_log_url]
+#'   - [`get_game_session_log_url`][gamelift_get_game_session_log_url]
 #' 
-#' -   Game session placements
-#' 
-#'     -   [`start_game_session_placement`][gamelift_start_game_session_placement]
-#' 
-#'     -   [`describe_game_session_placement`][gamelift_describe_game_session_placement]
-#' 
-#'     -   [`stop_game_session_placement`][gamelift_stop_game_session_placement]
+#'   - Game session placements
+#'     
+#'       - [`start_game_session_placement`][gamelift_start_game_session_placement]
+#'     
+#'       - [`describe_game_session_placement`][gamelift_describe_game_session_placement]
+#'     
+#'       - [`stop_game_session_placement`][gamelift_stop_game_session_placement]
 #'
 #' @usage
 #' gamelift_update_game_session(GameSessionId, MaximumPlayerSessionCount,
@@ -9535,10 +9541,10 @@ gamelift_update_game_server_group <- function(GameServerGroupName, RoleArn = NUL
 #' @param PlayerSessionCreationPolicy Policy determining whether or not the game session accepts new players.
 #' @param ProtectionPolicy Game session protection policy to apply to this game session only.
 #' 
-#' -   **NoProtection** -- The game session can be terminated during a
+#'   - **NoProtection** -- The game session can be terminated during a
 #'     scale-down event.
 #' 
-#' -   **FullProtection** -- If the game session is in an `ACTIVE` status,
+#'   - **FullProtection** -- If the game session is in an `ACTIVE` status,
 #'     it cannot be terminated during a scale-down event.
 #'
 #' @return
@@ -9624,13 +9630,13 @@ gamelift_update_game_session <- function(GameSessionId, MaximumPlayerSessionCoun
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_game_session_queue`][gamelift_create_game_session_queue]
+#'   - [`create_game_session_queue`][gamelift_create_game_session_queue]
 #' 
-#' -   [`describe_game_session_queues`][gamelift_describe_game_session_queues]
+#'   - [`describe_game_session_queues`][gamelift_describe_game_session_queues]
 #' 
-#' -   [`update_game_session_queue`][gamelift_update_game_session_queue]
+#'   - [`update_game_session_queue`][gamelift_update_game_session_queue]
 #' 
-#' -   [`delete_game_session_queue`][gamelift_delete_game_session_queue]
+#'   - [`delete_game_session_queue`][gamelift_delete_game_session_queue]
 #'
 #' @usage
 #' gamelift_update_game_session_queue(Name, TimeoutInSeconds,
@@ -9734,21 +9740,21 @@ gamelift_update_game_session_queue <- function(Name, TimeoutInSeconds = NULL, Pl
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_matchmaking_configuration`][gamelift_create_matchmaking_configuration]
+#'   - [`create_matchmaking_configuration`][gamelift_create_matchmaking_configuration]
 #' 
-#' -   [`describe_matchmaking_configurations`][gamelift_describe_matchmaking_configurations]
+#'   - [`describe_matchmaking_configurations`][gamelift_describe_matchmaking_configurations]
 #' 
-#' -   [`update_matchmaking_configuration`][gamelift_update_matchmaking_configuration]
+#'   - [`update_matchmaking_configuration`][gamelift_update_matchmaking_configuration]
 #' 
-#' -   [`delete_matchmaking_configuration`][gamelift_delete_matchmaking_configuration]
+#'   - [`delete_matchmaking_configuration`][gamelift_delete_matchmaking_configuration]
 #' 
-#' -   [`create_matchmaking_rule_set`][gamelift_create_matchmaking_rule_set]
+#'   - [`create_matchmaking_rule_set`][gamelift_create_matchmaking_rule_set]
 #' 
-#' -   [`describe_matchmaking_rule_sets`][gamelift_describe_matchmaking_rule_sets]
+#'   - [`describe_matchmaking_rule_sets`][gamelift_describe_matchmaking_rule_sets]
 #' 
-#' -   [`validate_matchmaking_rule_set`][gamelift_validate_matchmaking_rule_set]
+#'   - [`validate_matchmaking_rule_set`][gamelift_validate_matchmaking_rule_set]
 #' 
-#' -   [`delete_matchmaking_rule_set`][gamelift_delete_matchmaking_rule_set]
+#'   - [`delete_matchmaking_rule_set`][gamelift_delete_matchmaking_rule_set]
 #'
 #' @usage
 #' gamelift_update_matchmaking_configuration(Name, Description,
@@ -9797,19 +9803,20 @@ gamelift_update_game_session_queue <- function(Name, TimeoutInSeconds = NULL, Pl
 #' configuration.
 #' @param GameProperties A set of custom properties for a game session, formatted as key-value
 #' pairs. These properties are passed to a game server process in the
-#' GameSession object with a request to start a new game session (see
-#' [Start a Game
+#' <span>GameSession</span> object with a request to start a new game
+#' session (see [Start a Game
 #' Session](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession)).
-#' This information is added to the new GameSession object that is created
-#' for a successful match. This parameter is not used if `FlexMatchMode` is
-#' set to `STANDALONE`.
+#' This information is added to the new <span>GameSession</span> object
+#' that is created for a successful match. This parameter is not used if
+#' `FlexMatchMode` is set to `STANDALONE`.
 #' @param GameSessionData A set of custom game session properties, formatted as a single string
-#' value. This data is passed to a game server process in the GameSession
-#' object with a request to start a new game session (see [Start a Game
+#' value. This data is passed to a game server process in the
+#' <span>GameSession</span> object with a request to start a new game
+#' session (see [Start a Game
 #' Session](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession)).
-#' This information is added to the new GameSession object that is created
-#' for a successful match. This parameter is not used if `FlexMatchMode` is
-#' set to `STANDALONE`.
+#' This information is added to the new <span>GameSession</span> object
+#' that is created for a successful match. This parameter is not used if
+#' `FlexMatchMode` is set to `STANDALONE`.
 #' @param BackfillMode The method that is used to backfill game sessions created with this
 #' matchmaking configuration. Specify MANUAL when your game manages
 #' backfill requests manually or does not use the match backfill feature.
@@ -9823,12 +9830,12 @@ gamelift_update_game_session_queue <- function(Name, TimeoutInSeconds = NULL, Pl
 #' @param FlexMatchMode Indicates whether this matchmaking configuration is being used with
 #' GameLift hosting or as a standalone matchmaking solution.
 #' 
-#' -   **STANDALONE** - FlexMatch forms matches and returns match
+#'   - **STANDALONE** - FlexMatch forms matches and returns match
 #'     information, including players and team assignments, in a
 #'     [MatchmakingSucceeded](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-events.html#match-events-matchmakingsucceeded)
 #'     event.
 #' 
-#' -   **WITH_QUEUE** - FlexMatch forms matches and uses the specified
+#'   - **WITH_QUEUE** - FlexMatch forms matches and uses the specified
 #'     GameLift queue to start a game session for the match.
 #'
 #' @return
@@ -9941,25 +9948,25 @@ gamelift_update_matchmaking_configuration <- function(Name, Description = NULL, 
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_fleet`][gamelift_create_fleet]
+#'   - [`create_fleet`][gamelift_create_fleet]
 #' 
-#' -   [`list_fleets`][gamelift_list_fleets]
+#'   - [`list_fleets`][gamelift_list_fleets]
 #' 
-#' -   [`delete_fleet`][gamelift_delete_fleet]
+#'   - [`delete_fleet`][gamelift_delete_fleet]
 #' 
-#' -   [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
+#'   - [`describe_fleet_attributes`][gamelift_describe_fleet_attributes]
 #' 
-#' -   Update fleets:
+#'   - Update fleets:
+#'     
+#'       - [`update_fleet_attributes`][gamelift_update_fleet_attributes]
+#'     
+#'       - [`update_fleet_capacity`][gamelift_update_fleet_capacity]
+#'     
+#'       - [`update_fleet_port_settings`][gamelift_update_fleet_port_settings]
+#'     
+#'       - [`update_runtime_configuration`][gamelift_update_runtime_configuration]
 #' 
-#'     -   [`update_fleet_attributes`][gamelift_update_fleet_attributes]
-#' 
-#'     -   [`update_fleet_capacity`][gamelift_update_fleet_capacity]
-#' 
-#'     -   [`update_fleet_port_settings`][gamelift_update_fleet_port_settings]
-#' 
-#'     -   [`update_runtime_configuration`][gamelift_update_runtime_configuration]
-#' 
-#' -   [`start_fleet_actions`][gamelift_start_fleet_actions] or
+#'   - [`start_fleet_actions`][gamelift_start_fleet_actions] or
 #'     [`stop_fleet_actions`][gamelift_stop_fleet_actions]
 #'
 #' @usage
@@ -10057,15 +10064,15 @@ gamelift_update_runtime_configuration <- function(FleetId, RuntimeConfiguration)
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_script`][gamelift_create_script]
+#'   - [`create_script`][gamelift_create_script]
 #' 
-#' -   [`list_scripts`][gamelift_list_scripts]
+#'   - [`list_scripts`][gamelift_list_scripts]
 #' 
-#' -   [`describe_script`][gamelift_describe_script]
+#'   - [`describe_script`][gamelift_describe_script]
 #' 
-#' -   [`update_script`][gamelift_update_script]
+#'   - [`update_script`][gamelift_update_script]
 #' 
-#' -   [`delete_script`][gamelift_delete_script]
+#'   - [`delete_script`][gamelift_delete_script]
 #'
 #' @usage
 #' gamelift_update_script(ScriptId, Name, Version, StorageLocation,
@@ -10094,8 +10101,8 @@ gamelift_update_runtime_configuration <- function(FleetId, RuntimeConfiguration)
 #' 
 #' When using the AWS CLI tool to create a script, this parameter is set to
 #' the zip file name. It must be prepended with the string "fileb://" to
-#' indicate that the file data is a binary object. For example:
-#' `--zip-file fileb://myRealtimeScript.zip`.
+#' indicate that the file data is a binary object. For example: `--zip-file
+#' fileb://myRealtimeScript.zip`.
 #'
 #' @return
 #' A list with the following syntax:
@@ -10166,26 +10173,26 @@ gamelift_update_script <- function(ScriptId, Name = NULL, Version = NULL, Storag
 #' 
 #' **Learn more**
 #' 
-#' -   [Build a Rule
+#'   - [Build a Rule
 #'     Set](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-rulesets.html)
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_matchmaking_configuration`][gamelift_create_matchmaking_configuration]
+#'   - [`create_matchmaking_configuration`][gamelift_create_matchmaking_configuration]
 #' 
-#' -   [`describe_matchmaking_configurations`][gamelift_describe_matchmaking_configurations]
+#'   - [`describe_matchmaking_configurations`][gamelift_describe_matchmaking_configurations]
 #' 
-#' -   [`update_matchmaking_configuration`][gamelift_update_matchmaking_configuration]
+#'   - [`update_matchmaking_configuration`][gamelift_update_matchmaking_configuration]
 #' 
-#' -   [`delete_matchmaking_configuration`][gamelift_delete_matchmaking_configuration]
+#'   - [`delete_matchmaking_configuration`][gamelift_delete_matchmaking_configuration]
 #' 
-#' -   [`create_matchmaking_rule_set`][gamelift_create_matchmaking_rule_set]
+#'   - [`create_matchmaking_rule_set`][gamelift_create_matchmaking_rule_set]
 #' 
-#' -   [`describe_matchmaking_rule_sets`][gamelift_describe_matchmaking_rule_sets]
+#'   - [`describe_matchmaking_rule_sets`][gamelift_describe_matchmaking_rule_sets]
 #' 
-#' -   [`validate_matchmaking_rule_set`][gamelift_validate_matchmaking_rule_set]
+#'   - [`validate_matchmaking_rule_set`][gamelift_validate_matchmaking_rule_set]
 #' 
-#' -   [`delete_matchmaking_rule_set`][gamelift_delete_matchmaking_rule_set]
+#'   - [`delete_matchmaking_rule_set`][gamelift_delete_matchmaking_rule_set]
 #'
 #' @usage
 #' gamelift_validate_matchmaking_rule_set(RuleSetBody)

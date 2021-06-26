@@ -16,8 +16,8 @@ NULL
 #' 
 #' You can manage your Lightsail resources using the Lightsail console,
 #' Lightsail API, AWS Command Line Interface (AWS CLI), or SDKs. For more
-#' information about Lightsail concepts and tasks, see the Lightsail Dev
-#' Guide.
+#' information about Lightsail concepts and tasks, see the <span>Lightsail
+#' Dev Guide</span>.
 #' 
 #' This API Reference provides detailed information about the actions, data
 #' types, parameters, and errors of the Lightsail service. For more
@@ -80,7 +80,7 @@ NULL
 #'  \link[=lightsail_create_domain_entry]{create_domain_entry} \tab Creates one of the following domain name system (DNS) records in a domain DNS zone: Address (A), canonical name (CNAME), mail exchanger (MX), name server (NS), start of authority (SOA), service locator (SRV), or text (TXT)\cr
 #'  \link[=lightsail_create_instances]{create_instances} \tab Creates one or more Amazon Lightsail instances\cr
 #'  \link[=lightsail_create_instances_from_snapshot]{create_instances_from_snapshot} \tab Creates one or more new instances from a manual or automatic snapshot of an instance\cr
-#'  \link[=lightsail_create_instance_snapshot]{create_instance_snapshot} \tab Creates a snapshot of a specific virtual private server, or instance\cr
+#'  \link[=lightsail_create_instance_snapshot]{create_instance_snapshot} \tab Creates a snapshot of a specific virtual private server, or _instance_\cr
 #'  \link[=lightsail_create_key_pair]{create_key_pair} \tab Creates an SSH key pair\cr
 #'  \link[=lightsail_create_load_balancer]{create_load_balancer} \tab Creates a Lightsail load balancer\cr
 #'  \link[=lightsail_create_load_balancer_tls_certificate]{create_load_balancer_tls_certificate} \tab Creates a Lightsail load balancer TLS certificate\cr
@@ -99,7 +99,7 @@ NULL
 #'  \link[=lightsail_delete_domain]{delete_domain} \tab Deletes the specified domain recordset and all of its domain records\cr
 #'  \link[=lightsail_delete_domain_entry]{delete_domain_entry} \tab Deletes a specific domain entry\cr
 #'  \link[=lightsail_delete_instance]{delete_instance} \tab Deletes an Amazon Lightsail instance\cr
-#'  \link[=lightsail_delete_instance_snapshot]{delete_instance_snapshot} \tab Deletes a specific snapshot of a virtual private server (or instance)\cr
+#'  \link[=lightsail_delete_instance_snapshot]{delete_instance_snapshot} \tab Deletes a specific snapshot of a virtual private server (or _instance_)\cr
 #'  \link[=lightsail_delete_key_pair]{delete_key_pair} \tab Deletes a specific SSH key pair\cr
 #'  \link[=lightsail_delete_known_host_keys]{delete_known_host_keys} \tab Deletes the known host key or certificate used by the Amazon Lightsail browser-based SSH or RDP clients to authenticate an instance\cr
 #'  \link[=lightsail_delete_load_balancer]{delete_load_balancer} \tab Deletes a Lightsail load balancer and all its associated SSL/TLS certificates\cr
@@ -117,7 +117,7 @@ NULL
 #'  \link[=lightsail_get_active_names]{get_active_names} \tab Returns the names of all active (not deleted) resources\cr
 #'  \link[=lightsail_get_alarms]{get_alarms} \tab Returns information about the configured alarms\cr
 #'  \link[=lightsail_get_auto_snapshots]{get_auto_snapshots} \tab Returns the available automatic snapshots for an instance or disk\cr
-#'  \link[=lightsail_get_blueprints]{get_blueprints} \tab Returns the list of available instance images, or blueprints\cr
+#'  \link[=lightsail_get_blueprints]{get_blueprints} \tab Returns the list of available instance images, or _blueprints_\cr
 #'  \link[=lightsail_get_bundles]{get_bundles} \tab Returns the list of bundles that are available for purchase\cr
 #'  \link[=lightsail_get_certificates]{get_certificates} \tab Returns information about one or more Amazon Lightsail SSL/TLS certificates\cr
 #'  \link[=lightsail_get_cloud_formation_stack_records]{get_cloud_formation_stack_records} \tab Returns the CloudFormation stack record created as a result of the create cloud formation stack operation\cr
@@ -141,10 +141,10 @@ NULL
 #'  \link[=lightsail_get_domains]{get_domains} \tab Returns a list of all domains in the user's account\cr
 #'  \link[=lightsail_get_export_snapshot_records]{get_export_snapshot_records} \tab Returns the export snapshot record created as a result of the export snapshot operation\cr
 #'  \link[=lightsail_get_instance]{get_instance} \tab Returns information about a specific Amazon Lightsail instance, which is a virtual private server\cr
-#'  \link[=lightsail_get_instance_access_details]{get_instance_access_details} \tab Returns temporary SSH keys you can use to connect to a specific virtual private server, or instance\cr
+#'  \link[=lightsail_get_instance_access_details]{get_instance_access_details} \tab Returns temporary SSH keys you can use to connect to a specific virtual private server, or _instance_\cr
 #'  \link[=lightsail_get_instance_metric_data]{get_instance_metric_data} \tab Returns the data points for the specified Amazon Lightsail instance metric, given an instance name\cr
 #'  \link[=lightsail_get_instance_port_states]{get_instance_port_states} \tab Returns the firewall port states for a specific Amazon Lightsail instance, the IP addresses allowed to connect to the instance through the ports, and the protocol\cr
-#'  \link[=lightsail_get_instances]{get_instances} \tab Returns information about all Amazon Lightsail virtual private servers, or instances\cr
+#'  \link[=lightsail_get_instances]{get_instances} \tab Returns information about all Amazon Lightsail virtual private servers, or _instances_\cr
 #'  \link[=lightsail_get_instance_snapshot]{get_instance_snapshot} \tab Returns information about a specific instance snapshot\cr
 #'  \link[=lightsail_get_instance_snapshots]{get_instance_snapshots} \tab Returns all instance snapshots for the user's account\cr
 #'  \link[=lightsail_get_instance_state]{get_instance_state} \tab Returns the state of a specific instance\cr
@@ -201,6 +201,12 @@ NULL
 #'  \link[=lightsail_update_relational_database_parameters]{update_relational_database_parameters} \tab Allows the update of one or more parameters of a database in Amazon Lightsail
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname lightsail
 #' @export
 lightsail <- function(config = list()) {
@@ -219,7 +225,7 @@ lightsail <- function(config = list()) {
   endpoints = list("*" = list(endpoint = "lightsail.{region}.amazonaws.com", global = FALSE), "cn-*" = list(endpoint = "lightsail.{region}.amazonaws.com.cn", global = FALSE), "us-iso-*" = list(endpoint = "lightsail.{region}.c2s.ic.gov", global = FALSE), "us-isob-*" = list(endpoint = "lightsail.{region}.sc2s.sgov.gov", global = FALSE)),
   service_id = "Lightsail",
   api_version = "2016-11-28",
-  signing_name = NULL,
+  signing_name = "lightsail",
   json_version = "1.1",
   target_prefix = "Lightsail_20161128"
 )

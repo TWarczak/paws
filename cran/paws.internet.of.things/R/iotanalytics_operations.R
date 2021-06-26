@@ -18,19 +18,19 @@ NULL
 #' The field names of message payloads (data) that you send to AWS IoT
 #' Analytics:
 #' 
-#' -   Must contain only alphanumeric characters and undescores (_). No
+#'   - Must contain only alphanumeric characters and undescores (_). No
 #'     other special characters are allowed.
 #' 
-#' -   Must begin with an alphabetic character or single underscore (_).
+#'   - Must begin with an alphabetic character or single underscore (_).
 #' 
-#' -   Cannot contain hyphens (-).
+#'   - Cannot contain hyphens (-).
 #' 
-#' -   In regular expression terms:
+#'   - In regular expression terms:
 #'     "^\[A-Za-z_\](\[A-Za-z0-9\]*|\[A-Za-z0-9\]\[A-Za-z0-9_\]*)$".
 #' 
-#' -   Cannot be more than 255 characters.
+#'   - Cannot be more than 255 characters.
 #' 
-#' -   Are case insensitive. (Fields named foo and FOO in the same payload
+#'   - Are case insensitive. (Fields named foo and FOO in the same payload
 #'     are considered duplicates.)
 #' 
 #' For example, \{"temp_01": 29\} or \{"_temp_01": 29\} are valid,
@@ -450,7 +450,8 @@ iotanalytics_create_dataset_content <- function(datasetName, versionId = NULL) {
 #' `customerManagedS3` storage is selected, this parameter is ignored.
 #' @param tags Metadata which can be used to manage the data store.
 #' @param fileFormatConfiguration Contains the configuration information of file formats. AWS IoT
-#' Analytics data stores support JSON and Parquet.
+#' Analytics data stores support JSON and
+#' [Parquet](https://parquet.apache.org/).
 #' 
 #' The default file format is JSON. You can specify only one format.
 #' 
@@ -550,7 +551,8 @@ iotanalytics_create_datastore <- function(datastoreName, datastoreStorage = NULL
 #' `channel` and a `datastore` activity. Each entry in the list must
 #' contain only one activity. For example:
 #' 
-#' `pipelineActivities = [ { "channel": { ... } }, { "lambda": { ... } }, ... ]`
+#' `pipelineActivities = [ { "channel": { ... } }, { "lambda": { ... } },
+#' ... ]`
 #' @param tags Metadata which can be used to manage the pipeline.
 #'
 #' @return
@@ -2458,7 +2460,8 @@ iotanalytics_update_dataset <- function(datasetName, actions, triggers = NULL, c
 #' default is`serviceManagedS3`. You cannot change this storage option
 #' after the data store is created.
 #' @param fileFormatConfiguration Contains the configuration information of file formats. AWS IoT
-#' Analytics data stores support JSON and Parquet.
+#' Analytics data stores support JSON and
+#' [Parquet](https://parquet.apache.org/).
 #' 
 #' The default file format is JSON. You can specify only one format.
 #' 
@@ -2540,7 +2543,8 @@ iotanalytics_update_datastore <- function(datastoreName, retentionPeriod = NULL,
 #' `channel` and a `datastore` activity. Each entry in the list must
 #' contain only one activity. For example:
 #' 
-#' `pipelineActivities = [ { "channel": { ... } }, { "lambda": { ... } }, ... ]`
+#' `pipelineActivities = [ { "channel": { ... } }, { "lambda": { ... } },
+#' ... ]`
 #'
 #' @return
 #' An empty list.

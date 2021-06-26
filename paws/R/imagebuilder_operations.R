@@ -157,7 +157,7 @@ imagebuilder_create_component <- function(name, semanticVersion, description = N
 #' @param name &#91;required&#93; The name of the container recipe.
 #' @param description The description of the container recipe.
 #' @param semanticVersion &#91;required&#93; The semantic version of the container recipe
-#' (&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;).
+#' (\<major\>.\<minor\>.\<patch\>).
 #' @param components &#91;required&#93; Components for build and test that are included in the container recipe.
 #' @param dockerfileTemplateData &#91;required&#93; The Dockerfile template used to build your image as an inline data blob.
 #' @param dockerfileTemplateUri The S3 URI for the Dockerfile that will be used to build your container
@@ -2229,7 +2229,7 @@ imagebuilder_list_container_recipes <- function(owner = NULL, filters = NULL, ma
 #'
 #' @param filters The filters.
 #' 
-#' -   `name` - The name of this distribution configuration.
+#'   - `name` - The name of this distribution configuration.
 #' @param maxResults The maximum items to return in a request.
 #' @param nextToken A token to specify where to start paginating. This is the NextToken from
 #' a previously truncated response.

@@ -9,6 +9,12 @@ kms(config = list())
 \arguments{
 \item{config}{Optional configuration of credentials, endpoint, and/or region.}
 }
+\value{
+A client for the service. You can call the service's operations using
+syntax like \code{svc$operation(...)}, where \code{svc} is the name you've assigned
+to the client. The available operations are listed in the
+Operations section.
+}
 \description{
 AWS Key Management Service (AWS KMS) is an encryption and key management
 web service. This guide describes the AWS KMS operations that you can
@@ -58,15 +64,21 @@ CloudTrail, including how to turn it on and find your log files, see the
 For more information about credentials and request signing, see the
 following:
 \itemize{
-\item \href{https://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html}{AWS Security Credentials} -
-This topic provides general information about the types of
+\item \href{https://docs.aws.amazon.com/general/latest/gr/aws-security-credentials.html}{AWS Security Credentials}
+\itemize{
+\item This topic provides general information about the types of
 credentials used for accessing AWS.
-\item \href{https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html}{Temporary Security Credentials} -
-This section of the \emph{IAM User Guide} describes how to create and use
-temporary security credentials.
-\item \href{https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html}{Signature Version 4 Signing Process} -
-This set of topics walks you through the process of signing a
+}
+\item \href{https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html}{Temporary Security Credentials}
+\itemize{
+\item This section of the \emph{IAM User Guide} describes how to create and
+use temporary security credentials.
+}
+\item \href{https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html}{Signature Version 4 Signing Process}
+\itemize{
+\item This set of topics walks you through the process of signing a
 request using an access key ID and a secret access key.
+}
 }
 
 \strong{Commonly Used API Operations}

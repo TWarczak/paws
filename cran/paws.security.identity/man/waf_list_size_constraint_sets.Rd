@@ -2,7 +2,7 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_list_size_constraint_sets}
 \alias{waf_list_size_constraint_sets}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_list_size_constraint_sets(NextMarker, Limit)
 }
@@ -43,7 +43,7 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Returns an array of SizeConstraintSetSummary objects.
+Returns an array of <span>SizeConstraintSetSummary</span> objects.
 }
 \section{Request syntax}{
 \preformatted{svc$list_size_constraint_sets(

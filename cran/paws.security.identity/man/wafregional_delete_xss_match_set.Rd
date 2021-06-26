@@ -2,13 +2,13 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_delete_xss_match_set}
 \alias{wafregional_delete_xss_match_set}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 wafregional_delete_xss_match_set(XssMatchSetId, ChangeToken)
 }
 \arguments{
-\item{XssMatchSetId}{[required] The \code{XssMatchSetId} of the XssMatchSet that you want to delete.
-\code{XssMatchSetId} is returned by
+\item{XssMatchSetId}{[required] The \code{XssMatchSetId} of the <span>XssMatchSet</span> that you want to
+delete. \code{XssMatchSetId} is returned by
 \code{\link[=wafregional_create_xss_match_set]{create_xss_match_set}} and by
 \code{\link[=wafregional_list_xss_match_sets]{list_xss_match_sets}}.}
 
@@ -31,9 +31,9 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Permanently deletes an XssMatchSet. You can't delete an \code{XssMatchSet} if
-it's still used in any \code{Rules} or if it still contains any XssMatchTuple
-objects.
+Permanently deletes an <span>XssMatchSet</span>. You can't delete an
+\code{XssMatchSet} if it's still used in any \code{Rules} or if it still contains
+any <span>XssMatchTuple</span> objects.
 
 If you just want to remove an \code{XssMatchSet} from a \code{Rule}, use
 \code{\link[=wafregional_update_rule]{update_rule}}.

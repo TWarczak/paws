@@ -100,13 +100,14 @@ job identifier (\code{JobId}) from the initial call to
 \code{\link[=textract_start_document_analysis]{start_document_analysis}}.
 
 \code{\link[=textract_get_document_analysis]{get_document_analysis}} returns an
-array of Block objects. The following types of information are returned:
+array of <span>Block</span> objects. The following types of information
+are returned:
 \itemize{
 \item Form data (key-value pairs). The related information is returned in
-two Block objects, each of type \code{KEY_VALUE_SET}: a KEY \code{Block}
-object and a VALUE \code{Block} object. For example, \emph{Name: Ana Silva
-Carolina} contains a key and value. \emph{Name:} is the key. \emph{Ana Silva
-Carolina} is the value.
+two <span>Block</span> objects, each of type \code{KEY_VALUE_SET}: a KEY
+\code{Block} object and a VALUE \code{Block} object. For example, \emph{Name: Ana
+Silva Carolina} contains a key and value. \emph{Name:} is the key. \emph{Ana
+Silva Carolina} is the value.
 \item Table and table cell data. A TABLE \code{Block} object contains
 information about a detected table. A CELL \code{Block} object is
 returned for each cell in a table.

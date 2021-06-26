@@ -2,14 +2,14 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_delete_web_acl}
 \alias{wafregional_delete_web_acl}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 wafregional_delete_web_acl(WebACLId, ChangeToken)
 }
 \arguments{
-\item{WebACLId}{[required] The \code{WebACLId} of the WebACL that you want to delete. \code{WebACLId} is
-returned by \code{\link[=wafregional_create_web_acl]{create_web_acl}} and by
-\code{\link[=wafregional_list_web_ac_ls]{list_web_ac_ls}}.}
+\item{WebACLId}{[required] The \code{WebACLId} of the <span>WebACL</span> that you want to delete.
+\code{WebACLId} is returned by \code{\link[=wafregional_create_web_acl]{create_web_acl}}
+and by \code{\link[=wafregional_list_web_ac_ls]{list_web_ac_ls}}.}
 
 \item{ChangeToken}{[required] The value returned by the most recent call to
 \code{\link[=wafregional_get_change_token]{get_change_token}}.}
@@ -30,8 +30,8 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Permanently deletes a WebACL. You can't delete a \code{WebACL} if it still
-contains any \code{Rules}.
+Permanently deletes a <span>WebACL</span>. You can't delete a \code{WebACL}
+if it still contains any \code{Rules}.
 
 To delete a \code{WebACL}, perform the following steps:
 \enumerate{

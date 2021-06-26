@@ -35,12 +35,13 @@ A list with the following syntax:\preformatted{list(
 Starts asynchronous detection of text in a stored video.
 
 Amazon Rekognition Video can detect text in a video stored in an Amazon
-S3 bucket. Use Video to specify the bucket name and the filename of the
-video. \code{\link[=rekognition_start_text_detection]{start_text_detection}}
-returns a job identifier (\code{JobId}) which you use to get the results of
-the operation. When text detection is finished, Amazon Rekognition Video
-publishes a completion status to the Amazon Simple Notification Service
-topic that you specify in \code{NotificationChannel}.
+S3 bucket. Use <span>Video</span> to specify the bucket name and the
+filename of the video.
+\code{\link[=rekognition_start_text_detection]{start_text_detection}} returns a job
+identifier (\code{JobId}) which you use to get the results of the operation.
+When text detection is finished, Amazon Rekognition Video publishes a
+completion status to the Amazon Simple Notification Service topic that
+you specify in \code{NotificationChannel}.
 
 To get the results of the text detection operation, first check that the
 status value published to the Amazon SNS topic is \code{SUCCEEDED}. if so,

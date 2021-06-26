@@ -76,7 +76,7 @@ NULL
 #'  \link[=cloudwatch_list_metrics]{list_metrics} \tab List the specified metrics\cr
 #'  \link[=cloudwatch_list_tags_for_resource]{list_tags_for_resource} \tab Displays the tags associated with a CloudWatch resource\cr
 #'  \link[=cloudwatch_put_anomaly_detector]{put_anomaly_detector} \tab Creates an anomaly detection model for a CloudWatch metric\cr
-#'  \link[=cloudwatch_put_composite_alarm]{put_composite_alarm} \tab Creates or updates a composite alarm\cr
+#'  \link[=cloudwatch_put_composite_alarm]{put_composite_alarm} \tab Creates or updates a _composite alarm_\cr
 #'  \link[=cloudwatch_put_dashboard]{put_dashboard} \tab Creates a dashboard if it does not already exist, or updates an existing dashboard\cr
 #'  \link[=cloudwatch_put_insight_rule]{put_insight_rule} \tab Creates a Contributor Insights rule\cr
 #'  \link[=cloudwatch_put_metric_alarm]{put_metric_alarm} \tab Creates or updates an alarm and associates it with the specified metric, metric math expression, or anomaly detection model\cr
@@ -85,6 +85,12 @@ NULL
 #'  \link[=cloudwatch_tag_resource]{tag_resource} \tab Assigns one or more tags (key-value pairs) to the specified CloudWatch resource\cr
 #'  \link[=cloudwatch_untag_resource]{untag_resource} \tab Removes one or more tags from the specified resource
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname cloudwatch
 #' @export
@@ -104,7 +110,7 @@ cloudwatch <- function(config = list()) {
   endpoints = list("*" = list(endpoint = "monitoring.{region}.amazonaws.com", global = FALSE), "cn-*" = list(endpoint = "monitoring.{region}.amazonaws.com.cn", global = FALSE), "us-iso-*" = list(endpoint = "monitoring.{region}.c2s.ic.gov", global = FALSE), "us-isob-*" = list(endpoint = "monitoring.{region}.sc2s.sgov.gov", global = FALSE)),
   service_id = "CloudWatch",
   api_version = "2010-08-01",
-  signing_name = NULL,
+  signing_name = "monitoring",
   json_version = "",
   target_prefix = ""
 )

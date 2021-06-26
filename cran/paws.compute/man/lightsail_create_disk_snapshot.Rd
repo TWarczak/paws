@@ -85,7 +85,8 @@ available, you can create a block storage disk from the snapshot and
 attach it to a running instance to access the data on the disk.
 
 The \verb{create disk snapshot} operation supports tag-based access control
-via request tags. For more information, see the Lightsail Dev Guide.
+via request tags. For more information, see the <span>Lightsail Dev
+Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$create_disk_snapshot(

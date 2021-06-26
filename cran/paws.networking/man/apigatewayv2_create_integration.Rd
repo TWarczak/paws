@@ -127,11 +127,10 @@ runtime. To learn more, see \href{https://docs.aws.amazon.com/apigateway/latest/
 For HTTP API integrations without a specified integrationSubtype request
 parameters are a key-value map specifying how to transform HTTP requests
 before sending them to the backend. The key should follow the pattern
-<action>:<header|querystring|path>.<location> where
-action can be append, overwrite or remove. For values, you can provide
-static values, or map request data, stage variables, or context
-variables that are evaluated at runtime. To learn more, see
-\href{https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html}{Transforming API requests and responses}.}
+\<action\>:\<header|querystring|path\>.\<location\> where action can be
+append, overwrite or remove. For values, you can provide static values,
+or map request data, stage variables, or context variables that are
+evaluated at runtime. To learn more, see \href{https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html}{Transforming API requests and responses}.}
 
 \item{RequestTemplates}{Represents a map of Velocity templates that are applied on the request
 payload based on the value of the Content-Type header sent by the
@@ -143,11 +142,11 @@ the HTTP response from a backend integration before returning the
 response to clients. Specify a key-value map from a selection key to
 response parameters. The selection key must be a valid HTTP status code
 within the range of 200-599. Response parameters are a key-value map.
-The key must match pattern
-<action>:<header>.<location> or overwrite.statuscode.
-The action can be append, overwrite or remove. The value can be a static
-value, or map to response data, stage variables, or context variables
-that are evaluated at runtime. To learn more, see \href{https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html}{Transforming API requests and responses}.}
+The key must match pattern \<action\>:\<header\>.\<location\> or
+overwrite.statuscode. The action can be append, overwrite or remove. The
+value can be a static value, or map to response data, stage variables,
+or context variables that are evaluated at runtime. To learn more, see
+\href{https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html}{Transforming API requests and responses}.}
 
 \item{TemplateSelectionExpression}{The template selection expression for the integration.}
 

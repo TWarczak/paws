@@ -26,7 +26,7 @@ using the
 \code{\link[=kinesisanalyticsv2_describe_application]{describe_application}}
 operation.}
 
-\item{InputProcessingConfiguration}{[required] The InputProcessingConfiguration to add to the application.}
+\item{InputProcessingConfiguration}{[required] The <span>InputProcessingConfiguration</span> to add to the application.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -43,10 +43,10 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Adds an InputProcessingConfiguration to a SQL-based Kinesis Data
-Analytics application. An input processor pre-processes records on the
-input stream before the application's SQL code executes. Currently, the
-only input processor available is \href{https://docs.aws.amazon.com/lambda/}{AWS Lambda}.
+Adds an <span>InputProcessingConfiguration</span> to a SQL-based Kinesis
+Data Analytics application. An input processor pre-processes records on
+the input stream before the application's SQL code executes. Currently,
+the only input processor available is \href{https://docs.aws.amazon.com/lambda/}{AWS Lambda}.
 }
 \section{Request syntax}{
 \preformatted{svc$add_application_input_processing_configuration(

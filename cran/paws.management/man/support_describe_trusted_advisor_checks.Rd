@@ -33,8 +33,8 @@ Returns information about all available AWS Trusted Advisor checks,
 including the name, ID, category, description, and metadata. You must
 specify a language code. The AWS Support API currently supports English
 ("en") and Japanese ("ja"). The response contains a
-TrustedAdvisorCheckDescription object for each check. You must set the
-AWS Region to us-east-1.
+<span>TrustedAdvisorCheckDescription</span> object for each check. You
+must set the AWS Region to us-east-1.
 \itemize{
 \item You must have a Business or Enterprise support plan to use the AWS
 Support API.

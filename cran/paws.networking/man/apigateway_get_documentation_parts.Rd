@@ -8,7 +8,8 @@ apigateway_get_documentation_parts(restApiId, type, nameQuery, path,
   position, limit, locationStatus)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
 \item{type}{The type of API entities of the to-be-retrieved documentation parts.}
 
@@ -22,8 +23,9 @@ apigateway_get_documentation_parts(restApiId, type, nameQuery, path,
 and the maximum value is 500.}
 
 \item{locationStatus}{The status of the API documentation parts to retrieve. Valid values are
-\code{DOCUMENTED} for retrieving DocumentationPart resources with content and
-\code{UNDOCUMENTED} for DocumentationPart resources without content.}
+\code{DOCUMENTED} for retrieving <span>DocumentationPart</span> resources
+with content and \code{UNDOCUMENTED} for <span>DocumentationPart</span>
+resources without content.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

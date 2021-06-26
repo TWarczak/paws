@@ -50,8 +50,7 @@ snapshots will have access to all the information needed to restore the
 disk.
 
 The \verb{delete disk snapshot} operation supports tag-based access control
-via resource tags applied to the resource identified by
-\verb{disk snapshot name}. For more information, see the Lightsail Dev Guide.
+via resource tags applied to the resource identified by \verb{disk snapshot name}. For more information, see the <span>Lightsail Dev Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$delete_disk_snapshot(

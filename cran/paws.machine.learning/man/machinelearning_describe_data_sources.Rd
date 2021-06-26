@@ -15,7 +15,7 @@ machinelearning_describe_data_sources(FilterVariable, EQ, GT, LT, GE,
 dates.
 \item \code{Status} - Sets the search criteria to \code{DataSource} statuses.
 \item \code{Name} - Sets the search criteria to the contents of \code{DataSource}
-\code{Name}.
+**** \code{Name}.
 \item \code{DataUri} - Sets the search criteria to the URI of data files used
 to create the \code{DataSource}. The URI can identify either a file or an
 Amazon Simple Storage Service (Amazon S3) bucket or directory.

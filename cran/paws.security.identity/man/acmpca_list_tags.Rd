@@ -12,7 +12,7 @@ acmpca_list_tags(CertificateAuthorityArn, NextToken, MaxResults)
 \code{\link[=acmpca_create_certificate_authority]{create_certificate_authority}}
 action. This must be of the form:
 
-\code{arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012 }}
+\code{arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012}}
 
 \item{NextToken}{Use this parameter when paginating results in a subsequent request after
 you receive a response with truncated results. Set it to the value of

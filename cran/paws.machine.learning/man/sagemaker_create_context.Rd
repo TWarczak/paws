@@ -2,7 +2,7 @@
 % Please edit documentation in R/sagemaker_operations.R
 \name{sagemaker_create_context}
 \alias{sagemaker_create_context}
-\title{Creates a context}
+\title{Creates a \emph{context}}
 \usage{
 sagemaker_create_context(ContextName, Source, ContextType, Description,
   Properties, Tags)

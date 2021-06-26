@@ -25,7 +25,7 @@ in the \emph{Alexa Skills Kit}.}
 
 \item{slots}{An array of intent slots. At runtime, Amazon Lex elicits required slot
 values from the user using prompts defined in the slots. For more
-information, see how-it-works.}
+information, see <span>how-it-works</span>.}
 
 \item{sampleUtterances}{An array of utterances (strings) that a user might say to signal the
 intent. For example, "I want \{PizzaSize\} pizza", "Order
@@ -313,7 +313,7 @@ throws an exception. When you update the \verb{$LATEST} version of an intent,
 the \code{status} field of any bot that uses the \verb{$LATEST} version of the
 intent is set to \code{NOT_BUILT}.
 
-For more information, see how-it-works.
+For more information, see <span>how-it-works</span>.
 
 This operation requires permissions for the \code{lex:PutIntent} action.
 }

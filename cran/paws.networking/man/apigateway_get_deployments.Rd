@@ -7,7 +7,8 @@
 apigateway_get_deployments(restApiId, position, limit)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
 \item{position}{The current pagination position in the paged result set.}
 
@@ -38,7 +39,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Gets information about a Deployments collection.
+Gets information about a <span>Deployments</span> collection.
 }
 \section{Request syntax}{
 \preformatted{svc$get_deployments(

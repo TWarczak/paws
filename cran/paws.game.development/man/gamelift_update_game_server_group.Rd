@@ -2,15 +2,15 @@
 % Please edit documentation in R/gamelift_operations.R
 \name{gamelift_update_game_server_group}
 \alias{gamelift_update_game_server_group}
-\title{This operation is used with the Amazon GameLift FleetIQ solution and
-game server groups}
+\title{THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND
+GAME SERVER GROUPS}
 \usage{
 gamelift_update_game_server_group(GameServerGroupName, RoleArn,
   InstanceDefinitions, GameServerProtectionPolicy, BalancingStrategy)
 }
 \arguments{
 \item{GameServerGroupName}{[required] A unique identifier for the game server group. Use either the
-GameServerGroup name or ARN value.}
+<span>GameServerGroup</span> name or ARN value.}
 
 \item{RoleArn}{The Amazon Resource Name
 (\href{https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-arn-format.html}{ARN})
@@ -101,8 +101,8 @@ maximum/minimum/desired instance counts.
 To update the game server group, specify the game server group ID and
 provide the updated values. Before applying the updates, the new values
 are validated to ensure that GameLift FleetIQ can continue to perform
-instance balancing activity. If successful, a GameServerGroup object is
-returned.
+instance balancing activity. If successful, a
+<span>GameServerGroup</span> object is returned.
 
 \strong{Learn more}
 

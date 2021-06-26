@@ -2082,14 +2082,14 @@ ec2_attach_network_interface <- function(DeviceIndex, DryRun = NULL, InstanceId,
 #' 
 #' If a volume has an AWS Marketplace product code:
 #' 
-#' -   The volume can be attached only to a stopped instance.
+#'   - The volume can be attached only to a stopped instance.
 #' 
-#' -   AWS Marketplace product codes are copied from the volume to the
+#'   - AWS Marketplace product codes are copied from the volume to the
 #'     instance.
 #' 
-#' -   You must be subscribed to the product.
+#'   - You must be subscribed to the product.
 #' 
-#' -   The instance type and operating system of the instance must support
+#'   - The instance type and operating system of the instance must support
 #'     the product. For example, you can't detach a volume from a Windows
 #'     instance and attach it to a Linux instance.
 #' 
@@ -3481,14 +3481,14 @@ ec2_copy_fpga_image <- function(DryRun = NULL, SourceFpgaImageId, Description = 
 #' 
 #' You can specify a CMK using any of the following:
 #' 
-#' -   Key ID. For example, 1234abcd-12ab-34cd-56ef-1234567890ab.
+#'   - Key ID. For example, 1234abcd-12ab-34cd-56ef-1234567890ab.
 #' 
-#' -   Key alias. For example, alias/ExampleAlias.
+#'   - Key alias. For example, alias/ExampleAlias.
 #' 
-#' -   Key ARN. For example,
+#'   - Key ARN. For example,
 #'     arn:aws:kms:us-east-1:012345678910:key/1234abcd-12ab-34cd-56ef-1234567890ab.
 #' 
-#' -   Alias ARN. For example,
+#'   - Alias ARN. For example,
 #'     arn:aws:kms:us-east-1:012345678910:alias/ExampleAlias.
 #' 
 #' AWS authenticates the CMK asynchronously. Therefore, if you specify an
@@ -3612,14 +3612,14 @@ ec2_copy_image <- function(ClientToken = NULL, Description = NULL, Encrypted = N
 #' 
 #' You can specify the CMK using any of the following:
 #' 
-#' -   Key ID. For example, 1234abcd-12ab-34cd-56ef-1234567890ab.
+#'   - Key ID. For example, 1234abcd-12ab-34cd-56ef-1234567890ab.
 #' 
-#' -   Key alias. For example, alias/ExampleAlias.
+#'   - Key alias. For example, alias/ExampleAlias.
 #' 
-#' -   Key ARN. For example,
+#'   - Key ARN. For example,
 #'     arn:aws:kms:us-east-1:012345678910:key/1234abcd-12ab-34cd-56ef-1234567890ab.
 #' 
-#' -   Alias ARN. For example,
+#'   - Alias ARN. For example,
 #'     arn:aws:kms:us-east-1:012345678910:alias/ExampleAlias.
 #' 
 #' AWS authenticates the CMK asynchronously. Therefore, if you specify an
@@ -3636,8 +3636,8 @@ ec2_copy_image <- function(ClientToken = NULL, Description = NULL, Encrypted = N
 #' The `PresignedUrl` must be signed using AWS Signature Version 4. Because
 #' EBS snapshots are stored in Amazon S3, the signing algorithm for this
 #' parameter uses the same logic that is described in [Authenticating
-#' Requests: Using Query Parameters (AWS Signature Version
-#' 4)](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-query-string-auth.html)
+#' Requests: Using Query Parameters (AWS Signature
+#' Version 4)](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-query-string-auth.html)
 #' in the *Amazon Simple Storage Service API Reference*. An invalid or
 #' improperly signed `PresignedUrl` will cause the copy operation to fail
 #' asynchronously, and the snapshot will move to an `error` state.
@@ -3773,10 +3773,10 @@ ec2_copy_snapshot <- function(Description = NULL, DestinationRegion = NULL, Encr
 #' @param Tenancy Indicates the tenancy of the Capacity Reservation. A Capacity
 #' Reservation can have one of the following tenancy settings:
 #' 
-#' -   `default` - The Capacity Reservation is created on hardware that is
+#'   - `default` - The Capacity Reservation is created on hardware that is
 #'     shared with other AWS accounts.
 #' 
-#' -   `dedicated` - The Capacity Reservation is created on single-tenant
+#'   - `dedicated` - The Capacity Reservation is created on single-tenant
 #'     hardware that is dedicated to a single AWS account.
 #' @param InstanceCount &#91;required&#93; The number of instances for which to reserve capacity.
 #' @param EbsOptimized Indicates whether the Capacity Reservation supports EBS-optimized
@@ -3801,23 +3801,23 @@ ec2_copy_snapshot <- function(Description = NULL, DestinationRegion = NULL, Encr
 #' @param EndDateType Indicates the way in which the Capacity Reservation ends. A Capacity
 #' Reservation can have one of the following end types:
 #' 
-#' -   `unlimited` - The Capacity Reservation remains active until you
+#'   - `unlimited` - The Capacity Reservation remains active until you
 #'     explicitly cancel it. Do not provide an `EndDate` if the
 #'     `EndDateType` is `unlimited`.
 #' 
-#' -   `limited` - The Capacity Reservation expires automatically at a
+#'   - `limited` - The Capacity Reservation expires automatically at a
 #'     specified date and time. You must provide an `EndDate` value if the
 #'     `EndDateType` value is `limited`.
 #' @param InstanceMatchCriteria Indicates the type of instance launches that the Capacity Reservation
 #' accepts. The options include:
 #' 
-#' -   `open` - The Capacity Reservation automatically matches all
+#'   - `open` - The Capacity Reservation automatically matches all
 #'     instances that have matching attributes (instance type, platform,
 #'     and Availability Zone). Instances that have matching attributes run
 #'     in the Capacity Reservation automatically without specifying any
 #'     additional parameters.
 #' 
-#' -   `targeted` - The Capacity Reservation only accepts instances that
+#'   - `targeted` - The Capacity Reservation only accepts instances that
 #'     have matching attributes (instance type, platform, and Availability
 #'     Zone), and explicitly target the Capacity Reservation. This ensures
 #'     that only permitted instances can use the reserved capacity.
@@ -4028,13 +4028,13 @@ ec2_create_carrier_gateway <- function(VpcId, TagSpecifications = NULL, DryRun =
 #' is sent to a Cloudwatch Logs log stream. The following information is
 #' logged:
 #' 
-#' -   Client connection requests
+#'   - Client connection requests
 #' 
-#' -   Client connection results (successful and unsuccessful)
+#'   - Client connection results (successful and unsuccessful)
 #' 
-#' -   Reasons for unsuccessful client connection requests
+#'   - Reasons for unsuccessful client connection requests
 #' 
-#' -   Client connection termination time
+#'   - Client connection termination time
 #' @param DnsServers Information about the DNS servers to be used for DNS resolution. A
 #' Client VPN endpoint can have up to two DNS servers. If no DNS server is
 #' specified, the DNS address configured on the device is used for the DNS
@@ -4185,15 +4185,15 @@ ec2_create_client_vpn_endpoint <- function(ClientCidrBlock, ServerCertificateArn
 #' @param DestinationCidrBlock &#91;required&#93; The IPv4 address range, in CIDR notation, of the route destination. For
 #' example:
 #' 
-#' -   To add a route for Internet access, enter `0.0.0.0/0`
+#'   - To add a route for Internet access, enter `0.0.0.0/0`
 #' 
-#' -   To add a route for a peered VPC, enter the peered VPC's IPv4 CIDR
+#'   - To add a route for a peered VPC, enter the peered VPC's IPv4 CIDR
 #'     range
 #' 
-#' -   To add a route for an on-premises network, enter the AWS
+#'   - To add a route for an on-premises network, enter the AWS
 #'     Site-to-Site VPN connection's IPv4 CIDR range
 #' 
-#' -   To add a route for the local network, enter the client CIDR range
+#'   - To add a route for the local network, enter the client CIDR range
 #' @param TargetVpcSubnetId &#91;required&#93; The ID of the subnet through which you want to route traffic. The
 #' specified subnet must be an existing target network of the Client VPN
 #' endpoint.
@@ -4270,13 +4270,13 @@ ec2_create_client_vpn_route <- function(ClientVpnEndpointId, DestinationCidrBloc
 #' Amazon EC2 supports all 4-byte ASN numbers in the range of 1 -
 #' 2147483647, with the exception of the following:
 #' 
-#' -   7224 - reserved in the `us-east-1` Region
+#'   - 7224 - reserved in the `us-east-1` Region
 #' 
-#' -   9059 - reserved in the `eu-west-1` Region
+#'   - 9059 - reserved in the `eu-west-1` Region
 #' 
-#' -   17943 - reserved in the `ap-southeast-1` Region
+#'   - 17943 - reserved in the `ap-southeast-1` Region
 #' 
-#' -   10124 - reserved in the `ap-northeast-1` Region
+#'   - 10124 - reserved in the `ap-northeast-1` Region
 #' 
 #' For more information, see [AWS Site-to-Site
 #' VPN](https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html) in the
@@ -4578,10 +4578,10 @@ ec2_create_default_vpc <- function(DryRun = NULL) {
 #' must associate it with the VPC, causing all existing and new instances
 #' that you launch in the VPC to use this set of DHCP options. The
 #' following are the individual DHCP options you can specify. For more
-#' information about the options, see [RFC
-#' 2132](https://www.ietf.org/rfc/rfc2132.txt).
+#' information about the options, see
+#' [RFC 2132](https://www.ietf.org/rfc/rfc2132.txt).
 #' 
-#' -   `domain-name-servers` - The IP addresses of up to four domain name
+#'   - `domain-name-servers` - The IP addresses of up to four domain name
 #'     servers, or AmazonProvidedDNS. The default DHCP option set specifies
 #'     AmazonProvidedDNS. If specifying more than one domain name server,
 #'     specify the IP addresses in a single parameter, separated by commas.
@@ -4589,7 +4589,7 @@ ec2_create_default_vpc <- function(DryRun = NULL) {
 #'     `domain-name`, you must set `domain-name-servers` to a custom DNS
 #'     server.
 #' 
-#' -   `domain-name` - If you're using AmazonProvidedDNS in `us-east-1`,
+#'   - `domain-name` - If you're using AmazonProvidedDNS in `us-east-1`,
 #'     specify `ec2.internal`. If you're using AmazonProvidedDNS in another
 #'     Region, specify `region.compute.internal` (for example,
 #'     `ap-northeast-1.compute.internal`). Otherwise, specify a domain name
@@ -4601,13 +4601,13 @@ ec2_create_default_vpc <- function(DryRun = NULL) {
 #'     options set is associated with a VPC that has instances with
 #'     multiple operating systems, specify only one domain name.
 #' 
-#' -   `ntp-servers` - The IP addresses of up to four Network Time Protocol
+#'   - `ntp-servers` - The IP addresses of up to four Network Time Protocol
 #'     (NTP) servers.
 #' 
-#' -   `netbios-name-servers` - The IP addresses of up to four NetBIOS name
+#'   - `netbios-name-servers` - The IP addresses of up to four NetBIOS name
 #'     servers.
 #' 
-#' -   `netbios-node-type` - The NetBIOS node type (1, 2, 4, or 8). We
+#'   - `netbios-node-type` - The NetBIOS node type (1, 2, 4, or 8). We
 #'     recommend that you specify 2 (broadcast and multicast are not
 #'     currently supported). For more information about these node types,
 #'     see [RFC 2132](https://www.ietf.org/rfc/rfc2132.txt).
@@ -4843,16 +4843,16 @@ ec2_create_egress_only_internet_gateway <- function(ClientToken = NULL, DryRun =
 #' Fleet expires.
 #' @param Type The type of request. The default value is `maintain`.
 #' 
-#' -   `maintain` - The EC2 Fleet plaees an asynchronous request for your
+#'   - `maintain` - The EC2 Fleet plaees an asynchronous request for your
 #'     desired capacity, and continues to maintain your desired Spot
 #'     capacity by replenishing interrupted Spot Instances.
 #' 
-#' -   `request` - The EC2 Fleet places an asynchronous one-time request
+#'   - `request` - The EC2 Fleet places an asynchronous one-time request
 #'     for your desired capacity, but does submit Spot requests in
 #'     alternative capacity pools if Spot capacity is unavailable, and does
 #'     not maintain Spot capacity if Spot Instances are interrupted.
 #' 
-#' -   `instant` - The EC2 Fleet places a synchronous one-time request for
+#'   - `instant` - The EC2 Fleet places a synchronous one-time request for
 #'     your desired capacity, and returns errors for any instances that
 #'     could not be launched.
 #' 
@@ -5351,9 +5351,9 @@ ec2_create_fpga_image <- function(DryRun = NULL, InputStorageLocation, LogsStora
 #' @param TagSpecifications The tags to apply to the AMI and snapshots on creation. You can tag the
 #' AMI, the snapshots, or both.
 #' 
-#' -   To tag the AMI, the value for `ResourceType` must be `image`.
+#'   - To tag the AMI, the value for `ResourceType` must be `image`.
 #' 
-#' -   To tag the snapshots that are created of the root volume and of
+#'   - To tag the snapshots that are created of the root volume and of
 #'     other EBS volumes that are attached to the instance, the value for
 #'     `ResourceType` must be `snapshot`. The same tag is applied to all of
 #'     the snapshots that are created.
@@ -7658,9 +7658,9 @@ ec2_create_reserved_instances_listing <- function(ClientToken, InstanceCount, Pr
 #' specific match. For example, traffic is destined for the IPv4 address
 #' `192.0.2.3`, and the route table includes the following two IPv4 routes:
 #' 
-#' -   `192.0.2.0/24` (goes to some target A)
+#'   - `192.0.2.0/24` (goes to some target A)
 #' 
-#' -   `192.0.2.0/28` (goes to some target B)
+#'   - `192.0.2.0/28` (goes to some target B)
 #' 
 #' Both routes apply to the traffic destined for `192.0.2.3`. However, the
 #' second route in the list covers a smaller number of IP addresses and is
@@ -7937,7 +7937,7 @@ ec2_create_route_table <- function(DryRun = NULL, VpcId, TagSpecifications = NUL
 #' Constraints for EC2-Classic: ASCII characters
 #' 
 #' Constraints for EC2-VPC: a-z, A-Z, 0-9, spaces, and
-#' ._-:/()\#,@@\[\]+=&;\{\}!$*
+#' ._-:/()\#,@@\[\]+=&;\{\}\!$*
 #' @param GroupName &#91;required&#93; The name of the security group.
 #' 
 #' Constraints: Up to 255 characters in length. Cannot start with `sg-`.
@@ -7945,7 +7945,7 @@ ec2_create_route_table <- function(DryRun = NULL, VpcId, TagSpecifications = NUL
 #' Constraints for EC2-Classic: ASCII characters
 #' 
 #' Constraints for EC2-VPC: a-z, A-Z, 0-9, spaces, and
-#' ._-:/()\#,@@\[\]+=&;\{\}!$*
+#' ._-:/()\#,@@\[\]+=&;\{\}\!$*
 #' @param VpcId \[EC2-VPC\] The ID of the VPC. Required for EC2-VPC.
 #' @param TagSpecifications The tags to assign to the security group.
 #' @param DryRun Checks whether you have the required permissions for the action, without
@@ -8855,9 +8855,10 @@ ec2_create_traffic_mirror_filter_rule <- function(TrafficMirrorFilterId, Traffic
 #' 
 #' Valid values are 1-32766.
 #' @param VirtualNetworkId The VXLAN ID for the Traffic Mirror session. For more information about
-#' the VXLAN protocol, see [RFC 7348](https://tools.ietf.org/html/rfc7348).
-#' If you do not specify a `VirtualNetworkId`, an account-wide unique id is
-#' chosen at random.
+#' the VXLAN protocol, see
+#' [RFC 7348](https://datatracker.ietf.org/doc/html/rfc7348). If you do not
+#' specify a `VirtualNetworkId`, an account-wide unique id is chosen at
+#' random.
 #' @param Description The description of the Traffic Mirror session.
 #' @param TagSpecifications The tags to assign to a Traffic Mirror session.
 #' @param DryRun Checks whether you have the required permissions for the action, without
@@ -9960,11 +9961,11 @@ ec2_create_transit_gateway_vpc_attachment <- function(TransitGatewayId, VpcId, S
 #' 
 #' The following are the supported values for each volume type:
 #' 
-#' -   `gp3`: 3,000-16,000 IOPS
+#'   - `gp3`: 3,000-16,000 IOPS
 #' 
-#' -   `io1`: 100-64,000 IOPS
+#'   - `io1`: 100-64,000 IOPS
 #' 
-#' -   `io2`: 100-64,000 IOPS
+#'   - `io2`: 100-64,000 IOPS
 #' 
 #' For `io1` and `io2` volumes, we guarantee 64,000 IOPS only for
 #' [Instances built on the Nitro
@@ -9981,14 +9982,14 @@ ec2_create_transit_gateway_vpc_attachment <- function(TransitGatewayId, VpcId, S
 #' 
 #' You can specify the CMK using any of the following:
 #' 
-#' -   Key ID. For example, 1234abcd-12ab-34cd-56ef-1234567890ab.
+#'   - Key ID. For example, 1234abcd-12ab-34cd-56ef-1234567890ab.
 #' 
-#' -   Key alias. For example, alias/ExampleAlias.
+#'   - Key alias. For example, alias/ExampleAlias.
 #' 
-#' -   Key ARN. For example,
+#'   - Key ARN. For example,
 #'     arn:aws:kms:us-east-1:012345678910:key/1234abcd-12ab-34cd-56ef-1234567890ab.
 #' 
-#' -   Alias ARN. For example,
+#'   - Alias ARN. For example,
 #'     arn:aws:kms:us-east-1:012345678910:alias/ExampleAlias.
 #' 
 #' AWS authenticates the CMK asynchronously. Therefore, if you specify an
@@ -10002,26 +10003,26 @@ ec2_create_transit_gateway_vpc_attachment <- function(TransitGatewayId, VpcId, S
 #' 
 #' The following are the supported volumes sizes for each volume type:
 #' 
-#' -   `gp2` and `gp3`: 1-16,384
+#'   - `gp2` and `gp3`: 1-16,384
 #' 
-#' -   `io1` and `io2`: 4-16,384
+#'   - `io1` and `io2`: 4-16,384
 #' 
-#' -   `st1` and `sc1`: 125-16,384
+#'   - `st1` and `sc1`: 125-16,384
 #' 
-#' -   `standard`: 1-1,024
+#'   - `standard`: 1-1,024
 #' @param SnapshotId The snapshot from which to create the volume. You must specify either a
 #' snapshot ID or a volume size.
 #' @param VolumeType The volume type. This parameter can be one of the following values:
 #' 
-#' -   General Purpose SSD: `gp2` | `gp3`
+#'   - General Purpose SSD: `gp2` | `gp3`
 #' 
-#' -   Provisioned IOPS SSD: `io1` | `io2`
+#'   - Provisioned IOPS SSD: `io1` | `io2`
 #' 
-#' -   Throughput Optimized HDD: `st1`
+#'   - Throughput Optimized HDD: `st1`
 #' 
-#' -   Cold HDD: `sc1`
+#'   - Cold HDD: `sc1`
 #' 
-#' -   Magnetic: `standard`
+#'   - Magnetic: `standard`
 #' 
 #' For more information, see [Amazon EBS volume
 #' types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html)
@@ -10595,12 +10596,12 @@ ec2_create_vpc_endpoint_connection_notification <- function(DryRun = NULL, Servi
 #' To create an endpoint service configuration, you must first create one
 #' of the following for your service:
 #' 
-#' -   A [Network Load
+#'   - A [Network Load
 #'     Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/introduction.html).
 #'     Service consumers connect to your service using an interface
 #'     endpoint.
 #' 
-#' -   A [Gateway Load
+#'   - A [Gateway Load
 #'     Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/gateway/introduction.html).
 #'     Service consumers connect to your service using a Gateway Load
 #'     Balancer endpoint.
@@ -11633,12 +11634,12 @@ ec2_delete_egress_only_internet_gateway <- function(DryRun = NULL, EgressOnlyInt
 #' 
 #' **Restrictions**
 #' 
-#' -   You can delete up to 25 `instant` fleets in a single request. If you
+#'   - You can delete up to 25 `instant` fleets in a single request. If you
 #'     exceed this number, no `instant` fleets are deleted and an error is
 #'     returned. There is no restriction on the number of fleets of type
 #'     `maintain` or `request` that can be deleted in a single request.
 #' 
-#' -   Up to 1000 instances can be terminated in a single request to delete
+#'   - Up to 1000 instances can be terminated in a single request to delete
 #'     `instant` fleets.
 #' 
 #' For more information, see [Deleting an EC2
@@ -14951,25 +14952,25 @@ ec2_deregister_transit_gateway_multicast_group_sources <- function(TransitGatewa
 #' Describes attributes of your AWS account. The following are the
 #' supported account attributes:
 #' 
-#' -   `supported-platforms`: Indicates whether your account can launch
+#'   - `supported-platforms`: Indicates whether your account can launch
 #'     instances into EC2-Classic and EC2-VPC, or only into EC2-VPC.
 #' 
-#' -   `default-vpc`: The ID of the default VPC for your account, or
+#'   - `default-vpc`: The ID of the default VPC for your account, or
 #'     `none`.
 #' 
-#' -   `max-instances`: This attribute is no longer supported. The returned
+#'   - `max-instances`: This attribute is no longer supported. The returned
 #'     value does not reflect your actual vCPU limit for running On-Demand
 #'     Instances. For more information, see [On-Demand Instance
 #'     Limits](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-on-demand-instances.html#ec2-on-demand-instances-limits)
 #'     in the *Amazon Elastic Compute Cloud User Guide*.
 #' 
-#' -   `vpc-max-security-groups-per-interface`: The maximum number of
+#'   - `vpc-max-security-groups-per-interface`: The maximum number of
 #'     security groups that you can assign to a network interface.
 #' 
-#' -   `max-elastic-ips`: The maximum number of Elastic IP addresses that
+#'   - `max-elastic-ips`: The maximum number of Elastic IP addresses that
 #'     you can allocate for use with EC2-Classic.
 #' 
-#' -   `vpc-max-elastic-ips`: The maximum number of Elastic IP addresses
+#'   - `vpc-max-elastic-ips`: The maximum number of Elastic IP addresses
 #'     that you can allocate for use with EC2-VPC.
 #'
 #' @usage
@@ -15059,36 +15060,36 @@ ec2_describe_account_attributes <- function(AttributeNames = NULL, DryRun = NULL
 #'
 #' @param Filters One or more filters. Filter names and values are case-sensitive.
 #' 
-#' -   `allocation-id` - \[EC2-VPC\] The allocation ID for the address.
+#'   - `allocation-id` - \[EC2-VPC\] The allocation ID for the address.
 #' 
-#' -   `association-id` - \[EC2-VPC\] The association ID for the address.
+#'   - `association-id` - \[EC2-VPC\] The association ID for the address.
 #' 
-#' -   `domain` - Indicates whether the address is for use in EC2-Classic
+#'   - `domain` - Indicates whether the address is for use in EC2-Classic
 #'     (`standard`) or in a VPC (`vpc`).
 #' 
-#' -   `instance-id` - The ID of the instance the address is associated
+#'   - `instance-id` - The ID of the instance the address is associated
 #'     with, if any.
 #' 
-#' -   `network-border-group` - A unique set of Availability Zones, Local
+#'   - `network-border-group` - A unique set of Availability Zones, Local
 #'     Zones, or Wavelength Zones from where AWS advertises IP addresses.
 #' 
-#' -   `network-interface-id` - \[EC2-VPC\] The ID of the network interface
+#'   - `network-interface-id` - \[EC2-VPC\] The ID of the network interface
 #'     that the address is associated with, if any.
 #' 
-#' -   `network-interface-owner-id` - The AWS account ID of the owner.
+#'   - `network-interface-owner-id` - The AWS account ID of the owner.
 #' 
-#' -   `private-ip-address` - \[EC2-VPC\] The private IP address associated
+#'   - `private-ip-address` - \[EC2-VPC\] The private IP address associated
 #'     with the Elastic IP address.
 #' 
-#' -   `public-ip` - The Elastic IP address, or the carrier IP address.
+#'   - `public-ip` - The Elastic IP address, or the carrier IP address.
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' @param PublicIps One or more Elastic IP addresses.
@@ -15297,43 +15298,43 @@ ec2_describe_aggregate_id_format <- function(DryRun = NULL) {
 #'
 #' @param Filters The filters.
 #' 
-#' -   `group-name` - For Availability Zones, use the Region name. For
+#'   - `group-name` - For Availability Zones, use the Region name. For
 #'     Local Zones, use the name of the group associated with the Local
 #'     Zone (for example, `us-west-2-lax-1`) For Wavelength Zones, use the
 #'     name of the group associated with the Wavelength Zone (for example,
 #'     `us-east-1-wl1-bos-wlz-1`).
 #' 
-#' -   `message` - The Zone message.
+#'   - `message` - The Zone message.
 #' 
-#' -   `opt-in-status` - The opt-in status (`opted-in`, and `not-opted-in`
+#'   - `opt-in-status` - The opt-in status (`opted-in`, and `not-opted-in`
 #'     | `opt-in-not-required`).
 #' 
-#' -   `parent-zoneID` - The ID of the zone that handles some of the Local
+#'   - `parent-zoneID` - The ID of the zone that handles some of the Local
 #'     Zone and Wavelength Zone control plane operations, such as API
 #'     calls.
 #' 
-#' -   `parent-zoneName` - The ID of the zone that handles some of the
+#'   - `parent-zoneName` - The ID of the zone that handles some of the
 #'     Local Zone and Wavelength Zone control plane operations, such as API
 #'     calls.
 #' 
-#' -   `region-name` - The name of the Region for the Zone (for example,
+#'   - `region-name` - The name of the Region for the Zone (for example,
 #'     `us-east-1`).
 #' 
-#' -   `state` - The state of the Availability Zone, the Local Zone, or the
+#'   - `state` - The state of the Availability Zone, the Local Zone, or the
 #'     Wavelength Zone (`available` | `information` | `impaired` |
 #'     `unavailable`).
 #' 
-#' -   `zone-id` - The ID of the Availability Zone (for example,
+#'   - `zone-id` - The ID of the Availability Zone (for example,
 #'     `use1-az1`), the Local Zone (for example, `usw2-lax1-az1`), or the
 #'     Wavelength Zone (for example, `us-east-1-wl1-bos-wlz-1`).
 #' 
-#' -   `zone-type` - The type of zone, for example, `local-zone`.
+#'   - `zone-type` - The type of zone, for example, `local-zone`.
 #' 
-#' -   `zone-name` - The name of the Availability Zone (for example,
+#'   - `zone-name` - The name of the Availability Zone (for example,
 #'     `us-east-1a`), the Local Zone (for example, `us-west-2-lax-1a`), or
 #'     the Wavelength Zone (for example, `us-east-1-wl1-bos-wlz-1`).
 #' 
-#' -   `zone-type` - The type of zone, for example, `local-zone`.
+#'   - `zone-type` - The type of zone, for example, `local-zone`.
 #' @param ZoneNames The names of the Availability Zones, Local Zones, and Wavelength Zones.
 #' @param ZoneIds The IDs of the Availability Zones, Local Zones, and Wavelength Zones.
 #' @param AllAvailabilityZones Include all Availability Zones, Local Zones, and Wavelength Zones
@@ -15439,28 +15440,28 @@ ec2_describe_availability_zones <- function(Filters = NULL, ZoneNames = NULL, Zo
 #' Default: Describes all your bundle tasks.
 #' @param Filters The filters.
 #' 
-#' -   `bundle-id` - The ID of the bundle task.
+#'   - `bundle-id` - The ID of the bundle task.
 #' 
-#' -   `error-code` - If the task failed, the error code returned.
+#'   - `error-code` - If the task failed, the error code returned.
 #' 
-#' -   `error-message` - If the task failed, the error message returned.
+#'   - `error-message` - If the task failed, the error message returned.
 #' 
-#' -   `instance-id` - The ID of the instance.
+#'   - `instance-id` - The ID of the instance.
 #' 
-#' -   `progress` - The level of task completion, as a percentage (for
+#'   - `progress` - The level of task completion, as a percentage (for
 #'     example, 20%).
 #' 
-#' -   `s3-bucket` - The Amazon S3 bucket to store the AMI.
+#'   - `s3-bucket` - The Amazon S3 bucket to store the AMI.
 #' 
-#' -   `s3-prefix` - The beginning of the AMI name.
+#'   - `s3-prefix` - The beginning of the AMI name.
 #' 
-#' -   `start-time` - The time the task started (for example,
+#'   - `start-time` - The time the task started (for example,
 #'     2013-09-15T17:15:20.000Z).
 #' 
-#' -   `state` - The state of the task (`pending` | `waiting-for-shutdown`
+#'   - `state` - The state of the task (`pending` | `waiting-for-shutdown`
 #'     | `bundling` | `storing` | `cancelling` | `complete` | `failed`).
 #' 
-#' -   `update-time` - The time of the most recent update for the task.
+#'   - `update-time` - The time of the most recent update for the task.
 #' @param DryRun Checks whether you have the required permissions for the action, without
 #' actually making the request, and provides an error response. If you have
 #' the required permissions, the error response is `DryRunOperation`.
@@ -15626,78 +15627,78 @@ ec2_describe_byoip_cidrs <- function(DryRun = NULL, MaxResults, NextToken = NULL
 #' `maxResults` is given a larger value than 500, you receive an error.
 #' @param Filters One or more filters.
 #' 
-#' -   `instance-type` - The type of instance for which the Capacity
+#'   - `instance-type` - The type of instance for which the Capacity
 #'     Reservation reserves capacity.
 #' 
-#' -   `owner-id` - The ID of the AWS account that owns the Capacity
+#'   - `owner-id` - The ID of the AWS account that owns the Capacity
 #'     Reservation.
 #' 
-#' -   `availability-zone-id` - The Availability Zone ID of the Capacity
+#'   - `availability-zone-id` - The Availability Zone ID of the Capacity
 #'     Reservation.
 #' 
-#' -   `instance-platform` - The type of operating system for which the
+#'   - `instance-platform` - The type of operating system for which the
 #'     Capacity Reservation reserves capacity.
 #' 
-#' -   `availability-zone` - The Availability Zone ID of the Capacity
+#'   - `availability-zone` - The Availability Zone ID of the Capacity
 #'     Reservation.
 #' 
-#' -   `tenancy` - Indicates the tenancy of the Capacity Reservation. A
+#'   - `tenancy` - Indicates the tenancy of the Capacity Reservation. A
 #'     Capacity Reservation can have one of the following tenancy settings:
-#' 
-#'     -   `default` - The Capacity Reservation is created on hardware that
+#'     
+#'       - `default` - The Capacity Reservation is created on hardware that
 #'         is shared with other AWS accounts.
-#' 
-#'     -   `dedicated` - The Capacity Reservation is created on
+#'     
+#'       - `dedicated` - The Capacity Reservation is created on
 #'         single-tenant hardware that is dedicated to a single AWS
 #'         account.
 #' 
-#' -   `state` - The current state of the Capacity Reservation. A Capacity
+#'   - `state` - The current state of the Capacity Reservation. A Capacity
 #'     Reservation can be in one of the following states:
-#' 
-#'     -   `active`- The Capacity Reservation is active and the capacity is
+#'     
+#'       - `active`- The Capacity Reservation is active and the capacity is
 #'         available for your use.
-#' 
-#'     -   `expired` - The Capacity Reservation expired automatically at
+#'     
+#'       - `expired` - The Capacity Reservation expired automatically at
 #'         the date and time specified in your request. The reserved
 #'         capacity is no longer available for your use.
-#' 
-#'     -   `cancelled` - The Capacity Reservation was manually cancelled.
+#'     
+#'       - `cancelled` - The Capacity Reservation was manually cancelled.
 #'         The reserved capacity is no longer available for your use.
-#' 
-#'     -   `pending` - The Capacity Reservation request was successful but
+#'     
+#'       - `pending` - The Capacity Reservation request was successful but
 #'         the capacity provisioning is still pending.
-#' 
-#'     -   `failed` - The Capacity Reservation request has failed. A
+#'     
+#'       - `failed` - The Capacity Reservation request has failed. A
 #'         request might fail due to invalid request parameters, capacity
 #'         constraints, or instance limit constraints. Failed requests are
 #'         retained for 60 minutes.
 #' 
-#' -   `end-date` - The date and time at which the Capacity Reservation
+#'   - `end-date` - The date and time at which the Capacity Reservation
 #'     expires. When a Capacity Reservation expires, the reserved capacity
 #'     is released and you can no longer launch instances into it. The
 #'     Capacity Reservation's state changes to expired when it reaches its
 #'     end date and time.
 #' 
-#' -   `end-date-type` - Indicates the way in which the Capacity
+#'   - `end-date-type` - Indicates the way in which the Capacity
 #'     Reservation ends. A Capacity Reservation can have one of the
 #'     following end types:
-#' 
-#'     -   `unlimited` - The Capacity Reservation remains active until you
+#'     
+#'       - `unlimited` - The Capacity Reservation remains active until you
 #'         explicitly cancel it.
-#' 
-#'     -   `limited` - The Capacity Reservation expires automatically at a
+#'     
+#'       - `limited` - The Capacity Reservation expires automatically at a
 #'         specified date and time.
 #' 
-#' -   `instance-match-criteria` - Indicates the type of instance launches
+#'   - `instance-match-criteria` - Indicates the type of instance launches
 #'     that the Capacity Reservation accepts. The options include:
-#' 
-#'     -   `open` - The Capacity Reservation accepts all instances that
+#'     
+#'       - `open` - The Capacity Reservation accepts all instances that
 #'         have matching attributes (instance type, platform, and
 #'         Availability Zone). Instances that have matching attributes
 #'         launch into the Capacity Reservation automatically without
 #'         specifying any additional parameters.
-#' 
-#'     -   `targeted` - The Capacity Reservation only accepts instances
+#'     
+#'       - `targeted` - The Capacity Reservation only accepts instances
 #'         that have matching attributes (instance type, platform, and
 #'         Availability Zone), and explicitly target the Capacity
 #'         Reservation. This ensures that only permitted instances can use
@@ -15798,24 +15799,24 @@ ec2_describe_capacity_reservations <- function(CapacityReservationIds = NULL, Ne
 #' @param CarrierGatewayIds One or more carrier gateway IDs.
 #' @param Filters One or more filters.
 #' 
-#' -   `carrier-gateway-id` - The ID of the carrier gateway.
+#'   - `carrier-gateway-id` - The ID of the carrier gateway.
 #' 
-#' -   `state` - The state of the carrier gateway (`pending` | `failed` |
+#'   - `state` - The state of the carrier gateway (`pending` | `failed` |
 #'     `available` | `deleting` | `deleted`).
 #' 
-#' -   `owner-id` - The AWS account ID of the owner of the carrier gateway.
+#'   - `owner-id` - The AWS account ID of the owner of the carrier gateway.
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' 
-#' -   `vpc-id` - The ID of the VPC associated with the carrier gateway.
+#'   - `vpc-id` - The ID of the VPC associated with the carrier gateway.
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
 #' value.
@@ -15901,23 +15902,23 @@ ec2_describe_carrier_gateways <- function(CarrierGatewayIds = NULL, Filters = NU
 #'
 #' @param Filters One or more filters.
 #' 
-#' -   `group-id` - The ID of a VPC security group that's associated with
+#'   - `group-id` - The ID of a VPC security group that's associated with
 #'     the instance.
 #' 
-#' -   `instance-id` - The ID of the instance.
+#'   - `instance-id` - The ID of the instance.
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' 
-#' -   `vpc-id` - The ID of the VPC to which the instance is linked.
-#' 
+#'   - `vpc-id` - The ID of the VPC to which the instance is linked.
+#'     
 #'     `vpc-id` - The ID of the VPC that the instance is linked to.
 #' @param DryRun Checks whether you have the required permissions for the action, without
 #' actually making the request, and provides an error response. If you have
@@ -16016,12 +16017,12 @@ ec2_describe_classic_link_instances <- function(Filters = NULL, DryRun = NULL, I
 #' @param NextToken The token to retrieve the next page of results.
 #' @param Filters One or more filters. Filter names and values are case-sensitive.
 #' 
-#' -   `description` - The description of the authorization rule.
+#'   - `description` - The description of the authorization rule.
 #' 
-#' -   `destination-cidr` - The CIDR of the network to which the
+#'   - `destination-cidr` - The CIDR of the network to which the
 #'     authorization rule applies.
 #' 
-#' -   `group-id` - The ID of the Active Directory group to which the
+#'   - `group-id` - The ID of the Active Directory group to which the
 #'     authorization rule grants access.
 #' @param MaxResults The maximum number of results to return for the request in a single
 #' page. The remaining results can be seen by sending another request with
@@ -16102,9 +16103,9 @@ ec2_describe_client_vpn_authorization_rules <- function(ClientVpnEndpointId, Dry
 #' @param ClientVpnEndpointId &#91;required&#93; The ID of the Client VPN endpoint.
 #' @param Filters One or more filters. Filter names and values are case-sensitive.
 #' 
-#' -   `connection-id` - The ID of the connection.
+#'   - `connection-id` - The ID of the connection.
 #' 
-#' -   `username` - For Active Directory client authentication, the user
+#'   - `username` - For Active Directory client authentication, the user
 #'     name of the client who established the client connection.
 #' @param NextToken The token to retrieve the next page of results.
 #' @param MaxResults The maximum number of results to return for the request in a single
@@ -16200,9 +16201,9 @@ ec2_describe_client_vpn_connections <- function(ClientVpnEndpointId, Filters = N
 #' @param NextToken The token to retrieve the next page of results.
 #' @param Filters One or more filters. Filter names and values are case-sensitive.
 #' 
-#' -   `endpoint-id` - The ID of the Client VPN endpoint.
+#'   - `endpoint-id` - The ID of the Client VPN endpoint.
 #' 
-#' -   `transport-protocol` - The transport protocol (`tcp` | `udp`).
+#'   - `transport-protocol` - The transport protocol (`tcp` | `udp`).
 #' @param DryRun Checks whether you have the required permissions for the action, without
 #' actually making the request, and provides an error response. If you have
 #' the required permissions, the error response is `DryRunOperation`.
@@ -16335,12 +16336,12 @@ ec2_describe_client_vpn_endpoints <- function(ClientVpnEndpointIds = NULL, MaxRe
 #' @param ClientVpnEndpointId &#91;required&#93; The ID of the Client VPN endpoint.
 #' @param Filters One or more filters. Filter names and values are case-sensitive.
 #' 
-#' -   `destination-cidr` - The CIDR of the route destination.
+#'   - `destination-cidr` - The CIDR of the route destination.
 #' 
-#' -   `origin` - How the route was associated with the Client VPN endpoint
+#'   - `origin` - How the route was associated with the Client VPN endpoint
 #'     (`associate` | `add-route`).
 #' 
-#' -   `target-subnet` - The ID of the subnet through which traffic is
+#'   - `target-subnet` - The ID of the subnet through which traffic is
 #'     routed.
 #' @param MaxResults The maximum number of results to return for the request in a single
 #' page. The remaining results can be seen by sending another request with
@@ -16430,12 +16431,12 @@ ec2_describe_client_vpn_routes <- function(ClientVpnEndpointId, Filters = NULL, 
 #' @param NextToken The token to retrieve the next page of results.
 #' @param Filters One or more filters. Filter names and values are case-sensitive.
 #' 
-#' -   `association-id` - The ID of the association.
+#'   - `association-id` - The ID of the association.
 #' 
-#' -   `target-network-id` - The ID of the subnet specified as the target
+#'   - `target-network-id` - The ID of the subnet specified as the target
 #'     network.
 #' 
-#' -   `vpc-id` - The ID of the VPC in which the target network is located.
+#'   - `vpc-id` - The ID of the VPC in which the target network is located.
 #' @param DryRun Checks whether you have the required permissions for the action, without
 #' actually making the request, and provides an error response. If you have
 #' the required permissions, the error response is `DryRunOperation`.
@@ -16518,10 +16519,11 @@ ec2_describe_client_vpn_target_networks <- function(ClientVpnEndpointId, Associa
 #' @param PoolIds The IDs of the address pools.
 #' @param Filters The filters. The following are the possible values:
 #' 
-#' -   `coip-pool.pool-id`
+#'   - `coip-pool.pool-id`
 #' 
+#' <!-- end list -->
 #' 
-#' -   `coip-pool.local-gateway-route-table-id`
+#'   - `coip-pool.local-gateway-route-table-id`
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
 #' value.
@@ -16722,27 +16724,27 @@ ec2_describe_conversion_tasks <- function(ConversionTaskIds = NULL, DryRun = NUL
 #' Default: Describes all your customer gateways.
 #' @param Filters One or more filters.
 #' 
-#' -   `bgp-asn` - The customer gateway's Border Gateway Protocol (BGP)
+#'   - `bgp-asn` - The customer gateway's Border Gateway Protocol (BGP)
 #'     Autonomous System Number (ASN).
 #' 
-#' -   `customer-gateway-id` - The ID of the customer gateway.
+#'   - `customer-gateway-id` - The ID of the customer gateway.
 #' 
-#' -   `ip-address` - The IP address of the customer gateway's
+#'   - `ip-address` - The IP address of the customer gateway's
 #'     Internet-routable external interface.
 #' 
-#' -   `state` - The state of the customer gateway (`pending` | `available`
+#'   - `state` - The state of the customer gateway (`pending` | `available`
 #'     | `deleting` | `deleted`).
 #' 
-#' -   `type` - The type of customer gateway. Currently, the only supported
+#'   - `type` - The type of customer gateway. Currently, the only supported
 #'     type is `ipsec.1`.
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' @param DryRun Checks whether you have the required permissions for the action, without
@@ -16840,22 +16842,22 @@ ec2_describe_customer_gateways <- function(CustomerGatewayIds = NULL, Filters = 
 #' Default: Describes all your DHCP options sets.
 #' @param Filters One or more filters.
 #' 
-#' -   `dhcp-options-id` - The ID of a DHCP options set.
+#'   - `dhcp-options-id` - The ID of a DHCP options set.
 #' 
-#' -   `key` - The key for one of the options (for example, `domain-name`).
+#'   - `key` - The key for one of the options (for example, `domain-name`).
 #' 
-#' -   `value` - The value for one of the options.
+#'   - `value` - The value for one of the options.
 #' 
-#' -   `owner-id` - The ID of the AWS account that owns the DHCP options
+#'   - `owner-id` - The ID of the AWS account that owns the DHCP options
 #'     set.
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' @param DryRun Checks whether you have the required permissions for the action, without
@@ -16967,13 +16969,13 @@ ec2_describe_dhcp_options <- function(DhcpOptionsIds = NULL, Filters = NULL, Dry
 #' @param NextToken The token for the next page of results.
 #' @param Filters One or more filters.
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #'
@@ -17062,19 +17064,19 @@ ec2_describe_egress_only_internet_gateways <- function(DryRun = NULL, EgressOnly
 #' Otherwise, it is `UnauthorizedOperation`.
 #' @param Filters The filters.
 #' 
-#' -   `availability-zone` - The Availability Zone in which the Elastic
+#'   - `availability-zone` - The Availability Zone in which the Elastic
 #'     Graphics accelerator resides.
 #' 
-#' -   `elastic-gpu-health` - The status of the Elastic Graphics
+#'   - `elastic-gpu-health` - The status of the Elastic Graphics
 #'     accelerator (`OK` | `IMPAIRED`).
 #' 
-#' -   `elastic-gpu-state` - The state of the Elastic Graphics accelerator
+#'   - `elastic-gpu-state` - The state of the Elastic Graphics accelerator
 #'     (`ATTACHED`).
 #' 
-#' -   `elastic-gpu-type` - The type of Elastic Graphics accelerator; for
+#'   - `elastic-gpu-type` - The type of Elastic Graphics accelerator; for
 #'     example, `eg1.medium`.
 #' 
-#' -   `instance-id` - The ID of the instance to which the Elastic Graphics
+#'   - `instance-id` - The ID of the instance to which the Elastic Graphics
 #'     accelerator is associated.
 #' @param MaxResults The maximum number of results to return in a single call. To retrieve
 #' the remaining results, make another call with the returned `NextToken`
@@ -17329,14 +17331,14 @@ ec2_describe_export_tasks <- function(ExportTaskIds = NULL, Filters = NULL) {
 #'
 #' @param Filters The filters. The possible values are:
 #' 
-#' -   `availability-zone`: The Availability Zone of the snapshot.
+#'   - `availability-zone`: The Availability Zone of the snapshot.
 #' 
-#' -   `owner-id`: The ID of the AWS account that enabled fast snapshot
+#'   - `owner-id`: The ID of the AWS account that enabled fast snapshot
 #'     restore on the snapshot.
 #' 
-#' -   `snapshot-id`: The ID of the snapshot.
+#'   - `snapshot-id`: The ID of the snapshot.
 #' 
-#' -   `state`: The state of fast snapshot restores for the snapshot
+#'   - `state`: The state of fast snapshot restores for the snapshot
 #'     (`enabling` | `optimizing` | `enabled` | `disabling` | `disabled`).
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
@@ -17530,7 +17532,7 @@ ec2_describe_fleet_history <- function(DryRun = NULL, EventType = NULL, MaxResul
 #' @param FleetId &#91;required&#93; The ID of the EC2 Fleet.
 #' @param Filters The filters.
 #' 
-#' -   `instance-type` - The instance type.
+#'   - `instance-type` - The instance type.
 #'
 #' @return
 #' A list with the following syntax:
@@ -17607,21 +17609,21 @@ ec2_describe_fleet_instances <- function(DryRun = NULL, MaxResults = NULL, NextT
 #' @param FleetIds The ID of the EC2 Fleets.
 #' @param Filters The filters.
 #' 
-#' -   `activity-status` - The progress of the EC2 Fleet ( `error` |
+#'   - `activity-status` - The progress of the EC2 Fleet ( `error` |
 #'     `pending-fulfillment` | `pending-termination` | `fulfilled`).
 #' 
-#' -   `excess-capacity-termination-policy` - Indicates whether to
+#'   - `excess-capacity-termination-policy` - Indicates whether to
 #'     terminate running instances if the target capacity is decreased
 #'     below the current EC2 Fleet size (`true` | `false`).
 #' 
-#' -   `fleet-state` - The state of the EC2 Fleet (`submitted` | `active` |
+#'   - `fleet-state` - The state of the EC2 Fleet (`submitted` | `active` |
 #'     `deleted` | `failed` | `deleted-running` | `deleted-terminating` |
 #'     `modifying`).
 #' 
-#' -   `replace-unhealthy-instances` - Indicates whether EC2 Fleet should
+#'   - `replace-unhealthy-instances` - Indicates whether EC2 Fleet should
 #'     replace unhealthy instances (`true` | `false`).
 #' 
-#' -   `type` - The type of request (`instant` | `request` | `maintain`).
+#'   - `type` - The type of request (`instant` | `request` | `maintain`).
 #'
 #' @return
 #' A list with the following syntax:
@@ -17822,28 +17824,28 @@ ec2_describe_fleets <- function(DryRun = NULL, MaxResults = NULL, NextToken = NU
 #' Otherwise, it is `UnauthorizedOperation`.
 #' @param Filter One or more filters.
 #' 
-#' -   `deliver-log-status` - The status of the logs delivery (`SUCCESS` |
+#'   - `deliver-log-status` - The status of the logs delivery (`SUCCESS` |
 #'     `FAILED`).
 #' 
-#' -   `log-destination-type` - The type of destination to which the flow
+#'   - `log-destination-type` - The type of destination to which the flow
 #'     log publishes data. Possible destination types include
 #'     `cloud-watch-logs` and `s3`.
 #' 
-#' -   `flow-log-id` - The ID of the flow log.
+#'   - `flow-log-id` - The ID of the flow log.
 #' 
-#' -   `log-group-name` - The name of the log group.
+#'   - `log-group-name` - The name of the log group.
 #' 
-#' -   `resource-id` - The ID of the VPC, subnet, or network interface.
+#'   - `resource-id` - The ID of the VPC, subnet, or network interface.
 #' 
-#' -   `traffic-type` - The type of traffic (`ACCEPT` | `REJECT` | `ALL`).
+#'   - `traffic-type` - The type of traffic (`ACCEPT` | `REJECT` | `ALL`).
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' @param FlowLogIds One or more flow log IDs.
@@ -18018,35 +18020,35 @@ ec2_describe_fpga_image_attribute <- function(DryRun = NULL, FpgaImageId, Attrib
 #' `amazon` | `aws-marketplace`).
 #' @param Filters The filters.
 #' 
-#' -   `create-time` - The creation time of the AFI.
+#'   - `create-time` - The creation time of the AFI.
 #' 
-#' -   `fpga-image-id` - The FPGA image identifier (AFI ID).
+#'   - `fpga-image-id` - The FPGA image identifier (AFI ID).
 #' 
-#' -   `fpga-image-global-id` - The global FPGA image identifier (AGFI ID).
+#'   - `fpga-image-global-id` - The global FPGA image identifier (AGFI ID).
 #' 
-#' -   `name` - The name of the AFI.
+#'   - `name` - The name of the AFI.
 #' 
-#' -   `owner-id` - The AWS account ID of the AFI owner.
+#'   - `owner-id` - The AWS account ID of the AFI owner.
 #' 
-#' -   `product-code` - The product code.
+#'   - `product-code` - The product code.
 #' 
-#' -   `shell-version` - The version of the AWS Shell that was used to
+#'   - `shell-version` - The version of the AWS Shell that was used to
 #'     create the bitstream.
 #' 
-#' -   `state` - The state of the AFI (`pending` | `failed` | `available` |
+#'   - `state` - The state of the AFI (`pending` | `failed` | `available` |
 #'     `unavailable`).
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' 
-#' -   `update-time` - The time of the most recent update.
+#'   - `update-time` - The time of the most recent update.
 #' @param NextToken The token to retrieve the next page of results.
 #' @param MaxResults The maximum number of results to return in a single call.
 #'
@@ -18163,10 +18165,10 @@ ec2_describe_fpga_images <- function(DryRun = NULL, FpgaImageIds = NULL, Owners 
 #'
 #' @param Filter The filters.
 #' 
-#' -   `instance-family` - The instance family of the offering (for
+#'   - `instance-family` - The instance family of the offering (for
 #'     example, `m4`).
 #' 
-#' -   `payment-option` - The payment option (`NoUpfront` |
+#'   - `payment-option` - The payment option (`NoUpfront` |
 #'     `PartialUpfront` | `AllUpfront`).
 #' @param MaxDuration This is the maximum duration of the reservation to purchase, specified
 #' in seconds. Reservations are available in one-year and three-year terms.
@@ -18256,21 +18258,21 @@ ec2_describe_host_reservation_offerings <- function(Filter = NULL, MaxDuration =
 #'
 #' @param Filter The filters.
 #' 
-#' -   `instance-family` - The instance family (for example, `m4`).
+#'   - `instance-family` - The instance family (for example, `m4`).
 #' 
-#' -   `payment-option` - The payment option (`NoUpfront` |
+#'   - `payment-option` - The payment option (`NoUpfront` |
 #'     `PartialUpfront` | `AllUpfront`).
 #' 
-#' -   `state` - The state of the reservation (`payment-pending` |
+#'   - `state` - The state of the reservation (`payment-pending` |
 #'     `payment-failed` | `active` | `retired`).
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' @param HostReservationIdSet The host reservation IDs.
@@ -18371,25 +18373,25 @@ ec2_describe_host_reservations <- function(Filter = NULL, HostReservationIdSet =
 #'
 #' @param Filter The filters.
 #' 
-#' -   `auto-placement` - Whether auto-placement is enabled or disabled
+#'   - `auto-placement` - Whether auto-placement is enabled or disabled
 #'     (`on` | `off`).
 #' 
-#' -   `availability-zone` - The Availability Zone of the host.
+#'   - `availability-zone` - The Availability Zone of the host.
 #' 
-#' -   `client-token` - The idempotency token that you provided when you
+#'   - `client-token` - The idempotency token that you provided when you
 #'     allocated the host.
 #' 
-#' -   `host-reservation-id` - The ID of the reservation assigned to this
+#'   - `host-reservation-id` - The ID of the reservation assigned to this
 #'     host.
 #' 
-#' -   `instance-type` - The instance type size that the Dedicated Host is
+#'   - `instance-type` - The instance type size that the Dedicated Host is
 #'     configured to support.
 #' 
-#' -   `state` - The allocation state of the Dedicated Host (`available` |
+#'   - `state` - The allocation state of the Dedicated Host (`available` |
 #'     `under-assessment` | `permanent-failure` | `released` |
 #'     `released-permanent-failure`).
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' @param HostIds The IDs of the Dedicated Hosts. The IDs are used for targeted instance
@@ -18513,9 +18515,9 @@ ec2_describe_hosts <- function(Filter = NULL, HostIds = NULL, MaxResults = NULL,
 #' @param AssociationIds The IAM instance profile associations.
 #' @param Filters The filters.
 #' 
-#' -   `instance-id` - The ID of the instance.
+#'   - `instance-id` - The ID of the instance.
 #' 
-#' -   `state` - The state of the association (`associating` | `associated`
+#'   - `state` - The state of the association (`associating` | `associated`
 #'     | `disassociating`).
 #' @param MaxResults The maximum number of results to return in a single call. To retrieve
 #' the remaining results, make another call with the returned `NextToken`
@@ -18899,93 +18901,93 @@ ec2_describe_image_attribute <- function(Attribute, ImageId, DryRun = NULL) {
 #' AMIs).
 #' @param Filters The filters.
 #' 
-#' -   `architecture` - The image architecture (`i386` | `x86_64` |
+#'   - `architecture` - The image architecture (`i386` | `x86_64` |
 #'     `arm64`).
 #' 
-#' -   `block-device-mapping.delete-on-termination` - A Boolean value that
+#'   - `block-device-mapping.delete-on-termination` - A Boolean value that
 #'     indicates whether the Amazon EBS volume is deleted on instance
 #'     termination.
 #' 
-#' -   `block-device-mapping.device-name` - The device name specified in
+#'   - `block-device-mapping.device-name` - The device name specified in
 #'     the block device mapping (for example, `/dev/sdh` or `xvdh`).
 #' 
-#' -   `block-device-mapping.snapshot-id` - The ID of the snapshot used for
+#'   - `block-device-mapping.snapshot-id` - The ID of the snapshot used for
 #'     the EBS volume.
 #' 
-#' -   `block-device-mapping.volume-size` - The volume size of the EBS
+#'   - `block-device-mapping.volume-size` - The volume size of the EBS
 #'     volume, in GiB.
 #' 
-#' -   `block-device-mapping.volume-type` - The volume type of the EBS
-#'     volume (`gp2` | `io1` | `io2` | `st1 `| `sc1` | `standard`).
+#'   - `block-device-mapping.volume-type` - The volume type of the EBS
+#'     volume (`gp2` | `io1` | `io2` | ` st1  `| `sc1` | `standard`).
 #' 
-#' -   `block-device-mapping.encrypted` - A Boolean that indicates whether
+#'   - `block-device-mapping.encrypted` - A Boolean that indicates whether
 #'     the EBS volume is encrypted.
 #' 
-#' -   `description` - The description of the image (provided during image
+#'   - `description` - The description of the image (provided during image
 #'     creation).
 #' 
-#' -   `ena-support` - A Boolean that indicates whether enhanced networking
+#'   - `ena-support` - A Boolean that indicates whether enhanced networking
 #'     with ENA is enabled.
 #' 
-#' -   `hypervisor` - The hypervisor type (`ovm` | `xen`).
+#'   - `hypervisor` - The hypervisor type (`ovm` | `xen`).
 #' 
-#' -   `image-id` - The ID of the image.
+#'   - `image-id` - The ID of the image.
 #' 
-#' -   `image-type` - The image type (`machine` | `kernel` | `ramdisk`).
+#'   - `image-type` - The image type (`machine` | `kernel` | `ramdisk`).
 #' 
-#' -   `is-public` - A Boolean that indicates whether the image is public.
+#'   - `is-public` - A Boolean that indicates whether the image is public.
 #' 
-#' -   `kernel-id` - The kernel ID.
+#'   - `kernel-id` - The kernel ID.
 #' 
-#' -   `manifest-location` - The location of the image manifest.
+#'   - `manifest-location` - The location of the image manifest.
 #' 
-#' -   `name` - The name of the AMI (provided during image creation).
+#'   - `name` - The name of the AMI (provided during image creation).
 #' 
-#' -   `owner-alias` - The owner alias, from an Amazon-maintained list
+#'   - `owner-alias` - The owner alias, from an Amazon-maintained list
 #'     (`amazon` | `aws-marketplace`). This is not the user-configured AWS
 #'     account alias set using the IAM console. We recommend that you use
 #'     the related parameter instead of this filter.
 #' 
-#' -   `owner-id` - The AWS account ID of the owner. We recommend that you
+#'   - `owner-id` - The AWS account ID of the owner. We recommend that you
 #'     use the related parameter instead of this filter.
 #' 
-#' -   `platform` - The platform. To only list Windows-based AMIs, use
+#'   - `platform` - The platform. To only list Windows-based AMIs, use
 #'     `windows`.
 #' 
-#' -   `product-code` - The product code.
+#'   - `product-code` - The product code.
 #' 
-#' -   `product-code.type` - The type of the product code (`devpay` |
+#'   - `product-code.type` - The type of the product code (`devpay` |
 #'     `marketplace`).
 #' 
-#' -   `ramdisk-id` - The RAM disk ID.
+#'   - `ramdisk-id` - The RAM disk ID.
 #' 
-#' -   `root-device-name` - The device name of the root device volume (for
+#'   - `root-device-name` - The device name of the root device volume (for
 #'     example, `/dev/sda1`).
 #' 
-#' -   `root-device-type` - The type of the root device volume (`ebs` |
+#'   - `root-device-type` - The type of the root device volume (`ebs` |
 #'     `instance-store`).
 #' 
-#' -   `state` - The state of the image (`available` | `pending` |
+#'   - `state` - The state of the image (`available` | `pending` |
 #'     `failed`).
 #' 
-#' -   `state-reason-code` - The reason code for the state change.
+#'   - `state-reason-code` - The reason code for the state change.
 #' 
-#' -   `state-reason-message` - The message for the state change.
+#'   - `state-reason-message` - The message for the state change.
 #' 
-#' -   `sriov-net-support` - A value of `simple` indicates that enhanced
+#'   - `sriov-net-support` - A value of `simple` indicates that enhanced
 #'     networking with the Intel 82599 VF interface is enabled.
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' 
-#' -   `virtualization-type` - The virtualization type (`paravirtual` |
+#'   - `virtualization-type` - The virtualization type (`paravirtual` |
 #'     `hvm`).
 #' @param ImageIds The image IDs.
 #' 
@@ -19516,7 +19518,7 @@ ec2_describe_instance_attribute <- function(Attribute, DryRun = NULL, InstanceId
 #' Otherwise, it is `UnauthorizedOperation`.
 #' @param Filters The filters.
 #' 
-#' -   `instance-id` - The ID of the instance.
+#'   - `instance-id` - The ID of the instance.
 #' @param InstanceIds The instance IDs.
 #' 
 #' Default: Describes all your instances.
@@ -19646,7 +19648,7 @@ ec2_describe_instance_event_notification_attributes <- function(DryRun = NULL) {
 #' 
 #' Instance status includes the following components:
 #' 
-#' -   **Status checks** - Amazon EC2 performs status checks on running EC2
+#'   - **Status checks** - Amazon EC2 performs status checks on running EC2
 #'     instances to identify hardware and software issues. For more
 #'     information, see [Status checks for your
 #'     instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-system-instance-status-check.html)
@@ -19654,14 +19656,14 @@ ec2_describe_instance_event_notification_attributes <- function(DryRun = NULL) {
 #'     checks](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstances.html)
 #'     in the *Amazon Elastic Compute Cloud User Guide*.
 #' 
-#' -   **Scheduled events** - Amazon EC2 can schedule events (such as
+#'   - **Scheduled events** - Amazon EC2 can schedule events (such as
 #'     reboot, stop, or terminate) for your instances related to hardware
 #'     issues, software updates, or system maintenance. For more
 #'     information, see [Scheduled events for your
 #'     instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-instances-status-check_sched.html)
 #'     in the *Amazon Elastic Compute Cloud User Guide*.
 #' 
-#' -   **Instance state** - You can manage your instances from the moment
+#'   - **Instance state** - You can manage your instances from the moment
 #'     you launch them through their termination. For more information, see
 #'     [Instance
 #'     lifecycle](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html)
@@ -19673,49 +19675,49 @@ ec2_describe_instance_event_notification_attributes <- function(DryRun = NULL) {
 #'
 #' @param Filters The filters.
 #' 
-#' -   `availability-zone` - The Availability Zone of the instance.
+#'   - `availability-zone` - The Availability Zone of the instance.
 #' 
-#' -   `event.code` - The code for the scheduled event (`instance-reboot` |
+#'   - `event.code` - The code for the scheduled event (`instance-reboot` |
 #'     `system-reboot` | `system-maintenance` | `instance-retirement` |
 #'     `instance-stop`).
 #' 
-#' -   `event.description` - A description of the event.
+#'   - `event.description` - A description of the event.
 #' 
-#' -   `event.instance-event-id` - The ID of the event whose date and time
+#'   - `event.instance-event-id` - The ID of the event whose date and time
 #'     you are modifying.
 #' 
-#' -   `event.not-after` - The latest end time for the scheduled event (for
+#'   - `event.not-after` - The latest end time for the scheduled event (for
 #'     example, `2014-09-15T17:15:20.000Z`).
 #' 
-#' -   `event.not-before` - The earliest start time for the scheduled event
+#'   - `event.not-before` - The earliest start time for the scheduled event
 #'     (for example, `2014-09-15T17:15:20.000Z`).
 #' 
-#' -   `event.not-before-deadline` - The deadline for starting the event
+#'   - `event.not-before-deadline` - The deadline for starting the event
 #'     (for example, `2014-09-15T17:15:20.000Z`).
 #' 
-#' -   `instance-state-code` - The code for the instance state, as a 16-bit
+#'   - `instance-state-code` - The code for the instance state, as a 16-bit
 #'     unsigned integer. The high byte is used for internal purposes and
 #'     should be ignored. The low byte is set based on the state
 #'     represented. The valid values are 0 (pending), 16 (running), 32
 #'     (shutting-down), 48 (terminated), 64 (stopping), and 80 (stopped).
 #' 
-#' -   `instance-state-name` - The state of the instance (`pending` |
+#'   - `instance-state-name` - The state of the instance (`pending` |
 #'     `running` | `shutting-down` | `terminated` | `stopping` |
 #'     `stopped`).
 #' 
-#' -   `instance-status.reachability` - Filters on instance status where
+#'   - `instance-status.reachability` - Filters on instance status where
 #'     the name is `reachability` (`passed` | `failed` | `initializing` |
 #'     `insufficient-data`).
 #' 
-#' -   `instance-status.status` - The status of the instance (`ok` |
+#'   - `instance-status.status` - The status of the instance (`ok` |
 #'     `impaired` | `initializing` | `insufficient-data` |
 #'     `not-applicable`).
 #' 
-#' -   `system-status.reachability` - Filters on system status where the
+#'   - `system-status.reachability` - Filters on system status where the
 #'     name is `reachability` (`passed` | `failed` | `initializing` |
 #'     `insufficient-data`).
 #' 
-#' -   `system-status.status` - The system status of the instance (`ok` |
+#'   - `system-status.status` - The system status of the instance (`ok` |
 #'     `impaired` | `initializing` | `insufficient-data` |
 #'     `not-applicable`).
 #' @param InstanceIds The instance IDs.
@@ -19866,11 +19868,11 @@ ec2_describe_instance_status <- function(Filters = NULL, InstanceIds = NULL, Max
 #' @param LocationType The location type.
 #' @param Filters One or more filters. Filter names and values are case-sensitive.
 #' 
-#' -   `location` - This depends on the location type. For example, if the
+#'   - `location` - This depends on the location type. For example, if the
 #'     location type is `region` (default), the location is the Region code
 #'     (for example, `us-east-2`.)
 #' 
-#' -   `instance-type` - The instance type. For example, `c5.2xlarge`.
+#'   - `instance-type` - The instance type. For example, `c5.2xlarge`.
 #' @param MaxResults The maximum number of results to return for the request in a single
 #' page. The remaining results can be seen by sending another request with
 #' the next token value.
@@ -19950,133 +19952,133 @@ ec2_describe_instance_type_offerings <- function(DryRun = NULL, LocationType = N
 #' in the *Amazon Elastic Compute Cloud User Guide*.
 #' @param Filters One or more filters. Filter names and values are case-sensitive.
 #' 
-#' -   `auto-recovery-supported` - Indicates whether auto recovery is
+#'   - `auto-recovery-supported` - Indicates whether auto recovery is
 #'     supported (`true` | `false`).
 #' 
-#' -   `bare-metal` - Indicates whether it is a bare metal instance type
+#'   - `bare-metal` - Indicates whether it is a bare metal instance type
 #'     (`true` | `false`).
 #' 
-#' -   `burstable-performance-supported` - Indicates whether it is a
+#'   - `burstable-performance-supported` - Indicates whether it is a
 #'     burstable performance instance type (`true` | `false`).
 #' 
-#' -   `current-generation` - Indicates whether this instance type is the
+#'   - `current-generation` - Indicates whether this instance type is the
 #'     latest generation instance type of an instance family (`true` |
 #'     `false`).
 #' 
-#' -   `ebs-info.ebs-optimized-info.baseline-bandwidth-in-mbps` - The
+#'   - `ebs-info.ebs-optimized-info.baseline-bandwidth-in-mbps` - The
 #'     baseline bandwidth performance for an EBS-optimized instance type,
 #'     in Mbps.
 #' 
-#' -   `ebs-info.ebs-optimized-info.baseline-iops` - The baseline
+#'   - `ebs-info.ebs-optimized-info.baseline-iops` - The baseline
 #'     input/output storage operations per second for an EBS-optimized
 #'     instance type.
 #' 
-#' -   `ebs-info.ebs-optimized-info.baseline-throughput-in-mbps` - The
+#'   - `ebs-info.ebs-optimized-info.baseline-throughput-in-mbps` - The
 #'     baseline throughput performance for an EBS-optimized instance type,
 #'     in MB/s.
 #' 
-#' -   `ebs-info.ebs-optimized-info.maximum-bandwidth-in-mbps` - The
+#'   - `ebs-info.ebs-optimized-info.maximum-bandwidth-in-mbps` - The
 #'     maximum bandwidth performance for an EBS-optimized instance type, in
 #'     Mbps.
 #' 
-#' -   `ebs-info.ebs-optimized-info.maximum-iops` - The maximum
+#'   - `ebs-info.ebs-optimized-info.maximum-iops` - The maximum
 #'     input/output storage operations per second for an EBS-optimized
 #'     instance type.
 #' 
-#' -   `ebs-info.ebs-optimized-info.maximum-throughput-in-mbps` - The
+#'   - `ebs-info.ebs-optimized-info.maximum-throughput-in-mbps` - The
 #'     maximum throughput performance for an EBS-optimized instance type,
 #'     in MB/s.
 #' 
-#' -   `ebs-info.ebs-optimized-support` - Indicates whether the instance
+#'   - `ebs-info.ebs-optimized-support` - Indicates whether the instance
 #'     type is EBS-optimized (`supported` | `unsupported` | `default`).
 #' 
-#' -   `ebs-info.encryption-support` - Indicates whether EBS encryption is
+#'   - `ebs-info.encryption-support` - Indicates whether EBS encryption is
 #'     supported (`supported` | `unsupported`).
 #' 
-#' -   `ebs-info.nvme-support` - Indicates whether non-volatile memory
+#'   - `ebs-info.nvme-support` - Indicates whether non-volatile memory
 #'     express (NVMe) is supported for EBS volumes (`required` |
 #'     `supported` | `unsupported`).
 #' 
-#' -   `free-tier-eligible` - Indicates whether the instance type is
+#'   - `free-tier-eligible` - Indicates whether the instance type is
 #'     eligible to use in the free tier (`true` | `false`).
 #' 
-#' -   `hibernation-supported` - Indicates whether On-Demand hibernation is
+#'   - `hibernation-supported` - Indicates whether On-Demand hibernation is
 #'     supported (`true` | `false`).
 #' 
-#' -   `hypervisor` - The hypervisor (`nitro` | `xen`).
+#'   - `hypervisor` - The hypervisor (`nitro` | `xen`).
 #' 
-#' -   `instance-storage-info.disk.count` - The number of local disks.
+#'   - `instance-storage-info.disk.count` - The number of local disks.
 #' 
-#' -   `instance-storage-info.disk.size-in-gb` - The storage size of each
+#'   - `instance-storage-info.disk.size-in-gb` - The storage size of each
 #'     instance storage disk, in GB.
 #' 
-#' -   `instance-storage-info.disk.type` - The storage technology for the
+#'   - `instance-storage-info.disk.type` - The storage technology for the
 #'     local instance storage disks (`hdd` | `ssd`).
 #' 
-#' -   `instance-storage-info.nvme-support` - Indicates whether
+#'   - `instance-storage-info.nvme-support` - Indicates whether
 #'     non-volatile memory express (NVMe) is supported for instance store
 #'     (`required` | `supported`) | `unsupported`).
 #' 
-#' -   `instance-storage-info.total-size-in-gb` - The total amount of
+#'   - `instance-storage-info.total-size-in-gb` - The total amount of
 #'     storage available from all local instance storage, in GB.
 #' 
-#' -   `instance-storage-supported` - Indicates whether the instance type
+#'   - `instance-storage-supported` - Indicates whether the instance type
 #'     has local instance storage (`true` | `false`).
 #' 
-#' -   `instance-type` - The instance type (for example `c5.2xlarge` or
+#'   - `instance-type` - The instance type (for example `c5.2xlarge` or
 #'     c5*).
 #' 
-#' -   `memory-info.size-in-mib` - The memory size.
+#'   - `memory-info.size-in-mib` - The memory size.
 #' 
-#' -   `network-info.efa-supported` - Indicates whether the instance type
+#'   - `network-info.efa-supported` - Indicates whether the instance type
 #'     supports Elastic Fabric Adapter (EFA) (`true` | `false`).
 #' 
-#' -   `network-info.ena-support` - Indicates whether Elastic Network
+#'   - `network-info.ena-support` - Indicates whether Elastic Network
 #'     Adapter (ENA) is supported or required (`required` | `supported` |
 #'     `unsupported`).
 #' 
-#' -   `network-info.ipv4-addresses-per-interface` - The maximum number of
+#'   - `network-info.ipv4-addresses-per-interface` - The maximum number of
 #'     private IPv4 addresses per network interface.
 #' 
-#' -   `network-info.ipv6-addresses-per-interface` - The maximum number of
+#'   - `network-info.ipv6-addresses-per-interface` - The maximum number of
 #'     private IPv6 addresses per network interface.
 #' 
-#' -   `network-info.ipv6-supported` - Indicates whether the instance type
+#'   - `network-info.ipv6-supported` - Indicates whether the instance type
 #'     supports IPv6 (`true` | `false`).
 #' 
-#' -   `network-info.maximum-network-interfaces` - The maximum number of
+#'   - `network-info.maximum-network-interfaces` - The maximum number of
 #'     network interfaces per instance.
 #' 
-#' -   `network-info.network-performance` - The network performance (for
+#'   - `network-info.network-performance` - The network performance (for
 #'     example, "25 Gigabit").
 #' 
-#' -   `processor-info.supported-architecture` - The CPU architecture
+#'   - `processor-info.supported-architecture` - The CPU architecture
 #'     (`arm64` | `i386` | `x86_64`).
 #' 
-#' -   `processor-info.sustained-clock-speed-in-ghz` - The CPU clock speed,
+#'   - `processor-info.sustained-clock-speed-in-ghz` - The CPU clock speed,
 #'     in GHz.
 #' 
-#' -   `supported-root-device-type` - The root device type (`ebs` |
+#'   - `supported-root-device-type` - The root device type (`ebs` |
 #'     `instance-store`).
 #' 
-#' -   `supported-usage-class` - The usage class (`on-demand` | `spot`).
+#'   - `supported-usage-class` - The usage class (`on-demand` | `spot`).
 #' 
-#' -   `supported-virtualization-type` - The virtualization type (`hvm` |
+#'   - `supported-virtualization-type` - The virtualization type (`hvm` |
 #'     `paravirtual`).
 #' 
-#' -   `vcpu-info.default-cores` - The default number of cores for the
+#'   - `vcpu-info.default-cores` - The default number of cores for the
 #'     instance type.
 #' 
-#' -   `vcpu-info.default-threads-per-core` - The default number of threads
+#'   - `vcpu-info.default-threads-per-core` - The default number of threads
 #'     per core for the instance type.
 #' 
-#' -   `vcpu-info.default-vcpus` - The default number of vCPUs for the
+#'   - `vcpu-info.default-vcpus` - The default number of vCPUs for the
 #'     instance type.
 #' 
-#' -   `vcpu-info.valid-cores` - The number of cores that can be configured
+#'   - `vcpu-info.valid-cores` - The number of cores that can be configured
 #'     for the instance type.
 #' 
-#' -   `vcpu-info.valid-threads-per-core` - The number of threads per core
+#'   - `vcpu-info.valid-threads-per-core` - The number of threads per core
 #'     that can be configured for the instance type. For example, "1" or
 #'     "1,2".
 #' @param MaxResults The maximum number of results to return for the request in a single
@@ -20289,232 +20291,232 @@ ec2_describe_instance_types <- function(DryRun = NULL, InstanceTypes = NULL, Fil
 #'
 #' @param Filters The filters.
 #' 
-#' -   `affinity` - The affinity setting for an instance running on a
+#'   - `affinity` - The affinity setting for an instance running on a
 #'     Dedicated Host (`default` | `host`).
 #' 
-#' -   `architecture` - The instance architecture (`i386` | `x86_64` |
+#'   - `architecture` - The instance architecture (`i386` | `x86_64` |
 #'     `arm64`).
 #' 
-#' -   `availability-zone` - The Availability Zone of the instance.
+#'   - `availability-zone` - The Availability Zone of the instance.
 #' 
-#' -   `block-device-mapping.attach-time` - The attach time for an EBS
+#'   - `block-device-mapping.attach-time` - The attach time for an EBS
 #'     volume mapped to the instance, for example,
 #'     `2010-09-15T17:15:20.000Z`.
 #' 
-#' -   `block-device-mapping.delete-on-termination` - A Boolean that
+#'   - `block-device-mapping.delete-on-termination` - A Boolean that
 #'     indicates whether the EBS volume is deleted on instance termination.
 #' 
-#' -   `block-device-mapping.device-name` - The device name specified in
+#'   - `block-device-mapping.device-name` - The device name specified in
 #'     the block device mapping (for example, `/dev/sdh` or `xvdh`).
 #' 
-#' -   `block-device-mapping.status` - The status for the EBS volume
+#'   - `block-device-mapping.status` - The status for the EBS volume
 #'     (`attaching` | `attached` | `detaching` | `detached`).
 #' 
-#' -   `block-device-mapping.volume-id` - The volume ID of the EBS volume.
+#'   - `block-device-mapping.volume-id` - The volume ID of the EBS volume.
 #' 
-#' -   `client-token` - The idempotency token you provided when you
+#'   - `client-token` - The idempotency token you provided when you
 #'     launched the instance.
 #' 
-#' -   `dns-name` - The public DNS name of the instance.
+#'   - `dns-name` - The public DNS name of the instance.
 #' 
-#' -   `group-id` - The ID of the security group for the instance.
+#'   - `group-id` - The ID of the security group for the instance.
 #'     EC2-Classic only.
 #' 
-#' -   `group-name` - The name of the security group for the instance.
+#'   - `group-name` - The name of the security group for the instance.
 #'     EC2-Classic only.
 #' 
-#' -   `hibernation-options.configured` - A Boolean that indicates whether
+#'   - `hibernation-options.configured` - A Boolean that indicates whether
 #'     the instance is enabled for hibernation. A value of `true` means
 #'     that the instance is enabled for hibernation.
 #' 
-#' -   `host-id` - The ID of the Dedicated Host on which the instance is
+#'   - `host-id` - The ID of the Dedicated Host on which the instance is
 #'     running, if applicable.
 #' 
-#' -   `hypervisor` - The hypervisor type of the instance (`ovm` | `xen`).
+#'   - `hypervisor` - The hypervisor type of the instance (`ovm` | `xen`).
 #'     The value `xen` is used for both Xen and Nitro hypervisors.
 #' 
-#' -   `iam-instance-profile.arn` - The instance profile associated with
+#'   - `iam-instance-profile.arn` - The instance profile associated with
 #'     the instance. Specified as an ARN.
 #' 
-#' -   `image-id` - The ID of the image used to launch the instance.
+#'   - `image-id` - The ID of the image used to launch the instance.
 #' 
-#' -   `instance-id` - The ID of the instance.
+#'   - `instance-id` - The ID of the instance.
 #' 
-#' -   `instance-lifecycle` - Indicates whether this is a Spot Instance or
+#'   - `instance-lifecycle` - Indicates whether this is a Spot Instance or
 #'     a Scheduled Instance (`spot` | `scheduled`).
 #' 
-#' -   `instance-state-code` - The state of the instance, as a 16-bit
+#'   - `instance-state-code` - The state of the instance, as a 16-bit
 #'     unsigned integer. The high byte is used for internal purposes and
 #'     should be ignored. The low byte is set based on the state
 #'     represented. The valid values are: 0 (pending), 16 (running), 32
 #'     (shutting-down), 48 (terminated), 64 (stopping), and 80 (stopped).
 #' 
-#' -   `instance-state-name` - The state of the instance (`pending` |
+#'   - `instance-state-name` - The state of the instance (`pending` |
 #'     `running` | `shutting-down` | `terminated` | `stopping` |
 #'     `stopped`).
 #' 
-#' -   `instance-type` - The type of instance (for example, `t2.micro`).
+#'   - `instance-type` - The type of instance (for example, `t2.micro`).
 #' 
-#' -   `instance.group-id` - The ID of the security group for the instance.
+#'   - `instance.group-id` - The ID of the security group for the instance.
 #' 
-#' -   `instance.group-name` - The name of the security group for the
+#'   - `instance.group-name` - The name of the security group for the
 #'     instance.
 #' 
-#' -   `ip-address` - The public IPv4 address of the instance.
+#'   - `ip-address` - The public IPv4 address of the instance.
 #' 
-#' -   `kernel-id` - The kernel ID.
+#'   - `kernel-id` - The kernel ID.
 #' 
-#' -   `key-name` - The name of the key pair used when the instance was
+#'   - `key-name` - The name of the key pair used when the instance was
 #'     launched.
 #' 
-#' -   `launch-index` - When launching multiple instances, this is the
+#'   - `launch-index` - When launching multiple instances, this is the
 #'     index for the instance in the launch group (for example, 0, 1, 2,
 #'     and so on).
 #' 
-#' -   `launch-time` - The time when the instance was launched.
+#'   - `launch-time` - The time when the instance was launched.
 #' 
-#' -   `metadata-options.http-tokens` - The metadata request authorization
+#'   - `metadata-options.http-tokens` - The metadata request authorization
 #'     state (`optional` | `required`)
 #' 
-#' -   `metadata-options.http-put-response-hop-limit` - The http metadata
+#'   - `metadata-options.http-put-response-hop-limit` - The http metadata
 #'     request put response hop limit (integer, possible values `1` to
 #'     `64`)
 #' 
-#' -   `metadata-options.http-endpoint` - Enable or disable metadata access
+#'   - `metadata-options.http-endpoint` - Enable or disable metadata access
 #'     on http endpoint (`enabled` | `disabled`)
 #' 
-#' -   `monitoring-state` - Indicates whether detailed monitoring is
+#'   - `monitoring-state` - Indicates whether detailed monitoring is
 #'     enabled (`disabled` | `enabled`).
 #' 
-#' -   `network-interface.addresses.private-ip-address` - The private IPv4
+#'   - `network-interface.addresses.private-ip-address` - The private IPv4
 #'     address associated with the network interface.
 #' 
-#' -   `network-interface.addresses.primary` - Specifies whether the IPv4
+#'   - `network-interface.addresses.primary` - Specifies whether the IPv4
 #'     address of the network interface is the primary private IPv4
 #'     address.
 #' 
-#' -   `network-interface.addresses.association.public-ip` - The ID of the
+#'   - `network-interface.addresses.association.public-ip` - The ID of the
 #'     association of an Elastic IP address (IPv4) with a network
 #'     interface.
 #' 
-#' -   `network-interface.addresses.association.ip-owner-id` - The owner ID
+#'   - `network-interface.addresses.association.ip-owner-id` - The owner ID
 #'     of the private IPv4 address associated with the network interface.
 #' 
-#' -   `network-interface.association.public-ip` - The address of the
+#'   - `network-interface.association.public-ip` - The address of the
 #'     Elastic IP address (IPv4) bound to the network interface.
 #' 
-#' -   `network-interface.association.ip-owner-id` - The owner of the
+#'   - `network-interface.association.ip-owner-id` - The owner of the
 #'     Elastic IP address (IPv4) associated with the network interface.
 #' 
-#' -   `network-interface.association.allocation-id` - The allocation ID
+#'   - `network-interface.association.allocation-id` - The allocation ID
 #'     returned when you allocated the Elastic IP address (IPv4) for your
 #'     network interface.
 #' 
-#' -   `network-interface.association.association-id` - The association ID
+#'   - `network-interface.association.association-id` - The association ID
 #'     returned when the network interface was associated with an IPv4
 #'     address.
 #' 
-#' -   `network-interface.attachment.attachment-id` - The ID of the
+#'   - `network-interface.attachment.attachment-id` - The ID of the
 #'     interface attachment.
 #' 
-#' -   `network-interface.attachment.instance-id` - The ID of the instance
+#'   - `network-interface.attachment.instance-id` - The ID of the instance
 #'     to which the network interface is attached.
 #' 
-#' -   `network-interface.attachment.instance-owner-id` - The owner ID of
+#'   - `network-interface.attachment.instance-owner-id` - The owner ID of
 #'     the instance to which the network interface is attached.
 #' 
-#' -   `network-interface.attachment.device-index` - The device index to
+#'   - `network-interface.attachment.device-index` - The device index to
 #'     which the network interface is attached.
 #' 
-#' -   `network-interface.attachment.status` - The status of the attachment
+#'   - `network-interface.attachment.status` - The status of the attachment
 #'     (`attaching` | `attached` | `detaching` | `detached`).
 #' 
-#' -   `network-interface.attachment.attach-time` - The time that the
+#'   - `network-interface.attachment.attach-time` - The time that the
 #'     network interface was attached to an instance.
 #' 
-#' -   `network-interface.attachment.delete-on-termination` - Specifies
+#'   - `network-interface.attachment.delete-on-termination` - Specifies
 #'     whether the attachment is deleted when an instance is terminated.
 #' 
-#' -   `network-interface.availability-zone` - The Availability Zone for
+#'   - `network-interface.availability-zone` - The Availability Zone for
 #'     the network interface.
 #' 
-#' -   `network-interface.description` - The description of the network
+#'   - `network-interface.description` - The description of the network
 #'     interface.
 #' 
-#' -   `network-interface.group-id` - The ID of a security group associated
+#'   - `network-interface.group-id` - The ID of a security group associated
 #'     with the network interface.
 #' 
-#' -   `network-interface.group-name` - The name of a security group
+#'   - `network-interface.group-name` - The name of a security group
 #'     associated with the network interface.
 #' 
-#' -   `network-interface.ipv6-addresses.ipv6-address` - The IPv6 address
+#'   - `network-interface.ipv6-addresses.ipv6-address` - The IPv6 address
 #'     associated with the network interface.
 #' 
-#' -   `network-interface.mac-address` - The MAC address of the network
+#'   - `network-interface.mac-address` - The MAC address of the network
 #'     interface.
 #' 
-#' -   `network-interface.network-interface-id` - The ID of the network
+#'   - `network-interface.network-interface-id` - The ID of the network
 #'     interface.
 #' 
-#' -   `network-interface.owner-id` - The ID of the owner of the network
+#'   - `network-interface.owner-id` - The ID of the owner of the network
 #'     interface.
 #' 
-#' -   `network-interface.private-dns-name` - The private DNS name of the
+#'   - `network-interface.private-dns-name` - The private DNS name of the
 #'     network interface.
 #' 
-#' -   `network-interface.requester-id` - The requester ID for the network
+#'   - `network-interface.requester-id` - The requester ID for the network
 #'     interface.
 #' 
-#' -   `network-interface.requester-managed` - Indicates whether the
+#'   - `network-interface.requester-managed` - Indicates whether the
 #'     network interface is being managed by AWS.
 #' 
-#' -   `network-interface.status` - The status of the network interface
+#'   - `network-interface.status` - The status of the network interface
 #'     (`available`) | `in-use`).
 #' 
-#' -   `network-interface.source-dest-check` - Whether the network
+#'   - `network-interface.source-dest-check` - Whether the network
 #'     interface performs source/destination checking. A value of `true`
 #'     means that checking is enabled, and `false` means that checking is
 #'     disabled. The value must be `false` for the network interface to
 #'     perform network address translation (NAT) in your VPC.
 #' 
-#' -   `network-interface.subnet-id` - The ID of the subnet for the network
+#'   - `network-interface.subnet-id` - The ID of the subnet for the network
 #'     interface.
 #' 
-#' -   `network-interface.vpc-id` - The ID of the VPC for the network
+#'   - `network-interface.vpc-id` - The ID of the VPC for the network
 #'     interface.
 #' 
-#' -   `owner-id` - The AWS account ID of the instance owner.
+#'   - `owner-id` - The AWS account ID of the instance owner.
 #' 
-#' -   `placement-group-name` - The name of the placement group for the
+#'   - `placement-group-name` - The name of the placement group for the
 #'     instance.
 #' 
-#' -   `placement-partition-number` - The partition in which the instance
+#'   - `placement-partition-number` - The partition in which the instance
 #'     is located.
 #' 
-#' -   `platform` - The platform. To list only Windows instances, use
+#'   - `platform` - The platform. To list only Windows instances, use
 #'     `windows`.
 #' 
-#' -   `private-dns-name` - The private IPv4 DNS name of the instance.
+#'   - `private-dns-name` - The private IPv4 DNS name of the instance.
 #' 
-#' -   `private-ip-address` - The private IPv4 address of the instance.
+#'   - `private-ip-address` - The private IPv4 address of the instance.
 #' 
-#' -   `product-code` - The product code associated with the AMI used to
+#'   - `product-code` - The product code associated with the AMI used to
 #'     launch the instance.
 #' 
-#' -   `product-code.type` - The type of product code (`devpay` |
+#'   - `product-code.type` - The type of product code (`devpay` |
 #'     `marketplace`).
 #' 
-#' -   `ramdisk-id` - The RAM disk ID.
+#'   - `ramdisk-id` - The RAM disk ID.
 #' 
-#' -   `reason` - The reason for the current state of the instance (for
+#'   - `reason` - The reason for the current state of the instance (for
 #'     example, shows "User Initiated \[date\]" when you stop or terminate
 #'     the instance). Similar to the state-reason-code filter.
 #' 
-#' -   `requester-id` - The ID of the entity that launched the instance on
+#'   - `requester-id` - The ID of the entity that launched the instance on
 #'     your behalf (for example, AWS Management Console, Auto Scaling, and
 #'     so on).
 #' 
-#' -   `reservation-id` - The ID of the instance's reservation. A
+#'   - `reservation-id` - The ID of the instance's reservation. A
 #'     reservation ID is created any time you launch an instance. A
 #'     reservation ID has a one-to-one relationship with an instance launch
 #'     request, but can be associated with more than one instance if you
@@ -20523,43 +20525,43 @@ ec2_describe_instance_types <- function(DryRun = NULL, InstanceTypes = NULL, Fil
 #'     you launch ten instances using the same launch request, you also get
 #'     one reservation ID.
 #' 
-#' -   `root-device-name` - The device name of the root device volume (for
+#'   - `root-device-name` - The device name of the root device volume (for
 #'     example, `/dev/sda1`).
 #' 
-#' -   `root-device-type` - The type of the root device volume (`ebs` |
+#'   - `root-device-type` - The type of the root device volume (`ebs` |
 #'     `instance-store`).
 #' 
-#' -   `source-dest-check` - Indicates whether the instance performs
+#'   - `source-dest-check` - Indicates whether the instance performs
 #'     source/destination checking. A value of `true` means that checking
 #'     is enabled, and `false` means that checking is disabled. The value
 #'     must be `false` for the instance to perform network address
 #'     translation (NAT) in your VPC.
 #' 
-#' -   `spot-instance-request-id` - The ID of the Spot Instance request.
+#'   - `spot-instance-request-id` - The ID of the Spot Instance request.
 #' 
-#' -   `state-reason-code` - The reason code for the state change.
+#'   - `state-reason-code` - The reason code for the state change.
 #' 
-#' -   `state-reason-message` - A message that describes the state change.
+#'   - `state-reason-message` - A message that describes the state change.
 #' 
-#' -   `subnet-id` - The ID of the subnet for the instance.
+#'   - `subnet-id` - The ID of the subnet for the instance.
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources that have a tag with a specific key,
 #'     regardless of the tag value.
 #' 
-#' -   `tenancy` - The tenancy of an instance (`dedicated` | `default` |
+#'   - `tenancy` - The tenancy of an instance (`dedicated` | `default` |
 #'     `host`).
 #' 
-#' -   `virtualization-type` - The virtualization type of the instance
+#'   - `virtualization-type` - The virtualization type of the instance
 #'     (`paravirtual` | `hvm`).
 #' 
-#' -   `vpc-id` - The ID of the VPC that the instance is running in.
+#'   - `vpc-id` - The ID of the VPC that the instance is running in.
 #' @param InstanceIds The instance IDs.
 #' 
 #' Default: Describes all your instances.
@@ -20872,24 +20874,24 @@ ec2_describe_instances <- function(Filters = NULL, InstanceIds = NULL, DryRun = 
 #'
 #' @param Filters One or more filters.
 #' 
-#' -   `attachment.state` - The current state of the attachment between the
+#'   - `attachment.state` - The current state of the attachment between the
 #'     gateway and the VPC (`available`). Present only if a VPC is
 #'     attached.
 #' 
-#' -   `attachment.vpc-id` - The ID of an attached VPC.
+#'   - `attachment.vpc-id` - The ID of an attached VPC.
 #' 
-#' -   `internet-gateway-id` - The ID of the Internet gateway.
+#'   - `internet-gateway-id` - The ID of the Internet gateway.
 #' 
-#' -   `owner-id` - The ID of the AWS account that owns the internet
+#'   - `owner-id` - The ID of the AWS account that owns the internet
 #'     gateway.
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' @param DryRun Checks whether you have the required permissions for the action, without
@@ -21005,13 +21007,13 @@ ec2_describe_internet_gateways <- function(Filters = NULL, DryRun = NULL, Intern
 #' Otherwise, it is `UnauthorizedOperation`.
 #' @param Filters One or more filters.
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #'
@@ -21094,21 +21096,21 @@ ec2_describe_ipv_6_pools <- function(PoolIds = NULL, NextToken = NULL, MaxResult
 #'
 #' @param Filters The filters.
 #' 
-#' -   `key-pair-id` - The ID of the key pair.
+#'   - `key-pair-id` - The ID of the key pair.
 #' 
-#' -   `fingerprint` - The fingerprint of the key pair.
+#'   - `fingerprint` - The fingerprint of the key pair.
 #' 
-#' -   `key-name` - The name of the key pair.
+#'   - `key-name` - The name of the key pair.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' @param KeyNames The key pair names.
 #' 
 #' Default: Describes all your key pairs.
@@ -21236,23 +21238,23 @@ ec2_describe_key_pairs <- function(Filters = NULL, KeyNames = NULL, KeyPairIds =
 #' value. This value can be between 1 and 200.
 #' @param Filters One or more filters.
 #' 
-#' -   `create-time` - The time the launch template version was created.
+#'   - `create-time` - The time the launch template version was created.
 #' 
-#' -   `ebs-optimized` - A boolean that indicates whether the instance is
+#'   - `ebs-optimized` - A boolean that indicates whether the instance is
 #'     optimized for Amazon EBS I/O.
 #' 
-#' -   `iam-instance-profile` - The ARN of the IAM instance profile.
+#'   - `iam-instance-profile` - The ARN of the IAM instance profile.
 #' 
-#' -   `image-id` - The ID of the AMI.
+#'   - `image-id` - The ID of the AMI.
 #' 
-#' -   `instance-type` - The instance type.
+#'   - `instance-type` - The instance type.
 #' 
-#' -   `is-default-version` - A boolean that indicates whether the launch
+#'   - `is-default-version` - A boolean that indicates whether the launch
 #'     template version is the default version.
 #' 
-#' -   `kernel-id` - The kernel ID.
+#'   - `kernel-id` - The kernel ID.
 #' 
-#' -   `ram-disk-id` - The RAM disk ID.
+#'   - `ram-disk-id` - The RAM disk ID.
 #'
 #' @return
 #' A list with the following syntax:
@@ -21490,17 +21492,17 @@ ec2_describe_launch_template_versions <- function(DryRun = NULL, LaunchTemplateI
 #' @param LaunchTemplateNames One or more launch template names.
 #' @param Filters One or more filters.
 #' 
-#' -   `create-time` - The time the launch template was created.
+#'   - `create-time` - The time the launch template was created.
 #' 
-#' -   `launch-template-name` - The name of the launch template.
+#'   - `launch-template-name` - The name of the launch template.
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' @param NextToken The token to request the next page of results.
@@ -21602,18 +21604,18 @@ ec2_describe_launch_templates <- function(DryRun = NULL, LaunchTemplateIds = NUL
 #' @param LocalGatewayRouteTableVirtualInterfaceGroupAssociationIds The IDs of the associations.
 #' @param Filters One or more filters.
 #' 
-#' -   `local-gateway-id` - The ID of a local gateway.
+#'   - `local-gateway-id` - The ID of a local gateway.
 #' 
-#' -   `local-gateway-route-table-id` - The ID of the local gateway route
+#'   - `local-gateway-route-table-id` - The ID of the local gateway route
 #'     table.
 #' 
-#' -   `local-gateway-route-table-virtual-interface-group-association-id` -
+#'   - `local-gateway-route-table-virtual-interface-group-association-id` -
 #'     The ID of the association.
 #' 
-#' -   `local-gateway-route-table-virtual-interface-group-id` - The ID of
+#'   - `local-gateway-route-table-virtual-interface-group-id` - The ID of
 #'     the virtual interface group.
 #' 
-#' -   `state` - The state of the association.
+#'   - `state` - The state of the association.
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
 #' value.
@@ -21703,17 +21705,17 @@ ec2_describe_local_gateway_route_table_virtual_interface_group_associations <- f
 #' @param LocalGatewayRouteTableVpcAssociationIds The IDs of the associations.
 #' @param Filters One or more filters.
 #' 
-#' -   `local-gateway-id` - The ID of a local gateway.
+#'   - `local-gateway-id` - The ID of a local gateway.
 #' 
-#' -   `local-gateway-route-table-id` - The ID of the local gateway route
+#'   - `local-gateway-route-table-id` - The ID of the local gateway route
 #'     table.
 #' 
-#' -   `local-gateway-route-table-vpc-association-id` - The ID of the
+#'   - `local-gateway-route-table-vpc-association-id` - The ID of the
 #'     association.
 #' 
-#' -   `state` - The state of the association.
+#'   - `state` - The state of the association.
 #' 
-#' -   `vpc-id` - The ID of the VPC.
+#'   - `vpc-id` - The ID of the VPC.
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
 #' value.
@@ -21802,14 +21804,14 @@ ec2_describe_local_gateway_route_table_vpc_associations <- function(LocalGateway
 #' @param LocalGatewayRouteTableIds The IDs of the local gateway route tables.
 #' @param Filters One or more filters.
 #' 
-#' -   `local-gateway-id` - The ID of a local gateway.
+#'   - `local-gateway-id` - The ID of a local gateway.
 #' 
-#' -   `local-gateway-route-table-id` - The ID of a local gateway route
+#'   - `local-gateway-route-table-id` - The ID of a local gateway route
 #'     table.
 #' 
-#' -   `outpost-arn` - The Amazon Resource Name (ARN) of the Outpost.
+#'   - `outpost-arn` - The Amazon Resource Name (ARN) of the Outpost.
 #' 
-#' -   `state` - The state of the local gateway route table.
+#'   - `state` - The state of the local gateway route table.
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
 #' value.
@@ -21896,12 +21898,12 @@ ec2_describe_local_gateway_route_tables <- function(LocalGatewayRouteTableIds = 
 #' @param LocalGatewayVirtualInterfaceGroupIds The IDs of the virtual interface groups.
 #' @param Filters One or more filters.
 #' 
-#' -   `local-gateway-id` - The ID of a local gateway.
+#'   - `local-gateway-id` - The ID of a local gateway.
 #' 
-#' -   `local-gateway-virtual-interface-id` - The ID of the virtual
+#'   - `local-gateway-virtual-interface-id` - The ID of the virtual
 #'     interface.
 #' 
-#' -   `local-gateway-virtual-interface-group-id` - The ID of the virtual
+#'   - `local-gateway-virtual-interface-group-id` - The ID of the virtual
 #'     interface group.
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
@@ -22074,20 +22076,20 @@ ec2_describe_local_gateway_virtual_interfaces <- function(LocalGatewayVirtualInt
 #'
 #' @param LocalGatewayIds One or more filters.
 #' 
-#' -   `local-gateway-id` - The ID of a local gateway.
+#'   - `local-gateway-id` - The ID of a local gateway.
 #' 
-#' -   `local-gateway-route-table-id` - The ID of the local gateway route
+#'   - `local-gateway-route-table-id` - The ID of the local gateway route
 #'     table.
 #' 
-#' -   `local-gateway-route-table-virtual-interface-group-association-id` -
+#'   - `local-gateway-route-table-virtual-interface-group-association-id` -
 #'     The ID of the association.
 #' 
-#' -   `local-gateway-route-table-virtual-interface-group-id` - The ID of
+#'   - `local-gateway-route-table-virtual-interface-group-id` - The ID of
 #'     the virtual interface group.
 #' 
-#' -   `outpost-arn` - The Amazon Resource Name (ARN) of the Outpost.
+#'   - `outpost-arn` - The Amazon Resource Name (ARN) of the Outpost.
 #' 
-#' -   `state` - The state of the association.
+#'   - `state` - The state of the association.
 #' @param Filters One or more filters.
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
@@ -22178,11 +22180,11 @@ ec2_describe_local_gateways <- function(LocalGatewayIds = NULL, Filters = NULL, 
 #' Otherwise, it is `UnauthorizedOperation`.
 #' @param Filters One or more filters.
 #' 
-#' -   `owner-id` - The ID of the prefix list owner.
+#'   - `owner-id` - The ID of the prefix list owner.
 #' 
-#' -   `prefix-list-id` - The ID of the prefix list.
+#'   - `prefix-list-id` - The ID of the prefix list.
 #' 
-#' -   `prefix-list-name` - The name of the prefix list.
+#'   - `prefix-list-name` - The name of the prefix list.
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
 #' value.
@@ -22271,7 +22273,7 @@ ec2_describe_managed_prefix_lists <- function(DryRun = NULL, Filters = NULL, Max
 #'
 #' @param Filters One or more filters.
 #' 
-#' -   `moving-status` - The status of the Elastic IP address
+#'   - `moving-status` - The status of the Elastic IP address
 #'     (`MovingToVpc` | `RestoringToClassic`).
 #' @param DryRun Checks whether you have the required permissions for the action, without
 #' actually making the request, and provides an error response. If you have
@@ -22362,24 +22364,24 @@ ec2_describe_moving_addresses <- function(Filters = NULL, DryRun = NULL, MaxResu
 #' Otherwise, it is `UnauthorizedOperation`.
 #' @param Filter One or more filters.
 #' 
-#' -   `nat-gateway-id` - The ID of the NAT gateway.
+#'   - `nat-gateway-id` - The ID of the NAT gateway.
 #' 
-#' -   `state` - The state of the NAT gateway (`pending` | `failed` |
+#'   - `state` - The state of the NAT gateway (`pending` | `failed` |
 #'     `available` | `deleting` | `deleted`).
 #' 
-#' -   `subnet-id` - The ID of the subnet in which the NAT gateway resides.
+#'   - `subnet-id` - The ID of the subnet in which the NAT gateway resides.
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' 
-#' -   `vpc-id` - The ID of the VPC in which the NAT gateway resides.
+#'   - `vpc-id` - The ID of the VPC in which the NAT gateway resides.
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
 #' value.
@@ -22505,56 +22507,56 @@ ec2_describe_nat_gateways <- function(DryRun = NULL, Filter = NULL, MaxResults =
 #'
 #' @param Filters One or more filters.
 #' 
-#' -   `association.association-id` - The ID of an association ID for the
+#'   - `association.association-id` - The ID of an association ID for the
 #'     ACL.
 #' 
-#' -   `association.network-acl-id` - The ID of the network ACL involved in
+#'   - `association.network-acl-id` - The ID of the network ACL involved in
 #'     the association.
 #' 
-#' -   `association.subnet-id` - The ID of the subnet involved in the
+#'   - `association.subnet-id` - The ID of the subnet involved in the
 #'     association.
 #' 
-#' -   `default` - Indicates whether the ACL is the default network ACL for
+#'   - `default` - Indicates whether the ACL is the default network ACL for
 #'     the VPC.
 #' 
-#' -   `entry.cidr` - The IPv4 CIDR range specified in the entry.
+#'   - `entry.cidr` - The IPv4 CIDR range specified in the entry.
 #' 
-#' -   `entry.icmp.code` - The ICMP code specified in the entry, if any.
+#'   - `entry.icmp.code` - The ICMP code specified in the entry, if any.
 #' 
-#' -   `entry.icmp.type` - The ICMP type specified in the entry, if any.
+#'   - `entry.icmp.type` - The ICMP type specified in the entry, if any.
 #' 
-#' -   `entry.ipv6-cidr` - The IPv6 CIDR range specified in the entry.
+#'   - `entry.ipv6-cidr` - The IPv6 CIDR range specified in the entry.
 #' 
-#' -   `entry.port-range.from` - The start of the port range specified in
+#'   - `entry.port-range.from` - The start of the port range specified in
 #'     the entry.
 #' 
-#' -   `entry.port-range.to` - The end of the port range specified in the
+#'   - `entry.port-range.to` - The end of the port range specified in the
 #'     entry.
 #' 
-#' -   `entry.protocol` - The protocol specified in the entry (`tcp` |
+#'   - `entry.protocol` - The protocol specified in the entry (`tcp` |
 #'     `udp` | `icmp` or a protocol number).
 #' 
-#' -   `entry.rule-action` - Allows or denies the matching traffic (`allow`
+#'   - `entry.rule-action` - Allows or denies the matching traffic (`allow`
 #'     | `deny`).
 #' 
-#' -   `entry.rule-number` - The number of an entry (in other words, rule)
+#'   - `entry.rule-number` - The number of an entry (in other words, rule)
 #'     in the set of ACL entries.
 #' 
-#' -   `network-acl-id` - The ID of the network ACL.
+#'   - `network-acl-id` - The ID of the network ACL.
 #' 
-#' -   `owner-id` - The ID of the AWS account that owns the network ACL.
+#'   - `owner-id` - The ID of the AWS account that owns the network ACL.
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' 
-#' -   `vpc-id` - The ID of the VPC for the network ACL.
+#'   - `vpc-id` - The ID of the VPC for the network ACL.
 #' @param DryRun Checks whether you have the required permissions for the action, without
 #' actually making the request, and provides an error response. If you have
 #' the required permissions, the error response is `DryRunOperation`.
@@ -22681,10 +22683,10 @@ ec2_describe_network_acls <- function(Filters = NULL, DryRun = NULL, NetworkAclI
 #' @param AnalysisEndTime The time when the network insights analyses ended.
 #' @param Filters The filters. The following are possible values:
 #' 
-#' -   PathFound - A Boolean value that indicates whether a feasible path
+#'   - PathFound - A Boolean value that indicates whether a feasible path
 #'     is found.
 #' 
-#' -   Status - The status of the analysis (running | succeeded | failed).
+#'   - Status - The status of the analysis (running | succeeded | failed).
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
 #' value.
@@ -23174,15 +23176,15 @@ ec2_describe_network_insights_analyses <- function(NetworkInsightsAnalysisIds = 
 #' @param NetworkInsightsPathIds The IDs of the paths.
 #' @param Filters The filters. The following are possible values:
 #' 
-#' -   Destination - The ID of the resource.
+#'   - Destination - The ID of the resource.
 #' 
-#' -   DestinationPort - The destination port.
+#'   - DestinationPort - The destination port.
 #' 
-#' -   Name - The path name.
+#'   - Name - The path name.
 #' 
-#' -   Protocol - The protocol.
+#'   - Protocol - The protocol.
 #' 
-#' -   Source - The ID of the resource.
+#'   - Source - The ID of the resource.
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
 #' value.
@@ -23382,17 +23384,17 @@ ec2_describe_network_interface_attribute <- function(Attribute = NULL, DryRun = 
 #' @param NetworkInterfacePermissionIds One or more network interface permission IDs.
 #' @param Filters One or more filters.
 #' 
-#' -   `network-interface-permission.network-interface-permission-id` - The
+#'   - `network-interface-permission.network-interface-permission-id` - The
 #'     ID of the permission.
 #' 
-#' -   `network-interface-permission.network-interface-id` - The ID of the
+#'   - `network-interface-permission.network-interface-id` - The ID of the
 #'     network interface.
 #' 
-#' -   `network-interface-permission.aws-account-id` - The AWS account ID.
+#'   - `network-interface-permission.aws-account-id` - The AWS account ID.
 #' 
-#' -   `network-interface-permission.aws-service` - The AWS service.
+#'   - `network-interface-permission.aws-service` - The AWS service.
 #' 
-#' -   `network-interface-permission.permission` - The type of permission
+#'   - `network-interface-permission.permission` - The type of permission
 #'     (`INSTANCE-ATTACH` | `EIP-ASSOCIATE`).
 #' @param NextToken The token to request the next page of results.
 #' @param MaxResults The maximum number of results to return in a single call. To retrieve
@@ -23471,112 +23473,112 @@ ec2_describe_network_interface_permissions <- function(NetworkInterfacePermissio
 #'
 #' @param Filters One or more filters.
 #' 
-#' -   `addresses.private-ip-address` - The private IPv4 addresses
+#'   - `addresses.private-ip-address` - The private IPv4 addresses
 #'     associated with the network interface.
 #' 
-#' -   `addresses.primary` - Whether the private IPv4 address is the
+#'   - `addresses.primary` - Whether the private IPv4 address is the
 #'     primary IP address associated with the network interface.
 #' 
-#' -   `addresses.association.public-ip` - The association ID returned when
+#'   - `addresses.association.public-ip` - The association ID returned when
 #'     the network interface was associated with the Elastic IP address
 #'     (IPv4).
 #' 
-#' -   `addresses.association.owner-id` - The owner ID of the addresses
+#'   - `addresses.association.owner-id` - The owner ID of the addresses
 #'     associated with the network interface.
 #' 
-#' -   `association.association-id` - The association ID returned when the
+#'   - `association.association-id` - The association ID returned when the
 #'     network interface was associated with an IPv4 address.
 #' 
-#' -   `association.allocation-id` - The allocation ID returned when you
+#'   - `association.allocation-id` - The allocation ID returned when you
 #'     allocated the Elastic IP address (IPv4) for your network interface.
 #' 
-#' -   `association.ip-owner-id` - The owner of the Elastic IP address
+#'   - `association.ip-owner-id` - The owner of the Elastic IP address
 #'     (IPv4) associated with the network interface.
 #' 
-#' -   `association.public-ip` - The address of the Elastic IP address
+#'   - `association.public-ip` - The address of the Elastic IP address
 #'     (IPv4) bound to the network interface.
 #' 
-#' -   `association.public-dns-name` - The public DNS name for the network
+#'   - `association.public-dns-name` - The public DNS name for the network
 #'     interface (IPv4).
 #' 
-#' -   `attachment.attachment-id` - The ID of the interface attachment.
+#'   - `attachment.attachment-id` - The ID of the interface attachment.
 #' 
-#' -   `attachment.attach-time` - The time that the network interface was
+#'   - `attachment.attach-time` - The time that the network interface was
 #'     attached to an instance.
 #' 
-#' -   `attachment.delete-on-termination` - Indicates whether the
+#'   - `attachment.delete-on-termination` - Indicates whether the
 #'     attachment is deleted when an instance is terminated.
 #' 
-#' -   `attachment.device-index` - The device index to which the network
+#'   - `attachment.device-index` - The device index to which the network
 #'     interface is attached.
 #' 
-#' -   `attachment.instance-id` - The ID of the instance to which the
+#'   - `attachment.instance-id` - The ID of the instance to which the
 #'     network interface is attached.
 #' 
-#' -   `attachment.instance-owner-id` - The owner ID of the instance to
+#'   - `attachment.instance-owner-id` - The owner ID of the instance to
 #'     which the network interface is attached.
 #' 
-#' -   `attachment.status` - The status of the attachment (`attaching` |
+#'   - `attachment.status` - The status of the attachment (`attaching` |
 #'     `attached` | `detaching` | `detached`).
 #' 
-#' -   `availability-zone` - The Availability Zone of the network
+#'   - `availability-zone` - The Availability Zone of the network
 #'     interface.
 #' 
-#' -   `description` - The description of the network interface.
+#'   - `description` - The description of the network interface.
 #' 
-#' -   `group-id` - The ID of a security group associated with the network
+#'   - `group-id` - The ID of a security group associated with the network
 #'     interface.
 #' 
-#' -   `group-name` - The name of a security group associated with the
+#'   - `group-name` - The name of a security group associated with the
 #'     network interface.
 #' 
-#' -   `ipv6-addresses.ipv6-address` - An IPv6 address associated with the
+#'   - `ipv6-addresses.ipv6-address` - An IPv6 address associated with the
 #'     network interface.
 #' 
-#' -   `mac-address` - The MAC address of the network interface.
+#'   - `mac-address` - The MAC address of the network interface.
 #' 
-#' -   `network-interface-id` - The ID of the network interface.
+#'   - `network-interface-id` - The ID of the network interface.
 #' 
-#' -   `owner-id` - The AWS account ID of the network interface owner.
+#'   - `owner-id` - The AWS account ID of the network interface owner.
 #' 
-#' -   `private-ip-address` - The private IPv4 address or addresses of the
+#'   - `private-ip-address` - The private IPv4 address or addresses of the
 #'     network interface.
 #' 
-#' -   `private-dns-name` - The private DNS name of the network interface
+#'   - `private-dns-name` - The private DNS name of the network interface
 #'     (IPv4).
 #' 
-#' -   `requester-id` - The ID of the entity that launched the instance on
+#'   - `requester-id` - The ID of the entity that launched the instance on
 #'     your behalf (for example, AWS Management Console, Auto Scaling, and
 #'     so on).
 #' 
-#' -   `requester-managed` - Indicates whether the network interface is
+#'   - `requester-managed` - Indicates whether the network interface is
 #'     being managed by an AWS service (for example, AWS Management
 #'     Console, Auto Scaling, and so on).
 #' 
-#' -   `source-dest-check` - Indicates whether the network interface
+#'   - `source-dest-check` - Indicates whether the network interface
 #'     performs source/destination checking. A value of `true` means
 #'     checking is enabled, and `false` means checking is disabled. The
 #'     value must be `false` for the network interface to perform network
 #'     address translation (NAT) in your VPC.
 #' 
-#' -   `status` - The status of the network interface. If the network
+#'   - `status` - The status of the network interface. If the network
 #'     interface is not attached to an instance, the status is `available`;
 #'     if a network interface is attached to an instance the status is
 #'     `in-use`.
 #' 
-#' -   `subnet-id` - The ID of the subnet for the network interface.
+#'   - `subnet-id` - The ID of the subnet for the network interface.
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' 
-#' -   `vpc-id` - The ID of the VPC for the network interface.
+#'   - `vpc-id` - The ID of the VPC for the network interface.
 #' @param DryRun Checks whether you have the required permissions for the action, without
 #' actually making the request, and provides an error response. If you have
 #' the required permissions, the error response is `DryRunOperation`.
@@ -23734,21 +23736,21 @@ ec2_describe_network_interfaces <- function(Filters = NULL, DryRun = NULL, Netwo
 #'
 #' @param Filters The filters.
 #' 
-#' -   `group-name` - The name of the placement group.
+#'   - `group-name` - The name of the placement group.
 #' 
-#' -   `state` - The state of the placement group (`pending` | `available`
+#'   - `state` - The state of the placement group (`pending` | `available`
 #'     | `deleting` | `deleted`).
 #' 
-#' -   `strategy` - The strategy of the placement group (`cluster` |
+#'   - `strategy` - The strategy of the placement group (`cluster` |
 #'     `spread` | `partition`).
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources that have a tag with a specific key,
 #'     regardless of the tag value.
 #' @param DryRun Checks whether you have the required permissions for the action, without
@@ -23847,9 +23849,9 @@ ec2_describe_placement_groups <- function(Filters = NULL, DryRun = NULL, GroupNa
 #' Otherwise, it is `UnauthorizedOperation`.
 #' @param Filters One or more filters.
 #' 
-#' -   `prefix-list-id`: The ID of a prefix list.
+#'   - `prefix-list-id`: The ID of a prefix list.
 #' 
-#' -   `prefix-list-name`: The name of a prefix list.
+#'   - `prefix-list-name`: The name of a prefix list.
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
 #' value.
@@ -24030,13 +24032,13 @@ ec2_describe_principal_id_format <- function(DryRun = NULL, Resources = NULL, Ma
 #' value.
 #' @param Filters One or more filters.
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #'
@@ -24128,13 +24130,13 @@ ec2_describe_public_ipv_4_pools <- function(PoolIds = NULL, NextToken = NULL, Ma
 #'
 #' @param Filters The filters.
 #' 
-#' -   `endpoint` - The endpoint of the Region (for example,
+#'   - `endpoint` - The endpoint of the Region (for example,
 #'     `ec2.us-east-1.amazonaws.com`).
 #' 
-#' -   `opt-in-status` - The opt-in status of the Region
+#'   - `opt-in-status` - The opt-in status of the Region
 #'     (`opt-in-not-required` | `opted-in` | `not-opted-in`).
 #' 
-#' -   `region-name` - The name of the Region (for example, `us-east-1`).
+#'   - `region-name` - The name of the Region (for example, `us-east-1`).
 #' @param RegionNames The names of the Regions. You can specify any Regions, whether they are
 #' enabled and disabled for your account.
 #' @param DryRun Checks whether you have the required permissions for the action, without
@@ -24218,57 +24220,55 @@ ec2_describe_regions <- function(Filters = NULL, RegionNames = NULL, DryRun = NU
 #'
 #' @param Filters One or more filters.
 #' 
-#' -   `availability-zone` - The Availability Zone where the Reserved
+#'   - `availability-zone` - The Availability Zone where the Reserved
 #'     Instance can be used.
 #' 
-#' -   `duration` - The duration of the Reserved Instance (one year or
+#'   - `duration` - The duration of the Reserved Instance (one year or
 #'     three years), in seconds (`31536000` | `94608000`).
 #' 
-#' -   `end` - The time when the Reserved Instance expires (for example,
+#'   - `end` - The time when the Reserved Instance expires (for example,
 #'     2015-08-07T11:54:42.000Z).
 #' 
-#' -   `fixed-price` - The purchase price of the Reserved Instance (for
+#'   - `fixed-price` - The purchase price of the Reserved Instance (for
 #'     example, 9800.0).
 #' 
-#' -   `instance-type` - The instance type that is covered by the
+#'   - `instance-type` - The instance type that is covered by the
 #'     reservation.
 #' 
-#' -   `scope` - The scope of the Reserved Instance (`Region` or
+#'   - `scope` - The scope of the Reserved Instance (`Region` or
 #'     `Availability Zone`).
 #' 
-#' -   `product-description` - The Reserved Instance product platform
+#'   - `product-description` - The Reserved Instance product platform
 #'     description. Instances that include `(Amazon VPC)` in the product
 #'     platform description will only be displayed to EC2-Classic account
-#'     holders and are for use with Amazon VPC (`Linux/UNIX` |
-#'     `Linux/UNIX (Amazon VPC)` | `SUSE Linux` | `SUSE Linux (Amazon VPC)`
-#'     | `Red Hat Enterprise Linux` |
-#'     `Red Hat Enterprise Linux (Amazon VPC)` | `Windows` |
-#'     `Windows (Amazon VPC)` | `Windows with SQL Server Standard` |
-#'     `Windows with SQL Server Standard (Amazon VPC)` |
-#'     `Windows with SQL Server Web` |
-#'     `Windows with SQL Server Web (Amazon VPC)` |
-#'     `Windows with SQL Server Enterprise` |
-#'     `Windows with SQL Server Enterprise (Amazon VPC)`).
+#'     holders and are for use with Amazon VPC (`Linux/UNIX` | `Linux/UNIX
+#'     (Amazon VPC)` | `SUSE Linux` | `SUSE Linux (Amazon VPC)` | `Red Hat
+#'     Enterprise Linux` | `Red Hat Enterprise Linux (Amazon VPC)` |
+#'     `Windows` | `Windows (Amazon VPC)` | `Windows with SQL Server
+#'     Standard` | `Windows with SQL Server Standard (Amazon VPC)` |
+#'     `Windows with SQL Server Web` | `Windows with SQL Server Web (Amazon
+#'     VPC)` | `Windows with SQL Server Enterprise` | `Windows with SQL
+#'     Server Enterprise (Amazon VPC)`).
 #' 
-#' -   `reserved-instances-id` - The ID of the Reserved Instance.
+#'   - `reserved-instances-id` - The ID of the Reserved Instance.
 #' 
-#' -   `start` - The time at which the Reserved Instance purchase request
+#'   - `start` - The time at which the Reserved Instance purchase request
 #'     was placed (for example, 2014-08-07T11:54:42.000Z).
 #' 
-#' -   `state` - The state of the Reserved Instance (`payment-pending` |
+#'   - `state` - The state of the Reserved Instance (`payment-pending` |
 #'     `active` | `payment-failed` | `retired`).
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' 
-#' -   `usage-price` - The usage price of the Reserved Instance, per hour
+#'   - `usage-price` - The usage price of the Reserved Instance, per hour
 #'     (for example, 0.84).
 #' @param OfferingClass Describes whether the Reserved Instance is Standard or Convertible.
 #' @param ReservedInstancesIds One or more Reserved Instance IDs.
@@ -24280,8 +24280,8 @@ ec2_describe_regions <- function(Filters = NULL, RegionNames = NULL, DryRun = NU
 #' the required permissions, the error response is `DryRunOperation`.
 #' Otherwise, it is `UnauthorizedOperation`.
 #' @param OfferingType The Reserved Instance offering type. If you are using tools that predate
-#' the 2011-11-01 API version, you only have access to the
-#' `Medium Utilization` Reserved Instance offering type.
+#' the 2011-11-01 API version, you only have access to the `Medium
+#' Utilization` Reserved Instance offering type.
 #'
 #' @return
 #' A list with the following syntax:
@@ -24401,15 +24401,15 @@ ec2_describe_reserved_instances <- function(Filters = NULL, OfferingClass = NULL
 #'
 #' @param Filters One or more filters.
 #' 
-#' -   `reserved-instances-id` - The ID of the Reserved Instances.
+#'   - `reserved-instances-id` - The ID of the Reserved Instances.
 #' 
-#' -   `reserved-instances-listing-id` - The ID of the Reserved Instances
+#'   - `reserved-instances-listing-id` - The ID of the Reserved Instances
 #'     listing.
 #' 
-#' -   `status` - The status of the Reserved Instance listing (`pending` |
+#'   - `status` - The status of the Reserved Instance listing (`pending` |
 #'     `active` | `cancelled` | `closed`).
 #' 
-#' -   `status-message` - The reason for the status.
+#'   - `status-message` - The reason for the status.
 #' @param ReservedInstancesId One or more Reserved Instance IDs.
 #' @param ReservedInstancesListingId One or more Reserved Instance listing IDs.
 #'
@@ -24509,40 +24509,40 @@ ec2_describe_reserved_instances_listings <- function(Filters = NULL, ReservedIns
 #'
 #' @param Filters One or more filters.
 #' 
-#' -   `client-token` - The idempotency token for the modification request.
+#'   - `client-token` - The idempotency token for the modification request.
 #' 
-#' -   `create-date` - The time when the modification request was created.
+#'   - `create-date` - The time when the modification request was created.
 #' 
-#' -   `effective-date` - The time when the modification becomes effective.
+#'   - `effective-date` - The time when the modification becomes effective.
 #' 
-#' -   `modification-result.reserved-instances-id` - The ID for the
+#'   - `modification-result.reserved-instances-id` - The ID for the
 #'     Reserved Instances created as part of the modification request. This
 #'     ID is only available when the status of the modification is
 #'     `fulfilled`.
 #' 
-#' -   `modification-result.target-configuration.availability-zone` - The
+#'   - `modification-result.target-configuration.availability-zone` - The
 #'     Availability Zone for the new Reserved Instances.
 #' 
-#' -   `modification-result.target-configuration.instance-count ` - The
+#'   - ` modification-result.target-configuration.instance-count  ` - The
 #'     number of new Reserved Instances.
 #' 
-#' -   `modification-result.target-configuration.instance-type` - The
+#'   - `modification-result.target-configuration.instance-type` - The
 #'     instance type of the new Reserved Instances.
 #' 
-#' -   `modification-result.target-configuration.platform` - The network
+#'   - `modification-result.target-configuration.platform` - The network
 #'     platform of the new Reserved Instances (`EC2-Classic` | `EC2-VPC`).
 #' 
-#' -   `reserved-instances-id` - The ID of the Reserved Instances modified.
+#'   - `reserved-instances-id` - The ID of the Reserved Instances modified.
 #' 
-#' -   `reserved-instances-modification-id` - The ID of the modification
+#'   - `reserved-instances-modification-id` - The ID of the modification
 #'     request.
 #' 
-#' -   `status` - The status of the Reserved Instances modification request
+#'   - `status` - The status of the Reserved Instances modification request
 #'     (`processing` | `fulfilled` | `failed`).
 #' 
-#' -   `status-message` - The reason for the status.
+#'   - `status-message` - The reason for the status.
 #' 
-#' -   `update-date` - The time when the modification request was last
+#'   - `update-date` - The time when the modification request was last
 #'     updated.
 #' @param ReservedInstancesModificationIds IDs for the submitted modification request.
 #' @param NextToken The token to retrieve the next page of results.
@@ -24654,44 +24654,42 @@ ec2_describe_reserved_instances_modifications <- function(Filters = NULL, Reserv
 #' @param AvailabilityZone The Availability Zone in which the Reserved Instance can be used.
 #' @param Filters One or more filters.
 #' 
-#' -   `availability-zone` - The Availability Zone where the Reserved
+#'   - `availability-zone` - The Availability Zone where the Reserved
 #'     Instance can be used.
 #' 
-#' -   `duration` - The duration of the Reserved Instance (for example, one
+#'   - `duration` - The duration of the Reserved Instance (for example, one
 #'     year or three years), in seconds (`31536000` | `94608000`).
 #' 
-#' -   `fixed-price` - The purchase price of the Reserved Instance (for
+#'   - `fixed-price` - The purchase price of the Reserved Instance (for
 #'     example, 9800.0).
 #' 
-#' -   `instance-type` - The instance type that is covered by the
+#'   - `instance-type` - The instance type that is covered by the
 #'     reservation.
 #' 
-#' -   `marketplace` - Set to `true` to show only Reserved Instance
+#'   - `marketplace` - Set to `true` to show only Reserved Instance
 #'     Marketplace offerings. When this filter is not used, which is the
 #'     default behavior, all offerings from both AWS and the Reserved
 #'     Instance Marketplace are listed.
 #' 
-#' -   `product-description` - The Reserved Instance product platform
+#'   - `product-description` - The Reserved Instance product platform
 #'     description. Instances that include `(Amazon VPC)` in the product
 #'     platform description will only be displayed to EC2-Classic account
-#'     holders and are for use with Amazon VPC. (`Linux/UNIX` |
-#'     `Linux/UNIX (Amazon VPC)` | `SUSE Linux` | `SUSE Linux (Amazon VPC)`
-#'     | `Red Hat Enterprise Linux` |
-#'     `Red Hat Enterprise Linux (Amazon VPC)` | `Windows` |
-#'     `Windows (Amazon VPC)` | `Windows with SQL Server Standard` |
-#'     `Windows with SQL Server Standard (Amazon VPC)` |
-#'     `Windows with SQL Server Web` |
-#'     ` Windows with SQL Server Web (Amazon VPC)` |
-#'     `Windows with SQL Server Enterprise` |
-#'     `Windows with SQL Server Enterprise (Amazon VPC)`)
+#'     holders and are for use with Amazon VPC. (`Linux/UNIX` | `Linux/UNIX
+#'     (Amazon VPC)` | `SUSE Linux` | `SUSE Linux (Amazon VPC)` | `Red Hat
+#'     Enterprise Linux` | `Red Hat Enterprise Linux (Amazon VPC)` |
+#'     `Windows` | `Windows (Amazon VPC)` | `Windows with SQL Server
+#'     Standard` | `Windows with SQL Server Standard (Amazon VPC)` |
+#'     `Windows with SQL Server Web` | `  Windows with SQL Server Web
+#'     (Amazon VPC) ` | `Windows with SQL Server Enterprise` | `Windows
+#'     with SQL Server Enterprise (Amazon VPC)`)
 #' 
-#' -   `reserved-instances-offering-id` - The Reserved Instances offering
+#'   - `reserved-instances-offering-id` - The Reserved Instances offering
 #'     ID.
 #' 
-#' -   `scope` - The scope of the Reserved Instance (`Availability Zone` or
+#'   - `scope` - The scope of the Reserved Instance (`Availability Zone` or
 #'     `Region`).
 #' 
-#' -   `usage-price` - The usage price of the Reserved Instance, per hour
+#'   - `usage-price` - The usage price of the Reserved Instance, per hour
 #'     (for example, 0.84).
 #' @param IncludeMarketplace Include Reserved Instance Marketplace offerings in the response.
 #' @param InstanceType The instance type that the reservation will cover (for example,
@@ -24734,8 +24732,8 @@ ec2_describe_reserved_instances_modifications <- function(Filters = NULL, Reserv
 #' Default: 100
 #' @param NextToken The token to retrieve the next page of results.
 #' @param OfferingType The Reserved Instance offering type. If you are using tools that predate
-#' the 2011-11-01 API version, you only have access to the
-#' `Medium Utilization` Reserved Instance offering type.
+#' the 2011-11-01 API version, you only have access to the `Medium
+#' Utilization` Reserved Instance offering type.
 #'
 #' @return
 #' A list with the following syntax:
@@ -24844,46 +24842,46 @@ ec2_describe_reserved_instances_offerings <- function(AvailabilityZone = NULL, F
 #'
 #' @param Filters One or more filters.
 #' 
-#' -   `association.route-table-association-id` - The ID of an association
+#'   - `association.route-table-association-id` - The ID of an association
 #'     ID for the route table.
 #' 
-#' -   `association.route-table-id` - The ID of the route table involved in
+#'   - `association.route-table-id` - The ID of the route table involved in
 #'     the association.
 #' 
-#' -   `association.subnet-id` - The ID of the subnet involved in the
+#'   - `association.subnet-id` - The ID of the subnet involved in the
 #'     association.
 #' 
-#' -   `association.main` - Indicates whether the route table is the main
+#'   - `association.main` - Indicates whether the route table is the main
 #'     route table for the VPC (`true` | `false`). Route tables that do not
 #'     have an association ID are not returned in the response.
 #' 
-#' -   `owner-id` - The ID of the AWS account that owns the route table.
+#'   - `owner-id` - The ID of the AWS account that owns the route table.
 #' 
-#' -   `route-table-id` - The ID of the route table.
+#'   - `route-table-id` - The ID of the route table.
 #' 
-#' -   `route.destination-cidr-block` - The IPv4 CIDR range specified in a
+#'   - `route.destination-cidr-block` - The IPv4 CIDR range specified in a
 #'     route in the table.
 #' 
-#' -   `route.destination-ipv6-cidr-block` - The IPv6 CIDR range specified
+#'   - `route.destination-ipv6-cidr-block` - The IPv6 CIDR range specified
 #'     in a route in the route table.
 #' 
-#' -   `route.destination-prefix-list-id` - The ID (prefix) of the AWS
+#'   - `route.destination-prefix-list-id` - The ID (prefix) of the AWS
 #'     service specified in a route in the table.
 #' 
-#' -   `route.egress-only-internet-gateway-id` - The ID of an egress-only
+#'   - `route.egress-only-internet-gateway-id` - The ID of an egress-only
 #'     Internet gateway specified in a route in the route table.
 #' 
-#' -   `route.gateway-id` - The ID of a gateway specified in a route in the
+#'   - `route.gateway-id` - The ID of a gateway specified in a route in the
 #'     table.
 #' 
-#' -   `route.instance-id` - The ID of an instance specified in a route in
+#'   - `route.instance-id` - The ID of an instance specified in a route in
 #'     the table.
 #' 
-#' -   `route.nat-gateway-id` - The ID of a NAT gateway.
+#'   - `route.nat-gateway-id` - The ID of a NAT gateway.
 #' 
-#' -   `route.transit-gateway-id` - The ID of a transit gateway.
+#'   - `route.transit-gateway-id` - The ID of a transit gateway.
 #' 
-#' -   `route.origin` - Describes how the route was created.
+#'   - `route.origin` - Describes how the route was created.
 #'     [`create_route_table`][ec2_create_route_table] indicates that the
 #'     route was automatically created when the route table was created;
 #'     [`create_route`][ec2_create_route] indicates that the route was
@@ -24891,26 +24889,26 @@ ec2_describe_reserved_instances_offerings <- function(AvailabilityZone = NULL, F
 #'     [`enable_vgw_route_propagation`][ec2_enable_vgw_route_propagation]
 #'     indicates that the route was propagated by route propagation.
 #' 
-#' -   `route.state` - The state of a route in the route table (`active` |
+#'   - `route.state` - The state of a route in the route table (`active` |
 #'     `blackhole`). The blackhole state indicates that the route's target
 #'     isn't available (for example, the specified gateway isn't attached
 #'     to the VPC, the specified NAT instance has been terminated, and so
 #'     on).
 #' 
-#' -   `route.vpc-peering-connection-id` - The ID of a VPC peering
+#'   - `route.vpc-peering-connection-id` - The ID of a VPC peering
 #'     connection specified in a route in the table.
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' 
-#' -   `vpc-id` - The ID of the VPC for the route table.
+#'   - `vpc-id` - The ID of the VPC for the route table.
 #' @param DryRun Checks whether you have the required permissions for the action, without
 #' actually making the request, and provides an error response. If you have
 #' the required permissions, the error response is `DryRunOperation`.
@@ -25057,15 +25055,15 @@ ec2_describe_route_tables <- function(Filters = NULL, DryRun = NULL, RouteTableI
 #' Otherwise, it is `UnauthorizedOperation`.
 #' @param Filters The filters.
 #' 
-#' -   `availability-zone` - The Availability Zone (for example,
+#'   - `availability-zone` - The Availability Zone (for example,
 #'     `us-west-2a`).
 #' 
-#' -   `instance-type` - The instance type (for example, `c4.large`).
+#'   - `instance-type` - The instance type (for example, `c4.large`).
 #' 
-#' -   `network-platform` - The network platform (`EC2-Classic` or
+#'   - `network-platform` - The network platform (`EC2-Classic` or
 #'     `EC2-VPC`).
 #' 
-#' -   `platform` - The platform (`Linux/UNIX` or `Windows`).
+#'   - `platform` - The platform (`Linux/UNIX` or `Windows`).
 #' @param FirstSlotStartTimeRange &#91;required&#93; The time period for the first schedule to start.
 #' @param MaxResults The maximum number of results to return in a single call. This value can
 #' be between 5 and 300. The default value is 300. To retrieve the
@@ -25208,15 +25206,15 @@ ec2_describe_scheduled_instance_availability <- function(DryRun = NULL, Filters 
 #' Otherwise, it is `UnauthorizedOperation`.
 #' @param Filters The filters.
 #' 
-#' -   `availability-zone` - The Availability Zone (for example,
+#'   - `availability-zone` - The Availability Zone (for example,
 #'     `us-west-2a`).
 #' 
-#' -   `instance-type` - The instance type (for example, `c4.large`).
+#'   - `instance-type` - The instance type (for example, `c4.large`).
 #' 
-#' -   `network-platform` - The network platform (`EC2-Classic` or
+#'   - `network-platform` - The network platform (`EC2-Classic` or
 #'     `EC2-VPC`).
 #' 
-#' -   `platform` - The platform (`Linux/UNIX` or `Windows`).
+#'   - `platform` - The platform (`Linux/UNIX` or `Windows`).
 #' @param MaxResults The maximum number of results to return in a single call. This value can
 #' be between 5 and 300. The default value is 100. To retrieve the
 #' remaining results, make another call with the returned `NextToken`
@@ -25423,79 +25421,79 @@ ec2_describe_security_group_references <- function(DryRun = NULL, GroupId) {
 #' security groups for which any combination of rules - not necessarily a
 #' single rule - match all filters.
 #' 
-#' -   `description` - The description of the security group.
+#'   - `description` - The description of the security group.
 #' 
-#' -   `egress.ip-permission.cidr` - An IPv4 CIDR block for an outbound
+#'   - `egress.ip-permission.cidr` - An IPv4 CIDR block for an outbound
 #'     security group rule.
 #' 
-#' -   `egress.ip-permission.from-port` - For an outbound rule, the start
+#'   - `egress.ip-permission.from-port` - For an outbound rule, the start
 #'     of port range for the TCP and UDP protocols, or an ICMP type number.
 #' 
-#' -   `egress.ip-permission.group-id` - The ID of a security group that
+#'   - `egress.ip-permission.group-id` - The ID of a security group that
 #'     has been referenced in an outbound security group rule.
 #' 
-#' -   `egress.ip-permission.group-name` - The name of a security group
+#'   - `egress.ip-permission.group-name` - The name of a security group
 #'     that has been referenced in an outbound security group rule.
 #' 
-#' -   `egress.ip-permission.ipv6-cidr` - An IPv6 CIDR block for an
+#'   - `egress.ip-permission.ipv6-cidr` - An IPv6 CIDR block for an
 #'     outbound security group rule.
 #' 
-#' -   `egress.ip-permission.prefix-list-id` - The ID of a prefix list to
+#'   - `egress.ip-permission.prefix-list-id` - The ID of a prefix list to
 #'     which a security group rule allows outbound access.
 #' 
-#' -   `egress.ip-permission.protocol` - The IP protocol for an outbound
+#'   - `egress.ip-permission.protocol` - The IP protocol for an outbound
 #'     security group rule (`tcp` | `udp` | `icmp` or a protocol number).
 #' 
-#' -   `egress.ip-permission.to-port` - For an outbound rule, the end of
+#'   - `egress.ip-permission.to-port` - For an outbound rule, the end of
 #'     port range for the TCP and UDP protocols, or an ICMP code.
 #' 
-#' -   `egress.ip-permission.user-id` - The ID of an AWS account that has
+#'   - `egress.ip-permission.user-id` - The ID of an AWS account that has
 #'     been referenced in an outbound security group rule.
 #' 
-#' -   `group-id` - The ID of the security group.
+#'   - `group-id` - The ID of the security group.
 #' 
-#' -   `group-name` - The name of the security group.
+#'   - `group-name` - The name of the security group.
 #' 
-#' -   `ip-permission.cidr` - An IPv4 CIDR block for an inbound security
+#'   - `ip-permission.cidr` - An IPv4 CIDR block for an inbound security
 #'     group rule.
 #' 
-#' -   `ip-permission.from-port` - For an inbound rule, the start of port
+#'   - `ip-permission.from-port` - For an inbound rule, the start of port
 #'     range for the TCP and UDP protocols, or an ICMP type number.
 #' 
-#' -   `ip-permission.group-id` - The ID of a security group that has been
+#'   - `ip-permission.group-id` - The ID of a security group that has been
 #'     referenced in an inbound security group rule.
 #' 
-#' -   `ip-permission.group-name` - The name of a security group that has
+#'   - `ip-permission.group-name` - The name of a security group that has
 #'     been referenced in an inbound security group rule.
 #' 
-#' -   `ip-permission.ipv6-cidr` - An IPv6 CIDR block for an inbound
+#'   - `ip-permission.ipv6-cidr` - An IPv6 CIDR block for an inbound
 #'     security group rule.
 #' 
-#' -   `ip-permission.prefix-list-id` - The ID of a prefix list from which
+#'   - `ip-permission.prefix-list-id` - The ID of a prefix list from which
 #'     a security group rule allows inbound access.
 #' 
-#' -   `ip-permission.protocol` - The IP protocol for an inbound security
+#'   - `ip-permission.protocol` - The IP protocol for an inbound security
 #'     group rule (`tcp` | `udp` | `icmp` or a protocol number).
 #' 
-#' -   `ip-permission.to-port` - For an inbound rule, the end of port range
+#'   - `ip-permission.to-port` - For an inbound rule, the end of port range
 #'     for the TCP and UDP protocols, or an ICMP code.
 #' 
-#' -   `ip-permission.user-id` - The ID of an AWS account that has been
+#'   - `ip-permission.user-id` - The ID of an AWS account that has been
 #'     referenced in an inbound security group rule.
 #' 
-#' -   `owner-id` - The AWS account ID of the owner of the security group.
+#'   - `owner-id` - The AWS account ID of the owner of the security group.
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' 
-#' -   `vpc-id` - The ID of the VPC specified when the security group was
+#'   - `vpc-id` - The ID of the VPC specified when the security group was
 #'     created.
 #' @param GroupIds The IDs of the security groups. Required for security groups in a
 #' nondefault VPC.
@@ -25770,14 +25768,14 @@ ec2_describe_snapshot_attribute <- function(Attribute, SnapshotId, DryRun = NULL
 #' 
 #' The create volume permissions fall into the following categories:
 #' 
-#' -   *public*: The owner of the snapshot granted create volume
+#'   - *public*: The owner of the snapshot granted create volume
 #'     permissions for the snapshot to the `all` group. All AWS accounts
 #'     have create volume permissions for these snapshots.
 #' 
-#' -   *explicit*: The owner of the snapshot granted create volume
+#'   - *explicit*: The owner of the snapshot granted create volume
 #'     permissions to a specific AWS account.
 #' 
-#' -   *implicit*: An AWS account has implicit create volume permissions
+#'   - *implicit*: An AWS account has implicit create volume permissions
 #'     for all snapshots it owns.
 #' 
 #' The list of snapshots returned can be filtered by specifying snapshot
@@ -25822,42 +25820,42 @@ ec2_describe_snapshot_attribute <- function(Attribute, SnapshotId, DryRun = NULL
 #'
 #' @param Filters The filters.
 #' 
-#' -   `description` - A description of the snapshot.
+#'   - `description` - A description of the snapshot.
 #' 
-#' -   `encrypted` - Indicates whether the snapshot is encrypted (`true` |
+#'   - `encrypted` - Indicates whether the snapshot is encrypted (`true` |
 #'     `false`)
 #' 
-#' -   `owner-alias` - The owner alias, from an Amazon-maintained list
+#'   - `owner-alias` - The owner alias, from an Amazon-maintained list
 #'     (`amazon`). This is not the user-configured AWS account alias set
 #'     using the IAM console. We recommend that you use the related
 #'     parameter instead of this filter.
 #' 
-#' -   `owner-id` - The AWS account ID of the owner. We recommend that you
+#'   - `owner-id` - The AWS account ID of the owner. We recommend that you
 #'     use the related parameter instead of this filter.
 #' 
-#' -   `progress` - The progress of the snapshot, as a percentage (for
+#'   - `progress` - The progress of the snapshot, as a percentage (for
 #'     example, 80%).
 #' 
-#' -   `snapshot-id` - The snapshot ID.
+#'   - `snapshot-id` - The snapshot ID.
 #' 
-#' -   `start-time` - The time stamp when the snapshot was initiated.
+#'   - `start-time` - The time stamp when the snapshot was initiated.
 #' 
-#' -   `status` - The status of the snapshot (`pending` | `completed` |
+#'   - `status` - The status of the snapshot (`pending` | `completed` |
 #'     `error`).
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' 
-#' -   `volume-id` - The ID of the volume the snapshot is for.
+#'   - `volume-id` - The ID of the volume the snapshot is for.
 #' 
-#' -   `volume-size` - The size of the volume, in GiB.
+#'   - `volume-size` - The size of the volume, in GiB.
 #' @param MaxResults The maximum number of snapshot results returned by
 #' [`describe_snapshots`][ec2_describe_snapshots] in paginated output. When
 #' this parameter is used, [`describe_snapshots`][ec2_describe_snapshots]
@@ -26527,121 +26525,121 @@ ec2_describe_spot_fleet_requests <- function(DryRun = NULL, MaxResults = NULL, N
 #'
 #' @param Filters One or more filters.
 #' 
-#' -   `availability-zone-group` - The Availability Zone group.
+#'   - `availability-zone-group` - The Availability Zone group.
 #' 
-#' -   `create-time` - The time stamp when the Spot Instance request was
+#'   - `create-time` - The time stamp when the Spot Instance request was
 #'     created.
 #' 
-#' -   `fault-code` - The fault code related to the request.
+#'   - `fault-code` - The fault code related to the request.
 #' 
-#' -   `fault-message` - The fault message related to the request.
+#'   - `fault-message` - The fault message related to the request.
 #' 
-#' -   `instance-id` - The ID of the instance that fulfilled the request.
+#'   - `instance-id` - The ID of the instance that fulfilled the request.
 #' 
-#' -   `launch-group` - The Spot Instance launch group.
+#'   - `launch-group` - The Spot Instance launch group.
 #' 
-#' -   `launch.block-device-mapping.delete-on-termination` - Indicates
+#'   - `launch.block-device-mapping.delete-on-termination` - Indicates
 #'     whether the EBS volume is deleted on instance termination.
 #' 
-#' -   `launch.block-device-mapping.device-name` - The device name for the
+#'   - `launch.block-device-mapping.device-name` - The device name for the
 #'     volume in the block device mapping (for example, `/dev/sdh` or
 #'     `xvdh`).
 #' 
-#' -   `launch.block-device-mapping.snapshot-id` - The ID of the snapshot
+#'   - `launch.block-device-mapping.snapshot-id` - The ID of the snapshot
 #'     for the EBS volume.
 #' 
-#' -   `launch.block-device-mapping.volume-size` - The size of the EBS
+#'   - `launch.block-device-mapping.volume-size` - The size of the EBS
 #'     volume, in GiB.
 #' 
-#' -   `launch.block-device-mapping.volume-type` - The type of EBS volume:
+#'   - `launch.block-device-mapping.volume-type` - The type of EBS volume:
 #'     `gp2` for General Purpose SSD, `io1` or `io2` for Provisioned IOPS
 #'     SSD, `st1` for Throughput Optimized HDD, `sc1`for Cold HDD, or
 #'     `standard` for Magnetic.
 #' 
-#' -   `launch.group-id` - The ID of the security group for the instance.
+#'   - `launch.group-id` - The ID of the security group for the instance.
 #' 
-#' -   `launch.group-name` - The name of the security group for the
+#'   - `launch.group-name` - The name of the security group for the
 #'     instance.
 #' 
-#' -   `launch.image-id` - The ID of the AMI.
+#'   - `launch.image-id` - The ID of the AMI.
 #' 
-#' -   `launch.instance-type` - The type of instance (for example,
+#'   - `launch.instance-type` - The type of instance (for example,
 #'     `m3.medium`).
 #' 
-#' -   `launch.kernel-id` - The kernel ID.
+#'   - `launch.kernel-id` - The kernel ID.
 #' 
-#' -   `launch.key-name` - The name of the key pair the instance launched
+#'   - `launch.key-name` - The name of the key pair the instance launched
 #'     with.
 #' 
-#' -   `launch.monitoring-enabled` - Whether detailed monitoring is enabled
+#'   - `launch.monitoring-enabled` - Whether detailed monitoring is enabled
 #'     for the Spot Instance.
 #' 
-#' -   `launch.ramdisk-id` - The RAM disk ID.
+#'   - `launch.ramdisk-id` - The RAM disk ID.
 #' 
-#' -   `launched-availability-zone` - The Availability Zone in which the
+#'   - `launched-availability-zone` - The Availability Zone in which the
 #'     request is launched.
 #' 
-#' -   `network-interface.addresses.primary` - Indicates whether the IP
+#'   - `network-interface.addresses.primary` - Indicates whether the IP
 #'     address is the primary private IP address.
 #' 
-#' -   `network-interface.delete-on-termination` - Indicates whether the
+#'   - `network-interface.delete-on-termination` - Indicates whether the
 #'     network interface is deleted when the instance is terminated.
 #' 
-#' -   `network-interface.description` - A description of the network
+#'   - `network-interface.description` - A description of the network
 #'     interface.
 #' 
-#' -   `network-interface.device-index` - The index of the device for the
+#'   - `network-interface.device-index` - The index of the device for the
 #'     network interface attachment on the instance.
 #' 
-#' -   `network-interface.group-id` - The ID of the security group
+#'   - `network-interface.group-id` - The ID of the security group
 #'     associated with the network interface.
 #' 
-#' -   `network-interface.network-interface-id` - The ID of the network
+#'   - `network-interface.network-interface-id` - The ID of the network
 #'     interface.
 #' 
-#' -   `network-interface.private-ip-address` - The primary private IP
+#'   - `network-interface.private-ip-address` - The primary private IP
 #'     address of the network interface.
 #' 
-#' -   `network-interface.subnet-id` - The ID of the subnet for the
+#'   - `network-interface.subnet-id` - The ID of the subnet for the
 #'     instance.
 #' 
-#' -   `product-description` - The product description associated with the
+#'   - `product-description` - The product description associated with the
 #'     instance (`Linux/UNIX` | `Windows`).
 #' 
-#' -   `spot-instance-request-id` - The Spot Instance request ID.
+#'   - `spot-instance-request-id` - The Spot Instance request ID.
 #' 
-#' -   `spot-price` - The maximum hourly price for any Spot Instance
+#'   - `spot-price` - The maximum hourly price for any Spot Instance
 #'     launched to fulfill the request.
 #' 
-#' -   `state` - The state of the Spot Instance request (`open` | `active`
+#'   - `state` - The state of the Spot Instance request (`open` | `active`
 #'     | `closed` | `cancelled` | `failed`). Spot request status
 #'     information can help you track your Amazon EC2 Spot Instance
 #'     requests. For more information, see [Spot request
 #'     status](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-request-status.html)
 #'     in the *Amazon EC2 User Guide for Linux Instances*.
 #' 
-#' -   `status-code` - The short code describing the most recent evaluation
+#'   - `status-code` - The short code describing the most recent evaluation
 #'     of your Spot Instance request.
 #' 
-#' -   `status-message` - The message explaining the status of the Spot
+#'   - `status-message` - The message explaining the status of the Spot
 #'     Instance request.
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' 
-#' -   `type` - The type of Spot Instance request (`one-time` |
+#'   - `type` - The type of Spot Instance request (`one-time` |
 #'     `persistent`).
 #' 
-#' -   `valid-from` - The start date of the request.
+#'   - `valid-from` - The start date of the request.
 #' 
-#' -   `valid-until` - The end date of the request.
+#'   - `valid-until` - The end date of the request.
 #' @param DryRun Checks whether you have the required permissions for the action, without
 #' actually making the request, and provides an error response. If you have
 #' the required permissions, the error response is `DryRunOperation`.
@@ -26850,21 +26848,20 @@ ec2_describe_spot_instance_requests <- function(Filters = NULL, DryRun = NULL, S
 #'
 #' @param Filters One or more filters.
 #' 
-#' -   `availability-zone` - The Availability Zone for which prices should
+#'   - `availability-zone` - The Availability Zone for which prices should
 #'     be returned.
 #' 
-#' -   `instance-type` - The type of instance (for example, `m3.medium`).
+#'   - `instance-type` - The type of instance (for example, `m3.medium`).
 #' 
-#' -   `product-description` - The product description for the Spot price
+#'   - `product-description` - The product description for the Spot price
 #'     (`Linux/UNIX` | `Red Hat Enterprise Linux` | `SUSE Linux` |
-#'     `Windows` | `Linux/UNIX (Amazon VPC)` |
-#'     `Red Hat Enterprise Linux (Amazon VPC)` | `SUSE Linux (Amazon VPC)`
-#'     | `Windows (Amazon VPC)`).
+#'     `Windows` | `Linux/UNIX (Amazon VPC)` | `Red Hat Enterprise Linux
+#'     (Amazon VPC)` | `SUSE Linux (Amazon VPC)` | `Windows (Amazon VPC)`).
 #' 
-#' -   `spot-price` - The Spot price. The value must match exactly (or use
+#'   - `spot-price` - The Spot price. The value must match exactly (or use
 #'     wildcards; greater than or less than comparison is not supported).
 #' 
-#' -   `timestamp` - The time stamp of the Spot price history, in UTC
+#'   - `timestamp` - The time stamp of the Spot price history, in UTC
 #'     format (for example, *YYYY*-*MM*-*DD*T*HH*:*MM*:*SS*Z). You can use
 #'     wildcards (* and ?). Greater than or less than comparison is not
 #'     supported.
@@ -27103,52 +27100,52 @@ ec2_describe_stale_security_groups <- function(DryRun = NULL, MaxResults = NULL,
 #'
 #' @param Filters One or more filters.
 #' 
-#' -   `availability-zone` - The Availability Zone for the subnet. You can
+#'   - `availability-zone` - The Availability Zone for the subnet. You can
 #'     also use `availabilityZone` as the filter name.
 #' 
-#' -   `availability-zone-id` - The ID of the Availability Zone for the
+#'   - `availability-zone-id` - The ID of the Availability Zone for the
 #'     subnet. You can also use `availabilityZoneId` as the filter name.
 #' 
-#' -   `available-ip-address-count` - The number of IPv4 addresses in the
+#'   - `available-ip-address-count` - The number of IPv4 addresses in the
 #'     subnet that are available.
 #' 
-#' -   `cidr-block` - The IPv4 CIDR block of the subnet. The CIDR block you
+#'   - `cidr-block` - The IPv4 CIDR block of the subnet. The CIDR block you
 #'     specify must exactly match the subnet's CIDR block for information
 #'     to be returned for the subnet. You can also use `cidr` or
 #'     `cidrBlock` as the filter names.
 #' 
-#' -   `default-for-az` - Indicates whether this is the default subnet for
+#'   - `default-for-az` - Indicates whether this is the default subnet for
 #'     the Availability Zone. You can also use `defaultForAz` as the filter
 #'     name.
 #' 
-#' -   `ipv6-cidr-block-association.ipv6-cidr-block` - An IPv6 CIDR block
+#'   - `ipv6-cidr-block-association.ipv6-cidr-block` - An IPv6 CIDR block
 #'     associated with the subnet.
 #' 
-#' -   `ipv6-cidr-block-association.association-id` - An association ID for
+#'   - `ipv6-cidr-block-association.association-id` - An association ID for
 #'     an IPv6 CIDR block associated with the subnet.
 #' 
-#' -   `ipv6-cidr-block-association.state` - The state of an IPv6 CIDR
+#'   - `ipv6-cidr-block-association.state` - The state of an IPv6 CIDR
 #'     block associated with the subnet.
 #' 
-#' -   `owner-id` - The ID of the AWS account that owns the subnet.
+#'   - `owner-id` - The ID of the AWS account that owns the subnet.
 #' 
-#' -   `state` - The state of the subnet (`pending` | `available`).
+#'   - `state` - The state of the subnet (`pending` | `available`).
 #' 
-#' -   `subnet-arn` - The Amazon Resource Name (ARN) of the subnet.
+#'   - `subnet-arn` - The Amazon Resource Name (ARN) of the subnet.
 #' 
-#' -   `subnet-id` - The ID of the subnet.
+#'   - `subnet-id` - The ID of the subnet.
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' 
-#' -   `vpc-id` - The ID of the VPC for the subnet.
+#'   - `vpc-id` - The ID of the VPC for the subnet.
 #' @param SubnetIds One or more subnet IDs.
 #' 
 #' Default: Describes all your subnets.
@@ -27277,11 +27274,11 @@ ec2_describe_subnets <- function(Filters = NULL, SubnetIds = NULL, DryRun = NULL
 #' Otherwise, it is `UnauthorizedOperation`.
 #' @param Filters The filters.
 #' 
-#' -   `key` - The tag key.
+#'   - `key` - The tag key.
 #' 
-#' -   `resource-id` - The ID of the resource.
+#'   - `resource-id` - The ID of the resource.
 #' 
-#' -   `resource-type` - The resource type (`customer-gateway` |
+#'   - `resource-type` - The resource type (`customer-gateway` |
 #'     `dedicated-host` | `dhcp-options` | `elastic-ip` | `fleet` |
 #'     `fpga-image` | `host-reservation` | `image` | `instance` |
 #'     `internet-gateway` | `key-pair` | `launch-template` | `natgateway` |
@@ -27291,11 +27288,11 @@ ec2_describe_subnets <- function(Filters = NULL, SubnetIds = NULL, DryRun = NULL
 #'     `vpc-endpoint` | `vpc-endpoint-service` | `vpc-peering-connection` |
 #'     `vpn-connection` | `vpn-gateway`).
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of the tag. For
-#'     example, specify "tag:Owner" for the filter name and "TeamA" for the
-#'     filter value to find resources with the tag "Owner=TeamA".
+#'   - `tag`:\<key\> - The key/value combination of the tag. For example,
+#'     specify "tag:Owner" for the filter name and "TeamA" for the filter
+#'     value to find resources with the tag "Owner=TeamA".
 #' 
-#' -   `value` - The tag value.
+#'   - `value` - The tag value.
 #' @param MaxResults The maximum number of results to return in a single call. This value can
 #' be between 5 and 1000. To retrieve the remaining results, make another
 #' call with the returned `NextToken` value.
@@ -27385,9 +27382,9 @@ ec2_describe_tags <- function(DryRun = NULL, Filters = NULL, MaxResults = NULL, 
 #' Otherwise, it is `UnauthorizedOperation`.
 #' @param Filters One or more filters. The possible values are:
 #' 
-#' -   `description`: The Traffic Mirror filter description.
+#'   - `description`: The Traffic Mirror filter description.
 #' 
-#' -   `traffic-mirror-filter-id`: The ID of the Traffic Mirror filter.
+#'   - `traffic-mirror-filter-id`: The ID of the Traffic Mirror filter.
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
 #' value.
@@ -27516,25 +27513,25 @@ ec2_describe_traffic_mirror_filters <- function(TrafficMirrorFilterIds = NULL, D
 #' Otherwise, it is `UnauthorizedOperation`.
 #' @param Filters One or more filters. The possible values are:
 #' 
-#' -   `description`: The Traffic Mirror session description.
+#'   - `description`: The Traffic Mirror session description.
 #' 
-#' -   `network-interface-id`: The ID of the Traffic Mirror session network
+#'   - `network-interface-id`: The ID of the Traffic Mirror session network
 #'     interface.
 #' 
-#' -   `owner-id`: The ID of the account that owns the Traffic Mirror
+#'   - `owner-id`: The ID of the account that owns the Traffic Mirror
 #'     session.
 #' 
-#' -   `packet-length`: The assigned number of packets to mirror.
+#'   - `packet-length`: The assigned number of packets to mirror.
 #' 
-#' -   `session-number`: The assigned session number.
+#'   - `session-number`: The assigned session number.
 #' 
-#' -   `traffic-mirror-filter-id`: The ID of the Traffic Mirror filter.
+#'   - `traffic-mirror-filter-id`: The ID of the Traffic Mirror filter.
 #' 
-#' -   `traffic-mirror-session-id`: The ID of the Traffic Mirror session.
+#'   - `traffic-mirror-session-id`: The ID of the Traffic Mirror session.
 #' 
-#' -   `traffic-mirror-target-id`: The ID of the Traffic Mirror target.
+#'   - `traffic-mirror-target-id`: The ID of the Traffic Mirror target.
 #' 
-#' -   `virtual-network-id`: The virtual network ID of the Traffic Mirror
+#'   - `virtual-network-id`: The virtual network ID of the Traffic Mirror
 #'     session.
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
@@ -27624,18 +27621,18 @@ ec2_describe_traffic_mirror_sessions <- function(TrafficMirrorSessionIds = NULL,
 #' Otherwise, it is `UnauthorizedOperation`.
 #' @param Filters One or more filters. The possible values are:
 #' 
-#' -   `description`: The Traffic Mirror target description.
+#'   - `description`: The Traffic Mirror target description.
 #' 
-#' -   `network-interface-id`: The ID of the Traffic Mirror session network
+#'   - `network-interface-id`: The ID of the Traffic Mirror session network
 #'     interface.
 #' 
-#' -   `network-load-balancer-arn`: The Amazon Resource Name (ARN) of the
+#'   - `network-load-balancer-arn`: The Amazon Resource Name (ARN) of the
 #'     Network Load Balancer that is associated with the session.
 #' 
-#' -   `owner-id`: The ID of the account that owns the Traffic Mirror
+#'   - `owner-id`: The ID of the account that owns the Traffic Mirror
 #'     session.
 #' 
-#' -   `traffic-mirror-target-id`: The ID of the Traffic Mirror target.
+#'   - `traffic-mirror-target-id`: The ID of the Traffic Mirror target.
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
 #' value.
@@ -27720,30 +27717,30 @@ ec2_describe_traffic_mirror_targets <- function(TrafficMirrorTargetIds = NULL, D
 #' @param TransitGatewayAttachmentIds The IDs of the attachments.
 #' @param Filters One or more filters. The possible values are:
 #' 
-#' -   `association.state` - The state of the association (`associating` |
+#'   - `association.state` - The state of the association (`associating` |
 #'     `associated` | `disassociating`).
 #' 
-#' -   `association.transit-gateway-route-table-id` - The ID of the route
+#'   - `association.transit-gateway-route-table-id` - The ID of the route
 #'     table for the transit gateway.
 #' 
-#' -   `resource-id` - The ID of the resource.
+#'   - `resource-id` - The ID of the resource.
 #' 
-#' -   `resource-owner-id` - The ID of the AWS account that owns the
+#'   - `resource-owner-id` - The ID of the AWS account that owns the
 #'     resource.
 #' 
-#' -   `resource-type` - The resource type. Valid values are `vpc` | `vpn`
+#'   - `resource-type` - The resource type. Valid values are `vpc` | `vpn`
 #'     | `direct-connect-gateway` | `peering` | `connect`.
 #' 
-#' -   `state` - The state of the attachment. Valid values are `available`
+#'   - `state` - The state of the attachment. Valid values are `available`
 #'     | `deleted` | `deleting` | `failed` | `failing` |
 #'     `initiatingRequest` | `modifying` | `pendingAcceptance` | `pending`
 #'     | `rollingBack` | `rejected` | `rejecting`.
 #' 
-#' -   `transit-gateway-attachment-id` - The ID of the attachment.
+#'   - `transit-gateway-attachment-id` - The ID of the attachment.
 #' 
-#' -   `transit-gateway-id` - The ID of the transit gateway.
+#'   - `transit-gateway-id` - The ID of the transit gateway.
 #' 
-#' -   `transit-gateway-owner-id` - The ID of the AWS account that owns the
+#'   - `transit-gateway-owner-id` - The ID of the AWS account that owns the
 #'     transit gateway.
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
@@ -27838,12 +27835,12 @@ ec2_describe_transit_gateway_attachments <- function(TransitGatewayAttachmentIds
 #' @param TransitGatewayConnectPeerIds The IDs of the Connect peers.
 #' @param Filters One or more filters. The possible values are:
 #' 
-#' -   `state` - The state of the Connect peer (`pending` | `available` |
+#'   - `state` - The state of the Connect peer (`pending` | `available` |
 #'     `deleting` | `deleted`).
 #' 
-#' -   `transit-gateway-attachment-id` - The ID of the attachment.
+#'   - `transit-gateway-attachment-id` - The ID of the attachment.
 #' 
-#' -   `transit-gateway-connect-peer-id` - The ID of the Connect peer.
+#'   - `transit-gateway-connect-peer-id` - The ID of the Connect peer.
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
 #' value.
@@ -27946,18 +27943,18 @@ ec2_describe_transit_gateway_connect_peers <- function(TransitGatewayConnectPeer
 #' @param TransitGatewayAttachmentIds The IDs of the attachments.
 #' @param Filters One or more filters. The possible values are:
 #' 
-#' -   `options.protocol` - The tunnel protocol (`gre`).
+#'   - `options.protocol` - The tunnel protocol (`gre`).
 #' 
-#' -   `state` - The state of the attachment (`initiating` |
+#'   - `state` - The state of the attachment (`initiating` |
 #'     `initiatingRequest` | `pendingAcceptance` | `rollingBack` |
 #'     `pending` | `available` | `modifying` | `deleting` | `deleted` |
 #'     `failed` | `rejected` | `rejecting` | `failing`).
 #' 
-#' -   `transit-gateway-attachment-id` - The ID of the Connect attachment.
+#'   - `transit-gateway-attachment-id` - The ID of the Connect attachment.
 #' 
-#' -   `transit-gateway-id` - The ID of the transit gateway.
+#'   - `transit-gateway-id` - The ID of the transit gateway.
 #' 
-#' -   `transport-transit-gateway-attachment-id` - The ID of the transit
+#'   - `transport-transit-gateway-attachment-id` - The ID of the transit
 #'     gateway attachment from which the Connect attachment was created.
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
@@ -28049,12 +28046,12 @@ ec2_describe_transit_gateway_connects <- function(TransitGatewayAttachmentIds = 
 #' @param TransitGatewayMulticastDomainIds The ID of the transit gateway multicast domain.
 #' @param Filters One or more filters. The possible values are:
 #' 
-#' -   `state` - The state of the transit gateway multicast domain. Valid
+#'   - `state` - The state of the transit gateway multicast domain. Valid
 #'     values are `pending` | `available` | `deleting` | `deleted`.
 #' 
-#' -   `transit-gateway-id` - The ID of the transit gateway.
+#'   - `transit-gateway-id` - The ID of the transit gateway.
 #' 
-#' -   `transit-gateway-multicast-domain-id` - The ID of the transit
+#'   - `transit-gateway-multicast-domain-id` - The ID of the transit
 #'     gateway multicast domain.
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
@@ -28148,30 +28145,30 @@ ec2_describe_transit_gateway_multicast_domains <- function(TransitGatewayMultica
 #' @param TransitGatewayAttachmentIds One or more IDs of the transit gateway peering attachments.
 #' @param Filters One or more filters. The possible values are:
 #' 
-#' -   `transit-gateway-attachment-id` - The ID of the transit gateway
+#'   - `transit-gateway-attachment-id` - The ID of the transit gateway
 #'     attachment.
 #' 
-#' -   `local-owner-id` - The ID of your AWS account.
+#'   - `local-owner-id` - The ID of your AWS account.
 #' 
-#' -   `remote-owner-id` - The ID of the AWS account in the remote Region
+#'   - `remote-owner-id` - The ID of the AWS account in the remote Region
 #'     that owns the transit gateway.
 #' 
-#' -   `state` - The state of the peering attachment. Valid values are
+#'   - `state` - The state of the peering attachment. Valid values are
 #'     `available` | `deleted` | `deleting` | `failed` | `failing` |
 #'     `initiatingRequest` | `modifying` | `pendingAcceptance` | `pending`
 #'     | `rollingBack` | `rejected` | `rejecting`).
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources that have a tag with a specific key,
 #'     regardless of the tag value.
 #' 
-#' -   `transit-gateway-id` - The ID of the transit gateway.
+#'   - `transit-gateway-id` - The ID of the transit gateway.
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
 #' value.
@@ -28272,20 +28269,20 @@ ec2_describe_transit_gateway_peering_attachments <- function(TransitGatewayAttac
 #' @param TransitGatewayRouteTableIds The IDs of the transit gateway route tables.
 #' @param Filters One or more filters. The possible values are:
 #' 
-#' -   `default-association-route-table` - Indicates whether this is the
+#'   - `default-association-route-table` - Indicates whether this is the
 #'     default association route table for the transit gateway (`true` |
 #'     `false`).
 #' 
-#' -   `default-propagation-route-table` - Indicates whether this is the
+#'   - `default-propagation-route-table` - Indicates whether this is the
 #'     default propagation route table for the transit gateway (`true` |
 #'     `false`).
 #' 
-#' -   `state` - The state of the route table (`available` | `deleting` |
+#'   - `state` - The state of the route table (`available` | `deleting` |
 #'     `deleted` | `pending`).
 #' 
-#' -   `transit-gateway-id` - The ID of the transit gateway.
+#'   - `transit-gateway-id` - The ID of the transit gateway.
 #' 
-#' -   `transit-gateway-route-table-id` - The ID of the transit gateway
+#'   - `transit-gateway-route-table-id` - The ID of the transit gateway
 #'     route table.
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
@@ -28375,16 +28372,16 @@ ec2_describe_transit_gateway_route_tables <- function(TransitGatewayRouteTableId
 #' @param TransitGatewayAttachmentIds The IDs of the attachments.
 #' @param Filters One or more filters. The possible values are:
 #' 
-#' -   `state` - The state of the attachment. Valid values are `available`
+#'   - `state` - The state of the attachment. Valid values are `available`
 #'     | `deleted` | `deleting` | `failed` | `failing` |
 #'     `initiatingRequest` | `modifying` | `pendingAcceptance` | `pending`
 #'     | `rollingBack` | `rejected` | `rejecting`.
 #' 
-#' -   `transit-gateway-attachment-id` - The ID of the attachment.
+#'   - `transit-gateway-attachment-id` - The ID of the attachment.
 #' 
-#' -   `transit-gateway-id` - The ID of the transit gateway.
+#'   - `transit-gateway-id` - The ID of the transit gateway.
 #' 
-#' -   `vpc-id` - The ID of the VPC.
+#'   - `vpc-id` - The ID of the VPC.
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
 #' value.
@@ -28481,40 +28478,40 @@ ec2_describe_transit_gateway_vpc_attachments <- function(TransitGatewayAttachmen
 #' @param TransitGatewayIds The IDs of the transit gateways.
 #' @param Filters One or more filters. The possible values are:
 #' 
-#' -   `options.propagation-default-route-table-id` - The ID of the default
+#'   - `options.propagation-default-route-table-id` - The ID of the default
 #'     propagation route table.
 #' 
-#' -   `options.amazon-side-asn` - The private ASN for the Amazon side of a
+#'   - `options.amazon-side-asn` - The private ASN for the Amazon side of a
 #'     BGP session.
 #' 
-#' -   `options.association-default-route-table-id` - The ID of the default
+#'   - `options.association-default-route-table-id` - The ID of the default
 #'     association route table.
 #' 
-#' -   `options.auto-accept-shared-attachments` - Indicates whether there
+#'   - `options.auto-accept-shared-attachments` - Indicates whether there
 #'     is automatic acceptance of attachment requests (`enable` |
 #'     `disable`).
 #' 
-#' -   `options.default-route-table-association` - Indicates whether
+#'   - `options.default-route-table-association` - Indicates whether
 #'     resource attachments are automatically associated with the default
 #'     association route table (`enable` | `disable`).
 #' 
-#' -   `options.default-route-table-propagation` - Indicates whether
+#'   - `options.default-route-table-propagation` - Indicates whether
 #'     resource attachments automatically propagate routes to the default
 #'     propagation route table (`enable` | `disable`).
 #' 
-#' -   `options.dns-support` - Indicates whether DNS support is enabled
+#'   - `options.dns-support` - Indicates whether DNS support is enabled
 #'     (`enable` | `disable`).
 #' 
-#' -   `options.vpn-ecmp-support` - Indicates whether Equal Cost Multipath
+#'   - `options.vpn-ecmp-support` - Indicates whether Equal Cost Multipath
 #'     Protocol support is enabled (`enable` | `disable`).
 #' 
-#' -   `owner-id` - The ID of the AWS account that owns the transit
+#'   - `owner-id` - The ID of the AWS account that owns the transit
 #'     gateway.
 #' 
-#' -   `state` - The state of the transit gateway (`available` | `deleted`
+#'   - `state` - The state of the transit gateway (`available` | `deleted`
 #'     | `deleting` | `modifying` | `pending`).
 #' 
-#' -   `transit-gateway-id` - The ID of the transit gateway.
+#'   - `transit-gateway-id` - The ID of the transit gateway.
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
 #' value.
@@ -28731,36 +28728,36 @@ ec2_describe_volume_attribute <- function(Attribute, VolumeId, DryRun = NULL) {
 #'
 #' @param Filters The filters.
 #' 
-#' -   `action.code` - The action code for the event (for example,
+#'   - `action.code` - The action code for the event (for example,
 #'     `enable-volume-io`).
 #' 
-#' -   `action.description` - A description of the action.
+#'   - `action.description` - A description of the action.
 #' 
-#' -   `action.event-id` - The event ID associated with the action.
+#'   - `action.event-id` - The event ID associated with the action.
 #' 
-#' -   `availability-zone` - The Availability Zone of the instance.
+#'   - `availability-zone` - The Availability Zone of the instance.
 #' 
-#' -   `event.description` - A description of the event.
+#'   - `event.description` - A description of the event.
 #' 
-#' -   `event.event-id` - The event ID.
+#'   - `event.event-id` - The event ID.
 #' 
-#' -   `event.event-type` - The event type (for `io-enabled`: `passed` |
+#'   - `event.event-type` - The event type (for `io-enabled`: `passed` |
 #'     `failed`; for `io-performance`: `io-performance:degraded` |
 #'     `io-performance:severely-degraded` | `io-performance:stalled`).
 #' 
-#' -   `event.not-after` - The latest end time for the event.
+#'   - `event.not-after` - The latest end time for the event.
 #' 
-#' -   `event.not-before` - The earliest start time for the event.
+#'   - `event.not-before` - The earliest start time for the event.
 #' 
-#' -   `volume-status.details-name` - The cause for `volume-status.status`
+#'   - `volume-status.details-name` - The cause for `volume-status.status`
 #'     (`io-enabled` | `io-performance`).
 #' 
-#' -   `volume-status.details-status` - The status of
+#'   - `volume-status.details-status` - The status of
 #'     `volume-status.details-name` (for `io-enabled`: `passed` | `failed`;
 #'     for `io-performance`: `normal` | `degraded` | `severely-degraded` |
 #'     `stalled`).
 #' 
-#' -   `volume-status.status` - The status of the volume (`ok` | `impaired`
+#'   - `volume-status.status` - The status of the volume (`ok` | `impaired`
 #'     | `warning` | `insufficient-data`).
 #' @param MaxResults The maximum number of volume results returned by
 #' [`describe_volume_status`][ec2_describe_volume_status] in paginated
@@ -28924,56 +28921,56 @@ ec2_describe_volume_status <- function(Filters = NULL, MaxResults = NULL, NextTo
 #'
 #' @param Filters The filters.
 #' 
-#' -   `attachment.attach-time` - The time stamp when the attachment
+#'   - `attachment.attach-time` - The time stamp when the attachment
 #'     initiated.
 #' 
-#' -   `attachment.delete-on-termination` - Whether the volume is deleted
+#'   - `attachment.delete-on-termination` - Whether the volume is deleted
 #'     on instance termination.
 #' 
-#' -   `attachment.device` - The device name specified in the block device
+#'   - `attachment.device` - The device name specified in the block device
 #'     mapping (for example, `/dev/sda1`).
 #' 
-#' -   `attachment.instance-id` - The ID of the instance the volume is
+#'   - `attachment.instance-id` - The ID of the instance the volume is
 #'     attached to.
 #' 
-#' -   `attachment.status` - The attachment state (`attaching` | `attached`
+#'   - `attachment.status` - The attachment state (`attaching` | `attached`
 #'     | `detaching`).
 #' 
-#' -   `availability-zone` - The Availability Zone in which the volume was
+#'   - `availability-zone` - The Availability Zone in which the volume was
 #'     created.
 #' 
-#' -   `create-time` - The time stamp when the volume was created.
+#'   - `create-time` - The time stamp when the volume was created.
 #' 
-#' -   `encrypted` - Indicates whether the volume is encrypted (`true` |
+#'   - `encrypted` - Indicates whether the volume is encrypted (`true` |
 #'     `false`)
 #' 
-#' -   `multi-attach-enabled` - Indicates whether the volume is enabled for
+#'   - `multi-attach-enabled` - Indicates whether the volume is enabled for
 #'     Multi-Attach (`true` | `false`)
 #' 
-#' -   `fast-restored` - Indicates whether the volume was created from a
+#'   - `fast-restored` - Indicates whether the volume was created from a
 #'     snapshot that is enabled for fast snapshot restore (`true` |
 #'     `false`).
 #' 
-#' -   `size` - The size of the volume, in GiB.
+#'   - `size` - The size of the volume, in GiB.
 #' 
-#' -   `snapshot-id` - The snapshot from which the volume was created.
+#'   - `snapshot-id` - The snapshot from which the volume was created.
 #' 
-#' -   `status` - The state of the volume (`creating` | `available` |
+#'   - `status` - The state of the volume (`creating` | `available` |
 #'     `in-use` | `deleting` | `deleted` | `error`).
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' 
-#' -   `volume-id` - The volume ID.
+#'   - `volume-id` - The volume ID.
 #' 
-#' -   `volume-type` - The Amazon EBS volume type (`gp2` | `gp3` | `io1` |
+#'   - `volume-type` - The Amazon EBS volume type (`gp2` | `gp3` | `io1` |
 #'     `io2` | `st1` | `sc1`| `standard`)
 #' @param VolumeIds The volume IDs.
 #' @param DryRun Checks whether you have the required permissions for the action, without
@@ -29141,32 +29138,32 @@ ec2_describe_volumes <- function(Filters = NULL, VolumeIds = NULL, DryRun = NULL
 #' @param VolumeIds The IDs of the volumes.
 #' @param Filters The filters.
 #' 
-#' -   `modification-state` - The current modification state (modifying |
+#'   - `modification-state` - The current modification state (modifying |
 #'     optimizing | completed | failed).
 #' 
-#' -   `original-iops` - The original IOPS rate of the volume.
+#'   - `original-iops` - The original IOPS rate of the volume.
 #' 
-#' -   `original-size` - The original size of the volume, in GiB.
+#'   - `original-size` - The original size of the volume, in GiB.
 #' 
-#' -   `original-volume-type` - The original volume type of the volume
+#'   - `original-volume-type` - The original volume type of the volume
 #'     (standard | io1 | io2 | gp2 | sc1 | st1).
 #' 
-#' -   `originalMultiAttachEnabled` - Indicates whether Multi-Attach
+#'   - `originalMultiAttachEnabled` - Indicates whether Multi-Attach
 #'     support was enabled (true | false).
 #' 
-#' -   `start-time` - The modification start time.
+#'   - `start-time` - The modification start time.
 #' 
-#' -   `target-iops` - The target IOPS rate of the volume.
+#'   - `target-iops` - The target IOPS rate of the volume.
 #' 
-#' -   `target-size` - The target size of the volume, in GiB.
+#'   - `target-size` - The target size of the volume, in GiB.
 #' 
-#' -   `target-volume-type` - The target volume type of the volume
+#'   - `target-volume-type` - The target volume type of the volume
 #'     (standard | io1 | io2 | gp2 | sc1 | st1).
 #' 
-#' -   `targetMultiAttachEnabled` - Indicates whether Multi-Attach support
+#'   - `targetMultiAttachEnabled` - Indicates whether Multi-Attach support
 #'     is to be enabled (true | false).
 #' 
-#' -   `volume-id` - The ID of the volume.
+#'   - `volume-id` - The ID of the volume.
 #' @param NextToken The `nextToken` value returned by a previous paginated request.
 #' @param MaxResults The maximum number of results (up to a limit of 500) to be returned in a
 #' paginated request.
@@ -29333,16 +29330,16 @@ ec2_describe_vpc_attribute <- function(Attribute, VpcId, DryRun = NULL) {
 #'
 #' @param Filters One or more filters.
 #' 
-#' -   `is-classic-link-enabled` - Whether the VPC is enabled for
+#'   - `is-classic-link-enabled` - Whether the VPC is enabled for
 #'     ClassicLink (`true` | `false`).
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' @param DryRun Checks whether you have the required permissions for the action, without
@@ -29492,19 +29489,19 @@ ec2_describe_vpc_classic_link_dns_support <- function(MaxResults = NULL, NextTok
 #' @param ConnectionNotificationId The ID of the notification.
 #' @param Filters One or more filters.
 #' 
-#' -   `connection-notification-arn` - The ARN of the SNS topic for the
+#'   - `connection-notification-arn` - The ARN of the SNS topic for the
 #'     notification.
 #' 
-#' -   `connection-notification-id` - The ID of the notification.
+#'   - `connection-notification-id` - The ID of the notification.
 #' 
-#' -   `connection-notification-state` - The state of the notification
+#'   - `connection-notification-state` - The state of the notification
 #'     (`Enabled` | `Disabled`).
 #' 
-#' -   `connection-notification-type` - The type of notification (`Topic`).
+#'   - `connection-notification-type` - The type of notification (`Topic`).
 #' 
-#' -   `service-id` - The ID of the endpoint service.
+#'   - `service-id` - The ID of the endpoint service.
 #' 
-#' -   `vpc-endpoint-id` - The ID of the VPC endpoint.
+#'   - `vpc-endpoint-id` - The ID of the VPC endpoint.
 #' @param MaxResults The maximum number of results to return in a single call. To retrieve
 #' the remaining results, make another request with the returned
 #' `NextToken` value.
@@ -29586,16 +29583,16 @@ ec2_describe_vpc_endpoint_connection_notifications <- function(DryRun = NULL, Co
 #' Otherwise, it is `UnauthorizedOperation`.
 #' @param Filters One or more filters.
 #' 
-#' -   `service-id` - The ID of the service.
+#'   - `service-id` - The ID of the service.
 #' 
-#' -   `vpc-endpoint-owner` - The AWS account number of the owner of the
+#'   - `vpc-endpoint-owner` - The AWS account number of the owner of the
 #'     endpoint.
 #' 
-#' -   `vpc-endpoint-state` - The state of the endpoint
+#'   - `vpc-endpoint-state` - The state of the endpoint
 #'     (`pendingAcceptance` | `pending` | `available` | `deleting` |
 #'     `deleted` | `rejected` | `failed`).
 #' 
-#' -   `vpc-endpoint-id` - The ID of the endpoint.
+#'   - `vpc-endpoint-id` - The ID of the endpoint.
 #' @param MaxResults The maximum number of results to return for the request in a single
 #' page. The remaining results of the initial request can be seen by
 #' sending another request with the returned `NextToken` value. This value
@@ -29689,20 +29686,20 @@ ec2_describe_vpc_endpoint_connections <- function(DryRun = NULL, Filters = NULL,
 #' @param ServiceIds The IDs of one or more services.
 #' @param Filters One or more filters.
 #' 
-#' -   `service-name` - The name of the service.
+#'   - `service-name` - The name of the service.
 #' 
-#' -   `service-id` - The ID of the service.
+#'   - `service-id` - The ID of the service.
 #' 
-#' -   `service-state` - The state of the service (`Pending` | `Available`
+#'   - `service-state` - The state of the service (`Pending` | `Available`
 #'     | `Deleting` | `Deleted` | `Failed`).
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' @param MaxResults The maximum number of results to return for the request in a single
@@ -29817,9 +29814,9 @@ ec2_describe_vpc_endpoint_service_configurations <- function(DryRun = NULL, Serv
 #' @param ServiceId &#91;required&#93; The ID of the service.
 #' @param Filters One or more filters.
 #' 
-#' -   `principal` - The ARN of the principal.
+#'   - `principal` - The ARN of the principal.
 #' 
-#' -   `principal-type` - The principal type (`All` | `Service` |
+#'   - `principal-type` - The principal type (`All` | `Service` |
 #'     `OrganizationUnit` | `Account` | `User` | `Role`).
 #' @param MaxResults The maximum number of results to return for the request in a single
 #' page. The remaining results of the initial request can be seen by
@@ -29904,15 +29901,15 @@ ec2_describe_vpc_endpoint_service_permissions <- function(DryRun = NULL, Service
 #' @param ServiceNames One or more service names.
 #' @param Filters One or more filters.
 #' 
-#' -   `service-name` - The name of the service.
+#'   - `service-name` - The name of the service.
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' @param MaxResults The maximum number of items to return for this request. The request
@@ -30025,26 +30022,26 @@ ec2_describe_vpc_endpoint_services <- function(DryRun = NULL, ServiceNames = NUL
 #' @param VpcEndpointIds One or more endpoint IDs.
 #' @param Filters One or more filters.
 #' 
-#' -   `service-name` - The name of the service.
+#'   - `service-name` - The name of the service.
 #' 
-#' -   `vpc-id` - The ID of the VPC in which the endpoint resides.
+#'   - `vpc-id` - The ID of the VPC in which the endpoint resides.
 #' 
-#' -   `vpc-endpoint-id` - The ID of the endpoint.
+#'   - `vpc-endpoint-id` - The ID of the endpoint.
 #' 
-#' -   `vpc-endpoint-state` - The state of the endpoint
+#'   - `vpc-endpoint-state` - The state of the endpoint
 #'     (`pendingAcceptance` | `pending` | `available` | `deleting` |
 #'     `deleted` | `rejected` | `failed`).
 #' 
-#' -   `vpc-endpoint-type` - The type of VPC endpoint (`Interface` |
+#'   - `vpc-endpoint-type` - The type of VPC endpoint (`Interface` |
 #'     `Gateway` | `GatewayLoadBalancer`).
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' @param MaxResults The maximum number of items to return for this request. The request
@@ -30162,43 +30159,43 @@ ec2_describe_vpc_endpoints <- function(DryRun = NULL, VpcEndpointIds = NULL, Fil
 #'
 #' @param Filters One or more filters.
 #' 
-#' -   `accepter-vpc-info.cidr-block` - The IPv4 CIDR block of the accepter
+#'   - `accepter-vpc-info.cidr-block` - The IPv4 CIDR block of the accepter
 #'     VPC.
 #' 
-#' -   `accepter-vpc-info.owner-id` - The AWS account ID of the owner of
+#'   - `accepter-vpc-info.owner-id` - The AWS account ID of the owner of
 #'     the accepter VPC.
 #' 
-#' -   `accepter-vpc-info.vpc-id` - The ID of the accepter VPC.
+#'   - `accepter-vpc-info.vpc-id` - The ID of the accepter VPC.
 #' 
-#' -   `expiration-time` - The expiration date and time for the VPC peering
+#'   - `expiration-time` - The expiration date and time for the VPC peering
 #'     connection.
 #' 
-#' -   `requester-vpc-info.cidr-block` - The IPv4 CIDR block of the
+#'   - `requester-vpc-info.cidr-block` - The IPv4 CIDR block of the
 #'     requester's VPC.
 #' 
-#' -   `requester-vpc-info.owner-id` - The AWS account ID of the owner of
+#'   - `requester-vpc-info.owner-id` - The AWS account ID of the owner of
 #'     the requester VPC.
 #' 
-#' -   `requester-vpc-info.vpc-id` - The ID of the requester VPC.
+#'   - `requester-vpc-info.vpc-id` - The ID of the requester VPC.
 #' 
-#' -   `status-code` - The status of the VPC peering connection
+#'   - `status-code` - The status of the VPC peering connection
 #'     (`pending-acceptance` | `failed` | `expired` | `provisioning` |
 #'     `active` | `deleting` | `deleted` | `rejected`).
 #' 
-#' -   `status-message` - A message that provides more information about
+#'   - `status-message` - A message that provides more information about
 #'     the status of the VPC peering connection, if applicable.
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' 
-#' -   `vpc-peering-connection-id` - The ID of the VPC peering connection.
+#'   - `vpc-peering-connection-id` - The ID of the VPC peering connection.
 #' @param DryRun Checks whether you have the required permissions for the action, without
 #' actually making the request, and provides an error response. If you have
 #' the required permissions, the error response is `DryRunOperation`.
@@ -30329,51 +30326,51 @@ ec2_describe_vpc_peering_connections <- function(Filters = NULL, DryRun = NULL, 
 #'
 #' @param Filters One or more filters.
 #' 
-#' -   `cidr` - The primary IPv4 CIDR block of the VPC. The CIDR block you
+#'   - `cidr` - The primary IPv4 CIDR block of the VPC. The CIDR block you
 #'     specify must exactly match the VPC's CIDR block for information to
 #'     be returned for the VPC. Must contain the slash followed by one or
 #'     two digits (for example, `/28`).
 #' 
-#' -   `cidr-block-association.cidr-block` - An IPv4 CIDR block associated
+#'   - `cidr-block-association.cidr-block` - An IPv4 CIDR block associated
 #'     with the VPC.
 #' 
-#' -   `cidr-block-association.association-id` - The association ID for an
+#'   - `cidr-block-association.association-id` - The association ID for an
 #'     IPv4 CIDR block associated with the VPC.
 #' 
-#' -   `cidr-block-association.state` - The state of an IPv4 CIDR block
+#'   - `cidr-block-association.state` - The state of an IPv4 CIDR block
 #'     associated with the VPC.
 #' 
-#' -   `dhcp-options-id` - The ID of a set of DHCP options.
+#'   - `dhcp-options-id` - The ID of a set of DHCP options.
 #' 
-#' -   `ipv6-cidr-block-association.ipv6-cidr-block` - An IPv6 CIDR block
+#'   - `ipv6-cidr-block-association.ipv6-cidr-block` - An IPv6 CIDR block
 #'     associated with the VPC.
 #' 
-#' -   `ipv6-cidr-block-association.ipv6-pool` - The ID of the IPv6 address
+#'   - `ipv6-cidr-block-association.ipv6-pool` - The ID of the IPv6 address
 #'     pool from which the IPv6 CIDR block is allocated.
 #' 
-#' -   `ipv6-cidr-block-association.association-id` - The association ID
+#'   - `ipv6-cidr-block-association.association-id` - The association ID
 #'     for an IPv6 CIDR block associated with the VPC.
 #' 
-#' -   `ipv6-cidr-block-association.state` - The state of an IPv6 CIDR
+#'   - `ipv6-cidr-block-association.state` - The state of an IPv6 CIDR
 #'     block associated with the VPC.
 #' 
-#' -   `isDefault` - Indicates whether the VPC is the default VPC.
+#'   - `isDefault` - Indicates whether the VPC is the default VPC.
 #' 
-#' -   `owner-id` - The ID of the AWS account that owns the VPC.
+#'   - `owner-id` - The ID of the AWS account that owns the VPC.
 #' 
-#' -   `state` - The state of the VPC (`pending` | `available`).
+#'   - `state` - The state of the VPC (`pending` | `available`).
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' 
-#' -   `vpc-id` - The ID of the VPC.
+#'   - `vpc-id` - The ID of the VPC.
 #' @param VpcIds One or more VPC IDs.
 #' 
 #' Default: Describes all your VPCs.
@@ -30497,44 +30494,44 @@ ec2_describe_vpcs <- function(Filters = NULL, VpcIds = NULL, DryRun = NULL, Next
 #'
 #' @param Filters One or more filters.
 #' 
-#' -   `customer-gateway-configuration` - The configuration information for
+#'   - `customer-gateway-configuration` - The configuration information for
 #'     the customer gateway.
 #' 
-#' -   `customer-gateway-id` - The ID of a customer gateway associated with
+#'   - `customer-gateway-id` - The ID of a customer gateway associated with
 #'     the VPN connection.
 #' 
-#' -   `state` - The state of the VPN connection (`pending` | `available` |
+#'   - `state` - The state of the VPN connection (`pending` | `available` |
 #'     `deleting` | `deleted`).
 #' 
-#' -   `option.static-routes-only` - Indicates whether the connection has
+#'   - `option.static-routes-only` - Indicates whether the connection has
 #'     static routes only. Used for devices that do not support Border
 #'     Gateway Protocol (BGP).
 #' 
-#' -   `route.destination-cidr-block` - The destination CIDR block. This
+#'   - `route.destination-cidr-block` - The destination CIDR block. This
 #'     corresponds to the subnet used in a customer data center.
 #' 
-#' -   `bgp-asn` - The BGP Autonomous System Number (ASN) associated with a
+#'   - `bgp-asn` - The BGP Autonomous System Number (ASN) associated with a
 #'     BGP device.
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' 
-#' -   `type` - The type of VPN connection. Currently the only supported
+#'   - `type` - The type of VPN connection. Currently the only supported
 #'     type is `ipsec.1`.
 #' 
-#' -   `vpn-connection-id` - The ID of the VPN connection.
+#'   - `vpn-connection-id` - The ID of the VPN connection.
 #' 
-#' -   `vpn-gateway-id` - The ID of a virtual private gateway associated
+#'   - `vpn-gateway-id` - The ID of a virtual private gateway associated
 #'     with the VPN connection.
 #' 
-#' -   `transit-gateway-id` - The ID of a transit gateway associated with
+#'   - `transit-gateway-id` - The ID of a transit gateway associated with
 #'     the VPN connection.
 #' @param VpnConnectionIds One or more VPN connection IDs.
 #' 
@@ -30700,35 +30697,35 @@ ec2_describe_vpn_connections <- function(Filters = NULL, VpnConnectionIds = NULL
 #'
 #' @param Filters One or more filters.
 #' 
-#' -   `amazon-side-asn` - The Autonomous System Number (ASN) for the
+#'   - `amazon-side-asn` - The Autonomous System Number (ASN) for the
 #'     Amazon side of the gateway.
 #' 
-#' -   `attachment.state` - The current state of the attachment between the
+#'   - `attachment.state` - The current state of the attachment between the
 #'     gateway and the VPC (`attaching` | `attached` | `detaching` |
 #'     `detached`).
 #' 
-#' -   `attachment.vpc-id` - The ID of an attached VPC.
+#'   - `attachment.vpc-id` - The ID of an attached VPC.
 #' 
-#' -   `availability-zone` - The Availability Zone for the virtual private
+#'   - `availability-zone` - The Availability Zone for the virtual private
 #'     gateway (if applicable).
 #' 
-#' -   `state` - The state of the virtual private gateway (`pending` |
+#'   - `state` - The state of the virtual private gateway (`pending` |
 #'     `available` | `deleting` | `deleted`).
 #' 
-#' -   `tag`:&lt;key&gt; - The key/value combination of a tag assigned to
-#'     the resource. Use the tag key in the filter name and the tag value
-#'     as the filter value. For example, to find all resources that have a
-#'     tag with the key `Owner` and the value `TeamA`, specify `tag:Owner`
-#'     for the filter name and `TeamA` for the filter value.
+#'   - `tag`:\<key\> - The key/value combination of a tag assigned to the
+#'     resource. Use the tag key in the filter name and the tag value as
+#'     the filter value. For example, to find all resources that have a tag
+#'     with the key `Owner` and the value `TeamA`, specify `tag:Owner` for
+#'     the filter name and `TeamA` for the filter value.
 #' 
-#' -   `tag-key` - The key of a tag assigned to the resource. Use this
+#'   - `tag-key` - The key of a tag assigned to the resource. Use this
 #'     filter to find all resources assigned a tag with a specific key,
 #'     regardless of the tag value.
 #' 
-#' -   `type` - The type of virtual private gateway. Currently the only
+#'   - `type` - The type of virtual private gateway. Currently the only
 #'     supported type is `ipsec.1`.
 #' 
-#' -   `vpn-gateway-id` - The ID of the virtual private gateway.
+#'   - `vpn-gateway-id` - The ID of the virtual private gateway.
 #' @param VpnGatewayIds One or more virtual private gateway IDs.
 #' 
 #' Default: Describes all your virtual private gateways.
@@ -30933,15 +30930,15 @@ ec2_detach_internet_gateway <- function(DryRun = NULL, InternetGatewayId, VpcId)
 #' Otherwise, it is `UnauthorizedOperation`.
 #' @param Force Specifies whether to force a detachment.
 #' 
-#' -   Use the `Force` parameter only as a last resort to detach a network
+#'   - Use the `Force` parameter only as a last resort to detach a network
 #'     interface from a failed instance.
 #' 
-#' -   If you use the `Force` parameter to detach a network interface, you
+#'   - If you use the `Force` parameter to detach a network interface, you
 #'     might not be able to attach a different network interface to the
 #'     same index on the instance without first stopping and starting the
 #'     instance.
 #' 
-#' -   If you force the detachment of a network interface, the [instance
+#'   - If you force the detachment of a network interface, the [instance
 #'     metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html)
 #'     might not get updated. This means that the attributes associated
 #'     with the detached network interface might still be visible. The
@@ -31596,13 +31593,13 @@ ec2_disassociate_address <- function(AssociationId = NULL, PublicIp = NULL, DryR
 #' When you disassociate the last target network from a Client VPN, the
 #' following happens:
 #' 
-#' -   The route that was automatically added for the VPC is deleted
+#'   - The route that was automatically added for the VPC is deleted
 #' 
-#' -   All active client connections are terminated
+#'   - All active client connections are terminated
 #' 
-#' -   New client connections are disallowed
+#'   - New client connections are disallowed
 #' 
-#' -   The Client VPN endpoint's status changes to `pending-associate`
+#'   - The Client VPN endpoint's status changes to `pending-associate`
 #'
 #' @usage
 #' ec2_disassociate_client_vpn_target_network(ClientVpnEndpointId,
@@ -32804,32 +32801,32 @@ ec2_export_image <- function(ClientToken = NULL, Description = NULL, DiskImageFo
 #' @param TransitGatewayRouteTableId &#91;required&#93; The ID of the route table.
 #' @param Filters One or more filters. The possible values are:
 #' 
-#' -   `attachment.transit-gateway-attachment-id` - The id of the transit
+#'   - `attachment.transit-gateway-attachment-id` - The id of the transit
 #'     gateway attachment.
 #' 
-#' -   `attachment.resource-id` - The resource id of the transit gateway
+#'   - `attachment.resource-id` - The resource id of the transit gateway
 #'     attachment.
 #' 
-#' -   `route-search.exact-match` - The exact match of the specified
+#'   - `route-search.exact-match` - The exact match of the specified
 #'     filter.
 #' 
-#' -   `route-search.longest-prefix-match` - The longest prefix that
+#'   - `route-search.longest-prefix-match` - The longest prefix that
 #'     matches the route.
 #' 
-#' -   `route-search.subnet-of-match` - The routes with a subnet that match
+#'   - `route-search.subnet-of-match` - The routes with a subnet that match
 #'     the specified CIDR filter.
 #' 
-#' -   `route-search.supernet-of-match` - The routes with a CIDR that
+#'   - `route-search.supernet-of-match` - The routes with a CIDR that
 #'     encompass the CIDR filter. For example, if you have 10.0.1.0/29 and
 #'     10.0.1.0/31 routes in your route table and you specify
 #'     supernet-of-match as 10.0.1.0/30, then the result returns
 #'     10.0.1.0/29.
 #' 
-#' -   `state` - The state of the route (`active` | `blackhole`).
+#'   - `state` - The state of the route (`active` | `blackhole`).
 #' 
-#' -   `transit-gateway-route-destination-cidr-block` - The CIDR range.
+#'   - `transit-gateway-route-destination-cidr-block` - The CIDR range.
 #' 
-#' -   `type` - The type of route (`propagated` | `static`).
+#'   - `type` - The type of route (`propagated` | `static`).
 #' @param S3Bucket &#91;required&#93; The name of the S3 bucket.
 #' @param DryRun Checks whether you have the required permissions for the action, without
 #' actually making the request, and provides an error response. If you have
@@ -33097,16 +33094,19 @@ ec2_get_capacity_reservation_usage <- function(CapacityReservationId, NextToken 
 #' @param PoolId &#91;required&#93; The ID of the address pool.
 #' @param Filters The filters. The following are the possible values:
 #' 
-#' -   `coip-address-usage.allocation-id`
+#'   - `coip-address-usage.allocation-id`
 #' 
+#' <!-- end list -->
 #' 
-#' -   `coip-address-usage.aws-account-id`
+#'   - `coip-address-usage.aws-account-id`
 #' 
+#' <!-- end list -->
 #' 
-#' -   `coip-address-usage.aws-service`
+#'   - `coip-address-usage.aws-service`
 #' 
+#' <!-- end list -->
 #' 
-#' -   `coip-address-usage.co-ip`
+#'   - `coip-address-usage.co-ip`
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
 #' value.
@@ -34160,7 +34160,7 @@ ec2_get_reserved_instances_exchange_quote <- function(DryRun = NULL, ReservedIns
 #' @param TransitGatewayAttachmentId &#91;required&#93; The ID of the attachment.
 #' @param Filters One or more filters. The possible values are:
 #' 
-#' -   `transit-gateway-route-table-id` - The ID of the transit gateway
+#'   - `transit-gateway-route-table-id` - The ID of the transit gateway
 #'     route table.
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
@@ -34237,16 +34237,16 @@ ec2_get_transit_gateway_attachment_propagations <- function(TransitGatewayAttach
 #' @param TransitGatewayMulticastDomainId The ID of the transit gateway multicast domain.
 #' @param Filters One or more filters. The possible values are:
 #' 
-#' -   `resource-id` - The ID of the resource.
+#'   - `resource-id` - The ID of the resource.
 #' 
-#' -   `resource-type` - The type of resource. The valid value is: `vpc`.
+#'   - `resource-type` - The type of resource. The valid value is: `vpc`.
 #' 
-#' -   `state` - The state of the subnet association. Valid values are
+#'   - `state` - The state of the subnet association. Valid values are
 #'     `associated` | `associating` | `disassociated` | `disassociating`.
 #' 
-#' -   `subnet-id` - The ID of the subnet.
+#'   - `subnet-id` - The ID of the subnet.
 #' 
-#' -   `transit-gateway-attachment-id` - The id of the transit gateway
+#'   - `transit-gateway-attachment-id` - The id of the transit gateway
 #'     attachment.
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
@@ -34329,24 +34329,24 @@ ec2_get_transit_gateway_multicast_domain_associations <- function(TransitGateway
 #' @param TransitGatewayRouteTableId &#91;required&#93; The ID of the transit gateway route table.
 #' @param Filters One or more filters. The possible values are:
 #' 
-#' -   `attachment.resource-id` - The ID of the resource for the
+#'   - `attachment.resource-id` - The ID of the resource for the
 #'     attachment.
 #' 
-#' -   `attachment.resource-type` - The type of resource for the
+#'   - `attachment.resource-type` - The type of resource for the
 #'     attachment. Valid values are `vpc` | `vpn` |
 #'     `direct-connect-gateway` | `peering`.
 #' 
-#' -   `attachment.transit-gateway-attachment-id` - The ID of the
+#'   - `attachment.transit-gateway-attachment-id` - The ID of the
 #'     attachment.
 #' 
-#' -   `is-blackhole` - Whether traffic matching the route is blocked
+#'   - `is-blackhole` - Whether traffic matching the route is blocked
 #'     (`true` | `false`).
 #' 
-#' -   `prefix-list-id` - The ID of the prefix list.
+#'   - `prefix-list-id` - The ID of the prefix list.
 #' 
-#' -   `prefix-list-owner-id` - The ID of the owner of the prefix list.
+#'   - `prefix-list-owner-id` - The ID of the owner of the prefix list.
 #' 
-#' -   `state` - The state of the prefix list reference (`pending` |
+#'   - `state` - The state of the prefix list reference (`pending` |
 #'     `available` | `modifying` | `deleting`).
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
@@ -34431,12 +34431,12 @@ ec2_get_transit_gateway_prefix_list_references <- function(TransitGatewayRouteTa
 #' @param TransitGatewayRouteTableId &#91;required&#93; The ID of the transit gateway route table.
 #' @param Filters One or more filters. The possible values are:
 #' 
-#' -   `resource-id` - The ID of the resource.
+#'   - `resource-id` - The ID of the resource.
 #' 
-#' -   `resource-type` - The resource type. Valid values are `vpc` | `vpn`
+#'   - `resource-type` - The resource type. Valid values are `vpc` | `vpn`
 #'     | `direct-connect-gateway` | `peering` | `connect`.
 #' 
-#' -   `transit-gateway-attachment-id` - The ID of the attachment.
+#'   - `transit-gateway-attachment-id` - The ID of the attachment.
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
 #' value.
@@ -34514,12 +34514,12 @@ ec2_get_transit_gateway_route_table_associations <- function(TransitGatewayRoute
 #' @param TransitGatewayRouteTableId &#91;required&#93; The ID of the transit gateway route table.
 #' @param Filters One or more filters. The possible values are:
 #' 
-#' -   `resource-id` - The ID of the resource.
+#'   - `resource-id` - The ID of the resource.
 #' 
-#' -   `resource-type` - The resource type. Valid values are `vpc` | `vpn`
+#'   - `resource-type` - The resource type. Valid values are `vpc` | `vpn`
 #'     | `direct-connect-gateway` | `peering` | `connect`.
 #' 
-#' -   `transit-gateway-attachment-id` - The ID of the attachment.
+#'   - `transit-gateway-attachment-id` - The ID of the attachment.
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
 #' value.
@@ -34689,19 +34689,19 @@ ec2_import_client_vpn_client_certificate_revocation_list <- function(ClientVpnEn
 #' 
 #' The CMK identifier may be provided in any of the following formats:
 #' 
-#' -   Key ID
+#'   - Key ID
 #' 
-#' -   Key alias. The alias ARN contains the `arn:aws:kms` namespace,
+#'   - Key alias. The alias ARN contains the `arn:aws:kms` namespace,
 #'     followed by the Region of the CMK, the AWS account ID of the CMK
 #'     owner, the `alias` namespace, and then the CMK alias. For example,
 #'     arn:aws:kms:*us-east-1*:*012345678910*:alias/*ExampleAlias*.
 #' 
-#' -   ARN using key ID. The ID ARN contains the `arn:aws:kms` namespace,
+#'   - ARN using key ID. The ID ARN contains the `arn:aws:kms` namespace,
 #'     followed by the Region of the CMK, the AWS account ID of the CMK
 #'     owner, the `key` namespace, and then the CMK ID. For example,
 #'     arn:aws:kms:*us-east-1*:*012345678910*:key/*abcd1234-a123-456a-a12b-a123b4cd56ef*.
 #' 
-#' -   ARN using key alias. The alias ARN contains the `arn:aws:kms`
+#'   - ARN using key alias. The alias ARN contains the `arn:aws:kms`
 #'     namespace, followed by the Region of the CMK, the AWS account ID of
 #'     the CMK owner, the `alias` namespace, and then the CMK alias. For
 #'     example,
@@ -35127,19 +35127,19 @@ ec2_import_key_pair <- function(DryRun = NULL, KeyName, PublicKeyMaterial, TagSp
 #' 
 #' The CMK identifier may be provided in any of the following formats:
 #' 
-#' -   Key ID
+#'   - Key ID
 #' 
-#' -   Key alias. The alias ARN contains the `arn:aws:kms` namespace,
+#'   - Key alias. The alias ARN contains the `arn:aws:kms` namespace,
 #'     followed by the Region of the CMK, the AWS account ID of the CMK
 #'     owner, the `alias` namespace, and then the CMK alias. For example,
 #'     arn:aws:kms:*us-east-1*:*012345678910*:alias/*ExampleAlias*.
 #' 
-#' -   ARN using key ID. The ID ARN contains the `arn:aws:kms` namespace,
+#'   - ARN using key ID. The ID ARN contains the `arn:aws:kms` namespace,
 #'     followed by the Region of the CMK, the AWS account ID of the CMK
 #'     owner, the `key` namespace, and then the CMK ID. For example,
 #'     arn:aws:kms:*us-east-1*:*012345678910*:key/*abcd1234-a123-456a-a12b-a123b4cd56ef*.
 #' 
-#' -   ARN using key alias. The alias ARN contains the `arn:aws:kms`
+#'   - ARN using key alias. The alias ARN contains the `arn:aws:kms`
 #'     namespace, followed by the Region of the CMK, the AWS account ID of
 #'     the CMK owner, the `alias` namespace, and then the CMK alias. For
 #'     example,
@@ -35385,8 +35385,9 @@ ec2_import_volume <- function(AvailabilityZone, Description = NULL, DryRun = NUL
 #' @param GroupName &#91;required&#93; The name of the Availability Zone group, Local Zone group, or Wavelength
 #' Zone group.
 #' @param OptInStatus &#91;required&#93; Indicates whether you are opted in to the Local Zone group or Wavelength
-#' Zone group. The only valid value is `opted-in`. You must contact AWS
-#' Support to opt out of a Local Zone group, or Wavelength Zone group.
+#' Zone group. The only valid value is `opted-in`. You must contact
+#' <span>AWS Support</span> to opt out of a Local Zone group, or Wavelength
+#' Zone group.
 #' @param DryRun Checks whether you have the required permissions for the action, without
 #' actually making the request, and provides an error response. If you have
 #' the required permissions, the error response is `DryRunOperation`.
@@ -35461,11 +35462,11 @@ ec2_modify_availability_zone_group <- function(GroupName, OptInStatus, DryRun = 
 #' @param EndDateType Indicates the way in which the Capacity Reservation ends. A Capacity
 #' Reservation can have one of the following end types:
 #' 
-#' -   `unlimited` - The Capacity Reservation remains active until you
+#'   - `unlimited` - The Capacity Reservation remains active until you
 #'     explicitly cancel it. Do not provide an `EndDate` value if
 #'     `EndDateType` is `unlimited`.
 #' 
-#' -   `limited` - The Capacity Reservation expires automatically at a
+#'   - `limited` - The Capacity Reservation expires automatically at a
 #'     specified date and time. You must provide an `EndDate` value if
 #'     `EndDateType` is `limited`.
 #' @param DryRun Checks whether you have the required permissions for the action, without
@@ -35535,13 +35536,13 @@ ec2_modify_capacity_reservation <- function(CapacityReservationId, InstanceCount
 #' is sent to a Cloudwatch Logs log stream. The following information is
 #' logged:
 #' 
-#' -   Client connection requests
+#'   - Client connection requests
 #' 
-#' -   Client connection results (successful and unsuccessful)
+#'   - Client connection results (successful and unsuccessful)
 #' 
-#' -   Reasons for unsuccessful client connection requests
+#'   - Reasons for unsuccessful client connection requests
 #' 
-#' -   Client connection termination time
+#'   - Client connection termination time
 #' @param DnsServers Information about the DNS servers to be used by Client VPN connections.
 #' A Client VPN endpoint can have up to two DNS servers.
 #' @param VpnPort The port number to assign to the Client VPN endpoint for TCP and UDP
@@ -35736,14 +35737,14 @@ ec2_modify_default_credit_specification <- function(DryRun = NULL, InstanceFamil
 #' 
 #' You can specify the CMK using any of the following:
 #' 
-#' -   Key ID. For example, 1234abcd-12ab-34cd-56ef-1234567890ab.
+#'   - Key ID. For example, 1234abcd-12ab-34cd-56ef-1234567890ab.
 #' 
-#' -   Key alias. For example, alias/ExampleAlias.
+#'   - Key alias. For example, alias/ExampleAlias.
 #' 
-#' -   Key ARN. For example,
+#'   - Key ARN. For example,
 #'     arn:aws:kms:us-east-1:012345678910:key/1234abcd-12ab-34cd-56ef-1234567890ab.
 #' 
-#' -   Alias ARN. For example,
+#'   - Alias ARN. For example,
 #'     arn:aws:kms:us-east-1:012345678910:alias/ExampleAlias.
 #' 
 #' AWS authenticates the CMK asynchronously. Therefore, if you specify an
@@ -36912,7 +36913,7 @@ ec2_modify_instance_metadata_options <- function(InstanceId, HttpTokens = NULL, 
 #' Modifies the placement attributes for a specified instance. You can do
 #' the following:
 #' 
-#' -   Modify the affinity between an instance and a [Dedicated
+#'   - Modify the affinity between an instance and a [Dedicated
 #'     Host](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-overview.html).
 #'     When affinity is set to `host` and the instance is not associated
 #'     with a specific Dedicated Host, the next time the instance is
@@ -36920,12 +36921,12 @@ ec2_modify_instance_metadata_options <- function(InstanceId, HttpTokens = NULL, 
 #'     lands. If the instance is restarted or rebooted, this relationship
 #'     persists.
 #' 
-#' -   Change the Dedicated Host with which an instance is associated.
+#'   - Change the Dedicated Host with which an instance is associated.
 #' 
-#' -   Change the instance tenancy of an instance from `host` to
+#'   - Change the instance tenancy of an instance from `host` to
 #'     `dedicated`, or from `dedicated` to `host`.
 #' 
-#' -   Move an instance to or from a [placement
+#'   - Move an instance to or from a [placement
 #'     group](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html).
 #' 
 #' At least one attribute for affinity, host ID, tenancy, or placement
@@ -38341,13 +38342,13 @@ ec2_modify_transit_gateway_vpc_attachment <- function(TransitGatewayAttachmentId
 #' 
 #' The following are the supported volumes sizes for each volume type:
 #' 
-#' -   `gp2` and `gp3`: 1-16,384
+#'   - `gp2` and `gp3`: 1-16,384
 #' 
-#' -   `io1` and `io2`: 4-16,384
+#'   - `io1` and `io2`: 4-16,384
 #' 
-#' -   `st1` and `sc1`: 125-16,384
+#'   - `st1` and `sc1`: 125-16,384
 #' 
-#' -   `standard`: 1-1,024
+#'   - `standard`: 1-1,024
 #' 
 #' Default: If no size is specified, the existing size is retained.
 #' @param VolumeType The target EBS volume type of the volume. For more information, see
@@ -38361,11 +38362,11 @@ ec2_modify_transit_gateway_vpc_attachment <- function(TransitGatewayAttachmentId
 #' 
 #' The following are the supported values for each volume type:
 #' 
-#' -   `gp3`: 3,000-16,000 IOPS
+#'   - `gp3`: 3,000-16,000 IOPS
 #' 
-#' -   `io1`: 100-64,000 IOPS
+#'   - `io1`: 100-64,000 IOPS
 #' 
-#' -   `io2`: 100-64,000 IOPS
+#'   - `io2`: 100-64,000 IOPS
 #' 
 #' Default: If no IOPS value is specified, the existing value is retained.
 #' @param Throughput The target throughput of the volume, in MiB/s. This parameter is valid
@@ -38933,15 +38934,15 @@ ec2_modify_vpc_endpoint_service_permissions <- function(DryRun = NULL, ServiceId
 #' Modifies the VPC peering connection options on one side of a VPC peering
 #' connection. You can do the following:
 #' 
-#' -   Enable/disable communication over the peering connection between an
+#'   - Enable/disable communication over the peering connection between an
 #'     EC2-Classic instance that's linked to your VPC (using ClassicLink)
 #'     and instances in the peer VPC.
 #' 
-#' -   Enable/disable communication over the peering connection between
+#'   - Enable/disable communication over the peering connection between
 #'     instances in your VPC and an EC2-Classic instance that's linked to
 #'     the peer VPC.
 #' 
-#' -   Enable/disable the ability to resolve public DNS hostnames to
+#'   - Enable/disable the ability to resolve public DNS hostnames to
 #'     private IP addresses when queried from instances in the peer VPC.
 #' 
 #' If the peered VPCs are in the same AWS account, you can enable DNS
@@ -39097,13 +39098,13 @@ ec2_modify_vpc_tenancy <- function(VpcId, InstanceTenancy, DryRun = NULL) {
 #' Site-to-Site VPN connection. To modify the target gateway, the following
 #' migration options are available:
 #' 
-#' -   An existing virtual private gateway to a new virtual private gateway
+#'   - An existing virtual private gateway to a new virtual private gateway
 #' 
-#' -   An existing virtual private gateway to a transit gateway
+#'   - An existing virtual private gateway to a transit gateway
 #' 
-#' -   An existing transit gateway to a new transit gateway
+#'   - An existing transit gateway to a new transit gateway
 #' 
-#' -   An existing transit gateway to a virtual private gateway
+#'   - An existing transit gateway to a virtual private gateway
 #' 
 #' Before you perform the migration to the new gateway, you must configure
 #' the new gateway. Use [`create_vpn_gateway`][ec2_create_vpn_gateway] to
@@ -41835,30 +41836,30 @@ ec2_replace_transit_gateway_route <- function(DestinationCidrBlock, TransitGatew
 #' @param Instances &#91;required&#93; The instances.
 #' @param ReasonCodes &#91;required&#93; The reason codes that describe the health state of your instance.
 #' 
-#' -   `instance-stuck-in-state`: My instance is stuck in a state.
+#'   - `instance-stuck-in-state`: My instance is stuck in a state.
 #' 
-#' -   `unresponsive`: My instance is unresponsive.
+#'   - `unresponsive`: My instance is unresponsive.
 #' 
-#' -   `not-accepting-credentials`: My instance is not accepting my
+#'   - `not-accepting-credentials`: My instance is not accepting my
 #'     credentials.
 #' 
-#' -   `password-not-available`: A password is not available for my
+#'   - `password-not-available`: A password is not available for my
 #'     instance.
 #' 
-#' -   `performance-network`: My instance is experiencing performance
+#'   - `performance-network`: My instance is experiencing performance
 #'     problems that I believe are network related.
 #' 
-#' -   `performance-instance-store`: My instance is experiencing
+#'   - `performance-instance-store`: My instance is experiencing
 #'     performance problems that I believe are related to the instance
 #'     stores.
 #' 
-#' -   `performance-ebs-volume`: My instance is experiencing performance
+#'   - `performance-ebs-volume`: My instance is experiencing performance
 #'     problems that I believe are related to an EBS volume.
 #' 
-#' -   `performance-other`: My instance is experiencing performance
+#'   - `performance-other`: My instance is experiencing performance
 #'     problems.
 #' 
-#' -   `other`: \[explain using the description parameter\]
+#'   - `other`: \[explain using the description parameter\]
 #' @param StartTime The time at which the reported instance health state began.
 #' @param Status &#91;required&#93; The status of all instances listed.
 #'
@@ -42363,11 +42364,11 @@ ec2_request_spot_fleet <- function(DryRun = NULL, SpotFleetRequestConfig) {
 #' @param ValidUntil The end date of the request, in UTC format
 #' (*YYYY*-*MM*-*DD*T*HH*:*MM*:*SS*Z).
 #' 
-#' -   For a persistent request, the request remains active until the
+#'   - For a persistent request, the request remains active until the
 #'     `ValidUntil` date and time is reached. Otherwise, the request
 #'     remains active until you cancel it.
 #' 
-#' -   For a one-time request, the request remains active until all
+#'   - For a one-time request, the request remains active until all
 #'     instances launch, the request is canceled, or the `ValidUntil` date
 #'     and time is reached. By default, the request is valid for 7 days
 #'     from the date the request was created.
@@ -43585,31 +43586,31 @@ ec2_revoke_security_group_ingress <- function(CidrIp = NULL, FromPort = NULL, Gr
 #' You can specify a number of options, or leave the default options. The
 #' following rules apply:
 #' 
-#' -   \[EC2-VPC\] If you don't specify a subnet ID, we choose a default
+#'   - \[EC2-VPC\] If you don't specify a subnet ID, we choose a default
 #'     subnet from your default VPC for you. If you don't have a default
 #'     VPC, you must specify a subnet ID in the request.
 #' 
-#' -   \[EC2-Classic\] If don't specify an Availability Zone, we choose one
+#'   - \[EC2-Classic\] If don't specify an Availability Zone, we choose one
 #'     for you.
 #' 
-#' -   Some instance types must be launched into a VPC. If you do not have
+#'   - Some instance types must be launched into a VPC. If you do not have
 #'     a default VPC, or if you do not specify a subnet ID, the request
 #'     fails. For more information, see [Instance types available only in a
 #'     VPC](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-vpc.html#vpc-only-instance-types).
 #' 
-#' -   \[EC2-VPC\] All instances have a network interface with a primary
+#'   - \[EC2-VPC\] All instances have a network interface with a primary
 #'     private IPv4 address. If you don't specify this address, we choose
 #'     one from the IPv4 range of your subnet.
 #' 
-#' -   Not all instance types support IPv6 addresses. For more information,
+#'   - Not all instance types support IPv6 addresses. For more information,
 #'     see [Instance
 #'     types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html).
 #' 
-#' -   If you don't specify a security group ID, we use the default
+#'   - If you don't specify a security group ID, we use the default
 #'     security group. For more information, see [Security
 #'     groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html).
 #' 
-#' -   If any of the AMIs have a product code attached for which the user
+#'   - If any of the AMIs have a product code attached for which the user
 #'     has not subscribed, the request fails.
 #' 
 #' You can create a [launch
@@ -44571,30 +44572,30 @@ ec2_search_local_gateway_routes <- function(LocalGatewayRouteTableId, Filters, M
 #' @param TransitGatewayMulticastDomainId The ID of the transit gateway multicast domain.
 #' @param Filters One or more filters. The possible values are:
 #' 
-#' -   `group-ip-address` - The IP address of the transit gateway multicast
+#'   - `group-ip-address` - The IP address of the transit gateway multicast
 #'     group.
 #' 
-#' -   `is-group-member` - The resource is a group member. Valid values are
+#'   - `is-group-member` - The resource is a group member. Valid values are
 #'     `true` | `false`.
 #' 
-#' -   `is-group-source` - The resource is a group source. Valid values are
+#'   - `is-group-source` - The resource is a group source. Valid values are
 #'     `true` | `false`.
 #' 
-#' -   `member-type` - The member type. Valid values are `igmp` | `static`.
+#'   - `member-type` - The member type. Valid values are `igmp` | `static`.
 #' 
-#' -   `resource-id` - The ID of the resource.
+#'   - `resource-id` - The ID of the resource.
 #' 
-#' -   `resource-type` - The type of resource. Valid values are `vpc` |
+#'   - `resource-type` - The type of resource. Valid values are `vpc` |
 #'     `vpn` | `direct-connect-gateway` | `tgw-peering`.
 #' 
-#' -   `source-type` - The source type. Valid values are `igmp` | `static`.
+#'   - `source-type` - The source type. Valid values are `igmp` | `static`.
 #' 
-#' -   `state` - The state of the subnet association. Valid values are
+#'   - `state` - The state of the subnet association. Valid values are
 #'     `associated` | `associated` | `disassociated` | `disassociating`.
 #' 
-#' -   `subnet-id` - The ID of the subnet.
+#'   - `subnet-id` - The ID of the subnet.
 #' 
-#' -   `transit-gateway-attachment-id` - The id of the transit gateway
+#'   - `transit-gateway-attachment-id` - The id of the transit gateway
 #'     attachment.
 #' @param MaxResults The maximum number of results to return with a single call. To retrieve
 #' the remaining results, make another call with the returned `nextToken`
@@ -44678,36 +44679,36 @@ ec2_search_transit_gateway_multicast_groups <- function(TransitGatewayMulticastD
 #' @param TransitGatewayRouteTableId &#91;required&#93; The ID of the transit gateway route table.
 #' @param Filters &#91;required&#93; One or more filters. The possible values are:
 #' 
-#' -   `attachment.transit-gateway-attachment-id`- The id of the transit
+#'   - `attachment.transit-gateway-attachment-id`- The id of the transit
 #'     gateway attachment.
 #' 
-#' -   `attachment.resource-id` - The resource id of the transit gateway
+#'   - `attachment.resource-id` - The resource id of the transit gateway
 #'     attachment.
 #' 
-#' -   `attachment.resource-type` - The attachment resource type. Valid
+#'   - `attachment.resource-type` - The attachment resource type. Valid
 #'     values are `vpc` | `vpn` | `direct-connect-gateway` | `peering` |
 #'     `connect`.
 #' 
-#' -   `prefix-list-id` - The ID of the prefix list.
+#'   - `prefix-list-id` - The ID of the prefix list.
 #' 
-#' -   `route-search.exact-match` - The exact match of the specified
+#'   - `route-search.exact-match` - The exact match of the specified
 #'     filter.
 #' 
-#' -   `route-search.longest-prefix-match` - The longest prefix that
+#'   - `route-search.longest-prefix-match` - The longest prefix that
 #'     matches the route.
 #' 
-#' -   `route-search.subnet-of-match` - The routes with a subnet that match
+#'   - `route-search.subnet-of-match` - The routes with a subnet that match
 #'     the specified CIDR filter.
 #' 
-#' -   `route-search.supernet-of-match` - The routes with a CIDR that
+#'   - `route-search.supernet-of-match` - The routes with a CIDR that
 #'     encompass the CIDR filter. For example, if you have 10.0.1.0/29 and
 #'     10.0.1.0/31 routes in your route table and you specify
 #'     supernet-of-match as 10.0.1.0/30, then the result returns
 #'     10.0.1.0/29.
 #' 
-#' -   `state` - The state of the route (`active` | `blackhole`).
+#'   - `state` - The state of the route (`active` | `blackhole`).
 #' 
-#' -   `type` - The type of route (`propagated` | `static`).
+#'   - `type` - The type of route (`propagated` | `static`).
 #' @param MaxResults The maximum number of routes to return.
 #' @param DryRun Checks whether you have the required permissions for the action, without
 #' actually making the request, and provides an error response. If you have
@@ -44775,8 +44776,8 @@ ec2_search_transit_gateway_routes <- function(TransitGatewayRouteTableId, Filter
 .ec2$operations$search_transit_gateway_routes <- ec2_search_transit_gateway_routes
 
 #' Sends a diagnostic interrupt to the specified Amazon EC2 instance to
-#' trigger a kernel panic (on Linux instances), or a blue screen/stop error
-#' (on Windows instances)
+#' trigger a _kernel panic_ (on Linux instances), or a _blue screen_/_stop
+#' error_ (on Windows instances)
 #'
 #' @description
 #' Sends a diagnostic interrupt to the specified Amazon EC2 instance to

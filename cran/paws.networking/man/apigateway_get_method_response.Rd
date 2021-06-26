@@ -8,13 +8,16 @@ apigateway_get_method_response(restApiId, resourceId, httpMethod,
   statusCode)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
-\item{resourceId}{[required] [Required] The Resource identifier for the MethodResponse resource.}
+\item{resourceId}{[required] [Required] The <span>Resource</span> identifier for the
+<span>MethodResponse</span> resource.}
 
-\item{httpMethod}{[required] [Required] The HTTP verb of the Method resource.}
+\item{httpMethod}{[required] [Required] The HTTP verb of the <span>Method</span> resource.}
 
-\item{statusCode}{[required] [Required] The status code for the MethodResponse resource.}
+\item{statusCode}{[required] [Required] The status code for the <span>MethodResponse</span>
+resource.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -29,7 +32,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Describes a MethodResponse resource.
+Describes a <span>MethodResponse</span> resource.
 }
 \section{Request syntax}{
 \preformatted{svc$get_method_response(

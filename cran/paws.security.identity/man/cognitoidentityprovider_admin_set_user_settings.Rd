@@ -2,7 +2,7 @@
 % Please edit documentation in R/cognitoidentityprovider_operations.R
 \name{cognitoidentityprovider_admin_set_user_settings}
 \alias{cognitoidentityprovider_admin_set_user_settings}
-\title{This action is no longer supported}
+\title{_This action is no longer supported}
 \usage{
 cognitoidentityprovider_admin_set_user_settings(UserPoolId, Username,
   MFAOptions)

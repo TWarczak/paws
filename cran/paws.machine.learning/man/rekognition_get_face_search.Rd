@@ -162,11 +162,12 @@ identifier (\code{JobId}) from the initial call to
 For more information, see Searching Faces in a Collection in the Amazon
 Rekognition Developer Guide.
 
-The search results are retured in an array, \code{Persons}, of PersonMatch
-objects. Each\code{PersonMatch} element contains details about the matching
-faces in the input collection, person information (facial attributes,
-bounding boxes, and person identifer) for the matched person, and the
-time the person was matched in the video.
+The search results are retured in an array, \code{Persons}, of
+<span>PersonMatch</span> objects. Each\code{PersonMatch} element contains
+details about the matching faces in the input collection, person
+information (facial attributes, bounding boxes, and person identifer)
+for the matched person, and the time the person was matched in the
+video.
 
 \code{\link[=rekognition_get_face_search]{get_face_search}} only returns the
 default facial attributes (\code{BoundingBox}, \code{Confidence}, \code{Landmarks},

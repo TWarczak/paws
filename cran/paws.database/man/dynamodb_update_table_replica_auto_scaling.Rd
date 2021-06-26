@@ -110,7 +110,8 @@ A list with the following syntax:\preformatted{list(
 \description{
 Updates auto scaling settings on your global tables at once.
 
-This operation only applies to \href{https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html}{Version 2019.11.21}
+This operation only applies to
+\href{https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html}{Version 2019.11.21}
 of global tables.
 }
 \section{Request syntax}{

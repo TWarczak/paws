@@ -44,11 +44,11 @@ NULL
 #' for AWS
 #' WAF](https://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region).
 #' 
-#' -   For regional applications, you can use any of the endpoints in the
+#'   - For regional applications, you can use any of the endpoints in the
 #'     list. A regional application can be an Application Load Balancer
 #'     (ALB), an API Gateway REST API, or an AppSync GraphQL API.
 #' 
-#' -   For AWS CloudFront applications, you must use the API endpoint
+#'   - For AWS CloudFront applications, you must use the API endpoint
 #'     listed for US East (N. Virginia): us-east-1.
 #' 
 #' Alternatively, you can use one of the AWS SDKs to access an API that's
@@ -60,15 +60,15 @@ NULL
 #' functionality as the older versions, with the following major
 #' improvements:
 #' 
-#' -   You use one API for both global and regional applications. Where you
+#'   - You use one API for both global and regional applications. Where you
 #'     need to distinguish the scope, you specify a `Scope` parameter and
 #'     set it to `CLOUDFRONT` or `REGIONAL`.
 #' 
-#' -   You can define a Web ACL or rule group with a single call, and
+#'   - You can define a Web ACL or rule group with a single call, and
 #'     update it with a single call. You define all rule specifications in
 #'     JSON format, and pass them to your rule group or Web ACL calls.
 #' 
-#' -   The limits AWS WAF places on the use of rules more closely reflects
+#'   - The limits AWS WAF places on the use of rules more closely reflects
 #'     the cost of running each type of rule. Rule groups include capacity
 #'     settings, so you know the maximum cost of a rule group when you use
 #'     it.
@@ -147,6 +147,12 @@ NULL
 #'  \link[=wafv2_update_web_acl]{update_web_acl} \tab This is the latest version of AWS WAF, named AWS WAFV2, released in November, 2019
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname wafv2
 #' @export
 wafv2 <- function(config = list()) {
@@ -165,7 +171,7 @@ wafv2 <- function(config = list()) {
   endpoints = list("*" = list(endpoint = "wafv2.{region}.amazonaws.com", global = FALSE), "cn-*" = list(endpoint = "wafv2.{region}.amazonaws.com.cn", global = FALSE), "us-iso-*" = list(endpoint = "wafv2.{region}.c2s.ic.gov", global = FALSE), "us-isob-*" = list(endpoint = "wafv2.{region}.sc2s.sgov.gov", global = FALSE)),
   service_id = "WAFV2",
   api_version = "2019-07-29",
-  signing_name = NULL,
+  signing_name = "wafv2",
   json_version = "1.1",
   target_prefix = "AWSWAF_20190729"
 )

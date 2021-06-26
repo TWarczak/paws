@@ -30,7 +30,7 @@ temporarily prevents use of the CMK for \href{https://docs.aws.amazon.com/kms/la
 
 For more information about how key state affects the use of a CMK, see
 \href{https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html}{How Key State Affects the Use of a Customer Master Key}
-in the \strong{AWS Key Management Service Developer Guide} .
+in the \emph{\emph{AWS Key Management Service Developer Guide}} .
 
 The CMK that you use for this operation must be in a compatible key
 state. For details, see \href{https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html}{How Key State Affects Use of a Customer Master Key}

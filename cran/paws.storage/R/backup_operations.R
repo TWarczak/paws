@@ -123,18 +123,18 @@ backup_create_backup_plan <- function(BackupPlan, BackupPlanTags = NULL, Creator
 #' 
 #' For example, consider the following patterns:
 #' 
-#' -   `Resources: "arn:aws:ec2:region:account-id:volume/volume-id"`
+#'   - `Resources: "arn:aws:ec2:region:account-id:volume/volume-id"`
 #' 
-#' -   `ConditionKey:"department"`
-#' 
+#'   - `ConditionKey:"department"`
+#'     
 #'     `ConditionValue:"finance"`
-#' 
+#'     
 #'     `ConditionType:"StringEquals"`
 #' 
-#' -   `ConditionKey:"importance"`
-#' 
+#'   - `ConditionKey:"importance"`
+#'     
 #'     `ConditionValue:"critical"`
-#' 
+#'     
 #'     `ConditionType:"StringEquals"`
 #' 
 #' Using these patterns would back up all Amazon Elastic Block Store
@@ -1682,17 +1682,17 @@ backup_get_supported_resource_types <- function() {
 #' @param ByCreatedAfter Returns only backup jobs that were created after the specified date.
 #' @param ByResourceType Returns only backup jobs for the specified resources:
 #' 
-#' -   `DynamoDB` for Amazon DynamoDB
+#'   - `DynamoDB` for Amazon DynamoDB
 #' 
-#' -   `EBS` for Amazon Elastic Block Store
+#'   - `EBS` for Amazon Elastic Block Store
 #' 
-#' -   `EC2` for Amazon Elastic Compute Cloud
+#'   - `EC2` for Amazon Elastic Compute Cloud
 #' 
-#' -   `EFS` for Amazon Elastic File System
+#'   - `EFS` for Amazon Elastic File System
 #' 
-#' -   `RDS` for Amazon Relational Database Service
+#'   - `RDS` for Amazon Relational Database Service
 #' 
-#' -   `Storage Gateway` for AWS Storage Gateway
+#'   - `Storage Gateway` for AWS Storage Gateway
 #' @param ByAccountId The account ID to list the jobs from. Returns only backup jobs
 #' associated with the specified account ID.
 #'
@@ -2157,17 +2157,17 @@ backup_list_backup_vaults <- function(NextToken = NULL, MaxResults = NULL) {
 #' @param ByCreatedAfter Returns only copy jobs that were created after the specified date.
 #' @param ByResourceType Returns only backup jobs for the specified resources:
 #' 
-#' -   `DynamoDB` for Amazon DynamoDB
+#'   - `DynamoDB` for Amazon DynamoDB
 #' 
-#' -   `EBS` for Amazon Elastic Block Store
+#'   - `EBS` for Amazon Elastic Block Store
 #' 
-#' -   `EC2` for Amazon Elastic Compute Cloud
+#'   - `EC2` for Amazon Elastic Compute Cloud
 #' 
-#' -   `EFS` for Amazon Elastic File System
+#'   - `EFS` for Amazon Elastic File System
 #' 
-#' -   `RDS` for Amazon Relational Database Service
+#'   - `RDS` for Amazon Relational Database Service
 #' 
-#' -   `Storage Gateway` for AWS Storage Gateway
+#'   - `Storage Gateway` for AWS Storage Gateway
 #' @param ByDestinationVaultArn An Amazon Resource Name (ARN) that uniquely identifies a source backup
 #' vault to copy from; for example,
 #' `arn:aws:backup:us-east-1:123456789012:vault:aBackupVault`.
@@ -2783,8 +2783,8 @@ backup_put_backup_vault_notifications <- function(BackupVaultName, SNSTopicArn, 
 #' Backups transitioned to cold storage must be stored in cold storage for
 #' a minimum of 90 days. Therefore, the “expire after days” setting must be
 #' 90 days greater than the “transition to cold after days” setting. The
-#' “transition to cold after days” setting cannot be changed after a backup
-#' has been transitioned to cold.
+#' “transition to cold after days” setting cannot be changed after a
+#' backup has been transitioned to cold.
 #' @param RecoveryPointTags To help organize your resources, you can assign your own metadata to the
 #' resources that you create. Each tag is a key-value pair.
 #' @param BackupOptions Specifies the backup option for a selected resource. This option is only
@@ -2945,28 +2945,28 @@ backup_start_copy_job <- function(RecoveryPointArn, SourceBackupVaultName, Desti
 #' You need to specify specific metadata to restore an Amazon Elastic File
 #' System (Amazon EFS) instance:
 #' 
-#' -   `file-system-id`: The ID of the Amazon EFS file system that is
+#'   - `file-system-id`: The ID of the Amazon EFS file system that is
 #'     backed up by AWS Backup. Returned in
 #'     [`get_recovery_point_restore_metadata`][backup_get_recovery_point_restore_metadata].
 #' 
-#' -   `Encrypted`: A Boolean value that, if true, specifies that the file
+#'   - `Encrypted`: A Boolean value that, if true, specifies that the file
 #'     system is encrypted. If `KmsKeyId` is specified, `Encrypted` must be
 #'     set to `true`.
 #' 
-#' -   `KmsKeyId`: Specifies the AWS KMS key that is used to encrypt the
+#'   - `KmsKeyId`: Specifies the AWS KMS key that is used to encrypt the
 #'     restored file system. You can specify a key from another AWS account
 #'     provided that key it is properly shared with your account via AWS
 #'     KMS.
 #' 
-#' -   `PerformanceMode`: Specifies the throughput mode of the file system.
+#'   - `PerformanceMode`: Specifies the throughput mode of the file system.
 #' 
-#' -   `CreationToken`: A user-supplied value that ensures the uniqueness
+#'   - `CreationToken`: A user-supplied value that ensures the uniqueness
 #'     (idempotency) of the request.
 #' 
-#' -   `newFileSystem`: A Boolean value that, if true, specifies that the
+#'   - `newFileSystem`: A Boolean value that, if true, specifies that the
 #'     recovery point is restored to a new Amazon EFS file system.
 #' 
-#' -   `ItemsToRestore `: A serialized list of up to five strings where
+#'   - ` ItemsToRestore  `: A serialized list of up to five strings where
 #'     each string is a file path. Use `ItemsToRestore` to restore specific
 #'     files or directories rather than the entire file system. This
 #'     parameter is optional.
@@ -2978,17 +2978,17 @@ backup_start_copy_job <- function(RecoveryPointArn, SourceBackupVaultName, Desti
 #' @param ResourceType Starts a job to restore a recovery point for one of the following
 #' resources:
 #' 
-#' -   `DynamoDB` for Amazon DynamoDB
+#'   - `DynamoDB` for Amazon DynamoDB
 #' 
-#' -   `EBS` for Amazon Elastic Block Store
+#'   - `EBS` for Amazon Elastic Block Store
 #' 
-#' -   `EC2` for Amazon Elastic Compute Cloud
+#'   - `EC2` for Amazon Elastic Compute Cloud
 #' 
-#' -   `EFS` for Amazon Elastic File System
+#'   - `EFS` for Amazon Elastic File System
 #' 
-#' -   `RDS` for Amazon Relational Database Service
+#'   - `RDS` for Amazon Relational Database Service
 #' 
-#' -   `Storage Gateway` for AWS Storage Gateway
+#'   - `Storage Gateway` for AWS Storage Gateway
 #'
 #' @return
 #' A list with the following syntax:
@@ -3322,8 +3322,8 @@ backup_update_global_settings <- function(GlobalSettings = NULL) {
 #' Backups transitioned to cold storage must be stored in cold storage for
 #' a minimum of 90 days. Therefore, the “expire after days” setting must be
 #' 90 days greater than the “transition to cold after days” setting. The
-#' “transition to cold after days” setting cannot be changed after a backup
-#' has been transitioned to cold.
+#' “transition to cold after days” setting cannot be changed after a
+#' backup has been transitioned to cold.
 #'
 #' @usage
 #' backup_update_recovery_point_lifecycle(BackupVaultName,
@@ -3343,8 +3343,8 @@ backup_update_global_settings <- function(GlobalSettings = NULL) {
 #' Backups transitioned to cold storage must be stored in cold storage for
 #' a minimum of 90 days. Therefore, the “expire after days” setting must be
 #' 90 days greater than the “transition to cold after days” setting. The
-#' “transition to cold after days” setting cannot be changed after a backup
-#' has been transitioned to cold.
+#' “transition to cold after days” setting cannot be changed after a
+#' backup has been transitioned to cold.
 #'
 #' @return
 #' A list with the following syntax:

@@ -54,7 +54,7 @@ action to open ports without closing currently open ports.
 The \code{\link[=lightsail_put_instance_public_ports]{put_instance_public_ports}}
 action supports tag-based access control via resource tags applied to
 the resource identified by \code{instanceName}. For more information, see the
-Lightsail Dev Guide.
+<span>Lightsail Dev Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$put_instance_public_ports(

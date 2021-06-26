@@ -583,11 +583,11 @@ networkmanager_create_link <- function(GlobalNetworkId, Description = NULL, Type
 #' Network Manager console. If you specify the address, the latitude and
 #' longitude are automatically calculated.
 #' 
-#' -   `Address`: The physical address of the site.
+#'   - `Address`: The physical address of the site.
 #' 
-#' -   `Latitude`: The latitude of the site.
+#'   - `Latitude`: The latitude of the site.
 #' 
-#' -   `Longitude`: The longitude of the site.
+#'   - `Longitude`: The longitude of the site.
 #' @param Tags The tags to apply to the resource during creation.
 #'
 #' @return
@@ -2446,11 +2446,11 @@ networkmanager_update_link <- function(GlobalNetworkId, LinkId, Description = NU
 #' Length Constraints: Maximum length of 256 characters.
 #' @param Location The site location:
 #' 
-#' -   `Address`: The physical address of the site.
+#'   - `Address`: The physical address of the site.
 #' 
-#' -   `Latitude`: The latitude of the site.
+#'   - `Latitude`: The latitude of the site.
 #' 
-#' -   `Longitude`: The longitude of the site.
+#'   - `Longitude`: The longitude of the site.
 #'
 #' @return
 #' A list with the following syntax:

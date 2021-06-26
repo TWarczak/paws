@@ -79,9 +79,9 @@ IP address is in local, private, non-routable, or multicast ranges. For
 more information about IP addresses for which you can't create health
 checks, see the following documents:
 \itemize{
-\item \href{https://tools.ietf.org/html/rfc5735}{RFC 5735, Special Use IPv4 Addresses}
-\item \href{https://tools.ietf.org/html/rfc6598}{RFC 6598, IANA-Reserved IPv4 Prefix for Shared Address Space}
-\item \href{https://tools.ietf.org/html/rfc5156}{RFC 5156, Special-Use IPv6 Addresses}
+\item \href{https://datatracker.ietf.org/doc/html/rfc5735}{RFC 5735, Special Use IPv4 Addresses}
+\item \href{https://datatracker.ietf.org/doc/html/rfc6598}{RFC 6598, IANA-Reserved IPv4 Prefix for Shared Address Space}
+\item \href{https://datatracker.ietf.org/doc/html/rfc5156}{RFC 5156, Special-Use IPv6 Addresses}
 }}
 
 \item{Port}{The port on the endpoint that you want Amazon Route 53 to perform health
@@ -234,15 +234,13 @@ still getting the error, check the SSL/TLS configuration on your
 endpoint and confirm that your certificate is valid.
 
 The SSL/TLS certificate on your endpoint includes a domain name in the
-\verb{Common Name} field and possibly several more in the
-\verb{Subject Alternative Names} field. One of the domain names in the
-certificate should match the value that you specify for
-\code{FullyQualifiedDomainName}. If the endpoint responds to the
-\code{client_hello} message with a certificate that does not include the
-domain name that you specified in \code{FullyQualifiedDomainName}, a health
-checker will retry the handshake. In the second attempt, the health
-checker will omit \code{FullyQualifiedDomainName} from the \code{client_hello}
-message.}
+\verb{Common Name} field and possibly several more in the \verb{Subject Alternative Names} field. One of the domain names in the certificate
+should match the value that you specify for \code{FullyQualifiedDomainName}.
+If the endpoint responds to the \code{client_hello} message with a
+certificate that does not include the domain name that you specified in
+\code{FullyQualifiedDomainName}, a health checker will retry the handshake.
+In the second attempt, the health checker will omit
+\code{FullyQualifiedDomainName} from the \code{client_hello} message.}
 
 \item{Regions}{A complex type that contains one \code{Region} element for each region that
 you want Amazon Route 53 health checkers to check the specified endpoint

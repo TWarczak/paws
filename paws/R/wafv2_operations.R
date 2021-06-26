@@ -32,14 +32,15 @@ NULL
 #' 
 #' The ARN must be in one of the following formats:
 #' 
-#' -   For an Application Load Balancer:
-#'     `arn:aws:elasticloadbalancing:region:account-id:loadbalancer/app/load-balancer-name/load-balancer-id `
+#'   - For an Application Load Balancer:
+#'     ` arn:aws:elasticloadbalancing:region:account-id:loadbalancer/app/load-balancer-name/load-balancer-id
+#'      `
 #' 
-#' -   For an API Gateway REST API:
-#'     `arn:aws:apigateway:region::/restapis/api-id/stages/stage-name `
+#'   - For an API Gateway REST API:
+#'     ` arn:aws:apigateway:region::/restapis/api-id/stages/stage-name  `
 #' 
-#' -   For an AppSync GraphQL API:
-#'     `arn:aws:appsync:region:account-id:apis/GraphQLApiId `
+#'   - For an AppSync GraphQL API:
+#'     ` arn:aws:appsync:region:account-id:apis/GraphQLApiId  `
 #'
 #' @return
 #' An empty list.
@@ -83,7 +84,8 @@ wafv2_associate_web_acl <- function(WebACLArn, ResourceArn) {
 #' 
 #' Returns the web ACL capacity unit (WCU) requirements for a specified
 #' scope and set of rules. You can use this to check the capacity
-#' requirements for the rules you want to use in a RuleGroup or WebACL.
+#' requirements for the rules you want to use in a <span>RuleGroup</span>
+#' or <span>WebACL</span>.
 #' 
 #' AWS WAF uses WCUs to calculate and control the operating resources that
 #' are used to run your rules, rule groups, and web ACLs. AWS WAF
@@ -104,12 +106,12 @@ wafv2_associate_web_acl <- function(WebACLArn, ResourceArn) {
 #' To work with CloudFront, you must also specify the Region US East (N.
 #' Virginia) as follows:
 #' 
-#' -   CLI - Specify the Region when you use the CloudFront scope:
+#'   - CLI - Specify the Region when you use the CloudFront scope:
 #'     `--scope=CLOUDFRONT --region=us-east-1`.
 #' 
-#' -   API and SDKs - For all calls, use the Region endpoint us-east-1.
-#' @param Rules &#91;required&#93; An array of Rule that you're configuring to use in a rule group or web
-#' ACL.
+#'   - API and SDKs - For all calls, use the Region endpoint us-east-1.
+#' @param Rules &#91;required&#93; An array of <span>Rule</span> that you're configuring to use in a rule
+#' group or web ACL.
 #'
 #' @return
 #' A list with the following syntax:
@@ -343,11 +345,11 @@ wafv2_check_capacity <- function(Scope, Rules) {
 #' resources from the prior release, see the [AWS WAF Developer
 #' Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html).
 #' 
-#' Creates an IPSet, which you use to identify web requests that originate
-#' from specific IP addresses or ranges of IP addresses. For example, if
-#' you're receiving a lot of requests from a ranges of IP addresses, you
-#' can configure AWS WAF to block them using an IPSet that lists those IP
-#' addresses.
+#' Creates an <span>IPSet</span>, which you use to identify web requests
+#' that originate from specific IP addresses or ranges of IP addresses. For
+#' example, if you're receiving a lot of requests from a ranges of IP
+#' addresses, you can configure AWS WAF to block them using an IPSet that
+#' lists those IP addresses.
 #'
 #' @usage
 #' wafv2_create_ip_set(Name, Scope, Description, IPAddressVersion,
@@ -362,10 +364,10 @@ wafv2_check_capacity <- function(Scope, Rules) {
 #' To work with CloudFront, you must also specify the Region US East (N.
 #' Virginia) as follows:
 #' 
-#' -   CLI - Specify the Region when you use the CloudFront scope:
+#'   - CLI - Specify the Region when you use the CloudFront scope:
 #'     `--scope=CLOUDFRONT --region=us-east-1`.
 #' 
-#' -   API and SDKs - For all calls, use the Region endpoint us-east-1.
+#'   - API and SDKs - For all calls, use the Region endpoint us-east-1.
 #' @param Description A description of the IP set that helps with identification. You cannot
 #' change the description of an IP set after you create it.
 #' @param IPAddressVersion &#91;required&#93; Specify IPV4 or IPV6.
@@ -376,19 +378,19 @@ wafv2_check_capacity <- function(Scope, Rules) {
 #' 
 #' Examples:
 #' 
-#' -   To configure AWS WAF to allow, block, or count requests that
+#'   - To configure AWS WAF to allow, block, or count requests that
 #'     originated from the IP address 192.0.2.44, specify `192.0.2.44/32`.
 #' 
-#' -   To configure AWS WAF to allow, block, or count requests that
+#'   - To configure AWS WAF to allow, block, or count requests that
 #'     originated from IP addresses from 192.0.2.0 to 192.0.2.255, specify
 #'     `192.0.2.0/24`.
 #' 
-#' -   To configure AWS WAF to allow, block, or count requests that
+#'   - To configure AWS WAF to allow, block, or count requests that
 #'     originated from the IP address
 #'     1111:0000:0000:0000:0000:0000:0000:0111, specify
 #'     `1111:0000:0000:0000:0000:0000:0000:0111/128`.
 #' 
-#' -   To configure AWS WAF to allow, block, or count requests that
+#'   - To configure AWS WAF to allow, block, or count requests that
 #'     originated from IP addresses 1111:0000:0000:0000:0000:0000:0000:0000
 #'     to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
 #'     `1111:0000:0000:0000:0000:0000:0000:0000/64`.
@@ -460,9 +462,9 @@ wafv2_create_ip_set <- function(Name, Scope, Description = NULL, IPAddressVersio
 #' resources from the prior release, see the [AWS WAF Developer
 #' Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html).
 #' 
-#' Creates a RegexPatternSet, which you reference in a
-#' RegexPatternSetReferenceStatement, to have AWS WAF inspect a web request
-#' component for the specified patterns.
+#' Creates a <span>RegexPatternSet</span>, which you reference in a
+#' <span>RegexPatternSetReferenceStatement</span>, to have AWS WAF inspect
+#' a web request component for the specified patterns.
 #'
 #' @usage
 #' wafv2_create_regex_pattern_set(Name, Scope, Description,
@@ -477,10 +479,10 @@ wafv2_create_ip_set <- function(Name, Scope, Description = NULL, IPAddressVersio
 #' To work with CloudFront, you must also specify the Region US East (N.
 #' Virginia) as follows:
 #' 
-#' -   CLI - Specify the Region when you use the CloudFront scope:
+#'   - CLI - Specify the Region when you use the CloudFront scope:
 #'     `--scope=CLOUDFRONT --region=us-east-1`.
 #' 
-#' -   API and SDKs - For all calls, use the Region endpoint us-east-1.
+#'   - API and SDKs - For all calls, use the Region endpoint us-east-1.
 #' @param Description A description of the set that helps with identification. You cannot
 #' change the description of a set after you create it.
 #' @param RegularExpressionList &#91;required&#93; Array of regular expression strings.
@@ -549,13 +551,13 @@ wafv2_create_regex_pattern_set <- function(Name, Scope, Description = NULL, Regu
 #' resources from the prior release, see the [AWS WAF Developer
 #' Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html).
 #' 
-#' Creates a RuleGroup per the specifications provided.
+#' Creates a <span>RuleGroup</span> per the specifications provided.
 #' 
 #' A rule group defines a collection of rules to inspect and control web
-#' requests that you can use in a WebACL. When you create a rule group, you
-#' define an immutable capacity limit. If you update a rule group, you must
-#' stay within the capacity. This allows others to reuse the rule group
-#' with confidence in its capacity requirements.
+#' requests that you can use in a <span>WebACL</span>. When you create a
+#' rule group, you define an immutable capacity limit. If you update a rule
+#' group, you must stay within the capacity. This allows others to reuse
+#' the rule group with confidence in its capacity requirements.
 #'
 #' @usage
 #' wafv2_create_rule_group(Name, Scope, Capacity, Description, Rules,
@@ -570,10 +572,10 @@ wafv2_create_regex_pattern_set <- function(Name, Scope, Description = NULL, Regu
 #' To work with CloudFront, you must also specify the Region US East (N.
 #' Virginia) as follows:
 #' 
-#' -   CLI - Specify the Region when you use the CloudFront scope:
+#'   - CLI - Specify the Region when you use the CloudFront scope:
 #'     `--scope=CLOUDFRONT --region=us-east-1`.
 #' 
-#' -   API and SDKs - For all calls, use the Region endpoint us-east-1.
+#'   - API and SDKs - For all calls, use the Region endpoint us-east-1.
 #' @param Capacity &#91;required&#93; The web ACL capacity units (WCUs) required for this rule group.
 #' 
 #' When you create your own rule group, you define this, and you cannot
@@ -591,10 +593,10 @@ wafv2_create_regex_pattern_set <- function(Name, Scope, Description = NULL, Regu
 #' 1,500.
 #' @param Description A description of the rule group that helps with identification. You
 #' cannot change the description of a rule group after you create it.
-#' @param Rules The Rule statements used to identify the web requests that you want to
-#' allow, block, or count. Each rule includes one top-level statement that
-#' AWS WAF uses to identify matching web requests, and parameters that
-#' govern how AWS WAF handles them.
+#' @param Rules The <span>Rule</span> statements used to identify the web requests that
+#' you want to allow, block, or count. Each rule includes one top-level
+#' statement that AWS WAF uses to identify matching web requests, and
+#' parameters that govern how AWS WAF handles them.
 #' @param VisibilityConfig &#91;required&#93; Defines and enables Amazon CloudWatch metrics and web request sample
 #' collection.
 #' @param Tags An array of key:value pairs to associate with the resource.
@@ -851,17 +853,17 @@ wafv2_create_rule_group <- function(Name, Scope, Capacity, Description = NULL, R
 #' resources from the prior release, see the [AWS WAF Developer
 #' Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html).
 #' 
-#' Creates a WebACL per the specifications provided.
+#' Creates a <span>WebACL</span> per the specifications provided.
 #' 
 #' A Web ACL defines a collection of rules to use to inspect and control
 #' web requests. Each rule has an action defined (allow, block, or count)
 #' for requests that match the statement of the rule. In the Web ACL, you
 #' assign a default action to take (allow, block) for any request that does
 #' not match any of the rules. The rules in a Web ACL can be a combination
-#' of the types Rule, RuleGroup, and managed rule group. You can associate
-#' a Web ACL with one or more AWS resources to protect. The resources can
-#' be Amazon CloudFront, an Amazon API Gateway REST API, an Application
-#' Load Balancer, or an AWS AppSync GraphQL API.
+#' of the types <span>Rule</span>, <span>RuleGroup</span>, and managed rule
+#' group. You can associate a Web ACL with one or more AWS resources to
+#' protect. The resources can be Amazon CloudFront, an Amazon API Gateway
+#' REST API, an Application Load Balancer, or an AWS AppSync GraphQL API.
 #'
 #' @usage
 #' wafv2_create_web_acl(Name, Scope, DefaultAction, Description, Rules,
@@ -876,18 +878,18 @@ wafv2_create_rule_group <- function(Name, Scope, Capacity, Description = NULL, R
 #' To work with CloudFront, you must also specify the Region US East (N.
 #' Virginia) as follows:
 #' 
-#' -   CLI - Specify the Region when you use the CloudFront scope:
+#'   - CLI - Specify the Region when you use the CloudFront scope:
 #'     `--scope=CLOUDFRONT --region=us-east-1`.
 #' 
-#' -   API and SDKs - For all calls, use the Region endpoint us-east-1.
+#'   - API and SDKs - For all calls, use the Region endpoint us-east-1.
 #' @param DefaultAction &#91;required&#93; The action to perform if none of the `Rules` contained in the `WebACL`
 #' match.
 #' @param Description A description of the Web ACL that helps with identification. You cannot
 #' change the description of a Web ACL after you create it.
-#' @param Rules The Rule statements used to identify the web requests that you want to
-#' allow, block, or count. Each rule includes one top-level statement that
-#' AWS WAF uses to identify matching web requests, and parameters that
-#' govern how AWS WAF handles them.
+#' @param Rules The <span>Rule</span> statements used to identify the web requests that
+#' you want to allow, block, or count. Each rule includes one top-level
+#' statement that AWS WAF uses to identify matching web requests, and
+#' parameters that govern how AWS WAF handles them.
 #' @param VisibilityConfig &#91;required&#93; Defines and enables Amazon CloudWatch metrics and web request sample
 #' collection.
 #' @param Tags An array of key:value pairs to associate with the resource.
@@ -1146,7 +1148,7 @@ wafv2_create_web_acl <- function(Name, Scope, DefaultAction, Description = NULL,
 #' specified web ACL.
 #' 
 #' You can only use this if `ManagedByFirewallManager` is false in the
-#' specified WebACL.
+#' specified <span>WebACL</span>.
 #'
 #' @usage
 #' wafv2_delete_firewall_manager_rule_groups(WebACLArn, WebACLLockToken)
@@ -1206,7 +1208,7 @@ wafv2_delete_firewall_manager_rule_groups <- function(WebACLArn, WebACLLockToken
 #' resources from the prior release, see the [AWS WAF Developer
 #' Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html).
 #' 
-#' Deletes the specified IPSet.
+#' Deletes the specified <span>IPSet</span>.
 #'
 #' @usage
 #' wafv2_delete_ip_set(Name, Scope, Id, LockToken)
@@ -1220,10 +1222,10 @@ wafv2_delete_firewall_manager_rule_groups <- function(WebACLArn, WebACLLockToken
 #' To work with CloudFront, you must also specify the Region US East (N.
 #' Virginia) as follows:
 #' 
-#' -   CLI - Specify the Region when you use the CloudFront scope:
+#'   - CLI - Specify the Region when you use the CloudFront scope:
 #'     `--scope=CLOUDFRONT --region=us-east-1`.
 #' 
-#' -   API and SDKs - For all calls, use the Region endpoint us-east-1.
+#'   - API and SDKs - For all calls, use the Region endpoint us-east-1.
 #' @param Id &#91;required&#93; A unique identifier for the set. This ID is returned in the responses to
 #' create and list commands. You provide it to operations like update and
 #' delete.
@@ -1278,13 +1280,14 @@ wafv2_delete_ip_set <- function(Name, Scope, Id, LockToken) {
 #' resources from the prior release, see the [AWS WAF Developer
 #' Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html).
 #' 
-#' Deletes the LoggingConfiguration from the specified web ACL.
+#' Deletes the <span>LoggingConfiguration</span> from the specified web
+#' ACL.
 #'
 #' @usage
 #' wafv2_delete_logging_configuration(ResourceArn)
 #'
 #' @param ResourceArn &#91;required&#93; The Amazon Resource Name (ARN) of the web ACL from which you want to
-#' delete the LoggingConfiguration.
+#' delete the <span>LoggingConfiguration</span>.
 #'
 #' @return
 #' An empty list.
@@ -1370,7 +1373,7 @@ wafv2_delete_permission_policy <- function(ResourceArn) {
 #' resources from the prior release, see the [AWS WAF Developer
 #' Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html).
 #' 
-#' Deletes the specified RegexPatternSet.
+#' Deletes the specified <span>RegexPatternSet</span>.
 #'
 #' @usage
 #' wafv2_delete_regex_pattern_set(Name, Scope, Id, LockToken)
@@ -1384,10 +1387,10 @@ wafv2_delete_permission_policy <- function(ResourceArn) {
 #' To work with CloudFront, you must also specify the Region US East (N.
 #' Virginia) as follows:
 #' 
-#' -   CLI - Specify the Region when you use the CloudFront scope:
+#'   - CLI - Specify the Region when you use the CloudFront scope:
 #'     `--scope=CLOUDFRONT --region=us-east-1`.
 #' 
-#' -   API and SDKs - For all calls, use the Region endpoint us-east-1.
+#'   - API and SDKs - For all calls, use the Region endpoint us-east-1.
 #' @param Id &#91;required&#93; A unique identifier for the set. This ID is returned in the responses to
 #' create and list commands. You provide it to operations like update and
 #' delete.
@@ -1442,7 +1445,7 @@ wafv2_delete_regex_pattern_set <- function(Name, Scope, Id, LockToken) {
 #' resources from the prior release, see the [AWS WAF Developer
 #' Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html).
 #' 
-#' Deletes the specified RuleGroup.
+#' Deletes the specified <span>RuleGroup</span>.
 #'
 #' @usage
 #' wafv2_delete_rule_group(Name, Scope, Id, LockToken)
@@ -1456,10 +1459,10 @@ wafv2_delete_regex_pattern_set <- function(Name, Scope, Id, LockToken) {
 #' To work with CloudFront, you must also specify the Region US East (N.
 #' Virginia) as follows:
 #' 
-#' -   CLI - Specify the Region when you use the CloudFront scope:
+#'   - CLI - Specify the Region when you use the CloudFront scope:
 #'     `--scope=CLOUDFRONT --region=us-east-1`.
 #' 
-#' -   API and SDKs - For all calls, use the Region endpoint us-east-1.
+#'   - API and SDKs - For all calls, use the Region endpoint us-east-1.
 #' @param Id &#91;required&#93; A unique identifier for the rule group. This ID is returned in the
 #' responses to create and list commands. You provide it to operations like
 #' update and delete.
@@ -1514,10 +1517,10 @@ wafv2_delete_rule_group <- function(Name, Scope, Id, LockToken) {
 #' resources from the prior release, see the [AWS WAF Developer
 #' Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html).
 #' 
-#' Deletes the specified WebACL.
+#' Deletes the specified <span>WebACL</span>.
 #' 
 #' You can only use this if `ManagedByFirewallManager` is false in the
-#' specified WebACL.
+#' specified <span>WebACL</span>.
 #'
 #' @usage
 #' wafv2_delete_web_acl(Name, Scope, Id, LockToken)
@@ -1531,10 +1534,10 @@ wafv2_delete_rule_group <- function(Name, Scope, Id, LockToken) {
 #' To work with CloudFront, you must also specify the Region US East (N.
 #' Virginia) as follows:
 #' 
-#' -   CLI - Specify the Region when you use the CloudFront scope:
+#'   - CLI - Specify the Region when you use the CloudFront scope:
 #'     `--scope=CLOUDFRONT --region=us-east-1`.
 #' 
-#' -   API and SDKs - For all calls, use the Region endpoint us-east-1.
+#'   - API and SDKs - For all calls, use the Region endpoint us-east-1.
 #' @param Id &#91;required&#93; The unique identifier for the Web ACL. This ID is returned in the
 #' responses to create and list commands. You provide it to operations like
 #' update and delete.
@@ -1606,10 +1609,10 @@ wafv2_delete_web_acl <- function(Name, Scope, Id, LockToken) {
 #' To work with CloudFront, you must also specify the Region US East (N.
 #' Virginia) as follows:
 #' 
-#' -   CLI - Specify the Region when you use the CloudFront scope:
+#'   - CLI - Specify the Region when you use the CloudFront scope:
 #'     `--scope=CLOUDFRONT --region=us-east-1`.
 #' 
-#' -   API and SDKs - For all calls, use the Region endpoint us-east-1.
+#'   - API and SDKs - For all calls, use the Region endpoint us-east-1.
 #'
 #' @return
 #' A list with the following syntax:
@@ -1685,14 +1688,15 @@ wafv2_describe_managed_rule_group <- function(VendorName, Name, Scope) {
 #' 
 #' The ARN must be in one of the following formats:
 #' 
-#' -   For an Application Load Balancer:
-#'     `arn:aws:elasticloadbalancing:region:account-id:loadbalancer/app/load-balancer-name/load-balancer-id `
+#'   - For an Application Load Balancer:
+#'     ` arn:aws:elasticloadbalancing:region:account-id:loadbalancer/app/load-balancer-name/load-balancer-id
+#'      `
 #' 
-#' -   For an API Gateway REST API:
-#'     `arn:aws:apigateway:region::/restapis/api-id/stages/stage-name `
+#'   - For an API Gateway REST API:
+#'     ` arn:aws:apigateway:region::/restapis/api-id/stages/stage-name  `
 #' 
-#' -   For an AppSync GraphQL API:
-#'     `arn:aws:appsync:region:account-id:apis/GraphQLApiId `
+#'   - For an AppSync GraphQL API:
+#'     ` arn:aws:appsync:region:account-id:apis/GraphQLApiId  `
 #'
 #' @return
 #' An empty list.
@@ -1733,7 +1737,7 @@ wafv2_disassociate_web_acl <- function(ResourceArn) {
 #' resources from the prior release, see the [AWS WAF Developer
 #' Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html).
 #' 
-#' Retrieves the specified IPSet.
+#' Retrieves the specified <span>IPSet</span>.
 #'
 #' @usage
 #' wafv2_get_ip_set(Name, Scope, Id)
@@ -1747,10 +1751,10 @@ wafv2_disassociate_web_acl <- function(ResourceArn) {
 #' To work with CloudFront, you must also specify the Region US East (N.
 #' Virginia) as follows:
 #' 
-#' -   CLI - Specify the Region when you use the CloudFront scope:
+#'   - CLI - Specify the Region when you use the CloudFront scope:
 #'     `--scope=CLOUDFRONT --region=us-east-1`.
 #' 
-#' -   API and SDKs - For all calls, use the Region endpoint us-east-1.
+#'   - API and SDKs - For all calls, use the Region endpoint us-east-1.
 #' @param Id &#91;required&#93; A unique identifier for the set. This ID is returned in the responses to
 #' create and list commands. You provide it to operations like update and
 #' delete.
@@ -1811,13 +1815,13 @@ wafv2_get_ip_set <- function(Name, Scope, Id) {
 #' resources from the prior release, see the [AWS WAF Developer
 #' Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html).
 #' 
-#' Returns the LoggingConfiguration for the specified web ACL.
+#' Returns the <span>LoggingConfiguration</span> for the specified web ACL.
 #'
 #' @usage
 #' wafv2_get_logging_configuration(ResourceArn)
 #'
 #' @param ResourceArn &#91;required&#93; The Amazon Resource Name (ARN) of the web ACL for which you want to get
-#' the LoggingConfiguration.
+#' the <span>LoggingConfiguration</span>.
 #'
 #' @return
 #' A list with the following syntax:
@@ -1948,10 +1952,10 @@ wafv2_get_permission_policy <- function(ResourceArn) {
 #' To work with CloudFront, you must also specify the Region US East (N.
 #' Virginia) as follows:
 #' 
-#' -   CLI - Specify the Region when you use the CloudFront scope:
+#'   - CLI - Specify the Region when you use the CloudFront scope:
 #'     `--scope=CLOUDFRONT --region=us-east-1`.
 #' 
-#' -   API and SDKs - For all calls, use the Region endpoint us-east-1.
+#'   - API and SDKs - For all calls, use the Region endpoint us-east-1.
 #' @param WebACLName &#91;required&#93; The name of the Web ACL. You cannot change the name of a Web ACL after
 #' you create it.
 #' @param WebACLId &#91;required&#93; The unique identifier for the Web ACL. This ID is returned in the
@@ -2017,7 +2021,7 @@ wafv2_get_rate_based_statement_managed_keys <- function(Scope, WebACLName, WebAC
 #' resources from the prior release, see the [AWS WAF Developer
 #' Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html).
 #' 
-#' Retrieves the specified RegexPatternSet.
+#' Retrieves the specified <span>RegexPatternSet</span>.
 #'
 #' @usage
 #' wafv2_get_regex_pattern_set(Name, Scope, Id)
@@ -2031,10 +2035,10 @@ wafv2_get_rate_based_statement_managed_keys <- function(Scope, WebACLName, WebAC
 #' To work with CloudFront, you must also specify the Region US East (N.
 #' Virginia) as follows:
 #' 
-#' -   CLI - Specify the Region when you use the CloudFront scope:
+#'   - CLI - Specify the Region when you use the CloudFront scope:
 #'     `--scope=CLOUDFRONT --region=us-east-1`.
 #' 
-#' -   API and SDKs - For all calls, use the Region endpoint us-east-1.
+#'   - API and SDKs - For all calls, use the Region endpoint us-east-1.
 #' @param Id &#91;required&#93; A unique identifier for the set. This ID is returned in the responses to
 #' create and list commands. You provide it to operations like update and
 #' delete.
@@ -2096,7 +2100,7 @@ wafv2_get_regex_pattern_set <- function(Name, Scope, Id) {
 #' resources from the prior release, see the [AWS WAF Developer
 #' Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html).
 #' 
-#' Retrieves the specified RuleGroup.
+#' Retrieves the specified <span>RuleGroup</span>.
 #'
 #' @usage
 #' wafv2_get_rule_group(Name, Scope, Id)
@@ -2110,10 +2114,10 @@ wafv2_get_regex_pattern_set <- function(Name, Scope, Id) {
 #' To work with CloudFront, you must also specify the Region US East (N.
 #' Virginia) as follows:
 #' 
-#' -   CLI - Specify the Region when you use the CloudFront scope:
+#'   - CLI - Specify the Region when you use the CloudFront scope:
 #'     `--scope=CLOUDFRONT --region=us-east-1`.
 #' 
-#' -   API and SDKs - For all calls, use the Region endpoint us-east-1.
+#'   - API and SDKs - For all calls, use the Region endpoint us-east-1.
 #' @param Id &#91;required&#93; A unique identifier for the rule group. This ID is returned in the
 #' responses to create and list commands. You provide it to operations like
 #' update and delete.
@@ -2393,10 +2397,10 @@ wafv2_get_rule_group <- function(Name, Scope, Id) {
 #' To work with CloudFront, you must also specify the Region US East (N.
 #' Virginia) as follows:
 #' 
-#' -   CLI - Specify the Region when you use the CloudFront scope:
+#'   - CLI - Specify the Region when you use the CloudFront scope:
 #'     `--scope=CLOUDFRONT --region=us-east-1`.
 #' 
-#' -   API and SDKs - For all calls, use the Region endpoint us-east-1.
+#'   - API and SDKs - For all calls, use the Region endpoint us-east-1.
 #' @param TimeWindow &#91;required&#93; The start date and time and the end date and time of the range for which
 #' you want [`get_sampled_requests`][wafv2_get_sampled_requests] to return
 #' a sample of requests. You must specify the times in Coordinated
@@ -2495,7 +2499,7 @@ wafv2_get_sampled_requests <- function(WebAclArn, RuleMetricName, Scope, TimeWin
 #' resources from the prior release, see the [AWS WAF Developer
 #' Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html).
 #' 
-#' Retrieves the specified WebACL.
+#' Retrieves the specified <span>WebACL</span>.
 #'
 #' @usage
 #' wafv2_get_web_acl(Name, Scope, Id)
@@ -2509,10 +2513,10 @@ wafv2_get_sampled_requests <- function(WebAclArn, RuleMetricName, Scope, TimeWin
 #' To work with CloudFront, you must also specify the Region US East (N.
 #' Virginia) as follows:
 #' 
-#' -   CLI - Specify the Region when you use the CloudFront scope:
+#'   - CLI - Specify the Region when you use the CloudFront scope:
 #'     `--scope=CLOUDFRONT --region=us-east-1`.
 #' 
-#' -   API and SDKs - For all calls, use the Region endpoint us-east-1.
+#'   - API and SDKs - For all calls, use the Region endpoint us-east-1.
 #' @param Id &#91;required&#93; The unique identifier for the Web ACL. This ID is returned in the
 #' responses to create and list commands. You provide it to operations like
 #' update and delete.
@@ -2836,7 +2840,7 @@ wafv2_get_web_acl <- function(Name, Scope, Id) {
 #' resources from the prior release, see the [AWS WAF Developer
 #' Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html).
 #' 
-#' Retrieves the WebACL for the specified resource.
+#' Retrieves the <span>WebACL</span> for the specified resource.
 #'
 #' @usage
 #' wafv2_get_web_acl_for_resource(ResourceArn)
@@ -3173,10 +3177,10 @@ wafv2_get_web_acl_for_resource <- function(ResourceArn) {
 #' To work with CloudFront, you must also specify the Region US East (N.
 #' Virginia) as follows:
 #' 
-#' -   CLI - Specify the Region when you use the CloudFront scope:
+#'   - CLI - Specify the Region when you use the CloudFront scope:
 #'     `--scope=CLOUDFRONT --region=us-east-1`.
 #' 
-#' -   API and SDKs - For all calls, use the Region endpoint us-east-1.
+#'   - API and SDKs - For all calls, use the Region endpoint us-east-1.
 #' @param NextMarker When you request a list of objects with a `Limit` setting, if the number
 #' of objects that are still available for retrieval exceeds the limit, AWS
 #' WAF returns a `NextMarker` value in the response. To retrieve the next
@@ -3240,8 +3244,8 @@ wafv2_list_available_managed_rule_groups <- function(Scope, NextMarker = NULL, L
 #' resources from the prior release, see the [AWS WAF Developer
 #' Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html).
 #' 
-#' Retrieves an array of IPSetSummary objects for the IP sets that you
-#' manage.
+#' Retrieves an array of <span>IPSetSummary</span> objects for the IP sets
+#' that you manage.
 #'
 #' @usage
 #' wafv2_list_ip_sets(Scope, NextMarker, Limit)
@@ -3253,10 +3257,10 @@ wafv2_list_available_managed_rule_groups <- function(Scope, NextMarker = NULL, L
 #' To work with CloudFront, you must also specify the Region US East (N.
 #' Virginia) as follows:
 #' 
-#' -   CLI - Specify the Region when you use the CloudFront scope:
+#'   - CLI - Specify the Region when you use the CloudFront scope:
 #'     `--scope=CLOUDFRONT --region=us-east-1`.
 #' 
-#' -   API and SDKs - For all calls, use the Region endpoint us-east-1.
+#'   - API and SDKs - For all calls, use the Region endpoint us-east-1.
 #' @param NextMarker When you request a list of objects with a `Limit` setting, if the number
 #' of objects that are still available for retrieval exceeds the limit, AWS
 #' WAF returns a `NextMarker` value in the response. To retrieve the next
@@ -3322,7 +3326,7 @@ wafv2_list_ip_sets <- function(Scope, NextMarker = NULL, Limit = NULL) {
 #' resources from the prior release, see the [AWS WAF Developer
 #' Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html).
 #' 
-#' Retrieves an array of your LoggingConfiguration objects.
+#' Retrieves an array of your <span>LoggingConfiguration</span> objects.
 #'
 #' @usage
 #' wafv2_list_logging_configurations(Scope, NextMarker, Limit)
@@ -3334,10 +3338,10 @@ wafv2_list_ip_sets <- function(Scope, NextMarker = NULL, Limit = NULL) {
 #' To work with CloudFront, you must also specify the Region US East (N.
 #' Virginia) as follows:
 #' 
-#' -   CLI - Specify the Region when you use the CloudFront scope:
+#'   - CLI - Specify the Region when you use the CloudFront scope:
 #'     `--scope=CLOUDFRONT --region=us-east-1`.
 #' 
-#' -   API and SDKs - For all calls, use the Region endpoint us-east-1.
+#'   - API and SDKs - For all calls, use the Region endpoint us-east-1.
 #' @param NextMarker When you request a list of objects with a `Limit` setting, if the number
 #' of objects that are still available for retrieval exceeds the limit, AWS
 #' WAF returns a `NextMarker` value in the response. To retrieve the next
@@ -3418,8 +3422,8 @@ wafv2_list_logging_configurations <- function(Scope = NULL, NextMarker = NULL, L
 #' resources from the prior release, see the [AWS WAF Developer
 #' Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html).
 #' 
-#' Retrieves an array of RegexPatternSetSummary objects for the regex
-#' pattern sets that you manage.
+#' Retrieves an array of <span>RegexPatternSetSummary</span> objects for
+#' the regex pattern sets that you manage.
 #'
 #' @usage
 #' wafv2_list_regex_pattern_sets(Scope, NextMarker, Limit)
@@ -3431,10 +3435,10 @@ wafv2_list_logging_configurations <- function(Scope = NULL, NextMarker = NULL, L
 #' To work with CloudFront, you must also specify the Region US East (N.
 #' Virginia) as follows:
 #' 
-#' -   CLI - Specify the Region when you use the CloudFront scope:
+#'   - CLI - Specify the Region when you use the CloudFront scope:
 #'     `--scope=CLOUDFRONT --region=us-east-1`.
 #' 
-#' -   API and SDKs - For all calls, use the Region endpoint us-east-1.
+#'   - API and SDKs - For all calls, use the Region endpoint us-east-1.
 #' @param NextMarker When you request a list of objects with a `Limit` setting, if the number
 #' of objects that are still available for retrieval exceeds the limit, AWS
 #' WAF returns a `NextMarker` value in the response. To retrieve the next
@@ -3560,8 +3564,8 @@ wafv2_list_resources_for_web_acl <- function(WebACLArn, ResourceType = NULL) {
 #' resources from the prior release, see the [AWS WAF Developer
 #' Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html).
 #' 
-#' Retrieves an array of RuleGroupSummary objects for the rule groups that
-#' you manage.
+#' Retrieves an array of <span>RuleGroupSummary</span> objects for the rule
+#' groups that you manage.
 #'
 #' @usage
 #' wafv2_list_rule_groups(Scope, NextMarker, Limit)
@@ -3573,10 +3577,10 @@ wafv2_list_resources_for_web_acl <- function(WebACLArn, ResourceType = NULL) {
 #' To work with CloudFront, you must also specify the Region US East (N.
 #' Virginia) as follows:
 #' 
-#' -   CLI - Specify the Region when you use the CloudFront scope:
+#'   - CLI - Specify the Region when you use the CloudFront scope:
 #'     `--scope=CLOUDFRONT --region=us-east-1`.
 #' 
-#' -   API and SDKs - For all calls, use the Region endpoint us-east-1.
+#'   - API and SDKs - For all calls, use the Region endpoint us-east-1.
 #' @param NextMarker When you request a list of objects with a `Limit` setting, if the number
 #' of objects that are still available for retrieval exceeds the limit, AWS
 #' WAF returns a `NextMarker` value in the response. To retrieve the next
@@ -3642,12 +3646,12 @@ wafv2_list_rule_groups <- function(Scope, NextMarker = NULL, Limit = NULL) {
 #' resources from the prior release, see the [AWS WAF Developer
 #' Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html).
 #' 
-#' Retrieves the TagInfoForResource for the specified resource. Tags are
-#' key:value pairs that you can use to categorize and manage your
-#' resources, for purposes like billing. For example, you might set the tag
-#' key to "customer" and the value to the customer name or ID. You can
-#' specify one or more tags to add to each AWS resource, up to 50 tags for
-#' a resource.
+#' Retrieves the <span>TagInfoForResource</span> for the specified
+#' resource. Tags are key:value pairs that you can use to categorize and
+#' manage your resources, for purposes like billing. For example, you might
+#' set the tag key to "customer" and the value to the customer name or ID.
+#' You can specify one or more tags to add to each AWS resource, up to 50
+#' tags for a resource.
 #' 
 #' You can tag the AWS resources that you manage through AWS WAF: web ACLs,
 #' rule groups, IP sets, and regex pattern sets. You can't manage or view
@@ -3722,8 +3726,8 @@ wafv2_list_tags_for_resource <- function(NextMarker = NULL, Limit = NULL, Resour
 #' resources from the prior release, see the [AWS WAF Developer
 #' Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html).
 #' 
-#' Retrieves an array of WebACLSummary objects for the web ACLs that you
-#' manage.
+#' Retrieves an array of <span>WebACLSummary</span> objects for the web
+#' ACLs that you manage.
 #'
 #' @usage
 #' wafv2_list_web_ac_ls(Scope, NextMarker, Limit)
@@ -3735,10 +3739,10 @@ wafv2_list_tags_for_resource <- function(NextMarker = NULL, Limit = NULL, Resour
 #' To work with CloudFront, you must also specify the Region US East (N.
 #' Virginia) as follows:
 #' 
-#' -   CLI - Specify the Region when you use the CloudFront scope:
+#'   - CLI - Specify the Region when you use the CloudFront scope:
 #'     `--scope=CLOUDFRONT --region=us-east-1`.
 #' 
-#' -   API and SDKs - For all calls, use the Region endpoint us-east-1.
+#'   - API and SDKs - For all calls, use the Region endpoint us-east-1.
 #' @param NextMarker When you request a list of objects with a `Limit` setting, if the number
 #' of objects that are still available for retrieval exceeds the limit, AWS
 #' WAF returns a `NextMarker` value in the response. To retrieve the next
@@ -3804,21 +3808,21 @@ wafv2_list_web_ac_ls <- function(Scope, NextMarker = NULL, Limit = NULL) {
 #' resources from the prior release, see the [AWS WAF Developer
 #' Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html).
 #' 
-#' Enables the specified LoggingConfiguration, to start logging from a web
-#' ACL, according to the configuration provided.
+#' Enables the specified <span>LoggingConfiguration</span>, to start
+#' logging from a web ACL, according to the configuration provided.
 #' 
 #' You can access information about all traffic that AWS WAF inspects using
 #' the following steps:
 #' 
 #' 1.  Create an Amazon Kinesis Data Firehose.
-#' 
+#'     
 #'     Create the data firehose with a PUT source and in the Region that
 #'     you are operating. If you are capturing logs for Amazon CloudFront,
 #'     always create the firehose in US East (N. Virginia).
-#' 
+#'     
 #'     Give the data firehose a name that starts with the prefix
 #'     `aws-waf-logs-`. For example, `aws-waf-logs-us-east-2-analytics`.
-#' 
+#'     
 #'     Do not create the data firehose using a `Kinesis stream` as your
 #'     source.
 #' 
@@ -3926,36 +3930,36 @@ wafv2_put_logging_configuration <- function(LoggingConfiguration) {
 #' 
 #' This action is subject to the following restrictions:
 #' 
-#' -   You can attach only one policy with each
+#'   - You can attach only one policy with each
 #'     [`put_permission_policy`][wafv2_put_permission_policy] request.
 #' 
-#' -   The ARN in the request must be a valid WAF RuleGroup ARN and the
-#'     rule group must exist in the same region.
+#'   - The ARN in the request must be a valid WAF <span>RuleGroup</span>
+#'     ARN and the rule group must exist in the same region.
 #' 
-#' -   The user making the request must be the owner of the rule group.
+#'   - The user making the request must be the owner of the rule group.
 #'
 #' @usage
 #' wafv2_put_permission_policy(ResourceArn, Policy)
 #'
-#' @param ResourceArn &#91;required&#93; The Amazon Resource Name (ARN) of the RuleGroup to which you want to
-#' attach the policy.
+#' @param ResourceArn &#91;required&#93; The Amazon Resource Name (ARN) of the <span>RuleGroup</span> to which
+#' you want to attach the policy.
 #' @param Policy &#91;required&#93; The policy to attach to the specified rule group.
 #' 
 #' The policy specifications must conform to the following:
 #' 
-#' -   The policy must be composed using IAM Policy version 2012-10-17 or
+#'   - The policy must be composed using IAM Policy version 2012-10-17 or
 #'     version 2015-01-01.
 #' 
-#' -   The policy must include specifications for `Effect`, `Action`, and
+#'   - The policy must include specifications for `Effect`, `Action`, and
 #'     `Principal`.
 #' 
-#' -   `Effect` must specify `Allow`.
+#'   - `Effect` must specify `Allow`.
 #' 
-#' -   `Action` must specify `wafv2:CreateWebACL`, `wafv2:UpdateWebACL`,
+#'   - `Action` must specify `wafv2:CreateWebACL`, `wafv2:UpdateWebACL`,
 #'     and `wafv2:PutFirewallManagerRuleGroups`. AWS WAF rejects any extra
 #'     actions or wildcard actions in the policy.
 #' 
-#' -   The policy must not include a `Resource` parameter.
+#'   - The policy must not include a `Resource` parameter.
 #' 
 #' For more information, see [IAM
 #' Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html).
@@ -4115,7 +4119,7 @@ wafv2_untag_resource <- function(ResourceARN, TagKeys) {
 #' resources from the prior release, see the [AWS WAF Developer
 #' Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html).
 #' 
-#' Updates the specified IPSet.
+#' Updates the specified <span>IPSet</span>.
 #'
 #' @usage
 #' wafv2_update_ip_set(Name, Scope, Id, Description, Addresses, LockToken)
@@ -4129,10 +4133,10 @@ wafv2_untag_resource <- function(ResourceARN, TagKeys) {
 #' To work with CloudFront, you must also specify the Region US East (N.
 #' Virginia) as follows:
 #' 
-#' -   CLI - Specify the Region when you use the CloudFront scope:
+#'   - CLI - Specify the Region when you use the CloudFront scope:
 #'     `--scope=CLOUDFRONT --region=us-east-1`.
 #' 
-#' -   API and SDKs - For all calls, use the Region endpoint us-east-1.
+#'   - API and SDKs - For all calls, use the Region endpoint us-east-1.
 #' @param Id &#91;required&#93; A unique identifier for the set. This ID is returned in the responses to
 #' create and list commands. You provide it to operations like update and
 #' delete.
@@ -4145,19 +4149,19 @@ wafv2_untag_resource <- function(ResourceARN, TagKeys) {
 #' 
 #' Examples:
 #' 
-#' -   To configure AWS WAF to allow, block, or count requests that
+#'   - To configure AWS WAF to allow, block, or count requests that
 #'     originated from the IP address 192.0.2.44, specify `192.0.2.44/32`.
 #' 
-#' -   To configure AWS WAF to allow, block, or count requests that
+#'   - To configure AWS WAF to allow, block, or count requests that
 #'     originated from IP addresses from 192.0.2.0 to 192.0.2.255, specify
 #'     `192.0.2.0/24`.
 #' 
-#' -   To configure AWS WAF to allow, block, or count requests that
+#'   - To configure AWS WAF to allow, block, or count requests that
 #'     originated from the IP address
 #'     1111:0000:0000:0000:0000:0000:0000:0111, specify
 #'     `1111:0000:0000:0000:0000:0000:0000:0111/128`.
 #' 
-#' -   To configure AWS WAF to allow, block, or count requests that
+#'   - To configure AWS WAF to allow, block, or count requests that
 #'     originated from IP addresses 1111:0000:0000:0000:0000:0000:0000:0000
 #'     to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify
 #'     `1111:0000:0000:0000:0000:0000:0000:0000/64`.
@@ -4225,7 +4229,7 @@ wafv2_update_ip_set <- function(Name, Scope, Id, Description = NULL, Addresses, 
 #' resources from the prior release, see the [AWS WAF Developer
 #' Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html).
 #' 
-#' Updates the specified RegexPatternSet.
+#' Updates the specified <span>RegexPatternSet</span>.
 #'
 #' @usage
 #' wafv2_update_regex_pattern_set(Name, Scope, Id, Description,
@@ -4240,10 +4244,10 @@ wafv2_update_ip_set <- function(Name, Scope, Id, Description = NULL, Addresses, 
 #' To work with CloudFront, you must also specify the Region US East (N.
 #' Virginia) as follows:
 #' 
-#' -   CLI - Specify the Region when you use the CloudFront scope:
+#'   - CLI - Specify the Region when you use the CloudFront scope:
 #'     `--scope=CLOUDFRONT --region=us-east-1`.
 #' 
-#' -   API and SDKs - For all calls, use the Region endpoint us-east-1.
+#'   - API and SDKs - For all calls, use the Region endpoint us-east-1.
 #' @param Id &#91;required&#93; A unique identifier for the set. This ID is returned in the responses to
 #' create and list commands. You provide it to operations like update and
 #' delete.
@@ -4312,13 +4316,13 @@ wafv2_update_regex_pattern_set <- function(Name, Scope, Id, Description = NULL, 
 #' resources from the prior release, see the [AWS WAF Developer
 #' Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html).
 #' 
-#' Updates the specified RuleGroup.
+#' Updates the specified <span>RuleGroup</span>.
 #' 
 #' A rule group defines a collection of rules to inspect and control web
-#' requests that you can use in a WebACL. When you create a rule group, you
-#' define an immutable capacity limit. If you update a rule group, you must
-#' stay within the capacity. This allows others to reuse the rule group
-#' with confidence in its capacity requirements.
+#' requests that you can use in a <span>WebACL</span>. When you create a
+#' rule group, you define an immutable capacity limit. If you update a rule
+#' group, you must stay within the capacity. This allows others to reuse
+#' the rule group with confidence in its capacity requirements.
 #'
 #' @usage
 #' wafv2_update_rule_group(Name, Scope, Id, Description, Rules,
@@ -4333,19 +4337,19 @@ wafv2_update_regex_pattern_set <- function(Name, Scope, Id, Description = NULL, 
 #' To work with CloudFront, you must also specify the Region US East (N.
 #' Virginia) as follows:
 #' 
-#' -   CLI - Specify the Region when you use the CloudFront scope:
+#'   - CLI - Specify the Region when you use the CloudFront scope:
 #'     `--scope=CLOUDFRONT --region=us-east-1`.
 #' 
-#' -   API and SDKs - For all calls, use the Region endpoint us-east-1.
+#'   - API and SDKs - For all calls, use the Region endpoint us-east-1.
 #' @param Id &#91;required&#93; A unique identifier for the rule group. This ID is returned in the
 #' responses to create and list commands. You provide it to operations like
 #' update and delete.
 #' @param Description A description of the rule group that helps with identification. You
 #' cannot change the description of a rule group after you create it.
-#' @param Rules The Rule statements used to identify the web requests that you want to
-#' allow, block, or count. Each rule includes one top-level statement that
-#' AWS WAF uses to identify matching web requests, and parameters that
-#' govern how AWS WAF handles them.
+#' @param Rules The <span>Rule</span> statements used to identify the web requests that
+#' you want to allow, block, or count. Each rule includes one top-level
+#' statement that AWS WAF uses to identify matching web requests, and
+#' parameters that govern how AWS WAF handles them.
 #' @param VisibilityConfig &#91;required&#93; Defines and enables Amazon CloudWatch metrics and web request sample
 #' collection.
 #' @param LockToken &#91;required&#93; A token used for optimistic locking. AWS WAF returns a token to your get
@@ -4598,17 +4602,17 @@ wafv2_update_rule_group <- function(Name, Scope, Id, Description = NULL, Rules =
 #' resources from the prior release, see the [AWS WAF Developer
 #' Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html).
 #' 
-#' Updates the specified WebACL.
+#' Updates the specified <span>WebACL</span>.
 #' 
 #' A Web ACL defines a collection of rules to use to inspect and control
 #' web requests. Each rule has an action defined (allow, block, or count)
 #' for requests that match the statement of the rule. In the Web ACL, you
 #' assign a default action to take (allow, block) for any request that does
 #' not match any of the rules. The rules in a Web ACL can be a combination
-#' of the types Rule, RuleGroup, and managed rule group. You can associate
-#' a Web ACL with one or more AWS resources to protect. The resources can
-#' be Amazon CloudFront, an Amazon API Gateway REST API, an Application
-#' Load Balancer, or an AWS AppSync GraphQL API.
+#' of the types <span>Rule</span>, <span>RuleGroup</span>, and managed rule
+#' group. You can associate a Web ACL with one or more AWS resources to
+#' protect. The resources can be Amazon CloudFront, an Amazon API Gateway
+#' REST API, an Application Load Balancer, or an AWS AppSync GraphQL API.
 #'
 #' @usage
 #' wafv2_update_web_acl(Name, Scope, Id, DefaultAction, Description, Rules,
@@ -4623,10 +4627,10 @@ wafv2_update_rule_group <- function(Name, Scope, Id, Description = NULL, Rules =
 #' To work with CloudFront, you must also specify the Region US East (N.
 #' Virginia) as follows:
 #' 
-#' -   CLI - Specify the Region when you use the CloudFront scope:
+#'   - CLI - Specify the Region when you use the CloudFront scope:
 #'     `--scope=CLOUDFRONT --region=us-east-1`.
 #' 
-#' -   API and SDKs - For all calls, use the Region endpoint us-east-1.
+#'   - API and SDKs - For all calls, use the Region endpoint us-east-1.
 #' @param Id &#91;required&#93; The unique identifier for the Web ACL. This ID is returned in the
 #' responses to create and list commands. You provide it to operations like
 #' update and delete.
@@ -4634,10 +4638,10 @@ wafv2_update_rule_group <- function(Name, Scope, Id, Description = NULL, Rules =
 #' match.
 #' @param Description A description of the Web ACL that helps with identification. You cannot
 #' change the description of a Web ACL after you create it.
-#' @param Rules The Rule statements used to identify the web requests that you want to
-#' allow, block, or count. Each rule includes one top-level statement that
-#' AWS WAF uses to identify matching web requests, and parameters that
-#' govern how AWS WAF handles them.
+#' @param Rules The <span>Rule</span> statements used to identify the web requests that
+#' you want to allow, block, or count. Each rule includes one top-level
+#' statement that AWS WAF uses to identify matching web requests, and
+#' parameters that govern how AWS WAF handles them.
 #' @param VisibilityConfig &#91;required&#93; Defines and enables Amazon CloudWatch metrics and web request sample
 #' collection.
 #' @param LockToken &#91;required&#93; A token used for optimistic locking. AWS WAF returns a token to your get

@@ -13,8 +13,8 @@ format, see \href{https://docs.aws.amazon.com/apigateway/latest/developerguide/a
 \item{format}{[required] A query parameter to specify the input format to imported API keys.
 Currently, only the \code{csv} format is supported.}
 
-\item{failOnWarnings}{A query parameter to indicate whether to rollback ApiKey importation
-(\code{true}) or not (\code{false}) when error is encountered.}
+\item{failOnWarnings}{A query parameter to indicate whether to rollback <span>ApiKey</span>
+importation (\code{true}) or not (\code{false}) when error is encountered.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

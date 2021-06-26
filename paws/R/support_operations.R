@@ -13,10 +13,10 @@ NULL
 #' it's created. The `expiryTime` returned in the response is when the set
 #' expires.
 #' 
-#' -   You must have a Business or Enterprise support plan to use the AWS
+#'   - You must have a Business or Enterprise support plan to use the AWS
 #'     Support API.
 #' 
-#' -   If you call the AWS Support API from an account that does not have a
+#'   - If you call the AWS Support API from an account that does not have a
 #'     Business or Enterprise support plan, the
 #'     `SubscriptionRequiredException` error message appears. For
 #'     information about changing your support plan, see [AWS
@@ -89,10 +89,10 @@ support_add_attachments_to_set <- function(attachmentSetId = NULL, attachments) 
 #' using the `ccEmailAddresses` parameter. The `communicationBody` value
 #' contains the text of the communication.
 #' 
-#' -   You must have a Business or Enterprise support plan to use the AWS
+#'   - You must have a Business or Enterprise support plan to use the AWS
 #'     Support API.
 #' 
-#' -   If you call the AWS Support API from an account that does not have a
+#'   - If you call the AWS Support API from an account that does not have a
 #'     Business or Enterprise support plan, the
 #'     `SubscriptionRequiredException` error message appears. For
 #'     information about changing your support plan, see [AWS
@@ -156,14 +156,16 @@ support_add_communication_to_case <- function(caseId = NULL, communicationBody, 
 #'
 #' @description
 #' Creates a case in the AWS Support Center. This operation is similar to
-#' how you create a case in the AWS Support Center Create Case page.
+#' how you create a case in the AWS Support Center <span>Create Case</span>
+#' page.
 #' 
 #' The AWS Support API doesn't support requesting service limit increases.
 #' You can submit a service limit increase in the following ways:
 #' 
-#' -   Submit a request from the AWS Support Center Create Case page.
+#'   - Submit a request from the AWS Support Center <span>Create
+#'     Case</span> page.
 #' 
-#' -   Use the Service Quotas
+#'   - Use the Service Quotas
 #'     [RequestServiceQuotaIncrease](https://docs.aws.amazon.com/servicequotas/2019-06-24/apireference/API_RequestServiceQuotaIncrease.html)
 #'     operation.
 #' 
@@ -175,14 +177,15 @@ support_add_communication_to_case <- function(caseId = NULL, communicationBody, 
 #' operation to add additional communication or attachments to an existing
 #' case.
 #' 
-#' The `caseId` is separate from the `displayId` that appears in the AWS
-#' Support Center. Use the [`describe_cases`][support_describe_cases]
-#' operation to get the `displayId`.
+#' The `caseId` is separate from the `displayId` that appears in the
+#' <span>AWS Support Center</span>. Use the
+#' [`describe_cases`][support_describe_cases] operation to get the
+#' `displayId`.
 #' 
-#' -   You must have a Business or Enterprise support plan to use the AWS
+#'   - You must have a Business or Enterprise support plan to use the AWS
 #'     Support API.
 #' 
-#' -   If you call the AWS Support API from an account that does not have a
+#'   - If you call the AWS Support API from an account that does not have a
 #'     Business or Enterprise support plan, the
 #'     `SubscriptionRequiredException` error message appears. For
 #'     information about changing your support plan, see [AWS
@@ -194,7 +197,7 @@ support_add_communication_to_case <- function(caseId = NULL, communicationBody, 
 #'   attachmentSetId)
 #'
 #' @param subject &#91;required&#93; The title of the AWS Support case. The title appears in the **Subject**
-#' field on the AWS Support Center Create Case page.
+#' field on the AWS Support Center <span>Create Case</span> page.
 #' @param serviceCode The code for the AWS service. You can use the
 #' [`describe_services`][support_describe_services] operation to get the
 #' possible `serviceCode` values.
@@ -204,7 +207,7 @@ support_add_communication_to_case <- function(caseId = NULL, communicationBody, 
 #' [`describe_severity_levels`][support_describe_severity_levels] operation
 #' to get the possible values for `severityCode`.
 #' 
-#' For more information, see SeverityLevel and [Choosing a
+#' For more information, see <span>SeverityLevel</span> and [Choosing a
 #' Severity](https://docs.aws.amazon.com/awssupport/latest/user/getting-started.html#choosing-severity)
 #' in the *AWS Support User Guide*.
 #' 
@@ -215,7 +218,8 @@ support_add_communication_to_case <- function(caseId = NULL, communicationBody, 
 #' category code for a service. Each AWS service defines its own set of
 #' category codes.
 #' @param communicationBody &#91;required&#93; The communication body text that describes the issue. This text appears
-#' in the **Description** field on the AWS Support Center Create Case page.
+#' in the **Description** field on the AWS Support Center <span>Create
+#' Case</span> page.
 #' @param ccEmailAddresses A list of email addresses that AWS Support copies on case
 #' correspondence. AWS Support identifies the account that creates the case
 #' when you specify your AWS credentials in an HTTP POST method or use the
@@ -281,13 +285,14 @@ support_create_case <- function(subject, serviceCode = NULL, severityCode = NULL
 #' include screenshots, error logs, or other files that describe your
 #' issue. Attachment IDs are generated by the case management system when
 #' you add an attachment to a case or case communication. Attachment IDs
-#' are returned in the AttachmentDetails objects that are returned by the
+#' are returned in the <span>AttachmentDetails</span> objects that are
+#' returned by the
 #' [`describe_communications`][support_describe_communications] operation.
 #' 
-#' -   You must have a Business or Enterprise support plan to use the AWS
+#'   - You must have a Business or Enterprise support plan to use the AWS
 #'     Support API.
 #' 
-#' -   If you call the AWS Support API from an account that does not have a
+#'   - If you call the AWS Support API from an account that does not have a
 #'     Business or Enterprise support plan, the
 #'     `SubscriptionRequiredException` error message appears. For
 #'     information about changing your support plan, see [AWS
@@ -348,20 +353,20 @@ support_describe_attachment <- function(attachmentId) {
 #' 
 #' The response returns the following in JSON format:
 #' 
-#' -   One or more
+#'   - One or more
 #'     [CaseDetails](https://docs.aws.amazon.com/awssupport/latest/APIReference/API_CaseDetails.html)
 #'     data types.
 #' 
-#' -   One or more `nextToken` values, which specify where to paginate the
+#'   - One or more `nextToken` values, which specify where to paginate the
 #'     returned records represented by the `CaseDetails` objects.
 #' 
 #' Case data is available for 12 months after creation. If a case was
 #' created more than 12 months ago, a request might return an error.
 #' 
-#' -   You must have a Business or Enterprise support plan to use the AWS
+#'   - You must have a Business or Enterprise support plan to use the AWS
 #'     Support API.
 #' 
-#' -   If you call the AWS Support API from an account that does not have a
+#'   - If you call the AWS Support API from an account that does not have a
 #'     Business or Enterprise support plan, the
 #'     `SubscriptionRequiredException` error message appears. For
 #'     information about changing your support plan, see [AWS
@@ -488,10 +493,10 @@ support_describe_cases <- function(caseIdList = NULL, displayId = NULL, afterTim
 #' you want to display on each page, and use `nextToken` to specify the
 #' resumption of pagination.
 #' 
-#' -   You must have a Business or Enterprise support plan to use the AWS
+#'   - You must have a Business or Enterprise support plan to use the AWS
 #'     Support API.
 #' 
-#' -   If you call the AWS Support API from an account that does not have a
+#'   - If you call the AWS Support API from an account that does not have a
 #'     Business or Enterprise support plan, the
 #'     `SubscriptionRequiredException` error message appears. For
 #'     information about changing your support plan, see [AWS
@@ -576,17 +581,17 @@ support_describe_communications <- function(caseId, beforeTime = NULL, afterTime
 #' 
 #' The service codes and category codes correspond to the values that
 #' appear in the **Service** and **Category** lists on the AWS Support
-#' Center Create Case page. The values in those fields don't necessarily
-#' match the service codes and categories returned by the
+#' Center <span>Create Case</span> page. The values in those fields don't
+#' necessarily match the service codes and categories returned by the
 #' [`describe_services`][support_describe_services] operation. Always use
 #' the service codes and categories that the
 #' [`describe_services`][support_describe_services] operation returns, so
 #' that you have the most recent set of service and category codes.
 #' 
-#' -   You must have a Business or Enterprise support plan to use the AWS
+#'   - You must have a Business or Enterprise support plan to use the AWS
 #'     Support API.
 #' 
-#' -   If you call the AWS Support API from an account that does not have a
+#'   - If you call the AWS Support API from an account that does not have a
 #'     Business or Enterprise support plan, the
 #'     `SubscriptionRequiredException` error message appears. For
 #'     information about changing your support plan, see [AWS
@@ -655,13 +660,13 @@ support_describe_services <- function(serviceCodeList = NULL, language = NULL) {
 #' @description
 #' Returns the list of severity levels that you can assign to an AWS
 #' Support case. The severity level for a case is also a field in the
-#' CaseDetails data type that you include for a
+#' <span>CaseDetails</span> data type that you include for a
 #' [`create_case`][support_create_case] request.
 #' 
-#' -   You must have a Business or Enterprise support plan to use the AWS
+#'   - You must have a Business or Enterprise support plan to use the AWS
 #'     Support API.
 #' 
-#' -   If you call the AWS Support API from an account that does not have a
+#'   - If you call the AWS Support API from an account that does not have a
 #'     Business or Enterprise support plan, the
 #'     `SubscriptionRequiredException` error message appears. For
 #'     information about changing your support plan, see [AWS
@@ -729,10 +734,10 @@ support_describe_severity_levels <- function(language = NULL) {
 #' operation. If you call this operation for these checks, you might see an
 #' `InvalidParameterValue` error.
 #' 
-#' -   You must have a Business or Enterprise support plan to use the AWS
+#'   - You must have a Business or Enterprise support plan to use the AWS
 #'     Support API.
 #' 
-#' -   If you call the AWS Support API from an account that does not have a
+#'   - If you call the AWS Support API from an account that does not have a
 #'     Business or Enterprise support plan, the
 #'     `SubscriptionRequiredException` error message appears. For
 #'     information about changing your support plan, see [AWS
@@ -798,29 +803,30 @@ support_describe_trusted_advisor_check_refresh_statuses <- function(checkIds) {
 #' [`describe_trusted_advisor_checks`][support_describe_trusted_advisor_checks]
 #' operation.
 #' 
-#' The response contains a TrustedAdvisorCheckResult object, which contains
-#' these three objects:
+#' The response contains a <span>TrustedAdvisorCheckResult</span> object,
+#' which contains these three objects:
 #' 
-#' -   TrustedAdvisorCategorySpecificSummary
+#'   - <span>TrustedAdvisorCategorySpecificSummary</span>
 #' 
-#' -   TrustedAdvisorResourceDetail
+#'   - <span>TrustedAdvisorResourceDetail</span>
 #' 
-#' -   TrustedAdvisorResourcesSummary
+#'   - <span>TrustedAdvisorResourcesSummary</span>
 #' 
 #' In addition, the response contains these fields:
 #' 
-#' -   **status** - The alert status of the check: "ok" (green), "warning"
+#'   - **status** - The alert status of the check: "ok" (green), "warning"
 #'     (yellow), "error" (red), or "not_available".
 #' 
-#' -   **timestamp** - The time of the last refresh of the check.
+#'   - **timestamp** - The time of the last refresh of the check.
 #' 
-#' -   **checkId** - The unique identifier for the check.
+#'   - **checkId** - The unique identifier for the check.
 #' 
+#' <!-- end list -->
 #' 
-#' -   You must have a Business or Enterprise support plan to use the AWS
+#'   - You must have a Business or Enterprise support plan to use the AWS
 #'     Support API.
 #' 
-#' -   If you call the AWS Support API from an account that does not have a
+#'   - If you call the AWS Support API from an account that does not have a
 #'     Business or Enterprise support plan, the
 #'     `SubscriptionRequiredException` error message appears. For
 #'     information about changing your support plan, see [AWS
@@ -906,12 +912,13 @@ support_describe_trusted_advisor_check_result <- function(checkId, language = NU
 #' [`describe_trusted_advisor_checks`][support_describe_trusted_advisor_checks]
 #' operation.
 #' 
-#' The response contains an array of TrustedAdvisorCheckSummary objects.
+#' The response contains an array of
+#' <span>TrustedAdvisorCheckSummary</span> objects.
 #' 
-#' -   You must have a Business or Enterprise support plan to use the AWS
+#'   - You must have a Business or Enterprise support plan to use the AWS
 #'     Support API.
 #' 
-#' -   If you call the AWS Support API from an account that does not have a
+#'   - If you call the AWS Support API from an account that does not have a
 #'     Business or Enterprise support plan, the
 #'     `SubscriptionRequiredException` error message appears. For
 #'     information about changing your support plan, see [AWS
@@ -986,13 +993,13 @@ support_describe_trusted_advisor_check_summaries <- function(checkIds) {
 #' including the name, ID, category, description, and metadata. You must
 #' specify a language code. The AWS Support API currently supports English
 #' ("en") and Japanese ("ja"). The response contains a
-#' TrustedAdvisorCheckDescription object for each check. You must set the
-#' AWS Region to us-east-1.
+#' <span>TrustedAdvisorCheckDescription</span> object for each check. You
+#' must set the AWS Region to us-east-1.
 #' 
-#' -   You must have a Business or Enterprise support plan to use the AWS
+#'   - You must have a Business or Enterprise support plan to use the AWS
 #'     Support API.
 #' 
-#' -   If you call the AWS Support API from an account that does not have a
+#'   - If you call the AWS Support API from an account that does not have a
 #'     Business or Enterprise support plan, the
 #'     `SubscriptionRequiredException` error message appears. For
 #'     information about changing your support plan, see [AWS
@@ -1064,12 +1071,13 @@ support_describe_trusted_advisor_checks <- function(language) {
 #' operation to refresh them, you might see the `InvalidParameterValue`
 #' error.
 #' 
-#' The response contains a TrustedAdvisorCheckRefreshStatus object.
+#' The response contains a <span>TrustedAdvisorCheckRefreshStatus</span>
+#' object.
 #' 
-#' -   You must have a Business or Enterprise support plan to use the AWS
+#'   - You must have a Business or Enterprise support plan to use the AWS
 #'     Support API.
 #' 
-#' -   If you call the AWS Support API from an account that does not have a
+#'   - If you call the AWS Support API from an account that does not have a
 #'     Business or Enterprise support plan, the
 #'     `SubscriptionRequiredException` error message appears. For
 #'     information about changing your support plan, see [AWS
@@ -1127,10 +1135,10 @@ support_refresh_trusted_advisor_check <- function(checkId) {
 #' Resolves a support case. This operation takes a `caseId` and returns the
 #' initial and final state of the case.
 #' 
-#' -   You must have a Business or Enterprise support plan to use the AWS
+#'   - You must have a Business or Enterprise support plan to use the AWS
 #'     Support API.
 #' 
-#' -   If you call the AWS Support API from an account that does not have a
+#'   - If you call the AWS Support API from an account that does not have a
 #'     Business or Enterprise support plan, the
 #'     `SubscriptionRequiredException` error message appears. For
 #'     information about changing your support plan, see [AWS

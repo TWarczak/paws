@@ -127,15 +127,11 @@ Events using the Amazon ElastiCache console, the AWS CLI, or the
 ElastiCache API. Look for the following automatic failover related
 events, listed here in order of occurrance:
 \enumerate{
-\item Replication group message:
-\verb{Test Failover API called for node group <node-group-id>}
-\item Cache cluster message:
-\verb{Failover from primary node <primary-node-id> to replica node <node-id> completed}
-\item Replication group message:
-\verb{Failover from primary node <primary-node-id> to replica node <node-id> completed}
+\item Replication group message: \verb{Test Failover API called for node group <node-group-id>}
+\item Cache cluster message: \verb{Failover from primary node <primary-node-id> to replica node <node-id> completed}
+\item Replication group message: \verb{Failover from primary node <primary-node-id> to replica node <node-id> completed}
 \item Cache cluster message: \verb{Recovering cache nodes <node-id>}
-\item Cache cluster message:
-\verb{Finished recovery for cache nodes <node-id>}
+\item Cache cluster message: \verb{Finished recovery for cache nodes <node-id>}
 }
 
 For more information see:

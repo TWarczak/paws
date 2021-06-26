@@ -33,7 +33,8 @@ Some checks are refreshed automatically. If you call the
 operation to refresh them, you might see the \code{InvalidParameterValue}
 error.
 
-The response contains a TrustedAdvisorCheckRefreshStatus object.
+The response contains a <span>TrustedAdvisorCheckRefreshStatus</span>
+object.
 \itemize{
 \item You must have a Business or Enterprise support plan to use the AWS
 Support API.

@@ -101,7 +101,9 @@ transcribeservice_create_language_model <- function(LanguageCode, BaseModelName,
 #' you're calling. Enter information about your `VocabularyFileUri` in the
 #' following format:
 #' 
-#' ` https://s3.<aws-region>.amazonaws.com/<bucket-name>/<keyprefix>/<objectkey> `
+#' ` 
+#' https://s3.<aws-region>.amazonaws.com/<bucket-name>/<keyprefix>/<objectkey>
+#'  `
 #' 
 #' The following is an example URI for a vocabulary file that is stored in
 #' Amazon S3:
@@ -1505,18 +1507,18 @@ transcribeservice_list_vocabulary_filters <- function(NextToken = NULL, MaxResul
 #' You use either of the following to identify a KMS key in the current
 #' account:
 #' 
-#' -   KMS Key ID: "1234abcd-12ab-34cd-56ef-1234567890ab"
+#'   - KMS Key ID: "1234abcd-12ab-34cd-56ef-1234567890ab"
 #' 
-#' -   KMS Key Alias: "alias/ExampleAlias"
+#'   - KMS Key Alias: "alias/ExampleAlias"
 #' 
 #' You can use either of the following to identify a KMS key in the current
 #' account or another account:
 #' 
-#' -   Amazon Resource Name (ARN) of a KMS key in the current account or
+#'   - Amazon Resource Name (ARN) of a KMS key in the current account or
 #'     another account: "arn:aws:kms:region:account
 #'     ID:key/1234abcd-12ab-34cd-56ef-1234567890ab"
 #' 
-#' -   ARN of a KMS Key Alias: "arn:aws:kms:region:account
+#'   - ARN of a KMS Key Alias: "arn:aws:kms:region:account
 #'     ID:alias/ExampleAlias"
 #' 
 #' If you don't specify an encryption key, the output of the medical
@@ -1695,17 +1697,17 @@ transcribeservice_start_medical_transcription_job <- function(MedicalTranscripti
 #' You can use either of the following to identify a KMS key in the current
 #' account:
 #' 
-#' -   KMS Key ID: "1234abcd-12ab-34cd-56ef-1234567890ab"
+#'   - KMS Key ID: "1234abcd-12ab-34cd-56ef-1234567890ab"
 #' 
-#' -   KMS Key Alias: "alias/ExampleAlias"
+#'   - KMS Key Alias: "alias/ExampleAlias"
 #' 
 #' You can use either of the following to identify a KMS key in the current
 #' account or another account:
 #' 
-#' -   Amazon Resource Name (ARN) of a KMS Key: "arn:aws:kms:region:account
+#'   - Amazon Resource Name (ARN) of a KMS Key: "arn:aws:kms:region:account
 #'     ID:key/1234abcd-12ab-34cd-56ef-1234567890ab"
 #' 
-#' -   ARN of a KMS Key Alias: "arn:aws:kms:region:account
+#'   - ARN of a KMS Key Alias: "arn:aws:kms:region:account
 #'     ID:alias/ExampleAlias"
 #' 
 #' If you don't specify an encryption key, the output of the transcription
@@ -1871,7 +1873,9 @@ transcribeservice_start_transcription_job <- function(TranscriptionJobName, Lang
 #' your custom vocabulary. The URI must be in the same AWS Region as the
 #' resource that you are calling. The following is the format for a URI:
 #' 
-#' ` https://s3.<aws-region>.amazonaws.com/<bucket-name>/<keyprefix>/<objectkey> `
+#' ` 
+#' https://s3.<aws-region>.amazonaws.com/<bucket-name>/<keyprefix>/<objectkey>
+#'  `
 #' 
 #' For example:
 #' 

@@ -25,8 +25,8 @@ A list with the following syntax:\preformatted{list(
 \description{
 Provisions a thing in the device registry. RegisterThing calls other AWS
 IoT control plane APIs. These calls might exceed your account level \href{https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_iot}{AWS IoT Throttling Limits}
-and cause throttle errors. Please contact AWS Customer Support to raise
-your throttling limits if necessary.
+and cause throttle errors. Please contact <span>AWS Customer
+Support</span> to raise your throttling limits if necessary.
 }
 \section{Request syntax}{
 \preformatted{svc$register_thing(

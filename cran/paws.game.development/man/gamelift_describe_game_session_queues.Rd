@@ -46,10 +46,10 @@ A list with the following syntax:\preformatted{list(
 \description{
 Retrieves the properties for one or more game session queues. When
 requesting multiple queues, use the pagination parameters to retrieve
-results as a set of sequential pages. If successful, a GameSessionQueue
-object is returned for each requested queue. When specifying a list of
-queues, objects are returned only for queues that currently exist in the
-Region.
+results as a set of sequential pages. If successful, a
+<span>GameSessionQueue</span> object is returned for each requested
+queue. When specifying a list of queues, objects are returned only for
+queues that currently exist in the Region.
 
 \strong{Learn more}
 

@@ -30,7 +30,7 @@ A list with the following syntax:\preformatted{list(
 \description{
 Creates an events configuration that allows a bot to receive outgoing
 events sent by Amazon Chime. Choose either an HTTPS endpoint or a Lambda
-function ARN. For more information, see Bot.
+function ARN. For more information, see <span>Bot</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$put_events_configuration(

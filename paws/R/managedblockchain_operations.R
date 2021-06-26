@@ -198,11 +198,11 @@ managedblockchain_create_network <- function(ClientRequestToken, Name, Descripti
 #' 
 #' Ethereum public networks have the following `NetworkId`s:
 #' 
-#' -   `n-ethereum-mainnet`
+#'   - `n-ethereum-mainnet`
 #' 
-#' -   `n-ethereum-rinkeby`
+#'   - `n-ethereum-rinkeby`
 #' 
-#' -   `n-ethereum-ropsten`
+#'   - `n-ethereum-ropsten`
 #' @param MemberId The unique identifier of the member that owns this node.
 #' 
 #' Applies only to Hyperledger Fabric.
@@ -412,11 +412,11 @@ managedblockchain_delete_member <- function(NetworkId, MemberId) {
 #' 
 #' Ethereum public networks have the following `NetworkId`s:
 #' 
-#' -   `n-ethereum-mainnet`
+#'   - `n-ethereum-mainnet`
 #' 
-#' -   `n-ethereum-rinkeby`
+#'   - `n-ethereum-rinkeby`
 #' 
-#' -   `n-ethereum-ropsten`
+#'   - `n-ethereum-ropsten`
 #' @param MemberId The unique identifier of the member that owns this node.
 #' 
 #' Applies only to Hyperledger Fabric and is required for Hyperledger

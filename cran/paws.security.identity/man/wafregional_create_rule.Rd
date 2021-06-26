@@ -2,13 +2,13 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_create_rule}
 \alias{wafregional_create_rule}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 wafregional_create_rule(Name, MetricName, ChangeToken, Tags)
 }
 \arguments{
-\item{Name}{[required] A friendly name or description of the Rule. You can't change the name of
-a \code{Rule} after you create it.}
+\item{Name}{[required] A friendly name or description of the <span>Rule</span>. You can't
+change the name of a \code{Rule} after you create it.}
 
 \item{MetricName}{[required] A friendly name or description for the metrics for this \code{Rule}. The name
 can contain only alphanumeric characters (A-Z, a-z, 0-9), with maximum

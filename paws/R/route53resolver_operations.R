@@ -220,10 +220,10 @@ route53resolver_associate_resolver_rule <- function(ResolverRuleId, Name = NULL,
 #' Creates a Resolver endpoint. There are two types of Resolver endpoints,
 #' inbound and outbound:
 #' 
-#' -   An *inbound Resolver endpoint* forwards DNS queries to the DNS
+#'   - An *inbound Resolver endpoint* forwards DNS queries to the DNS
 #'     service for a VPC from your network.
 #' 
-#' -   An *outbound Resolver endpoint* forwards DNS queries from the DNS
+#'   - An *outbound Resolver endpoint* forwards DNS queries from the DNS
 #'     service for a VPC to your network.
 #'
 #' @usage
@@ -244,10 +244,10 @@ route53resolver_associate_resolver_rule <- function(ResolverRuleId, Name = NULL,
 #' access, open the port that you're using for DNS queries on your network.
 #' @param Direction &#91;required&#93; Specify the applicable value:
 #' 
-#' -   `INBOUND`: Resolver forwards DNS queries to the DNS service for a
+#'   - `INBOUND`: Resolver forwards DNS queries to the DNS service for a
 #'     VPC from your network
 #' 
-#' -   `OUTBOUND`: Resolver forwards DNS queries from the DNS service for a
+#'   - `OUTBOUND`: Resolver forwards DNS queries from the DNS service for a
 #'     VPC to your network
 #' @param IpAddresses &#91;required&#93; The subnets and IP addresses in your VPC that DNS queries originate from
 #' (for outbound endpoints) or that you forward DNS queries to (for inbound
@@ -352,20 +352,20 @@ route53resolver_create_resolver_endpoint <- function(CreatorRequestId, Name = NU
 #' Kinesis Data Firehose delivery stream. Examples of valid values include
 #' the following:
 #' 
-#' -   **S3 bucket**:
-#' 
+#'   - **S3 bucket**:
+#'     
 #'     `arn:aws:s3:::examplebucket`
-#' 
+#'     
 #'     You can optionally append a file prefix to the end of the ARN.
-#' 
+#'     
 #'     `arn:aws:s3:::examplebucket/development/`
 #' 
-#' -   **CloudWatch Logs log group**:
-#' 
+#'   - **CloudWatch Logs log group**:
+#'     
 #'     `arn:aws:logs:us-west-1:123456789012:log-group:/mystack-testgroup-12ABC1AB12A1:*`
 #' 
-#' -   **Kinesis Data Firehose delivery stream**:
-#' 
+#'   - **Kinesis Data Firehose delivery stream**:
+#'     
 #'     `arn:aws:kinesis:us-east-2:0123456789:stream/my_stream_name`
 #' @param CreatorRequestId &#91;required&#93; A unique string that identifies the request and that allows failed
 #' requests to be retried without the risk of executing the operation
@@ -555,10 +555,10 @@ route53resolver_create_resolver_rule <- function(CreatorRequestId, Name = NULL, 
 #' Deletes a Resolver endpoint. The effect of deleting a Resolver endpoint
 #' depends on whether it's an inbound or an outbound Resolver endpoint:
 #' 
-#' -   **Inbound**: DNS queries from your network are no longer routed to
+#'   - **Inbound**: DNS queries from your network are no longer routed to
 #'     the DNS service for the specified VPC.
 #' 
-#' -   **Outbound**: DNS queries from a VPC are no longer routed to your
+#'   - **Outbound**: DNS queries from a VPC are no longer routed to your
 #'     network.
 #'
 #' @usage
@@ -842,10 +842,10 @@ route53resolver_disassociate_resolver_endpoint_ip_address <- function(ResolverEn
 #' accounts, VPCs can be disassociated from the configuration in the
 #' following ways:
 #' 
-#' -   The accounts that you shared the configuration with can disassociate
+#'   - The accounts that you shared the configuration with can disassociate
 #'     VPCs from the configuration.
 #' 
-#' -   You can stop sharing the configuration.
+#'   - You can stop sharing the configuration.
 #'
 #' @usage
 #' route53resolver_disassociate_resolver_query_log_config(
@@ -1709,46 +1709,46 @@ route53resolver_list_resolver_endpoints <- function(MaxResults = NULL, NextToken
 #' 
 #' Valid values include the following elements:
 #' 
-#' -   `CreationTime`: The ID of the query logging association.
+#'   - `CreationTime`: The ID of the query logging association.
 #' 
-#' -   `Error`: If the value of `Status` is `FAILED`, the value of `Error`
+#'   - `Error`: If the value of `Status` is `FAILED`, the value of `Error`
 #'     indicates the cause:
-#' 
-#'     -   `DESTINATION_NOT_FOUND`: The specified destination (for example,
+#'     
+#'       - `DESTINATION_NOT_FOUND`: The specified destination (for example,
 #'         an Amazon S3 bucket) was deleted.
-#' 
-#'     -   `ACCESS_DENIED`: Permissions don't allow sending logs to the
+#'     
+#'       - `ACCESS_DENIED`: Permissions don't allow sending logs to the
 #'         destination.
-#' 
+#'     
 #'     If `Status` is a value other than `FAILED`, `ERROR` is null.
 #' 
-#' -   `Id`: The ID of the query logging association
+#'   - `Id`: The ID of the query logging association
 #' 
-#' -   `ResolverQueryLogConfigId`: The ID of the query logging
+#'   - `ResolverQueryLogConfigId`: The ID of the query logging
 #'     configuration
 #' 
-#' -   `ResourceId`: The ID of the VPC that is associated with the query
+#'   - `ResourceId`: The ID of the VPC that is associated with the query
 #'     logging configuration
 #' 
-#' -   `Status`: The current status of the configuration. Valid values
+#'   - `Status`: The current status of the configuration. Valid values
 #'     include the following:
-#' 
-#'     -   `CREATING`: Resolver is creating an association between an
+#'     
+#'       - `CREATING`: Resolver is creating an association between an
 #'         Amazon VPC and a query logging configuration.
-#' 
-#'     -   `CREATED`: The association between an Amazon VPC and a query
+#'     
+#'       - `CREATED`: The association between an Amazon VPC and a query
 #'         logging configuration was successfully created. Resolver is
 #'         logging queries that originate in the specified VPC.
-#' 
-#'     -   `DELETING`: Resolver is deleting this query logging association.
-#' 
-#'     -   `FAILED`: Resolver either couldn't create or couldn't delete the
+#'     
+#'       - `DELETING`: Resolver is deleting this query logging association.
+#'     
+#'       - `FAILED`: Resolver either couldn't create or couldn't delete the
 #'         query logging association. Here are two common causes:
-#' 
-#'         -   The specified destination (for example, an Amazon S3 bucket)
+#'         
+#'           - The specified destination (for example, an Amazon S3 bucket)
 #'             was deleted.
-#' 
-#'         -   Permissions don't allow sending logs to the destination.
+#'         
+#'           - Permissions don't allow sending logs to the destination.
 #' @param SortOrder If you specified a value for `SortBy`, the order that you want query
 #' logging associations to be listed in, `ASCENDING` or `DESCENDING`.
 #' 
@@ -1858,50 +1858,50 @@ route53resolver_list_resolver_query_log_config_associations <- function(MaxResul
 #' 
 #' Valid values include the following elements:
 #' 
-#' -   `Arn`: The ARN of the query logging configuration
+#'   - `Arn`: The ARN of the query logging configuration
 #' 
-#' -   `AssociationCount`: The number of VPCs that are associated with the
+#'   - `AssociationCount`: The number of VPCs that are associated with the
 #'     specified configuration
 #' 
-#' -   `CreationTime`: The date and time that Resolver returned when the
+#'   - `CreationTime`: The date and time that Resolver returned when the
 #'     configuration was created
 #' 
-#' -   `CreatorRequestId`: The value that was specified for
+#'   - `CreatorRequestId`: The value that was specified for
 #'     `CreatorRequestId` when the configuration was created
 #' 
-#' -   `DestinationArn`: The location that logs are sent to
+#'   - `DestinationArn`: The location that logs are sent to
 #' 
-#' -   `Id`: The ID of the configuration
+#'   - `Id`: The ID of the configuration
 #' 
-#' -   `Name`: The name of the configuration
+#'   - `Name`: The name of the configuration
 #' 
-#' -   `OwnerId`: The AWS account number of the account that created the
+#'   - `OwnerId`: The AWS account number of the account that created the
 #'     configuration
 #' 
-#' -   `ShareStatus`: Whether the configuration is shared with other AWS
+#'   - `ShareStatus`: Whether the configuration is shared with other AWS
 #'     accounts or shared with the current account by another AWS account.
 #'     Sharing is configured through AWS Resource Access Manager (AWS RAM).
 #' 
-#' -   `Status`: The current status of the configuration. Valid values
+#'   - `Status`: The current status of the configuration. Valid values
 #'     include the following:
-#' 
-#'     -   `CREATING`: Resolver is creating the query logging
+#'     
+#'       - `CREATING`: Resolver is creating the query logging
 #'         configuration.
-#' 
-#'     -   `CREATED`: The query logging configuration was successfully
+#'     
+#'       - `CREATED`: The query logging configuration was successfully
 #'         created. Resolver is logging queries that originate in the
 #'         specified VPC.
-#' 
-#'     -   `DELETING`: Resolver is deleting this query logging
+#'     
+#'       - `DELETING`: Resolver is deleting this query logging
 #'         configuration.
-#' 
-#'     -   `FAILED`: Resolver either couldn't create or couldn't delete the
+#'     
+#'       - `FAILED`: Resolver either couldn't create or couldn't delete the
 #'         query logging configuration. Here are two common causes:
-#' 
-#'         -   The specified destination (for example, an Amazon S3 bucket)
+#'         
+#'           - The specified destination (for example, an Amazon S3 bucket)
 #'             was deleted.
-#' 
-#'         -   Permissions don't allow sending logs to the destination.
+#'         
+#'           - Permissions don't allow sending logs to the destination.
 #' @param SortOrder If you specified a value for `SortBy`, the order that you want query
 #' logging configurations to be listed in, `ASCENDING` or `DESCENDING`.
 #' 
@@ -2245,13 +2245,13 @@ route53resolver_list_tags_for_resource <- function(ResourceArn, MaxResults = NUL
 #' perform. You can specify the following operations in the `Actions`
 #' section of the statement:
 #' 
-#' -   `route53resolver:AssociateResolverQueryLogConfig`
+#'   - `route53resolver:AssociateResolverQueryLogConfig`
 #' 
-#' -   `route53resolver:DisassociateResolverQueryLogConfig`
+#'   - `route53resolver:DisassociateResolverQueryLogConfig`
 #' 
-#' -   `route53resolver:ListResolverQueryLogConfigAssociations`
+#'   - `route53resolver:ListResolverQueryLogConfigAssociations`
 #' 
-#' -   `route53resolver:ListResolverQueryLogConfigs`
+#'   - `route53resolver:ListResolverQueryLogConfigs`
 #' 
 #' In the `Resource` section of the statement, you specify the ARNs for the
 #' query logging configurations that you want to share with the account
@@ -2312,15 +2312,15 @@ route53resolver_put_resolver_query_log_config_policy <- function(Arn, ResolverQu
 #' that you want the account to be able to perform. You can specify the
 #' following operations in the `Action` section of the statement:
 #' 
-#' -   `route53resolver:GetResolverRule`
+#'   - `route53resolver:GetResolverRule`
 #' 
-#' -   `route53resolver:AssociateResolverRule`
+#'   - `route53resolver:AssociateResolverRule`
 #' 
-#' -   `route53resolver:DisassociateResolverRule`
+#'   - `route53resolver:DisassociateResolverRule`
 #' 
-#' -   `route53resolver:ListResolverRules`
+#'   - `route53resolver:ListResolverRules`
 #' 
-#' -   `route53resolver:ListResolverRuleAssociations`
+#'   - `route53resolver:ListResolverRuleAssociations`
 #' 
 #' In the `Resource` section of the statement, specify the ARN for the rule
 #' that you want to share with another account. Specify the same ARN that
@@ -2374,17 +2374,17 @@ route53resolver_put_resolver_rule_policy <- function(Arn, ResolverRulePolicy) {
 #' tags to. To get the ARN for a resource, use the applicable `Get` or
 #' `List` command:
 #' 
-#' -   [`get_resolver_endpoint`][route53resolver_get_resolver_endpoint]
+#'   - [`get_resolver_endpoint`][route53resolver_get_resolver_endpoint]
 #' 
-#' -   [`get_resolver_rule`][route53resolver_get_resolver_rule]
+#'   - [`get_resolver_rule`][route53resolver_get_resolver_rule]
 #' 
-#' -   [`get_resolver_rule_association`][route53resolver_get_resolver_rule_association]
+#'   - [`get_resolver_rule_association`][route53resolver_get_resolver_rule_association]
 #' 
-#' -   [`list_resolver_endpoints`][route53resolver_list_resolver_endpoints]
+#'   - [`list_resolver_endpoints`][route53resolver_list_resolver_endpoints]
 #' 
-#' -   [`list_resolver_rule_associations`][route53resolver_list_resolver_rule_associations]
+#'   - [`list_resolver_rule_associations`][route53resolver_list_resolver_rule_associations]
 #' 
-#' -   [`list_resolver_rules`][route53resolver_list_resolver_rules]
+#'   - [`list_resolver_rules`][route53resolver_list_resolver_rules]
 #' @param Tags &#91;required&#93; The tags that you want to add to the specified resource.
 #'
 #' @return
@@ -2435,17 +2435,17 @@ route53resolver_tag_resource <- function(ResourceArn, Tags) {
 #' tags from. To get the ARN for a resource, use the applicable `Get` or
 #' `List` command:
 #' 
-#' -   [`get_resolver_endpoint`][route53resolver_get_resolver_endpoint]
+#'   - [`get_resolver_endpoint`][route53resolver_get_resolver_endpoint]
 #' 
-#' -   [`get_resolver_rule`][route53resolver_get_resolver_rule]
+#'   - [`get_resolver_rule`][route53resolver_get_resolver_rule]
 #' 
-#' -   [`get_resolver_rule_association`][route53resolver_get_resolver_rule_association]
+#'   - [`get_resolver_rule_association`][route53resolver_get_resolver_rule_association]
 #' 
-#' -   [`list_resolver_endpoints`][route53resolver_list_resolver_endpoints]
+#'   - [`list_resolver_endpoints`][route53resolver_list_resolver_endpoints]
 #' 
-#' -   [`list_resolver_rule_associations`][route53resolver_list_resolver_rule_associations]
+#'   - [`list_resolver_rule_associations`][route53resolver_list_resolver_rule_associations]
 #' 
-#' -   [`list_resolver_rules`][route53resolver_list_resolver_rules]
+#'   - [`list_resolver_rules`][route53resolver_list_resolver_rules]
 #' @param TagKeys &#91;required&#93; The tags that you want to remove to the specified resource.
 #'
 #' @return

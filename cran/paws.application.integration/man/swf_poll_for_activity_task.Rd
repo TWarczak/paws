@@ -40,14 +40,14 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Used by workers to get an ActivityTask from the specified activity
-\code{taskList}. This initiates a long poll, where the service holds the HTTP
-connection open and responds as soon as a task becomes available. The
-maximum time the service holds on to the request before responding is 60
-seconds. If no task is available within 60 seconds, the poll returns an
-empty result. An empty result, in this context, means that an
-ActivityTask is returned, but that the value of taskToken is an empty
-string. If a task is returned, the worker should use its type to
+Used by workers to get an <span>ActivityTask</span> from the specified
+activity \code{taskList}. This initiates a long poll, where the service holds
+the HTTP connection open and responds as soon as a task becomes
+available. The maximum time the service holds on to the request before
+responding is 60 seconds. If no task is available within 60 seconds, the
+poll returns an empty result. An empty result, in this context, means
+that an ActivityTask is returned, but that the value of taskToken is an
+empty string. If a task is returned, the worker should use its type to
 identify and process it correctly.
 
 Workers should set their client side socket timeout to at least 70

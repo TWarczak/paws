@@ -32,9 +32,9 @@ configuration tells Amazon GameLift which server processes to run (and
 how) on each instance in the fleet.
 
 To get a runtime configuration, specify the fleet's unique identifier.
-If successful, a RuntimeConfiguration object is returned for the
-requested fleet. If the requested fleet has been deleted, the result set
-is empty.
+If successful, a <span>RuntimeConfiguration</span> object is returned
+for the requested fleet. If the requested fleet has been deleted, the
+result set is empty.
 
 \strong{Learn more}
 

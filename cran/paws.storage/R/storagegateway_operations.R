@@ -213,13 +213,13 @@ storagegateway_add_cache <- function(GatewayARN, DiskIds) {
 #' environment, or team. Each tag consists of a key and a value, which you
 #' define. You can add tags to the following AWS Storage Gateway resources:
 #' 
-#' -   Storage gateways of all types
+#'   - Storage gateways of all types
 #' 
-#' -   Storage volumes
+#'   - Storage volumes
 #' 
-#' -   Virtual tapes
+#'   - Virtual tapes
 #' 
-#' -   NFS and SMB file shares
+#'   - NFS and SMB file shares
 #' 
 #' You can create a maximum of 50 tags for each resource. Virtual tapes and
 #' storage volumes that are recovered to a new gateway maintain their tags.
@@ -907,11 +907,11 @@ storagegateway_create_cachedi_scsi_volume <- function(GatewayARN, VolumeSizeInBy
 #' 
 #' Valid values are the following:
 #' 
-#' -   `RootSquash`: Only root is mapped to anonymous user.
+#'   - `RootSquash`: Only root is mapped to anonymous user.
 #' 
-#' -   `NoSquash`: No one is mapped to anonymous user.
+#'   - `NoSquash`: No one is mapped to anonymous user.
 #' 
-#' -   `AllSquash`: Everyone is mapped to anonymous user.
+#'   - `AllSquash`: Everyone is mapped to anonymous user.
 #' @param ReadOnly A value that sets the write status of a file share. Set this value to
 #' `true` to set the write status to read-only, otherwise set to `false`.
 #' 
@@ -1104,10 +1104,10 @@ storagegateway_create_nfs_file_share <- function(ClientToken, NFSFileShareDefaul
 #' Use this option very carefully, because any user in this list can do
 #' anything they like on the file share, regardless of file permissions.
 #' @param ValidUserList A list of users or groups in the Active Directory that are allowed to
-#' access the file share. A group must be prefixed with the @@ character.
-#' Acceptable formats include: `DOMAIN\User1`, `user1`, `@@group1`, and
-#' `@@DOMAIN\group1`. Can only be set if Authentication is set to
-#' `ActiveDirectory`.
+#' access the file <span></span> share. A group must be prefixed with the @@
+#' character. Acceptable formats include: `DOMAIN\User1`, `user1`,
+#' `@@group1`, and `@@DOMAIN\group1`. Can only be set if Authentication is
+#' set to `ActiveDirectory`.
 #' @param InvalidUserList A list of users or groups in the Active Directory that are not allowed
 #' to access the file share. A group must be prefixed with the @@ character.
 #' Acceptable formats include: `DOMAIN\User1`, `user1`, `@@group1`, and
@@ -6130,15 +6130,15 @@ storagegateway_update_maintenance_start_time <- function(GatewayARN, HourOfDay, 
 #' 
 #' Updates the following file share settings:
 #' 
-#' -   Default storage class for your S3 bucket
+#'   - Default storage class for your S3 bucket
 #' 
-#' -   Metadata defaults for your S3 bucket
+#'   - Metadata defaults for your S3 bucket
 #' 
-#' -   Allowed NFS clients for your file share
+#'   - Allowed NFS clients for your file share
 #' 
-#' -   Squash settings
+#'   - Squash settings
 #' 
-#' -   Write status of your file share
+#'   - Write status of your file share
 #'
 #' @usage
 #' storagegateway_update_nfs_file_share(FileShareARN, KMSEncrypted, KMSKey,
@@ -6171,11 +6171,11 @@ storagegateway_update_maintenance_start_time <- function(GatewayARN, HourOfDay, 
 #' 
 #' Valid values are the following:
 #' 
-#' -   `RootSquash`: Only root is mapped to anonymous user.
+#'   - `RootSquash`: Only root is mapped to anonymous user.
 #' 
-#' -   `NoSquash`: No one is mapped to anonymous user.
+#'   - `NoSquash`: No one is mapped to anonymous user.
 #' 
-#' -   `AllSquash`: Everyone is mapped to anonymous user.
+#'   - `AllSquash`: Everyone is mapped to anonymous user.
 #' @param ReadOnly A value that sets the write status of a file share. Set this value to
 #' `true` to set the write status to read-only, otherwise set to `false`.
 #' 

@@ -35,7 +35,8 @@ Conditional: You must specify only \code{TemplateBody} or \code{TemplateURL}.}
 create the change set.}
 
 \item{Parameters}{A list of \code{Parameter} structures that specify input parameters for the
-change set. For more information, see the Parameter data type.}
+change set. For more information, see the <span>Parameter</span> data
+type.}
 
 \item{Capabilities}{In some cases, you must explicitly acknowledge that your stack template
 contains certain capabilities in order for AWS CloudFormation to create

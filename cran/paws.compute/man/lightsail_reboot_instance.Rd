@@ -42,7 +42,7 @@ Restarts a specific instance.
 
 The \verb{reboot instance} operation supports tag-based access control via
 resource tags applied to the resource identified by \verb{instance name}. For
-more information, see the Lightsail Dev Guide.
+more information, see the <span>Lightsail Dev Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$reboot_instance(

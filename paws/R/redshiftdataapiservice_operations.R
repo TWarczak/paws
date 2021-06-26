@@ -130,11 +130,11 @@ redshiftdataapiservice_describe_statement <- function(Id) {
 #' page through the column list. Depending on the authorization method, use
 #' one of the following combinations of request parameters:
 #' 
-#' -   AWS Secrets Manager - specify the Amazon Resource Name (ARN) of the
+#'   - AWS Secrets Manager - specify the Amazon Resource Name (ARN) of the
 #'     secret and the cluster identifier that matches the cluster in the
 #'     secret.
 #' 
-#' -   Temporary credentials - specify the cluster identifier, the database
+#'   - Temporary credentials - specify the cluster identifier, the database
 #'     name, and the database user name. Permission to call the
 #'     `redshift:GetClusterCredentials` operation is required to use this
 #'     method.
@@ -235,11 +235,11 @@ redshiftdataapiservice_describe_table <- function(ClusterIdentifier, Database = 
 #' statement. Depending on the authorization method, use one of the
 #' following combinations of request parameters:
 #' 
-#' -   AWS Secrets Manager - specify the Amazon Resource Name (ARN) of the
+#'   - AWS Secrets Manager - specify the Amazon Resource Name (ARN) of the
 #'     secret and the cluster identifier that matches the cluster in the
 #'     secret.
 #' 
-#' -   Temporary credentials - specify the cluster identifier, the database
+#'   - Temporary credentials - specify the cluster identifier, the database
 #'     name, and the database user name. Permission to call the
 #'     `redshift:GetClusterCredentials` operation is required to use this
 #'     method.
@@ -403,11 +403,11 @@ redshiftdataapiservice_get_statement_result <- function(Id, NextToken = NULL) {
 #' database list. Depending on the authorization method, use one of the
 #' following combinations of request parameters:
 #' 
-#' -   AWS Secrets Manager - specify the Amazon Resource Name (ARN) of the
+#'   - AWS Secrets Manager - specify the Amazon Resource Name (ARN) of the
 #'     secret and the cluster identifier that matches the cluster in the
 #'     secret.
 #' 
-#' -   Temporary credentials - specify the cluster identifier, the database
+#'   - Temporary credentials - specify the cluster identifier, the database
 #'     name, and the database user name. Permission to call the
 #'     `redshift:GetClusterCredentials` operation is required to use this
 #'     method.
@@ -484,11 +484,11 @@ redshiftdataapiservice_list_databases <- function(ClusterIdentifier, Database = 
 #' schema list. Depending on the authorization method, use one of the
 #' following combinations of request parameters:
 #' 
-#' -   AWS Secrets Manager - specify the Amazon Resource Name (ARN) of the
+#'   - AWS Secrets Manager - specify the Amazon Resource Name (ARN) of the
 #'     secret and the cluster identifier that matches the cluster in the
 #'     secret.
 #' 
-#' -   Temporary credentials - specify the cluster identifier, the database
+#'   - Temporary credentials - specify the cluster identifier, the database
 #'     name, and the database user name. Permission to call the
 #'     `redshift:GetClusterCredentials` operation is required to use this
 #'     method.
@@ -592,20 +592,20 @@ redshiftdataapiservice_list_schemas <- function(ClusterIdentifier, Database, DbU
 #' @param Status The status of the SQL statement to list. Status values are defined as
 #' follows:
 #' 
-#' -   ABORTED - The query run was stopped by the user.
+#'   - ABORTED - The query run was stopped by the user.
 #' 
-#' -   ALL - A status value that includes all query statuses. This value
+#'   - ALL - A status value that includes all query statuses. This value
 #'     can be used to filter results.
 #' 
-#' -   FAILED - The query run failed.
+#'   - FAILED - The query run failed.
 #' 
-#' -   FINISHED - The query has finished running.
+#'   - FINISHED - The query has finished running.
 #' 
-#' -   PICKED - The query has been chosen to be run.
+#'   - PICKED - The query has been chosen to be run.
 #' 
-#' -   STARTED - The query run has started.
+#'   - STARTED - The query run has started.
 #' 
-#' -   SUBMITTED - The query was submitted, but not yet processed.
+#'   - SUBMITTED - The query was submitted, but not yet processed.
 #'
 #' @return
 #' A list with the following syntax:
@@ -669,11 +669,11 @@ redshiftdataapiservice_list_statements <- function(MaxResults = NULL, NextToken 
 #' on the authorization method, use one of the following combinations of
 #' request parameters:
 #' 
-#' -   AWS Secrets Manager - specify the Amazon Resource Name (ARN) of the
+#'   - AWS Secrets Manager - specify the Amazon Resource Name (ARN) of the
 #'     secret and the cluster identifier that matches the cluster in the
 #'     secret.
 #' 
-#' -   Temporary credentials - specify the cluster identifier, the database
+#'   - Temporary credentials - specify the cluster identifier, the database
 #'     name, and the database user name. Permission to call the
 #'     `redshift:GetClusterCredentials` operation is required to use this
 #'     method.

@@ -93,7 +93,7 @@ kinesisanalyticsv2_add_application_cloud_watch_logging_option <- function(Applic
 #' @param CurrentApplicationVersionId &#91;required&#93; The current version of your application. You can use the
 #' [`describe_application`][kinesisanalyticsv2_describe_application]
 #' operation to find the current application version.
-#' @param Input &#91;required&#93; The Input to add.
+#' @param Input &#91;required&#93; The <span>Input</span> to add.
 #'
 #' @return
 #' A list with the following syntax:
@@ -226,10 +226,10 @@ kinesisanalyticsv2_add_application_input <- function(ApplicationName, CurrentApp
 #' Analytics application
 #'
 #' @description
-#' Adds an InputProcessingConfiguration to a SQL-based Kinesis Data
-#' Analytics application. An input processor pre-processes records on the
-#' input stream before the application's SQL code executes. Currently, the
-#' only input processor available is [AWS
+#' Adds an <span>InputProcessingConfiguration</span> to a SQL-based Kinesis
+#' Data Analytics application. An input processor pre-processes records on
+#' the input stream before the application's SQL code executes. Currently,
+#' the only input processor available is [AWS
 #' Lambda](https://docs.aws.amazon.com/lambda/).
 #'
 #' @usage
@@ -250,7 +250,7 @@ kinesisanalyticsv2_add_application_input <- function(ApplicationName, CurrentApp
 #' using the
 #' [`describe_application`][kinesisanalyticsv2_describe_application]
 #' operation.
-#' @param InputProcessingConfiguration &#91;required&#93; The InputProcessingConfiguration to add to the application.
+#' @param InputProcessingConfiguration &#91;required&#93; The <span>InputProcessingConfiguration</span> to add to the application.
 #'
 #' @return
 #' A list with the following syntax:
@@ -555,9 +555,9 @@ kinesisanalyticsv2_add_application_reference_data_source <- function(Application
 #' Note the following about VPC configurations for Kinesis Data Analytics
 #' applications:
 #' 
-#' -   VPC configurations are not supported for SQL applications.
+#'   - VPC configurations are not supported for SQL applications.
 #' 
-#' -   When a VPC is added to a Kinesis Data Analytics application, the
+#'   - When a VPC is added to a Kinesis Data Analytics application, the
 #'     application can no longer be accessed from the Internet directly. To
 #'     enable Internet access to the application, add an Internet gateway
 #'     to your VPC.
@@ -1275,7 +1275,7 @@ kinesisanalyticsv2_delete_application_cloud_watch_logging_option <- function(App
 #' Deletes an InputProcessingConfiguration from an input
 #'
 #' @description
-#' Deletes an InputProcessingConfiguration from an input.
+#' Deletes an <span>InputProcessingConfiguration</span> from an input.
 #'
 #' @usage
 #' kinesisanalyticsv2_delete_application_input_processing_configuration(
@@ -1901,8 +1901,8 @@ kinesisanalyticsv2_describe_application_snapshot <- function(ApplicationName, Sn
 #' records from the specified streaming source discovery purposes.
 #' @param S3Configuration Specify this parameter to discover a schema from data in an Amazon S3
 #' object.
-#' @param InputProcessingConfiguration The InputProcessingConfiguration to use to preprocess the records before
-#' discovering the schema of the records.
+#' @param InputProcessingConfiguration The <span>InputProcessingConfiguration</span> to use to preprocess the
+#' records before discovering the schema of the records.
 #'
 #' @return
 #' A list with the following syntax:

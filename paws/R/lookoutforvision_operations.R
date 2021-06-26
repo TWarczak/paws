@@ -316,12 +316,12 @@ lookoutforvision_create_project <- function(ProjectName, ClientToken = NULL) {
 #' If you project has a training dataset and a test dataset consider the
 #' following.
 #' 
-#' -   If you delete the test dataset, your project reverts to a single
+#'   - If you delete the test dataset, your project reverts to a single
 #'     dataset project. If you then train the model, Amazon Lookout for
 #'     Vision internally splits the remaining dataset into a training and
 #'     test dataset.
 #' 
-#' -   If you delete the training dataset, you must create a training
+#'   - If you delete the training dataset, you must create a training
 #'     dataset before you can create a model.
 #' 
 #' It might take a while to delete the dataset. To check the current

@@ -63,8 +63,8 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Gets a list of TrainingJobSummary objects that describe the training
-jobs that a hyperparameter tuning job launched.
+Gets a list of <span>TrainingJobSummary</span> objects that describe the
+training jobs that a hyperparameter tuning job launched.
 }
 \section{Request syntax}{
 \preformatted{svc$list_training_jobs_for_hyper_parameter_tuning_job(

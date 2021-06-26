@@ -16,7 +16,7 @@ streaming source.}
 \code{\link[=kinesisanalyticsv2_describe_application]{describe_application}}
 operation to find the current application version.}
 
-\item{Input}{[required] The Input to add.}
+\item{Input}{[required] The <span>Input</span> to add.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

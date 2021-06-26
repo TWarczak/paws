@@ -59,7 +59,7 @@ an Amazon S3 bucket. For the AWS CLI, passing image bytes is not
 supported. The image must be either a .png or .jpeg formatted file.
 
 The \code{\link[=rekognition_detect_text]{detect_text}} operation returns text in
-an array of TextDetection elements, \code{TextDetections}. Each
+an array of <span>TextDetection</span> elements, \code{TextDetections}. Each
 \code{TextDetection} element provides information about a single word or line
 of text that was detected in the image.
 

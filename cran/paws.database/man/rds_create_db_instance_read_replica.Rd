@@ -33,8 +33,8 @@ PostgreSQL, or SQL Server DB instance.
 source is running MySQL 5.6 or later.
 \item For the limitations of Oracle read replicas, see \href{https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/oracle-read-replicas.html}{Read Replica Limitations with Oracle}
 in the \emph{Amazon RDS User Guide}.
-\item For the limitations of SQL Server read replicas, see \href{https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/}{Read Replica Limitations with Microsoft SQL Server} in
-the \emph{Amazon RDS User Guide}.
+\item For the limitations of SQL Server read replicas, see \href{https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/SQLServer.ReadReplicas.html}{Read Replica Limitations with Microsoft SQL Server}
+in the \emph{Amazon RDS User Guide}.
 \item Can specify a PostgreSQL DB instance only if the source is running
 PostgreSQL 9.3.5 or later (9.4.7 and higher for cross-region
 replication).
@@ -139,7 +139,7 @@ a DB instance in another AWS Region.
 \item The specified DB subnet group must be in the same AWS Region in
 which the operation is running.
 \item All read replicas in one AWS Region that are created from the same
-source DB instance must either:>
+source DB instance must either:\>
 \itemize{
 \item Specify DB subnet groups from the same VPC. All these read
 replicas are created in the same VPC.

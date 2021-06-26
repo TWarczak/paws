@@ -18,10 +18,10 @@ An empty list.
 \description{
 The \code{\link[=simpledb_batch_put_attributes]{batch_put_attributes}} operation
 creates or replaces attributes within one or more items. By using this
-operation, the client can perform multiple PutAttribute operation with a
-single call. This helps yield savings in round trips and latencies,
-enabling Amazon SimpleDB to optimize requests and generally produce
-better throughput.
+operation, the client can perform multiple <span>PutAttribute</span>
+operation with a single call. This helps yield savings in round trips
+and latencies, enabling Amazon SimpleDB to optimize requests and
+generally produce better throughput.
 
 The client may specify the item name with the \code{Item.X.ItemName}
 parameter. The client may specify new attributes using a combination of
@@ -32,20 +32,16 @@ for the second attribute for the first item by the parameters
 \code{Item.0.Attribute.1.Name} and \code{Item.0.Attribute.1.Value}, and so on.
 
 Attributes are uniquely identified within an item by their name/value
-combination. For example, a single item can have the attributes
-\verb{\{ "first_name", "first_value" \}} and
-\verb{\{ "first_name", "second_value" \}}. However, it cannot have two
-attribute instances where both the \code{Item.X.Attribute.Y.Name} and
-\code{Item.X.Attribute.Y.Value} are the same.
+combination. For example, a single item can have the attributes \verb{\{ "first_name", "first_value" \}} and \verb{\{ "first_name", "second_value" \}}.
+However, it cannot have two attribute instances where both the
+\code{Item.X.Attribute.Y.Name} and \code{Item.X.Attribute.Y.Value} are the same.
 
 Optionally, the requester can supply the \code{Replace} parameter for each
 individual value. Setting this value to \code{true} will cause the new
 attribute values to replace the existing attribute values. For example,
-if an item \code{I} has the attributes \verb{\{ 'a', '1' \}, \{ 'b', '2'\}} and
-\verb{\{ 'b', '3' \}} and the requester does a BatchPutAttributes of
-\verb{\{'I', 'b', '4' \}} with the Replace parameter set to true, the final
-attributes of the item will be \verb{\{ 'a', '1' \}} and \verb{\{ 'b', '4' \}},
-replacing the previous values of the 'b' attribute with the new value.
+if an item \code{I} has the attributes \verb{\{ 'a', '1' \}, \{ 'b', '2'\}} and \verb{\{ 'b', '3' \}} and the requester does a BatchPutAttributes of \verb{\{'I', 'b', '4' \}} with the Replace parameter set to true, the final attributes of
+the item will be \verb{\{ 'a', '1' \}} and \verb{\{ 'b', '4' \}}, replacing the
+previous values of the 'b' attribute with the new value.
 
 You cannot specify an empty string as an item or as an attribute name.
 The \code{\link[=simpledb_batch_put_attributes]{batch_put_attributes}} operation

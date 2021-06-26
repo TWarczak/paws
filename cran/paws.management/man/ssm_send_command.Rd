@@ -44,11 +44,11 @@ using the AWS CLI, then you must escape the first two options by using a
 backslash. If you specify a version number, then you don't need to use
 the backslash. For example:
 
---document-version "\\$DEFAULT"
+\--document-version "\\$DEFAULT"
 
---document-version "\\$LATEST"
+\--document-version "\\$LATEST"
 
---document-version "3"}
+\--document-version "3"}
 
 \item{DocumentHash}{The Sha256 or Sha1 hash created by the system when the document was
 created.

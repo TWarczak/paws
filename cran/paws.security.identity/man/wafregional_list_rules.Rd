@@ -2,7 +2,7 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_list_rules}
 \alias{wafregional_list_rules}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 wafregional_list_rules(NextMarker, Limit)
 }
@@ -41,7 +41,7 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Returns an array of RuleSummary objects.
+Returns an array of <span>RuleSummary</span> objects.
 }
 \section{Request syntax}{
 \preformatted{svc$list_rules(

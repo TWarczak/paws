@@ -368,15 +368,15 @@ devicefarm_create_project <- function(name, defaultJobTimeoutMinutes = NULL) {
 #' @param configuration The configuration information for the remote access session request.
 #' @param interactionMode The interaction mode of the remote access session. Valid values are:
 #' 
-#' -   INTERACTIVE: You can interact with the iOS device by viewing,
+#'   - INTERACTIVE: You can interact with the iOS device by viewing,
 #'     touching, and rotating the screen. You cannot run XCUITest
 #'     framework-based tests in this mode.
 #' 
-#' -   NO_VIDEO: You are connected to the device, but cannot interact with
+#'   - NO_VIDEO: You are connected to the device, but cannot interact with
 #'     it or view the screen. This mode has the fastest test execution
 #'     speed. You can run XCUITest framework-based tests in this mode.
 #' 
-#' -   VIDEO_ONLY: You can view the screen, but cannot touch or rotate it.
+#'   - VIDEO_ONLY: You can view the screen, but cannot touch or rotate it.
 #'     You can run XCUITest framework-based tests and watch the screen in
 #'     this mode.
 #' @param skipAppResign When set to `true`, for private devices, Device Farm does not sign your
@@ -535,7 +535,7 @@ devicefarm_create_remote_access_session <- function(projectArn, deviceArn, insta
 #'
 #' @description
 #' Creates a Selenium testing project. Projects are used to track
-#' TestGridSession instances.
+#' <span>TestGridSession</span> instances.
 #'
 #' @usage
 #' devicefarm_create_test_grid_project(name, description)
@@ -659,69 +659,69 @@ devicefarm_create_test_grid_url <- function(projectArn, expiresInSeconds) {
 #' 
 #' Must be one of the following values:
 #' 
-#' -   ANDROID_APP
+#'   - ANDROID_APP
 #' 
-#' -   IOS_APP
+#'   - IOS_APP
 #' 
-#' -   WEB_APP
+#'   - WEB_APP
 #' 
-#' -   EXTERNAL_DATA
+#'   - EXTERNAL_DATA
 #' 
-#' -   APPIUM_JAVA_JUNIT_TEST_PACKAGE
+#'   - APPIUM_JAVA_JUNIT_TEST_PACKAGE
 #' 
-#' -   APPIUM_JAVA_TESTNG_TEST_PACKAGE
+#'   - APPIUM_JAVA_TESTNG_TEST_PACKAGE
 #' 
-#' -   APPIUM_PYTHON_TEST_PACKAGE
+#'   - APPIUM_PYTHON_TEST_PACKAGE
 #' 
-#' -   APPIUM_NODE_TEST_PACKAGE
+#'   - APPIUM_NODE_TEST_PACKAGE
 #' 
-#' -   APPIUM_RUBY_TEST_PACKAGE
+#'   - APPIUM_RUBY_TEST_PACKAGE
 #' 
-#' -   APPIUM_WEB_JAVA_JUNIT_TEST_PACKAGE
+#'   - APPIUM_WEB_JAVA_JUNIT_TEST_PACKAGE
 #' 
-#' -   APPIUM_WEB_JAVA_TESTNG_TEST_PACKAGE
+#'   - APPIUM_WEB_JAVA_TESTNG_TEST_PACKAGE
 #' 
-#' -   APPIUM_WEB_PYTHON_TEST_PACKAGE
+#'   - APPIUM_WEB_PYTHON_TEST_PACKAGE
 #' 
-#' -   APPIUM_WEB_NODE_TEST_PACKAGE
+#'   - APPIUM_WEB_NODE_TEST_PACKAGE
 #' 
-#' -   APPIUM_WEB_RUBY_TEST_PACKAGE
+#'   - APPIUM_WEB_RUBY_TEST_PACKAGE
 #' 
-#' -   CALABASH_TEST_PACKAGE
+#'   - CALABASH_TEST_PACKAGE
 #' 
-#' -   INSTRUMENTATION_TEST_PACKAGE
+#'   - INSTRUMENTATION_TEST_PACKAGE
 #' 
-#' -   UIAUTOMATION_TEST_PACKAGE
+#'   - UIAUTOMATION_TEST_PACKAGE
 #' 
-#' -   UIAUTOMATOR_TEST_PACKAGE
+#'   - UIAUTOMATOR_TEST_PACKAGE
 #' 
-#' -   XCTEST_TEST_PACKAGE
+#'   - XCTEST_TEST_PACKAGE
 #' 
-#' -   XCTEST_UI_TEST_PACKAGE
+#'   - XCTEST_UI_TEST_PACKAGE
 #' 
-#' -   APPIUM_JAVA_JUNIT_TEST_SPEC
+#'   - APPIUM_JAVA_JUNIT_TEST_SPEC
 #' 
-#' -   APPIUM_JAVA_TESTNG_TEST_SPEC
+#'   - APPIUM_JAVA_TESTNG_TEST_SPEC
 #' 
-#' -   APPIUM_PYTHON_TEST_SPEC
+#'   - APPIUM_PYTHON_TEST_SPEC
 #' 
-#' -   APPIUM_NODE_TEST_SPEC
+#'   - APPIUM_NODE_TEST_SPEC
 #' 
-#' -   APPIUM_RUBY_TEST_SPEC
+#'   - APPIUM_RUBY_TEST_SPEC
 #' 
-#' -   APPIUM_WEB_JAVA_JUNIT_TEST_SPEC
+#'   - APPIUM_WEB_JAVA_JUNIT_TEST_SPEC
 #' 
-#' -   APPIUM_WEB_JAVA_TESTNG_TEST_SPEC
+#'   - APPIUM_WEB_JAVA_TESTNG_TEST_SPEC
 #' 
-#' -   APPIUM_WEB_PYTHON_TEST_SPEC
+#'   - APPIUM_WEB_PYTHON_TEST_SPEC
 #' 
-#' -   APPIUM_WEB_NODE_TEST_SPEC
+#'   - APPIUM_WEB_NODE_TEST_SPEC
 #' 
-#' -   APPIUM_WEB_RUBY_TEST_SPEC
+#'   - APPIUM_WEB_RUBY_TEST_SPEC
 #' 
-#' -   INSTRUMENTATION_TEST_SPEC
+#'   - INSTRUMENTATION_TEST_SPEC
 #' 
-#' -   XCTEST_UI_TEST_SPEC
+#'   - XCTEST_UI_TEST_SPEC
 #' 
 #' If you call [`create_upload`][devicefarm_create_upload] with `WEB_APP`
 #' specified, AWS Device Farm throws an `ArgumentException` error.
@@ -1592,43 +1592,43 @@ devicefarm_get_device_pool <- function(arn) {
 #' 
 #' Allowed values include the following:
 #' 
-#' -   BUILTIN_FUZZ.
+#'   - BUILTIN_FUZZ.
 #' 
-#' -   BUILTIN_EXPLORER. For Android, an app explorer that traverses an
+#'   - BUILTIN_EXPLORER. For Android, an app explorer that traverses an
 #'     Android app, interacting with it and capturing screenshots at the
 #'     same time.
 #' 
-#' -   APPIUM_JAVA_JUNIT.
+#'   - APPIUM_JAVA_JUNIT.
 #' 
-#' -   APPIUM_JAVA_TESTNG.
+#'   - APPIUM_JAVA_TESTNG.
 #' 
-#' -   APPIUM_PYTHON.
+#'   - APPIUM_PYTHON.
 #' 
-#' -   APPIUM_NODE.
+#'   - APPIUM_NODE.
 #' 
-#' -   APPIUM_RUBY.
+#'   - APPIUM_RUBY.
 #' 
-#' -   APPIUM_WEB_JAVA_JUNIT.
+#'   - APPIUM_WEB_JAVA_JUNIT.
 #' 
-#' -   APPIUM_WEB_JAVA_TESTNG.
+#'   - APPIUM_WEB_JAVA_TESTNG.
 #' 
-#' -   APPIUM_WEB_PYTHON.
+#'   - APPIUM_WEB_PYTHON.
 #' 
-#' -   APPIUM_WEB_NODE.
+#'   - APPIUM_WEB_NODE.
 #' 
-#' -   APPIUM_WEB_RUBY.
+#'   - APPIUM_WEB_RUBY.
 #' 
-#' -   CALABASH.
+#'   - CALABASH.
 #' 
-#' -   INSTRUMENTATION.
+#'   - INSTRUMENTATION.
 #' 
-#' -   UIAUTOMATION.
+#'   - UIAUTOMATION.
 #' 
-#' -   UIAUTOMATOR.
+#'   - UIAUTOMATOR.
 #' 
-#' -   XCTEST.
+#'   - XCTEST.
 #' 
-#' -   XCTEST_UI.
+#'   - XCTEST_UI.
 #' @param test Information about the uploaded test to be run against the device pool.
 #' @param configuration An object that contains information about the settings for a run.
 #'
@@ -2767,14 +2767,15 @@ devicefarm_get_test_grid_project <- function(projectArn) {
 #'
 #' @description
 #' A session is an instance of a browser created through a
-#' `RemoteWebDriver` with the URL from CreateTestGridUrlResult$url. You can
-#' use the following to look up sessions:
+#' `RemoteWebDriver` with the URL from
+#' <span>CreateTestGridUrlResult$url</span>. You can use the following to
+#' look up sessions:
 #' 
-#' -   The session ARN (GetTestGridSessionRequest$sessionArn).
+#'   - The session ARN (<span>GetTestGridSessionRequest$sessionArn</span>).
 #' 
-#' -   The project ARN and a session ID
-#'     (GetTestGridSessionRequest$projectArn and
-#'     GetTestGridSessionRequest$sessionId).
+#'   - The project ARN and a session ID
+#'     (<span>GetTestGridSessionRequest$projectArn</span> and
+#'     <span>GetTestGridSessionRequest$sessionId</span>).
 #'
 #' @usage
 #' devicefarm_get_test_grid_session(projectArn, sessionId, sessionArn)
@@ -2783,7 +2784,7 @@ devicefarm_get_test_grid_project <- function(projectArn) {
 #' [`create_test_grid_project`][devicefarm_create_test_grid_project] and
 #' [`list_test_grid_projects`][devicefarm_list_test_grid_projects].
 #' @param sessionId An ID associated with this session.
-#' @param sessionArn An ARN that uniquely identifies a TestGridSession.
+#' @param sessionArn An ARN that uniquely identifies a <span>TestGridSession</span>.
 #'
 #' @return
 #' A list with the following syntax:
@@ -3040,11 +3041,11 @@ devicefarm_install_to_remote_access_session <- function(remoteAccessSessionArn, 
 #' 
 #' Allowed values include:
 #' 
-#' -   FILE
+#'   - FILE
 #' 
-#' -   LOG
+#'   - LOG
 #' 
-#' -   SCREENSHOT
+#'   - SCREENSHOT
 #' @param nextToken An identifier that was returned from the previous call to this
 #' operation, which can be used to return the next set of items in the
 #' list.
@@ -3190,10 +3191,10 @@ devicefarm_list_device_instances <- function(maxResults = NULL, nextToken = NULL
 #' 
 #' Allowed values include:
 #' 
-#' -   CURATED: A device pool that is created and managed by AWS Device
+#'   - CURATED: A device pool that is created and managed by AWS Device
 #'     Farm.
 #' 
-#' -   PRIVATE: A device pool that is created and managed by the device
+#'   - PRIVATE: A device pool that is created and managed by the device
 #'     pool developer.
 #' @param nextToken An identifier that was returned from the previous call to this
 #' operation, which can be used to return the next set of items in the
@@ -3277,68 +3278,68 @@ devicefarm_list_device_pools <- function(arn, type = NULL, nextToken = NULL) {
 #' @param filters Used to select a set of devices. A filter is made up of an attribute, an
 #' operator, and one or more values.
 #' 
-#' -   Attribute: The aspect of a device such as platform or model used as
+#'   - Attribute: The aspect of a device such as platform or model used as
 #'     the selection criteria in a device filter.
-#' 
+#'     
 #'     Allowed values include:
-#' 
-#'     -   ARN: The Amazon Resource Name (ARN) of the device (for example,
+#'     
+#'       - ARN: The Amazon Resource Name (ARN) of the device (for example,
 #'         `arn:aws:devicefarm:us-west-2::device:12345Example`).
-#' 
-#'     -   PLATFORM: The device platform. Valid values are ANDROID or IOS.
-#' 
-#'     -   OS_VERSION: The operating system version (for example, 10.3.2).
-#' 
-#'     -   MODEL: The device model (for example, iPad 5th Gen).
-#' 
-#'     -   AVAILABILITY: The current availability of the device. Valid
+#'     
+#'       - PLATFORM: The device platform. Valid values are ANDROID or IOS.
+#'     
+#'       - OS_VERSION: The operating system version (for example, 10.3.2).
+#'     
+#'       - MODEL: The device model (for example, iPad 5th Gen).
+#'     
+#'       - AVAILABILITY: The current availability of the device. Valid
 #'         values are AVAILABLE, HIGHLY_AVAILABLE, BUSY, or
 #'         TEMPORARY_NOT_AVAILABLE.
-#' 
-#'     -   FORM_FACTOR: The device form factor. Valid values are PHONE or
+#'     
+#'       - FORM_FACTOR: The device form factor. Valid values are PHONE or
 #'         TABLET.
-#' 
-#'     -   MANUFACTURER: The device manufacturer (for example, Apple).
-#' 
-#'     -   REMOTE_ACCESS_ENABLED: Whether the device is enabled for
+#'     
+#'       - MANUFACTURER: The device manufacturer (for example, Apple).
+#'     
+#'       - REMOTE_ACCESS_ENABLED: Whether the device is enabled for
 #'         remote access. Valid values are TRUE or FALSE.
-#' 
-#'     -   REMOTE_DEBUG_ENABLED: Whether the device is enabled for remote
+#'     
+#'       - REMOTE_DEBUG_ENABLED: Whether the device is enabled for remote
 #'         debugging. Valid values are TRUE or FALSE. Because remote
 #'         debugging is [no longer
 #'         supported](https://docs.aws.amazon.com/devicefarm/latest/developerguide/history.html),
 #'         this attribute is ignored.
-#' 
-#'     -   INSTANCE_ARN: The Amazon Resource Name (ARN) of the device
+#'     
+#'       - INSTANCE_ARN: The Amazon Resource Name (ARN) of the device
 #'         instance.
+#'     
+#'       - INSTANCE_LABELS: The label of the device instance.
+#'     
+#'       - FLEET_TYPE: The fleet type. Valid values are PUBLIC or PRIVATE.
 #' 
-#'     -   INSTANCE_LABELS: The label of the device instance.
-#' 
-#'     -   FLEET_TYPE: The fleet type. Valid values are PUBLIC or PRIVATE.
-#' 
-#' -   Operator: The filter operator.
-#' 
-#'     -   The EQUALS operator is available for every attribute except
+#'   - Operator: The filter operator.
+#'     
+#'       - The EQUALS operator is available for every attribute except
 #'         INSTANCE_LABELS.
-#' 
-#'     -   The CONTAINS operator is available for the INSTANCE_LABELS and
+#'     
+#'       - The CONTAINS operator is available for the INSTANCE_LABELS and
 #'         MODEL attributes.
-#' 
-#'     -   The IN and NOT_IN operators are available for the ARN,
+#'     
+#'       - The IN and NOT_IN operators are available for the ARN,
 #'         OS_VERSION, MODEL, MANUFACTURER, and INSTANCE_ARN attributes.
-#' 
-#'     -   The LESS_THAN, GREATER_THAN, LESS_THAN_OR_EQUALS, and
+#'     
+#'       - The LESS_THAN, GREATER_THAN, LESS_THAN_OR_EQUALS, and
 #'         GREATER_THAN_OR_EQUALS operators are also available for the
 #'         OS_VERSION attribute.
 #' 
-#' -   Values: An array of one or more filter values.
-#' 
-#'     -   The IN and NOT_IN operators take a values array that has one or
+#'   - Values: An array of one or more filter values.
+#'     
+#'       - The IN and NOT_IN operators take a values array that has one or
 #'         more elements.
-#' 
-#'     -   The other operators require an array with a single element.
-#' 
-#'     -   In a request, the AVAILABILITY attribute takes the following
+#'     
+#'       - The other operators require an array with a single element.
+#'     
+#'       - In a request, the AVAILABILITY attribute takes the following
 #'         values: AVAILABLE, HIGHLY_AVAILABLE, BUSY, or
 #'         TEMPORARY_NOT_AVAILABLE.
 #'
@@ -4598,7 +4599,7 @@ devicefarm_list_test_grid_projects <- function(maxResult = NULL, nextToken = NUL
 #' Returns a list of the actions taken in a TestGridSession
 #'
 #' @description
-#' Returns a list of the actions taken in a TestGridSession.
+#' Returns a list of the actions taken in a <span>TestGridSession</span>.
 #'
 #' @usage
 #' devicefarm_list_test_grid_session_actions(sessionArn, maxResult,
@@ -4665,7 +4666,7 @@ devicefarm_list_test_grid_session_actions <- function(sessionArn, maxResult = NU
 #' devicefarm_list_test_grid_session_artifacts(sessionArn, type, maxResult,
 #'   nextToken)
 #'
-#' @param sessionArn &#91;required&#93; The ARN of a TestGridSession.
+#' @param sessionArn &#91;required&#93; The ARN of a <span>TestGridSession</span>.
 #' @param type Limit results to a specified type of artifact.
 #' @param maxResult The maximum number of results to be returned by a request.
 #' @param nextToken Pagination token.
@@ -4718,14 +4719,14 @@ devicefarm_list_test_grid_session_artifacts <- function(sessionArn, type = NULL,
 #' Retrieves a list of sessions for a TestGridProject
 #'
 #' @description
-#' Retrieves a list of sessions for a TestGridProject.
+#' Retrieves a list of sessions for a <span>TestGridProject</span>.
 #'
 #' @usage
 #' devicefarm_list_test_grid_sessions(projectArn, status,
 #'   creationTimeAfter, creationTimeBefore, endTimeAfter, endTimeBefore,
 #'   maxResult, nextToken)
 #'
-#' @param projectArn &#91;required&#93; ARN of a TestGridProject.
+#' @param projectArn &#91;required&#93; ARN of a <span>TestGridProject</span>.
 #' @param status Return only sessions in this state.
 #' @param creationTimeAfter Return only sessions created after this time.
 #' @param creationTimeBefore Return only sessions created before this time.
@@ -4897,8 +4898,8 @@ devicefarm_list_tests <- function(arn, nextToken = NULL) {
 #' 
 #' Unique problems are defined as a single instance of an error across a
 #' run, job, or suite. For example, if a call in your application
-#' consistently raises an exception
-#' (`OutOfBoundsException in MyActivity.java:386`),
+#' consistently raises an exception (`OutOfBoundsException in
+#' MyActivity.java:386`),
 #' [`list_unique_problems`][devicefarm_list_unique_problems] returns a
 #' single entry instead of many individual entries for that exception.
 #'
@@ -5049,69 +5050,69 @@ devicefarm_list_unique_problems <- function(arn, nextToken = NULL) {
 #' 
 #' Must be one of the following values:
 #' 
-#' -   ANDROID_APP
+#'   - ANDROID_APP
 #' 
-#' -   IOS_APP
+#'   - IOS_APP
 #' 
-#' -   WEB_APP
+#'   - WEB_APP
 #' 
-#' -   EXTERNAL_DATA
+#'   - EXTERNAL_DATA
 #' 
-#' -   APPIUM_JAVA_JUNIT_TEST_PACKAGE
+#'   - APPIUM_JAVA_JUNIT_TEST_PACKAGE
 #' 
-#' -   APPIUM_JAVA_TESTNG_TEST_PACKAGE
+#'   - APPIUM_JAVA_TESTNG_TEST_PACKAGE
 #' 
-#' -   APPIUM_PYTHON_TEST_PACKAGE
+#'   - APPIUM_PYTHON_TEST_PACKAGE
 #' 
-#' -   APPIUM_NODE_TEST_PACKAGE
+#'   - APPIUM_NODE_TEST_PACKAGE
 #' 
-#' -   APPIUM_RUBY_TEST_PACKAGE
+#'   - APPIUM_RUBY_TEST_PACKAGE
 #' 
-#' -   APPIUM_WEB_JAVA_JUNIT_TEST_PACKAGE
+#'   - APPIUM_WEB_JAVA_JUNIT_TEST_PACKAGE
 #' 
-#' -   APPIUM_WEB_JAVA_TESTNG_TEST_PACKAGE
+#'   - APPIUM_WEB_JAVA_TESTNG_TEST_PACKAGE
 #' 
-#' -   APPIUM_WEB_PYTHON_TEST_PACKAGE
+#'   - APPIUM_WEB_PYTHON_TEST_PACKAGE
 #' 
-#' -   APPIUM_WEB_NODE_TEST_PACKAGE
+#'   - APPIUM_WEB_NODE_TEST_PACKAGE
 #' 
-#' -   APPIUM_WEB_RUBY_TEST_PACKAGE
+#'   - APPIUM_WEB_RUBY_TEST_PACKAGE
 #' 
-#' -   CALABASH_TEST_PACKAGE
+#'   - CALABASH_TEST_PACKAGE
 #' 
-#' -   INSTRUMENTATION_TEST_PACKAGE
+#'   - INSTRUMENTATION_TEST_PACKAGE
 #' 
-#' -   UIAUTOMATION_TEST_PACKAGE
+#'   - UIAUTOMATION_TEST_PACKAGE
 #' 
-#' -   UIAUTOMATOR_TEST_PACKAGE
+#'   - UIAUTOMATOR_TEST_PACKAGE
 #' 
-#' -   XCTEST_TEST_PACKAGE
+#'   - XCTEST_TEST_PACKAGE
 #' 
-#' -   XCTEST_UI_TEST_PACKAGE
+#'   - XCTEST_UI_TEST_PACKAGE
 #' 
-#' -   APPIUM_JAVA_JUNIT_TEST_SPEC
+#'   - APPIUM_JAVA_JUNIT_TEST_SPEC
 #' 
-#' -   APPIUM_JAVA_TESTNG_TEST_SPEC
+#'   - APPIUM_JAVA_TESTNG_TEST_SPEC
 #' 
-#' -   APPIUM_PYTHON_TEST_SPEC
+#'   - APPIUM_PYTHON_TEST_SPEC
 #' 
-#' -   APPIUM_NODE_TEST_SPEC
+#'   - APPIUM_NODE_TEST_SPEC
 #' 
-#' -   APPIUM_RUBY_TEST_SPEC
+#'   - APPIUM_RUBY_TEST_SPEC
 #' 
-#' -   APPIUM_WEB_JAVA_JUNIT_TEST_SPEC
+#'   - APPIUM_WEB_JAVA_JUNIT_TEST_SPEC
 #' 
-#' -   APPIUM_WEB_JAVA_TESTNG_TEST_SPEC
+#'   - APPIUM_WEB_JAVA_TESTNG_TEST_SPEC
 #' 
-#' -   APPIUM_WEB_PYTHON_TEST_SPEC
+#'   - APPIUM_WEB_PYTHON_TEST_SPEC
 #' 
-#' -   APPIUM_WEB_NODE_TEST_SPEC
+#'   - APPIUM_WEB_NODE_TEST_SPEC
 #' 
-#' -   APPIUM_WEB_RUBY_TEST_SPEC
+#'   - APPIUM_WEB_RUBY_TEST_SPEC
 #' 
-#' -   INSTRUMENTATION_TEST_SPEC
+#'   - INSTRUMENTATION_TEST_SPEC
 #' 
-#' -   XCTEST_UI_TEST_SPEC
+#'   - XCTEST_UI_TEST_SPEC
 #' @param nextToken An identifier that was returned from the previous call to this
 #' operation, which can be used to return the next set of items in the
 #' list.

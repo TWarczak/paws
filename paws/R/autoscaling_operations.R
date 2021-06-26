@@ -80,13 +80,13 @@ autoscaling_attach_instances <- function(InstanceIds = NULL, AutoScalingGroupNam
 #' 
 #' This operation is used with the following load balancer types:
 #' 
-#' -   Application Load Balancer - Operates at the application layer
-#'     (layer 7) and supports HTTP and HTTPS.
+#'   - Application Load Balancer - Operates at the application layer (layer
+#'     7) and supports HTTP and HTTPS.
 #' 
-#' -   Network Load Balancer - Operates at the transport layer (layer 4)
+#'   - Network Load Balancer - Operates at the transport layer (layer 4)
 #'     and supports TCP, TLS, and UDP.
 #' 
-#' -   Gateway Load Balancer - Operates at the network layer (layer 3).
+#'   - Gateway Load Balancer - Operates at the network layer (layer 3).
 #' 
 #' To describe the target groups for an Auto Scaling group, call the
 #' [`describe_load_balancer_target_groups`][autoscaling_describe_load_balancer_target_groups]
@@ -512,9 +512,9 @@ autoscaling_complete_lifecycle_action <- function(LifecycleHookName, AutoScaling
 }
 .autoscaling$operations$complete_lifecycle_action <- autoscaling_complete_lifecycle_action
 
-#' We strongly recommend using a launch template when calling this
-#' operation to ensure full functionality for Amazon EC2 Auto Scaling and
-#' Amazon EC2
+#' WE STRONGLY RECOMMEND USING A LAUNCH TEMPLATE WHEN CALLING THIS
+#' OPERATION TO ENSURE FULL FUNCTIONALITY FOR AMAZON EC2 AUTO SCALING AND
+#' AMAZON EC2
 #'
 #' @description
 #' **We strongly recommend using a launch template when calling this
@@ -1703,11 +1703,11 @@ autoscaling_describe_account_limits <- function() {
 #' 
 #' The following adjustment types are supported:
 #' 
-#' -   ChangeInCapacity
+#'   - ChangeInCapacity
 #' 
-#' -   ExactCapacity
+#'   - ExactCapacity
 #' 
-#' -   PercentChangeInCapacity
+#'   - PercentChangeInCapacity
 #'
 #' @usage
 #' autoscaling_describe_adjustment_types()
@@ -2070,21 +2070,21 @@ autoscaling_describe_auto_scaling_notification_types <- function() {
 #' You can determine the status of a request by looking at the `Status`
 #' parameter. The following are the possible statuses:
 #' 
-#' -   `Pending` - The request was created, but the operation has not
+#'   - `Pending` - The request was created, but the operation has not
 #'     started.
 #' 
-#' -   `InProgress` - The operation is in progress.
+#'   - `InProgress` - The operation is in progress.
 #' 
-#' -   `Successful` - The operation completed successfully.
+#'   - `Successful` - The operation completed successfully.
 #' 
-#' -   `Failed` - The operation failed to complete. You can troubleshoot
+#'   - `Failed` - The operation failed to complete. You can troubleshoot
 #'     using the status reason and the scaling activities.
 #' 
-#' -   `Cancelling` - An ongoing operation is being cancelled. Cancellation
+#'   - `Cancelling` - An ongoing operation is being cancelled. Cancellation
 #'     does not roll back any replacements that have already been
 #'     completed, but it prevents new replacements from being started.
 #' 
-#' -   `Cancelled` - The operation is cancelled.
+#'   - `Cancelled` - The operation is cancelled.
 #' 
 #' For more information, see [Replacing Auto Scaling Instances Based on an
 #' Instance
@@ -2288,9 +2288,9 @@ autoscaling_describe_launch_configurations <- function(LaunchConfigurationNames 
 #' 
 #' The following hook types are supported:
 #' 
-#' -   autoscaling:EC2_INSTANCE_LAUNCHING
+#'   - autoscaling:EC2_INSTANCE_LAUNCHING
 #' 
-#' -   autoscaling:EC2_INSTANCE_TERMINATING
+#'   - autoscaling:EC2_INSTANCE_TERMINATING
 #'
 #' @usage
 #' autoscaling_describe_lifecycle_hook_types()
@@ -3438,31 +3438,31 @@ autoscaling_detach_load_balancers <- function(AutoScalingGroupName, LoadBalancer
 #' @param AutoScalingGroupName &#91;required&#93; The name of the Auto Scaling group.
 #' @param Metrics Specifies one or more of the following metrics:
 #' 
-#' -   `GroupMinSize`
+#'   - `GroupMinSize`
 #' 
-#' -   `GroupMaxSize`
+#'   - `GroupMaxSize`
 #' 
-#' -   `GroupDesiredCapacity`
+#'   - `GroupDesiredCapacity`
 #' 
-#' -   `GroupInServiceInstances`
+#'   - `GroupInServiceInstances`
 #' 
-#' -   `GroupPendingInstances`
+#'   - `GroupPendingInstances`
 #' 
-#' -   `GroupStandbyInstances`
+#'   - `GroupStandbyInstances`
 #' 
-#' -   `GroupTerminatingInstances`
+#'   - `GroupTerminatingInstances`
 #' 
-#' -   `GroupTotalInstances`
+#'   - `GroupTotalInstances`
 #' 
-#' -   `GroupInServiceCapacity`
+#'   - `GroupInServiceCapacity`
 #' 
-#' -   `GroupPendingCapacity`
+#'   - `GroupPendingCapacity`
 #' 
-#' -   `GroupStandbyCapacity`
+#'   - `GroupStandbyCapacity`
 #' 
-#' -   `GroupTerminatingCapacity`
+#'   - `GroupTerminatingCapacity`
 #' 
-#' -   `GroupTotalCapacity`
+#'   - `GroupTotalCapacity`
 #' 
 #' If you omit this parameter, all metrics are disabled.
 #'
@@ -3528,34 +3528,34 @@ autoscaling_disable_metrics_collection <- function(AutoScalingGroupName, Metrics
 #' @param Metrics Specifies which group-level metrics to start collecting. You can specify
 #' one or more of the following metrics:
 #' 
-#' -   `GroupMinSize`
+#'   - `GroupMinSize`
 #' 
-#' -   `GroupMaxSize`
+#'   - `GroupMaxSize`
 #' 
-#' -   `GroupDesiredCapacity`
+#'   - `GroupDesiredCapacity`
 #' 
-#' -   `GroupInServiceInstances`
+#'   - `GroupInServiceInstances`
 #' 
-#' -   `GroupPendingInstances`
+#'   - `GroupPendingInstances`
 #' 
-#' -   `GroupStandbyInstances`
+#'   - `GroupStandbyInstances`
 #' 
-#' -   `GroupTerminatingInstances`
+#'   - `GroupTerminatingInstances`
 #' 
-#' -   `GroupTotalInstances`
+#'   - `GroupTotalInstances`
 #' 
 #' The instance weighting feature supports the following additional
 #' metrics:
 #' 
-#' -   `GroupInServiceCapacity`
+#'   - `GroupInServiceCapacity`
 #' 
-#' -   `GroupPendingCapacity`
+#'   - `GroupPendingCapacity`
 #' 
-#' -   `GroupStandbyCapacity`
+#'   - `GroupStandbyCapacity`
 #' 
-#' -   `GroupTerminatingCapacity`
+#'   - `GroupTerminatingCapacity`
 #' 
-#' -   `GroupTotalCapacity`
+#'   - `GroupTotalCapacity`
 #' 
 #' If you omit this parameter, all metrics are enabled.
 #' @param Granularity &#91;required&#93; The granularity to associate with the metrics to collect. The only valid
@@ -3924,9 +3924,9 @@ autoscaling_exit_standby <- function(InstanceIds = NULL, AutoScalingGroupName) {
 #' @param LifecycleTransition The instance state to which you want to attach the lifecycle hook. The
 #' valid values are:
 #' 
-#' -   autoscaling:EC2_INSTANCE_LAUNCHING
+#'   - autoscaling:EC2_INSTANCE_LAUNCHING
 #' 
-#' -   autoscaling:EC2_INSTANCE_TERMINATING
+#'   - autoscaling:EC2_INSTANCE_TERMINATING
 #' 
 #' Required for new lifecycle hooks, but optional when updating existing
 #' hooks.
@@ -4112,11 +4112,11 @@ autoscaling_put_notification_configuration <- function(AutoScalingGroupName, Top
 #' @param PolicyName &#91;required&#93; The name of the policy.
 #' @param PolicyType One of the following policy types:
 #' 
-#' -   `TargetTrackingScaling`
+#'   - `TargetTrackingScaling`
 #' 
-#' -   `StepScaling`
+#'   - `StepScaling`
 #' 
-#' -   `SimpleScaling` (default)
+#'   - `SimpleScaling` (default)
 #' @param AdjustmentType Specifies how the scaling adjustment is interpreted (for example, an
 #' absolute number or a percentage). The valid values are
 #' `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
@@ -4180,13 +4180,13 @@ autoscaling_put_notification_configuration <- function(AutoScalingGroupName, Top
 #' 
 #' The following predefined metrics are available:
 #' 
-#' -   `ASGAverageCPUUtilization`
+#'   - `ASGAverageCPUUtilization`
 #' 
-#' -   `ASGAverageNetworkIn`
+#'   - `ASGAverageNetworkIn`
 #' 
-#' -   `ASGAverageNetworkOut`
+#'   - `ASGAverageNetworkOut`
 #' 
-#' -   `ALBRequestCountPerTarget`
+#'   - `ALBRequestCountPerTarget`
 #' 
 #' If you specify `ALBRequestCountPerTarget` for the metric, you must
 #' specify the `ResourceLabel` parameter with the
@@ -4511,23 +4511,23 @@ autoscaling_record_lifecycle_action_heartbeat <- function(LifecycleHookName, Aut
 #' @param AutoScalingGroupName &#91;required&#93; The name of the Auto Scaling group.
 #' @param ScalingProcesses One or more of the following processes:
 #' 
-#' -   `Launch`
+#'   - `Launch`
 #' 
-#' -   `Terminate`
+#'   - `Terminate`
 #' 
-#' -   `AddToLoadBalancer`
+#'   - `AddToLoadBalancer`
 #' 
-#' -   `AlarmNotification`
+#'   - `AlarmNotification`
 #' 
-#' -   `AZRebalance`
+#'   - `AZRebalance`
 #' 
-#' -   `HealthCheck`
+#'   - `HealthCheck`
 #' 
-#' -   `InstanceRefresh`
+#'   - `InstanceRefresh`
 #' 
-#' -   `ReplaceUnhealthy`
+#'   - `ReplaceUnhealthy`
 #' 
-#' -   `ScheduledActions`
+#'   - `ScheduledActions`
 #' 
 #' If you omit this parameter, all processes are specified.
 #'
@@ -4913,23 +4913,23 @@ autoscaling_start_instance_refresh <- function(AutoScalingGroupName, Strategy = 
 #' @param AutoScalingGroupName &#91;required&#93; The name of the Auto Scaling group.
 #' @param ScalingProcesses One or more of the following processes:
 #' 
-#' -   `Launch`
+#'   - `Launch`
 #' 
-#' -   `Terminate`
+#'   - `Terminate`
 #' 
-#' -   `AddToLoadBalancer`
+#'   - `AddToLoadBalancer`
 #' 
-#' -   `AlarmNotification`
+#'   - `AlarmNotification`
 #' 
-#' -   `AZRebalance`
+#'   - `AZRebalance`
 #' 
-#' -   `HealthCheck`
+#'   - `HealthCheck`
 #' 
-#' -   `InstanceRefresh`
+#'   - `InstanceRefresh`
 #' 
-#' -   `ReplaceUnhealthy`
+#'   - `ReplaceUnhealthy`
 #' 
-#' -   `ScheduledActions`
+#'   - `ScheduledActions`
 #' 
 #' If you omit this parameter, all processes are specified.
 #'
@@ -5073,8 +5073,8 @@ autoscaling_terminate_instance_in_auto_scaling_group <- function(InstanceId, Sho
 }
 .autoscaling$operations$terminate_instance_in_auto_scaling_group <- autoscaling_terminate_instance_in_auto_scaling_group
 
-#' We strongly recommend that all Auto Scaling groups use launch templates
-#' to ensure full functionality for Amazon EC2 Auto Scaling and Amazon EC2
+#' WE STRONGLY RECOMMEND THAT ALL AUTO SCALING GROUPS USE LAUNCH TEMPLATES
+#' TO ENSURE FULL FUNCTIONALITY FOR AMAZON EC2 AUTO SCALING AND AMAZON EC2
 #'
 #' @description
 #' **We strongly recommend that all Auto Scaling groups use launch
@@ -5105,17 +5105,17 @@ autoscaling_terminate_instance_in_auto_scaling_group <- function(InstanceId, Sho
 #' Note the following about changing `DesiredCapacity`, `MaxSize`, or
 #' `MinSize`:
 #' 
-#' -   If a scale-in activity occurs as a result of a new `DesiredCapacity`
+#'   - If a scale-in activity occurs as a result of a new `DesiredCapacity`
 #'     value that is lower than the current size of the group, the Auto
 #'     Scaling group uses its termination policy to determine which
 #'     instances to terminate.
 #' 
-#' -   If you specify a new value for `MinSize` without specifying a value
+#'   - If you specify a new value for `MinSize` without specifying a value
 #'     for `DesiredCapacity`, and the new `MinSize` is larger than the
 #'     current size of the group, this sets the group's `DesiredCapacity`
 #'     to the new `MinSize` value.
 #' 
-#' -   If you specify a new value for `MaxSize` without specifying a value
+#'   - If you specify a new value for `MaxSize` without specifying a value
 #'     for `DesiredCapacity`, and the new `MaxSize` is smaller than the
 #'     current size of the group, this sets the group's `DesiredCapacity`
 #'     to the new `MaxSize` value.

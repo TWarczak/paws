@@ -16,8 +16,8 @@ value is \code{false}.}
 the behavior of different API importing operations. The following shows
 operation-specific parameters and their supported values.
 
-To exclude DocumentationParts from the import, set \code{parameters} as
-\code{ignore=documentation}.
+To exclude <span>DocumentationParts</span> from the import, set
+\code{parameters} as \code{ignore=documentation}.
 
 To configure the endpoint type, set \code{parameters} as
 \code{endpointConfigurationTypes=EDGE},

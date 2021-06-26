@@ -49,7 +49,7 @@ and exposes it to the instance with the specified disk name.
 
 The \verb{attach disk} operation supports tag-based access control via
 resource tags applied to the resource identified by \verb{disk name}. For
-more information, see the Lightsail Dev Guide.
+more information, see the <span>Lightsail Dev Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$attach_disk(

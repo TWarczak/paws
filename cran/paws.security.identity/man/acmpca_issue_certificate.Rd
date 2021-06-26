@@ -13,7 +13,7 @@ acmpca_issue_certificate(CertificateAuthorityArn, Csr, SigningAlgorithm,
 \code{\link[=acmpca_create_certificate_authority]{create_certificate_authority}}.
 This must be of the form:
 
-\code{arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012 }}
+\code{arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012}}
 
 \item{Csr}{[required] The certificate signing request (CSR) for the certificate you want to
 issue. You can use the following OpenSSL command to create the CSR and a

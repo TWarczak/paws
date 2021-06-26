@@ -61,7 +61,8 @@ Creates a block storage disk that can be attached to an Amazon Lightsail
 instance in the same Availability Zone (e.g., \verb{us-east-2a}).
 
 The \verb{create disk} operation supports tag-based access control via
-request tags. For more information, see the Lightsail Dev Guide.
+request tags. For more information, see the <span>Lightsail Dev
+Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$create_disk(

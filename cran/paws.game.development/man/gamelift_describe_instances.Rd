@@ -48,7 +48,7 @@ details on one specific instance.
 To get a specific instance, specify fleet ID and instance ID. To get all
 instances in a fleet, specify a fleet ID only. Use the pagination
 parameters to retrieve results as a set of sequential pages. If
-successful, an Instance object is returned for each result.
+successful, an <span>Instance</span> object is returned for each result.
 
 \strong{Learn more}
 

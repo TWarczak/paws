@@ -53,12 +53,12 @@ specified check ID. You can get the check IDs by calling the
 \code{\link[=support_describe_trusted_advisor_checks]{describe_trusted_advisor_checks}}
 operation.
 
-The response contains a TrustedAdvisorCheckResult object, which contains
-these three objects:
+The response contains a <span>TrustedAdvisorCheckResult</span> object,
+which contains these three objects:
 \itemize{
-\item TrustedAdvisorCategorySpecificSummary
-\item TrustedAdvisorResourceDetail
-\item TrustedAdvisorResourcesSummary
+\item <span>TrustedAdvisorCategorySpecificSummary</span>
+\item <span>TrustedAdvisorResourceDetail</span>
+\item <span>TrustedAdvisorResourcesSummary</span>
 }
 
 In addition, the response contains these fields:
@@ -67,6 +67,9 @@ In addition, the response contains these fields:
 (yellow), "error" (red), or "not_available".
 \item \strong{timestamp} - The time of the last refresh of the check.
 \item \strong{checkId} - The unique identifier for the check.
+}<!-- end list -->
+
+\itemize{
 \item You must have a Business or Enterprise support plan to use the AWS
 Support API.
 \item If you call the AWS Support API from an account that does not have a

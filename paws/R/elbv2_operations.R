@@ -156,13 +156,13 @@ elbv2_add_tags <- function(ResourceArns, Tags) {
 #' 
 #' For more information, see the following:
 #' 
-#' -   [Listeners for your Application Load
+#'   - [Listeners for your Application Load
 #'     Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html)
 #' 
-#' -   [Listeners for your Network Load
+#'   - [Listeners for your Network Load
 #'     Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-listeners.html)
 #' 
-#' -   [Listeners for your Gateway Load
+#'   - [Listeners for your Gateway Load
 #'     Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/gateway/gateway-listeners.html)
 #' 
 #' This operation is idempotent, which means that it completes at most one
@@ -198,15 +198,15 @@ elbv2_add_tags <- function(ResourceArns, Tags) {
 #' (ALPN) policy. You can specify one policy name. The following are the
 #' possible values:
 #' 
-#' -   `HTTP1Only`
+#'   - `HTTP1Only`
 #' 
-#' -   `HTTP2Only`
+#'   - `HTTP2Only`
 #' 
-#' -   `HTTP2Optional`
+#'   - `HTTP2Optional`
 #' 
-#' -   `HTTP2Preferred`
+#'   - `HTTP2Preferred`
 #' 
-#' -   `None`
+#'   - `None`
 #' 
 #' For more information, see [ALPN
 #' policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/create-tls-listener.html#alpn-policies)
@@ -454,13 +454,13 @@ elbv2_create_listener <- function(LoadBalancerArn, Protocol = NULL, Port = NULL,
 #' 
 #' For more information, see the following:
 #' 
-#' -   [Application Load
+#'   - [Application Load
 #'     Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/application-load-balancers.html)
 #' 
-#' -   [Network Load
+#'   - [Network Load
 #'     Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/network-load-balancers.html)
 #' 
-#' -   [Gateway Load
+#'   - [Gateway Load
 #'     Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/gateway/gateway-load-balancers.html)
 #' 
 #' This operation is idempotent, which means that it completes at most one
@@ -972,13 +972,13 @@ elbv2_create_rule <- function(ListenerArn, Conditions, Priority, Actions, Tags =
 #' 
 #' For more information, see the following:
 #' 
-#' -   [Target groups for your Application Load
+#'   - [Target groups for your Application Load
 #'     Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html)
 #' 
-#' -   [Target groups for your Network Load
+#'   - [Target groups for your Network Load
 #'     Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html)
 #' 
-#' -   [Target groups for your Gateway Load
+#'   - [Target groups for your Gateway Load
 #'     Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/gateway/target-groups.html)
 #' 
 #' This operation is idempotent, which means that it completes at most one
@@ -1064,16 +1064,16 @@ elbv2_create_rule <- function(ListenerArn, Conditions, Priority, Actions, Tags =
 #' this target group. You can't specify targets for a target group using
 #' more than one target type.
 #' 
-#' -   `instance` - Register targets by instance ID. This is the default
+#'   - `instance` - Register targets by instance ID. This is the default
 #'     value.
 #' 
-#' -   `ip` - Register targets by IP address. You can specify IP addresses
+#'   - `ip` - Register targets by IP address. You can specify IP addresses
 #'     from the subnets of the virtual private cloud (VPC) for the target
 #'     group, the RFC 1918 range (10.0.0.0/8, 172.16.0.0/12, and
 #'     192.168.0.0/16), and the RFC 6598 range (100.64.0.0/10). You can't
 #'     specify publicly routable IP addresses.
 #' 
-#' -   `lambda` - Register a single Lambda function as a target.
+#'   - `lambda` - Register a single Lambda function as a target.
 #' @param Tags The tags to assign to the target group.
 #'
 #' @return
@@ -1462,13 +1462,13 @@ elbv2_deregister_targets <- function(TargetGroupArn, Targets) {
 #' 
 #' For more information, see the following:
 #' 
-#' -   [Quotas for your Application Load
+#'   - [Quotas for your Application Load
 #'     Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-limits.html)
 #' 
-#' -   [Quotas for your Network Load
+#'   - [Quotas for your Network Load
 #'     Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-limits.html)
 #' 
-#' -   [Quotas for your Gateway Load
+#'   - [Quotas for your Gateway Load
 #'     Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/gateway/quotas-limits.html)
 #'
 #' @usage
@@ -1745,15 +1745,15 @@ elbv2_describe_listeners <- function(LoadBalancerArn = NULL, ListenerArns = NULL
 #' 
 #' For more information, see the following:
 #' 
-#' -   [Load balancer
+#'   - [Load balancer
 #'     attributes](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/application-load-balancers.html#load-balancer-attributes)
 #'     in the *Application Load Balancers Guide*
 #' 
-#' -   [Load balancer
+#'   - [Load balancer
 #'     attributes](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/network-load-balancers.html#load-balancer-attributes)
 #'     in the *Network Load Balancers Guide*
 #' 
-#' -   [Load balancer
+#'   - [Load balancer
 #'     attributes](https://docs.aws.amazon.com/elasticloadbalancing/latest/gateway/gateway-load-balancers.html#load-balancer-attributes)
 #'     in the *Gateway Load Balancers Guide*
 #'
@@ -2251,15 +2251,15 @@ elbv2_describe_tags <- function(ResourceArns) {
 #' 
 #' For more information, see the following:
 #' 
-#' -   [Target group
+#'   - [Target group
 #'     attributes](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html#target-group-attributes)
 #'     in the *Application Load Balancers Guide*
 #' 
-#' -   [Target group
+#'   - [Target group
 #'     attributes](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#target-group-attributes)
 #'     in the *Network Load Balancers Guide*
 #' 
-#' -   [Target group
+#'   - [Target group
 #'     attributes](https://docs.aws.amazon.com/elasticloadbalancing/latest/gateway/target-groups.html#target-group-attributes)
 #'     in the *Gateway Load Balancers Guide*
 #'
@@ -2547,15 +2547,15 @@ elbv2_describe_target_health <- function(TargetGroupArn, Targets = NULL) {
 #' (ALPN) policy. You can specify one policy name. The following are the
 #' possible values:
 #' 
-#' -   `HTTP1Only`
+#'   - `HTTP1Only`
 #' 
-#' -   `HTTP2Only`
+#'   - `HTTP2Only`
 #' 
-#' -   `HTTP2Optional`
+#'   - `HTTP2Optional`
 #' 
-#' -   `HTTP2Preferred`
+#'   - `HTTP2Preferred`
 #' 
-#' -   `None`
+#'   - `None`
 #' 
 #' For more information, see [ALPN
 #' policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/create-tls-listener.html#alpn-policies)

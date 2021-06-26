@@ -74,8 +74,7 @@ specified. Useful querying about the size of the part and the number of
 parts in this object.}
 
 \item{ExpectedBucketOwner}{The account id of the expected bucket owner. If the bucket is owned by a
-different account, the request will fail with an HTTP
-\verb{403 (Access Denied)} error.}
+different account, the request will fail with an HTTP \verb{403 (Access Denied)} error.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -171,7 +170,8 @@ Then Amazon S3 returns \verb{200 OK} and the data requested.
 Then Amazon S3 returns the \verb{304 Not Modified} response code.
 }
 
-For more information about conditional requests, see \href{https://tools.ietf.org/html/rfc7232}{RFC 7232}.
+For more information about conditional requests, see
+\href{https://datatracker.ietf.org/doc/html/rfc7232}{RFC 7232}.
 
 \strong{Permissions}
 

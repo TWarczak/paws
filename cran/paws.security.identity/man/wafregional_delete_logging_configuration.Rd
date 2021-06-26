@@ -2,13 +2,13 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_delete_logging_configuration}
 \alias{wafregional_delete_logging_configuration}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 wafregional_delete_logging_configuration(ResourceArn)
 }
 \arguments{
 \item{ResourceArn}{[required] The Amazon Resource Name (ARN) of the web ACL from which you want to
-delete the LoggingConfiguration.}
+delete the <span>LoggingConfiguration</span>.}
 }
 \value{
 An empty list.
@@ -23,7 +23,8 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Permanently deletes the LoggingConfiguration from the specified web ACL.
+Permanently deletes the <span>LoggingConfiguration</span> from the
+specified web ACL.
 }
 \section{Request syntax}{
 \preformatted{svc$delete_logging_configuration(

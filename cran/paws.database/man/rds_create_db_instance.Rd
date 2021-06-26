@@ -122,10 +122,10 @@ space that you use in an Aurora cluster volume.
 Constraints to the amount of storage for each storage type are the
 following:
 \itemize{
-\item General Purpose (SSD) storage (gp2): Must be an integer from 20
-to 65536.
-\item Provisioned IOPS storage (io1): Must be an integer from 100
-to 65536.
+\item General Purpose (SSD) storage (gp2): Must be an integer from 20 to
+65536.
+\item Provisioned IOPS storage (io1): Must be an integer from 100 to
+65536.
 \item Magnetic storage (standard): Must be an integer from 5 to 3072.
 }
 
@@ -134,10 +134,10 @@ to 65536.
 Constraints to the amount of storage for each storage type are the
 following:
 \itemize{
-\item General Purpose (SSD) storage (gp2): Must be an integer from 20
-to 65536.
-\item Provisioned IOPS storage (io1): Must be an integer from 100
-to 65536.
+\item General Purpose (SSD) storage (gp2): Must be an integer from 20 to
+65536.
+\item Provisioned IOPS storage (io1): Must be an integer from 100 to
+65536.
 \item Magnetic storage (standard): Must be an integer from 5 to 3072.
 }
 
@@ -146,10 +146,10 @@ to 65536.
 Constraints to the amount of storage for each storage type are the
 following:
 \itemize{
-\item General Purpose (SSD) storage (gp2): Must be an integer from 20
-to 65536.
-\item Provisioned IOPS storage (io1): Must be an integer from 100
-to 65536.
+\item General Purpose (SSD) storage (gp2): Must be an integer from 20 to
+65536.
+\item Provisioned IOPS storage (io1): Must be an integer from 100 to
+65536.
 \item Magnetic storage (standard): Must be an integer from 5 to 3072.
 }
 
@@ -158,10 +158,10 @@ to 65536.
 Constraints to the amount of storage for each storage type are the
 following:
 \itemize{
-\item General Purpose (SSD) storage (gp2): Must be an integer from 20
-to 65536.
-\item Provisioned IOPS storage (io1): Must be an integer from 100
-to 65536.
+\item General Purpose (SSD) storage (gp2): Must be an integer from 20 to
+65536.
+\item Provisioned IOPS storage (io1): Must be an integer from 100 to
+65536.
 \item Magnetic storage (standard): Must be an integer from 10 to 3072.
 }
 
@@ -172,20 +172,20 @@ following:
 \itemize{
 \item General Purpose (SSD) storage (gp2):
 \itemize{
-\item Enterprise and Standard editions: Must be an integer from 200
-to 16384.
+\item Enterprise and Standard editions: Must be an integer from 200 to
+16384.
 \item Web and Express editions: Must be an integer from 20 to 16384.
 }
 \item Provisioned IOPS storage (io1):
 \itemize{
-\item Enterprise and Standard editions: Must be an integer from 200
-to 16384.
+\item Enterprise and Standard editions: Must be an integer from 200 to
+16384.
 \item Web and Express editions: Must be an integer from 100 to 16384.
 }
 \item Magnetic storage (standard):
 \itemize{
-\item Enterprise and Standard editions: Must be an integer from 200
-to 1024.
+\item Enterprise and Standard editions: Must be an integer from 200 to
+1024.
 \item Web and Express editions: Must be an integer from 20 to 1024.
 }
 }}

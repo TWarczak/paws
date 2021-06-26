@@ -8,48 +8,48 @@ NULL
 #' With Application Auto Scaling, you can configure automatic scaling for
 #' the following resources:
 #' 
-#' -   Amazon ECS services
+#'   - Amazon ECS services
 #' 
-#' -   Amazon EC2 Spot Fleet requests
+#'   - Amazon EC2 Spot Fleet requests
 #' 
-#' -   Amazon EMR clusters
+#'   - Amazon EMR clusters
 #' 
-#' -   Amazon AppStream 2.0 fleets
+#'   - Amazon AppStream 2.0 fleets
 #' 
-#' -   Amazon DynamoDB tables and global secondary indexes throughput
+#'   - Amazon DynamoDB tables and global secondary indexes throughput
 #'     capacity
 #' 
-#' -   Amazon Aurora Replicas
+#'   - Amazon Aurora Replicas
 #' 
-#' -   Amazon SageMaker endpoint variants
+#'   - Amazon SageMaker endpoint variants
 #' 
-#' -   Custom resources provided by your own applications or services
+#'   - Custom resources provided by your own applications or services
 #' 
-#' -   Amazon Comprehend document classification and entity recognizer
+#'   - Amazon Comprehend document classification and entity recognizer
 #'     endpoints
 #' 
-#' -   AWS Lambda function provisioned concurrency
+#'   - AWS Lambda function provisioned concurrency
 #' 
-#' -   Amazon Keyspaces (for Apache Cassandra) tables
+#'   - Amazon Keyspaces (for Apache Cassandra) tables
 #' 
-#' -   Amazon Managed Streaming for Apache Kafka cluster storage
+#'   - Amazon Managed Streaming for Apache Kafka cluster storage
 #' 
 #' **API Summary**
 #' 
 #' The Application Auto Scaling service API includes three key sets of
 #' actions:
 #' 
-#' -   Register and manage scalable targets - Register AWS or custom
+#'   - Register and manage scalable targets - Register AWS or custom
 #'     resources as scalable targets (a resource that Application Auto
 #'     Scaling can scale), set minimum and maximum capacity limits, and
 #'     retrieve information on existing scalable targets.
 #' 
-#' -   Configure and manage automatic scaling - Define scaling policies to
+#'   - Configure and manage automatic scaling - Define scaling policies to
 #'     dynamically scale your resources in response to CloudWatch alarms,
 #'     schedule one-time or recurring scaling actions, and retrieve your
 #'     recent scaling activity history.
 #' 
-#' -   Suspend and resume scaling - Temporarily suspend and later resume
+#'   - Suspend and resume scaling - Temporarily suspend and later resume
 #'     automatic scaling by calling the
 #'     [`register_scalable_target`][applicationautoscaling_register_scalable_target]
 #'     API action for any Application Auto Scaling scalable target. You can
@@ -111,6 +111,12 @@ NULL
 #'  \link[=applicationautoscaling_put_scheduled_action]{put_scheduled_action} \tab Creates or updates a scheduled action for an Application Auto Scaling scalable target\cr
 #'  \link[=applicationautoscaling_register_scalable_target]{register_scalable_target} \tab Registers or updates a scalable target
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname applicationautoscaling
 #' @export

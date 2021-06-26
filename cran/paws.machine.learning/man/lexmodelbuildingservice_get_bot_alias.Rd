@@ -41,7 +41,7 @@ A list with the following syntax:\preformatted{list(
 }
 \description{
 Returns information about an Amazon Lex bot alias. For more information
-about aliases, see versioning-aliases.
+about aliases, see <span>versioning-aliases</span>.
 
 This operation requires permissions for the \code{lex:GetBotAlias} action.
 }

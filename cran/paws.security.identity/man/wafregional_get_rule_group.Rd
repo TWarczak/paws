@@ -2,14 +2,15 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_get_rule_group}
 \alias{wafregional_get_rule_group}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 wafregional_get_rule_group(RuleGroupId)
 }
 \arguments{
-\item{RuleGroupId}{[required] The \code{RuleGroupId} of the RuleGroup that you want to get. \code{RuleGroupId}
-is returned by \code{\link[=wafregional_create_rule_group]{create_rule_group}} and
-by \code{\link[=wafregional_list_rule_groups]{list_rule_groups}}.}
+\item{RuleGroupId}{[required] The \code{RuleGroupId} of the <span>RuleGroup</span> that you want to get.
+\code{RuleGroupId} is returned by
+\code{\link[=wafregional_create_rule_group]{create_rule_group}} and by
+\code{\link[=wafregional_list_rule_groups]{list_rule_groups}}.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -31,8 +32,9 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Returns the RuleGroup that is specified by the \code{RuleGroupId} that you
-included in the \code{\link[=wafregional_get_rule_group]{get_rule_group}} request.
+Returns the <span>RuleGroup</span> that is specified by the
+\code{RuleGroupId} that you included in the
+\code{\link[=wafregional_get_rule_group]{get_rule_group}} request.
 
 To view the rules in a rule group, use
 \code{\link[=wafregional_list_activated_rules_in_rule_group]{list_activated_rules_in_rule_group}}.

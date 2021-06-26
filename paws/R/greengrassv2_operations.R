@@ -61,41 +61,41 @@ greengrassv2_cancel_deployment <- function(deploymentId) {
 #' 
 #' You can use this operation to do the following:
 #' 
-#' -   **Create components from recipes**
-#' 
+#'   - **Create components from recipes**
+#'     
 #'     Create a component from a recipe, which is a file that defines the
 #'     component's metadata, parameters, dependencies, lifecycle,
 #'     artifacts, and platform capability. For more information, see [AWS
 #'     IoT Greengrass component recipe
 #'     reference](https://docs.aws.amazon.com/greengrass/v2/developerguide/component-recipe-reference.html)
 #'     in the *AWS IoT Greengrass V2 Developer Guide*.
-#' 
+#'     
 #'     To create a component from a recipe, specify `inlineRecipe` when you
 #'     call this operation.
 #' 
-#' -   **Create components from Lambda functions**
-#' 
+#'   - **Create components from Lambda functions**
+#'     
 #'     Create a component from an AWS Lambda function that runs on AWS IoT
 #'     Greengrass. This creates a recipe and artifacts from the Lambda
 #'     function's deployment package. You can use this operation to migrate
 #'     Lambda functions from AWS IoT Greengrass V1 to AWS IoT Greengrass
 #'     V2.
-#' 
+#'     
 #'     This function only accepts Lambda functions that use the following
 #'     runtimes:
-#' 
-#'     -   Python 2.7 – `python2.7`
-#' 
-#'     -   Python 3.7 – `python3.7`
-#' 
-#'     -   Python 3.8 – `python3.8`
-#' 
-#'     -   Java 8 – `java8`
-#' 
-#'     -   Node.js 10 – `nodejs10.x`
-#' 
-#'     -   Node.js 12 – `nodejs12.x`
-#' 
+#'     
+#'       - Python 2.7 – `python2.7`
+#'     
+#'       - Python 3.7 – `python3.7`
+#'     
+#'       - Python 3.8 – `python3.8`
+#'     
+#'       - Java 8 – `java8`
+#'     
+#'       - Node.js 10 – `nodejs10.x`
+#'     
+#'       - Node.js 12 – `nodejs12.x`
+#'     
 #'     To create a component from a Lambda function, specify
 #'     `lambdaFunction` when you call this operation.
 #'
@@ -112,8 +112,8 @@ greengrassv2_cancel_deployment <- function(deploymentId) {
 #' 
 #' You must specify either `inlineRecipe` or `lambdaFunction`.
 #' @param tags A list of key-value pairs that contain metadata for the resource. For
-#' more information, see Tag your resources in the *AWS IoT Greengrass V2
-#' Developer Guide*.
+#' more information, see <span>Tag your resources</span> in the *AWS IoT
+#' Greengrass V2 Developer Guide*.
 #'
 #' @return
 #' A list with the following syntax:
@@ -246,8 +246,8 @@ greengrassv2_create_component_version <- function(inlineRecipe = NULL, lambdaFun
 #' create a new revision of an existing deployment. This operation returns
 #' the revision number of the new deployment when you create it.
 #' 
-#' For more information, see the Create deployments in the *AWS IoT
-#' Greengrass V2 Developer Guide*.
+#' For more information, see the <span>Create deployments</span> in the
+#' *AWS IoT Greengrass V2 Developer Guide*.
 #'
 #' @usage
 #' greengrassv2_create_deployment(targetArn, deploymentName, components,
@@ -271,8 +271,8 @@ greengrassv2_create_component_version <- function(inlineRecipe = NULL, lambdaFun
 #' @param deploymentPolicies The deployment policies for the deployment. These policies define how
 #' the deployment updates components and handles failure.
 #' @param tags A list of key-value pairs that contain metadata for the resource. For
-#' more information, see Tag your resources in the *AWS IoT Greengrass V2
-#' Developer Guide*.
+#' more information, see <span>Tag your resources</span> in the *AWS IoT
+#' Greengrass V2 Developer Guide*.
 #'
 #' @return
 #' A list with the following syntax:
@@ -951,10 +951,10 @@ greengrassv2_list_components <- function(scope = NULL, maxResults = NULL, nextTo
 #' parameter, the list includes only core devices that have this status.
 #' Choose one of the following options:
 #' 
-#' -   `HEALTHY` – The AWS IoT Greengrass Core software and all components
+#'   - `HEALTHY` – The AWS IoT Greengrass Core software and all components
 #'     run on the core device without issue.
 #' 
-#' -   `UNHEALTHY` – The AWS IoT Greengrass Core software or a component is
+#'   - `UNHEALTHY` – The AWS IoT Greengrass Core software or a component is
 #'     in a failed state on the core device.
 #' @param maxResults The maximum number of results to be returned per paginated request.
 #' @param nextToken The token to be used for the next set of paginated results.
@@ -1021,9 +1021,9 @@ greengrassv2_list_core_devices <- function(thingGroupArn = NULL, status = NULL, 
 #' @param historyFilter The filter for the list of deployments. Choose one of the following
 #' options:
 #' 
-#' -   `ALL` – The list includes all deployments.
+#'   - `ALL` – The list includes all deployments.
 #' 
-#' -   `LATEST_ONLY` – The list includes only the latest revision of each
+#'   - `LATEST_ONLY` – The list includes only the latest revision of each
 #'     deployment.
 #' 
 #' Default: `LATEST_ONLY`
@@ -1283,7 +1283,7 @@ greengrassv2_list_tags_for_resource <- function(resourceArn) {
 #' 
 #' To use this operation, you must use the data plane API endpoint and
 #' authenticate with an AWS IoT device certificate. For more information,
-#' see AWS IoT Greengrass endpoints and quotas.
+#' see <span>AWS IoT Greengrass endpoints and quotas</span>.
 #'
 #' @usage
 #' greengrassv2_resolve_component_candidates(platform, componentCandidates)
@@ -1360,8 +1360,8 @@ greengrassv2_resolve_component_candidates <- function(platform, componentCandida
 #' [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html)
 #' of the resource to tag.
 #' @param tags &#91;required&#93; A list of key-value pairs that contain metadata for the resource. For
-#' more information, see Tag your resources in the *AWS IoT Greengrass V2
-#' Developer Guide*.
+#' more information, see <span>Tag your resources</span> in the *AWS IoT
+#' Greengrass V2 Developer Guide*.
 #'
 #' @return
 #' An empty list.

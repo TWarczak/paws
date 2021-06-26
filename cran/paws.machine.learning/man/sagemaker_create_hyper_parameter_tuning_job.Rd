@@ -15,18 +15,18 @@ within the same AWS account and AWS Region. The name must have 1 to 32
 characters. Valid characters are a-z, A-Z, 0-9, and : + = @ _ \% -
 (hyphen). The name is not case sensitive.}
 
-\item{HyperParameterTuningJobConfig}{[required] The HyperParameterTuningJobConfig object that describes the tuning job,
-including the search strategy, the objective metric used to evaluate
-training jobs, ranges of parameters to search, and resource limits for
-the tuning job. For more information, see \href{https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning-how-it-works.html}{How Hyperparameter Tuning Works}.}
+\item{HyperParameterTuningJobConfig}{[required] The <span>HyperParameterTuningJobConfig</span> object that describes the
+tuning job, including the search strategy, the objective metric used to
+evaluate training jobs, ranges of parameters to search, and resource
+limits for the tuning job. For more information, see \href{https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning-how-it-works.html}{How Hyperparameter Tuning Works}.}
 
-\item{TrainingJobDefinition}{The HyperParameterTrainingJobDefinition object that describes the
-training jobs that this tuning job launches, including static
-hyperparameters, input data configuration, output data configuration,
-resource configuration, and stopping condition.}
+\item{TrainingJobDefinition}{The <span>HyperParameterTrainingJobDefinition</span> object that
+describes the training jobs that this tuning job launches, including
+static hyperparameters, input data configuration, output data
+configuration, resource configuration, and stopping condition.}
 
-\item{TrainingJobDefinitions}{A list of the HyperParameterTrainingJobDefinition objects launched for
-this tuning job.}
+\item{TrainingJobDefinitions}{A list of the <span>HyperParameterTrainingJobDefinition</span> objects
+launched for this tuning job.}
 
 \item{WarmStartConfig}{Specifies the configuration for starting the hyperparameter tuning job
 using one or more previous tuning jobs as a starting point. The results

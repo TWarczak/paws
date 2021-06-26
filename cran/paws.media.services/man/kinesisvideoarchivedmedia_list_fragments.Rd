@@ -13,11 +13,12 @@ kinesisvideoarchivedmedia_list_fragments(StreamName, MaxResults,
 
 \item{MaxResults}{The total number of fragments to return. If the total number of
 fragments available is more than the value specified in \code{max-results},
-then a ListFragmentsOutput$NextToken is provided in the output that you
-can use to resume pagination.}
+then a <span>ListFragmentsOutput$NextToken</span> is provided in the
+output that you can use to resume pagination.}
 
 \item{NextToken}{A token to specify where to start paginating. This is the
-ListFragmentsOutput$NextToken from a previously truncated response.}
+<span>ListFragmentsOutput$NextToken</span> from a previously truncated
+response.}
 
 \item{FragmentSelector}{Describes the timestamp range and timestamp origin for the range of
 fragments to return.}
@@ -42,8 +43,8 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Returns a list of Fragment objects from the specified stream and
-timestamp range within the archived data.
+Returns a list of <span>Fragment</span> objects from the specified
+stream and timestamp range within the archived data.
 
 Listing fragments is eventually consistent. This means that even if the
 producer receives an acknowledgment that a fragment is persisted, the

@@ -24,7 +24,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Gets the Tags collection for a given resource.
+Gets the <span>Tags</span> collection for a given resource.
 }
 \section{Request syntax}{
 \preformatted{svc$get_tags(

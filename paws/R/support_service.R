@@ -11,10 +11,10 @@ NULL
 #' programmatically. It uses HTTP methods that return results in JSON
 #' format.
 #' 
-#' -   You must have a Business or Enterprise support plan to use the AWS
+#'   - You must have a Business or Enterprise support plan to use the AWS
 #'     Support API.
 #' 
-#' -   If you call the AWS Support API from an account that does not have a
+#'   - If you call the AWS Support API from an account that does not have a
 #'     Business or Enterprise support plan, the
 #'     `SubscriptionRequiredException` error message appears. For
 #'     information about changing your support plan, see [AWS
@@ -28,21 +28,21 @@ NULL
 #' 
 #' The following list describes the AWS Support case management operations:
 #' 
-#' -   **Service names, issue categories, and available severity levels.**
+#'   - **Service names, issue categories, and available severity levels.**
 #'     The [`describe_services`][support_describe_services] and
 #'     [`describe_severity_levels`][support_describe_severity_levels]
 #'     operations return AWS service names, service codes, service
 #'     categories, and problem severity levels. You use these values when
 #'     you call the [`create_case`][support_create_case] operation.
 #' 
-#' -   **Case creation, case details, and case resolution.** The
+#'   - **Case creation, case details, and case resolution.** The
 #'     [`create_case`][support_create_case],
 #'     [`describe_cases`][support_describe_cases],
 #'     [`describe_attachment`][support_describe_attachment], and
 #'     [`resolve_case`][support_resolve_case] operations create AWS Support
 #'     cases, retrieve information about cases, and resolve cases.
 #' 
-#' -   **Case communication.** The
+#'   - **Case communication.** The
 #'     [`describe_communications`][support_describe_communications],
 #'     [`add_communication_to_case`][support_add_communication_to_case],
 #'     and [`add_attachments_to_set`][support_add_attachments_to_set]
@@ -52,22 +52,22 @@ NULL
 #' The following list describes the operations available from the AWS
 #' Support service for Trusted Advisor:
 #' 
-#' -   [`describe_trusted_advisor_checks`][support_describe_trusted_advisor_checks]
+#'   - [`describe_trusted_advisor_checks`][support_describe_trusted_advisor_checks]
 #'     returns the list of checks that run against your AWS resources.
 #' 
-#' -   Using the `checkId` for a specific check returned by
+#'   - Using the `checkId` for a specific check returned by
 #'     [`describe_trusted_advisor_checks`][support_describe_trusted_advisor_checks],
 #'     you can call
 #'     [`describe_trusted_advisor_check_result`][support_describe_trusted_advisor_check_result]
 #'     to obtain the results for the check that you specified.
 #' 
-#' -   [`describe_trusted_advisor_check_summaries`][support_describe_trusted_advisor_check_summaries]
+#'   - [`describe_trusted_advisor_check_summaries`][support_describe_trusted_advisor_check_summaries]
 #'     returns summarized results for one or more Trusted Advisor checks.
 #' 
-#' -   [`refresh_trusted_advisor_check`][support_refresh_trusted_advisor_check]
+#'   - [`refresh_trusted_advisor_check`][support_refresh_trusted_advisor_check]
 #'     requests that Trusted Advisor rerun a specified check.
 #' 
-#' -   [`describe_trusted_advisor_check_refresh_statuses`][support_describe_trusted_advisor_check_refresh_statuses]
+#'   - [`describe_trusted_advisor_check_refresh_statuses`][support_describe_trusted_advisor_check_refresh_statuses]
 #'     reports the refresh status of one or more checks.
 #' 
 #' For authentication of requests, AWS Support uses [Signature Version 4
@@ -128,6 +128,12 @@ NULL
 #'  \link[=support_resolve_case]{resolve_case} \tab Resolves a support case
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname support
 #' @export
 support <- function(config = list()) {
@@ -146,7 +152,7 @@ support <- function(config = list()) {
   endpoints = list("*" = list(endpoint = "support.{region}.amazonaws.com", global = FALSE), "cn-*" = list(endpoint = "support.{region}.amazonaws.com.cn", global = FALSE), "us-iso-*" = list(endpoint = "support.{region}.c2s.ic.gov", global = FALSE), "us-isob-*" = list(endpoint = "support.{region}.sc2s.sgov.gov", global = FALSE)),
   service_id = "Support",
   api_version = "2013-04-15",
-  signing_name = NULL,
+  signing_name = "support",
   json_version = "1.1",
   target_prefix = "AWSSupport_20130415"
 )

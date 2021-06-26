@@ -7,8 +7,8 @@
 apigateway_get_vpc_link(vpcLinkId)
 }
 \arguments{
-\item{vpcLinkId}{[required] [Required] The identifier of the VpcLink. It is used in an Integration
-to reference this VpcLink.}
+\item{vpcLinkId}{[required] [Required] The identifier of the <span>VpcLink</span>. It is used in
+an <span>Integration</span> to reference this <span>VpcLink</span>.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

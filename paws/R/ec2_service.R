@@ -12,20 +12,20 @@ NULL
 #' 
 #' To learn more, see the following resources:
 #' 
-#' -   Amazon EC2: [AmazonEC2 product page](https://aws.amazon.com/ec2/),
+#'   - Amazon EC2: [AmazonEC2 product page](https://aws.amazon.com/ec2/),
 #'     [Amazon EC2
 #'     documentation](https://docs.aws.amazon.com/ec2/index.html)
 #' 
-#' -   Amazon EBS: [Amazon EBS product page](https://aws.amazon.com/ebs/),
+#'   - Amazon EBS: [Amazon EBS product page](https://aws.amazon.com/ebs/),
 #'     [Amazon EBS
 #'     documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html)
 #' 
-#' -   Amazon VPC: [Amazon VPC product page](https://aws.amazon.com/vpc/),
+#'   - Amazon VPC: [Amazon VPC product page](https://aws.amazon.com/vpc/),
 #'     [Amazon VPC
 #'     documentation](https://docs.aws.amazon.com/vpc/index.html)
 #' 
-#' -   AWS VPN: [AWS VPN product page](https://aws.amazon.com/vpn/), AWS
-#'     VPN documentation
+#'   - AWS VPN: [AWS VPN product page](https://aws.amazon.com/vpn/),
+#'     <span>AWS VPN documentation</span>
 #'
 #' @param
 #' config
@@ -485,7 +485,7 @@ NULL
 #'  \link[=ec2_search_local_gateway_routes]{search_local_gateway_routes} \tab Searches for routes in the specified local gateway route table\cr
 #'  \link[=ec2_search_transit_gateway_multicast_groups]{search_transit_gateway_multicast_groups} \tab Searches one or more transit gateway multicast groups and returns the group membership information\cr
 #'  \link[=ec2_search_transit_gateway_routes]{search_transit_gateway_routes} \tab Searches for routes in the specified transit gateway route table\cr
-#'  \link[=ec2_send_diagnostic_interrupt]{send_diagnostic_interrupt} \tab Sends a diagnostic interrupt to the specified Amazon EC2 instance to trigger a kernel panic (on Linux instances), or a blue screen/stop error (on Windows instances)\cr
+#'  \link[=ec2_send_diagnostic_interrupt]{send_diagnostic_interrupt} \tab Sends a diagnostic interrupt to the specified Amazon EC2 instance to trigger a _kernel panic_ (on Linux instances), or a _blue screen_/_stop error_ (on Windows instances)\cr
 #'  \link[=ec2_start_instances]{start_instances} \tab Starts an Amazon EBS-backed instance that you've previously stopped\cr
 #'  \link[=ec2_start_network_insights_analysis]{start_network_insights_analysis} \tab Starts analyzing the specified path\cr
 #'  \link[=ec2_start_vpc_endpoint_service_private_dns_verification]{start_vpc_endpoint_service_private_dns_verification} \tab Initiates the verification process to prove that the service provider owns the private DNS name domain for the endpoint service\cr
@@ -499,6 +499,12 @@ NULL
 #'  \link[=ec2_update_security_group_rule_descriptions_ingress]{update_security_group_rule_descriptions_ingress} \tab Updates the description of an ingress (inbound) security group rule\cr
 #'  \link[=ec2_withdraw_byoip_cidr]{withdraw_byoip_cidr} \tab Stops advertising an address range that is provisioned as an address pool
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname ec2
 #' @export
@@ -518,7 +524,7 @@ ec2 <- function(config = list()) {
   endpoints = list("*" = list(endpoint = "ec2.{region}.amazonaws.com", global = FALSE), "cn-*" = list(endpoint = "ec2.{region}.amazonaws.com.cn", global = FALSE), "us-iso-*" = list(endpoint = "ec2.{region}.c2s.ic.gov", global = FALSE), "us-isob-*" = list(endpoint = "ec2.{region}.sc2s.sgov.gov", global = FALSE)),
   service_id = "EC2",
   api_version = "2016-11-15",
-  signing_name = NULL,
+  signing_name = "ec2",
   json_version = "",
   target_prefix = ""
 )

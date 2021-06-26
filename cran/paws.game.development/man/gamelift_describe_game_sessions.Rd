@@ -75,8 +75,8 @@ retrieve protection policy settings for game sessions, use
 To get game sessions, specify one of the following: game session ID,
 fleet ID, or alias ID. You can filter this request by game session
 status. Use the pagination parameters to retrieve results as a set of
-sequential pages. If successful, a GameSession object is returned for
-each game session matching the request.
+sequential pages. If successful, a <span>GameSession</span> object is
+returned for each game session matching the request.
 
 \emph{Available in Amazon GameLift Local.}
 \itemize{

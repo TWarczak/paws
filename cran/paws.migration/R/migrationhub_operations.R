@@ -12,17 +12,17 @@ NULL
 #' receiving the migration, with the migration task performed by a
 #' migration tool. This API has the following traits:
 #' 
-#' -   Migration tools can call the
+#'   - Migration tools can call the
 #'     [`associate_created_artifact`][migrationhub_associate_created_artifact]
 #'     operation to indicate which AWS artifact is associated with a
 #'     migration task.
 #' 
-#' -   The created artifact name must be provided in ARN (Amazon Resource
+#'   - The created artifact name must be provided in ARN (Amazon Resource
 #'     Name) format which will contain information about type and region;
 #'     for example:
 #'     `arn:aws:ec2:us-east-1:488216288981:image/ami-6d0ba87b`.
 #' 
-#' -   Examples of the AWS resource behind the created artifact are, AMI's,
+#'   - Examples of the AWS resource behind the created artifact are, AMI's,
 #'     EC2 instance, or DMS endpoint, etc.
 #'
 #' @usage
@@ -187,28 +187,28 @@ migrationhub_create_progress_update_stream <- function(ProgressUpdateStreamName,
 #' previously created as an AWS resource used for access control. This API
 #' has the following traits:
 #' 
-#' -   The only parameter needed for
+#'   - The only parameter needed for
 #'     [`delete_progress_update_stream`][migrationhub_delete_progress_update_stream]
 #'     is the stream name (same as a
 #'     [`create_progress_update_stream`][migrationhub_create_progress_update_stream]
 #'     call).
 #' 
-#' -   The call will return, and a background process will asynchronously
+#'   - The call will return, and a background process will asynchronously
 #'     delete the stream and all of its resources (tasks, associated
 #'     resources, resource attributes, created artifacts).
 #' 
-#' -   If the stream takes time to be deleted, it might still show up on a
+#'   - If the stream takes time to be deleted, it might still show up on a
 #'     [`list_progress_update_streams`][migrationhub_list_progress_update_streams]
 #'     call.
 #' 
-#' -   [`create_progress_update_stream`][migrationhub_create_progress_update_stream],
+#'   - [`create_progress_update_stream`][migrationhub_create_progress_update_stream],
 #'     [`import_migration_task`][migrationhub_import_migration_task],
 #'     [`notify_migration_task_state`][migrationhub_notify_migration_task_state],
 #'     and all Associate\[*\] APIs related to the tasks belonging to the
 #'     stream will throw "InvalidInputException" if the stream of the same
 #'     name is in the process of being deleted.
 #' 
-#' -   Once the stream and all of its resources are deleted,
+#'   - Once the stream and all of its resources are deleted,
 #'     [`create_progress_update_stream`][migrationhub_create_progress_update_stream]
 #'     for a stream of the same name will succeed, and that stream will be
 #'     an entirely new logical resource (without any resources associated
@@ -379,16 +379,16 @@ migrationhub_describe_migration_task <- function(ProgressUpdateStream, Migration
 #' task performed by a migration tool that was previously associated. This
 #' API has the following traits:
 #' 
-#' -   A migration user can call the `DisassociateCreatedArtifacts`
+#'   - A migration user can call the `DisassociateCreatedArtifacts`
 #'     operation to disassociate a created AWS Artifact from a migration
 #'     task.
 #' 
-#' -   The created artifact name must be provided in ARN (Amazon Resource
+#'   - The created artifact name must be provided in ARN (Amazon Resource
 #'     Name) format which will contain information about type and region;
 #'     for example:
 #'     `arn:aws:ec2:us-east-1:488216288981:image/ami-6d0ba87b`.
 #' 
-#' -   Examples of the AWS resource behind the created artifact are, AMI's,
+#'   - Examples of the AWS resource behind the created artifact are, AMI's,
 #'     EC2 instance, or RDS instance, etc.
 #'
 #' @usage
@@ -503,7 +503,7 @@ migrationhub_disassociate_discovered_resource <- function(ProgressUpdateStream, 
 #' migrationhub_import_migration_task(ProgressUpdateStream,
 #'   MigrationTaskName, DryRun)
 #'
-#' @param ProgressUpdateStream &#91;required&#93; The name of the ProgressUpdateStream. &gt;
+#' @param ProgressUpdateStream &#91;required&#93; The name of the ProgressUpdateStream. \>
 #' @param MigrationTaskName &#91;required&#93; Unique identifier that references the migration task. *Do not store
 #' personal data in this field.*
 #' @param DryRun Optional boolean flag to indicate whether any effect should take place.
@@ -614,15 +614,15 @@ migrationhub_list_application_states <- function(ApplicationIds = NULL, NextToke
 #' Lists the created artifacts attached to a given migration task in an
 #' update stream. This API has the following traits:
 #' 
-#' -   Gets the list of the created artifacts while migration is taking
+#'   - Gets the list of the created artifacts while migration is taking
 #'     place.
 #' 
-#' -   Shows the artifacts created by the migration tool that was
+#'   - Shows the artifacts created by the migration tool that was
 #'     associated by the
 #'     [`associate_created_artifact`][migrationhub_associate_created_artifact]
 #'     API.
 #' 
-#' -   Lists created artifacts in a paginated interface.
+#'   - Lists created artifacts in a paginated interface.
 #'
 #' @usage
 #' migrationhub_list_created_artifacts(ProgressUpdateStream,
@@ -748,12 +748,12 @@ migrationhub_list_discovered_resources <- function(ProgressUpdateStream, Migrati
 #' Lists all, or filtered by resource name, migration tasks associated with
 #' the user account making this call. This API has the following traits:
 #' 
-#' -   Can show a summary list of the most recent migration tasks.
+#'   - Can show a summary list of the most recent migration tasks.
 #' 
-#' -   Can show a summary list of migration tasks associated with a given
+#'   - Can show a summary list of migration tasks associated with a given
 #'     discovered resource.
 #' 
-#' -   Lists migration tasks in a paginated interface.
+#'   - Lists migration tasks in a paginated interface.
 #'
 #' @usage
 #' migrationhub_list_migration_tasks(NextToken, MaxResults, ResourceName)
@@ -874,8 +874,8 @@ migrationhub_list_progress_update_streams <- function(NextToken = NULL, MaxResul
 #' @description
 #' Sets the migration state of an application. For a given application
 #' identified by the value passed to `ApplicationId`, its status is set or
-#' updated by passing one of three values to `Status`:
-#' `NOT_STARTED | IN_PROGRESS | COMPLETED`.
+#' updated by passing one of three values to `Status`: `NOT_STARTED |
+#' IN_PROGRESS | COMPLETED`.
 #'
 #' @usage
 #' migrationhub_notify_application_state(ApplicationId, Status,
@@ -930,14 +930,14 @@ migrationhub_notify_application_state <- function(ApplicationId, Status, UpdateD
 #' Notifies Migration Hub of the current status, progress, or other detail
 #' regarding a migration task. This API has the following traits:
 #' 
-#' -   Migration tools will call the
+#'   - Migration tools will call the
 #'     [`notify_migration_task_state`][migrationhub_notify_migration_task_state]
 #'     API to share the latest progress and status.
 #' 
-#' -   `MigrationTaskName` is used for addressing updates to the correct
+#'   - `MigrationTaskName` is used for addressing updates to the correct
 #'     target.
 #' 
-#' -   `ProgressUpdateStream` is used for access control and to provide a
+#'   - `ProgressUpdateStream` is used for access control and to provide a
 #'     namespace for each migration tool.
 #'
 #' @usage
@@ -1007,13 +1007,13 @@ migrationhub_notify_migration_task_state <- function(ProgressUpdateStream, Migra
 #' [`put_resource_attributes`][migrationhub_put_resource_attributes]
 #' returns.
 #' 
-#' -   Keep in mind that subsequent calls to PutResourceAttributes will
+#'   - Keep in mind that subsequent calls to PutResourceAttributes will
 #'     override previously stored attributes. For example, if it is first
 #'     called with a MAC address, but later, it is desired to *add* an IP
 #'     address, it will then be required to call it with *both* the IP and
 #'     MAC addresses to prevent overriding the MAC address.
 #' 
-#' -   Note the instructions regarding the special use case of the
+#'   - Note the instructions regarding the special use case of the
 #'     [`ResourceAttributeList`](https://docs.aws.amazon.com/migrationhub/latest/ug/API_PutResourceAttributes.html#migrationhub-PutResourceAttributes-request-ResourceAttributeList)
 #'     parameter when specifying any "VM" related value.
 #' 
@@ -1034,11 +1034,12 @@ migrationhub_notify_migration_task_state <- function(ProgressUpdateStream, Migra
 #' repository.
 #' 
 #' Takes the object array of `ResourceAttribute` where the `Type` field is
-#' reserved for the following values:
-#' `IPV4_ADDRESS | IPV6_ADDRESS | MAC_ADDRESS | FQDN | VM_MANAGER_ID | VM_MANAGED_OBJECT_REFERENCE | VM_NAME | VM_PATH | BIOS_ID | MOTHERBOARD_SERIAL_NUMBER`
-#' where the identifying value can be a string up to 256 characters.
+#' reserved for the following values: `IPV4_ADDRESS | IPV6_ADDRESS |
+#' MAC_ADDRESS | FQDN | VM_MANAGER_ID | VM_MANAGED_OBJECT_REFERENCE |
+#' VM_NAME | VM_PATH | BIOS_ID | MOTHERBOARD_SERIAL_NUMBER` where the
+#' identifying value can be a string up to 256 characters.
 #' 
-#' -   If any "VM" related value is set for a `ResourceAttribute` object,
+#'   - If any "VM" related value is set for a `ResourceAttribute` object,
 #'     it is required that `VM_MANAGER_ID`, as a minimum, is always set. If
 #'     `VM_MANAGER_ID` is not set, then all "VM" fields will be discarded
 #'     and "VM" fields will not be used for matching the migration task to
@@ -1046,7 +1047,7 @@ migrationhub_notify_migration_task_state <- function(ProgressUpdateStream, Migra
 #'     [Example](https://docs.aws.amazon.com/migrationhub/latest/ug/API_PutResourceAttributes.html#API_PutResourceAttributes_Examples)
 #'     section below for a use case of specifying "VM" related values.
 #' 
-#' -   If a server you are trying to match has multiple IP or MAC
+#'   - If a server you are trying to match has multiple IP or MAC
 #'     addresses, you should provide as many as you know in separate
 #'     type/value pairs passed to the `ResourceAttributeList` parameter to
 #'     maximize the chances of matching.

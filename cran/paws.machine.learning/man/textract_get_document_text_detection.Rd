@@ -103,7 +103,7 @@ and pass the job identifier (\code{JobId}) from the initial call to
 \code{\link[=textract_start_document_text_detection]{start_document_text_detection}}.
 
 \code{\link[=textract_get_document_text_detection]{get_document_text_detection}}
-returns an array of Block objects.
+returns an array of <span>Block</span> objects.
 
 Each document page has as an associated \code{Block} of type PAGE. Each PAGE
 \code{Block} object is the parent of LINE \code{Block} objects that represent the

@@ -141,10 +141,12 @@ pending create.
 \item New Request: Create
 \item Result: The new create is added to the pending create.
 
-\strong{Important:} If the new create request is \strong{Apply
-Immediately - Yes}, all creates are performed immediately. If
-the new create request is \strong{Apply Immediately - No}, all
-creates are pending.
+\strong{Important:} If the new create request is **Apply Immediately
+\itemize{
+\item Yes**, all creates are performed immediately. If the new
+create request is \strong{Apply Immediately - No}, all creates are
+pending.
+}
 }
 }}
 
@@ -245,7 +247,7 @@ length
 '\%'
 }
 
-For more information, see AUTH password at AUTH.}
+For more information, see AUTH password at <span>AUTH</span>.}
 
 \item{AuthTokenUpdateStrategy}{Specifies the strategy to use to update the AUTH token. This parameter
 must be specified with the \code{auth-token} parameter. Possible values:

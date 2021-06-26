@@ -3,8 +3,8 @@
 #' @include rekognition_service.R
 NULL
 
-#' Compares a face in the source input image with each of the 100 largest
-#' faces detected in the target input image
+#' Compares a face in the _source_ input image with each of the 100 largest
+#' faces detected in the _target_ input image
 #'
 #' @description
 #' Compares a face in the *source* input image with each of the 100 largest
@@ -556,7 +556,7 @@ rekognition_create_stream_processor <- function(Input, Output, Name, Settings, R
 #' @description
 #' Deletes the specified collection. Note that this operation removes all
 #' faces in the collection. For an example, see
-#' delete-collection-procedure.
+#' <span>delete-collection-procedure</span>.
 #' 
 #' This operation requires permissions to perform the
 #' `rekognition:DeleteCollection` action.
@@ -1544,7 +1544,7 @@ rekognition_detect_faces <- function(Image, Attributes = NULL) {
 #' 
 #' `{Name: rock,Confidence: 79.2097}`
 #' 
-#' ` {Name: sea,Confidence: 75.061}`
+#' `  {Name: sea,Confidence: 75.061} `
 #' 
 #' In the preceding example, the operation returns one label for each of
 #' the three objects. The operation can also return multiple labels for the
@@ -1572,10 +1572,10 @@ rekognition_detect_faces <- function(Image, Attributes = NULL) {
 #' operation provides.
 #' 
 #' [`detect_labels`][rekognition_detect_labels] returns bounding boxes for
-#' instances of common object labels in an array of Instance objects. An
-#' `Instance` object contains a BoundingBox object, for the location of the
-#' label on the image. It also includes the confidence by which the
-#' bounding box was detected.
+#' instances of common object labels in an array of <span>Instance</span>
+#' objects. An `Instance` object contains a <span>BoundingBox</span>
+#' object, for the location of the label on the image. It also includes the
+#' confidence by which the bounding box was detected.
 #' 
 #' [`detect_labels`][rekognition_detect_labels] also returns a hierarchical
 #' taxonomy of detected labels. For example, a detected car might be
@@ -1808,11 +1808,11 @@ rekognition_detect_moderation_labels <- function(Image, MinConfidence = NULL, Hu
 #' Detects Personal Protective Equipment (PPE) worn by people detected in
 #' an image. Amazon Rekognition can detect the following types of PPE.
 #' 
-#' -   Face cover
+#'   - Face cover
 #' 
-#' -   Hand cover
+#'   - Hand cover
 #' 
-#' -   Head cover
+#'   - Head cover
 #' 
 #' You pass the input image as base64-encoded image bytes or as a reference
 #' to an image in an Amazon S3 bucket. The image must be either a PNG or
@@ -1826,20 +1826,20 @@ rekognition_detect_moderation_labels <- function(Image, MinConfidence = NULL, Hu
 #' of detected items of PPE is returned, including an indicator of whether
 #' or not the PPE covers the body part. The API returns the confidence it
 #' has in each detection (person, PPE, body part and body part coverage).
-#' It also returns a bounding box (BoundingBox) for each detected person
-#' and each detected item of PPE.
+#' It also returns a bounding box (<span>BoundingBox</span>) for each
+#' detected person and each detected item of PPE.
 #' 
 #' You can optionally request a summary of detected PPE items with the
 #' `SummarizationAttributes` input parameter. The summary provides the
 #' following information.
 #' 
-#' -   The persons detected as wearing all of the types of PPE that you
+#'   - The persons detected as wearing all of the types of PPE that you
 #'     specify.
 #' 
-#' -   The persons detected as not wearing all of the types PPE that you
+#'   - The persons detected as not wearing all of the types PPE that you
 #'     specify.
 #' 
-#' -   The persons detected where PPE adornment could not be determined.
+#'   - The persons detected where PPE adornment could not be determined.
 #' 
 #' This is a stateless API operation. That is, the operation does not
 #' persist any data.
@@ -1962,7 +1962,7 @@ rekognition_detect_protective_equipment <- function(Image, SummarizationAttribut
 #' supported. The image must be either a .png or .jpeg formatted file.
 #' 
 #' The [`detect_text`][rekognition_detect_text] operation returns text in
-#' an array of TextDetection elements, `TextDetections`. Each
+#' an array of <span>TextDetection</span> elements, `TextDetections`. Each
 #' `TextDetection` element provides information about a single word or line
 #' of text that was detected in the image.
 #' 
@@ -2170,10 +2170,10 @@ rekognition_get_celebrity_info <- function(Id) {
 #' 
 #' [`get_celebrity_recognition`][rekognition_get_celebrity_recognition]
 #' returns detected celebrities and the time(s) they are detected in an
-#' array (`Celebrities`) of CelebrityRecognition objects. Each
+#' array (`Celebrities`) of <span>CelebrityRecognition</span> objects. Each
 #' `CelebrityRecognition` contains information about the celebrity in a
-#' CelebrityDetail object and the time, `Timestamp`, the celebrity was
-#' detected.
+#' <span>CelebrityDetail</span> object and the time, `Timestamp`, the
+#' celebrity was detected.
 #' 
 #' [`get_celebrity_recognition`][rekognition_get_celebrity_recognition]
 #' only returns the default facial attributes (`BoundingBox`, `Confidence`,
@@ -2380,7 +2380,8 @@ rekognition_get_celebrity_recognition <- function(JobId, MaxResults = NULL, Next
 #' 
 #' [`get_content_moderation`][rekognition_get_content_moderation] returns
 #' detected unsafe content labels, and the time they are detected, in an
-#' array, `ModerationLabels`, of ContentModerationDetection objects.
+#' array, `ModerationLabels`, of <span>ContentModerationDetection</span>
+#' objects.
 #' 
 #' By default, the moderated labels are returned sorted by time, in
 #' milliseconds from the start of the video. You can also sort them by
@@ -2668,11 +2669,12 @@ rekognition_get_face_detection <- function(JobId, MaxResults = NULL, NextToken =
 #' For more information, see Searching Faces in a Collection in the Amazon
 #' Rekognition Developer Guide.
 #' 
-#' The search results are retured in an array, `Persons`, of PersonMatch
-#' objects. Each`PersonMatch` element contains details about the matching
-#' faces in the input collection, person information (facial attributes,
-#' bounding boxes, and person identifer) for the matched person, and the
-#' time the person was matched in the video.
+#' The search results are retured in an array, `Persons`, of
+#' <span>PersonMatch</span> objects. Each`PersonMatch` element contains
+#' details about the matching faces in the input collection, person
+#' information (facial attributes, bounding boxes, and person identifer)
+#' for the matched person, and the time the person was matched in the
+#' video.
 #' 
 #' [`get_face_search`][rekognition_get_face_search] only returns the
 #' default facial attributes (`BoundingBox`, `Confidence`, `Landmarks`,
@@ -3195,9 +3197,9 @@ rekognition_get_person_tracking <- function(JobId, MaxResults = NULL, NextToken 
 #' [`start_segment_detection`][rekognition_start_segment_detection].
 #' 
 #' [`get_segment_detection`][rekognition_get_segment_detection] returns
-#' detected segments in an array (`Segments`) of SegmentDetection objects.
-#' `Segments` is sorted by the segment types specified in the
-#' `SegmentTypes` input parameter of
+#' detected segments in an array (`Segments`) of
+#' <span>SegmentDetection</span> objects. `Segments` is sorted by the
+#' segment types specified in the `SegmentTypes` input parameter of
 #' [`start_segment_detection`][rekognition_start_segment_detection]. Each
 #' element of the array includes the detected segment, the precentage
 #' confidence in the acuracy of the detected segment, the type of the
@@ -3505,35 +3507,35 @@ rekognition_get_text_detection <- function(JobId, MaxResults = NULL, NextToken =
 #' [`describe_collection`][rekognition_describe_collection].
 #' 
 #' Information about faces detected in an image, but not indexed, is
-#' returned in an array of UnindexedFace objects, `UnindexedFaces`. Faces
-#' aren't indexed for reasons such as:
+#' returned in an array of <span>UnindexedFace</span> objects,
+#' `UnindexedFaces`. Faces aren't indexed for reasons such as:
 #' 
-#' -   The number of faces detected exceeds the value of the `MaxFaces`
+#'   - The number of faces detected exceeds the value of the `MaxFaces`
 #'     request parameter.
 #' 
-#' -   The face is too small compared to the image dimensions.
+#'   - The face is too small compared to the image dimensions.
 #' 
-#' -   The face is too blurry.
+#'   - The face is too blurry.
 #' 
-#' -   The image is too dark.
+#'   - The image is too dark.
 #' 
-#' -   The face has an extreme pose.
+#'   - The face has an extreme pose.
 #' 
-#' -   The face doesn’t have enough detail to be suitable for face search.
+#'   - The face doesn’t have enough detail to be suitable for face search.
 #' 
 #' In response, the [`index_faces`][rekognition_index_faces] operation
 #' returns an array of metadata for all detected faces, `FaceRecords`. This
 #' includes:
 #' 
-#' -   The bounding box, `BoundingBox`, of the detected face.
+#'   - The bounding box, `BoundingBox`, of the detected face.
 #' 
-#' -   A confidence value, `Confidence`, which indicates the confidence
+#'   - A confidence value, `Confidence`, which indicates the confidence
 #'     that the bounding box contains a face.
 #' 
-#' -   A face ID, `FaceId`, assigned by the service for each face that's
+#'   - A face ID, `FaceId`, assigned by the service for each face that's
 #'     detected and stored.
 #' 
-#' -   An image ID, `ImageId`, assigned by the service for the input image.
+#'   - An image ID, `ImageId`, assigned by the service for the input image.
 #' 
 #' If you request all facial attributes (by using the `detectionAttributes`
 #' parameter), Amazon Rekognition returns detailed facial attributes, such
@@ -4373,12 +4375,12 @@ rekognition_search_faces <- function(CollectionId, FaceId, MaxFaces = NULL, Face
 #' identify faces. Filtered faces aren't searched for in the collection. If
 #' you specify `AUTO`, Amazon Rekognition chooses the quality bar. If you
 #' specify `LOW`, `MEDIUM`, or `HIGH`, filtering removes all faces that
-#' don’t meet the chosen quality bar. The quality bar is based on a variety
-#' of common use cases. Low-quality detections can occur for a number of
-#' reasons. Some examples are an object that's misidentified as a face, a
-#' face that's too blurry, or a face with a pose that's too extreme to use.
-#' If you specify `NONE`, no filtering is performed. The default value is
-#' `NONE`.
+#' don’t meet the chosen quality bar. The quality bar is based on a
+#' variety of common use cases. Low-quality detections can occur for a
+#' number of reasons. Some examples are an object that's misidentified as a
+#' face, a face that's too blurry, or a face with a pose that's too extreme
+#' to use. If you specify `NONE`, no filtering is performed. The default
+#' value is `NONE`.
 #' 
 #' To use quality filtering, the collection you are using must be
 #' associated with version 3 of the face model or higher.
@@ -4476,8 +4478,8 @@ rekognition_search_faces_by_image <- function(CollectionId, Image, MaxFaces = NU
 #' Starts asynchronous recognition of celebrities in a stored video.
 #' 
 #' Amazon Rekognition Video can detect celebrities in a video must be
-#' stored in an Amazon S3 bucket. Use Video to specify the bucket name and
-#' the filename of the video.
+#' stored in an Amazon S3 bucket. Use <span>Video</span> to specify the
+#' bucket name and the filename of the video.
 #' [`start_celebrity_recognition`][rekognition_start_celebrity_recognition]
 #' returns a job identifier (`JobId`) which you use to get the results of
 #' the analysis. When celebrity recognition analysis is finished, Amazon
@@ -4564,8 +4566,8 @@ rekognition_start_celebrity_recognition <- function(Video, ClientRequestToken = 
 #' Starts asynchronous detection of unsafe content in a stored video.
 #' 
 #' Amazon Rekognition Video can moderate content in a video stored in an
-#' Amazon S3 bucket. Use Video to specify the bucket name and the filename
-#' of the video.
+#' Amazon S3 bucket. Use <span>Video</span> to specify the bucket name and
+#' the filename of the video.
 #' [`start_content_moderation`][rekognition_start_content_moderation]
 #' returns a job identifier (`JobId`) which you use to get the results of
 #' the analysis. When unsafe content analysis is finished, Amazon
@@ -4662,14 +4664,15 @@ rekognition_start_content_moderation <- function(Video, MinConfidence = NULL, Cl
 #' Starts asynchronous detection of faces in a stored video.
 #' 
 #' Amazon Rekognition Video can detect faces in a video stored in an Amazon
-#' S3 bucket. Use Video to specify the bucket name and the filename of the
-#' video. [`start_face_detection`][rekognition_start_face_detection]
-#' returns a job identifier (`JobId`) that you use to get the results of
-#' the operation. When face detection is finished, Amazon Rekognition Video
-#' publishes a completion status to the Amazon Simple Notification Service
-#' topic that you specify in `NotificationChannel`. To get the results of
-#' the face detection operation, first check that the status value
-#' published to the Amazon SNS topic is `SUCCEEDED`. If so, call
+#' S3 bucket. Use <span>Video</span> to specify the bucket name and the
+#' filename of the video.
+#' [`start_face_detection`][rekognition_start_face_detection] returns a job
+#' identifier (`JobId`) that you use to get the results of the operation.
+#' When face detection is finished, Amazon Rekognition Video publishes a
+#' completion status to the Amazon Simple Notification Service topic that
+#' you specify in `NotificationChannel`. To get the results of the face
+#' detection operation, first check that the status value published to the
+#' Amazon SNS topic is `SUCCEEDED`. If so, call
 #' [`get_face_detection`][rekognition_get_face_detection] and pass the job
 #' identifier (`JobId`) from the initial call to
 #' [`start_face_detection`][rekognition_start_face_detection].
@@ -4756,8 +4759,8 @@ rekognition_start_face_detection <- function(Video, ClientRequestToken = NULL, N
 #' Starts the asynchronous search for faces in a collection that match the
 #' faces of persons detected in a stored video.
 #' 
-#' The video must be stored in an Amazon S3 bucket. Use Video to specify
-#' the bucket name and the filename of the video.
+#' The video must be stored in an Amazon S3 bucket. Use <span>Video</span>
+#' to specify the bucket name and the filename of the video.
 #' [`start_face_search`][rekognition_start_face_search] returns a job
 #' identifier (`JobId`) which you use to get the search results once the
 #' search has completed. When searching is finished, Amazon Rekognition
@@ -4768,7 +4771,7 @@ rekognition_start_face_detection <- function(Video, ClientRequestToken = NULL, N
 #' [`get_face_search`][rekognition_get_face_search] and pass the job
 #' identifier (`JobId`) from the initial call to
 #' [`start_face_search`][rekognition_start_face_search]. For more
-#' information, see procedure-person-search-videos.
+#' information, see <span>procedure-person-search-videos</span>.
 #'
 #' @usage
 #' rekognition_start_face_search(Video, ClientRequestToken,
@@ -4851,8 +4854,8 @@ rekognition_start_face_search <- function(Video, ClientRequestToken = NULL, Face
 #' concepts like landscape, evening, and nature; and activities like a
 #' person getting out of a car or a person skiing.
 #' 
-#' The video must be stored in an Amazon S3 bucket. Use Video to specify
-#' the bucket name and the filename of the video.
+#' The video must be stored in an Amazon S3 bucket. Use <span>Video</span>
+#' to specify the bucket name and the filename of the video.
 #' [`start_label_detection`][rekognition_start_label_detection] returns a
 #' job identifier (`JobId`) which you use to get the results of the
 #' operation. When label detection is finished, Amazon Rekognition Video
@@ -4946,8 +4949,8 @@ rekognition_start_label_detection <- function(Video, ClientRequestToken = NULL, 
 #' Starts the asynchronous tracking of a person's path in a stored video.
 #' 
 #' Amazon Rekognition Video can track the path of people in a video stored
-#' in an Amazon S3 bucket. Use Video to specify the bucket name and the
-#' filename of the video.
+#' in an Amazon S3 bucket. Use <span>Video</span> to specify the bucket
+#' name and the filename of the video.
 #' [`start_person_tracking`][rekognition_start_person_tracking] returns a
 #' job identifier (`JobId`) which you use to get the results of the
 #' operation. When label detection is finished, Amazon Rekognition
@@ -5094,19 +5097,20 @@ rekognition_start_project_version <- function(ProjectVersionArn, MinInferenceUni
 #' Starts asynchronous detection of segment detection in a stored video.
 #' 
 #' Amazon Rekognition Video can detect segments in a video stored in an
-#' Amazon S3 bucket. Use Video to specify the bucket name and the filename
-#' of the video.
+#' Amazon S3 bucket. Use <span>Video</span> to specify the bucket name and
+#' the filename of the video.
 #' [`start_segment_detection`][rekognition_start_segment_detection] returns
 #' a job identifier (`JobId`) which you use to get the results of the
 #' operation. When segment detection is finished, Amazon Rekognition Video
 #' publishes a completion status to the Amazon Simple Notification Service
 #' topic that you specify in `NotificationChannel`.
 #' 
-#' You can use the `Filters` (StartSegmentDetectionFilters) input parameter
-#' to specify the minimum detection confidence returned in the response.
-#' Within `Filters`, use `ShotFilter` (StartShotDetectionFilter) to filter
-#' detected shots. Use `TechnicalCueFilter`
-#' (StartTechnicalCueDetectionFilter) to filter technical cues.
+#' You can use the `Filters` (<span>StartSegmentDetectionFilters</span>)
+#' input parameter to specify the minimum detection confidence returned in
+#' the response. Within `Filters`, use `ShotFilter`
+#' (<span>StartShotDetectionFilter</span>) to filter detected shots. Use
+#' `TechnicalCueFilter` (<span>StartTechnicalCueDetectionFilter</span>) to
+#' filter technical cues.
 #' 
 #' To get the results of the segment detection operation, first check that
 #' the status value published to the Amazon SNS topic is `SUCCEEDED`. if
@@ -5248,12 +5252,13 @@ rekognition_start_stream_processor <- function(Name) {
 #' Starts asynchronous detection of text in a stored video.
 #' 
 #' Amazon Rekognition Video can detect text in a video stored in an Amazon
-#' S3 bucket. Use Video to specify the bucket name and the filename of the
-#' video. [`start_text_detection`][rekognition_start_text_detection]
-#' returns a job identifier (`JobId`) which you use to get the results of
-#' the operation. When text detection is finished, Amazon Rekognition Video
-#' publishes a completion status to the Amazon Simple Notification Service
-#' topic that you specify in `NotificationChannel`.
+#' S3 bucket. Use <span>Video</span> to specify the bucket name and the
+#' filename of the video.
+#' [`start_text_detection`][rekognition_start_text_detection] returns a job
+#' identifier (`JobId`) which you use to get the results of the operation.
+#' When text detection is finished, Amazon Rekognition Video publishes a
+#' completion status to the Amazon Simple Notification Service topic that
+#' you specify in `NotificationChannel`.
 #' 
 #' To get the results of the text detection operation, first check that the
 #' status value published to the Amazon SNS topic is `SUCCEEDED`. if so,

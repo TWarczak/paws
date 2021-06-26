@@ -9,8 +9,9 @@ clouddirectory_list_object_parents(DirectoryArn, ObjectReference,
   NextToken, MaxResults, ConsistencyLevel, IncludeAllLinksToEachParent)
 }
 \arguments{
-\item{DirectoryArn}{[required] The Amazon Resource Name (ARN) that is associated with the Directory
-where the object resides. For more information, see arns.}
+\item{DirectoryArn}{[required] The Amazon Resource Name (ARN) that is associated with the
+<span>Directory</span> where the object resides. For more information,
+see <span>arns</span>.}
 
 \item{ObjectReference}{[required] The reference that identifies the object for which parent objects are
 being listed.}
@@ -24,8 +25,9 @@ approximate number.}
 of an object is reflected in a subsequent read operation of that same
 object.}
 
-\item{IncludeAllLinksToEachParent}{When set to True, returns all ListObjectParentsResponse$ParentLinks.
-There could be multiple links between a parent-child pair.}
+\item{IncludeAllLinksToEachParent}{When set to True, returns all
+<span>ListObjectParentsResponse$ParentLinks</span>. There could be
+multiple links between a parent-child pair.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

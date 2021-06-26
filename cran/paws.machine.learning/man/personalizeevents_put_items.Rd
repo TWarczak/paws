@@ -17,7 +17,7 @@ An empty list.
 }
 \description{
 Adds one or more items to an Items dataset. For more information see
-importing-items.
+<span>importing-items</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$put_items(

@@ -63,7 +63,7 @@ the queue). If you reach this limit, Amazon SQS returns the \code{OverLimit}
 error message. To avoid reaching the limit, you should delete messages
 from the queue after they're processed. You can also increase the number
 of queues you use to process your messages. To request a limit increase,
-file a support request.
+<span>file a support request</span>.
 
 For FIFO queues, there can be a maximum of 20,000 inflight messages
 (received from a queue by a consumer, but not yet deleted from the

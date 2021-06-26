@@ -13,7 +13,7 @@ NULL
 #' 
 #' **Glossary of terms**
 #' 
-#' -   **Server**: A configuration management server that can be
+#'   - **Server**: A configuration management server that can be
 #'     highly-available. The configuration management server runs on an
 #'     Amazon Elastic Compute Cloud (EC2) instance, and may use various
 #'     other AWS services, such as Amazon Relational Database Service (RDS)
@@ -22,22 +22,22 @@ NULL
 #'     RDS. In AWS OpsWorks CM, you do not start or stop servers. After you
 #'     create servers, they continue to run until they are deleted.
 #' 
-#' -   **Engine**: The engine is the specific configuration manager that
+#'   - **Engine**: The engine is the specific configuration manager that
 #'     you want to use. Valid values in this release include `ChefAutomate`
 #'     and `Puppet`.
 #' 
-#' -   **Backup**: This is an application-level backup of the data that the
+#'   - **Backup**: This is an application-level backup of the data that the
 #'     configuration manager stores. AWS OpsWorks CM creates an S3 bucket
 #'     for backups when you launch the first server. A backup maintains a
 #'     snapshot of a server's configuration-related attributes at the time
 #'     the backup starts.
 #' 
-#' -   **Events**: Events are always related to a server. Events are
+#'   - **Events**: Events are always related to a server. Events are
 #'     written during server creation, when health checks run, when backups
 #'     are created, when system maintenance is performed, etc. When you
 #'     delete a server, the server's events are also deleted.
 #' 
-#' -   **Account attributes**: Every account has attributes that are
+#'   - **Account attributes**: Every account has attributes that are
 #'     assigned in the AWS OpsWorks CM database. These attributes store
 #'     information about configuration limits (servers, backups, etc.) and
 #'     your customer account.
@@ -48,23 +48,23 @@ NULL
 #' connect to one of the following endpoints. Your servers can only be
 #' accessed or managed within the endpoint in which they are created.
 #' 
-#' -   opsworks-cm.us-east-1.amazonaws.com
+#'   - opsworks-cm.us-east-1.amazonaws.com
 #' 
-#' -   opsworks-cm.us-east-2.amazonaws.com
+#'   - opsworks-cm.us-east-2.amazonaws.com
 #' 
-#' -   opsworks-cm.us-west-1.amazonaws.com
+#'   - opsworks-cm.us-west-1.amazonaws.com
 #' 
-#' -   opsworks-cm.us-west-2.amazonaws.com
+#'   - opsworks-cm.us-west-2.amazonaws.com
 #' 
-#' -   opsworks-cm.ap-northeast-1.amazonaws.com
+#'   - opsworks-cm.ap-northeast-1.amazonaws.com
 #' 
-#' -   opsworks-cm.ap-southeast-1.amazonaws.com
+#'   - opsworks-cm.ap-southeast-1.amazonaws.com
 #' 
-#' -   opsworks-cm.ap-southeast-2.amazonaws.com
+#'   - opsworks-cm.ap-southeast-2.amazonaws.com
 #' 
-#' -   opsworks-cm.eu-central-1.amazonaws.com
+#'   - opsworks-cm.eu-central-1.amazonaws.com
 #' 
-#' -   opsworks-cm.eu-west-1.amazonaws.com
+#'   - opsworks-cm.eu-west-1.amazonaws.com
 #' 
 #' For more information, see [AWS OpsWorks endpoints and
 #' quotas](https://docs.aws.amazon.com/general/latest/gr/opsworks-service.html)
@@ -127,6 +127,12 @@ NULL
 #'  \link[=opsworkscm_update_server]{update_server} \tab Updates settings for a server\cr
 #'  \link[=opsworkscm_update_server_engine_attributes]{update_server_engine_attributes} \tab Updates engine-specific attributes on a specified server
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname opsworkscm
 #' @export

@@ -2,14 +2,14 @@
 % Please edit documentation in R/gamelift_operations.R
 \name{gamelift_resume_game_server_group}
 \alias{gamelift_resume_game_server_group}
-\title{This operation is used with the Amazon GameLift FleetIQ solution and
-game server groups}
+\title{THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND
+GAME SERVER GROUPS}
 \usage{
 gamelift_resume_game_server_group(GameServerGroupName, ResumeActions)
 }
 \arguments{
 \item{GameServerGroupName}{[required] A unique identifier for the game server group. Use either the
-GameServerGroup name or ARN value.}
+<span>GameServerGroup</span> name or ARN value.}
 
 \item{ResumeActions}{[required] The activity to resume for this game server group.}
 }
@@ -57,9 +57,9 @@ game server group status and status reason for more information on why
 group activity is suspended.
 
 To resume activity, specify a game server group ARN and the type of
-activity to be resumed. If successful, a GameServerGroup object is
-returned showing that the resumed activity is no longer listed in
-\code{SuspendedActions}.
+activity to be resumed. If successful, a <span>GameServerGroup</span>
+object is returned showing that the resumed activity is no longer listed
+in \code{SuspendedActions}.
 
 \strong{Learn more}
 

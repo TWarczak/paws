@@ -49,7 +49,7 @@ A list with the following syntax:\preformatted{list(
 \description{
 Inspects the text of a batch of documents for the syntax and part of
 speech of the words in the document and returns information about them.
-For more information, see how-syntax.
+For more information, see <span>how-syntax</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$batch_detect_syntax(

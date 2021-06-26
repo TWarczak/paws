@@ -12,12 +12,12 @@ NULL
 #' behaviors. When it’s attached to a cache behavior, the cache policy
 #' determines the following:
 #' 
-#' -   The values that CloudFront includes in the *cache key*. These values
+#'   - The values that CloudFront includes in the *cache key*. These values
 #'     can include HTTP headers, cookies, and URL query strings. CloudFront
 #'     uses the cache key to find an object in its cache that it can return
 #'     to the viewer.
 #' 
-#' -   The default, minimum, and maximum time to live (TTL) values that you
+#'   - The default, minimum, and maximum time to live (TTL) values that you
 #'     want objects to stay in the CloudFront cache.
 #' 
 #' The headers, cookies, and query strings that are included in the cache
@@ -1923,13 +1923,13 @@ cloudfront_create_monitoring_subscription <- function(DistributionId, Monitoring
 #' requests that it sends to the origin. Each request that CloudFront sends
 #' to the origin includes the following:
 #' 
-#' -   The request body and the URL path (without the domain name) from the
+#'   - The request body and the URL path (without the domain name) from the
 #'     viewer request.
 #' 
-#' -   The headers that CloudFront automatically includes in every origin
+#'   - The headers that CloudFront automatically includes in every origin
 #'     request, including `Host`, `User-Agent`, and `X-Amz-Cf-Id`.
 #' 
-#' -   All HTTP headers, cookies, and URL query strings that are specified
+#'   - All HTTP headers, cookies, and URL query strings that are specified
 #'     in the cache policy or the origin request policy. These can include
 #'     items from the viewer request and, in the case of headers,
 #'     additional ones that are added by CloudFront.
@@ -2984,8 +2984,8 @@ cloudfront_delete_realtime_log_config <- function(Name = NULL, ARN = NULL) {
 #'     configuration for your distribution. In the request body, include
 #'     the XML document that you updated in Step 3. Then set the value of
 #'     the HTTP `If-Match` header to the value of the `ETag` header that
-#'     CloudFront returned when you submitted the
-#'     `GET Streaming Distribution Config` request in Step 2.
+#'     CloudFront returned when you submitted the `GET Streaming
+#'     Distribution Config` request in Step 2.
 #' 
 #' 5.  Review the response to the `PUT Streaming Distribution Config`
 #'     request to confirm that the distribution was successfully disabled.
@@ -2996,8 +2996,8 @@ cloudfront_delete_realtime_log_config <- function(Name = NULL, ARN = NULL) {
 #' 
 #' 7.  Submit a `DELETE Streaming Distribution` request. Set the value of
 #'     the HTTP `If-Match` header to the value of the `ETag` header that
-#'     CloudFront returned when you submitted the
-#'     `GET Streaming Distribution Config` request in Step 2.
+#'     CloudFront returned when you submitted the `GET Streaming
+#'     Distribution Config` request in Step 2.
 #' 
 #' 8.  Review the response to your `DELETE Streaming Distribution` request
 #'     to confirm that the distribution was successfully deleted.
@@ -3050,9 +3050,9 @@ cloudfront_delete_streaming_distribution <- function(Id, IfMatch = NULL) {
 #' @description
 #' Gets a cache policy, including the following metadata:
 #' 
-#' -   The policy’s identifier.
+#'   - The policy’s identifier.
 #' 
-#' -   The date and time when the policy was last modified.
+#'   - The date and time when the policy was last modified.
 #' 
 #' To get a cache policy, you must provide the policy’s identifier. If the
 #' cache policy is attached to a distribution’s cache behavior, you can get
@@ -4563,9 +4563,9 @@ cloudfront_get_monitoring_subscription <- function(DistributionId) {
 #' @description
 #' Gets an origin request policy, including the following metadata:
 #' 
-#' -   The policy’s identifier.
+#'   - The policy’s identifier.
 #' 
-#' -   The date and time when the policy was last modified.
+#'   - The date and time when the policy was last modified.
 #' 
 #' To get an origin request policy, you must provide the policy’s
 #' identifier. If the origin request policy is attached to a distribution’s
@@ -4866,9 +4866,9 @@ cloudfront_get_public_key_config <- function(Id) {
 #' Gets a real-time log configuration.
 #' 
 #' To get a real-time log configuration, you can provide the
-#' configuration’s name or its Amazon Resource Name (ARN). You must provide
-#' at least one. If you provide both, CloudFront uses the name to identify
-#' the real-time log configuration to get.
+#' configuration’s name or its Amazon Resource Name (ARN). You must
+#' provide at least one. If you provide both, CloudFront uses the name to
+#' identify the real-time log configuration to get.
 #'
 #' @usage
 #' cloudfront_get_realtime_log_config(Name, ARN)
@@ -5122,9 +5122,9 @@ cloudfront_get_streaming_distribution_config <- function(Id) {
 #' @param Type A filter to return only the specified kinds of cache policies. Valid
 #' values are:
 #' 
-#' -   `managed` – Returns only the managed policies created by AWS.
+#'   - `managed` – Returns only the managed policies created by AWS.
 #' 
-#' -   `custom` – Returns only the custom policies created in your AWS
+#'   - `custom` – Returns only the custom policies created in your AWS
 #'     account.
 #' @param Marker Use this field when paginating results to indicate where to begin in
 #' your list of cache policies. The response includes cache policies in the
@@ -6877,9 +6877,9 @@ cloudfront_list_key_groups <- function(Marker = NULL, MaxItems = NULL) {
 #' @param Type A filter to return only the specified kinds of origin request policies.
 #' Valid values are:
 #' 
-#' -   `managed` – Returns only the managed policies created by AWS.
+#'   - `managed` – Returns only the managed policies created by AWS.
 #' 
-#' -   `custom` – Returns only the custom policies created in your AWS
+#'   - `custom` – Returns only the custom policies created in your AWS
 #'     account.
 #' @param Marker Use this field when paginating results to indicate where to begin in
 #' your list of origin request policies. The response includes origin
@@ -7595,27 +7595,27 @@ cloudfront_update_cloud_front_origin_access_identity <- function(CloudFrontOrigi
 #'     [`get_distribution_config`][cloudfront_get_distribution_config]
 #'     request to get the current configuration and an `Etag` header for
 #'     the distribution.
-#' 
+#'     
 #'     If you update the distribution again, you must get a new `Etag`
 #'     header.
 #' 
 #' 2.  Update the XML document that was returned in the response to your
 #'     [`get_distribution_config`][cloudfront_get_distribution_config]
 #'     request to include your changes.
-#' 
+#'     
 #'     When you edit the XML file, be aware of the following:
-#' 
-#'     -   You must strip out the ETag parameter that is returned.
-#' 
-#'     -   Additional fields are required when you update a distribution.
+#'     
+#'       - You must strip out the ETag parameter that is returned.
+#'     
+#'       - Additional fields are required when you update a distribution.
 #'         There may be fields included in the XML file for features that
 #'         you haven't configured for your distribution. This is expected
 #'         and required to successfully update the distribution.
-#' 
-#'     -   You can't change the value of `CallerReference`. If you try to
+#'     
+#'       - You can't change the value of `CallerReference`. If you try to
 #'         change this value, CloudFront returns an `IllegalUpdate` error.
-#' 
-#'     -   The new configuration replaces the existing configuration; the
+#'     
+#'       - The new configuration replaces the existing configuration; the
 #'         values that you specify in an
 #'         [`update_distribution`][cloudfront_update_distribution] request
 #'         are not merged into your existing configuration. When you add,
@@ -7626,12 +7626,12 @@ cloudfront_update_cloud_front_origin_access_identity <- function(CloudFrontOrigi
 #' 
 #' 3.  Submit an [`update_distribution`][cloudfront_update_distribution]
 #'     request to update the configuration for your distribution:
-#' 
-#'     -   In the request body, include the XML document that you updated
+#'     
+#'       - In the request body, include the XML document that you updated
 #'         in Step 2. The request body must include an XML document with a
 #'         `DistributionConfig` element.
-#' 
-#'     -   Set the value of the HTTP `If-Match` header to the value of the
+#'     
+#'       - Set the value of the HTTP `If-Match` header to the value of the
 #'         `ETag` header that CloudFront returned when you submitted the
 #'         [`get_distribution_config`][cloudfront_get_distribution_config]
 #'         request in Step 1.

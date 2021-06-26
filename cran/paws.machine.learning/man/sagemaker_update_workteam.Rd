@@ -24,8 +24,8 @@ correspond to Amazon Cognito \emph{user groups} within the user pool used to
 create a workforce. All of the \code{CognitoMemberDefinition} objects that
 make up the member definition must have the same \code{ClientId} and
 \code{UserPool} values. To add a Amazon Cognito user group to an existing
-worker pool, see Adding groups to a User Pool. For more information
-about user pools, see \href{https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html}{Amazon Cognito User Pools}.
+worker pool, see <span>Adding groups to a User Pool</span>. For more
+information about user pools, see \href{https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html}{Amazon Cognito User Pools}.
 
 For workforces created using your own OIDC IdP, specify the user groups
 that you want to include in your private work team in

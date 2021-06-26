@@ -53,8 +53,7 @@ order to use this operation.
 If you don't have \code{\link[=s3control_put_bucket_policy]{put_bucket_policy}}
 permissions, Amazon S3 returns a \verb{403 Access Denied} error. If you have
 the correct permissions, but you're not using an identity that belongs
-to the bucket owner's account, Amazon S3 returns a
-\verb{405 Method Not Allowed} error.
+to the bucket owner's account, Amazon S3 returns a \verb{405 Method Not Allowed} error.
 
 As a security precaution, the root user of the AWS account that owns a
 bucket can always use this operation, even if the policy explicitly

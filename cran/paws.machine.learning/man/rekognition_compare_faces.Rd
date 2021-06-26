@@ -2,8 +2,8 @@
 % Please edit documentation in R/rekognition_operations.R
 \name{rekognition_compare_faces}
 \alias{rekognition_compare_faces}
-\title{Compares a face in the source input image with each of the 100 largest
-faces detected in the target input image}
+\title{Compares a face in the \emph{source} input image with each of the 100 largest
+faces detected in the \emph{target} input image}
 \usage{
 rekognition_compare_faces(SourceImage, TargetImage, SimilarityThreshold,
   QualityFilter)

@@ -29,7 +29,7 @@ more information, see the \href{https://docs.aws.amazon.com/opsworks/latest/user
 attributes.}
 
 \item{CloudWatchLogsConfiguration}{Specifies CloudWatch Logs configuration options for the layer. For more
-information, see CloudWatchLogsLogStream.}
+information, see <span>CloudWatchLogsLogStream</span>.}
 
 \item{CustomInstanceProfileArn}{The ARN of an IAM profile to be used for all of the layer's EC2
 instances. For more information about IAM ARNs, see \href{https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html}{Using Identifiers}.}

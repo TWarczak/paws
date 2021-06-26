@@ -16,7 +16,7 @@ objects:
 date.
 \item \code{Status} - Sets the search criteria to the \code{Evaluation} status.
 \item \code{Name} - Sets the search criteria to the contents of \code{Evaluation}
-\code{Name}.
+**** \code{Name}.
 \item \code{IAMUser} - Sets the search criteria to the user account that
 invoked an \code{Evaluation}.
 \item \code{MLModelId} - Sets the search criteria to the \code{MLModel} that was

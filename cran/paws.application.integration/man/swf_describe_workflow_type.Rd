@@ -2,7 +2,7 @@
 % Please edit documentation in R/swf_operations.R
 \name{swf_describe_workflow_type}
 \alias{swf_describe_workflow_type}
-\title{Returns information about the specified workflow type}
+\title{Returns information about the specified \emph{workflow type}}
 \usage{
 swf_describe_workflow_type(domain, workflowType)
 }

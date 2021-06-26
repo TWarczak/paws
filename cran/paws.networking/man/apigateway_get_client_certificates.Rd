@@ -35,7 +35,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Gets a collection of ClientCertificate resources.
+Gets a collection of <span>ClientCertificate</span> resources.
 }
 \section{Request syntax}{
 \preformatted{svc$get_client_certificates(

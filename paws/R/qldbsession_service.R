@@ -10,7 +10,7 @@ NULL
 #' Instead of interacting directly with this API, we recommend using the
 #' QLDB driver or the QLDB shell to execute data transactions on a ledger.
 #' 
-#' -   If you are working with an AWS SDK, use the QLDB driver. The driver
+#'   - If you are working with an AWS SDK, use the QLDB driver. The driver
 #'     provides a high-level abstraction layer above this *QLDB Session*
 #'     data plane and manages [`send_command`][qldbsession_send_command]
 #'     API calls for you. For information and a list of supported
@@ -18,7 +18,7 @@ NULL
 #'     driver](https://docs.aws.amazon.com/qldb/latest/developerguide/getting-started-driver.html)
 #'     in the *Amazon QLDB Developer Guide*.
 #' 
-#' -   If you are working with the AWS Command Line Interface (AWS CLI),
+#'   - If you are working with the AWS Command Line Interface (AWS CLI),
 #'     use the QLDB shell. The shell is a command line interface that uses
 #'     the QLDB driver to interact with a ledger. For information, see
 #'     [Accessing Amazon QLDB using the QLDB
@@ -58,6 +58,12 @@ NULL
 #' \tabular{ll}{
 #'  \link[=qldbsession_send_command]{send_command} \tab Sends a command to an Amazon QLDB ledger
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname qldbsession
 #' @export

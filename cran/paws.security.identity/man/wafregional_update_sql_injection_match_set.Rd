@@ -2,7 +2,7 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_update_sql_injection_match_set}
 \alias{wafregional_update_sql_injection_match_set}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 wafregional_update_sql_injection_match_set(SqlInjectionMatchSetId,
   ChangeToken, Updates)
@@ -18,14 +18,14 @@ and by
 \code{\link[=wafregional_get_change_token]{get_change_token}}.}
 
 \item{Updates}{[required] An array of \code{SqlInjectionMatchSetUpdate} objects that you want to insert
-into or delete from a SqlInjectionMatchSet. For more information, see
-the applicable data types:
+into or delete from a <span>SqlInjectionMatchSet</span>. For more
+information, see the applicable data types:
 \itemize{
-\item SqlInjectionMatchSetUpdate: Contains \code{Action} and
+\item <span>SqlInjectionMatchSetUpdate</span>: Contains \code{Action} and
 \code{SqlInjectionMatchTuple}
-\item SqlInjectionMatchTuple: Contains \code{FieldToMatch} and
+\item <span>SqlInjectionMatchTuple</span>: Contains \code{FieldToMatch} and
 \code{TextTransformation}
-\item FieldToMatch: Contains \code{Data} and \code{Type}
+\item <span>FieldToMatch</span>: Contains \code{Data} and \code{Type}
 }}
 }
 \value{
@@ -44,9 +44,9 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Inserts or deletes SqlInjectionMatchTuple objects (filters) in a
-SqlInjectionMatchSet. For each \code{SqlInjectionMatchTuple} object, you
-specify the following values:
+Inserts or deletes <span>SqlInjectionMatchTuple</span> objects (filters)
+in a <span>SqlInjectionMatchSet</span>. For each
+\code{SqlInjectionMatchTuple} object, you specify the following values:
 \itemize{
 \item \code{Action}: Whether to insert the object into or delete the object
 from the array. To change a \code{SqlInjectionMatchTuple}, you delete the

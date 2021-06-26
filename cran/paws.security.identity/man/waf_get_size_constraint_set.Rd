@@ -2,13 +2,13 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_get_size_constraint_set}
 \alias{waf_get_size_constraint_set}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_get_size_constraint_set(SizeConstraintSetId)
 }
 \arguments{
-\item{SizeConstraintSetId}{[required] The \code{SizeConstraintSetId} of the SizeConstraintSet that you want to get.
-\code{SizeConstraintSetId} is returned by
+\item{SizeConstraintSetId}{[required] The \code{SizeConstraintSetId} of the <span>SizeConstraintSet</span> that you
+want to get. \code{SizeConstraintSetId} is returned by
 \code{\link[=waf_create_size_constraint_set]{create_size_constraint_set}} and by
 \code{\link[=waf_list_size_constraint_sets]{list_size_constraint_sets}}.}
 }
@@ -42,7 +42,8 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Returns the SizeConstraintSet specified by \code{SizeConstraintSetId}.
+Returns the <span>SizeConstraintSet</span> specified by
+\code{SizeConstraintSetId}.
 }
 \section{Request syntax}{
 \preformatted{svc$get_size_constraint_set(

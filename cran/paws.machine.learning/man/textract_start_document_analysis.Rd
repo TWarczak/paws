@@ -57,8 +57,9 @@ elements.
 
 \code{\link[=textract_start_document_analysis]{start_document_analysis}} can
 analyze text in documents that are in JPEG, PNG, and PDF format. The
-documents are stored in an Amazon S3 bucket. Use DocumentLocation to
-specify the bucket name and file name of the document.
+documents are stored in an Amazon S3 bucket. Use
+<span>DocumentLocation</span> to specify the bucket name and file name
+of the document.
 
 \code{\link[=textract_start_document_analysis]{start_document_analysis}} returns a
 job identifier (\code{JobId}) that you use to get the results of the

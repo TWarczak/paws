@@ -20,7 +20,7 @@ following statuses: ERROR or DELETING.}
 \item{ScalingAdjustment}{Amount of adjustment to make, based on the scaling adjustment type.}
 
 \item{ScalingAdjustmentType}{The type of adjustment to make to a fleet's instance count (see
-FleetCapacity):
+<span>FleetCapacity</span>):
 \itemize{
 \item \strong{ChangeInCapacity} -- add (or subtract) the scaling adjustment
 value from the current instance count. Positive values scale up
@@ -132,12 +132,13 @@ the 10\% buffer.
 
 To create or update a target-based policy, specify a fleet ID and name,
 and set the policy type to "TargetBased". Specify the metric to track
-(PercentAvailableGameSessions) and reference a TargetConfiguration
-object with your desired buffer value. Exclude all other parameters. On
-a successful request, the policy name is returned. The scaling policy is
-automatically in force as soon as it's successfully created. If the
-fleet's auto-scaling actions are temporarily suspended, the new policy
-will be in force once the fleet actions are restarted.
+(PercentAvailableGameSessions) and reference a
+<span>TargetConfiguration</span> object with your desired buffer value.
+Exclude all other parameters. On a successful request, the policy name
+is returned. The scaling policy is automatically in force as soon as
+it's successfully created. If the fleet's auto-scaling actions are
+temporarily suspended, the new policy will be in force once the fleet
+actions are restarted.
 
 \strong{Rule-based policy}
 

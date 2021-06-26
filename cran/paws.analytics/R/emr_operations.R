@@ -256,7 +256,7 @@ emr_add_instance_groups <- function(InstanceGroups, JobFlowId) {
 #' @param JobFlowId &#91;required&#93; A string that uniquely identifies the job flow. This identifier is
 #' returned by [`run_job_flow`][emr_run_job_flow] and can also be obtained
 #' from [`list_clusters`][emr_list_clusters].
-#' @param Steps &#91;required&#93; A list of StepConfig to be executed by the job flow.
+#' @param Steps &#91;required&#93; A list of <span>StepConfig</span> to be executed by the job flow.
 #'
 #' @return
 #' A list with the following syntax:
@@ -975,9 +975,9 @@ emr_describe_cluster <- function(ClusterId) {
 #' If no parameters are supplied, then job flows matching either of the
 #' following criteria are returned:
 #' 
-#' -   Job flows created and completed in the last two weeks
+#'   - Job flows created and completed in the last two weeks
 #' 
-#' -   Job flows created within the last two months that are in one of the
+#'   - Job flows created within the last two months that are in one of the
 #'     following states: `RUNNING`, `WAITING`, `SHUTTING_DOWN`, `STARTING`
 #' 
 #' Amazon EMR can return a maximum of 512 job flow descriptions.
@@ -2186,33 +2186,33 @@ emr_list_instances <- function(ClusterId, InstanceGroupId = NULL, InstanceGroupT
 #' @param EditorId The unique ID of the editor associated with the notebook execution.
 #' @param Status The status filter for listing notebook executions.
 #' 
-#' -   `START_PENDING` indicates that the cluster has received the
+#'   - `START_PENDING` indicates that the cluster has received the
 #'     execution request but execution has not begun.
 #' 
-#' -   `STARTING` indicates that the execution is starting on the cluster.
+#'   - `STARTING` indicates that the execution is starting on the cluster.
 #' 
-#' -   `RUNNING` indicates that the execution is being processed by the
+#'   - `RUNNING` indicates that the execution is being processed by the
 #'     cluster.
 #' 
-#' -   `FINISHING` indicates that execution processing is in the final
+#'   - `FINISHING` indicates that execution processing is in the final
 #'     stages.
 #' 
-#' -   `FINISHED` indicates that the execution has completed without error.
+#'   - `FINISHED` indicates that the execution has completed without error.
 #' 
-#' -   `FAILING` indicates that the execution is failing and will not
+#'   - `FAILING` indicates that the execution is failing and will not
 #'     finish successfully.
 #' 
-#' -   `FAILED` indicates that the execution failed.
+#'   - `FAILED` indicates that the execution failed.
 #' 
-#' -   `STOP_PENDING` indicates that the cluster has received a
+#'   - `STOP_PENDING` indicates that the cluster has received a
 #'     [`stop_notebook_execution`][emr_stop_notebook_execution] request and
 #'     the stop is pending.
 #' 
-#' -   `STOPPING` indicates that the cluster is in the process of stopping
+#'   - `STOPPING` indicates that the cluster is in the process of stopping
 #'     the execution as a result of a
 #'     [`stop_notebook_execution`][emr_stop_notebook_execution] request.
 #' 
-#' -   `STOPPED` indicates that the execution stopped because of a
+#'   - `STOPPED` indicates that the execution stopped because of a
 #'     [`stop_notebook_execution`][emr_stop_notebook_execution] request.
 #' @param From The beginning of time range filter for listing notebook executions. The
 #' default is the timestamp of 30 days ago.
@@ -3158,14 +3158,14 @@ emr_remove_tags <- function(ResourceId, TagKeys) {
 #' cluster runs the steps specified. After the steps complete, the cluster
 #' stops and the HDFS partition is lost. To prevent loss of data, configure
 #' the last step of the job flow to store results in Amazon S3. If the
-#' JobFlowInstancesConfig `KeepJobFlowAliveWhenNoSteps` parameter is set to
-#' `TRUE`, the cluster transitions to the WAITING state rather than
-#' shutting down after the steps have completed.
+#' <span>JobFlowInstancesConfig</span> `KeepJobFlowAliveWhenNoSteps`
+#' parameter is set to `TRUE`, the cluster transitions to the WAITING state
+#' rather than shutting down after the steps have completed.
 #' 
-#' For additional protection, you can set the JobFlowInstancesConfig
-#' `TerminationProtected` parameter to `TRUE` to lock the cluster and
-#' prevent it from being terminated by API call, user intervention, or in
-#' the event of a job flow error.
+#' For additional protection, you can set the
+#' <span>JobFlowInstancesConfig</span> `TerminationProtected` parameter to
+#' `TRUE` to lock the cluster and prevent it from being terminated by API
+#' call, user intervention, or in the event of a job flow error.
 #' 
 #' A maximum of 256 steps are allowed in each job flow.
 #' 
@@ -3226,9 +3226,9 @@ emr_remove_tags <- function(ResourceId, TagKeys) {
 #' Guide](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-release-3x.html).
 #' Currently supported values are:
 #' 
-#' -   "mapr-m3" - launch the job flow using MapR M3 Edition.
+#'   - "mapr-m3" - launch the job flow using MapR M3 Edition.
 #' 
-#' -   "mapr-m5" - launch the job flow using MapR M5 Edition.
+#'   - "mapr-m5" - launch the job flow using MapR M5 Edition.
 #' @param NewSupportedProducts For Amazon EMR releases 3.x and 2.x. For Amazon EMR releases 4.x and
 #' later, use Applications.
 #' 
@@ -3240,24 +3240,24 @@ emr_remove_tags <- function(ResourceId, TagKeys) {
 #' Guide](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-release-3x.html).
 #' Supported values are:
 #' 
-#' -   "mapr-m3" - launch the cluster using MapR M3 Edition.
+#'   - "mapr-m3" - launch the cluster using MapR M3 Edition.
 #' 
-#' -   "mapr-m5" - launch the cluster using MapR M5 Edition.
+#'   - "mapr-m5" - launch the cluster using MapR M5 Edition.
 #' 
-#' -   "mapr" with the user arguments specifying "--edition,m3" or
+#'   - "mapr" with the user arguments specifying "--edition,m3" or
 #'     "--edition,m5" - launch the job flow using MapR M3 or M5 Edition
 #'     respectively.
 #' 
-#' -   "mapr-m7" - launch the cluster using MapR M7 Edition.
+#'   - "mapr-m7" - launch the cluster using MapR M7 Edition.
 #' 
-#' -   "hunk" - launch the cluster with the Hunk Big Data Analtics
+#'   - "hunk" - launch the cluster with the Hunk Big Data Analtics
 #'     Platform.
 #' 
-#' -   "hue"- launch the cluster with Hue installed.
+#'   - "hue"- launch the cluster with Hue installed.
 #' 
-#' -   "spark" - launch the cluster with Apache Spark installed.
+#'   - "spark" - launch the cluster with Apache Spark installed.
 #' 
-#' -   "ganglia" - launch the cluster with the Ganglia Monitoring System
+#'   - "ganglia" - launch the cluster with the Ganglia Monitoring System
 #'     installed.
 #' @param Applications Applies to Amazon EMR releases 4.0 and later. A case-insensitive list of
 #' applications for Amazon EMR to install and configure when launching the
@@ -3695,15 +3695,15 @@ emr_set_termination_protection <- function(JobFlowIds, TerminationProtected) {
 #' the cluster
 #'
 #' @description
-#' Sets the Cluster$VisibleToAllUsers value, which determines whether the
-#' cluster is visible to all IAM users of the AWS account associated with
-#' the cluster. Only the IAM user who created the cluster or the AWS
-#' account root user can call this action. The default value, `true`,
-#' indicates that all IAM users in the AWS account can perform cluster
-#' actions if they have the proper IAM policy permissions. If set to
-#' `false`, only the IAM user that created the cluster can perform actions.
-#' This action works on running clusters. You can override the default
-#' `true` setting when you create a cluster by using the
+#' Sets the <span>Cluster$VisibleToAllUsers</span> value, which determines
+#' whether the cluster is visible to all IAM users of the AWS account
+#' associated with the cluster. Only the IAM user who created the cluster
+#' or the AWS account root user can call this action. The default value,
+#' `true`, indicates that all IAM users in the AWS account can perform
+#' cluster actions if they have the proper IAM policy permissions. If set
+#' to `false`, only the IAM user that created the cluster can perform
+#' actions. This action works on running clusters. You can override the
+#' default `true` setting when you create a cluster by using the
 #' `VisibleToAllUsers` parameter with [`run_job_flow`][emr_run_job_flow].
 #'
 #' @usage

@@ -20,17 +20,17 @@ NULL
 #' 
 #' **Submitting Metering Records**
 #' 
-#' -   *MeterUsage*- Submits the metering record for a Marketplace product.
+#'   - *MeterUsage*- Submits the metering record for a Marketplace product.
 #'     MeterUsage is called from an EC2 instance or a container running on
 #'     EKS or ECS.
 #' 
-#' -   *BatchMeterUsage*- Submits the metering record for a set of
+#'   - *BatchMeterUsage*- Submits the metering record for a set of
 #'     customers. BatchMeterUsage is called from a software-as-a-service
 #'     (SaaS) application.
 #' 
 #' **Accepting New Customers**
 #' 
-#' -   *ResolveCustomer*- Called by a SaaS application during the
+#'   - *ResolveCustomer*- Called by a SaaS application during the
 #'     registration process. When a buyer visits your website during the
 #'     registration process, the buyer submits a Registration Token through
 #'     the browser. The Registration Token is resolved through this API to
@@ -38,7 +38,7 @@ NULL
 #' 
 #' **Entitlement and Metering for Paid Container Products**
 #' 
-#' -   Paid container software products sold through AWS Marketplace must
+#'   - Paid container software products sold through AWS Marketplace must
 #'     integrate with the AWS Marketplace Metering Service and call the
 #'     RegisterUsage operation for software entitlement and metering. Free
 #'     and BYOL products for Amazon ECS or Amazon EKS aren't required to
@@ -92,6 +92,12 @@ NULL
 #'  \link[=marketplacemetering_register_usage]{register_usage} \tab Paid container software products sold through AWS Marketplace must integrate with the AWS Marketplace Metering Service and call the RegisterUsage operation for software entitlement and metering\cr
 #'  \link[=marketplacemetering_resolve_customer]{resolve_customer} \tab ResolveCustomer is called by a SaaS application during the registration process
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname marketplacemetering
 #' @export

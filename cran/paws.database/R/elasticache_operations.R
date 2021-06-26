@@ -448,60 +448,60 @@ elasticache_complete_migration <- function(ReplicationGroupId, Force = NULL) {
 #' 
 #' **Error Messages**
 #' 
-#' -   **Error Message:** The S3 bucket %s is outside of the region.
-#' 
+#'   - **Error Message:** The S3 bucket %s is outside of the region.
+#'     
 #'     **Solution:** Create an Amazon S3 bucket in the same region as your
 #'     snapshot. For more information, see [Step 1: Create an Amazon S3
 #'     Bucket](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups-exporting.html#backups-exporting-create-s3-bucket)
 #'     in the ElastiCache User Guide.
 #' 
-#' -   **Error Message:** The S3 bucket %s does not exist.
-#' 
+#'   - **Error Message:** The S3 bucket %s does not exist.
+#'     
 #'     **Solution:** Create an Amazon S3 bucket in the same region as your
 #'     snapshot. For more information, see [Step 1: Create an Amazon S3
 #'     Bucket](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups-exporting.html#backups-exporting-create-s3-bucket)
 #'     in the ElastiCache User Guide.
 #' 
-#' -   **Error Message:** The S3 bucket %s is not owned by the
+#'   - **Error Message:** The S3 bucket %s is not owned by the
 #'     authenticated user.
-#' 
+#'     
 #'     **Solution:** Create an Amazon S3 bucket in the same region as your
 #'     snapshot. For more information, see [Step 1: Create an Amazon S3
 #'     Bucket](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups-exporting.html#backups-exporting-create-s3-bucket)
 #'     in the ElastiCache User Guide.
 #' 
-#' -   **Error Message:** The authenticated user does not have sufficient
+#'   - **Error Message:** The authenticated user does not have sufficient
 #'     permissions to perform the desired activity.
-#' 
+#'     
 #'     **Solution:** Contact your system administrator to get the needed
 #'     permissions.
 #' 
-#' -   **Error Message:** The S3 bucket %s already contains an object with
+#'   - **Error Message:** The S3 bucket %s already contains an object with
 #'     key %s.
-#' 
+#'     
 #'     **Solution:** Give the `TargetSnapshotName` a new and unique value.
 #'     If exporting a snapshot, you could alternatively create a new Amazon
 #'     S3 bucket and use this same value for `TargetSnapshotName`.
 #' 
-#' -   **Error Message:** ElastiCache has not been granted READ permissions
+#'   - **Error Message:** ElastiCache has not been granted READ permissions
 #'     %s on the S3 Bucket.
-#' 
+#'     
 #'     **Solution:** Add List and Read permissions on the bucket. For more
 #'     information, see [Step 2: Grant ElastiCache Access to Your Amazon S3
 #'     Bucket](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups-exporting.html#backups-exporting-grant-access)
 #'     in the ElastiCache User Guide.
 #' 
-#' -   **Error Message:** ElastiCache has not been granted WRITE
+#'   - **Error Message:** ElastiCache has not been granted WRITE
 #'     permissions %s on the S3 Bucket.
-#' 
+#'     
 #'     **Solution:** Add Upload/Delete permissions on the bucket. For more
 #'     information, see [Step 2: Grant ElastiCache Access to Your Amazon S3
 #'     Bucket](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups-exporting.html#backups-exporting-grant-access)
 #'     in the ElastiCache User Guide.
 #' 
-#' -   **Error Message:** ElastiCache has not been granted READ_ACP
+#'   - **Error Message:** ElastiCache has not been granted READ_ACP
 #'     permissions %s on the S3 Bucket.
-#' 
+#'     
 #'     **Solution:** Add View Permissions on the bucket. For more
 #'     information, see [Step 2: Grant ElastiCache Access to Your Amazon S3
 #'     Bucket](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups-exporting.html#backups-exporting-grant-access)
@@ -647,11 +647,11 @@ elasticache_copy_snapshot <- function(SourceSnapshotName, TargetSnapshotName, Ta
 #' 
 #' **Constraints:**
 #' 
-#' -   A name must contain from 1 to 50 alphanumeric characters or hyphens.
+#'   - A name must contain from 1 to 50 alphanumeric characters or hyphens.
 #' 
-#' -   The first character must be a letter.
+#'   - The first character must be a letter.
 #' 
-#' -   A name cannot end with a hyphen or contain two consecutive hyphens.
+#'   - A name cannot end with a hyphen or contain two consecutive hyphens.
 #' @param ReplicationGroupId The ID of the replication group to which this cluster should belong. If
 #' this parameter is specified, the cluster is added to the specified
 #' replication group as a read replica; otherwise, the cluster is a
@@ -702,7 +702,7 @@ elasticache_copy_snapshot <- function(SourceSnapshotName, TargetSnapshotName, Ta
 #' 
 #' If you need more than 20 nodes for your Memcached cluster, please fill
 #' out the ElastiCache Limit Increase Request form at
-#' http://aws.amazon.com/contact-us/elasticache-node-limit-request/.
+#' <span>http://aws.amazon.com/contact-us/elasticache-node-limit-request/</span>.
 #' @param CacheNodeType The compute and memory capacity of the nodes in the node group (shard).
 #' 
 #' The following node types are supported by ElastiCache. Generally
@@ -710,93 +710,93 @@ elasticache_copy_snapshot <- function(SourceSnapshotName, TargetSnapshotName, Ta
 #' computational power at lower cost when compared to their equivalent
 #' previous generation counterparts.
 #' 
-#' -   General purpose:
-#' 
-#'     -   Current generation:
-#' 
+#'   - General purpose:
+#'     
+#'       - Current generation:
+#'         
 #'         **M6g node types** (available only for Redis engine version
 #'         5.0.6 onward and for Memcached engine version 1.5.16 onward).
-#' 
+#'         
 #'         `cache.m6g.large`, `cache.m6g.xlarge`, `cache.m6g.2xlarge`,
 #'         `cache.m6g.4xlarge`, `cache.m6g.8xlarge`, `cache.m6g.12xlarge`,
 #'         `cache.m6g.16xlarge`
-#' 
+#'         
 #'         At this time, M6g node types are available in the following
 #'         regions: us-east-1, us-west-2, us-east-2, eu-central-1,
 #'         eu-west-1 and ap-northeast-1.
-#' 
+#'         
 #'         **M5 node types:** `cache.m5.large`, `cache.m5.xlarge`,
 #'         `cache.m5.2xlarge`, `cache.m5.4xlarge`, `cache.m5.12xlarge`,
 #'         `cache.m5.24xlarge`
-#' 
+#'         
 #'         **M4 node types:** `cache.m4.large`, `cache.m4.xlarge`,
 #'         `cache.m4.2xlarge`, `cache.m4.4xlarge`, `cache.m4.10xlarge`
-#' 
+#'         
 #'         **T3 node types:** `cache.t3.micro`, `cache.t3.small`,
 #'         `cache.t3.medium`
-#' 
+#'         
 #'         **T2 node types:** `cache.t2.micro`, `cache.t2.small`,
 #'         `cache.t2.medium`
-#' 
-#'     -   Previous generation: (not recommended)
-#' 
+#'     
+#'       - Previous generation: (not recommended)
+#'         
 #'         **T1 node types:** `cache.t1.micro`
-#' 
+#'         
 #'         **M1 node types:** `cache.m1.small`, `cache.m1.medium`,
 #'         `cache.m1.large`, `cache.m1.xlarge`
-#' 
+#'         
 #'         **M3 node types:** `cache.m3.medium`, `cache.m3.large`,
 #'         `cache.m3.xlarge`, `cache.m3.2xlarge`
 #' 
-#' -   Compute optimized:
-#' 
-#'     -   Previous generation: (not recommended)
-#' 
+#'   - Compute optimized:
+#'     
+#'       - Previous generation: (not recommended)
+#'         
 #'         **C1 node types:** `cache.c1.xlarge`
 #' 
-#' -   Memory optimized:
-#' 
-#'     -   Current generation:
-#' 
+#'   - Memory optimized:
+#'     
+#'       - Current generation:
+#'         
 #'         **R6g node types** (available only for Redis engine version
 #'         5.0.6 onward and for Memcached engine version 1.5.16 onward).
-#' 
+#'         
 #'         `cache.r6g.large`, `cache.r6g.xlarge`, `cache.r6g.2xlarge`,
 #'         `cache.r6g.4xlarge`, `cache.r6g.8xlarge`, `cache.r6g.12xlarge`,
 #'         `cache.r6g.16xlarge`
-#' 
+#'         
 #'         At this time, R6g node types are available in the following
 #'         regions: us-east-1, us-west-2, us-east-2, eu-central-1,
 #'         eu-west-1 and ap-northeast-1.
-#' 
+#'         
 #'         **R5 node types:** `cache.r5.large`, `cache.r5.xlarge`,
 #'         `cache.r5.2xlarge`, `cache.r5.4xlarge`, `cache.r5.12xlarge`,
 #'         `cache.r5.24xlarge`
-#' 
+#'         
 #'         **R4 node types:** `cache.r4.large`, `cache.r4.xlarge`,
 #'         `cache.r4.2xlarge`, `cache.r4.4xlarge`, `cache.r4.8xlarge`,
 #'         `cache.r4.16xlarge`
-#' 
-#'     -   Previous generation: (not recommended)
-#' 
+#'     
+#'       - Previous generation: (not recommended)
+#'         
 #'         **M2 node types:** `cache.m2.xlarge`, `cache.m2.2xlarge`,
 #'         `cache.m2.4xlarge`
-#' 
+#'         
 #'         **R3 node types:** `cache.r3.large`, `cache.r3.xlarge`,
 #'         `cache.r3.2xlarge`, `cache.r3.4xlarge`, `cache.r3.8xlarge`
 #' 
 #' **Additional node type info**
 #' 
-#' -   All current generation instance types are created in Amazon VPC by
+#'   - All current generation instance types are created in Amazon VPC by
 #'     default.
 #' 
-#' -   Redis append-only files (AOF) are not supported for T1 or T2
+#'   - Redis append-only files (AOF) are not supported for T1 or T2
 #'     instances.
 #' 
-#' -   Redis Multi-AZ with automatic failover is not supported on T1
+#'   - Redis Multi-AZ with automatic failover is not supported on T1
 #'     instances.
 #' 
-#' -   Redis configuration variables `appendonly` and `appendfsync` are not
+#'   - Redis configuration variables `appendonly` and `appendfsync` are not
 #'     supported on Redis version 2.8.22 and later.
 #' @param Engine The name of the cache engine to be used for this cluster.
 #' 
@@ -858,19 +858,19 @@ elasticache_copy_snapshot <- function(SourceSnapshotName, TargetSnapshotName, Ta
 #' 
 #' Valid values for `ddd` are:
 #' 
-#' -   `sun`
+#'   - `sun`
 #' 
-#' -   `mon`
+#'   - `mon`
 #' 
-#' -   `tue`
+#'   - `tue`
 #' 
-#' -   `wed`
+#'   - `wed`
 #' 
-#' -   `thu`
+#'   - `thu`
 #' 
-#' -   `fri`
+#'   - `fri`
 #' 
-#' -   `sat`
+#'   - `sat`
 #' 
 #' Example: `sun:23:00-mon:01:30`
 #' @param Port The port number on which each of the cache nodes accepts connections.
@@ -902,16 +902,16 @@ elasticache_copy_snapshot <- function(SourceSnapshotName, TargetSnapshotName, Ta
 #' 
 #' Password constraints:
 #' 
-#' -   Must be only printable ASCII characters.
+#'   - Must be only printable ASCII characters.
 #' 
-#' -   Must be at least 16 characters and no more than 128 characters in
+#'   - Must be at least 16 characters and no more than 128 characters in
 #'     length.
 #' 
-#' -   The only permitted printable special characters are !, &, \#, $, ^,
-#'     &lt;, &gt;, and -. Other printable special characters cannot be used
-#'     in the AUTH token.
+#'   - The only permitted printable special characters are \!, &, \#, $, ^,
+#'     \<, \>, and -. Other printable special characters cannot be used in
+#'     the AUTH token.
 #' 
-#' For more information, see AUTH password at
+#' For more information, see <span>AUTH password</span> at
 #' http://redis.io/commands/AUTH.
 #' @param OutpostMode Specifies whether the nodes in the cluster are created in a single
 #' outpost or across multiple outposts.
@@ -1085,10 +1085,10 @@ elasticache_create_cache_cluster <- function(CacheClusterId, ReplicationGroupId 
 #' newly created CacheParameterGroup you can change the values of specific
 #' parameters. For more information, see:
 #' 
-#' -   [`modify_cache_parameter_group`][elasticache_modify_cache_parameter_group]
+#'   - [`modify_cache_parameter_group`][elasticache_modify_cache_parameter_group]
 #'     in the ElastiCache API Reference.
 #' 
-#' -   [Parameters and Parameter
+#'   - [Parameters and Parameter
 #'     Groups](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/ParameterGroups.html)
 #'     in the ElastiCache User Guide.
 #'
@@ -1309,10 +1309,10 @@ elasticache_create_cache_subnet_group <- function(CacheSubnetGroupName, CacheSub
 #' more information, see [Replication Across Regions Using Global
 #' Datastore](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Redis-Global-Datastore.html).
 #' 
-#' -   The **GlobalReplicationGroupIdSuffix** is the name of the Global
+#'   - The **GlobalReplicationGroupIdSuffix** is the name of the Global
 #'     Datastore.
 #' 
-#' -   The **PrimaryReplicationGroupId** represents the name of the primary
+#'   - The **PrimaryReplicationGroupId** represents the name of the primary
 #'     cluster that accepts writes and will replicate updates to the
 #'     secondary cluster.
 #'
@@ -1452,11 +1452,11 @@ elasticache_create_global_replication_group <- function(GlobalReplicationGroupId
 #' 
 #' Constraints:
 #' 
-#' -   A name must contain from 1 to 40 alphanumeric characters or hyphens.
+#'   - A name must contain from 1 to 40 alphanumeric characters or hyphens.
 #' 
-#' -   The first character must be a letter.
+#'   - The first character must be a letter.
 #' 
-#' -   A name cannot end with a hyphen or contain two consecutive hyphens.
+#'   - A name cannot end with a hyphen or contain two consecutive hyphens.
 #' @param ReplicationGroupDescription &#91;required&#93; A user-created description for the replication group.
 #' @param GlobalReplicationGroupId The name of the Global Datastore
 #' @param PrimaryClusterId The identifier of the cluster that serves as the primary for this
@@ -1529,93 +1529,93 @@ elasticache_create_global_replication_group <- function(GlobalReplicationGroupId
 #' computational power at lower cost when compared to their equivalent
 #' previous generation counterparts.
 #' 
-#' -   General purpose:
-#' 
-#'     -   Current generation:
-#' 
+#'   - General purpose:
+#'     
+#'       - Current generation:
+#'         
 #'         **M6g node types** (available only for Redis engine version
 #'         5.0.6 onward and for Memcached engine version 1.5.16 onward).
-#' 
+#'         
 #'         `cache.m6g.large`, `cache.m6g.xlarge`, `cache.m6g.2xlarge`,
 #'         `cache.m6g.4xlarge`, `cache.m6g.8xlarge`, `cache.m6g.12xlarge`,
 #'         `cache.m6g.16xlarge`
-#' 
+#'         
 #'         At this time, M6g node types are available in the following
 #'         regions: us-east-1, us-west-2, us-east-2, eu-central-1,
 #'         eu-west-1 and ap-northeast-1.
-#' 
+#'         
 #'         **M5 node types:** `cache.m5.large`, `cache.m5.xlarge`,
 #'         `cache.m5.2xlarge`, `cache.m5.4xlarge`, `cache.m5.12xlarge`,
 #'         `cache.m5.24xlarge`
-#' 
+#'         
 #'         **M4 node types:** `cache.m4.large`, `cache.m4.xlarge`,
 #'         `cache.m4.2xlarge`, `cache.m4.4xlarge`, `cache.m4.10xlarge`
-#' 
+#'         
 #'         **T3 node types:** `cache.t3.micro`, `cache.t3.small`,
 #'         `cache.t3.medium`
-#' 
+#'         
 #'         **T2 node types:** `cache.t2.micro`, `cache.t2.small`,
 #'         `cache.t2.medium`
-#' 
-#'     -   Previous generation: (not recommended)
-#' 
+#'     
+#'       - Previous generation: (not recommended)
+#'         
 #'         **T1 node types:** `cache.t1.micro`
-#' 
+#'         
 #'         **M1 node types:** `cache.m1.small`, `cache.m1.medium`,
 #'         `cache.m1.large`, `cache.m1.xlarge`
-#' 
+#'         
 #'         **M3 node types:** `cache.m3.medium`, `cache.m3.large`,
 #'         `cache.m3.xlarge`, `cache.m3.2xlarge`
 #' 
-#' -   Compute optimized:
-#' 
-#'     -   Previous generation: (not recommended)
-#' 
+#'   - Compute optimized:
+#'     
+#'       - Previous generation: (not recommended)
+#'         
 #'         **C1 node types:** `cache.c1.xlarge`
 #' 
-#' -   Memory optimized:
-#' 
-#'     -   Current generation:
-#' 
+#'   - Memory optimized:
+#'     
+#'       - Current generation:
+#'         
 #'         **R6g node types** (available only for Redis engine version
 #'         5.0.6 onward and for Memcached engine version 1.5.16 onward).
-#' 
+#'         
 #'         `cache.r6g.large`, `cache.r6g.xlarge`, `cache.r6g.2xlarge`,
 #'         `cache.r6g.4xlarge`, `cache.r6g.8xlarge`, `cache.r6g.12xlarge`,
 #'         `cache.r6g.16xlarge`
-#' 
+#'         
 #'         At this time, R6g node types are available in the following
 #'         regions: us-east-1, us-west-2, us-east-2, eu-central-1,
 #'         eu-west-1 and ap-northeast-1.
-#' 
+#'         
 #'         **R5 node types:** `cache.r5.large`, `cache.r5.xlarge`,
 #'         `cache.r5.2xlarge`, `cache.r5.4xlarge`, `cache.r5.12xlarge`,
 #'         `cache.r5.24xlarge`
-#' 
+#'         
 #'         **R4 node types:** `cache.r4.large`, `cache.r4.xlarge`,
 #'         `cache.r4.2xlarge`, `cache.r4.4xlarge`, `cache.r4.8xlarge`,
 #'         `cache.r4.16xlarge`
-#' 
-#'     -   Previous generation: (not recommended)
-#' 
+#'     
+#'       - Previous generation: (not recommended)
+#'         
 #'         **M2 node types:** `cache.m2.xlarge`, `cache.m2.2xlarge`,
 #'         `cache.m2.4xlarge`
-#' 
+#'         
 #'         **R3 node types:** `cache.r3.large`, `cache.r3.xlarge`,
 #'         `cache.r3.2xlarge`, `cache.r3.4xlarge`, `cache.r3.8xlarge`
 #' 
 #' **Additional node type info**
 #' 
-#' -   All current generation instance types are created in Amazon VPC by
+#'   - All current generation instance types are created in Amazon VPC by
 #'     default.
 #' 
-#' -   Redis append-only files (AOF) are not supported for T1 or T2
+#'   - Redis append-only files (AOF) are not supported for T1 or T2
 #'     instances.
 #' 
-#' -   Redis Multi-AZ with automatic failover is not supported on T1
+#'   - Redis Multi-AZ with automatic failover is not supported on T1
 #'     instances.
 #' 
-#' -   Redis configuration variables `appendonly` and `appendfsync` are not
+#'   - Redis configuration variables `appendonly` and `appendfsync` are not
 #'     supported on Redis version 2.8.22 and later.
 #' @param Engine The name of the cache engine to be used for the clusters in this
 #' replication group.
@@ -1644,10 +1644,10 @@ elasticache_create_global_replication_group <- function(GlobalReplicationGroupId
 #' (shard), and want to use a default parameter group, we recommend that
 #' you specify the parameter group by name.
 #' 
-#' -   To create a Redis (cluster mode disabled) replication group, use
+#'   - To create a Redis (cluster mode disabled) replication group, use
 #'     `CacheParameterGroupName=default.redis3.2`.
 #' 
-#' -   To create a Redis (cluster mode enabled) replication group, use
+#'   - To create a Redis (cluster mode enabled) replication group, use
 #'     `CacheParameterGroupName=default.redis3.2.cluster.on`.
 #' @param CacheSubnetGroupName The name of the cache subnet group to be used for the replication group.
 #' 
@@ -1691,19 +1691,19 @@ elasticache_create_global_replication_group <- function(GlobalReplicationGroupId
 #' 
 #' Valid values for `ddd` are:
 #' 
-#' -   `sun`
+#'   - `sun`
 #' 
-#' -   `mon`
+#'   - `mon`
 #' 
-#' -   `tue`
+#'   - `tue`
 #' 
-#' -   `wed`
+#'   - `wed`
 #' 
-#' -   `thu`
+#'   - `thu`
 #' 
-#' -   `fri`
+#'   - `fri`
 #' 
-#' -   `sat`
+#'   - `sat`
 #' 
 #' Example: `sun:23:00-mon:01:30`
 #' @param Port The port number on which each member of the replication group accepts
@@ -1737,16 +1737,16 @@ elasticache_create_global_replication_group <- function(GlobalReplicationGroupId
 #' 
 #' Password constraints:
 #' 
-#' -   Must be only printable ASCII characters.
+#'   - Must be only printable ASCII characters.
 #' 
-#' -   Must be at least 16 characters and no more than 128 characters in
+#'   - Must be at least 16 characters and no more than 128 characters in
 #'     length.
 #' 
-#' -   The only permitted printable special characters are !, &, \#, $, ^,
-#'     &lt;, &gt;, and -. Other printable special characters cannot be used
-#'     in the AUTH token.
+#'   - The only permitted printable special characters are \!, &, \#, $, ^,
+#'     \<, \>, and -. Other printable special characters cannot be used in
+#'     the AUTH token.
 #' 
-#' For more information, see AUTH password at
+#' For more information, see <span>AUTH password</span> at
 #' http://redis.io/commands/AUTH.
 #' @param TransitEncryptionEnabled A flag that enables in-transit encryption when set to `true`.
 #' 
@@ -2337,13 +2337,13 @@ elasticache_decrease_node_groups_in_global_replication_group <- function(GlobalR
 #' 
 #' The minimum number of replicas in a shard or replication group is:
 #' 
-#' -   Redis (cluster mode disabled)
+#'   - Redis (cluster mode disabled)
+#'     
+#'       - If Multi-AZ is enabled: 1
+#'     
+#'       - If Multi-AZ is not enabled: 0
 #' 
-#'     -   If Multi-AZ is enabled: 1
-#' 
-#'     -   If Multi-AZ is not enabled: 0
-#' 
-#' -   Redis (cluster mode enabled): 0 (though you will not be able to
+#'   - Redis (cluster mode enabled): 0 (though you will not be able to
 #'     failover to a replica if your primary node fails)
 #' @param ReplicaConfiguration A list of `ConfigureShard` objects that can be used to configure each
 #' shard in a Redis (cluster mode enabled) replication group. The
@@ -2500,15 +2500,15 @@ elasticache_decrease_replica_count <- function(ReplicationGroupId, NewReplicaCou
 #' 
 #' This operation is not valid for:
 #' 
-#' -   Redis (cluster mode enabled) clusters
+#'   - Redis (cluster mode enabled) clusters
 #' 
-#' -   A cluster that is the last read replica of a replication group
+#'   - A cluster that is the last read replica of a replication group
 #' 
-#' -   A node group (shard) that has Multi-AZ mode enabled
+#'   - A node group (shard) that has Multi-AZ mode enabled
 #' 
-#' -   A cluster from a Redis (cluster mode enabled) replication group
+#'   - A cluster from a Redis (cluster mode enabled) replication group
 #' 
-#' -   A cluster that is not in the `available` state
+#'   - A cluster that is not in the `available` state
 #'
 #' @usage
 #' elasticache_delete_cache_cluster(CacheClusterId,
@@ -2775,11 +2775,11 @@ elasticache_delete_cache_subnet_group <- function(CacheSubnetGroupName) {
 #' @description
 #' Deleting a Global Datastore is a two-step process:
 #' 
-#' -   First, you must
+#'   - First, you must
 #'     [`disassociate_global_replication_group`][elasticache_disassociate_global_replication_group]
 #'     to remove the secondary clusters in the Global Datastore.
 #' 
-#' -   Once the Global Datastore contains only the primary cluster, you can
+#'   - Once the Global Datastore contains only the primary cluster, you can
 #'     use DeleteGlobalReplicationGroup API to delete the Global Datastore
 #'     while retainining the primary cluster using Retain…= true.
 #' 
@@ -3438,11 +3438,11 @@ elasticache_describe_cache_clusters <- function(CacheClusterId = NULL, MaxRecord
 #' 
 #' Constraints:
 #' 
-#' -   Must be 1 to 255 alphanumeric characters
+#'   - Must be 1 to 255 alphanumeric characters
 #' 
-#' -   First character must be a letter
+#'   - First character must be a letter
 #' 
-#' -   Cannot end with a hyphen or contain two consecutive hyphens
+#'   - Cannot end with a hyphen or contain two consecutive hyphens
 #' @param MaxRecords The maximum number of records to include in the response. If more
 #' records exist than the specified `MaxRecords` value, a marker is
 #' included in the response so that the remaining results can be retrieved.
@@ -4290,93 +4290,93 @@ elasticache_describe_replication_groups <- function(ReplicationGroupId = NULL, M
 #' computational power at lower cost when compared to their equivalent
 #' previous generation counterparts.
 #' 
-#' -   General purpose:
-#' 
-#'     -   Current generation:
-#' 
+#'   - General purpose:
+#'     
+#'       - Current generation:
+#'         
 #'         **M6g node types** (available only for Redis engine version
 #'         5.0.6 onward and for Memcached engine version 1.5.16 onward).
-#' 
+#'         
 #'         `cache.m6g.large`, `cache.m6g.xlarge`, `cache.m6g.2xlarge`,
 #'         `cache.m6g.4xlarge`, `cache.m6g.8xlarge`, `cache.m6g.12xlarge`,
 #'         `cache.m6g.16xlarge`
-#' 
+#'         
 #'         At this time, M6g node types are available in the following
 #'         regions: us-east-1, us-west-2, us-east-2, eu-central-1,
 #'         eu-west-1 and ap-northeast-1.
-#' 
+#'         
 #'         **M5 node types:** `cache.m5.large`, `cache.m5.xlarge`,
 #'         `cache.m5.2xlarge`, `cache.m5.4xlarge`, `cache.m5.12xlarge`,
 #'         `cache.m5.24xlarge`
-#' 
+#'         
 #'         **M4 node types:** `cache.m4.large`, `cache.m4.xlarge`,
 #'         `cache.m4.2xlarge`, `cache.m4.4xlarge`, `cache.m4.10xlarge`
-#' 
+#'         
 #'         **T3 node types:** `cache.t3.micro`, `cache.t3.small`,
 #'         `cache.t3.medium`
-#' 
+#'         
 #'         **T2 node types:** `cache.t2.micro`, `cache.t2.small`,
 #'         `cache.t2.medium`
-#' 
-#'     -   Previous generation: (not recommended)
-#' 
+#'     
+#'       - Previous generation: (not recommended)
+#'         
 #'         **T1 node types:** `cache.t1.micro`
-#' 
+#'         
 #'         **M1 node types:** `cache.m1.small`, `cache.m1.medium`,
 #'         `cache.m1.large`, `cache.m1.xlarge`
-#' 
+#'         
 #'         **M3 node types:** `cache.m3.medium`, `cache.m3.large`,
 #'         `cache.m3.xlarge`, `cache.m3.2xlarge`
 #' 
-#' -   Compute optimized:
-#' 
-#'     -   Previous generation: (not recommended)
-#' 
+#'   - Compute optimized:
+#'     
+#'       - Previous generation: (not recommended)
+#'         
 #'         **C1 node types:** `cache.c1.xlarge`
 #' 
-#' -   Memory optimized:
-#' 
-#'     -   Current generation:
-#' 
+#'   - Memory optimized:
+#'     
+#'       - Current generation:
+#'         
 #'         **R6g node types** (available only for Redis engine version
 #'         5.0.6 onward and for Memcached engine version 1.5.16 onward).
-#' 
+#'         
 #'         `cache.r6g.large`, `cache.r6g.xlarge`, `cache.r6g.2xlarge`,
 #'         `cache.r6g.4xlarge`, `cache.r6g.8xlarge`, `cache.r6g.12xlarge`,
 #'         `cache.r6g.16xlarge`
-#' 
+#'         
 #'         At this time, R6g node types are available in the following
 #'         regions: us-east-1, us-west-2, us-east-2, eu-central-1,
 #'         eu-west-1 and ap-northeast-1.
-#' 
+#'         
 #'         **R5 node types:** `cache.r5.large`, `cache.r5.xlarge`,
 #'         `cache.r5.2xlarge`, `cache.r5.4xlarge`, `cache.r5.12xlarge`,
 #'         `cache.r5.24xlarge`
-#' 
+#'         
 #'         **R4 node types:** `cache.r4.large`, `cache.r4.xlarge`,
 #'         `cache.r4.2xlarge`, `cache.r4.4xlarge`, `cache.r4.8xlarge`,
 #'         `cache.r4.16xlarge`
-#' 
-#'     -   Previous generation: (not recommended)
-#' 
+#'     
+#'       - Previous generation: (not recommended)
+#'         
 #'         **M2 node types:** `cache.m2.xlarge`, `cache.m2.2xlarge`,
 #'         `cache.m2.4xlarge`
-#' 
+#'         
 #'         **R3 node types:** `cache.r3.large`, `cache.r3.xlarge`,
 #'         `cache.r3.2xlarge`, `cache.r3.4xlarge`, `cache.r3.8xlarge`
 #' 
 #' **Additional node type info**
 #' 
-#' -   All current generation instance types are created in Amazon VPC by
+#'   - All current generation instance types are created in Amazon VPC by
 #'     default.
 #' 
-#' -   Redis append-only files (AOF) are not supported for T1 or T2
+#'   - Redis append-only files (AOF) are not supported for T1 or T2
 #'     instances.
 #' 
-#' -   Redis Multi-AZ with automatic failover is not supported on T1
+#'   - Redis Multi-AZ with automatic failover is not supported on T1
 #'     instances.
 #' 
-#' -   Redis configuration variables `appendonly` and `appendfsync` are not
+#'   - Redis configuration variables `appendonly` and `appendfsync` are not
 #'     supported on Redis version 2.8.22 and later.
 #' @param Duration The duration filter value, specified in years or seconds. Use this
 #' parameter to show only reservations for this duration.
@@ -4387,8 +4387,8 @@ elasticache_describe_replication_groups <- function(ReplicationGroupId = NULL, M
 #' @param OfferingType The offering type filter value. Use this parameter to show only the
 #' available offerings matching the specified offering type.
 #' 
-#' Valid values:
-#' `"Light Utilization"|"Medium Utilization"|"Heavy Utilization"|"All Upfront"|"Partial Upfront"| "No Upfront"`
+#' Valid values: `"Light Utilization"|"Medium Utilization"|"Heavy
+#' Utilization"|"All Upfront"|"Partial Upfront"| "No Upfront"`
 #' @param MaxRecords The maximum number of records to include in the response. If more
 #' records exist than the specified `MaxRecords` value, a marker is
 #' included in the response so that the remaining results can be retrieved.
@@ -4490,93 +4490,93 @@ elasticache_describe_reserved_cache_nodes <- function(ReservedCacheNodeId = NULL
 #' computational power at lower cost when compared to their equivalent
 #' previous generation counterparts.
 #' 
-#' -   General purpose:
-#' 
-#'     -   Current generation:
-#' 
+#'   - General purpose:
+#'     
+#'       - Current generation:
+#'         
 #'         **M6g node types** (available only for Redis engine version
 #'         5.0.6 onward and for Memcached engine version 1.5.16 onward).
-#' 
+#'         
 #'         `cache.m6g.large`, `cache.m6g.xlarge`, `cache.m6g.2xlarge`,
 #'         `cache.m6g.4xlarge`, `cache.m6g.8xlarge`, `cache.m6g.12xlarge`,
 #'         `cache.m6g.16xlarge`
-#' 
+#'         
 #'         At this time, M6g node types are available in the following
 #'         regions: us-east-1, us-west-2, us-east-2, eu-central-1,
 #'         eu-west-1 and ap-northeast-1.
-#' 
+#'         
 #'         **M5 node types:** `cache.m5.large`, `cache.m5.xlarge`,
 #'         `cache.m5.2xlarge`, `cache.m5.4xlarge`, `cache.m5.12xlarge`,
 #'         `cache.m5.24xlarge`
-#' 
+#'         
 #'         **M4 node types:** `cache.m4.large`, `cache.m4.xlarge`,
 #'         `cache.m4.2xlarge`, `cache.m4.4xlarge`, `cache.m4.10xlarge`
-#' 
+#'         
 #'         **T3 node types:** `cache.t3.micro`, `cache.t3.small`,
 #'         `cache.t3.medium`
-#' 
+#'         
 #'         **T2 node types:** `cache.t2.micro`, `cache.t2.small`,
 #'         `cache.t2.medium`
-#' 
-#'     -   Previous generation: (not recommended)
-#' 
+#'     
+#'       - Previous generation: (not recommended)
+#'         
 #'         **T1 node types:** `cache.t1.micro`
-#' 
+#'         
 #'         **M1 node types:** `cache.m1.small`, `cache.m1.medium`,
 #'         `cache.m1.large`, `cache.m1.xlarge`
-#' 
+#'         
 #'         **M3 node types:** `cache.m3.medium`, `cache.m3.large`,
 #'         `cache.m3.xlarge`, `cache.m3.2xlarge`
 #' 
-#' -   Compute optimized:
-#' 
-#'     -   Previous generation: (not recommended)
-#' 
+#'   - Compute optimized:
+#'     
+#'       - Previous generation: (not recommended)
+#'         
 #'         **C1 node types:** `cache.c1.xlarge`
 #' 
-#' -   Memory optimized:
-#' 
-#'     -   Current generation:
-#' 
+#'   - Memory optimized:
+#'     
+#'       - Current generation:
+#'         
 #'         **R6g node types** (available only for Redis engine version
 #'         5.0.6 onward and for Memcached engine version 1.5.16 onward).
-#' 
+#'         
 #'         `cache.r6g.large`, `cache.r6g.xlarge`, `cache.r6g.2xlarge`,
 #'         `cache.r6g.4xlarge`, `cache.r6g.8xlarge`, `cache.r6g.12xlarge`,
 #'         `cache.r6g.16xlarge`
-#' 
+#'         
 #'         At this time, R6g node types are available in the following
 #'         regions: us-east-1, us-west-2, us-east-2, eu-central-1,
 #'         eu-west-1 and ap-northeast-1.
-#' 
+#'         
 #'         **R5 node types:** `cache.r5.large`, `cache.r5.xlarge`,
 #'         `cache.r5.2xlarge`, `cache.r5.4xlarge`, `cache.r5.12xlarge`,
 #'         `cache.r5.24xlarge`
-#' 
+#'         
 #'         **R4 node types:** `cache.r4.large`, `cache.r4.xlarge`,
 #'         `cache.r4.2xlarge`, `cache.r4.4xlarge`, `cache.r4.8xlarge`,
 #'         `cache.r4.16xlarge`
-#' 
-#'     -   Previous generation: (not recommended)
-#' 
+#'     
+#'       - Previous generation: (not recommended)
+#'         
 #'         **M2 node types:** `cache.m2.xlarge`, `cache.m2.2xlarge`,
 #'         `cache.m2.4xlarge`
-#' 
+#'         
 #'         **R3 node types:** `cache.r3.large`, `cache.r3.xlarge`,
 #'         `cache.r3.2xlarge`, `cache.r3.4xlarge`, `cache.r3.8xlarge`
 #' 
 #' **Additional node type info**
 #' 
-#' -   All current generation instance types are created in Amazon VPC by
+#'   - All current generation instance types are created in Amazon VPC by
 #'     default.
 #' 
-#' -   Redis append-only files (AOF) are not supported for T1 or T2
+#'   - Redis append-only files (AOF) are not supported for T1 or T2
 #'     instances.
 #' 
-#' -   Redis Multi-AZ with automatic failover is not supported on T1
+#'   - Redis Multi-AZ with automatic failover is not supported on T1
 #'     instances.
 #' 
-#' -   Redis configuration variables `appendonly` and `appendfsync` are not
+#'   - Redis configuration variables `appendonly` and `appendfsync` are not
 #'     supported on Redis version 2.8.22 and later.
 #' @param Duration Duration filter value, specified in years or seconds. Use this parameter
 #' to show only reservations for a given duration.
@@ -4587,8 +4587,8 @@ elasticache_describe_reserved_cache_nodes <- function(ReservedCacheNodeId = NULL
 #' @param OfferingType The offering type filter value. Use this parameter to show only the
 #' available offerings matching the specified offering type.
 #' 
-#' Valid Values:
-#' `"Light Utilization"|"Medium Utilization"|"Heavy Utilization" |"All Upfront"|"Partial Upfront"| "No Upfront"`
+#' Valid Values: `"Light Utilization"|"Medium Utilization"|"Heavy
+#' Utilization" |"All Upfront"|"Partial Upfront"| "No Upfront"`
 #' @param MaxRecords The maximum number of records to include in the response. If more
 #' records exist than the specified `MaxRecords` value, a marker is
 #' included in the response so that the remaining results can be retrieved.
@@ -5055,7 +5055,7 @@ elasticache_describe_update_actions <- function(ServiceUpdateName = NULL, Replic
 #' @param Marker An optional marker returned from a prior request. Use this marker for
 #' pagination of results from this operation. If this parameter is
 #' specified, the response includes only records beyond the marker, up to
-#' the value specified by MaxRecords. &gt;
+#' the value specified by MaxRecords. \>
 #'
 #' @return
 #' A list with the following syntax:
@@ -5133,7 +5133,7 @@ elasticache_describe_user_groups <- function(UserGroupId = NULL, MaxRecords = NU
 #' @param Marker An optional marker returned from a prior request. Use this marker for
 #' pagination of results from this operation. If this parameter is
 #' specified, the response includes only records beyond the marker, up to
-#' the value specified by MaxRecords. &gt;
+#' the value specified by MaxRecords. \>
 #'
 #' @return
 #' A list with the following syntax:
@@ -5692,10 +5692,10 @@ elasticache_list_allowed_node_type_modifications <- function(CacheClusterId = NU
 #' Lists all cost allocation tags currently on the named resource
 #'
 #' @description
-#' Lists all cost allocation tags currently on the named resource. A
-#' `cost allocation tag` is a key-value pair where the key is
-#' case-sensitive and the value is optional. You can use cost allocation
-#' tags to categorize and track your AWS costs.
+#' Lists all cost allocation tags currently on the named resource. A `cost
+#' allocation tag` is a key-value pair where the key is case-sensitive and
+#' the value is optional. You can use cost allocation tags to categorize
+#' and track your AWS costs.
 #' 
 #' If the cluster is not in the *available* state,
 #' [`list_tags_for_resource`][elasticache_list_tags_for_resource] returns
@@ -5847,16 +5847,16 @@ elasticache_list_tags_for_resource <- function(ResourceName) {
 #' 
 #' Scenarios:
 #' 
-#' -   **Scenario 1:** You have 3 active nodes and wish to add 2 nodes.
+#'   - **Scenario 1:** You have 3 active nodes and wish to add 2 nodes.
 #'     Specify `NumCacheNodes=5` (3 + 2) and optionally specify two
 #'     Availability Zones for the two new nodes.
 #' 
-#' -   **Scenario 2:** You have 3 active nodes and 2 nodes pending creation
+#'   - **Scenario 2:** You have 3 active nodes and 2 nodes pending creation
 #'     (from the scenario 1 call) and want to add 1 more node. Specify
 #'     `NumCacheNodes=6` ((3 + 2) + 1) and optionally specify an
 #'     Availability Zone for the new node.
 #' 
-#' -   **Scenario 3:** You want to cancel all pending operations. Specify
+#'   - **Scenario 3:** You want to cancel all pending operations. Specify
 #'     `NumCacheNodes=3` to cancel all pending operations.
 #' 
 #' The Availability Zone placement of nodes pending creation cannot be
@@ -5872,45 +5872,45 @@ elasticache_list_tags_for_resource <- function(ResourceName) {
 #' 
 #' **Impact of new add/remove requests upon pending requests**
 #' 
-#' -   Scenario-1
-#' 
-#'     -   Pending Action: Delete
-#' 
-#'     -   New Request: Delete
-#' 
-#'     -   Result: The new delete, pending or immediate, replaces the
+#'   - Scenario-1
+#'     
+#'       - Pending Action: Delete
+#'     
+#'       - New Request: Delete
+#'     
+#'       - Result: The new delete, pending or immediate, replaces the
 #'         pending delete.
 #' 
-#' -   Scenario-2
-#' 
-#'     -   Pending Action: Delete
-#' 
-#'     -   New Request: Create
-#' 
-#'     -   Result: The new create, pending or immediate, replaces the
+#'   - Scenario-2
+#'     
+#'       - Pending Action: Delete
+#'     
+#'       - New Request: Create
+#'     
+#'       - Result: The new create, pending or immediate, replaces the
 #'         pending delete.
 #' 
-#' -   Scenario-3
-#' 
-#'     -   Pending Action: Create
-#' 
-#'     -   New Request: Delete
-#' 
-#'     -   Result: The new delete, pending or immediate, replaces the
+#'   - Scenario-3
+#'     
+#'       - Pending Action: Create
+#'     
+#'       - New Request: Delete
+#'     
+#'       - Result: The new delete, pending or immediate, replaces the
 #'         pending create.
 #' 
-#' -   Scenario-4
-#' 
-#'     -   Pending Action: Create
-#' 
-#'     -   New Request: Create
-#' 
-#'     -   Result: The new create is added to the pending create.
-#' 
-#'         **Important:** If the new create request is **Apply
-#'         Immediately - Yes**, all creates are performed immediately. If
-#'         the new create request is **Apply Immediately - No**, all
-#'         creates are pending.
+#'   - Scenario-4
+#'     
+#'       - Pending Action: Create
+#'     
+#'       - New Request: Create
+#'     
+#'       - Result: The new create is added to the pending create.
+#'         
+#'         **Important:** If the new create request is **Apply Immediately
+#'         - Yes**, all creates are performed immediately. If the new
+#'         create request is **Apply Immediately - No**, all creates are
+#'         pending.
 #' @param CacheSecurityGroupNames A list of cache security group names to authorize on this cluster. This
 #' change is asynchronously applied as soon as possible.
 #' 
@@ -5930,19 +5930,19 @@ elasticache_list_tags_for_resource <- function(ResourceName) {
 #' 
 #' Valid values for `ddd` are:
 #' 
-#' -   `sun`
+#'   - `sun`
 #' 
-#' -   `mon`
+#'   - `mon`
 #' 
-#' -   `tue`
+#'   - `tue`
 #' 
-#' -   `wed`
+#'   - `wed`
 #' 
-#' -   `thu`
+#'   - `thu`
 #' 
-#' -   `fri`
+#'   - `fri`
 #' 
-#' -   `sat`
+#'   - `sat`
 #' 
 #' Example: `sun:23:00-mon:01:30`
 #' @param NotificationTopicArn The Amazon Resource Name (ARN) of the Amazon SNS topic to which
@@ -5996,21 +5996,21 @@ elasticache_list_tags_for_resource <- function(ResourceName) {
 #' server. This parameter must be specified with the `auth-token-update`
 #' parameter. Password constraints:
 #' 
-#' -   Must be only printable ASCII characters
+#'   - Must be only printable ASCII characters
 #' 
-#' -   Must be at least 16 characters and no more than 128 characters in
+#'   - Must be at least 16 characters and no more than 128 characters in
 #'     length
 #' 
-#' -   Cannot contain any of the following characters: '/', '"', or '@@',
+#'   - Cannot contain any of the following characters: '/', '"', or '@@',
 #'     '%'
 #' 
-#' For more information, see AUTH password at AUTH.
+#' For more information, see AUTH password at <span>AUTH</span>.
 #' @param AuthTokenUpdateStrategy Specifies the strategy to use to update the AUTH token. This parameter
 #' must be specified with the `auth-token` parameter. Possible values:
 #' 
-#' -   Rotate
+#'   - Rotate
 #' 
-#' -   Set
+#'   - Set
 #' 
 #' For more information, see [Authenticating Users with Redis
 #' AUTH](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html)
@@ -6380,11 +6380,11 @@ elasticache_modify_global_replication_group <- function(GlobalReplicationGroupId
 #' @description
 #' Modifies the settings for a replication group.
 #' 
-#' -   [Scaling for Amazon ElastiCache for Redis (cluster mode
+#'   - [Scaling for Amazon ElastiCache for Redis (cluster mode
 #'     enabled)](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/scaling-redis-cluster-mode-enabled.html)
 #'     in the ElastiCache User Guide
 #' 
-#' -   [`modify_replication_group_shard_configuration`][elasticache_modify_replication_group_shard_configuration]
+#'   - [`modify_replication_group_shard_configuration`][elasticache_modify_replication_group_shard_configuration]
 #'     in the ElastiCache API Reference
 #' 
 #' This operation is valid for Redis only.
@@ -6440,19 +6440,19 @@ elasticache_modify_global_replication_group <- function(GlobalReplicationGroupId
 #' 
 #' Valid values for `ddd` are:
 #' 
-#' -   `sun`
+#'   - `sun`
 #' 
-#' -   `mon`
+#'   - `mon`
 #' 
-#' -   `tue`
+#'   - `tue`
 #' 
-#' -   `wed`
+#'   - `wed`
 #' 
-#' -   `thu`
+#'   - `thu`
 #' 
-#' -   `fri`
+#'   - `fri`
 #' 
-#' -   `sat`
+#'   - `sat`
 #' 
 #' Example: `sun:23:00-mon:01:30`
 #' @param NotificationTopicArn The Amazon Resource Name (ARN) of the Amazon SNS topic to which
@@ -6508,23 +6508,23 @@ elasticache_modify_global_replication_group <- function(GlobalReplicationGroupId
 #' to.
 #' @param AuthToken Reserved parameter. The password used to access a password protected
 #' server. This parameter must be specified with the
-#' `auth-token-update-strategy ` parameter. Password constraints:
+#' ` auth-token-update-strategy  ` parameter. Password constraints:
 #' 
-#' -   Must be only printable ASCII characters
+#'   - Must be only printable ASCII characters
 #' 
-#' -   Must be at least 16 characters and no more than 128 characters in
+#'   - Must be at least 16 characters and no more than 128 characters in
 #'     length
 #' 
-#' -   Cannot contain any of the following characters: '/', '"', or '@@',
+#'   - Cannot contain any of the following characters: '/', '"', or '@@',
 #'     '%'
 #' 
-#' For more information, see AUTH password at AUTH.
+#' For more information, see AUTH password at <span>AUTH</span>.
 #' @param AuthTokenUpdateStrategy Specifies the strategy to use to update the AUTH token. This parameter
 #' must be specified with the `auth-token` parameter. Possible values:
 #' 
-#' -   Rotate
+#'   - Rotate
 #' 
-#' -   Set
+#'   - Set
 #' 
 #' For more information, see [Authenticating Users with Redis
 #' AUTH](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html)
@@ -7648,44 +7648,44 @@ elasticache_start_migration <- function(ReplicationGroupId, CustomerNodeEndpoint
 #' 
 #' **Note the following**
 #' 
-#' -   A customer can use this operation to test automatic failover on up
+#'   - A customer can use this operation to test automatic failover on up
 #'     to 5 shards (called node groups in the ElastiCache API and AWS CLI)
 #'     in any rolling 24-hour period.
 #' 
-#' -   If calling this operation on shards in different clusters (called
+#'   - If calling this operation on shards in different clusters (called
 #'     replication groups in the API and CLI), the calls can be made
 #'     concurrently.
 #' 
-#' -   If calling this operation multiple times on different shards in the
+#'   - If calling this operation multiple times on different shards in the
 #'     same Redis (cluster mode enabled) replication group, the first node
 #'     replacement must complete before a subsequent call can be made.
 #' 
-#' -   To determine whether the node replacement is complete you can check
+#'   - To determine whether the node replacement is complete you can check
 #'     Events using the Amazon ElastiCache console, the AWS CLI, or the
 #'     ElastiCache API. Look for the following automatic failover related
 #'     events, listed here in order of occurrance:
-#' 
-#'     1.  Replication group message:
-#'         `Test Failover API called for node group <node-group-id>`
-#' 
-#'     2.  Cache cluster message:
-#'         `Failover from primary node <primary-node-id> to replica node <node-id> completed`
-#' 
-#'     3.  Replication group message:
-#'         `Failover from primary node <primary-node-id> to replica node <node-id> completed`
-#' 
+#'     
+#'     1.  Replication group message: `Test Failover API called for node
+#'         group <node-group-id>`
+#'     
+#'     2.  Cache cluster message: `Failover from primary node
+#'         <primary-node-id> to replica node <node-id> completed`
+#'     
+#'     3.  Replication group message: `Failover from primary node
+#'         <primary-node-id> to replica node <node-id> completed`
+#'     
 #'     4.  Cache cluster message: `Recovering cache nodes <node-id>`
-#' 
-#'     5.  Cache cluster message:
-#'         `Finished recovery for cache nodes <node-id>`
-#' 
+#'     
+#'     5.  Cache cluster message: `Finished recovery for cache nodes
+#'         <node-id>`
+#'     
 #'     For more information see:
-#' 
-#'     -   [Viewing ElastiCache
+#'     
+#'       - [Viewing ElastiCache
 #'         Events](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/ECEvents.Viewing.html)
 #'         in the *ElastiCache User Guide*
-#' 
-#'     -   [`describe_events`][elasticache_describe_events] in the
+#'     
+#'       - [`describe_events`][elasticache_describe_events] in the
 #'         ElastiCache API Reference
 #' 
 #' Also see, [Testing

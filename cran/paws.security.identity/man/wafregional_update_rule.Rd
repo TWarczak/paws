@@ -2,7 +2,7 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_update_rule}
 \alias{wafregional_update_rule}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 wafregional_update_rule(RuleId, ChangeToken, Updates)
 }
@@ -15,11 +15,12 @@ by \code{\link[=wafregional_create_rule]{create_rule}} and by
 \code{\link[=wafregional_get_change_token]{get_change_token}}.}
 
 \item{Updates}{[required] An array of \code{RuleUpdate} objects that you want to insert into or delete
-from a Rule. For more information, see the applicable data types:
+from a <span>Rule</span>. For more information, see the applicable data
+types:
 \itemize{
-\item RuleUpdate: Contains \code{Action} and \code{Predicate}
-\item Predicate: Contains \code{DataId}, \code{Negated}, and \code{Type}
-\item FieldToMatch: Contains \code{Data} and \code{Type}
+\item <span>RuleUpdate</span>: Contains \code{Action} and \code{Predicate}
+\item <span>Predicate</span>: Contains \code{DataId}, \code{Negated}, and \code{Type}
+\item <span>FieldToMatch</span>: Contains \code{Data} and \code{Type}
 }}
 }
 \value{
@@ -38,12 +39,13 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Inserts or deletes Predicate objects in a \code{Rule}. Each \code{Predicate}
-object identifies a predicate, such as a ByteMatchSet or an IPSet, that
-specifies the web requests that you want to allow, block, or count. If
-you add more than one predicate to a \code{Rule}, a request must match all of
-the specifications to be allowed, blocked, or counted. For example,
-suppose that you add the following to a \code{Rule}:
+Inserts or deletes <span>Predicate</span> objects in a \code{Rule}. Each
+\code{Predicate} object identifies a predicate, such as a
+<span>ByteMatchSet</span> or an <span>IPSet</span>, that specifies the
+web requests that you want to allow, block, or count. If you add more
+than one predicate to a \code{Rule}, a request must match all of the
+specifications to be allowed, blocked, or counted. For example, suppose
+that you add the following to a \code{Rule}:
 \itemize{
 \item A \code{ByteMatchSet} that matches the value \code{BadBot} in the \code{User-Agent}
 header

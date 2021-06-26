@@ -51,19 +51,19 @@ NULL
 #' already exist, and must include `lambda.amazonaws.com` as a principal in
 #' the trust policy. The role must also have the following permissions:
 #' 
-#' -   `s3:PutObject`
+#'   - `s3:PutObject`
 #' 
-#' -   `s3:GetBucketLocation`
+#'   - `s3:GetBucketLocation`
 #' 
-#' -   `s3:ListAllMyBuckets`
+#'   - `s3:ListAllMyBuckets`
 #' 
-#' -   `cloudwatch:PutMetricData`
+#'   - `cloudwatch:PutMetricData`
 #' 
-#' -   `logs:CreateLogGroup`
+#'   - `logs:CreateLogGroup`
 #' 
-#' -   `logs:CreateLogStream`
+#'   - `logs:CreateLogStream`
 #' 
-#' -   `logs:PutLogEvents`
+#'   - `logs:PutLogEvents`
 #' @param Schedule &#91;required&#93; A structure that contains information about how often the canary is to
 #' run and when these test runs are to stop.
 #' @param RunConfig A structure that contains the configuration for individual canary runs,
@@ -221,21 +221,21 @@ synthetics_create_canary <- function(Name, Code, ArtifactS3Location, ExecutionRo
 #' not automatically deleted. After you delete a canary that you do not
 #' intend to use again, you should also delete the following:
 #' 
-#' -   The Lambda functions and layers used by this canary. These have the
-#'     prefix `cwsyn-MyCanaryName `.
+#'   - The Lambda functions and layers used by this canary. These have the
+#'     prefix ` cwsyn-MyCanaryName  `.
 #' 
-#' -   The CloudWatch alarms created for this canary. These alarms have a
-#'     name of `Synthetics-SharpDrop-Alarm-MyCanaryName `.
+#'   - The CloudWatch alarms created for this canary. These alarms have a
+#'     name of ` Synthetics-SharpDrop-Alarm-MyCanaryName  `.
 #' 
-#' -   Amazon S3 objects and buckets, such as the canary's artifact
+#'   - Amazon S3 objects and buckets, such as the canary's artifact
 #'     location.
 #' 
-#' -   IAM roles created for the canary. If they were created in the
-#'     console, these roles have the name
-#'     ` role/service-role/CloudWatchSyntheticsRole-MyCanaryName `.
+#'   - IAM roles created for the canary. If they were created in the
+#'     console, these roles have the name ` 
+#'     role/service-role/CloudWatchSyntheticsRole-MyCanaryName  `.
 #' 
-#' -   CloudWatch Logs log groups created for the canary. These logs groups
-#'     have the name `/aws/lambda/cwsyn-MyCanaryName `.
+#'   - CloudWatch Logs log groups created for the canary. These logs groups
+#'     have the name ` /aws/lambda/cwsyn-MyCanaryName  `.
 #' 
 #' Before you delete a canary, you might want to use
 #' [`get_canary`][synthetics_get_canary] to display the information about
@@ -722,7 +722,7 @@ synthetics_get_canary_runs <- function(Name, NextToken = NULL, MaxResults = NULL
 #' @param ResourceArn &#91;required&#93; The ARN of the canary that you want to view tags for.
 #' 
 #' The ARN format of a canary is
-#' `arn:aws:synthetics:Region:account-id:canary:canary-name `.
+#' ` arn:aws:synthetics:Region:account-id:canary:canary-name  `.
 #'
 #' @return
 #' A list with the following syntax:
@@ -881,7 +881,7 @@ synthetics_stop_canary <- function(Name) {
 #' @param ResourceArn &#91;required&#93; The ARN of the canary that you're adding tags to.
 #' 
 #' The ARN format of a canary is
-#' `arn:aws:synthetics:Region:account-id:canary:canary-name `.
+#' ` arn:aws:synthetics:Region:account-id:canary:canary-name  `.
 #' @param Tags &#91;required&#93; The list of key-value pairs to associate with the canary.
 #'
 #' @return
@@ -928,7 +928,7 @@ synthetics_tag_resource <- function(ResourceArn, Tags) {
 #' @param ResourceArn &#91;required&#93; The ARN of the canary that you're removing tags from.
 #' 
 #' The ARN format of a canary is
-#' `arn:aws:synthetics:Region:account-id:canary:canary-name `.
+#' ` arn:aws:synthetics:Region:account-id:canary:canary-name  `.
 #' @param TagKeys &#91;required&#93; The list of tag keys to remove from the resource.
 #'
 #' @return
@@ -991,19 +991,19 @@ synthetics_untag_resource <- function(ResourceArn, TagKeys) {
 #' already exist, and must include `lambda.amazonaws.com` as a principal in
 #' the trust policy. The role must also have the following permissions:
 #' 
-#' -   `s3:PutObject`
+#'   - `s3:PutObject`
 #' 
-#' -   `s3:GetBucketLocation`
+#'   - `s3:GetBucketLocation`
 #' 
-#' -   `s3:ListAllMyBuckets`
+#'   - `s3:ListAllMyBuckets`
 #' 
-#' -   `cloudwatch:PutMetricData`
+#'   - `cloudwatch:PutMetricData`
 #' 
-#' -   `logs:CreateLogGroup`
+#'   - `logs:CreateLogGroup`
 #' 
-#' -   `logs:CreateLogStream`
+#'   - `logs:CreateLogStream`
 #' 
-#' -   `logs:CreateLogStream`
+#'   - `logs:CreateLogStream`
 #' @param RuntimeVersion Specifies the runtime version to use for the canary. For a list of valid
 #' runtime versions and for more information about runtime versions, see
 #' [Canary Runtime

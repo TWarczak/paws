@@ -12,7 +12,7 @@ acmpca_get_certificate_authority_csr(CertificateAuthorityArn)
 \code{\link[=acmpca_create_certificate_authority]{create_certificate_authority}}
 action. This must be of the form:
 
-\code{arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012 }}
+\code{arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012}}
 }
 \value{
 A list with the following syntax:\preformatted{list(

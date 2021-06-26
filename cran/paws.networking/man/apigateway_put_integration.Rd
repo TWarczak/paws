@@ -11,7 +11,8 @@ apigateway_put_integration(restApiId, resourceId, httpMethod, type,
   tlsConfig)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
 \item{resourceId}{[required] [Required] Specifies a put integration request's resource ID.}
 
@@ -55,8 +56,8 @@ network load balancer in a VPC. The default value is \code{INTERNET}.}
 
 \item{connectionId}{The
 (\href{https://docs.aws.amazon.com/apigateway/api-reference/resource/vpc-link/#id}{\code{id}})
-of the VpcLink used for the integration when \code{connectionType=VPC_LINK}
-and undefined, otherwise.}
+of the <span>VpcLink</span> used for the integration when
+\code{connectionType=VPC_LINK} and undefined, otherwise.}
 
 \item{credentials}{Specifies whether credentials are required for a put integration.}
 
@@ -97,7 +98,7 @@ requests to different resources.}
 
 \item{cacheKeyParameters}{A list of request parameters whose values API Gateway caches. To be
 valid values for \code{cacheKeyParameters}, these parameters must also be
-specified for Method \code{requestParameters}.}
+specified for <span>Method</span> \code{requestParameters}.}
 
 \item{contentHandling}{Specifies how to handle request payload content type conversions.
 Supported values are \code{CONVERT_TO_BINARY} and \code{CONVERT_TO_TEXT}, with the

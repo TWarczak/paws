@@ -12,21 +12,21 @@ redshift_modify_scheduled_action(ScheduledActionName, TargetAction,
 \item{ScheduledActionName}{[required] The name of the scheduled action to modify.}
 
 \item{TargetAction}{A modified JSON format of the scheduled action. For more information
-about this parameter, see ScheduledAction.}
+about this parameter, see <span>ScheduledAction</span>.}
 
 \item{Schedule}{A modified schedule in either \code{at( )} or \code{cron( )} format. For more
-information about this parameter, see ScheduledAction.}
+information about this parameter, see <span>ScheduledAction</span>.}
 
 \item{IamRole}{A different IAM role to assume to run the target action. For more
-information about this parameter, see ScheduledAction.}
+information about this parameter, see <span>ScheduledAction</span>.}
 
 \item{ScheduledActionDescription}{A modified description of the scheduled action.}
 
 \item{StartTime}{A modified start time of the scheduled action. For more information
-about this parameter, see ScheduledAction.}
+about this parameter, see <span>ScheduledAction</span>.}
 
 \item{EndTime}{A modified end time of the scheduled action. For more information about
-this parameter, see ScheduledAction.}
+this parameter, see <span>ScheduledAction</span>.}
 
 \item{Enable}{A modified enable flag of the scheduled action. If true, the scheduled
 action is active. If false, the scheduled action is disabled.}

@@ -67,12 +67,10 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Returns the export snapshot record created as a result of the
-\verb{export snapshot} operation.
+Returns the export snapshot record created as a result of the \verb{export snapshot} operation.
 
 An export snapshot record can be used to create a new Amazon EC2
-instance and its related resources with the
-\verb{create cloud formation stack} operation.
+instance and its related resources with the \verb{create cloud formation stack} operation.
 }
 \section{Request syntax}{
 \preformatted{svc$get_export_snapshot_records(

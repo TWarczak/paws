@@ -2,15 +2,16 @@
 % Please edit documentation in R/gamelift_operations.R
 \name{gamelift_list_game_servers}
 \alias{gamelift_list_game_servers}
-\title{This operation is used with the Amazon GameLift FleetIQ solution and
-game server groups}
+\title{THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND
+GAME SERVER GROUPS}
 \usage{
 gamelift_list_game_servers(GameServerGroupName, SortOrder, Limit,
   NextToken)
 }
 \arguments{
 \item{GameServerGroupName}{[required] An identifier for the game server group to retrieve a list of game
-servers from. Use either the GameServerGroup name or ARN value.}
+servers from. Use either the <span>GameServerGroup</span> name or ARN
+value.}
 
 \item{SortOrder}{Indicates how to sort the returned data based on game server
 registration timestamp. Use ASCENDING to retrieve oldest game servers

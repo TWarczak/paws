@@ -40,7 +40,7 @@ Deletes a specific SSH key pair.
 
 The \verb{delete key pair} operation supports tag-based access control via
 resource tags applied to the resource identified by \verb{key pair name}. For
-more information, see the Lightsail Dev Guide.
+more information, see the <span>Lightsail Dev Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$delete_key_pair(

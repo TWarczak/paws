@@ -56,7 +56,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Represents a collection of DomainName resources.
+Represents a collection of <span>DomainName</span> resources.
 }
 \section{Request syntax}{
 \preformatted{svc$get_domain_names(

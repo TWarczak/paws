@@ -24,8 +24,7 @@ An empty list.
 \description{
 Sets the migration state of an application. For a given application
 identified by the value passed to \code{ApplicationId}, its status is set or
-updated by passing one of three values to \code{Status}:
-\code{NOT_STARTED | IN_PROGRESS | COMPLETED}.
+updated by passing one of three values to \code{Status}: \code{NOT_STARTED | IN_PROGRESS | COMPLETED}.
 }
 \section{Request syntax}{
 \preformatted{svc$notify_application_state(

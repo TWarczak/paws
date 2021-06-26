@@ -7,9 +7,11 @@
 apigateway_get_request_validator(restApiId, requestValidatorId)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
-\item{requestValidatorId}{[required] [Required] The identifier of the RequestValidator to be retrieved.}
+\item{requestValidatorId}{[required] [Required] The identifier of the <span>RequestValidator</span> to be
+retrieved.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -21,7 +23,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Gets a RequestValidator of a given RestApi.
+Gets a <span>RequestValidator</span> of a given <span>RestApi</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$get_request_validator(

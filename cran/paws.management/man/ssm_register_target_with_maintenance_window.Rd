@@ -36,12 +36,12 @@ tags that have been applied to instances.
 
 \strong{Example 5}: Use filters for resource group types
 
-\verb{Key=resource-groups:ResourceTypeFilters,Values=resource-type-1,resource-type-2 }
+\verb{Key=resource-groups:ResourceTypeFilters,Values=resource-type-1,resource-type-2}
 
 For \code{Key=resource-groups:ResourceTypeFilters}, specify resource types in
 the following format
 
-\verb{Key=resource-groups:ResourceTypeFilters,Values=AWS::EC2::INSTANCE,AWS::EC2::VPC }
+\verb{Key=resource-groups:ResourceTypeFilters,Values=AWS::EC2::INSTANCE,AWS::EC2::VPC}
 
 For more information about these examples formats, including the best
 use case for each one, see \href{https://docs.aws.amazon.com/systems-manager/latest/userguide/mw-cli-tutorial-targets-examples.html}{Examples: Register targets with a maintenance window}

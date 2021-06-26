@@ -2,14 +2,14 @@
 % Please edit documentation in R/gamelift_operations.R
 \name{gamelift_delete_game_server_group}
 \alias{gamelift_delete_game_server_group}
-\title{This operation is used with the Amazon GameLift FleetIQ solution and
-game server groups}
+\title{THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND
+GAME SERVER GROUPS}
 \usage{
 gamelift_delete_game_server_group(GameServerGroupName, DeleteOption)
 }
 \arguments{
 \item{GameServerGroupName}{[required] A unique identifier for the game server group. Use either the
-GameServerGroup name or ARN value.}
+<span>GameServerGroup</span> name or ARN value.}
 
 \item{DeleteOption}{The type of delete to perform. Options include the following:
 \itemize{

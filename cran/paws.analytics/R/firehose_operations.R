@@ -37,8 +37,8 @@ NULL
 #' parameter.
 #' 
 #' To create a delivery stream with server-side encryption (SSE) enabled,
-#' include DeliveryStreamEncryptionConfigurationInput in your request. This
-#' is optional. You can also invoke
+#' include <span>DeliveryStreamEncryptionConfigurationInput</span> in your
+#' request. This is optional. You can also invoke
 #' [`start_delivery_stream_encryption`][firehose_start_delivery_stream_encryption]
 #' to turn on SSE for an existing delivery stream that doesn't have SSE
 #' enabled.
@@ -63,18 +63,18 @@ NULL
 #' 
 #' A few notes about Amazon Redshift as a destination:
 #' 
-#' -   An Amazon Redshift destination requires an S3 bucket as intermediate
+#'   - An Amazon Redshift destination requires an S3 bucket as intermediate
 #'     location. Kinesis Data Firehose first delivers data to Amazon S3 and
 #'     then uses `COPY` syntax to load data into an Amazon Redshift table.
 #'     This is specified in the
 #'     `RedshiftDestinationConfiguration.S3Configuration` parameter.
 #' 
-#' -   The compression formats `SNAPPY` or `ZIP` cannot be specified in
+#'   - The compression formats `SNAPPY` or `ZIP` cannot be specified in
 #'     `RedshiftDestinationConfiguration.S3Configuration` because the
 #'     Amazon Redshift `COPY` operation that reads from the S3 bucket
 #'     doesn't support these compression formats.
 #' 
-#' -   We strongly recommend that you use the user name and password you
+#'   - We strongly recommend that you use the user name and password you
 #'     provide exclusively with Kinesis Data Firehose, and that the
 #'     permissions for the account are restricted for Amazon Redshift
 #'     `INSERT` permissions.
@@ -102,15 +102,15 @@ NULL
 #' @param DeliveryStreamType The delivery stream type. This parameter can be one of the following
 #' values:
 #' 
-#' -   `DirectPut`: Provider applications access the delivery stream
+#'   - `DirectPut`: Provider applications access the delivery stream
 #'     directly.
 #' 
-#' -   `KinesisStreamAsSource`: The delivery stream uses a Kinesis data
+#'   - `KinesisStreamAsSource`: The delivery stream uses a Kinesis data
 #'     stream as a source.
 #' @param KinesisStreamSourceConfiguration When a Kinesis data stream is used as the source for the delivery
-#' stream, a KinesisStreamSourceConfiguration containing the Kinesis data
-#' stream Amazon Resource Name (ARN) and the role ARN for the source
-#' stream.
+#' stream, a <span>KinesisStreamSourceConfiguration</span> containing the
+#' Kinesis data stream Amazon Resource Name (ARN) and the role ARN for the
+#' source stream.
 #' @param DeliveryStreamEncryptionConfigurationInput Used to specify the type and Amazon Resource Name (ARN) of the KMS key
 #' needed for Server-Side Encryption (SSE).
 #' @param S3DestinationConfiguration \[Deprecated\] The destination in Amazon S3. You can specify only one
@@ -659,7 +659,8 @@ firehose_delete_delivery_stream <- function(DeliveryStreamName, AllowForceDelete
 #' [`delete_delivery_stream`][firehose_delete_delivery_stream] operation to
 #' delete it. If the status is `DELETING_FAILED`, you can force deletion by
 #' invoking [`delete_delivery_stream`][firehose_delete_delivery_stream]
-#' again but with DeleteDeliveryStreamInput$AllowForceDelete set to true.
+#' again but with <span>DeleteDeliveryStreamInput$AllowForceDelete</span>
+#' set to true.
 #'
 #' @usage
 #' firehose_describe_delivery_stream(DeliveryStreamName, Limit,
@@ -1165,10 +1166,10 @@ firehose_describe_delivery_stream <- function(DeliveryStreamName, Limit = NULL, 
 #' @param Limit The maximum number of delivery streams to list. The default value is 10.
 #' @param DeliveryStreamType The delivery stream type. This can be one of the following values:
 #' 
-#' -   `DirectPut`: Provider applications access the delivery stream
+#'   - `DirectPut`: Provider applications access the delivery stream
 #'     directly.
 #' 
-#' -   `KinesisStreamAsSource`: The delivery stream uses a Kinesis data
+#'   - `KinesisStreamAsSource`: The delivery stream uses a Kinesis data
 #'     stream as a source.
 #' 
 #' This parameter is optional. If this parameter is omitted, delivery
@@ -1513,15 +1514,15 @@ firehose_put_record_batch <- function(DeliveryStreamName, Records) {
 #' it, Kinesis Data Firehose first sets the encryption status of the stream
 #' to `ENABLING`, and then to `ENABLED`. The encryption status of a
 #' delivery stream is the `Status` property in
-#' DeliveryStreamEncryptionConfiguration. If the operation fails, the
-#' encryption status changes to `ENABLING_FAILED`. You can continue to read
-#' and write data to your delivery stream while the encryption status is
-#' `ENABLING`, but the data is not encrypted. It can take up to 5 seconds
-#' after the encryption status changes to `ENABLED` before all records
-#' written to the delivery stream are encrypted. To find out whether a
-#' record or a batch of records was encrypted, check the response elements
-#' PutRecordOutput$Encrypted and PutRecordBatchOutput$Encrypted,
-#' respectively.
+#' <span>DeliveryStreamEncryptionConfiguration</span>. If the operation
+#' fails, the encryption status changes to `ENABLING_FAILED`. You can
+#' continue to read and write data to your delivery stream while the
+#' encryption status is `ENABLING`, but the data is not encrypted. It can
+#' take up to 5 seconds after the encryption status changes to `ENABLED`
+#' before all records written to the delivery stream are encrypted. To find
+#' out whether a record or a batch of records was encrypted, check the
+#' response elements <span>PutRecordOutput$Encrypted</span> and
+#' <span>PutRecordBatchOutput$Encrypted</span>, respectively.
 #' 
 #' To check the encryption status of a delivery stream, use
 #' [`describe_delivery_stream`][firehose_describe_delivery_stream].
@@ -1615,8 +1616,9 @@ firehose_start_delivery_stream_encryption <- function(DeliveryStreamName, Delive
 #' up to 5 seconds after the encryption status changes to `DISABLED` before
 #' all records written to the delivery stream are no longer subject to
 #' encryption. To find out whether a record or a batch of records was
-#' encrypted, check the response elements PutRecordOutput$Encrypted and
-#' PutRecordBatchOutput$Encrypted, respectively.
+#' encrypted, check the response elements
+#' <span>PutRecordOutput$Encrypted</span> and
+#' <span>PutRecordBatchOutput$Encrypted</span>, respectively.
 #' 
 #' To check the encryption state of a delivery stream, use
 #' [`describe_delivery_stream`][firehose_describe_delivery_stream].
@@ -1806,9 +1808,9 @@ firehose_untag_delivery_stream <- function(DeliveryStreamName, TagKeys) {
 #' configuration parameters specified with the destination configuration
 #' that already exists on the delivery stream. If any of the parameters are
 #' not specified in the call, the existing values are retained. For
-#' example, in the Amazon S3 destination, if EncryptionConfiguration is not
-#' specified, then the existing `EncryptionConfiguration` is maintained on
-#' the destination.
+#' example, in the Amazon S3 destination, if
+#' <span>EncryptionConfiguration</span> is not specified, then the existing
+#' `EncryptionConfiguration` is maintained on the destination.
 #' 
 #' If the destination type is not the same, for example, changing the
 #' destination from Amazon S3 to Amazon Redshift, Kinesis Data Firehose
@@ -1832,12 +1834,12 @@ firehose_untag_delivery_stream <- function(DeliveryStreamName, TagKeys) {
 #'
 #' @param DeliveryStreamName &#91;required&#93; The name of the delivery stream.
 #' @param CurrentDeliveryStreamVersionId &#91;required&#93; Obtain this value from the `VersionId` result of
-#' DeliveryStreamDescription. This value is required, and helps the service
-#' perform conditional operations. For example, if there is an interleaving
-#' update and this value is null, then the update destination fails. After
-#' the update is successful, the `VersionId` value is updated. The service
-#' then performs a merge of the old configuration with the new
-#' configuration.
+#' <span>DeliveryStreamDescription</span>. This value is required, and
+#' helps the service perform conditional operations. For example, if there
+#' is an interleaving update and this value is null, then the update
+#' destination fails. After the update is successful, the `VersionId` value
+#' is updated. The service then performs a merge of the old configuration
+#' with the new configuration.
 #' @param DestinationId &#91;required&#93; The ID of the destination.
 #' @param S3DestinationUpdate \[Deprecated\] Describes an update for a destination in Amazon S3.
 #' @param ExtendedS3DestinationUpdate Describes an update for a destination in Amazon S3.

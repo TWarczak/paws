@@ -7,7 +7,8 @@
 apigateway_get_stages(restApiId, deploymentId)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
 \item{deploymentId}{The stages' deployment identifiers.}
 }
@@ -69,7 +70,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Gets information about one or more Stage resources.
+Gets information about one or more <span>Stage</span> resources.
 }
 \section{Request syntax}{
 \preformatted{svc$get_stages(

@@ -1663,8 +1663,8 @@ elasticsearchservice_describe_elasticsearch_domains <- function(DomainNames) {
 #'
 #' @description
 #' Describe Elasticsearch Limits for a given InstanceType and
-#' ElasticsearchVersion. When modifying existing Domain, specify the
-#' ` DomainName ` to know what Limits are supported for modifying.
+#' ElasticsearchVersion. When modifying existing Domain, specify the ` 
+#' DomainName  ` to know what Limits are supported for modifying.
 #'
 #' @usage
 #' elasticsearchservice_describe_elasticsearch_instance_type_limits(
@@ -1672,10 +1672,10 @@ elasticsearchservice_describe_elasticsearch_domains <- function(DomainNames) {
 #'
 #' @param DomainName DomainName represents the name of the Domain that we are trying to
 #' modify. This should be present only if we are querying for Elasticsearch
-#' ` Limits ` for existing domain.
+#' `  Limits  ` for existing domain.
 #' @param InstanceType &#91;required&#93; The instance type for an Elasticsearch cluster for which Elasticsearch
-#' ` Limits ` are needed.
-#' @param ElasticsearchVersion &#91;required&#93; Version of Elasticsearch for which ` Limits ` are needed.
+#' `  Limits  ` are needed.
+#' @param ElasticsearchVersion &#91;required&#93; Version of Elasticsearch for which `  Limits  ` are needed.
 #'
 #' @return
 #' A list with the following syntax:
@@ -1759,11 +1759,11 @@ elasticsearchservice_describe_elasticsearch_instance_type_limits <- function(Dom
 #' @param Filters A list of filters used to match properties for inbound cross-cluster
 #' search connection. Available `Filter` names for this operation are:
 #' 
-#' -   cross-cluster-search-connection-id
-#' -   source-domain-info.domain-name
-#' -   source-domain-info.owner-id
-#' -   source-domain-info.region
-#' -   destination-domain-info.domain-name
+#'   - cross-cluster-search-connection-id
+#'   - source-domain-info.domain-name
+#'   - source-domain-info.owner-id
+#'   - source-domain-info.region
+#'   - destination-domain-info.domain-name
 #' @param MaxResults Set this value to limit the number of results returned. If not
 #' specified, defaults to 100.
 #' @param NextToken NextToken is sent in case the earlier API call results contain the
@@ -1846,11 +1846,11 @@ elasticsearchservice_describe_inbound_cross_cluster_search_connections <- functi
 #' @param Filters A list of filters used to match properties for outbound cross-cluster
 #' search connection. Available `Filter` names for this operation are:
 #' 
-#' -   cross-cluster-search-connection-id
-#' -   destination-domain-info.domain-name
-#' -   destination-domain-info.owner-id
-#' -   destination-domain-info.region
-#' -   source-domain-info.domain-name
+#'   - cross-cluster-search-connection-id
+#'   - destination-domain-info.domain-name
+#'   - destination-domain-info.owner-id
+#'   - destination-domain-info.region
+#'   - source-domain-info.domain-name
 #' @param MaxResults Set this value to limit the number of results returned. If not
 #' specified, defaults to 100.
 #' @param NextToken NextToken is sent in case the earlier API call results contain the
@@ -2219,7 +2219,7 @@ elasticsearchservice_dissociate_package <- function(PackageID, DomainName) {
 #'
 #' @description
 #' Returns a list of upgrade compatible Elastisearch versions. You can
-#' optionally pass a ` DomainName ` to get all upgrade compatible
+#' optionally pass a `  DomainName  ` to get all upgrade compatible
 #' Elasticsearch versions for that specific domain.
 #'
 #' @usage

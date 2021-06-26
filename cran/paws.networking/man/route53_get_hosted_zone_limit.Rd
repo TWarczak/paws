@@ -35,7 +35,7 @@ maximum number of records that you can create in the hosted zone.
 For the default limit, see
 \href{https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/DNSLimitations.html}{Limits}
 in the \emph{Amazon Route 53 Developer Guide}. To request a higher limit,
-open a case.
+<span>open a case</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$get_hosted_zone_limit(

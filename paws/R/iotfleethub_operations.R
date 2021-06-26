@@ -23,8 +23,8 @@ NULL
 #' @param roleArn &#91;required&#93; The ARN of the role that the web application assumes when it interacts
 #' with AWS IoT Core.
 #' 
-#' The name of the role must be in the form
-#' `AWSIotFleetHub_random_string `.
+#' The name of the role must be in the form ` AWSIotFleetHub_random_string
+#'  `.
 #' @param tags A set of key/value pairs that you can use to manage the web application
 #' resource.
 #'

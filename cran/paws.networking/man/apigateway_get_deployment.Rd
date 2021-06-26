@@ -7,21 +7,21 @@
 apigateway_get_deployment(restApiId, deploymentId, embed)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
-\item{deploymentId}{[required] [Required] The identifier of the Deployment resource to get
-information about.}
+\item{deploymentId}{[required] [Required] The identifier of the <span>Deployment</span> resource to
+get information about.}
 
 \item{embed}{A query parameter to retrieve the specified embedded resources of the
-returned Deployment resource in the response. In a REST API call, this
-\code{embed} parameter value is a list of comma-separated strings, as in
-\verb{GET /restapis/\{restapi_id\}/deployments/\{deployment_id\}?embed=var1,var2}.
-The SDK and other platform-dependent libraries might use a different
-format for the list. Currently, this request supports only retrieval of
-the embedded API summary this way. Hence, the parameter value must be a
+returned <span>Deployment</span> resource in the response. In a REST API
+call, this \code{embed} parameter value is a list of comma-separated strings,
+as in \verb{GET /restapis/\{restapi_id\}/deployments/\{deployment_id\}?embed=var1,var2}. The
+SDK and other platform-dependent libraries might use a different format
+for the list. Currently, this request supports only retrieval of the
+embedded API summary this way. Hence, the parameter value must be a
 single-valued list containing only the \code{"apisummary"} string. For
-example,
-\code{GET /restapis/{restapi_id}/deployments/{deployment_id}?embed=apisummary}.}
+example, \code{GET /restapis/{restapi_id}/deployments/{deployment_id}?embed=apisummary}.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -42,7 +42,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Gets information about a Deployment resource.
+Gets information about a <span>Deployment</span> resource.
 }
 \section{Request syntax}{
 \preformatted{svc$get_deployment(

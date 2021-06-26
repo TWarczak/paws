@@ -19,8 +19,8 @@ NULL
 #' You must use the endpoint for the region that has the resources you want
 #' to access.
 #' 
-#' The service name used by [AWS Signature Version
-#' 4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html)
+#' The service name used by [AWS Signature
+#' Version 4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html)
 #' to sign the request is: *execute-api*.
 #' 
 #' For more information about how AWS IoT works, see the [Developer
@@ -286,6 +286,12 @@ NULL
 #'  \link[=iot_update_topic_rule_destination]{update_topic_rule_destination} \tab Updates a topic rule destination\cr
 #'  \link[=iot_validate_security_profile_behaviors]{validate_security_profile_behaviors} \tab Validates a Device Defender security profile behaviors specification
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname iot
 #' @export

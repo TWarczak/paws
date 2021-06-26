@@ -12,8 +12,17 @@ ec2_get_coip_pool_usage(PoolId, Filters, MaxResults, NextToken, DryRun)
 \item{Filters}{The filters. The following are the possible values:
 \itemize{
 \item \code{coip-address-usage.allocation-id}
+}<!-- end list -->
+
+\itemize{
 \item \code{coip-address-usage.aws-account-id}
+}<!-- end list -->
+
+\itemize{
 \item \code{coip-address-usage.aws-service}
+}<!-- end list -->
+
+\itemize{
 \item \code{coip-address-usage.co-ip}
 }}
 

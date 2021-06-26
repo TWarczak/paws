@@ -196,9 +196,9 @@ iotsitewise_batch_disassociate_project_assets <- function(projectId, assetIds, c
 #' 
 #' To identify an asset property, you must specify one of the following:
 #' 
-#' -   The `assetId` and `propertyId` of an asset property.
+#'   - The `assetId` and `propertyId` of an asset property.
 #' 
-#' -   A `propertyAlias`, which is a data stream alias (for example,
+#'   - A `propertyAlias`, which is a data stream alias (for example,
 #'     `/company/windfarm/3/turbine/7/temperature`). To define an asset
 #'     property's alias, see
 #'     [`update_asset_property`][iotsitewise_update_asset_property].
@@ -824,7 +824,7 @@ iotsitewise_create_gateway <- function(gatewayName, gatewayPlatform, tags = NULL
 #' @param portalAuthMode The service to use to authenticate users to the portal. Choose from the
 #' following options:
 #' 
-#' -   `SSO` – The portal uses AWS Single Sign-On to authenticate users and
+#'   - `SSO` – The portal uses AWS Single Sign-On to authenticate users and
 #'     manage user permissions. Before you can create a portal that uses
 #'     AWS SSO, you must enable AWS SSO. For more information, see
 #'     [Enabling AWS
@@ -832,7 +832,7 @@ iotsitewise_create_gateway <- function(gatewayName, gatewayPlatform, tags = NULL
 #'     in the *AWS IoT SiteWise User Guide*. This option is only available
 #'     in AWS Regions other than the China Regions.
 #' 
-#' -   `IAM` – The portal uses AWS Identity and Access Management (IAM) to
+#'   - `IAM` – The portal uses AWS Identity and Access Management (IAM) to
 #'     authenticate users and manage user permissions. This option is only
 #'     available in the China Regions.
 #' 
@@ -2276,9 +2276,9 @@ iotsitewise_disassociate_assets <- function(assetId, hierarchyId, childAssetId, 
 #' 
 #' To identify an asset property, you must specify one of the following:
 #' 
-#' -   The `assetId` and `propertyId` of an asset property.
+#'   - The `assetId` and `propertyId` of an asset property.
 #' 
-#' -   A `propertyAlias`, which is a data stream alias (for example,
+#'   - A `propertyAlias`, which is a data stream alias (for example,
 #'     `/company/windfarm/3/turbine/7/temperature`). To define an asset
 #'     property's alias, see
 #'     [`update_asset_property`][iotsitewise_update_asset_property].
@@ -2390,9 +2390,9 @@ iotsitewise_get_asset_property_aggregates <- function(assetId = NULL, propertyId
 #' 
 #' To identify an asset property, you must specify one of the following:
 #' 
-#' -   The `assetId` and `propertyId` of an asset property.
+#'   - The `assetId` and `propertyId` of an asset property.
 #' 
-#' -   A `propertyAlias`, which is a data stream alias (for example,
+#'   - A `propertyAlias`, which is a data stream alias (for example,
 #'     `/company/windfarm/3/turbine/7/temperature`). To define an asset
 #'     property's alias, see
 #'     [`update_asset_property`][iotsitewise_update_asset_property].
@@ -2468,9 +2468,9 @@ iotsitewise_get_asset_property_value <- function(assetId = NULL, propertyId = NU
 #' 
 #' To identify an asset property, you must specify one of the following:
 #' 
-#' -   The `assetId` and `propertyId` of an asset property.
+#'   - The `assetId` and `propertyId` of an asset property.
 #' 
-#' -   A `propertyAlias`, which is a data stream alias (for example,
+#'   - A `propertyAlias`, which is a data stream alias (for example,
 #'     `/company/windfarm/3/turbine/7/temperature`). To define an asset
 #'     property's alias, see
 #'     [`update_asset_property`][iotsitewise_update_asset_property].
@@ -2752,7 +2752,7 @@ iotsitewise_list_asset_models <- function(nextToken = NULL, maxResults = NULL) {
 #' @param traversalType &#91;required&#93; The type of traversal to use to identify asset relationships. Choose the
 #' following option:
 #' 
-#' -   `PATH_TO_ROOT` – Identify the asset's parent assets up to the root
+#'   - `PATH_TO_ROOT` – Identify the asset's parent assets up to the root
 #'     asset. The asset that you specify in `assetId` is the first result
 #'     in the list of `assetRelationshipSummaries`, and the root asset is
 #'     the last result.
@@ -2813,9 +2813,9 @@ iotsitewise_list_asset_relationships <- function(assetId, traversalType, nextTok
 #' 
 #' You can use this operation to do the following:
 #' 
-#' -   List assets based on a specific asset model.
+#'   - List assets based on a specific asset model.
 #' 
-#' -   List top-level assets.
+#'   - List top-level assets.
 #' 
 #' You can't use this operation to list all assets. To retrieve summaries
 #' for all of your assets, use
@@ -2835,10 +2835,10 @@ iotsitewise_list_asset_relationships <- function(assetId, traversalType, nextTok
 #' @param filter The filter for the requested list of assets. Choose one of the following
 #' options:
 #' 
-#' -   `ALL` – The list includes all assets for a given asset model ID. The
+#'   - `ALL` – The list includes all assets for a given asset model ID. The
 #'     `assetModelId` parameter is required if you filter by `ALL`.
 #' 
-#' -   `TOP_LEVEL` – The list includes only top-level assets in the asset
+#'   - `TOP_LEVEL` – The list includes only top-level assets in the asset
 #'     hierarchy tree.
 #' 
 #' Default: `ALL`
@@ -2915,10 +2915,10 @@ iotsitewise_list_assets <- function(nextToken = NULL, maxResults = NULL, assetMo
 #' 
 #' You can use this operation to do the following:
 #' 
-#' -   List child assets associated to a parent asset by a hierarchy that
+#'   - List child assets associated to a parent asset by a hierarchy that
 #'     you specify.
 #' 
-#' -   List an asset's parent asset.
+#'   - List an asset's parent asset.
 #'
 #' @usage
 #' iotsitewise_list_associated_assets(assetId, hierarchyId,
@@ -2938,11 +2938,11 @@ iotsitewise_list_assets <- function(nextToken = NULL, maxResults = NULL, assetMo
 #' @param traversalDirection The direction to list associated assets. Choose one of the following
 #' options:
 #' 
-#' -   `CHILD` – The list includes all child assets associated to the
+#'   - `CHILD` – The list includes all child assets associated to the
 #'     asset. The `hierarchyId` parameter is required if you choose
 #'     `CHILD`.
 #' 
-#' -   `PARENT` – The list includes the asset's parent asset.
+#'   - `PARENT` – The list includes the asset's parent asset.
 #' 
 #' Default: `CHILD`
 #' @param nextToken The token to be used for the next set of paginated results.

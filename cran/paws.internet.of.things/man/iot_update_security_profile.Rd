@@ -19,7 +19,8 @@ an alert.}
 
 \item{alertTargets}{Where the alerts are sent. (Alerts are always sent to the console.)}
 
-\item{additionalMetricsToRetain}{\emph{Please use UpdateSecurityProfileRequest$additionalMetricsToRetainV2
+\item{additionalMetricsToRetain}{\emph{Please use
+<span>UpdateSecurityProfileRequest$additionalMetricsToRetainV2</span>
 instead.}
 
 A list of metrics whose data is retained (stored). By default, data is

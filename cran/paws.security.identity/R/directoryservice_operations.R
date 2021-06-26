@@ -98,45 +98,45 @@ directoryservice_accept_shared_directory <- function(SharedDirectoryId) {
 #' 
 #' Inbound:
 #' 
-#' -   Type: Custom UDP Rule, Protocol: UDP, Range: 88, Source: 0.0.0.0/0
+#'   - Type: Custom UDP Rule, Protocol: UDP, Range: 88, Source: 0.0.0.0/0
 #' 
-#' -   Type: Custom UDP Rule, Protocol: UDP, Range: 123, Source: 0.0.0.0/0
+#'   - Type: Custom UDP Rule, Protocol: UDP, Range: 123, Source: 0.0.0.0/0
 #' 
-#' -   Type: Custom UDP Rule, Protocol: UDP, Range: 138, Source: 0.0.0.0/0
+#'   - Type: Custom UDP Rule, Protocol: UDP, Range: 138, Source: 0.0.0.0/0
 #' 
-#' -   Type: Custom UDP Rule, Protocol: UDP, Range: 389, Source: 0.0.0.0/0
+#'   - Type: Custom UDP Rule, Protocol: UDP, Range: 389, Source: 0.0.0.0/0
 #' 
-#' -   Type: Custom UDP Rule, Protocol: UDP, Range: 464, Source: 0.0.0.0/0
+#'   - Type: Custom UDP Rule, Protocol: UDP, Range: 464, Source: 0.0.0.0/0
 #' 
-#' -   Type: Custom UDP Rule, Protocol: UDP, Range: 445, Source: 0.0.0.0/0
+#'   - Type: Custom UDP Rule, Protocol: UDP, Range: 445, Source: 0.0.0.0/0
 #' 
-#' -   Type: Custom TCP Rule, Protocol: TCP, Range: 88, Source: 0.0.0.0/0
+#'   - Type: Custom TCP Rule, Protocol: TCP, Range: 88, Source: 0.0.0.0/0
 #' 
-#' -   Type: Custom TCP Rule, Protocol: TCP, Range: 135, Source: 0.0.0.0/0
+#'   - Type: Custom TCP Rule, Protocol: TCP, Range: 135, Source: 0.0.0.0/0
 #' 
-#' -   Type: Custom TCP Rule, Protocol: TCP, Range: 445, Source: 0.0.0.0/0
+#'   - Type: Custom TCP Rule, Protocol: TCP, Range: 445, Source: 0.0.0.0/0
 #' 
-#' -   Type: Custom TCP Rule, Protocol: TCP, Range: 464, Source: 0.0.0.0/0
+#'   - Type: Custom TCP Rule, Protocol: TCP, Range: 464, Source: 0.0.0.0/0
 #' 
-#' -   Type: Custom TCP Rule, Protocol: TCP, Range: 636, Source: 0.0.0.0/0
+#'   - Type: Custom TCP Rule, Protocol: TCP, Range: 636, Source: 0.0.0.0/0
 #' 
-#' -   Type: Custom TCP Rule, Protocol: TCP, Range: 1024-65535, Source:
+#'   - Type: Custom TCP Rule, Protocol: TCP, Range: 1024-65535, Source:
 #'     0.0.0.0/0
 #' 
-#' -   Type: Custom TCP Rule, Protocol: TCP, Range: 3268-33269, Source:
+#'   - Type: Custom TCP Rule, Protocol: TCP, Range: 3268-33269, Source:
 #'     0.0.0.0/0
 #' 
-#' -   Type: DNS (UDP), Protocol: UDP, Range: 53, Source: 0.0.0.0/0
+#'   - Type: DNS (UDP), Protocol: UDP, Range: 53, Source: 0.0.0.0/0
 #' 
-#' -   Type: DNS (TCP), Protocol: TCP, Range: 53, Source: 0.0.0.0/0
+#'   - Type: DNS (TCP), Protocol: TCP, Range: 53, Source: 0.0.0.0/0
 #' 
-#' -   Type: LDAP, Protocol: TCP, Range: 389, Source: 0.0.0.0/0
+#'   - Type: LDAP, Protocol: TCP, Range: 389, Source: 0.0.0.0/0
 #' 
-#' -   Type: All ICMP, Protocol: All, Range: N/A, Source: 0.0.0.0/0
+#'   - Type: All ICMP, Protocol: All, Range: N/A, Source: 0.0.0.0/0
 #' 
 #' Outbound:
 #' 
-#' -   Type: All traffic, Protocol: All, Range: All, Destination: 0.0.0.0/0
+#'   - Type: All traffic, Protocol: All, Range: All, Destination: 0.0.0.0/0
 #' 
 #' These security rules impact an internal network interface that is not
 #' exposed publicly.
@@ -350,8 +350,8 @@ directoryservice_cancel_schema_extension <- function(DirectoryId, SchemaExtensio
 #' @param Password &#91;required&#93; The password for the on-premises user account.
 #' @param Description A description for the directory.
 #' @param Size &#91;required&#93; The size of the directory.
-#' @param ConnectSettings &#91;required&#93; A DirectoryConnectSettings object that contains additional information
-#' for the operation.
+#' @param ConnectSettings &#91;required&#93; A <span>DirectoryConnectSettings</span> object that contains additional
+#' information for the operation.
 #' @param Tags The tags to be assigned to AD Connector.
 #'
 #' @return
@@ -481,8 +481,8 @@ directoryservice_create_alias <- function(DirectoryId, Alias) {
 #' You should generate a random, strong password to use for this parameter.
 #' @param OrganizationalUnitDistinguishedName The fully-qualified distinguished name of the organizational unit to
 #' place the computer account in.
-#' @param ComputerAttributes An array of Attribute objects that contain any LDAP attributes to apply
-#' to the computer account.
+#' @param ComputerAttributes An array of <span>Attribute</span> objects that contain any LDAP
+#' attributes to apply to the computer account.
 #'
 #' @return
 #' A list with the following syntax:
@@ -622,21 +622,21 @@ directoryservice_create_conditional_forwarder <- function(DirectoryId, RemoteDom
 #' The regex pattern for this string is made up of the following
 #' conditions:
 #' 
-#' -   Length (?=^.\{8,64\}$) – Must be between 8 and 64 characters
+#'   - Length (?=^.\{8,64\}$) – Must be between 8 and 64 characters
 #' 
 #' AND any 3 of the following password complexity rules required by Active
 #' Directory:
 #' 
-#' -   Numbers and upper case and lowercase
+#'   - Numbers and upper case and lowercase
 #'     (?=.*\\d)(?=.*\[A-Z\])(?=.*\[a-z\])
 #' 
-#' -   Numbers and special characters and lower case
+#'   - Numbers and special characters and lower case
 #'     (?=.*\\d)(?=.*\[^A-Za-z0-9\\s\])(?=.*\[a-z\])
 #' 
-#' -   Special characters and upper case and lower case
+#'   - Special characters and upper case and lower case
 #'     (?=.*\[^A-Za-z0-9\\s\])(?=.*\[A-Z\])(?=.*\[a-z\])
 #' 
-#' -   Numbers and upper case and special characters
+#'   - Numbers and upper case and special characters
 #'     (?=.*\\d)(?=.*\[A-Z\])(?=.*\[^A-Za-z0-9\\s\])
 #' 
 #' For additional information about how Active Directory passwords are
@@ -645,8 +645,8 @@ directoryservice_create_conditional_forwarder <- function(DirectoryId, RemoteDom
 #' on the Microsoft website.
 #' @param Description A description for the directory.
 #' @param Size &#91;required&#93; The size of the directory.
-#' @param VpcSettings A DirectoryVpcSettings object that contains additional information for
-#' the operation.
+#' @param VpcSettings A <span>DirectoryVpcSettings</span> object that contains additional
+#' information for the operation.
 #' @param Tags The tags to be assigned to the Simple AD directory.
 #'
 #' @return
@@ -2410,8 +2410,8 @@ directoryservice_enable_ldaps <- function(DirectoryId, Type) {
 #' directoryservice_enable_radius(DirectoryId, RadiusSettings)
 #'
 #' @param DirectoryId &#91;required&#93; The identifier of the directory for which to enable MFA.
-#' @param RadiusSettings &#91;required&#93; A RadiusSettings object that contains information about the RADIUS
-#' server.
+#' @param RadiusSettings &#91;required&#93; A <span>RadiusSettings</span> object that contains information about the
+#' RADIUS server.
 #'
 #' @return
 #' An empty list.
@@ -3224,11 +3224,11 @@ directoryservice_remove_tags_from_resource <- function(ResourceId, TagKeys) {
 #' You can reset the password for any user in your directory with the
 #' following exceptions:
 #' 
-#' -   For Simple AD, you cannot reset the password for any user that is a
+#'   - For Simple AD, you cannot reset the password for any user that is a
 #'     member of either the **Domain Admins** or **Enterprise Admins**
 #'     group except for the administrator user.
 #' 
-#' -   For AWS Managed Microsoft AD, you can only reset the password for a
+#'   - For AWS Managed Microsoft AD, you can only reset the password for a
 #'     user that is in an OU based off of the NetBIOS name that you typed
 #'     when you created your directory. For example, you cannot reset the
 #'     password for a user in the **AWS Reserved** OU. For more information
@@ -3633,8 +3633,8 @@ directoryservice_update_number_of_domain_controllers <- function(DirectoryId, De
 #'
 #' @param DirectoryId &#91;required&#93; The identifier of the directory for which to update the RADIUS server
 #' information.
-#' @param RadiusSettings &#91;required&#93; A RadiusSettings object that contains information about the RADIUS
-#' server.
+#' @param RadiusSettings &#91;required&#93; A <span>RadiusSettings</span> object that contains information about the
+#' RADIUS server.
 #'
 #' @return
 #' An empty list.

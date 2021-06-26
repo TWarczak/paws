@@ -21,8 +21,7 @@ service. For \code{APNS} and \code{APNS_SANDBOX}, \code{PlatformCredential} is
 \code{PlatformCredential} is \verb{API key}. For \code{ADM}, \code{PlatformCredential}
 is \verb{client secret}.
 \item \code{PlatformPrincipal} – The principal received from the notification
-service. For \code{APNS} and \code{APNS_SANDBOX}, \code{PlatformPrincipal} is
-\verb{SSL certificate}. For \code{GCM} (Firebase Cloud Messaging), there is no
+service. For \code{APNS} and \code{APNS_SANDBOX}, \code{PlatformPrincipal} is \verb{SSL certificate}. For \code{GCM} (Firebase Cloud Messaging), there is no
 \code{PlatformPrincipal}. For \code{ADM}, \code{PlatformPrincipal} is \verb{client id}.
 \item \code{EventEndpointCreated} – Topic ARN to which \code{EndpointCreated} event
 notifications are sent.

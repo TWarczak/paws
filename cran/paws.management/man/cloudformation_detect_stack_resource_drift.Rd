@@ -3,8 +3,8 @@
 \name{cloudformation_detect_stack_resource_drift}
 \alias{cloudformation_detect_stack_resource_drift}
 \title{Returns information about whether a resource's actual configuration
-differs, or has drifted, from it's expected configuration, as defined in
-the stack template and any values specified as template parameters}
+differs, or has \emph{drifted}, from it's expected configuration, as defined
+in the stack template and any values specified as template parameters}
 \usage{
 cloudformation_detect_stack_resource_drift(StackName, LogicalResourceId)
 }

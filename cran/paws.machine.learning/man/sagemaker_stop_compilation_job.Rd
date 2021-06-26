@@ -21,9 +21,10 @@ the SIGKILL signal.
 
 When it receives a
 \code{\link[=sagemaker_stop_compilation_job]{stop_compilation_job}} request, Amazon
-SageMaker changes the CompilationJobSummary$CompilationJobStatus of the
-job to \code{Stopping}. After Amazon SageMaker stops the job, it sets the
-CompilationJobSummary$CompilationJobStatus to \code{Stopped}.
+SageMaker changes the
+<span>CompilationJobSummary$CompilationJobStatus</span> of the job to
+\code{Stopping}. After Amazon SageMaker stops the job, it sets the
+<span>CompilationJobSummary$CompilationJobStatus</span> to \code{Stopped}.
 }
 \section{Request syntax}{
 \preformatted{svc$stop_compilation_job(

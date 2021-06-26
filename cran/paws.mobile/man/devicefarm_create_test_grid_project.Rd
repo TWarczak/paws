@@ -26,7 +26,7 @@ A list with the following syntax:\preformatted{list(
 }
 \description{
 Creates a Selenium testing project. Projects are used to track
-TestGridSession instances.
+<span>TestGridSession</span> instances.
 }
 \section{Request syntax}{
 \preformatted{svc$create_test_grid_project(

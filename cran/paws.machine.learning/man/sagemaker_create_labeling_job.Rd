@@ -73,7 +73,7 @@ following format. Identify the labels you want to use by replacing
 
 \verb{\\\}}
 
-[`
+[ `
 
 \verb{ \\\{}
 
@@ -95,7 +95,7 @@ following format. Identify the labels you want to use by replacing
 
 \verb{ \\\}}
 
-` ]: R:\%60\%0A\%0A\%60\%20\%5C\%5C\%7B\%60\%0A\%0A\%60\%20\%22label\%22:\%20\%22label_1\%22\%60\%0A\%0A\%60\%20\%5C\%5C\%7D,\%60\%0A\%0A\%60\%20\%5C\%5C\%7B\%60\%0A\%0A\%60\%20\%22label\%22:\%20\%22label_2\%22\%60\%0A\%0A\%60\%20\%5C\%5C\%7D,\%60\%0A\%0A\%60\%20...\%60\%0A\%0A\%60\%20\%5C\%5C\%7B\%60\%0A\%0A\%60\%20\%22label\%22:\%20\%22label_n\%22\%60\%0A\%0A\%60\%20\%5C\%5C\%7D\%60\%0A\%0A\%60\%20}
+`  ]: R:\%20\%60\%0A\%0A\%60\%20\%20\%5C\%5C\%7B\%20\%60\%0A\%0A\%60\%20\%20\%22label\%22:\%20\%22label_1\%22\%20\%60\%0A\%0A\%60\%20\%20\%5C\%5C\%7D,\%20\%60\%0A\%0A\%60\%20\%20\%5C\%5C\%7B\%20\%60\%0A\%0A\%60\%20\%20\%22label\%22:\%20\%22label_2\%22\%20\%60\%0A\%0A\%60\%20\%20\%5C\%5C\%7D,\%20\%60\%0A\%0A\%60\%20\%20...\%20\%60\%0A\%0A\%60\%20\%20\%5C\%5C\%7B\%20\%60\%0A\%0A\%60\%20\%20\%22label\%22:\%20\%22label_n\%22\%20\%60\%0A\%0A\%60\%20\%20\%5C\%5C\%7D\%20\%60\%0A\%0A\%60\%20\%20}
 
 \item{StoppingConditions}{A set of conditions for stopping the labeling job. If any of the
 conditions are met, the job is automatically stopped. You can use these

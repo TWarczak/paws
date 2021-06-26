@@ -50,7 +50,7 @@ For a data transfer to work, the agent must be able to route to all
 these four network interfaces.}
 
 \item{SecurityGroupArns}{The ARNs of the security groups used to protect your data transfer task
-subnets. See CreateAgentRequest$SubnetArns.}
+subnets. See <span>CreateAgentRequest$SubnetArns</span>.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

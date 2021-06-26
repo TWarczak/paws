@@ -70,7 +70,7 @@ The
 \code{\link[=lightsail_create_load_balancer_tls_certificate]{create_load_balancer_tls_certificate}}
 operation supports tag-based access control via resource tags applied to
 the resource identified by \verb{load balancer name}. For more information,
-see the Lightsail Dev Guide.
+see the <span>Lightsail Dev Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$create_load_balancer_tls_certificate(

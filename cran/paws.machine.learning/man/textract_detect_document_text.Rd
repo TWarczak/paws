@@ -68,7 +68,7 @@ Detects text in the input document. Amazon Textract can detect lines of
 text and the words that make up a line of text. The input document must
 be an image in JPEG or PNG format.
 \code{\link[=textract_detect_document_text]{detect_document_text}} returns the
-detected text in an array of Block objects.
+detected text in an array of <span>Block</span> objects.
 
 Each document page has as an associated \code{Block} of type PAGE. Each PAGE
 \code{Block} object is the parent of LINE \code{Block} objects that represent the

@@ -14,12 +14,12 @@ firehose_update_destination(DeliveryStreamName,
 \item{DeliveryStreamName}{[required] The name of the delivery stream.}
 
 \item{CurrentDeliveryStreamVersionId}{[required] Obtain this value from the \code{VersionId} result of
-DeliveryStreamDescription. This value is required, and helps the service
-perform conditional operations. For example, if there is an interleaving
-update and this value is null, then the update destination fails. After
-the update is successful, the \code{VersionId} value is updated. The service
-then performs a merge of the old configuration with the new
-configuration.}
+<span>DeliveryStreamDescription</span>. This value is required, and
+helps the service perform conditional operations. For example, if there
+is an interleaving update and this value is null, then the update
+destination fails. After the update is successful, the \code{VersionId} value
+is updated. The service then performs a merge of the old configuration
+with the new configuration.}
 
 \item{DestinationId}{[required] The ID of the destination.}
 
@@ -58,9 +58,9 @@ If the destination type is the same, Kinesis Data Firehose merges the
 configuration parameters specified with the destination configuration
 that already exists on the delivery stream. If any of the parameters are
 not specified in the call, the existing values are retained. For
-example, in the Amazon S3 destination, if EncryptionConfiguration is not
-specified, then the existing \code{EncryptionConfiguration} is maintained on
-the destination.
+example, in the Amazon S3 destination, if
+<span>EncryptionConfiguration</span> is not specified, then the existing
+\code{EncryptionConfiguration} is maintained on the destination.
 
 If the destination type is not the same, for example, changing the
 destination from Amazon S3 to Amazon Redshift, Kinesis Data Firehose

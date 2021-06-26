@@ -41,7 +41,7 @@ A list with the following syntax:\preformatted{list(
 }
 \description{
 Disables an add-on for an Amazon Lightsail resource. For more
-information, see the Lightsail Dev Guide.
+information, see the <span>Lightsail Dev Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$disable_add_on(

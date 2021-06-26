@@ -74,7 +74,7 @@ administrative user is accepted and created when a broker is first
 provisioned. All subsequent broker users are created by making RabbitMQ
 API calls directly to brokers or via the RabbitMQ Web Console. This
 value can contain only alphanumeric characters, dashes, periods,
-underscores, and tildes (- . _ ~). This value must be 2-100 characters
+underscores, and tildes (- . _ \~). This value must be 2-100 characters
 long.}
 }
 \value{

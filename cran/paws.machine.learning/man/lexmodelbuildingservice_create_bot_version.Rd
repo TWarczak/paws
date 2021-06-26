@@ -79,7 +79,7 @@ operation.
 
 When you create the first version of a bot, Amazon Lex sets the version
 to 1. Subsequent versions increment by 1. For more information, see
-versioning-intro.
+<span>versioning-intro</span>.
 
 This operation requires permission for the \code{lex:CreateBotVersion}
 action.

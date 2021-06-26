@@ -2,13 +2,13 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_get_rule}
 \alias{wafregional_get_rule}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 wafregional_get_rule(RuleId)
 }
 \arguments{
-\item{RuleId}{[required] The \code{RuleId} of the Rule that you want to get. \code{RuleId} is returned by
-\code{\link[=wafregional_create_rule]{create_rule}} and by
+\item{RuleId}{[required] The \code{RuleId} of the <span>Rule</span> that you want to get. \code{RuleId} is
+returned by \code{\link[=wafregional_create_rule]{create_rule}} and by
 \code{\link[=wafregional_list_rules]{list_rules}}.}
 }
 \value{
@@ -38,8 +38,8 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Returns the Rule that is specified by the \code{RuleId} that you included in
-the \code{\link[=wafregional_get_rule]{get_rule}} request.
+Returns the <span>Rule</span> that is specified by the \code{RuleId} that you
+included in the \code{\link[=wafregional_get_rule]{get_rule}} request.
 }
 \section{Request syntax}{
 \preformatted{svc$get_rule(

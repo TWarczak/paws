@@ -34,7 +34,7 @@ A list with the following syntax:\preformatted{list(
 }
 \description{
 Returns the available automatic snapshots for an instance or disk. For
-more information, see the Lightsail Dev Guide.
+more information, see the <span>Lightsail Dev Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$get_auto_snapshots(

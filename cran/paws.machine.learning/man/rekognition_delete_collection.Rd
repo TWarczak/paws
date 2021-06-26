@@ -18,7 +18,7 @@ A list with the following syntax:\preformatted{list(
 \description{
 Deletes the specified collection. Note that this operation removes all
 faces in the collection. For an example, see
-delete-collection-procedure.
+<span>delete-collection-procedure</span>.
 
 This operation requires permissions to perform the
 \code{rekognition:DeleteCollection} action.

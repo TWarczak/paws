@@ -29,8 +29,8 @@ there are per-table quotas that apply when you create a table there. For
 more information, see \href{https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html}{Service, Account, and Table Quotas}
 page in the \emph{Amazon DynamoDB Developer Guide}.
 
-Although you can increase these quotas by filing a case at AWS Support
-Center, obtaining the increase is not instantaneous. The
+Although you can increase these quotas by filing a case at <span>AWS
+Support Center</span>, obtaining the increase is not instantaneous. The
 \code{\link[=dynamodb_describe_limits]{describe_limits}} action lets you write code
 to compare the capacity you are currently using to those quotas imposed
 by your account so that you have enough time to apply for an increase

@@ -7,7 +7,8 @@
 apigateway_create_resource(restApiId, parentId, pathPart)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
 \item{parentId}{[required] [Required] The parent resource's identifier.}
 
@@ -90,7 +91,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Creates a Resource resource.
+Creates a <span>Resource</span> resource.
 }
 \section{Request syntax}{
 \preformatted{svc$create_resource(

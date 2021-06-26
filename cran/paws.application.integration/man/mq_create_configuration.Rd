@@ -19,7 +19,7 @@ https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html}
 
 \item{Name}{Required. The name of the configuration. This value can contain only
 alphanumeric characters, dashes, periods, underscores, and tildes (- .
-_ ~). This value must be 1-150 characters long.}
+_ \~). This value must be 1-150 characters long.}
 
 \item{Tags}{Create tags when creating the configuration.}
 }

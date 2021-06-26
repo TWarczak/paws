@@ -18,7 +18,7 @@ are used by the template.}
 provide a \code{HumanTaskUiArn} if you use the \code{UiTemplate} parameter.
 
 See a list of available Human Ui Amazon Resource Names (ARNs) in
-UiConfig.}
+<span>UiConfig</span>.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

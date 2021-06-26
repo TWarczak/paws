@@ -13,9 +13,9 @@ NULL
 #' unprocessed resources, the operation returns an empty
 #' `unprocessedResourceIdentifiers` list.
 #' 
-#' -   The API does not return results for deleted resources.
+#'   - The API does not return results for deleted resources.
 #' 
-#' -   The API does not return tags and relationships.
+#'   - The API does not return tags and relationships.
 #'
 #' @usage
 #' configservice_batch_get_aggregate_resource_config(
@@ -108,9 +108,9 @@ configservice_batch_get_aggregate_resource_config <- function(ConfigurationAggre
 #' the current request. If there are no unprocessed resources, the
 #' operation returns an empty unprocessedResourceKeys list.
 #' 
-#' -   The API does not return results for deleted resources.
+#'   - The API does not return results for deleted resources.
 #' 
-#' -   The API does not return any tags for the requested resources. This
+#'   - The API does not return any tags for the requested resources. This
 #'     information is filtered out of the supplementaryConfiguration
 #'     section of the API response.
 #'
@@ -920,12 +920,12 @@ configservice_delete_stored_query <- function(QueryName) {
 #' Config sends the following notifications using an Amazon SNS topic that
 #' you have specified.
 #' 
-#' -   Notification of the start of the delivery.
+#'   - Notification of the start of the delivery.
 #' 
-#' -   Notification of the completion of the delivery, if the delivery was
+#'   - Notification of the completion of the delivery, if the delivery was
 #'     successfully completed.
 #' 
-#' -   Notification of delivery failure, if the delivery failed.
+#'   - Notification of delivery failure, if the delivery failed.
 #'
 #' @usage
 #' configservice_deliver_config_snapshot(deliveryChannelName)
@@ -1121,19 +1121,19 @@ configservice_describe_aggregation_authorizations <- function(Limit = NULL, Next
 #' `INSUFFICIENT_DATA`. This result might indicate one of the following
 #' conditions:
 #' 
-#' -   AWS Config has never invoked an evaluation for the rule. To check
+#'   - AWS Config has never invoked an evaluation for the rule. To check
 #'     whether it has, use the
 #'     [`describe_config_rule_evaluation_status`][configservice_describe_config_rule_evaluation_status]
 #'     action to get the `LastSuccessfulInvocationTime` and
 #'     `LastFailedInvocationTime`.
 #' 
-#' -   The rule's AWS Lambda function is failing to send evaluation results
+#'   - The rule's AWS Lambda function is failing to send evaluation results
 #'     to AWS Config. Verify that the role you assigned to your
 #'     configuration recorder includes the `config:PutEvaluations`
 #'     permission. If the rule is a custom rule, verify that the AWS Lambda
 #'     execution role includes the `config:PutEvaluations` permission.
 #' 
-#' -   The rule's AWS Lambda function has returned `NOT_APPLICABLE` for all
+#'   - The rule's AWS Lambda function has returned `NOT_APPLICABLE` for all
 #'     evaluation results. This can occur if the resources were deleted or
 #'     removed from the rule's scope.
 #'
@@ -1216,19 +1216,19 @@ configservice_describe_compliance_by_config_rule <- function(ConfigRuleNames = N
 #' returns `INSUFFICIENT_DATA`. This result might indicate one of the
 #' following conditions about the rules that evaluate the resource:
 #' 
-#' -   AWS Config has never invoked an evaluation for the rule. To check
+#'   - AWS Config has never invoked an evaluation for the rule. To check
 #'     whether it has, use the
 #'     [`describe_config_rule_evaluation_status`][configservice_describe_config_rule_evaluation_status]
 #'     action to get the `LastSuccessfulInvocationTime` and
 #'     `LastFailedInvocationTime`.
 #' 
-#' -   The rule's AWS Lambda function is failing to send evaluation results
+#'   - The rule's AWS Lambda function is failing to send evaluation results
 #'     to AWS Config. Verify that the role that you assigned to your
 #'     configuration recorder includes the `config:PutEvaluations`
 #'     permission. If the rule is a custom rule, verify that the AWS Lambda
 #'     execution role includes the `config:PutEvaluations` permission.
 #' 
-#' -   The rule's AWS Lambda function has returned `NOT_APPLICABLE` for all
+#'   - The rule's AWS Lambda function has returned `NOT_APPLICABLE` for all
 #'     evaluation results. This can occur if the resources were deleted or
 #'     removed from the rule's scope.
 #'
@@ -1497,11 +1497,11 @@ configservice_describe_config_rules <- function(ConfigRuleNames = NULL, NextToke
 #' @param ConfigurationAggregatorName &#91;required&#93; The name of the configuration aggregator.
 #' @param UpdateStatus Filters the status type.
 #' 
-#' -   Valid value FAILED indicates errors while moving data.
+#'   - Valid value FAILED indicates errors while moving data.
 #' 
-#' -   Valid value SUCCEEDED indicates the data was successfully moved.
+#'   - Valid value SUCCEEDED indicates the data was successfully moved.
 #' 
-#' -   Valid value OUTDATED indicates the data is not the most recent.
+#'   - Valid value OUTDATED indicates the data is not the most recent.
 #' @param NextToken The `nextToken` string returned on a previous page that you use to get
 #' the next page of results in a paginated response.
 #' @param Limit The maximum number of AggregatorSourceStatus returned on each page. The
@@ -3077,9 +3077,9 @@ configservice_get_aggregate_config_rule_compliance_summary <- function(Configura
 #' @param ConfigurationAggregatorName &#91;required&#93; The name of the configuration aggregator.
 #' @param Filters Filters the results based on the `ResourceCountFilters` object.
 #' @param GroupByKey The key to group the resource counts.
-#' @param Limit The maximum number of GroupedResourceCount objects returned on each
-#' page. The default is 1000. You cannot specify a number greater than
-#' 1000. If you specify 0, AWS Config uses the default.
+#' @param Limit The maximum number of <span>GroupedResourceCount</span> objects returned
+#' on each page. The default is 1000. You cannot specify a number greater
+#' than 1000. If you specify 0, AWS Config uses the default.
 #' @param NextToken The `nextToken` string returned on a previous page that you use to get
 #' the next page of results in a paginated response.
 #'
@@ -3694,27 +3694,27 @@ configservice_get_conformance_pack_compliance_summary <- function(ConformancePac
 #'     action and specify that you want all resource types.
 #' 
 #' 3.  AWS Config returns the following:
-#' 
-#'     -   The resource types (EC2 instances, IAM users, and S3 buckets).
-#' 
-#'     -   The number of each resource type (25, 20, and 15).
-#' 
-#'     -   The total number of all resources (60).
+#'     
+#'       - The resource types (EC2 instances, IAM users, and S3 buckets).
+#'     
+#'       - The number of each resource type (25, 20, and 15).
+#'     
+#'       - The total number of all resources (60).
 #' 
 #' The response is paginated. By default, AWS Config lists 100
-#' ResourceCount objects on each page. You can customize this number with
-#' the `limit` parameter. The response includes a `nextToken` string. To
-#' get the next page of results, run the request again and specify the
-#' string for the `nextToken` parameter.
+#' <span>ResourceCount</span> objects on each page. You can customize this
+#' number with the `limit` parameter. The response includes a `nextToken`
+#' string. To get the next page of results, run the request again and
+#' specify the string for the `nextToken` parameter.
 #' 
 #' If you make a call to the
 #' [`get_discovered_resource_counts`][configservice_get_discovered_resource_counts]
 #' action, you might not immediately receive resource counts in the
 #' following situations:
 #' 
-#' -   You are a new AWS Config customer.
+#'   - You are a new AWS Config customer.
 #' 
-#' -   You just enabled resource recording.
+#'   - You just enabled resource recording.
 #' 
 #' It might take a few minutes for AWS Config to record and count your
 #' resources. Wait a few minutes and then retry the
@@ -3734,12 +3734,13 @@ configservice_get_conformance_pack_compliance_summary <- function(ConformancePac
 #' account.
 #' 
 #' If the configuration recorder is turned off, AWS Config returns an empty
-#' list of ResourceCount objects. If the configuration recorder is not
-#' recording a specific resource type (for example, S3 buckets), that
-#' resource type is not returned in the list of ResourceCount objects.
-#' @param limit The maximum number of ResourceCount objects returned on each page. The
-#' default is 100. You cannot specify a number greater than 100. If you
-#' specify 0, AWS Config uses the default.
+#' list of <span>ResourceCount</span> objects. If the configuration
+#' recorder is not recording a specific resource type (for example, S3
+#' buckets), that resource type is not returned in the list of
+#' <span>ResourceCount</span> objects.
+#' @param limit The maximum number of <span>ResourceCount</span> objects returned on
+#' each page. The default is 100. You cannot specify a number greater than
+#' 100. If you specify 0, AWS Config uses the default.
 #' @param nextToken The `nextToken` string returned on a previous page that you use to get
 #' the next page of results in a paginated response.
 #'

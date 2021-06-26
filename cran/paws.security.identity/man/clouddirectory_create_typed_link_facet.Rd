@@ -8,15 +8,16 @@ clouddirectory_create_typed_link_facet(SchemaArn, Facet)
 }
 \arguments{
 \item{SchemaArn}{[required] The Amazon Resource Name (ARN) that is associated with the schema. For
-more information, see arns.}
+more information, see <span>arns</span>.}
 
-\item{Facet}{[required] Facet structure that is associated with the typed link facet.}
+\item{Facet}{[required] <span>Facet</span> structure that is associated with the typed link
+facet.}
 }
 \value{
 An empty list.
 }
 \description{
-Creates a TypedLinkFacet. For more information, see \href{https://docs.aws.amazon.com/clouddirectory/latest/developerguide/directory_objects_links.html#directory_objects_links_typedlink}{Typed Links}.
+Creates a <span>TypedLinkFacet</span>. For more information, see \href{https://docs.aws.amazon.com/clouddirectory/latest/developerguide/directory_objects_links.html#directory_objects_links_typedlink}{Typed Links}.
 }
 \section{Request syntax}{
 \preformatted{svc$create_typed_link_facet(

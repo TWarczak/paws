@@ -29,7 +29,7 @@ character strings.
 the existing tag.
 \item Tagging actions are limited to 10 TPS per AWS account, per AWS
 region. If your application requires a higher throughput, file a
-technical support request.
+<span>technical support request</span>.
 }
 }
 \section{Request syntax}{

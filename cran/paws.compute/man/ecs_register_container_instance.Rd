@@ -16,13 +16,11 @@ cluster, the default cluster is assumed.}
 
 \item{instanceIdentityDocument}{The instance identity document for the EC2 instance to register. This
 document can be found by running the following command from the
-instance:
-\verb{curl http://169.254.169.254/latest/dynamic/instance-identity/document/}}
+instance: \verb{curl http://169.254.169.254/latest/dynamic/instance-identity/document/}}
 
 \item{instanceIdentityDocumentSignature}{The instance identity document signature for the EC2 instance to
 register. This signature can be found by running the following command
-from the instance:
-\verb{curl http://169.254.169.254/latest/dynamic/instance-identity/signature/}}
+from the instance: \verb{curl http://169.254.169.254/latest/dynamic/instance-identity/signature/}}
 
 \item{totalResources}{The resources available on the instance.}
 

@@ -65,14 +65,14 @@ timestreamquery_cancel_query <- function(QueryId) {
 #' service’s architecture, including the management and mapping of the
 #' service endpoints, *it is not recommended that you use this API unless*:
 #' 
-#' -   Your application uses a programming language that does not yet have
+#'   - Your application uses a programming language that does not yet have
 #'     SDK support
 #' 
-#' -   You require better control over the client-side implementation
+#'   - You require better control over the client-side implementation
 #' 
 #' For detailed information on how to use DescribeEndpoints, see [The
 #' Endpoint Discovery Pattern and REST
-#' APIs](https://docs.aws.amazon.com/timestream/latest/developerguide/Using-API.endpoint-discovery.html).
+#' APIs](https://docs.aws.amazon.com/timestream/latest/developerguide/).
 #'
 #' @usage
 #' timestreamquery_describe_endpoints()
@@ -135,10 +135,10 @@ timestreamquery_describe_endpoints <- function() {
 #' 
 #' Your query request will fail in the following cases:
 #' 
-#' -   If you submit a request with the same client token outside the
+#'   - If you submit a request with the same client token outside the
 #'     5-minute idepotency window.
 #' 
-#' -   If you submit a request with the same client token but a change in
+#'   - If you submit a request with the same client token but a change in
 #'     other parameters within the 5-minute idempotency window.
 #' 
 #' After 4 hours, any request with the same client token is treated as a

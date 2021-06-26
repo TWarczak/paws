@@ -41,8 +41,8 @@ A list with the following syntax:\preformatted{list(
 }
 \description{
 Resets the personal meeting PIN for the specified user on an Amazon
-Chime account. Returns the User object with the updated personal meeting
-PIN.
+Chime account. Returns the <span>User</span> object with the updated
+personal meeting PIN.
 }
 \section{Request syntax}{
 \preformatted{svc$reset_personal_pin(

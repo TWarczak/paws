@@ -2,9 +2,9 @@
 % Please edit documentation in R/cloudformation_operations.R
 \name{cloudformation_detect_stack_drift}
 \alias{cloudformation_detect_stack_drift}
-\title{Detects whether a stack's actual configuration differs, or has drifted,
-from it's expected configuration, as defined in the stack template and
-any values specified as template parameters}
+\title{Detects whether a stack's actual configuration differs, or has
+\emph{drifted}, from it's expected configuration, as defined in the stack
+template and any values specified as template parameters}
 \usage{
 cloudformation_detect_stack_drift(StackName, LogicalResourceIds)
 }

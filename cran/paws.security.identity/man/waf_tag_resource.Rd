@@ -2,7 +2,7 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_tag_resource}
 \alias{waf_tag_resource}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_tag_resource(ResourceARN, Tags)
 }

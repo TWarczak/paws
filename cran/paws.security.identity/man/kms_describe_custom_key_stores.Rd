@@ -71,7 +71,7 @@ CloudHSM cluster, use the \code{ConnectionState} element in the response. If
 an attempt to connect the custom key store failed, the \code{ConnectionState}
 value is \code{FAILED} and the \code{ConnectionErrorCode} element in the response
 indicates the cause of the failure. For help interpreting the
-\code{ConnectionErrorCode}, see CustomKeyStoresListEntry.
+\code{ConnectionErrorCode}, see <span>CustomKeyStoresListEntry</span>.
 
 Custom key stores have a \code{DISCONNECTED} connection state if the key
 store has never been connected or you use the

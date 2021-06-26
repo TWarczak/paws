@@ -7,13 +7,13 @@ NULL
 #' @description
 #' The WorkDocs API is designed for the following use cases:
 #' 
-#' -   File Migration: File migration applications are supported for users
+#'   - File Migration: File migration applications are supported for users
 #'     who want to migrate their files from an on-premises or off-premises
 #'     file system or service. Users can insert files into a user directory
 #'     structure, as well as allow for basic metadata changes, such as
 #'     modifications to the permissions of files.
 #' 
-#' -   Security: Support security applications are supported for users who
+#'   - Security: Support security applications are supported for users who
 #'     have additional security needs, such as antivirus or data loss
 #'     prevention. The API actions, along with AWS CloudTrail, allow these
 #'     applications to detect when changes occur in Amazon WorkDocs. Then,
@@ -21,7 +21,7 @@ NULL
 #'     target file. If the target file violates the policy, the application
 #'     can also choose to email the user.
 #' 
-#' -   eDiscovery/Analytics: General administrative applications are
+#'   - eDiscovery/Analytics: General administrative applications are
 #'     supported, such as eDiscovery and analytics. These applications can
 #'     choose to mimic or record the actions in an Amazon WorkDocs site,
 #'     along with AWS CloudTrail, to replicate data for eDiscovery, backup,
@@ -114,6 +114,12 @@ NULL
 #'  \link[=workdocs_update_user]{update_user} \tab Updates the specified attributes of the specified user, and grants or revokes administrative privileges to the Amazon WorkDocs site
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname workdocs
 #' @export
 workdocs <- function(config = list()) {
@@ -132,7 +138,7 @@ workdocs <- function(config = list()) {
   endpoints = list("*" = list(endpoint = "workdocs.{region}.amazonaws.com", global = FALSE), "cn-*" = list(endpoint = "workdocs.{region}.amazonaws.com.cn", global = FALSE), "us-iso-*" = list(endpoint = "workdocs.{region}.c2s.ic.gov", global = FALSE), "us-isob-*" = list(endpoint = "workdocs.{region}.sc2s.sgov.gov", global = FALSE)),
   service_id = "WorkDocs",
   api_version = "2016-05-01",
-  signing_name = NULL,
+  signing_name = "workdocs",
   json_version = "1.1",
   target_prefix = ""
 )

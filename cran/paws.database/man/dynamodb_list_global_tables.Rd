@@ -40,7 +40,8 @@ A list with the following syntax:\preformatted{list(
 \description{
 Lists all global tables that have a replica in the specified Region.
 
-This operation only applies to \href{https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html}{Version 2017.11.29}
+This operation only applies to
+\href{https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html}{Version 2017.11.29}
 of global tables.
 }
 \section{Request syntax}{

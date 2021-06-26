@@ -2,19 +2,19 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_update_regex_match_set}
 \alias{waf_update_regex_match_set}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_update_regex_match_set(RegexMatchSetId, Updates, ChangeToken)
 }
 \arguments{
-\item{RegexMatchSetId}{[required] The \code{RegexMatchSetId} of the RegexMatchSet that you want to update.
-\code{RegexMatchSetId} is returned by
+\item{RegexMatchSetId}{[required] The \code{RegexMatchSetId} of the <span>RegexMatchSet</span> that you want to
+update. \code{RegexMatchSetId} is returned by
 \code{\link[=waf_create_regex_match_set]{create_regex_match_set}} and by
 \code{\link[=waf_list_regex_match_sets]{list_regex_match_sets}}.}
 
 \item{Updates}{[required] An array of \code{RegexMatchSetUpdate} objects that you want to insert into
-or delete from a RegexMatchSet. For more information, see
-RegexMatchTuple.}
+or delete from a <span>RegexMatchSet</span>. For more information, see
+<span>RegexMatchTuple</span>.}
 
 \item{ChangeToken}{[required] The value returned by the most recent call to
 \code{\link[=waf_get_change_token]{get_change_token}}.}
@@ -35,8 +35,9 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Inserts or deletes RegexMatchTuple objects (filters) in a RegexMatchSet.
-For each \code{RegexMatchSetUpdate} object, you specify the following values:
+Inserts or deletes <span>RegexMatchTuple</span> objects (filters) in a
+<span>RegexMatchSet</span>. For each \code{RegexMatchSetUpdate} object, you
+specify the following values:
 \itemize{
 \item Whether to insert or delete the object from the array. If you want
 to change a \code{RegexMatchSetUpdate} object, you delete the existing
@@ -44,7 +45,8 @@ object and add a new one.
 \item The part of a web request that you want AWS WAF to inspectupdate,
 such as a query string or the value of the \code{User-Agent} header.
 \item The identifier of the pattern (a regular expression) that you want
-AWS WAF to look for. For more information, see RegexPatternSet.
+AWS WAF to look for. For more information, see
+<span>RegexPatternSet</span>.
 \item Whether to perform any conversions on the request, such as
 converting it to lowercase, before inspecting it for the specified
 string.

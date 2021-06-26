@@ -10,15 +10,15 @@ NULL
 #' identity information that is specific to your AWS account. The keys for
 #' `SupportedLoginProviders` are as follows:
 #' 
-#' -   Facebook: `graph.facebook.com`
+#'   - Facebook: `graph.facebook.com`
 #' 
-#' -   Google: `accounts.google.com`
+#'   - Google: `accounts.google.com`
 #' 
-#' -   Amazon: `www.amazon.com`
+#'   - Amazon: `www.amazon.com`
 #' 
-#' -   Twitter: `api.twitter.com`
+#'   - Twitter: `api.twitter.com`
 #' 
-#' -   Digits: `www.digits.com`
+#'   - Digits: `www.digits.com`
 #' 
 #' You must use AWS Developer credentials to call this API.
 #'
@@ -455,19 +455,19 @@ cognitoidentity_get_credentials_for_identity <- function(IdentityId, Logins = NU
 #' @param Logins A set of optional name-value pairs that map provider names to provider
 #' tokens. The available provider names for `Logins` are as follows:
 #' 
-#' -   Facebook: `graph.facebook.com`
+#'   - Facebook: `graph.facebook.com`
 #' 
-#' -   Amazon Cognito user pool:
+#'   - Amazon Cognito user pool:
 #'     `cognito-idp.<region>.amazonaws.com/<YOUR_USER_POOL_ID>`, for
 #'     example, `cognito-idp.us-east-1.amazonaws.com/us-east-1_123456789`.
 #' 
-#' -   Google: `accounts.google.com`
+#'   - Google: `accounts.google.com`
 #' 
-#' -   Amazon: `www.amazon.com`
+#'   - Amazon: `www.amazon.com`
 #' 
-#' -   Twitter: `api.twitter.com`
+#'   - Twitter: `api.twitter.com`
 #' 
-#' -   Digits: `www.digits.com`
+#'   - Digits: `www.digits.com`
 #'
 #' @return
 #' A list with the following syntax:
@@ -667,13 +667,12 @@ cognitoidentity_get_open_id_token <- function(IdentityId, Logins = NULL) {
 #' @param Logins &#91;required&#93; A set of optional name-value pairs that map provider names to provider
 #' tokens. Each name-value pair represents a user from a public provider or
 #' developer provider. If the user is from a developer provider, the
-#' name-value pair will follow the syntax
-#' `"developer_provider_name": "developer_user_identifier"`. The developer
-#' provider is the "domain" by which Cognito will refer to your users; you
-#' provided this domain while creating/updating the identity pool. The
-#' developer user identifier is an identifier from your backend that
-#' uniquely identifies a user. When you create an identity pool, you can
-#' specify the supported logins.
+#' name-value pair will follow the syntax `"developer_provider_name":
+#' "developer_user_identifier"`. The developer provider is the "domain" by
+#' which Cognito will refer to your users; you provided this domain while
+#' creating/updating the identity pool. The developer user identifier is an
+#' identifier from your backend that uniquely identifies a user. When you
+#' create an identity pool, you can specify the supported logins.
 #' @param TokenDuration The expiration time of the token, in seconds. You can specify a custom
 #' expiration time for the token so that you can cache it. If you don't
 #' provide an expiration time, the token is valid for 15 minutes. You can
@@ -1087,8 +1086,8 @@ cognitoidentity_merge_developer_identities <- function(SourceUserIdentifier, Des
 #' will be either "authenticated" or "unauthenticated" and the value will
 #' be the Role ARN.
 #' @param RoleMappings How users for a specific identity provider are to mapped to roles. This
-#' is a string to RoleMapping object map. The string identifies the
-#' identity provider, for example, "graph.facebook.com" or
+#' is a string to <span>RoleMapping</span> object map. The string
+#' identifies the identity provider, for example, "graph.facebook.com" or
 #' "cognito-idp-east-1.amazonaws.com/us-east-1_abcdefghi:app_client_id".
 #' 
 #' Up to 25 rules can be specified per identity provider.

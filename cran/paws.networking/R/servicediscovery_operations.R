@@ -260,20 +260,20 @@ servicediscovery_create_public_dns_namespace <- function(Name, CreatorRequestId 
 #' Creates a service, which defines the configuration for the following
 #' entities:
 #' 
-#' -   For public and private DNS namespaces, one of the following
+#'   - For public and private DNS namespaces, one of the following
 #'     combinations of DNS records in Amazon Route 53:
+#'     
+#'       - `A`
+#'     
+#'       - `AAAA`
+#'     
+#'       - `A` and `AAAA`
+#'     
+#'       - `SRV`
+#'     
+#'       - `CNAME`
 #' 
-#'     -   `A`
-#' 
-#'     -   `AAAA`
-#' 
-#'     -   `A` and `AAAA`
-#' 
-#'     -   `SRV`
-#' 
-#'     -   `CNAME`
-#' 
-#' -   Optionally, a health check
+#'   - Optionally, a health check
 #' 
 #' After you create the service, you can submit a
 #' [`register_instance`][servicediscovery_register_instance] request, and
@@ -297,9 +297,9 @@ servicediscovery_create_public_dns_namespace <- function(Name, CreatorRequestId 
 #' format, such as [HAProxy](http://www.haproxy.org/), specify the
 #' following for `Name`:
 #' 
-#' -   Start the name with an underscore (_), such as `_exampleservice`
+#'   - Start the name with an underscore (_), such as `_exampleservice`
 #' 
-#' -   End the name with *._protocol*, such as `._tcp`
+#'   - End the name with *._protocol*, such as `._tcp`
 #' 
 #' When you register an instance, AWS Cloud Map creates an `SRV` record and
 #' assigns a name to the record by concatenating the service name and the
@@ -1554,14 +1554,14 @@ servicediscovery_list_tags_for_resource <- function(ResourceARN) {
 #' [`register_instance`][servicediscovery_register_instance] request, the
 #' following occurs:
 #' 
-#' -   For each DNS record that you define in the service that is specified
+#'   - For each DNS record that you define in the service that is specified
 #'     by `ServiceId`, a record is created or updated in the hosted zone
 #'     that is associated with the corresponding namespace.
 #' 
-#' -   If the service includes `HealthCheckConfig`, a health check is
+#'   - If the service includes `HealthCheckConfig`, a health check is
 #'     created based on the settings in the health check configuration.
 #' 
-#' -   The health check, if any, is associated with each of the new or
+#'   - The health check, if any, is associated with each of the new or
 #'     updated records.
 #' 
 #' One [`register_instance`][servicediscovery_register_instance] request
@@ -1574,12 +1574,12 @@ servicediscovery_list_tags_for_resource <- function(ResourceARN) {
 #' When AWS Cloud Map receives a DNS query for the specified DNS name, it
 #' returns the applicable value:
 #' 
-#' -   **If the health check is healthy**: returns all the records
+#'   - **If the health check is healthy**: returns all the records
 #' 
-#' -   **If the health check is unhealthy**: returns the applicable value
+#'   - **If the health check is unhealthy**: returns the applicable value
 #'     for the last healthy instance
 #' 
-#' -   **If you didn't specify a health check configuration**: returns all
+#'   - **If you didn't specify a health check configuration**: returns all
 #'     the records
 #' 
 #' For the current quota on the number of instances that you can register
@@ -1596,22 +1596,22 @@ servicediscovery_list_tags_for_resource <- function(ResourceARN) {
 #' @param InstanceId &#91;required&#93; An identifier that you want to associate with the instance. Note the
 #' following:
 #' 
-#' -   If the service that is specified by `ServiceId` includes settings
+#'   - If the service that is specified by `ServiceId` includes settings
 #'     for an `SRV` record, the value of `InstanceId` is automatically
 #'     included as part of the value for the `SRV` record. For more
-#'     information, see [DnsRecord &gt;
+#'     information, see [DnsRecord \>
 #'     Type](https://docs.aws.amazon.com/cloud-map/latest/api/API_DnsRecord.html#cloudmap-Type-DnsRecord-Type).
 #' 
-#' -   You can use this value to update an existing instance.
+#'   - You can use this value to update an existing instance.
 #' 
-#' -   To register a new instance, you must specify a value that is unique
+#'   - To register a new instance, you must specify a value that is unique
 #'     among instances that you register by using the same service.
 #' 
-#' -   If you specify an existing `InstanceId` and `ServiceId`, AWS Cloud
+#'   - If you specify an existing `InstanceId` and `ServiceId`, AWS Cloud
 #'     Map updates the existing DNS records, if any. If there's also an
 #'     existing health check, AWS Cloud Map deletes the old health check
 #'     and creates a new one.
-#' 
+#'     
 #'     The health check isn't deleted immediately, so it will still appear
 #'     for a while if you submit a `ListHealthChecks` request, for example.
 #' @param CreatorRequestId A unique string that identifies the request and that allows failed
@@ -1625,10 +1625,10 @@ servicediscovery_list_tags_for_resource <- function(ResourceARN) {
 #' @param Attributes &#91;required&#93; A string map that contains the following information for the service
 #' that you specify in `ServiceId`:
 #' 
-#' -   The attributes that apply to the records that are defined in the
+#'   - The attributes that apply to the records that are defined in the
 #'     service.
 #' 
-#' -   For each attribute, the applicable value.
+#'   - For each attribute, the applicable value.
 #' 
 #' Supported attribute keys include the following:
 #' 
@@ -1643,22 +1643,22 @@ servicediscovery_list_tags_for_resource <- function(ResourceARN) {
 #' 
 #' Note the following:
 #' 
-#' -   The configuration for the service that is specified by `ServiceId`
+#'   - The configuration for the service that is specified by `ServiceId`
 #'     must include settings for an `A` record, an `AAAA` record, or both.
 #' 
-#' -   In the service that is specified by `ServiceId`, the value of
+#'   - In the service that is specified by `ServiceId`, the value of
 #'     `RoutingPolicy` must be `WEIGHTED`.
 #' 
-#' -   If the service that is specified by `ServiceId` includes
+#'   - If the service that is specified by `ServiceId` includes
 #'     `HealthCheckConfig` settings, AWS Cloud Map will create the Route 53
 #'     health check, but it won't associate the health check with the alias
 #'     record.
 #' 
-#' -   Auto naming currently doesn't support creating alias records that
+#'   - Auto naming currently doesn't support creating alias records that
 #'     route traffic to AWS resources other than Elastic Load Balancing
 #'     load balancers.
 #' 
-#' -   If you specify a value for `AWS_ALIAS_DNS_NAME`, don't specify
+#'   - If you specify a value for `AWS_ALIAS_DNS_NAME`, don't specify
 #'     values for any of the `AWS_INSTANCE` attributes.
 #' 
 #' **AWS_EC2_INSTANCE_ID**
@@ -1982,21 +1982,21 @@ servicediscovery_update_instance_custom_health_status <- function(ServiceId, Ins
 #' @description
 #' Submits a request to perform the following operations:
 #' 
-#' -   Update the TTL setting for existing `DnsRecords` configurations
+#'   - Update the TTL setting for existing `DnsRecords` configurations
 #' 
-#' -   Add, update, or delete `HealthCheckConfig` for a specified service
-#' 
+#'   - Add, update, or delete `HealthCheckConfig` for a specified service
+#'     
 #'     You can't add, update, or delete a `HealthCheckCustomConfig`
 #'     configuration.
 #' 
 #' For public and private DNS namespaces, note the following:
 #' 
-#' -   If you omit any existing `DnsRecords` or `HealthCheckConfig`
+#'   - If you omit any existing `DnsRecords` or `HealthCheckConfig`
 #'     configurations from an
 #'     [`update_service`][servicediscovery_update_service] request, the
 #'     configurations are deleted from the service.
 #' 
-#' -   If you omit an existing `HealthCheckCustomConfig` configuration from
+#'   - If you omit an existing `HealthCheckCustomConfig` configuration from
 #'     an [`update_service`][servicediscovery_update_service] request, the
 #'     configuration is not deleted from the service.
 #' 

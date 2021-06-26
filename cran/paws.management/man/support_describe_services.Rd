@@ -39,8 +39,8 @@ has its own set of categories.
 
 The service codes and category codes correspond to the values that
 appear in the \strong{Service} and \strong{Category} lists on the AWS Support
-Center Create Case page. The values in those fields don't necessarily
-match the service codes and categories returned by the
+Center <span>Create Case</span> page. The values in those fields don't
+necessarily match the service codes and categories returned by the
 \code{\link[=support_describe_services]{describe_services}} operation. Always use
 the service codes and categories that the
 \code{\link[=support_describe_services]{describe_services}} operation returns, so

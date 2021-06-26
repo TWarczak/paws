@@ -24,8 +24,8 @@ call.}
 
 \item{ToPhoneNumber}{[required] Phone number called when inviting someone to a meeting.}
 
-\item{JoinToken}{[required] Token used by the Amazon Chime SDK attendee. Call the CreateAttendee API
-to get a join token.}
+\item{JoinToken}{[required] Token used by the Amazon Chime SDK attendee. Call the
+<span>CreateAttendee API</span> to get a join token.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

@@ -7,7 +7,7 @@
 apigateway_flush_stage_authorizers_cache(restApiId, stageName)
 }
 \arguments{
-\item{restApiId}{[required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] The string identifier of the associated <span>RestApi</span>.}
 
 \item{stageName}{[required] The name of the stage to flush.}
 }

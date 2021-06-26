@@ -40,9 +40,9 @@ NULL
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
 #' To get the key ID and key ARN for a CMK, use
@@ -132,7 +132,7 @@ kms_cancel_key_deletion <- function(KeyId) {
 #' might fail for various reasons. To find the reason, use the
 #' [`describe_custom_key_stores`][kms_describe_custom_key_stores] operation
 #' and see the `ConnectionErrorCode` in the response. For help interpreting
-#' the `ConnectionErrorCode`, see CustomKeyStoresListEntry.
+#' the `ConnectionErrorCode`, see <span>CustomKeyStoresListEntry</span>.
 #' 
 #' To fix the failure, use the
 #' [`disconnect_custom_key_store`][kms_disconnect_custom_key_store]
@@ -155,15 +155,15 @@ kms_cancel_key_deletion <- function(KeyId) {
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_custom_key_store`][kms_create_custom_key_store]
+#'   - [`create_custom_key_store`][kms_create_custom_key_store]
 #' 
-#' -   [`delete_custom_key_store`][kms_delete_custom_key_store]
+#'   - [`delete_custom_key_store`][kms_delete_custom_key_store]
 #' 
-#' -   [`describe_custom_key_stores`][kms_describe_custom_key_stores]
+#'   - [`describe_custom_key_stores`][kms_describe_custom_key_stores]
 #' 
-#' -   [`disconnect_custom_key_store`][kms_disconnect_custom_key_store]
+#'   - [`disconnect_custom_key_store`][kms_disconnect_custom_key_store]
 #' 
-#' -   [`update_custom_key_store`][kms_update_custom_key_store]
+#'   - [`update_custom_key_store`][kms_update_custom_key_store]
 #'
 #' @usage
 #' kms_connect_custom_key_store(CustomKeyStoreId)
@@ -242,10 +242,10 @@ kms_connect_custom_key_store <- function(CustomKeyStoreId) {
 #' 
 #' **Required permissions**
 #' 
-#' -   [kms:CreateAlias](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html)
+#'   - [kms:CreateAlias](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html)
 #'     on the alias (IAM policy).
 #' 
-#' -   [kms:CreateAlias](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html)
+#'   - [kms:CreateAlias](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html)
 #'     on the CMK (key policy).
 #' 
 #' For details, see [Controlling access to
@@ -254,11 +254,11 @@ kms_connect_custom_key_store <- function(CustomKeyStoreId) {
 #' 
 #' **Related operations:**
 #' 
-#' -   [`delete_alias`][kms_delete_alias]
+#'   - [`delete_alias`][kms_delete_alias]
 #' 
-#' -   [`list_aliases`][kms_list_aliases]
+#'   - [`list_aliases`][kms_list_aliases]
 #' 
-#' -   [`update_alias`][kms_update_alias]
+#'   - [`update_alias`][kms_update_alias]
 #'
 #' @usage
 #' kms_create_alias(AliasName, TargetKeyId)
@@ -286,9 +286,9 @@ kms_connect_custom_key_store <- function(CustomKeyStoreId) {
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
 #' To get the key ID and key ARN for a CMK, use
@@ -379,15 +379,15 @@ kms_create_alias <- function(AliasName, TargetKeyId) {
 #' 
 #' **Related operations:**
 #' 
-#' -   [`connect_custom_key_store`][kms_connect_custom_key_store]
+#'   - [`connect_custom_key_store`][kms_connect_custom_key_store]
 #' 
-#' -   [`delete_custom_key_store`][kms_delete_custom_key_store]
+#'   - [`delete_custom_key_store`][kms_delete_custom_key_store]
 #' 
-#' -   [`describe_custom_key_stores`][kms_describe_custom_key_stores]
+#'   - [`describe_custom_key_stores`][kms_describe_custom_key_stores]
 #' 
-#' -   [`disconnect_custom_key_store`][kms_disconnect_custom_key_store]
+#'   - [`disconnect_custom_key_store`][kms_disconnect_custom_key_store]
 #' 
-#' -   [`update_custom_key_store`][kms_update_custom_key_store]
+#'   - [`update_custom_key_store`][kms_update_custom_key_store]
 #'
 #' @usage
 #' kms_create_custom_key_store(CustomKeyStoreName, CloudHsmClusterId,
@@ -465,20 +465,21 @@ kms_create_custom_key_store <- function(CustomKeyStoreName, CloudHsmClusterId, T
 #' operation](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations)
 #' only when the request includes a particular [encryption
 #' context](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context),
-#' use the `Constraints` parameter. For details, see GrantConstraints.
+#' use the `Constraints` parameter. For details, see
+#' <span>GrantConstraints</span>.
 #' 
 #' You can create grants on symmetric and asymmetric CMKs. However, if the
 #' grant allows an operation that the CMK does not support,
 #' [`create_grant`][kms_create_grant] fails with a `ValidationException`.
 #' 
-#' -   Grants for symmetric CMKs cannot allow operations that are not
+#'   - Grants for symmetric CMKs cannot allow operations that are not
 #'     supported for symmetric CMKs, including [`sign`][kms_sign],
 #'     [`verify`][kms_verify], and [`get_public_key`][kms_get_public_key].
 #'     (There are limited exceptions to this rule for legacy operations,
 #'     but you should not create a grant for an operation that AWS KMS does
 #'     not support.)
 #' 
-#' -   Grants for asymmetric CMKs cannot allow operations that are not
+#'   - Grants for asymmetric CMKs cannot allow operations that are not
 #'     supported for asymmetric CMKs, including operations that [generate
 #'     data
 #'     keys](https://docs.aws.amazon.com/kms/latest/APIReference/API_GenerateDataKey.html)
@@ -491,13 +492,13 @@ kms_create_custom_key_store <- function(CustomKeyStoreName, CloudHsmClusterId, T
 #'     or CMKs in [custom key
 #'     stores](https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html).
 #' 
-#' -   Grants for asymmetric CMKs with a `KeyUsage` of `ENCRYPT_DECRYPT`
+#'   - Grants for asymmetric CMKs with a `KeyUsage` of `ENCRYPT_DECRYPT`
 #'     cannot allow the [`sign`][kms_sign] or [`verify`][kms_verify]
 #'     operations. Grants for asymmetric CMKs with a `KeyUsage` of
 #'     `SIGN_VERIFY` cannot allow the [`encrypt`][kms_encrypt] or
 #'     [`decrypt`][kms_decrypt] operations.
 #' 
-#' -   Grants for asymmetric CMKs cannot include an encryption context
+#'   - Grants for asymmetric CMKs cannot include an encryption context
 #'     grant constraint. An encryption context is not supported on
 #'     asymmetric CMKs.
 #' 
@@ -507,7 +508,7 @@ kms_create_custom_key_store <- function(CustomKeyStoreName, CloudHsmClusterId, T
 #' in the *AWS Key Management Service Developer Guide*. For more
 #' information about grants, see
 #' [Grants](https://docs.aws.amazon.com/kms/latest/developerguide/grants.html)
-#' in the **AWS Key Management Service Developer Guide** .
+#' in the *_AWS Key Management Service Developer Guide_* .
 #' 
 #' The CMK that you use for this operation must be in a compatible key
 #' state. For details, see [How Key State Affects Use of a Customer Master
@@ -524,13 +525,13 @@ kms_create_custom_key_store <- function(CustomKeyStoreName, CloudHsmClusterId, T
 #' 
 #' **Related operations:**
 #' 
-#' -   [`list_grants`][kms_list_grants]
+#'   - [`list_grants`][kms_list_grants]
 #' 
-#' -   [`list_retirable_grants`][kms_list_retirable_grants]
+#'   - [`list_retirable_grants`][kms_list_retirable_grants]
 #' 
-#' -   [`retire_grant`][kms_retire_grant]
+#'   - [`retire_grant`][kms_retire_grant]
 #' 
-#' -   [`revoke_grant`][kms_revoke_grant]
+#'   - [`revoke_grant`][kms_revoke_grant]
 #'
 #' @usage
 #' kms_create_grant(KeyId, GranteePrincipal, RetiringPrincipal, Operations,
@@ -544,9 +545,9 @@ kms_create_custom_key_store <- function(CustomKeyStoreName, CloudHsmClusterId, T
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
 #' To get the key ID and key ARN for a CMK, use
@@ -580,7 +581,7 @@ kms_create_custom_key_store <- function(CustomKeyStoreName, CloudHsmClusterId, T
 #' context specified in this structure. For more information about
 #' encryption context, see [Encryption
 #' Context](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context)
-#' in the **AWS Key Management Service Developer Guide** .
+#' in the *_AWS Key Management Service Developer Guide_* .
 #' 
 #' Grant constraints are not applied to operations that do not support an
 #' encryption context, such as cryptographic operations with asymmetric
@@ -687,7 +688,7 @@ kms_create_grant <- function(KeyId, GranteePrincipal, RetiringPrincipal = NULL, 
 #' You can use the [`create_key`][kms_create_key] operation to create
 #' symmetric or asymmetric CMKs.
 #' 
-#' -   **Symmetric CMKs** contain a 256-bit symmetric key that never leaves
+#'   - **Symmetric CMKs** contain a 256-bit symmetric key that never leaves
 #'     AWS KMS unencrypted. To use the CMK, you must call AWS KMS. You can
 #'     use a symmetric CMK to encrypt and decrypt small amounts of data,
 #'     but they are typically used to generate [data
@@ -697,7 +698,7 @@ kms_create_grant <- function(KeyId, GranteePrincipal, RetiringPrincipal = NULL, 
 #'     For details, see [`generate_data_key`][kms_generate_data_key] and
 #'     [`generate_data_key_pair`][kms_generate_data_key_pair].
 #' 
-#' -   **Asymmetric CMKs** can contain an RSA key pair or an Elliptic Curve
+#'   - **Asymmetric CMKs** can contain an RSA key pair or an Elliptic Curve
 #'     (ECC) key pair. The private key in an asymmetric CMK never leaves
 #'     AWS KMS unencrypted. However, you can use the
 #'     [`get_public_key`][kms_get_public_key] operation to download the
@@ -741,7 +742,7 @@ kms_create_grant <- function(KeyId, GranteePrincipal, RetiringPrincipal = NULL, 
 #' to import the key material. For step-by-step instructions, see
 #' [Importing Key
 #' Material](https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html)
-#' in the **AWS Key Management Service Developer Guide** . You cannot
+#' in the *_AWS Key Management Service Developer Guide_* . You cannot
 #' import the key material into an asymmetric CMK.
 #' 
 #' ### Custom Key Stores
@@ -757,7 +758,7 @@ kms_create_grant <- function(KeyId, GranteePrincipal, RetiringPrincipal = NULL, 
 #' You cannot create an asymmetric CMK in a custom key store. For
 #' information about custom key stores in AWS KMS see [Using Custom Key
 #' Stores](https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html)
-#' in the **AWS Key Management Service Developer Guide** .
+#' in the *_AWS Key Management Service Developer Guide_* .
 #' 
 #' **Cross-account use**: No. You cannot use this operation to create a CMK
 #' in a different AWS account.
@@ -773,11 +774,11 @@ kms_create_grant <- function(KeyId, GranteePrincipal, RetiringPrincipal = NULL, 
 #' 
 #' **Related operations:**
 #' 
-#' -   [`describe_key`][kms_describe_key]
+#'   - [`describe_key`][kms_describe_key]
 #' 
-#' -   [`list_keys`][kms_list_keys]
+#'   - [`list_keys`][kms_list_keys]
 #' 
-#' -   [`schedule_key_deletion`][kms_schedule_key_deletion]
+#'   - [`schedule_key_deletion`][kms_schedule_key_deletion]
 #'
 #' @usage
 #' kms_create_key(Policy, Description, KeyUsage, CustomerMasterKeySpec,
@@ -787,16 +788,16 @@ kms_create_grant <- function(KeyId, GranteePrincipal, RetiringPrincipal = NULL, 
 #' 
 #' If you provide a key policy, it must meet the following criteria:
 #' 
-#' -   If you don't set `BypassPolicyLockoutSafetyCheck` to true, the key
+#'   - If you don't set `BypassPolicyLockoutSafetyCheck` to true, the key
 #'     policy must allow the principal that is making the
 #'     [`create_key`][kms_create_key] request to make a subsequent
 #'     [`put_key_policy`][kms_put_key_policy] request on the CMK. This
 #'     reduces the risk that the CMK becomes unmanageable. For more
 #'     information, refer to the scenario in the [Default Key
 #'     Policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam)
-#'     section of the **AWS Key Management Service Developer Guide** .
+#'     section of the *_AWS Key Management Service Developer Guide_* .
 #' 
-#' -   Each statement in the key policy must contain one or more
+#'   - Each statement in the key policy must contain one or more
 #'     principals. The principals in the key policy must exist and be
 #'     visible to AWS KMS. When you create a new AWS principal (for
 #'     example, an IAM user or role), you might need to enforce a delay
@@ -816,7 +817,7 @@ kms_create_grant <- function(KeyId, GranteePrincipal, RetiringPrincipal = NULL, 
 #' For help writing and formatting a JSON policy document, see the [IAM
 #' JSON Policy
 #' Reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html)
-#' in the **IAM User Guide** .
+#' in the *_IAM User Guide_* .
 #' @param Description A description of the CMK.
 #' 
 #' Use a description that helps you decide whether the CMK is appropriate
@@ -829,12 +830,12 @@ kms_create_grant <- function(KeyId, GranteePrincipal, RetiringPrincipal = NULL, 
 #' 
 #' Select only one valid value.
 #' 
-#' -   For symmetric CMKs, omit the parameter or specify `ENCRYPT_DECRYPT`.
+#'   - For symmetric CMKs, omit the parameter or specify `ENCRYPT_DECRYPT`.
 #' 
-#' -   For asymmetric CMKs with RSA key material, specify `ENCRYPT_DECRYPT`
+#'   - For asymmetric CMKs with RSA key material, specify `ENCRYPT_DECRYPT`
 #'     or `SIGN_VERIFY`.
 #' 
-#' -   For asymmetric CMKs with ECC key material, specify `SIGN_VERIFY`.
+#'   - For asymmetric CMKs with ECC key material, specify `SIGN_VERIFY`.
 #' @param CustomerMasterKeySpec Specifies the type of CMK to create. The default value,
 #' `SYMMETRIC_DEFAULT`, creates a CMK with a 256-bit symmetric key for
 #' encryption and decryption. For help choosing a key spec for your CMK,
@@ -863,29 +864,29 @@ kms_create_grant <- function(KeyId, GranteePrincipal, RetiringPrincipal = NULL, 
 #' 
 #' AWS KMS supports the following key specs for CMKs:
 #' 
-#' -   Symmetric key (default)
+#'   - Symmetric key (default)
+#'     
+#'       - `SYMMETRIC_DEFAULT` (AES-256-GCM)
 #' 
-#'     -   `SYMMETRIC_DEFAULT` (AES-256-GCM)
+#'   - Asymmetric RSA key pairs
+#'     
+#'       - `RSA_2048`
+#'     
+#'       - `RSA_3072`
+#'     
+#'       - `RSA_4096`
 #' 
-#' -   Asymmetric RSA key pairs
+#'   - Asymmetric NIST-recommended elliptic curve key pairs
+#'     
+#'       - `ECC_NIST_P256` (secp256r1)
+#'     
+#'       - `ECC_NIST_P384` (secp384r1)
+#'     
+#'       - `ECC_NIST_P521` (secp521r1)
 #' 
-#'     -   `RSA_2048`
-#' 
-#'     -   `RSA_3072`
-#' 
-#'     -   `RSA_4096`
-#' 
-#' -   Asymmetric NIST-recommended elliptic curve key pairs
-#' 
-#'     -   `ECC_NIST_P256` (secp256r1)
-#' 
-#'     -   `ECC_NIST_P384` (secp384r1)
-#' 
-#'     -   `ECC_NIST_P521` (secp521r1)
-#' 
-#' -   Other asymmetric elliptic curve key pairs
-#' 
-#'     -   `ECC_SECG_P256K1` (secp256k1), commonly used for
+#'   - Other asymmetric elliptic curve key pairs
+#'     
+#'       - `ECC_SECG_P256K1` (secp256k1), commonly used for
 #'         cryptocurrencies.
 #' @param Origin The source of the key material for the CMK. You cannot change the origin
 #' after you create the CMK. The default is `AWS_KMS`, which means AWS KMS
@@ -936,7 +937,7 @@ kms_create_grant <- function(KeyId, GranteePrincipal, RetiringPrincipal = NULL, 
 #' 
 #' For more information, refer to the scenario in the [Default Key
 #' Policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam)
-#' section in the **AWS Key Management Service Developer Guide** .
+#' section in the *_AWS Key Management Service Developer Guide_* .
 #' 
 #' Use this parameter only when you include a policy in the request and you
 #' intend to prevent the principal that is making the request from making a
@@ -1055,15 +1056,15 @@ kms_create_key <- function(Policy = NULL, Description = NULL, KeyUsage = NULL, C
 #' Decrypts ciphertext that was encrypted by a AWS KMS customer master key
 #' (CMK) using any of the following operations:
 #' 
-#' -   [`encrypt`][kms_encrypt]
+#'   - [`encrypt`][kms_encrypt]
 #' 
-#' -   [`generate_data_key`][kms_generate_data_key]
+#'   - [`generate_data_key`][kms_generate_data_key]
 #' 
-#' -   [`generate_data_key_pair`][kms_generate_data_key_pair]
+#'   - [`generate_data_key_pair`][kms_generate_data_key_pair]
 #' 
-#' -   [`generate_data_key_without_plaintext`][kms_generate_data_key_without_plaintext]
+#'   - [`generate_data_key_without_plaintext`][kms_generate_data_key_without_plaintext]
 #' 
-#' -   [`generate_data_key_pair_without_plaintext`][kms_generate_data_key_pair_without_plaintext]
+#'   - [`generate_data_key_pair_without_plaintext`][kms_generate_data_key_pair_without_plaintext]
 #' 
 #' You can use this operation to decrypt ciphertext that was encrypted
 #' under a symmetric or asymmetric CMK. When the CMK is asymmetric, you
@@ -1120,13 +1121,13 @@ kms_create_key <- function(Policy = NULL, Description = NULL, KeyUsage = NULL, C
 #' 
 #' **Related operations:**
 #' 
-#' -   [`encrypt`][kms_encrypt]
+#'   - [`encrypt`][kms_encrypt]
 #' 
-#' -   [`generate_data_key`][kms_generate_data_key]
+#'   - [`generate_data_key`][kms_generate_data_key]
 #' 
-#' -   [`generate_data_key_pair`][kms_generate_data_key_pair]
+#'   - [`generate_data_key_pair`][kms_generate_data_key_pair]
 #' 
-#' -   [`re_encrypt`][kms_re_encrypt]
+#'   - [`re_encrypt`][kms_re_encrypt]
 #'
 #' @usage
 #' kms_decrypt(CiphertextBlob, EncryptionContext, GrantTokens, KeyId,
@@ -1171,14 +1172,14 @@ kms_create_key <- function(Policy = NULL, Description = NULL, KeyUsage = NULL, C
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Alias name: `alias/ExampleAlias`
+#'   - Alias name: `alias/ExampleAlias`
 #' 
-#' -   Alias ARN: `arn:aws:kms:us-east-2:111122223333:alias/ExampleAlias`
+#'   - Alias ARN: `arn:aws:kms:us-east-2:111122223333:alias/ExampleAlias`
 #' 
 #' To get the key ID and key ARN for a CMK, use
 #' [`list_keys`][kms_list_keys] or [`describe_key`][kms_describe_key]. To
@@ -1270,10 +1271,10 @@ kms_decrypt <- function(CiphertextBlob, EncryptionContext = NULL, GrantTokens = 
 #' 
 #' **Required permissions**
 #' 
-#' -   [kms:DeleteAlias](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html)
+#'   - [kms:DeleteAlias](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html)
 #'     on the alias (IAM policy).
 #' 
-#' -   [kms:DeleteAlias](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html)
+#'   - [kms:DeleteAlias](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html)
 #'     on the CMK (key policy).
 #' 
 #' For details, see [Controlling access to
@@ -1282,11 +1283,11 @@ kms_decrypt <- function(CiphertextBlob, EncryptionContext = NULL, GrantTokens = 
 #' 
 #' **Related operations:**
 #' 
-#' -   [`create_alias`][kms_create_alias]
+#'   - [`create_alias`][kms_create_alias]
 #' 
-#' -   [`list_aliases`][kms_list_aliases]
+#'   - [`list_aliases`][kms_list_aliases]
 #' 
-#' -   [`update_alias`][kms_update_alias]
+#'   - [`update_alias`][kms_update_alias]
 #'
 #' @usage
 #' kms_delete_alias(AliasName)
@@ -1386,15 +1387,15 @@ kms_delete_alias <- function(AliasName) {
 #' 
 #' **Related operations:**
 #' 
-#' -   [`connect_custom_key_store`][kms_connect_custom_key_store]
+#'   - [`connect_custom_key_store`][kms_connect_custom_key_store]
 #' 
-#' -   [`create_custom_key_store`][kms_create_custom_key_store]
+#'   - [`create_custom_key_store`][kms_create_custom_key_store]
 #' 
-#' -   [`describe_custom_key_stores`][kms_describe_custom_key_stores]
+#'   - [`describe_custom_key_stores`][kms_describe_custom_key_stores]
 #' 
-#' -   [`disconnect_custom_key_store`][kms_disconnect_custom_key_store]
+#'   - [`disconnect_custom_key_store`][kms_disconnect_custom_key_store]
 #' 
-#' -   [`update_custom_key_store`][kms_update_custom_key_store]
+#'   - [`update_custom_key_store`][kms_update_custom_key_store]
 #'
 #' @usage
 #' kms_delete_custom_key_store(CustomKeyStoreId)
@@ -1465,9 +1466,9 @@ kms_delete_custom_key_store <- function(CustomKeyStoreId) {
 #' 
 #' **Related operations:**
 #' 
-#' -   [`get_parameters_for_import`][kms_get_parameters_for_import]
+#'   - [`get_parameters_for_import`][kms_get_parameters_for_import]
 #' 
-#' -   [`import_key_material`][kms_import_key_material]
+#'   - [`import_key_material`][kms_import_key_material]
 #'
 #' @usage
 #' kms_delete_imported_key_material(KeyId)
@@ -1479,9 +1480,9 @@ kms_delete_custom_key_store <- function(CustomKeyStoreId) {
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
 #' To get the key ID and key ARN for a CMK, use
@@ -1549,7 +1550,7 @@ kms_delete_imported_key_material <- function(KeyId) {
 #' an attempt to connect the custom key store failed, the `ConnectionState`
 #' value is `FAILED` and the `ConnectionErrorCode` element in the response
 #' indicates the cause of the failure. For help interpreting the
-#' `ConnectionErrorCode`, see CustomKeyStoresListEntry.
+#' `ConnectionErrorCode`, see <span>CustomKeyStoresListEntry</span>.
 #' 
 #' Custom key stores have a `DISCONNECTED` connection state if the key
 #' store has never been connected or you use the
@@ -1573,15 +1574,15 @@ kms_delete_imported_key_material <- function(KeyId) {
 #' 
 #' **Related operations:**
 #' 
-#' -   [`connect_custom_key_store`][kms_connect_custom_key_store]
+#'   - [`connect_custom_key_store`][kms_connect_custom_key_store]
 #' 
-#' -   [`create_custom_key_store`][kms_create_custom_key_store]
+#'   - [`create_custom_key_store`][kms_create_custom_key_store]
 #' 
-#' -   [`delete_custom_key_store`][kms_delete_custom_key_store]
+#'   - [`delete_custom_key_store`][kms_delete_custom_key_store]
 #' 
-#' -   [`disconnect_custom_key_store`][kms_disconnect_custom_key_store]
+#'   - [`disconnect_custom_key_store`][kms_disconnect_custom_key_store]
 #' 
-#' -   [`update_custom_key_store`][kms_update_custom_key_store]
+#'   - [`update_custom_key_store`][kms_update_custom_key_store]
 #'
 #' @usage
 #' kms_describe_custom_key_stores(CustomKeyStoreId, CustomKeyStoreName,
@@ -1682,10 +1683,10 @@ kms_describe_custom_key_stores <- function(CustomKeyStoreId = NULL, CustomKeySto
 #' [`describe_key`][kms_describe_key] does not return the following
 #' information:
 #' 
-#' -   Aliases associated with the CMK. To get this information, use
+#'   - Aliases associated with the CMK. To get this information, use
 #'     [`list_aliases`][kms_list_aliases].
 #' 
-#' -   Whether automatic key rotation is enabled on the CMK. To get this
+#'   - Whether automatic key rotation is enabled on the CMK. To get this
 #'     information, use
 #'     [`get_key_rotation_status`][kms_get_key_rotation_status]. Also, some
 #'     key states prevent a CMK from being automatically rotated. For
@@ -1693,10 +1694,10 @@ kms_describe_custom_key_stores <- function(CustomKeyStoreId = NULL, CustomKeySto
 #'     Works](https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html#rotate-keys-how-it-works)
 #'     in *AWS Key Management Service Developer Guide*.
 #' 
-#' -   Tags on the CMK. To get this information, use
+#'   - Tags on the CMK. To get this information, use
 #'     [`list_resource_tags`][kms_list_resource_tags].
 #' 
-#' -   Key policies and grants on the CMK. To get this information, use
+#'   - Key policies and grants on the CMK. To get this information, use
 #'     [`get_key_policy`][kms_get_key_policy] and
 #'     [`list_grants`][kms_list_grants].
 #' 
@@ -1717,19 +1718,19 @@ kms_describe_custom_key_stores <- function(CustomKeyStoreId = NULL, CustomKeySto
 #' 
 #' **Related operations:**
 #' 
-#' -   [`get_key_policy`][kms_get_key_policy]
+#'   - [`get_key_policy`][kms_get_key_policy]
 #' 
-#' -   [`get_key_rotation_status`][kms_get_key_rotation_status]
+#'   - [`get_key_rotation_status`][kms_get_key_rotation_status]
 #' 
-#' -   [`list_aliases`][kms_list_aliases]
+#'   - [`list_aliases`][kms_list_aliases]
 #' 
-#' -   [`list_grants`][kms_list_grants]
+#'   - [`list_grants`][kms_list_grants]
 #' 
-#' -   [`list_keys`][kms_list_keys]
+#'   - [`list_keys`][kms_list_keys]
 #' 
-#' -   [`list_resource_tags`][kms_list_resource_tags]
+#'   - [`list_resource_tags`][kms_list_resource_tags]
 #' 
-#' -   [`list_retirable_grants`][kms_list_retirable_grants]
+#'   - [`list_retirable_grants`][kms_list_retirable_grants]
 #'
 #' @usage
 #' kms_describe_key(KeyId, GrantTokens)
@@ -1748,14 +1749,14 @@ kms_describe_custom_key_stores <- function(CustomKeyStoreId = NULL, CustomKeySto
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Alias name: `alias/ExampleAlias`
+#'   - Alias name: `alias/ExampleAlias`
 #' 
-#' -   Alias ARN: `arn:aws:kms:us-east-2:111122223333:alias/ExampleAlias`
+#'   - Alias ARN: `arn:aws:kms:us-east-2:111122223333:alias/ExampleAlias`
 #' 
 #' To get the key ID and key ARN for a CMK, use
 #' [`list_keys`][kms_list_keys] or [`describe_key`][kms_describe_key]. To
@@ -1853,7 +1854,7 @@ kms_describe_key <- function(KeyId, GrantTokens = NULL) {
 #' For more information about how key state affects the use of a CMK, see
 #' [How Key State Affects the Use of a Customer Master
 #' Key](https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html)
-#' in the **AWS Key Management Service Developer Guide** .
+#' in the *_AWS Key Management Service Developer Guide_* .
 #' 
 #' The CMK that you use for this operation must be in a compatible key
 #' state. For details, see [How Key State Affects Use of a Customer Master
@@ -1878,9 +1879,9 @@ kms_describe_key <- function(KeyId, GrantTokens = NULL) {
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
 #' To get the key ID and key ARN for a CMK, use
@@ -1950,9 +1951,9 @@ kms_disable_key <- function(KeyId) {
 #' 
 #' **Related operations:**
 #' 
-#' -   [`enable_key_rotation`][kms_enable_key_rotation]
+#'   - [`enable_key_rotation`][kms_enable_key_rotation]
 #' 
-#' -   [`get_key_rotation_status`][kms_get_key_rotation_status]
+#'   - [`get_key_rotation_status`][kms_get_key_rotation_status]
 #'
 #' @usage
 #' kms_disable_key_rotation(KeyId)
@@ -1969,9 +1970,9 @@ kms_disable_key <- function(KeyId) {
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
 #' To get the key ID and key ARN for a CMK, use
@@ -2056,15 +2057,15 @@ kms_disable_key_rotation <- function(KeyId) {
 #' 
 #' **Related operations:**
 #' 
-#' -   [`connect_custom_key_store`][kms_connect_custom_key_store]
+#'   - [`connect_custom_key_store`][kms_connect_custom_key_store]
 #' 
-#' -   [`create_custom_key_store`][kms_create_custom_key_store]
+#'   - [`create_custom_key_store`][kms_create_custom_key_store]
 #' 
-#' -   [`delete_custom_key_store`][kms_delete_custom_key_store]
+#'   - [`delete_custom_key_store`][kms_delete_custom_key_store]
 #' 
-#' -   [`describe_custom_key_stores`][kms_describe_custom_key_stores]
+#'   - [`describe_custom_key_stores`][kms_describe_custom_key_stores]
 #' 
-#' -   [`update_custom_key_store`][kms_update_custom_key_store]
+#'   - [`update_custom_key_store`][kms_update_custom_key_store]
 #'
 #' @usage
 #' kms_disconnect_custom_key_store(CustomKeyStoreId)
@@ -2134,9 +2135,9 @@ kms_disconnect_custom_key_store <- function(CustomKeyStoreId) {
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
 #' To get the key ID and key ARN for a CMK, use
@@ -2206,9 +2207,9 @@ kms_enable_key <- function(KeyId) {
 #' 
 #' **Related operations:**
 #' 
-#' -   [`disable_key_rotation`][kms_disable_key_rotation]
+#'   - [`disable_key_rotation`][kms_disable_key_rotation]
 #' 
-#' -   [`get_key_rotation_status`][kms_get_key_rotation_status]
+#'   - [`get_key_rotation_status`][kms_get_key_rotation_status]
 #'
 #' @usage
 #' kms_enable_key_rotation(KeyId)
@@ -2222,9 +2223,9 @@ kms_enable_key <- function(KeyId) {
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
 #' To get the key ID and key ARN for a CMK, use
@@ -2275,10 +2276,10 @@ kms_enable_key_rotation <- function(KeyId) {
 #' Encrypts plaintext into ciphertext by using a customer master key (CMK).
 #' The [`encrypt`][kms_encrypt] operation has two primary use cases:
 #' 
-#' -   You can encrypt small amounts of arbitrary data, such as a personal
+#'   - You can encrypt small amounts of arbitrary data, such as a personal
 #'     identifier or database password, or other sensitive information.
 #' 
-#' -   You can use the [`encrypt`][kms_encrypt] operation to move encrypted
+#'   - You can use the [`encrypt`][kms_encrypt] operation to move encrypted
 #'     data from one AWS Region to another. For example, in Region A,
 #'     generate a data key and use the plaintext key to encrypt your data.
 #'     Then, in Region A, use the [`encrypt`][kms_encrypt] operation to
@@ -2324,27 +2325,27 @@ kms_enable_key_rotation <- function(KeyId) {
 #' The maximum size of the data that you can encrypt varies with the type
 #' of CMK and the encryption algorithm that you choose.
 #' 
-#' -   Symmetric CMKs
+#'   - Symmetric CMKs
+#'     
+#'       - `SYMMETRIC_DEFAULT`: 4096 bytes
 #' 
-#'     -   `SYMMETRIC_DEFAULT`: 4096 bytes
+#'   - `RSA_2048`
+#'     
+#'       - `RSAES_OAEP_SHA_1`: 214 bytes
+#'     
+#'       - `RSAES_OAEP_SHA_256`: 190 bytes
 #' 
-#' -   `RSA_2048`
+#'   - `RSA_3072`
+#'     
+#'       - `RSAES_OAEP_SHA_1`: 342 bytes
+#'     
+#'       - `RSAES_OAEP_SHA_256`: 318 bytes
 #' 
-#'     -   `RSAES_OAEP_SHA_1`: 214 bytes
-#' 
-#'     -   `RSAES_OAEP_SHA_256`: 190 bytes
-#' 
-#' -   `RSA_3072`
-#' 
-#'     -   `RSAES_OAEP_SHA_1`: 342 bytes
-#' 
-#'     -   `RSAES_OAEP_SHA_256`: 318 bytes
-#' 
-#' -   `RSA_4096`
-#' 
-#'     -   `RSAES_OAEP_SHA_1`: 470 bytes
-#' 
-#'     -   `RSAES_OAEP_SHA_256`: 446 bytes
+#'   - `RSA_4096`
+#'     
+#'       - `RSAES_OAEP_SHA_1`: 470 bytes
+#'     
+#'       - `RSAES_OAEP_SHA_256`: 446 bytes
 #' 
 #' The CMK that you use for this operation must be in a compatible key
 #' state. For details, see [How Key State Affects Use of a Customer Master
@@ -2361,11 +2362,11 @@ kms_enable_key_rotation <- function(KeyId) {
 #' 
 #' **Related operations:**
 #' 
-#' -   [`decrypt`][kms_decrypt]
+#'   - [`decrypt`][kms_decrypt]
 #' 
-#' -   [`generate_data_key`][kms_generate_data_key]
+#'   - [`generate_data_key`][kms_generate_data_key]
 #' 
-#' -   [`generate_data_key_pair`][kms_generate_data_key_pair]
+#'   - [`generate_data_key_pair`][kms_generate_data_key_pair]
 #'
 #' @usage
 #' kms_encrypt(KeyId, Plaintext, EncryptionContext, GrantTokens,
@@ -2380,14 +2381,14 @@ kms_enable_key_rotation <- function(KeyId) {
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Alias name: `alias/ExampleAlias`
+#'   - Alias name: `alias/ExampleAlias`
 #' 
-#' -   Alias ARN: `arn:aws:kms:us-east-2:111122223333:alias/ExampleAlias`
+#'   - Alias ARN: `arn:aws:kms:us-east-2:111122223333:alias/ExampleAlias`
 #' 
 #' To get the key ID and key ARN for a CMK, use
 #' [`list_keys`][kms_list_keys] or [`describe_key`][kms_describe_key]. To
@@ -2563,15 +2564,15 @@ kms_encrypt <- function(KeyId, Plaintext, EncryptionContext = NULL, GrantTokens 
 #' 
 #' **Related operations:**
 #' 
-#' -   [`decrypt`][kms_decrypt]
+#'   - [`decrypt`][kms_decrypt]
 #' 
-#' -   [`encrypt`][kms_encrypt]
+#'   - [`encrypt`][kms_encrypt]
 #' 
-#' -   [`generate_data_key_pair`][kms_generate_data_key_pair]
+#'   - [`generate_data_key_pair`][kms_generate_data_key_pair]
 #' 
-#' -   [`generate_data_key_pair_without_plaintext`][kms_generate_data_key_pair_without_plaintext]
+#'   - [`generate_data_key_pair_without_plaintext`][kms_generate_data_key_pair_without_plaintext]
 #' 
-#' -   [`generate_data_key_without_plaintext`][kms_generate_data_key_without_plaintext]
+#'   - [`generate_data_key_without_plaintext`][kms_generate_data_key_without_plaintext]
 #'
 #' @usage
 #' kms_generate_data_key(KeyId, EncryptionContext, NumberOfBytes, KeySpec,
@@ -2586,14 +2587,14 @@ kms_encrypt <- function(KeyId, Plaintext, EncryptionContext = NULL, GrantTokens 
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Alias name: `alias/ExampleAlias`
+#'   - Alias name: `alias/ExampleAlias`
 #' 
-#' -   Alias ARN: `arn:aws:kms:us-east-2:111122223333:alias/ExampleAlias`
+#'   - Alias ARN: `arn:aws:kms:us-east-2:111122223333:alias/ExampleAlias`
 #' 
 #' To get the key ID and key ARN for a CMK, use
 #' [`list_keys`][kms_list_keys] or [`describe_key`][kms_describe_key]. To
@@ -2751,15 +2752,15 @@ kms_generate_data_key <- function(KeyId, EncryptionContext = NULL, NumberOfBytes
 #' 
 #' **Related operations:**
 #' 
-#' -   [`decrypt`][kms_decrypt]
+#'   - [`decrypt`][kms_decrypt]
 #' 
-#' -   [`encrypt`][kms_encrypt]
+#'   - [`encrypt`][kms_encrypt]
 #' 
-#' -   [`generate_data_key`][kms_generate_data_key]
+#'   - [`generate_data_key`][kms_generate_data_key]
 #' 
-#' -   [`generate_data_key_pair_without_plaintext`][kms_generate_data_key_pair_without_plaintext]
+#'   - [`generate_data_key_pair_without_plaintext`][kms_generate_data_key_pair_without_plaintext]
 #' 
-#' -   [`generate_data_key_without_plaintext`][kms_generate_data_key_without_plaintext]
+#'   - [`generate_data_key_without_plaintext`][kms_generate_data_key_without_plaintext]
 #'
 #' @usage
 #' kms_generate_data_key_pair(EncryptionContext, KeyId, KeyPairSpec,
@@ -2790,14 +2791,14 @@ kms_generate_data_key <- function(KeyId, EncryptionContext = NULL, NumberOfBytes
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Alias name: `alias/ExampleAlias`
+#'   - Alias name: `alias/ExampleAlias`
 #' 
-#' -   Alias ARN: `arn:aws:kms:us-east-2:111122223333:alias/ExampleAlias`
+#'   - Alias ARN: `arn:aws:kms:us-east-2:111122223333:alias/ExampleAlias`
 #' 
 #' To get the key ID and key ARN for a CMK, use
 #' [`list_keys`][kms_list_keys] or [`describe_key`][kms_describe_key]. To
@@ -2913,15 +2914,15 @@ kms_generate_data_key_pair <- function(EncryptionContext = NULL, KeyId, KeyPairS
 #' 
 #' **Related operations:**
 #' 
-#' -   [`decrypt`][kms_decrypt]
+#'   - [`decrypt`][kms_decrypt]
 #' 
-#' -   [`encrypt`][kms_encrypt]
+#'   - [`encrypt`][kms_encrypt]
 #' 
-#' -   [`generate_data_key`][kms_generate_data_key]
+#'   - [`generate_data_key`][kms_generate_data_key]
 #' 
-#' -   [`generate_data_key_pair`][kms_generate_data_key_pair]
+#'   - [`generate_data_key_pair`][kms_generate_data_key_pair]
 #' 
-#' -   [`generate_data_key_without_plaintext`][kms_generate_data_key_without_plaintext]
+#'   - [`generate_data_key_without_plaintext`][kms_generate_data_key_without_plaintext]
 #'
 #' @usage
 #' kms_generate_data_key_pair_without_plaintext(EncryptionContext, KeyId,
@@ -2952,14 +2953,14 @@ kms_generate_data_key_pair <- function(EncryptionContext = NULL, KeyId, KeyPairS
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Alias name: `alias/ExampleAlias`
+#'   - Alias name: `alias/ExampleAlias`
 #' 
-#' -   Alias ARN: `arn:aws:kms:us-east-2:111122223333:alias/ExampleAlias`
+#'   - Alias ARN: `arn:aws:kms:us-east-2:111122223333:alias/ExampleAlias`
 #' 
 #' To get the key ID and key ARN for a CMK, use
 #' [`list_keys`][kms_list_keys] or [`describe_key`][kms_describe_key]. To
@@ -3085,15 +3086,15 @@ kms_generate_data_key_pair_without_plaintext <- function(EncryptionContext = NUL
 #' 
 #' **Related operations:**
 #' 
-#' -   [`decrypt`][kms_decrypt]
+#'   - [`decrypt`][kms_decrypt]
 #' 
-#' -   [`encrypt`][kms_encrypt]
+#'   - [`encrypt`][kms_encrypt]
 #' 
-#' -   [`generate_data_key`][kms_generate_data_key]
+#'   - [`generate_data_key`][kms_generate_data_key]
 #' 
-#' -   [`generate_data_key_pair`][kms_generate_data_key_pair]
+#'   - [`generate_data_key_pair`][kms_generate_data_key_pair]
 #' 
-#' -   [`generate_data_key_pair_without_plaintext`][kms_generate_data_key_pair_without_plaintext]
+#'   - [`generate_data_key_pair_without_plaintext`][kms_generate_data_key_pair_without_plaintext]
 #'
 #' @usage
 #' kms_generate_data_key_without_plaintext(KeyId, EncryptionContext,
@@ -3109,14 +3110,14 @@ kms_generate_data_key_pair_without_plaintext <- function(EncryptionContext = NUL
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Alias name: `alias/ExampleAlias`
+#'   - Alias name: `alias/ExampleAlias`
 #' 
-#' -   Alias ARN: `arn:aws:kms:us-east-2:111122223333:alias/ExampleAlias`
+#'   - Alias ARN: `arn:aws:kms:us-east-2:111122223333:alias/ExampleAlias`
 #' 
 #' To get the key ID and key ARN for a CMK, use
 #' [`list_keys`][kms_list_keys] or [`describe_key`][kms_describe_key]. To
@@ -3214,7 +3215,9 @@ kms_generate_data_key_without_plaintext <- function(KeyId, EncryptionContext = N
 #' specify the custom key store ID.
 #' 
 #' For more information about entropy and random number generation, see the
-#' AWS Key Management Service Cryptographic Details whitepaper.
+#' [AWS Key Management Service Cryptographic
+#' Details](https://d0.awsstatic.com/whitepapers/KMS-Cryptographic-Details.pdf)
+#' whitepaper.
 #' 
 #' **Required permissions**:
 #' [kms:GenerateRandom](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html)
@@ -3298,9 +3301,9 @@ kms_generate_random <- function(NumberOfBytes = NULL, CustomKeyStoreId = NULL) {
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
 #' To get the key ID and key ARN for a CMK, use
@@ -3374,11 +3377,11 @@ kms_get_key_policy <- function(KeyId, PolicyName) {
 #' Key](https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html)
 #' in the *AWS Key Management Service Developer Guide*.
 #' 
-#' -   Disabled: The key rotation status does not change when you disable a
+#'   - Disabled: The key rotation status does not change when you disable a
 #'     CMK. However, while the CMK is disabled, AWS KMS does not rotate the
 #'     backing key.
 #' 
-#' -   Pending deletion: While a CMK is pending deletion, its key rotation
+#'   - Pending deletion: While a CMK is pending deletion, its key rotation
 #'     status is `false` and AWS KMS does not rotate the backing key. If
 #'     you cancel the deletion, the original key rotation status is
 #'     restored.
@@ -3393,9 +3396,9 @@ kms_get_key_policy <- function(KeyId, PolicyName) {
 #' 
 #' **Related operations:**
 #' 
-#' -   [`disable_key_rotation`][kms_disable_key_rotation]
+#'   - [`disable_key_rotation`][kms_disable_key_rotation]
 #' 
-#' -   [`enable_key_rotation`][kms_enable_key_rotation]
+#'   - [`enable_key_rotation`][kms_enable_key_rotation]
 #'
 #' @usage
 #' kms_get_key_rotation_status(KeyId)
@@ -3407,9 +3410,9 @@ kms_get_key_policy <- function(KeyId, PolicyName) {
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
 #' To get the key ID and key ARN for a CMK, use
@@ -3504,9 +3507,9 @@ kms_get_key_rotation_status <- function(KeyId) {
 #' 
 #' **Related operations:**
 #' 
-#' -   [`import_key_material`][kms_import_key_material]
+#'   - [`import_key_material`][kms_import_key_material]
 #' 
-#' -   [`delete_imported_key_material`][kms_delete_imported_key_material]
+#'   - [`delete_imported_key_material`][kms_delete_imported_key_material]
 #'
 #' @usage
 #' kms_get_parameters_for_import(KeyId, WrappingAlgorithm, WrappingKeySpec)
@@ -3518,9 +3521,9 @@ kms_get_key_rotation_status <- function(KeyId) {
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
 #' To get the key ID and key ARN for a CMK, use
@@ -3613,14 +3616,14 @@ kms_get_parameters_for_import <- function(KeyId, WrappingAlgorithm, WrappingKeyS
 #' [`get_public_key`][kms_get_public_key] returns important information
 #' about the public key in the response, including:
 #' 
-#' -   [CustomerMasterKeySpec](https://docs.aws.amazon.com/kms/latest/APIReference/API_GetPublicKey.html#KMS-GetPublicKey-response-CustomerMasterKeySpec):
+#'   - [CustomerMasterKeySpec](https://docs.aws.amazon.com/kms/latest/APIReference/API_GetPublicKey.html#KMS-GetPublicKey-response-CustomerMasterKeySpec):
 #'     The type of key material in the public key, such as `RSA_4096` or
 #'     `ECC_NIST_P521`.
 #' 
-#' -   [KeyUsage](https://docs.aws.amazon.com/kms/latest/APIReference/API_GetPublicKey.html#KMS-GetPublicKey-response-KeyUsage):
+#'   - [KeyUsage](https://docs.aws.amazon.com/kms/latest/APIReference/API_GetPublicKey.html#KMS-GetPublicKey-response-KeyUsage):
 #'     Whether the key is used for encryption or signing.
 #' 
-#' -   [EncryptionAlgorithms](https://docs.aws.amazon.com/kms/latest/APIReference/API_GetPublicKey.html#KMS-GetPublicKey-response-EncryptionAlgorithms)
+#'   - [EncryptionAlgorithms](https://docs.aws.amazon.com/kms/latest/APIReference/API_GetPublicKey.html#KMS-GetPublicKey-response-EncryptionAlgorithms)
 #'     or
 #'     [SigningAlgorithms](https://docs.aws.amazon.com/kms/latest/APIReference/API_GetPublicKey.html#KMS-GetPublicKey-response-SigningAlgorithms):
 #'     A list of the encryption algorithms or the signing algorithms for
@@ -3661,14 +3664,14 @@ kms_get_parameters_for_import <- function(KeyId, WrappingAlgorithm, WrappingKeyS
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Alias name: `alias/ExampleAlias`
+#'   - Alias name: `alias/ExampleAlias`
 #' 
-#' -   Alias ARN: `arn:aws:kms:us-east-2:111122223333:alias/ExampleAlias`
+#'   - Alias ARN: `arn:aws:kms:us-east-2:111122223333:alias/ExampleAlias`
 #' 
 #' To get the key ID and key ARN for a CMK, use
 #' [`list_keys`][kms_list_keys] or [`describe_key`][kms_describe_key]. To
@@ -3751,25 +3754,25 @@ kms_get_public_key <- function(KeyId, GrantTokens = NULL) {
 #' 
 #' When calling this operation, you must specify the following values:
 #' 
-#' -   The key ID or key ARN of a CMK with no key material. Its `Origin`
+#'   - The key ID or key ARN of a CMK with no key material. Its `Origin`
 #'     must be `EXTERNAL`.
-#' 
+#'     
 #'     To create a CMK with no key material, call
 #'     [`create_key`][kms_create_key] and set the value of its `Origin`
 #'     parameter to `EXTERNAL`. To get the `Origin` of a CMK, call
 #'     [`describe_key`][kms_describe_key].)
 #' 
-#' -   The encrypted key material. To get the public key to encrypt the key
+#'   - The encrypted key material. To get the public key to encrypt the key
 #'     material, call
 #'     [`get_parameters_for_import`][kms_get_parameters_for_import].
 #' 
-#' -   The import token that
+#'   - The import token that
 #'     [`get_parameters_for_import`][kms_get_parameters_for_import]
 #'     returned. You must use a public key and token from the same
 #'     [`get_parameters_for_import`][kms_get_parameters_for_import]
 #'     response.
 #' 
-#' -   Whether the key material expires and if so, when. If you set an
+#'   - Whether the key material expires and if so, when. If you set an
 #'     expiration date, AWS KMS deletes the key material from the CMK on
 #'     the specified date, and the CMK becomes unusable. To use the CMK
 #'     again, you must reimport the same key material. The only way to
@@ -3802,9 +3805,9 @@ kms_get_public_key <- function(KeyId, GrantTokens = NULL) {
 #' 
 #' **Related operations:**
 #' 
-#' -   [`delete_imported_key_material`][kms_delete_imported_key_material]
+#'   - [`delete_imported_key_material`][kms_delete_imported_key_material]
 #' 
-#' -   [`get_parameters_for_import`][kms_get_parameters_for_import]
+#'   - [`get_parameters_for_import`][kms_get_parameters_for_import]
 #'
 #' @usage
 #' kms_import_key_material(KeyId, ImportToken, EncryptedKeyMaterial,
@@ -3819,9 +3822,9 @@ kms_get_public_key <- function(KeyId, GrantTokens = NULL) {
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
 #' To get the key ID and key ARN for a CMK, use
@@ -3927,11 +3930,11 @@ kms_import_key_material <- function(KeyId, ImportToken, EncryptedKeyMaterial, Va
 #' 
 #' **Related operations:**
 #' 
-#' -   [`create_alias`][kms_create_alias]
+#'   - [`create_alias`][kms_create_alias]
 #' 
-#' -   [`delete_alias`][kms_delete_alias]
+#'   - [`delete_alias`][kms_delete_alias]
 #' 
-#' -   [`update_alias`][kms_update_alias]
+#'   - [`update_alias`][kms_update_alias]
 #'
 #' @usage
 #' kms_list_aliases(KeyId, Limit, Marker)
@@ -3947,9 +3950,9 @@ kms_import_key_material <- function(KeyId, ImportToken, EncryptedKeyMaterial, Va
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
 #' To get the key ID and key ARN for a CMK, use
@@ -4043,13 +4046,13 @@ kms_list_aliases <- function(KeyId = NULL, Limit = NULL, Marker = NULL) {
 #' 
 #' **Related operations:**
 #' 
-#' -   [`create_grant`][kms_create_grant]
+#'   - [`create_grant`][kms_create_grant]
 #' 
-#' -   [`list_retirable_grants`][kms_list_retirable_grants]
+#'   - [`list_retirable_grants`][kms_list_retirable_grants]
 #' 
-#' -   [`retire_grant`][kms_retire_grant]
+#'   - [`retire_grant`][kms_retire_grant]
 #' 
-#' -   [`revoke_grant`][kms_revoke_grant]
+#'   - [`revoke_grant`][kms_revoke_grant]
 #'
 #' @usage
 #' kms_list_grants(Limit, Marker, KeyId)
@@ -4070,9 +4073,9 @@ kms_list_aliases <- function(KeyId = NULL, Limit = NULL, Marker = NULL) {
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
 #' To get the key ID and key ARN for a CMK, use
@@ -4166,9 +4169,9 @@ kms_list_grants <- function(Limit = NULL, Marker = NULL, KeyId) {
 #' 
 #' **Related operations:**
 #' 
-#' -   [`get_key_policy`][kms_get_key_policy]
+#'   - [`get_key_policy`][kms_get_key_policy]
 #' 
-#' -   [`put_key_policy`][kms_put_key_policy]
+#'   - [`put_key_policy`][kms_put_key_policy]
 #'
 #' @usage
 #' kms_list_key_policies(KeyId, Limit, Marker)
@@ -4179,9 +4182,9 @@ kms_list_grants <- function(Limit = NULL, Marker = NULL, KeyId) {
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
 #' To get the key ID and key ARN for a CMK, use
@@ -4263,13 +4266,13 @@ kms_list_key_policies <- function(KeyId, Limit = NULL, Marker = NULL) {
 #' 
 #' **Related operations:**
 #' 
-#' -   [`create_key`][kms_create_key]
+#'   - [`create_key`][kms_create_key]
 #' 
-#' -   [`describe_key`][kms_describe_key]
+#'   - [`describe_key`][kms_describe_key]
 #' 
-#' -   [`list_aliases`][kms_list_aliases]
+#'   - [`list_aliases`][kms_list_aliases]
 #' 
-#' -   [`list_resource_tags`][kms_list_resource_tags]
+#'   - [`list_resource_tags`][kms_list_resource_tags]
 #'
 #' @usage
 #' kms_list_keys(Limit, Marker)
@@ -4354,9 +4357,9 @@ kms_list_keys <- function(Limit = NULL, Marker = NULL) {
 #' 
 #' **Related operations:**
 #' 
-#' -   [`tag_resource`][kms_tag_resource]
+#'   - [`tag_resource`][kms_tag_resource]
 #' 
-#' -   [`untag_resource`][kms_untag_resource]
+#'   - [`untag_resource`][kms_untag_resource]
 #'
 #' @usage
 #' kms_list_resource_tags(KeyId, Limit, Marker)
@@ -4367,9 +4370,9 @@ kms_list_keys <- function(Limit = NULL, Marker = NULL) {
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
 #' To get the key ID and key ARN for a CMK, use
@@ -4464,13 +4467,13 @@ kms_list_resource_tags <- function(KeyId, Limit = NULL, Marker = NULL) {
 #' 
 #' **Related operations:**
 #' 
-#' -   [`create_grant`][kms_create_grant]
+#'   - [`create_grant`][kms_create_grant]
 #' 
-#' -   [`list_grants`][kms_list_grants]
+#'   - [`list_grants`][kms_list_grants]
 #' 
-#' -   [`retire_grant`][kms_retire_grant]
+#'   - [`retire_grant`][kms_retire_grant]
 #' 
-#' -   [`revoke_grant`][kms_revoke_grant]
+#'   - [`revoke_grant`][kms_revoke_grant]
 #'
 #' @usage
 #' kms_list_retirable_grants(Limit, Marker, RetiringPrincipal)
@@ -4578,7 +4581,7 @@ kms_list_retirable_grants <- function(Limit = NULL, Marker = NULL, RetiringPrinc
 #' in the *AWS Key Management Service Developer Guide*. For help writing
 #' and formatting a JSON policy document, see the [IAM JSON Policy
 #' Reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html)
-#' in the **IAM User Guide** . For examples of adding a key policy in
+#' in the *_IAM User Guide_* . For examples of adding a key policy in
 #' multiple programming languages, see [Setting a key
 #' policy](https://docs.aws.amazon.com/kms/latest/developerguide/programming-key-policies.html#put-policy)
 #' in the *AWS Key Management Service Developer Guide*.
@@ -4602,9 +4605,9 @@ kms_list_retirable_grants <- function(Limit = NULL, Marker = NULL, RetiringPrinc
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
 #' To get the key ID and key ARN for a CMK, use
@@ -4614,7 +4617,7 @@ kms_list_retirable_grants <- function(Limit = NULL, Marker = NULL, RetiringPrinc
 #' 
 #' The key policy must meet the following criteria:
 #' 
-#' -   If you don't set `BypassPolicyLockoutSafetyCheck` to true, the key
+#'   - If you don't set `BypassPolicyLockoutSafetyCheck` to true, the key
 #'     policy must allow the principal that is making the
 #'     [`put_key_policy`][kms_put_key_policy] request to make a subsequent
 #'     [`put_key_policy`][kms_put_key_policy] request on the CMK. This
@@ -4623,7 +4626,7 @@ kms_list_retirable_grants <- function(Limit = NULL, Marker = NULL, RetiringPrinc
 #'     Policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam)
 #'     section of the *AWS Key Management Service Developer Guide*.
 #' 
-#' -   Each statement in the key policy must contain one or more
+#'   - Each statement in the key policy must contain one or more
 #'     principals. The principals in the key policy must exist and be
 #'     visible to AWS KMS. When you create a new AWS principal (for
 #'     example, an IAM user or role), you might need to enforce a delay
@@ -4727,12 +4730,12 @@ kms_put_key_policy <- function(KeyId, PolicyName, Policy, BypassPolicyLockoutSaf
 #' provide information for the decrypt operation and the subsequent encrypt
 #' operation.
 #' 
-#' -   If your ciphertext was encrypted under an asymmetric CMK, you must
+#'   - If your ciphertext was encrypted under an asymmetric CMK, you must
 #'     use the `SourceKeyId` parameter to identify the CMK that encrypted
 #'     the ciphertext. You must also supply the encryption algorithm that
 #'     was used. This information is required to decrypt the data.
 #' 
-#' -   If your ciphertext was encrypted under a symmetric CMK, the
+#'   - If your ciphertext was encrypted under a symmetric CMK, the
 #'     `SourceKeyId` parameter is optional. AWS KMS can get this
 #'     information from metadata that it adds to the symmetric ciphertext
 #'     blob. This feature adds durability to your implementation by
@@ -4744,18 +4747,18 @@ kms_put_key_policy <- function(KeyId, PolicyName, Policy, BypassPolicyLockoutSaf
 #'     a different CMK, the [`re_encrypt`][kms_re_encrypt] operation fails.
 #'     This practice ensures that you use the CMK that you intend.
 #' 
-#' -   To reencrypt the data, you must use the `DestinationKeyId` parameter
+#'   - To reencrypt the data, you must use the `DestinationKeyId` parameter
 #'     specify the CMK that re-encrypts the data after it is decrypted. You
 #'     can select a symmetric or asymmetric CMK. If the destination CMK is
 #'     an asymmetric CMK, you must also provide the encryption algorithm.
 #'     The algorithm that you choose must be compatible with the CMK.
-#' 
+#'     
 #'     When you use an asymmetric CMK to encrypt or reencrypt data, be sure
 #'     to record the CMK and encryption algorithm that you choose. You will
 #'     be required to provide the same CMK and encryption algorithm when
 #'     you decrypt the data. If the CMK and algorithm do not match the
 #'     values used to encrypt the data, the decrypt operation fails.
-#' 
+#'     
 #'     You are not required to supply the CMK ID and encryption algorithm
 #'     when you decrypt with symmetric CMKs because AWS KMS stores this
 #'     information in the ciphertext blob. AWS KMS cannot store metadata in
@@ -4773,10 +4776,10 @@ kms_put_key_policy <- function(KeyId, PolicyName, Policy, BypassPolicyLockoutSaf
 #' 
 #' **Required permissions**:
 #' 
-#' -   [kms:ReEncryptFrom](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html)
+#'   - [kms:ReEncryptFrom](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html)
 #'     permission on the source CMK (key policy)
 #' 
-#' -   [kms:ReEncryptTo](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html)
+#'   - [kms:ReEncryptTo](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html)
 #'     permission on the destination CMK (key policy)
 #' 
 #' To permit reencryption from or to a CMK, include the `"kms:ReEncrypt*"`
@@ -4789,13 +4792,13 @@ kms_put_key_policy <- function(KeyId, PolicyName, Policy, BypassPolicyLockoutSaf
 #' 
 #' **Related operations:**
 #' 
-#' -   [`decrypt`][kms_decrypt]
+#'   - [`decrypt`][kms_decrypt]
 #' 
-#' -   [`encrypt`][kms_encrypt]
+#'   - [`encrypt`][kms_encrypt]
 #' 
-#' -   [`generate_data_key`][kms_generate_data_key]
+#'   - [`generate_data_key`][kms_generate_data_key]
 #' 
-#' -   [`generate_data_key_pair`][kms_generate_data_key_pair]
+#'   - [`generate_data_key_pair`][kms_generate_data_key_pair]
 #'
 #' @usage
 #' kms_re_encrypt(CiphertextBlob, SourceEncryptionContext, SourceKeyId,
@@ -4833,14 +4836,14 @@ kms_put_key_policy <- function(KeyId, PolicyName, Policy, BypassPolicyLockoutSaf
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Alias name: `alias/ExampleAlias`
+#'   - Alias name: `alias/ExampleAlias`
 #' 
-#' -   Alias ARN: `arn:aws:kms:us-east-2:111122223333:alias/ExampleAlias`
+#'   - Alias ARN: `arn:aws:kms:us-east-2:111122223333:alias/ExampleAlias`
 #' 
 #' To get the key ID and key ARN for a CMK, use
 #' [`list_keys`][kms_list_keys] or [`describe_key`][kms_describe_key]. To
@@ -4858,14 +4861,14 @@ kms_put_key_policy <- function(KeyId, PolicyName, Policy, BypassPolicyLockoutSaf
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Alias name: `alias/ExampleAlias`
+#'   - Alias name: `alias/ExampleAlias`
 #' 
-#' -   Alias ARN: `arn:aws:kms:us-east-2:111122223333:alias/ExampleAlias`
+#'   - Alias ARN: `arn:aws:kms:us-east-2:111122223333:alias/ExampleAlias`
 #' 
 #' To get the key ID and key ARN for a CMK, use
 #' [`list_keys`][kms_list_keys] or [`describe_key`][kms_describe_key]. To
@@ -4977,11 +4980,11 @@ kms_re_encrypt <- function(CiphertextBlob, SourceEncryptionContext = NULL, Sourc
 #' operations that depend on it. The following are permitted to call this
 #' API:
 #' 
-#' -   The AWS account (root user) under which the grant was created
+#'   - The AWS account (root user) under which the grant was created
 #' 
-#' -   The `RetiringPrincipal`, if present in the grant
+#'   - The `RetiringPrincipal`, if present in the grant
 #' 
-#' -   The `GranteePrincipal`, if [`retire_grant`][kms_retire_grant] is an
+#'   - The `GranteePrincipal`, if [`retire_grant`][kms_retire_grant] is an
 #'     operation specified in the grant
 #' 
 #' You must identify the grant to retire by its grant token or by a
@@ -5001,13 +5004,13 @@ kms_re_encrypt <- function(CiphertextBlob, SourceEncryptionContext = NULL, Sourc
 #' 
 #' **Related operations:**
 #' 
-#' -   [`create_grant`][kms_create_grant]
+#'   - [`create_grant`][kms_create_grant]
 #' 
-#' -   [`list_grants`][kms_list_grants]
+#'   - [`list_grants`][kms_list_grants]
 #' 
-#' -   [`list_retirable_grants`][kms_list_retirable_grants]
+#'   - [`list_retirable_grants`][kms_list_retirable_grants]
 #' 
-#' -   [`revoke_grant`][kms_revoke_grant]
+#'   - [`revoke_grant`][kms_revoke_grant]
 #'
 #' @usage
 #' kms_retire_grant(GrantToken, KeyId, GrantId)
@@ -5020,7 +5023,7 @@ kms_re_encrypt <- function(CiphertextBlob, SourceEncryptionContext = NULL, Sourc
 #' @param GrantId Unique identifier of the grant to retire. The grant ID is returned in
 #' the response to a [`create_grant`][kms_create_grant] operation.
 #' 
-#' -   Grant ID Example -
+#'   - Grant ID Example -
 #'     0123456789012345678901234567890123456789012345678901234567890123
 #'
 #' @return
@@ -5080,13 +5083,13 @@ kms_retire_grant <- function(GrantToken = NULL, KeyId = NULL, GrantId = NULL) {
 #' 
 #' **Related operations:**
 #' 
-#' -   [`create_grant`][kms_create_grant]
+#'   - [`create_grant`][kms_create_grant]
 #' 
-#' -   [`list_grants`][kms_list_grants]
+#'   - [`list_grants`][kms_list_grants]
 #' 
-#' -   [`list_retirable_grants`][kms_list_retirable_grants]
+#'   - [`list_retirable_grants`][kms_list_retirable_grants]
 #' 
-#' -   [`retire_grant`][kms_retire_grant]
+#'   - [`retire_grant`][kms_retire_grant]
 #'
 #' @usage
 #' kms_revoke_grant(KeyId, GrantId)
@@ -5099,9 +5102,9 @@ kms_retire_grant <- function(GrantToken = NULL, KeyId = NULL, GrantId = NULL) {
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
 #' To get the key ID and key ARN for a CMK, use
@@ -5195,9 +5198,9 @@ kms_revoke_grant <- function(KeyId, GrantId) {
 #' 
 #' **Related operations**
 #' 
-#' -   [`cancel_key_deletion`][kms_cancel_key_deletion]
+#'   - [`cancel_key_deletion`][kms_cancel_key_deletion]
 #' 
-#' -   [`disable_key`][kms_disable_key]
+#'   - [`disable_key`][kms_disable_key]
 #'
 #' @usage
 #' kms_schedule_key_deletion(KeyId, PendingWindowInDays)
@@ -5208,9 +5211,9 @@ kms_revoke_grant <- function(KeyId, GrantId) {
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
 #' To get the key ID and key ARN for a CMK, use
@@ -5293,19 +5296,19 @@ kms_schedule_key_deletion <- function(KeyId, PendingWindowInDays = NULL) {
 #' To use the [`sign`][kms_sign] operation, provide the following
 #' information:
 #' 
-#' -   Use the `KeyId` parameter to identify an asymmetric CMK with a
+#'   - Use the `KeyId` parameter to identify an asymmetric CMK with a
 #'     `KeyUsage` value of `SIGN_VERIFY`. To get the `KeyUsage` value of a
 #'     CMK, use the [`describe_key`][kms_describe_key] operation. The
 #'     caller must have `kms:Sign` permission on the CMK.
 #' 
-#' -   Use the `Message` parameter to specify the message or message digest
+#'   - Use the `Message` parameter to specify the message or message digest
 #'     to sign. You can submit messages of up to 4096 bytes. To sign a
 #'     larger message, generate a hash digest of the message, and then
 #'     provide the hash digest in the `Message` parameter. To indicate
 #'     whether the message is a full message or a digest, use the
 #'     `MessageType` parameter.
 #' 
-#' -   Choose a signing algorithm that is compatible with the CMK.
+#'   - Choose a signing algorithm that is compatible with the CMK.
 #' 
 #' When signing a message, be sure to record the CMK and the signing
 #' algorithm. This information is required to verify the signature.
@@ -5346,14 +5349,14 @@ kms_schedule_key_deletion <- function(KeyId, PendingWindowInDays = NULL) {
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Alias name: `alias/ExampleAlias`
+#'   - Alias name: `alias/ExampleAlias`
 #' 
-#' -   Alias ARN: `arn:aws:kms:us-east-2:111122223333:alias/ExampleAlias`
+#'   - Alias ARN: `arn:aws:kms:us-east-2:111122223333:alias/ExampleAlias`
 #' 
 #' To get the key ID and key ARN for a CMK, use
 #' [`list_keys`][kms_list_keys] or [`describe_key`][kms_describe_key]. To
@@ -5461,9 +5464,9 @@ kms_sign <- function(KeyId, Message, MessageType = NULL, GrantTokens = NULL, Sig
 #' 
 #' **Related operations**
 #' 
-#' -   [`untag_resource`][kms_untag_resource]
+#'   - [`untag_resource`][kms_untag_resource]
 #' 
-#' -   [`list_resource_tags`][kms_list_resource_tags]
+#'   - [`list_resource_tags`][kms_list_resource_tags]
 #'
 #' @usage
 #' kms_tag_resource(KeyId, Tags)
@@ -5474,9 +5477,9 @@ kms_sign <- function(KeyId, Message, MessageType = NULL, GrantTokens = NULL, Sig
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
 #' To get the key ID and key ARN for a CMK, use
@@ -5574,9 +5577,9 @@ kms_tag_resource <- function(KeyId, Tags) {
 #' 
 #' **Related operations**
 #' 
-#' -   [`tag_resource`][kms_tag_resource]
+#'   - [`tag_resource`][kms_tag_resource]
 #' 
-#' -   [`list_resource_tags`][kms_list_resource_tags]
+#'   - [`list_resource_tags`][kms_list_resource_tags]
 #'
 #' @usage
 #' kms_untag_resource(KeyId, TagKeys)
@@ -5587,9 +5590,9 @@ kms_tag_resource <- function(KeyId, Tags) {
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
 #' To get the key ID and key ARN for a CMK, use
@@ -5678,13 +5681,13 @@ kms_untag_resource <- function(KeyId, TagKeys) {
 #' 
 #' **Required permissions**
 #' 
-#' -   [kms:UpdateAlias](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html)
+#'   - [kms:UpdateAlias](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html)
 #'     on the alias (IAM policy).
 #' 
-#' -   [kms:UpdateAlias](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html)
+#'   - [kms:UpdateAlias](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html)
 #'     on the current CMK (key policy).
 #' 
-#' -   [kms:UpdateAlias](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html)
+#'   - [kms:UpdateAlias](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html)
 #'     on the new CMK (key policy).
 #' 
 #' For details, see [Controlling access to
@@ -5693,11 +5696,11 @@ kms_untag_resource <- function(KeyId, TagKeys) {
 #' 
 #' **Related operations:**
 #' 
-#' -   [`create_alias`][kms_create_alias]
+#'   - [`create_alias`][kms_create_alias]
 #' 
-#' -   [`delete_alias`][kms_delete_alias]
+#'   - [`delete_alias`][kms_delete_alias]
 #' 
-#' -   [`list_aliases`][kms_list_aliases]
+#'   - [`list_aliases`][kms_list_aliases]
 #'
 #' @usage
 #' kms_update_alias(AliasName, TargetKeyId)
@@ -5719,9 +5722,9 @@ kms_untag_resource <- function(KeyId, TagKeys) {
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
 #' To get the key ID and key ARN for a CMK, use
@@ -5791,10 +5794,10 @@ kms_update_alias <- function(AliasName, TargetKeyId) {
 #' [`update_custom_key_store`][kms_update_custom_key_store] to edit your
 #' keystore settings.
 #' 
-#' -   Use the **NewCustomKeyStoreName** parameter to change the friendly
+#'   - Use the **NewCustomKeyStoreName** parameter to change the friendly
 #'     name of the custom key store to the value that you specify.
 #' 
-#' -   Use the **KeyStorePassword** parameter tell AWS KMS the current
+#'   - Use the **KeyStorePassword** parameter tell AWS KMS the current
 #'     password of the [`kmsuser` crypto user
 #'     (CU)](https://docs.aws.amazon.com/kms/latest/developerguide/key-store-concepts.html#concept-kmsuser)
 #'     in the associated AWS CloudHSM cluster. You can use this parameter
@@ -5804,7 +5807,7 @@ kms_update_alias <- function(AliasName, TargetKeyId) {
 #'     because the `kmsuser` password has changed. This value does not
 #'     change the password in the AWS CloudHSM cluster.
 #' 
-#' -   Use the **CloudHsmClusterId** parameter to associate the custom key
+#'   - Use the **CloudHsmClusterId** parameter to associate the custom key
 #'     store with a different, but related, AWS CloudHSM cluster. You can
 #'     use this parameter to repair a custom key store if its AWS CloudHSM
 #'     cluster becomes corrupted or is deleted, or when you need to create
@@ -5827,15 +5830,15 @@ kms_update_alias <- function(AliasName, TargetKeyId) {
 #' 
 #' **Related operations:**
 #' 
-#' -   [`connect_custom_key_store`][kms_connect_custom_key_store]
+#'   - [`connect_custom_key_store`][kms_connect_custom_key_store]
 #' 
-#' -   [`create_custom_key_store`][kms_create_custom_key_store]
+#'   - [`create_custom_key_store`][kms_create_custom_key_store]
 #' 
-#' -   [`delete_custom_key_store`][kms_delete_custom_key_store]
+#'   - [`delete_custom_key_store`][kms_delete_custom_key_store]
 #' 
-#' -   [`describe_custom_key_stores`][kms_describe_custom_key_stores]
+#'   - [`describe_custom_key_stores`][kms_describe_custom_key_stores]
 #' 
-#' -   [`disconnect_custom_key_store`][kms_disconnect_custom_key_store]
+#'   - [`disconnect_custom_key_store`][kms_disconnect_custom_key_store]
 #'
 #' @usage
 #' kms_update_custom_key_store(CustomKeyStoreId, NewCustomKeyStoreName,
@@ -5919,9 +5922,9 @@ kms_update_custom_key_store <- function(CustomKeyStoreId, NewCustomKeyStoreName 
 #' 
 #' **Related operations**
 #' 
-#' -   [`create_key`][kms_create_key]
+#'   - [`create_key`][kms_create_key]
 #' 
-#' -   [`describe_key`][kms_describe_key]
+#'   - [`describe_key`][kms_describe_key]
 #'
 #' @usage
 #' kms_update_key_description(KeyId, Description)
@@ -5932,9 +5935,9 @@ kms_update_custom_key_store <- function(CustomKeyStoreId, NewCustomKeyStoreName 
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
 #' To get the key ID and key ARN for a CMK, use
@@ -6045,14 +6048,14 @@ kms_update_key_description <- function(KeyId, Description) {
 #' 
 #' For example:
 #' 
-#' -   Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
+#'   - Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Key ARN:
+#'   - Key ARN:
 #'     `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 #' 
-#' -   Alias name: `alias/ExampleAlias`
+#'   - Alias name: `alias/ExampleAlias`
 #' 
-#' -   Alias ARN: `arn:aws:kms:us-east-2:111122223333:alias/ExampleAlias`
+#'   - Alias ARN: `arn:aws:kms:us-east-2:111122223333:alias/ExampleAlias`
 #' 
 #' To get the key ID and key ARN for a CMK, use
 #' [`list_keys`][kms_list_keys] or [`describe_key`][kms_describe_key]. To

@@ -22,14 +22,14 @@ storage class defaults to AWS S3 Outposts.
 
 For more information about S3 storage classes, see \href{https://aws.amazon.com/s3/storage-classes/}{Amazon S3 Storage Classes}. Some storage
 classes have behaviors that can affect your S3 storage cost. For
-detailed information, see using-storage-classes.}
+detailed information, see <span>using-storage-classes</span>.}
 
 \item{S3Config}{[required]}
 
 \item{AgentArns}{If you are using DataSync on an AWS Outpost, specify the Amazon Resource
 Names (ARNs) of the DataSync agents deployed on your Outpost. For more
 information about launching a DataSync agent on an AWS Outpost, see
-outposts-agent.}
+<span>outposts-agent</span>.}
 
 \item{Tags}{The key-value pair that represents the tag that you want to add to the
 location. The value can be an empty string. We recommend using tags to

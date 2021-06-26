@@ -9,10 +9,11 @@ clouddirectory_apply_schema(PublishedSchemaArn, DirectoryArn)
 }
 \arguments{
 \item{PublishedSchemaArn}{[required] Published schema Amazon Resource Name (ARN) that needs to be copied. For
-more information, see arns.}
+more information, see <span>arns</span>.}
 
-\item{DirectoryArn}{[required] The Amazon Resource Name (ARN) that is associated with the Directory
-into which the schema is copied. For more information, see arns.}
+\item{DirectoryArn}{[required] The Amazon Resource Name (ARN) that is associated with the
+<span>Directory</span> into which the schema is copied. For more
+information, see <span>arns</span>.}
 }
 \value{
 A list with the following syntax:\preformatted{list(
@@ -23,8 +24,8 @@ A list with the following syntax:\preformatted{list(
 }
 \description{
 Copies the input published schema, at the specified version, into the
-Directory with the same name and version as that of the published
-schema.
+<span>Directory</span> with the same name and version as that of the
+published schema.
 }
 \section{Request syntax}{
 \preformatted{svc$apply_schema(

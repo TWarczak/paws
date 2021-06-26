@@ -7,9 +7,11 @@
 apigateway_get_method(restApiId, resourceId, httpMethod)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
-\item{resourceId}{[required] [Required] The Resource identifier for the Method resource.}
+\item{resourceId}{[required] [Required] The <span>Resource</span> identifier for the
+<span>Method</span> resource.}
 
 \item{httpMethod}{[required] [Required] Specifies the method request's HTTP method type.}
 }
@@ -82,7 +84,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Describe an existing Method resource.
+Describe an existing <span>Method</span> resource.
 }
 \section{Request syntax}{
 \preformatted{svc$get_method(

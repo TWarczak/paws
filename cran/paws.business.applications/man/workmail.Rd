@@ -9,6 +9,12 @@ workmail(config = list())
 \arguments{
 \item{config}{Optional configuration of credentials, endpoint, and/or region.}
 }
+\value{
+A client for the service. You can call the service's operations using
+syntax like \code{svc$operation(...)}, where \code{svc} is the name you've assigned
+to the client. The available operations are listed in the
+Operations section.
+}
 \description{
 Amazon WorkMail is a secure, managed business email and calendaring
 service with support for existing desktop and mobile email clients. You
@@ -21,8 +27,17 @@ your data is stored.
 The WorkMail API is designed for the following scenarios:
 \itemize{
 \item Listing and describing organizations
+}<!-- end list -->
+
+\itemize{
 \item Managing users
+}<!-- end list -->
+
+\itemize{
 \item Managing groups
+}<!-- end list -->
+
+\itemize{
 \item Managing resources
 }
 

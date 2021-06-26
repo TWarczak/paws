@@ -8,15 +8,16 @@ apigateway_create_model(restApiId, name, description, schema,
   contentType)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The RestApi identifier under which the Model will be
-created.}
+\item{restApiId}{[required] [Required] The <span>RestApi</span> identifier under which the
+<span>Model</span> will be created.}
 
 \item{name}{[required] [Required] The name of the model. Must be alphanumeric.}
 
 \item{description}{The description of the model.}
 
 \item{schema}{The schema for the model. For \code{application/json} models, this should be
-JSON schema draft 4 model.}
+\href{https://datatracker.ietf.org/doc/html/draft-zyp-json-schema-04}{JSON schema draft 4}
+model.}
 
 \item{contentType}{[required] [Required] The content-type for the model.}
 }
@@ -31,7 +32,8 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Adds a new Model resource to an existing RestApi resource.
+Adds a new <span>Model</span> resource to an existing
+<span>RestApi</span> resource.
 }
 \section{Request syntax}{
 \preformatted{svc$create_model(

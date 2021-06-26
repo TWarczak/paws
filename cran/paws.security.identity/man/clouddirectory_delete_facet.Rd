@@ -7,8 +7,8 @@
 clouddirectory_delete_facet(SchemaArn, Name)
 }
 \arguments{
-\item{SchemaArn}{[required] The Amazon Resource Name (ARN) that is associated with the Facet. For
-more information, see arns.}
+\item{SchemaArn}{[required] The Amazon Resource Name (ARN) that is associated with the
+<span>Facet</span>. For more information, see <span>arns</span>.}
 
 \item{Name}{[required] The name of the facet to delete.}
 }
@@ -16,9 +16,9 @@ more information, see arns.}
 An empty list.
 }
 \description{
-Deletes a given Facet. All attributes and Rules that are associated with
-the facet will be deleted. Only development schema facets are allowed
-deletion.
+Deletes a given <span>Facet</span>. All attributes and
+<span>Rule</span>s that are associated with the facet will be deleted.
+Only development schema facets are allowed deletion.
 }
 \section{Request syntax}{
 \preformatted{svc$delete_facet(

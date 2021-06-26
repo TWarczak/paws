@@ -21,24 +21,24 @@ NULL
 #' implement applications in your preferred language. For more information,
 #' see:
 #' 
-#' -   [AWS
+#'   - [AWS
 #'     CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html)
 #' 
-#' -   [AWS SDK for
+#'   - [AWS SDK for
 #'     Java](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/opsworks/AWSOpsWorksClient.html)
 #' 
-#' -   [AWS SDK for
+#'   - [AWS SDK for
 #'     .NET](https://docs.aws.amazon.com/sdkfornet/latest/apidocs/Index.html)
 #' 
-#' -   [AWS SDK for PHP
-#'     2](https://docs.aws.amazon.com/aws-sdk-php/v3/api/class-Aws.OpsWorks.OpsWorksClient.html)
+#'   - [AWS SDK for
+#'     PHP 2](https://docs.aws.amazon.com/aws-sdk-php/v3/api/class-Aws.OpsWorks.OpsWorksClient.html)
 #' 
-#' -   [AWS SDK for Ruby](https://docs.aws.amazon.com/sdk-for-ruby/v2/api/)
+#'   - [AWS SDK for Ruby](https://docs.aws.amazon.com/sdk-for-ruby/v2/api/)
 #' 
-#' -   [AWS SDK for
+#'   - [AWS SDK for
 #'     Node.js](https://docs.aws.amazon.com/sdk-for-javascript/index.html)
 #' 
-#' -   [AWS SDK for
+#'   - [AWS SDK for
 #'     Python(Boto)](http://docs.pythonboto.org/en/latest/ref/opsworks.html)
 #' 
 #' **Endpoints**
@@ -47,36 +47,36 @@ NULL
 #' must connect to one of the following endpoints. Stacks can only be
 #' accessed or managed within the endpoint in which they are created.
 #' 
-#' -   opsworks.us-east-1.amazonaws.com
+#'   - opsworks.us-east-1.amazonaws.com
 #' 
-#' -   opsworks.us-east-2.amazonaws.com
+#'   - opsworks.us-east-2.amazonaws.com
 #' 
-#' -   opsworks.us-west-1.amazonaws.com
+#'   - opsworks.us-west-1.amazonaws.com
 #' 
-#' -   opsworks.us-west-2.amazonaws.com
+#'   - opsworks.us-west-2.amazonaws.com
 #' 
-#' -   opsworks.ca-central-1.amazonaws.com (API only; not available in the
+#'   - opsworks.ca-central-1.amazonaws.com (API only; not available in the
 #'     AWS console)
 #' 
-#' -   opsworks.eu-west-1.amazonaws.com
+#'   - opsworks.eu-west-1.amazonaws.com
 #' 
-#' -   opsworks.eu-west-2.amazonaws.com
+#'   - opsworks.eu-west-2.amazonaws.com
 #' 
-#' -   opsworks.eu-west-3.amazonaws.com
+#'   - opsworks.eu-west-3.amazonaws.com
 #' 
-#' -   opsworks.eu-central-1.amazonaws.com
+#'   - opsworks.eu-central-1.amazonaws.com
 #' 
-#' -   opsworks.ap-northeast-1.amazonaws.com
+#'   - opsworks.ap-northeast-1.amazonaws.com
 #' 
-#' -   opsworks.ap-northeast-2.amazonaws.com
+#'   - opsworks.ap-northeast-2.amazonaws.com
 #' 
-#' -   opsworks.ap-south-1.amazonaws.com
+#'   - opsworks.ap-south-1.amazonaws.com
 #' 
-#' -   opsworks.ap-southeast-1.amazonaws.com
+#'   - opsworks.ap-southeast-1.amazonaws.com
 #' 
-#' -   opsworks.ap-southeast-2.amazonaws.com
+#'   - opsworks.ap-southeast-2.amazonaws.com
 #' 
-#' -   opsworks.sa-east-1.amazonaws.com
+#'   - opsworks.sa-east-1.amazonaws.com
 #' 
 #' **Chef Versions**
 #' 
@@ -200,6 +200,12 @@ NULL
 #'  \link[=opsworks_update_volume]{update_volume} \tab Updates an Amazon EBS volume's name or mount point
 #' }
 #'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
+#'
 #' @rdname opsworks
 #' @export
 opsworks <- function(config = list()) {
@@ -218,7 +224,7 @@ opsworks <- function(config = list()) {
   endpoints = list("*" = list(endpoint = "opsworks.{region}.amazonaws.com", global = FALSE), "cn-*" = list(endpoint = "opsworks.{region}.amazonaws.com.cn", global = FALSE), "us-iso-*" = list(endpoint = "opsworks.{region}.c2s.ic.gov", global = FALSE), "us-isob-*" = list(endpoint = "opsworks.{region}.sc2s.sgov.gov", global = FALSE)),
   service_id = "OpsWorks",
   api_version = "2013-02-18",
-  signing_name = NULL,
+  signing_name = "opsworks",
   json_version = "1.1",
   target_prefix = "OpsWorks_20130218"
 )

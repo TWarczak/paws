@@ -144,9 +144,8 @@ that was used for the object.
 If the value of \code{x-amz-server-side-encryption} is \code{aws:kms}, this header
 specifies the ID of the symmetric customer managed AWS KMS CMK that will
 be used for the object. If you specify
-\code{x-amz-server-side-encryption:aws:kms}, but do not
-provide\code{ x-amz-server-side-encryption-aws-kms-key-id}, Amazon S3 uses
-the AWS managed CMK in AWS to protect the data.}
+\code{x-amz-server-side-encryption:aws:kms}, but do not provide\code{ x-amz-server-side-encryption-aws-kms-key-id}, Amazon S3 uses the AWS
+managed CMK in AWS to protect the data.}
 
 \item{SSEKMSEncryptionContext}{Specifies the AWS KMS Encryption Context to use for object encryption.
 The value of this header is a base64-encoded UTF-8 string holding JSON
@@ -173,8 +172,7 @@ parameters. (For example, "Key1=Value1")}
 information about S3 Object Lock, see \href{https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html}{Object Lock}.}
 
 \item{ExpectedBucketOwner}{The account id of the expected bucket owner. If the bucket is owned by a
-different account, the request will fail with an HTTP
-\verb{403 (Access Denied)} error.}
+different account, the request will fail with an HTTP \verb{403 (Access Denied)} error.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

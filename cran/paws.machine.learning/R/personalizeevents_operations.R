@@ -7,7 +7,7 @@ NULL
 #'
 #' @description
 #' Records user interaction event data. For more information see
-#' event-record-api.
+#' <span>event-record-api</span>.
 #'
 #' @usage
 #' personalizeevents_put_events(trackingId, userId, sessionId, eventList)
@@ -20,7 +20,7 @@ NULL
 #' generates the sessionId when a user first visits your website or uses
 #' your application. Amazon Personalize uses the sessionId to associate
 #' events with the user before they log in. For more information see
-#' event-record-api.
+#' <span>event-record-api</span>.
 #' @param eventList &#91;required&#93; A list of event data from the session.
 #'
 #' @return
@@ -75,7 +75,7 @@ personalizeevents_put_events <- function(trackingId, userId = NULL, sessionId, e
 #'
 #' @description
 #' Adds one or more items to an Items dataset. For more information see
-#' importing-items.
+#' <span>importing-items</span>.
 #'
 #' @usage
 #' personalizeevents_put_items(datasetArn, items)
@@ -124,7 +124,7 @@ personalizeevents_put_items <- function(datasetArn, items) {
 #'
 #' @description
 #' Adds one or more users to a Users dataset. For more information see
-#' importing-users.
+#' <span>importing-users</span>.
 #'
 #' @usage
 #' personalizeevents_put_users(datasetArn, users)

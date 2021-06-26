@@ -9,7 +9,8 @@ apigateway_create_authorizer(restApiId, name, type, providerARNs,
   identityValidationExpression, authorizerResultTtlInSeconds)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
 \item{name}{[required] [Required] The name of the authorizer.}
 
@@ -100,7 +101,8 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Adds a new Authorizer resource to an existing RestApi resource.<div class="seeAlso">
+Adds a new <span>Authorizer</span> resource to an existing
+<span>RestApi</span> resource.<div class="seeAlso">
 
 
 \href{https://docs.aws.amazon.com/cli/latest/reference/apigateway/create-authorizer.html}{AWS CLI}</div>

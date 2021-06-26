@@ -2,32 +2,32 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_update_web_acl}
 \alias{waf_update_web_acl}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_update_web_acl(WebACLId, ChangeToken, Updates, DefaultAction)
 }
 \arguments{
-\item{WebACLId}{[required] The \code{WebACLId} of the WebACL that you want to update. \code{WebACLId} is
-returned by \code{\link[=waf_create_web_acl]{create_web_acl}} and by
+\item{WebACLId}{[required] The \code{WebACLId} of the <span>WebACL</span> that you want to update.
+\code{WebACLId} is returned by \code{\link[=waf_create_web_acl]{create_web_acl}} and by
 \code{\link[=waf_list_web_ac_ls]{list_web_ac_ls}}.}
 
 \item{ChangeToken}{[required] The value returned by the most recent call to
 \code{\link[=waf_get_change_token]{get_change_token}}.}
 
-\item{Updates}{An array of updates to make to the WebACL.
+\item{Updates}{An array of updates to make to the <span>WebACL</span>.
 
 An array of \code{WebACLUpdate} objects that you want to insert into or
-delete from a WebACL. For more information, see the applicable data
-types:
+delete from a <span>WebACL</span>. For more information, see the
+applicable data types:
 \itemize{
-\item WebACLUpdate: Contains \code{Action} and \code{ActivatedRule}
-\item ActivatedRule: Contains \code{Action}, \code{OverrideAction}, \code{Priority},
-\code{RuleId}, and \code{Type}. \code{ActivatedRule|OverrideAction} applies only
-when updating or adding a \code{RuleGroup} to a \code{WebACL}. In this case,
-you do not use \code{ActivatedRule|Action}. For all other update
-requests, \code{ActivatedRule|Action} is used instead of
+\item <span>WebACLUpdate</span>: Contains \code{Action} and \code{ActivatedRule}
+\item <span>ActivatedRule</span>: Contains \code{Action}, \code{OverrideAction},
+\code{Priority}, \code{RuleId}, and \code{Type}. \code{ActivatedRule|OverrideAction}
+applies only when updating or adding a \code{RuleGroup} to a \code{WebACL}. In
+this case, you do not use \code{ActivatedRule|Action}. For all other
+update requests, \code{ActivatedRule|Action} is used instead of
 \code{ActivatedRule|OverrideAction}.
-\item WafAction: Contains \code{Type}
+\item <span>WafAction</span>: Contains \code{Type}
 }}
 
 \item{DefaultAction}{A default action for the web ACL, either ALLOW or BLOCK. AWS WAF
@@ -50,9 +50,9 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Inserts or deletes ActivatedRule objects in a \code{WebACL}. Each \code{Rule}
-identifies web requests that you want to allow, block, or count. When
-you update a \code{WebACL}, you specify the following values:
+Inserts or deletes <span>ActivatedRule</span> objects in a \code{WebACL}.
+Each \code{Rule} identifies web requests that you want to allow, block, or
+count. When you update a \code{WebACL}, you specify the following values:
 \itemize{
 \item A default action for the \code{WebACL}, either \code{ALLOW} or \code{BLOCK}. AWS
 WAF performs the default action if a request doesn't match the
@@ -104,7 +104,8 @@ If you already have a rule group associated with a web ACL and want
 to submit an \code{\link[=waf_update_web_acl]{update_web_acl}} request to
 exclude certain rules from that rule group, you must first remove
 the rule group from the web ACL, the re-insert it again, specifying
-the excluded rules. For details, see ActivatedRule$ExcludedRules .
+the excluded rules. For details, see
+<span>ActivatedRule$ExcludedRules</span> .
 }
 
 Be aware that if you try to add a RATE_BASED rule to a web ACL without

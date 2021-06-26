@@ -8,12 +8,12 @@ NULL
 #' @description
 #' Assign a registered instance to a layer.
 #' 
-#' -   You can assign registered on-premises instances to any layer type.
+#'   - You can assign registered on-premises instances to any layer type.
 #' 
-#' -   You can assign registered Amazon EC2 instances only to custom
+#'   - You can assign registered Amazon EC2 instances only to custom
 #'     layers.
 #' 
-#' -   You cannot use this action with instances that were created with AWS
+#'   - You cannot use this action with instances that were created with AWS
 #'     OpsWorks Stacks.
 #' 
 #' **Required Permissions**: To use this action, an AWS Identity and Access
@@ -259,9 +259,9 @@ opsworks_attach_elastic_load_balancer <- function(ElasticLoadBalancerName, Layer
 #' be in the specified region. All instances are launched into this VPC,
 #' and you cannot change the ID later.
 #' 
-#' -   If your account supports EC2 Classic, the default value is no VPC.
+#'   - If your account supports EC2 Classic, the default value is no VPC.
 #' 
-#' -   If your account does not support EC2 Classic, the default value is
+#'   - If your account does not support EC2 Classic, the default value is
 #'     the default VPC for the specified region.
 #' 
 #' If the VPC ID corresponds to a default VPC and you have specified either
@@ -273,10 +273,10 @@ opsworks_attach_elastic_load_balancer <- function(ElasticLoadBalancerName, Layer
 #' 
 #' If you specify a nondefault VPC ID, note the following:
 #' 
-#' -   It must belong to a VPC in your account that is in the specified
+#'   - It must belong to a VPC in your account that is in the specified
 #'     region.
 #' 
-#' -   You must specify a value for `DefaultSubnetId`.
+#'   - You must specify a value for `DefaultSubnetId`.
 #' 
 #' For more information about how to use AWS OpsWorks Stacks with a VPC,
 #' see [Running a Stack in a
@@ -304,25 +304,24 @@ opsworks_attach_elastic_load_balancer <- function(ElasticLoadBalancerName, Layer
 #' Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html).
 #' @param DefaultOs The stack's operating system, which must be set to one of the following.
 #' 
-#' -   A supported Linux operating system: An Amazon Linux version, such as
-#'     `Amazon Linux 2018.03`, `Amazon Linux 2017.09`,
-#'     `Amazon Linux 2017.03`, `Amazon Linux 2016.09`,
-#'     `Amazon Linux 2016.03`, `Amazon Linux 2015.09`, or
-#'     `Amazon Linux 2015.03`.
+#'   - A supported Linux operating system: An Amazon Linux version, such as
+#'     `Amazon Linux 2018.03`, `Amazon Linux 2017.09`, `Amazon
+#'     Linux 2017.03`, `Amazon Linux 2016.09`, `Amazon Linux 2016.03`,
+#'     `Amazon Linux 2015.09`, or `Amazon Linux 2015.03`.
 #' 
-#' -   A supported Ubuntu operating system, such as `Ubuntu 16.04 LTS`,
+#'   - A supported Ubuntu operating system, such as `Ubuntu 16.04 LTS`,
 #'     `Ubuntu 14.04 LTS`, or `Ubuntu 12.04 LTS`.
 #' 
-#' -   `CentOS Linux 7`
+#'   - `CentOS Linux 7`
 #' 
-#' -   `Red Hat Enterprise Linux 7`
+#'   - `Red Hat Enterprise Linux 7`
 #' 
-#' -   `Microsoft Windows Server 2012 R2 Base`,
-#'     `Microsoft Windows Server 2012 R2 with SQL Server Express`,
-#'     `Microsoft Windows Server 2012 R2 with SQL Server Standard`, or
-#'     `Microsoft Windows Server 2012 R2 with SQL Server Web`.
+#'   - `Microsoft Windows Server 2012 R2 Base`, `Microsoft Windows
+#'     Server 2012 R2 with SQL Server Express`, `Microsoft Windows
+#'     Server 2012 R2 with SQL Server Standard`, or `Microsoft Windows
+#'     Server 2012 R2 with SQL Server Web`.
 #' 
-#' -   A custom AMI: `Custom`. You specify the custom AMI you want to use
+#'   - A custom AMI: `Custom`. You specify the custom AMI you want to use
 #'     when you create instances. For more information about how to use
 #'     custom AMIs with OpsWorks, see [Using Custom
 #'     AMIs](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-custom-ami.html).
@@ -340,27 +339,27 @@ opsworks_attach_elastic_load_balancer <- function(ElasticLoadBalancerName, Layer
 #' names by appending integers to the layer's short name. The other themes
 #' are:
 #' 
-#' -   `Baked_Goods`
+#'   - `Baked_Goods`
 #' 
-#' -   `Clouds`
+#'   - `Clouds`
 #' 
-#' -   `Europe_Cities`
+#'   - `Europe_Cities`
 #' 
-#' -   `Fruits`
+#'   - `Fruits`
 #' 
-#' -   `Greek_Deities_and_Titans`
+#'   - `Greek_Deities_and_Titans`
 #' 
-#' -   `Legendary_creatures_from_Japan`
+#'   - `Legendary_creatures_from_Japan`
 #' 
-#' -   `Planets_and_Moons`
+#'   - `Planets_and_Moons`
 #' 
-#' -   `Roman_Deities`
+#'   - `Roman_Deities`
 #' 
-#' -   `Scottish_Islands`
+#'   - `Scottish_Islands`
 #' 
-#' -   `US_Cities`
+#'   - `US_Cities`
 #' 
-#' -   `Wild_Cats`
+#'   - `Wild_Cats`
 #' 
 #' To obtain a generated host name, call `GetHostNameSuggestion`, which
 #' returns a host name based on the current theme.
@@ -402,12 +401,12 @@ opsworks_attach_elastic_load_balancer <- function(ElasticLoadBalancerName, Layer
 #' `UseOpsworksSecurityGroups` you can instead provide your own custom
 #' security groups. `UseOpsworksSecurityGroups` has the following settings:
 #' 
-#' -   True - AWS OpsWorks Stacks automatically associates the appropriate
+#'   - True - AWS OpsWorks Stacks automatically associates the appropriate
 #'     built-in security group with each layer (default setting). You can
 #'     associate additional security groups with a layer after you create
 #'     it but you cannot delete the built-in security group.
 #' 
-#' -   False - AWS OpsWorks Stacks does not associate built-in security
+#'   - False - AWS OpsWorks Stacks does not associate built-in security
 #'     groups with layers. You must create appropriate Amazon Elastic
 #'     Compute Cloud (Amazon EC2) security groups and associate a security
 #'     group with each layer that you create. However, you can still
@@ -442,11 +441,11 @@ opsworks_attach_elastic_load_balancer <- function(ElasticLoadBalancerName, Layer
 #' @param AgentVersion The default AWS OpsWorks Stacks agent version. You have the following
 #' options:
 #' 
-#' -   Auto-update - Set this parameter to `LATEST`. AWS OpsWorks Stacks
+#'   - Auto-update - Set this parameter to `LATEST`. AWS OpsWorks Stacks
 #'     automatically installs new agent versions on the stack's instances
 #'     as soon as they are available.
 #' 
-#' -   Fixed version - Set this parameter to your preferred agent version.
+#'   - Fixed version - Set this parameter to your preferred agent version.
 #'     To update the agent version, you must edit the stack configuration
 #'     and specify a new version. AWS OpsWorks Stacks then automatically
 #'     installs that version on the stack's instances.
@@ -783,26 +782,25 @@ opsworks_create_deployment <- function(StackId, AppId = NULL, InstanceIds = NULL
 #' @param Os The instance's operating system, which must be set to one of the
 #' following.
 #' 
-#' -   A supported Linux operating system: An Amazon Linux version, such as
-#'     `Amazon Linux 2018.03`, `Amazon Linux 2017.09`,
-#'     `Amazon Linux 2017.03`, `Amazon Linux 2016.09`,
-#'     `Amazon Linux 2016.03`, `Amazon Linux 2015.09`, or
-#'     `Amazon Linux 2015.03`.
+#'   - A supported Linux operating system: An Amazon Linux version, such as
+#'     `Amazon Linux 2018.03`, `Amazon Linux 2017.09`, `Amazon
+#'     Linux 2017.03`, `Amazon Linux 2016.09`, `Amazon Linux 2016.03`,
+#'     `Amazon Linux 2015.09`, or `Amazon Linux 2015.03`.
 #' 
-#' -   A supported Ubuntu operating system, such as `Ubuntu 16.04 LTS`,
+#'   - A supported Ubuntu operating system, such as `Ubuntu 16.04 LTS`,
 #'     `Ubuntu 14.04 LTS`, or `Ubuntu 12.04 LTS`.
 #' 
-#' -   `CentOS Linux 7`
+#'   - `CentOS Linux 7`
 #' 
-#' -   `Red Hat Enterprise Linux 7`
+#'   - `Red Hat Enterprise Linux 7`
 #' 
-#' -   A supported Windows operating system, such as
-#'     `Microsoft Windows Server 2012 R2 Base`,
-#'     `Microsoft Windows Server 2012 R2 with SQL Server Express`,
-#'     `Microsoft Windows Server 2012 R2 with SQL Server Standard`, or
-#'     `Microsoft Windows Server 2012 R2 with SQL Server Web`.
+#'   - A supported Windows operating system, such as `Microsoft Windows
+#'     Server 2012 R2 Base`, `Microsoft Windows Server 2012 R2 with SQL
+#'     Server Express`, `Microsoft Windows Server 2012 R2 with SQL Server
+#'     Standard`, or `Microsoft Windows Server 2012 R2 with SQL Server
+#'     Web`.
 #' 
-#' -   A custom AMI: `Custom`.
+#'   - A custom AMI: `Custom`.
 #' 
 #' For more information about the supported operating systems, see [AWS
 #' OpsWorks Stacks Operating
@@ -858,9 +856,9 @@ opsworks_create_deployment <- function(StackId, AppId = NULL, InstanceIds = NULL
 #' @param AgentVersion The default AWS OpsWorks Stacks agent version. You have the following
 #' options:
 #' 
-#' -   `INHERIT` - Use the stack's default agent version setting.
+#'   - `INHERIT` - Use the stack's default agent version setting.
 #' 
-#' -   *version_number* - Use the specified agent version. This value
+#'   - *version_number* - Use the specified agent version. This value
 #'     overrides the stack's default setting. To update the agent version,
 #'     edit the instance configuration and specify a new version. AWS
 #'     OpsWorks Stacks then automatically installs that version on the
@@ -999,7 +997,7 @@ opsworks_create_instance <- function(StackId, LayerIds, InstanceType, AutoScalin
 #' To create a cluster layer, set the `EcsClusterArn` attribute to the
 #' cluster's ARN.
 #' @param CloudWatchLogsConfiguration Specifies CloudWatch Logs configuration options for the layer. For more
-#' information, see CloudWatchLogsLogStream.
+#' information, see <span>CloudWatchLogsLogStream</span>.
 #' @param CustomInstanceProfileArn The ARN of an IAM profile to be used for the layer's EC2 instances. For
 #' more information about IAM ARNs, see [Using
 #' Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html).
@@ -1174,22 +1172,22 @@ opsworks_create_layer <- function(StackId, Type, Name, Shortname, Attributes = N
 #' parameter is, this also results in a stack with a *regional* endpoint.
 #' However, if the `--region` parameter is set to `us-east-1`, and the
 #' `--stack-region` parameter is set to one of the following, then the
-#' stack uses a legacy or *classic* region:
-#' `us-west-1, us-west-2, sa-east-1, eu-central-1, eu-west-1, ap-northeast-1, ap-southeast-1, ap-southeast-2`.
-#' In this case, the actual API endpoint of the stack is in `us-east-1`.
-#' Only the preceding regions are supported as classic regions in the
-#' `us-east-1` API endpoint. Because it is a best practice to choose the
-#' regional endpoint that is closest to where you manage AWS, we recommend
-#' that you use regional endpoints for new stacks. The AWS CLI common
-#' `--region` parameter always specifies a regional API endpoint; it cannot
-#' be used to specify a classic AWS OpsWorks Stacks region.
+#' stack uses a legacy or *classic* region: `us-west-1, us-west-2,
+#' sa-east-1, eu-central-1, eu-west-1, ap-northeast-1, ap-southeast-1,
+#' ap-southeast-2`. In this case, the actual API endpoint of the stack is
+#' in `us-east-1`. Only the preceding regions are supported as classic
+#' regions in the `us-east-1` API endpoint. Because it is a best practice
+#' to choose the regional endpoint that is closest to where you manage AWS,
+#' we recommend that you use regional endpoints for new stacks. The AWS CLI
+#' common `--region` parameter always specifies a regional API endpoint; it
+#' cannot be used to specify a classic AWS OpsWorks Stacks region.
 #' @param VpcId The ID of the VPC that the stack is to be launched into. The VPC must be
 #' in the stack's region. All instances are launched into this VPC. You
 #' cannot change the ID later.
 #' 
-#' -   If your account supports EC2-Classic, the default value is `no VPC`.
+#'   - If your account supports EC2-Classic, the default value is `no VPC`.
 #' 
-#' -   If your account does not support EC2-Classic, the default value is
+#'   - If your account does not support EC2-Classic, the default value is
 #'     the default VPC for the specified region.
 #' 
 #' If the VPC ID corresponds to a default VPC and you have specified either
@@ -1201,10 +1199,10 @@ opsworks_create_layer <- function(StackId, Type, Name, Shortname, Attributes = N
 #' 
 #' If you specify a nondefault VPC ID, note the following:
 #' 
-#' -   It must belong to a VPC in your account that is in the specified
+#'   - It must belong to a VPC in your account that is in the specified
 #'     region.
 #' 
-#' -   You must specify a value for `DefaultSubnetId`.
+#'   - You must specify a value for `DefaultSubnetId`.
 #' 
 #' For more information about how to use AWS OpsWorks Stacks with a VPC,
 #' see [Running a Stack in a
@@ -1226,26 +1224,25 @@ opsworks_create_layer <- function(StackId, Type, Name, Shortname, Attributes = N
 #' instance unless you specify a different operating system when you create
 #' the instance. You can specify one of the following.
 #' 
-#' -   A supported Linux operating system: An Amazon Linux version, such as
-#'     `Amazon Linux 2018.03`, `Amazon Linux 2017.09`,
-#'     `Amazon Linux 2017.03`, `Amazon Linux 2016.09`,
-#'     `Amazon Linux 2016.03`, `Amazon Linux 2015.09`, or
-#'     `Amazon Linux 2015.03`.
+#'   - A supported Linux operating system: An Amazon Linux version, such as
+#'     `Amazon Linux 2018.03`, `Amazon Linux 2017.09`, `Amazon
+#'     Linux 2017.03`, `Amazon Linux 2016.09`, `Amazon Linux 2016.03`,
+#'     `Amazon Linux 2015.09`, or `Amazon Linux 2015.03`.
 #' 
-#' -   A supported Ubuntu operating system, such as `Ubuntu 16.04 LTS`,
+#'   - A supported Ubuntu operating system, such as `Ubuntu 16.04 LTS`,
 #'     `Ubuntu 14.04 LTS`, or `Ubuntu 12.04 LTS`.
 #' 
-#' -   `CentOS Linux 7`
+#'   - `CentOS Linux 7`
 #' 
-#' -   `Red Hat Enterprise Linux 7`
+#'   - `Red Hat Enterprise Linux 7`
 #' 
-#' -   A supported Windows operating system, such as
-#'     `Microsoft Windows Server 2012 R2 Base`,
-#'     `Microsoft Windows Server 2012 R2 with SQL Server Express`,
-#'     `Microsoft Windows Server 2012 R2 with SQL Server Standard`, or
-#'     `Microsoft Windows Server 2012 R2 with SQL Server Web`.
+#'   - A supported Windows operating system, such as `Microsoft Windows
+#'     Server 2012 R2 Base`, `Microsoft Windows Server 2012 R2 with SQL
+#'     Server Express`, `Microsoft Windows Server 2012 R2 with SQL Server
+#'     Standard`, or `Microsoft Windows Server 2012 R2 with SQL Server
+#'     Web`.
 #' 
-#' -   A custom AMI: `Custom`. You specify the custom AMI you want to use
+#'   - A custom AMI: `Custom`. You specify the custom AMI you want to use
 #'     when you create instances. For more information, see [Using Custom
 #'     AMIs](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-custom-ami.html).
 #' 
@@ -1259,27 +1256,27 @@ opsworks_create_layer <- function(StackId, Type, Name, Shortname, Attributes = N
 #' names by appending integers to the layer's short name. The other themes
 #' are:
 #' 
-#' -   `Baked_Goods`
+#'   - `Baked_Goods`
 #' 
-#' -   `Clouds`
+#'   - `Clouds`
 #' 
-#' -   `Europe_Cities`
+#'   - `Europe_Cities`
 #' 
-#' -   `Fruits`
+#'   - `Fruits`
 #' 
-#' -   `Greek_Deities_and_Titans`
+#'   - `Greek_Deities_and_Titans`
 #' 
-#' -   `Legendary_creatures_from_Japan`
+#'   - `Legendary_creatures_from_Japan`
 #' 
-#' -   `Planets_and_Moons`
+#'   - `Planets_and_Moons`
 #' 
-#' -   `Roman_Deities`
+#'   - `Roman_Deities`
 #' 
-#' -   `Scottish_Islands`
+#'   - `Scottish_Islands`
 #' 
-#' -   `US_Cities`
+#'   - `US_Cities`
 #' 
-#' -   `Wild_Cats`
+#'   - `Wild_Cats`
 #' 
 #' To obtain a generated host name, call `GetHostNameSuggestion`, which
 #' returns a host name based on the current theme.
@@ -1322,12 +1319,12 @@ opsworks_create_layer <- function(StackId, Type, Name, Shortname, Attributes = N
 #' `UseOpsworksSecurityGroups` you can instead provide your own custom
 #' security groups. `UseOpsworksSecurityGroups` has the following settings:
 #' 
-#' -   True - AWS OpsWorks Stacks automatically associates the appropriate
+#'   - True - AWS OpsWorks Stacks automatically associates the appropriate
 #'     built-in security group with each layer (default setting). You can
 #'     associate additional security groups with a layer after you create
 #'     it, but you cannot delete the built-in security group.
 #' 
-#' -   False - AWS OpsWorks Stacks does not associate built-in security
+#'   - False - AWS OpsWorks Stacks does not associate built-in security
 #'     groups with layers. You must create appropriate EC2 security groups
 #'     and associate a security group with each layer that you create.
 #'     However, you can still manually associate a built-in security group
@@ -1360,11 +1357,11 @@ opsworks_create_layer <- function(StackId, Type, Name, Shortname, Attributes = N
 #' @param AgentVersion The default AWS OpsWorks Stacks agent version. You have the following
 #' options:
 #' 
-#' -   Auto-update - Set this parameter to `LATEST`. AWS OpsWorks Stacks
+#'   - Auto-update - Set this parameter to `LATEST`. AWS OpsWorks Stacks
 #'     automatically installs new agent versions on the stack's instances
 #'     as soon as they are available.
 #' 
-#' -   Fixed version - Set this parameter to your preferred agent version.
+#'   - Fixed version - Set this parameter to your preferred agent version.
 #'     To update the agent version, you must edit the stack configuration
 #'     and specify a new version. AWS OpsWorks Stacks then automatically
 #'     installs that version on the stack's instances.
@@ -4525,15 +4522,15 @@ opsworks_set_load_based_auto_scaling <- function(LayerId, Enable = NULL, UpScali
 #' @param Level The user's permission level, which must be set to one of the following
 #' strings. You cannot set your own permissions level.
 #' 
-#' -   `deny`
+#'   - `deny`
 #' 
-#' -   `show`
+#'   - `show`
 #' 
-#' -   `deploy`
+#'   - `deploy`
 #' 
-#' -   `manage`
+#'   - `manage`
 #' 
-#' -   `iam_only`
+#'   - `iam_only`
 #' 
 #' For more information about the permissions associated with these levels,
 #' see [Managing User
@@ -4861,20 +4858,20 @@ opsworks_stop_stack <- function(StackId) {
 #' @param Tags &#91;required&#93; A map that contains tag keys and tag values that are attached to a stack
 #' or layer.
 #' 
-#' -   The key cannot be empty.
+#'   - The key cannot be empty.
 #' 
-#' -   The key can be a maximum of 127 characters, and can contain only
+#'   - The key can be a maximum of 127 characters, and can contain only
 #'     Unicode letters, numbers, or separators, or the following special
 #'     characters: `+ - = . _ : /`
 #' 
-#' -   The value can be a maximum 255 characters, and contain only Unicode
+#'   - The value can be a maximum 255 characters, and contain only Unicode
 #'     letters, numbers, or separators, or the following special
 #'     characters: `+ - = . _ : /`
 #' 
-#' -   Leading and trailing white spaces are trimmed from both the key and
+#'   - Leading and trailing white spaces are trimmed from both the key and
 #'     value.
 #' 
-#' -   A maximum of 40 tags is allowed for any resource.
+#'   - A maximum of 40 tags is allowed for any resource.
 #'
 #' @return
 #' An empty list.
@@ -5243,24 +5240,23 @@ opsworks_update_elastic_ip <- function(ElasticIp, Name = NULL) {
 #' @param Os The instance's operating system, which must be set to one of the
 #' following. You cannot update an instance that is using a custom AMI.
 #' 
-#' -   A supported Linux operating system: An Amazon Linux version, such as
-#'     `Amazon Linux 2018.03`, `Amazon Linux 2017.09`,
-#'     `Amazon Linux 2017.03`, `Amazon Linux 2016.09`,
-#'     `Amazon Linux 2016.03`, `Amazon Linux 2015.09`, or
-#'     `Amazon Linux 2015.03`.
+#'   - A supported Linux operating system: An Amazon Linux version, such as
+#'     `Amazon Linux 2018.03`, `Amazon Linux 2017.09`, `Amazon
+#'     Linux 2017.03`, `Amazon Linux 2016.09`, `Amazon Linux 2016.03`,
+#'     `Amazon Linux 2015.09`, or `Amazon Linux 2015.03`.
 #' 
-#' -   A supported Ubuntu operating system, such as `Ubuntu 16.04 LTS`,
+#'   - A supported Ubuntu operating system, such as `Ubuntu 16.04 LTS`,
 #'     `Ubuntu 14.04 LTS`, or `Ubuntu 12.04 LTS`.
 #' 
-#' -   `CentOS Linux 7`
+#'   - `CentOS Linux 7`
 #' 
-#' -   `Red Hat Enterprise Linux 7`
+#'   - `Red Hat Enterprise Linux 7`
 #' 
-#' -   A supported Windows operating system, such as
-#'     `Microsoft Windows Server 2012 R2 Base`,
-#'     `Microsoft Windows Server 2012 R2 with SQL Server Express`,
-#'     `Microsoft Windows Server 2012 R2 with SQL Server Standard`, or
-#'     `Microsoft Windows Server 2012 R2 with SQL Server Web`.
+#'   - A supported Windows operating system, such as `Microsoft Windows
+#'     Server 2012 R2 Base`, `Microsoft Windows Server 2012 R2 with SQL
+#'     Server Express`, `Microsoft Windows Server 2012 R2 with SQL Server
+#'     Standard`, or `Microsoft Windows Server 2012 R2 with SQL Server
+#'     Web`.
 #' 
 #' For more information about supported operating systems, see [AWS
 #' OpsWorks Stacks Operating
@@ -5301,9 +5297,9 @@ opsworks_update_elastic_ip <- function(ElasticIp, Name = NULL) {
 #' @param AgentVersion The default AWS OpsWorks Stacks agent version. You have the following
 #' options:
 #' 
-#' -   `INHERIT` - Use the stack's default agent version setting.
+#'   - `INHERIT` - Use the stack's default agent version setting.
 #' 
-#' -   *version_number* - Use the specified agent version. This value
+#'   - *version_number* - Use the specified agent version. This value
 #'     overrides the stack's default setting. To update the agent version,
 #'     you must edit the instance configuration and specify a new version.
 #'     AWS OpsWorks Stacks then automatically installs that version on the
@@ -5392,7 +5388,7 @@ opsworks_update_instance <- function(InstanceId, LayerIds = NULL, InstanceType =
 #' @param Attributes One or more user-defined key/value pairs to be added to the stack
 #' attributes.
 #' @param CloudWatchLogsConfiguration Specifies CloudWatch Logs configuration options for the layer. For more
-#' information, see CloudWatchLogsLogStream.
+#' information, see <span>CloudWatchLogsLogStream</span>.
 #' @param CustomInstanceProfileArn The ARN of an IAM profile to be used for all of the layer's EC2
 #' instances. For more information about IAM ARNs, see [Using
 #' Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html).
@@ -5652,26 +5648,25 @@ opsworks_update_rds_db_instance <- function(RdsDbInstanceArn, DbUser = NULL, DbP
 #' Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html).
 #' @param DefaultOs The stack's operating system, which must be set to one of the following:
 #' 
-#' -   A supported Linux operating system: An Amazon Linux version, such as
-#'     `Amazon Linux 2018.03`, `Amazon Linux 2017.09`,
-#'     `Amazon Linux 2017.03`, `Amazon Linux 2016.09`,
-#'     `Amazon Linux 2016.03`, `Amazon Linux 2015.09`, or
-#'     `Amazon Linux 2015.03`.
+#'   - A supported Linux operating system: An Amazon Linux version, such as
+#'     `Amazon Linux 2018.03`, `Amazon Linux 2017.09`, `Amazon
+#'     Linux 2017.03`, `Amazon Linux 2016.09`, `Amazon Linux 2016.03`,
+#'     `Amazon Linux 2015.09`, or `Amazon Linux 2015.03`.
 #' 
-#' -   A supported Ubuntu operating system, such as `Ubuntu 16.04 LTS`,
+#'   - A supported Ubuntu operating system, such as `Ubuntu 16.04 LTS`,
 #'     `Ubuntu 14.04 LTS`, or `Ubuntu 12.04 LTS`.
 #' 
-#' -   `CentOS Linux 7`
+#'   - `CentOS Linux 7`
 #' 
-#' -   `Red Hat Enterprise Linux 7`
+#'   - `Red Hat Enterprise Linux 7`
 #' 
-#' -   A supported Windows operating system, such as
-#'     `Microsoft Windows Server 2012 R2 Base`,
-#'     `Microsoft Windows Server 2012 R2 with SQL Server Express`,
-#'     `Microsoft Windows Server 2012 R2 with SQL Server Standard`, or
-#'     `Microsoft Windows Server 2012 R2 with SQL Server Web`.
+#'   - A supported Windows operating system, such as `Microsoft Windows
+#'     Server 2012 R2 Base`, `Microsoft Windows Server 2012 R2 with SQL
+#'     Server Express`, `Microsoft Windows Server 2012 R2 with SQL Server
+#'     Standard`, or `Microsoft Windows Server 2012 R2 with SQL Server
+#'     Web`.
 #' 
-#' -   A custom AMI: `Custom`. You specify the custom AMI you want to use
+#'   - A custom AMI: `Custom`. You specify the custom AMI you want to use
 #'     when you create instances. For more information about how to use
 #'     custom AMIs with OpsWorks, see [Using Custom
 #'     AMIs](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-custom-ami.html).
@@ -5686,27 +5681,27 @@ opsworks_update_rds_db_instance <- function(RdsDbInstanceArn, DbUser = NULL, DbP
 #' names by appending integers to the layer's short name. The other themes
 #' are:
 #' 
-#' -   `Baked_Goods`
+#'   - `Baked_Goods`
 #' 
-#' -   `Clouds`
+#'   - `Clouds`
 #' 
-#' -   `Europe_Cities`
+#'   - `Europe_Cities`
 #' 
-#' -   `Fruits`
+#'   - `Fruits`
 #' 
-#' -   `Greek_Deities_and_Titans`
+#'   - `Greek_Deities_and_Titans`
 #' 
-#' -   `Legendary_creatures_from_Japan`
+#'   - `Legendary_creatures_from_Japan`
 #' 
-#' -   `Planets_and_Moons`
+#'   - `Planets_and_Moons`
 #' 
-#' -   `Roman_Deities`
+#'   - `Roman_Deities`
 #' 
-#' -   `Scottish_Islands`
+#'   - `Scottish_Islands`
 #' 
-#' -   `US_Cities`
+#'   - `US_Cities`
 #' 
-#' -   `Wild_Cats`
+#'   - `Wild_Cats`
 #' 
 #' To obtain a generated host name, call `GetHostNameSuggestion`, which
 #' returns a host name based on the current theme.
@@ -5769,12 +5764,12 @@ opsworks_update_rds_db_instance <- function(RdsDbInstanceArn, DbUser = NULL, DbP
 #' security groups instead of using the built-in groups.
 #' `UseOpsworksSecurityGroups` has the following settings:
 #' 
-#' -   True - AWS OpsWorks Stacks automatically associates the appropriate
+#'   - True - AWS OpsWorks Stacks automatically associates the appropriate
 #'     built-in security group with each layer (default setting). You can
 #'     associate additional security groups with a layer after you create
 #'     it, but you cannot delete the built-in security group.
 #' 
-#' -   False - AWS OpsWorks Stacks does not associate built-in security
+#'   - False - AWS OpsWorks Stacks does not associate built-in security
 #'     groups with layers. You must create appropriate EC2 security groups
 #'     and associate a security group with each layer that you create.
 #'     However, you can still manually associate a built-in security group
@@ -5786,11 +5781,11 @@ opsworks_update_rds_db_instance <- function(RdsDbInstanceArn, DbUser = NULL, DbP
 #' @param AgentVersion The default AWS OpsWorks Stacks agent version. You have the following
 #' options:
 #' 
-#' -   Auto-update - Set this parameter to `LATEST`. AWS OpsWorks Stacks
+#'   - Auto-update - Set this parameter to `LATEST`. AWS OpsWorks Stacks
 #'     automatically installs new agent versions on the stack's instances
 #'     as soon as they are available.
 #' 
-#' -   Fixed version - Set this parameter to your preferred agent version.
+#'   - Fixed version - Set this parameter to your preferred agent version.
 #'     To update the agent version, you must edit the stack configuration
 #'     and specify a new version. AWS OpsWorks Stacks then automatically
 #'     installs that version on the stack's instances.

@@ -18,10 +18,10 @@ translation job.}
 
 \item{DataAccessRoleArn}{[required] The Amazon Resource Name (ARN) of an AWS Identity Access and Management
 (IAM) role that grants Amazon Translate read access to your input data.
-For more nformation, see identity-and-access-management.}
+For more nformation, see <span>identity-and-access-management</span>.}
 
 \item{SourceLanguageCode}{[required] The language code of the input language. For a list of language codes,
-see what-is-languages.
+see <span>what-is-languages</span>.
 
 Amazon Translate does not automatically detect a source language during
 batch translation jobs.}
@@ -49,7 +49,7 @@ A list with the following syntax:\preformatted{list(
 \description{
 Starts an asynchronous batch translation job. Batch translation jobs can
 be used to translate large volumes of text across multiple documents at
-once. For more information, see async.
+once. For more information, see <span>async</span>.
 
 Batch translation jobs can be described with the
 \code{\link[=translate_describe_text_translation_job]{describe_text_translation_job}}

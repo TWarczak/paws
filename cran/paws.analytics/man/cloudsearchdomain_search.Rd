@@ -27,7 +27,7 @@ You specify the expressions in JSON using the form
 \code{{"EXPRESSIONNAME":"EXPRESSION"}}. You can define and use multiple
 expressions in a search request. For example:
 
-\verb{\{"expression1":"_score*rating", "expression2":"(1/rank)*year"\}}
+\verb{ \{"expression1":"_score*rating", "expression2":"(1/rank)*year"\} }
 
 For information about the variables, operators, and functions you can
 use in expressions, see \href{https://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-expressions.html#writing-expressions}{Writing Expressions}
@@ -48,9 +48,9 @@ in the \emph{Amazon CloudSearch Developer Guide}. Buckets are returned in
 the order they are specified in the request. The \code{sort} and \code{size}
 options are not valid if you specify \code{buckets}.
 \item \code{size} specifies the maximum number of facets to include in the
-results. By default, Amazon CloudSearch returns counts for the
-top 10. The \code{size} parameter is only valid when you specify the
-\code{sort} option; it cannot be used in conjunction with \code{buckets}.
+results. By default, Amazon CloudSearch returns counts for the top
+10. The \code{size} parameter is only valid when you specify the \code{sort}
+option; it cannot be used in conjunction with \code{buckets}.
 \item \code{sort} specifies how you want to sort the facets in the results:
 \code{bucket} or \code{count}. Specify \code{bucket} to sort alphabetically or
 numerically by facet value (in ascending order). Specify \code{count} to
@@ -67,7 +67,7 @@ To count particular buckets of values, use the \code{buckets} option. For
 example, the following request uses the \code{buckets} option to calculate
 and return facet counts by decade.
 
-\verb{\\\{"year":\\\{"buckets":["[1970,1979]","[1980,1989]","[1990,1999]","[2000,2009]","[2010,\\\}"]\\\}\\\}}
+\verb{ \\\{"year":\\\{"buckets":["[1970,1979]","[1980,1989]","[1990,1999]","[2000,2009]","[2010,\\\}"]\\\}\\\}}
 
 To sort facets by facet count, use the \code{count} option. For example, the
 following request sets the \code{sort} option to \code{count} to sort the facet
@@ -75,13 +75,13 @@ values by facet count, with the facet values that have the most matching
 documents listed first. Setting the \code{size} option to 3 returns only the
 top three facet values.
 
-\verb{\{"year":\{"sort":"count","size":3\}\}}
+\verb{ \{"year":\{"sort":"count","size":3\}\} }
 
 To sort the facets by value, use the \code{bucket} option. For example, the
 following request sets the \code{sort} option to \code{bucket} to sort the facet
 values numerically by year, with earliest year listed first.
 
-\code{{"year":{"sort":"bucket"}}}
+\code{ {"year":{"sort":"bucket"}} }
 
 For more information, see \href{https://docs.aws.amazon.com/cloudsearch/latest/developerguide/faceting.html}{Getting and Using Facet Information}
 in the \emph{Amazon CloudSearch Developer Guide}.}
@@ -189,9 +189,9 @@ string. Similarly, disabling \code{prefix} disables the wildcard operator
 (\code{*}) and disabling \code{phrase} disables the ability to search for
 phrases by enclosing phrases in double quotes. Disabling precedence
 disables the ability to control order of precedence using
-parentheses. Disabling \code{near} disables the ability to use the ~
+parentheses. Disabling \code{near} disables the ability to use the \~
 operator to perform a sloppy phrase search. Disabling the \code{fuzzy}
-operator disables the ability to use the ~ operator to perform a
+operator disables the ability to use the \~ operator to perform a
 fuzzy search. \code{escape} disables the ability to use a backslash (\verb{\\})
 to escape special characters within the search string. Disabling
 whitespace is an advanced option that prevents the parser from
@@ -211,12 +211,11 @@ You can specify a weight for each field to boost that score. The
 the search string and still be boosted. To specify a field weight,
 append a caret (\code{^}) symbol and the weight to the field name. For
 example, to boost phrase matches in the \code{title} field over the
-\code{abstract} field, you could specify:
-\verb{"phraseFields":["title^3", "plot"]} Valid values: The name of any
-\code{text} or \code{text-array} field and an optional numeric value greater
-than zero. Default: No fields. If you don't specify any fields with
-\code{phraseFields}, proximity scoring is disabled even if \code{phraseSlop}
-is specified. Valid for: \code{dismax}.
+\code{abstract} field, you could specify: \verb{"phraseFields":["title^3", "plot"]} Valid values: The name of any \code{text} or \code{text-array} field
+and an optional numeric value greater than zero. Default: No fields.
+If you don't specify any fields with \code{phraseFields}, proximity
+scoring is disabled even if \code{phraseSlop} is specified. Valid for:
+\code{dismax}.
 \item \code{phraseSlop}: An integer value that specifies how much matches can
 deviate from the search phrase and still be boosted according to the
 weights specified in the \code{phraseFields} option; for example,
@@ -228,8 +227,8 @@ match can deviate from the search phrase when the phrase is enclosed
 in double quotes in the search string. (Phrases that exceed this
 proximity distance are not considered a match.) For example, to
 specify a slop of three for dismax phrase queries, you would specify
-\code{"explicitPhraseSlop":3}. Valid values: positive integers.
-Default: 0. Valid for: \code{dismax}.
+\code{"explicitPhraseSlop":3}. Valid values: positive integers. Default:
+0. Valid for: \code{dismax}.
 \item \code{tieBreaker}: When a term in the search string is found in a
 document's field, a score is calculated for that field based on how
 common the word is in that field compared to other documents. If the
@@ -240,12 +239,11 @@ lower-scoring fields to contribute to the document's score. That
 way, if two documents have the same max field score for a particular
 term, the score for the document that has matches in more fields
 will be higher. The formula for calculating the score with a
-tieBreaker is
-\verb{(max field score) + (tieBreaker) * (sum of the scores for the rest of the matching fields)}.
-Set \code{tieBreaker} to 0 to disregard all but the highest scoring field
-(pure max): \code{"tieBreaker":0}. Set to 1 to sum the scores from all
-fields (pure sum): \code{"tieBreaker":1}. Valid values: 0.0 to 1.0.
-Default: 0.0. Valid for: \code{dismax}.
+tieBreaker is \verb{(max field score) + (tieBreaker) * (sum of the scores for the rest of the matching fields)}. Set \code{tieBreaker} to 0 to
+disregard all but the highest scoring field (pure max):
+\code{"tieBreaker":0}. Set to 1 to sum the scores from all fields (pure
+sum): \code{"tieBreaker":1}. Valid values: 0.0 to 1.0. Default: 0.0.
+Valid for: \code{dismax}.
 }}
 
 \item{queryParser}{Specifies which query parser to use to process the request. If

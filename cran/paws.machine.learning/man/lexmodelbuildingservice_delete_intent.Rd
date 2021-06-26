@@ -20,7 +20,7 @@ operation.
 
 You can delete a version of an intent only if it is not referenced. To
 delete an intent that is referred to in one or more bots (see
-how-it-works), you must remove those references first.
+<span>how-it-works</span>), you must remove those references first.
 
 If you get the \code{ResourceInUseException} exception, it provides an
 example reference that shows where the intent is referenced. To remove

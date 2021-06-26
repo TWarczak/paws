@@ -471,7 +471,8 @@ However, you can invoke the
 \code{\link[=firehose_delete_delivery_stream]{delete_delivery_stream}} operation to
 delete it. If the status is \code{DELETING_FAILED}, you can force deletion by
 invoking \code{\link[=firehose_delete_delivery_stream]{delete_delivery_stream}}
-again but with DeleteDeliveryStreamInput$AllowForceDelete set to true.
+again but with <span>DeleteDeliveryStreamInput$AllowForceDelete</span>
+set to true.
 }
 \section{Request syntax}{
 \preformatted{svc$describe_delivery_stream(

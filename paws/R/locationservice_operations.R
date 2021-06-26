@@ -18,7 +18,7 @@ NULL
 #' associated to tracker resource. Used when you need to specify a resource
 #' across all AWS.
 #' 
-#' -   Format example:
+#'   - Format example:
 #'     `arn:partition:service:region:account-id:resource-type:resource-id`
 #' @param TrackerName &#91;required&#93; The name of the tracker resource to be associated with a geofence
 #' collection.
@@ -198,7 +198,7 @@ locationservice_batch_evaluate_geofences <- function(CollectionName, DevicePosit
 #'
 #' @param DeviceIds &#91;required&#93; Devices whose position you want to retrieve.
 #' 
-#' -   For example, for two devices:
+#'   - For example, for two devices:
 #'     `device-ids=DeviceId1&device-ids=DeviceId2`
 #' @param TrackerName &#91;required&#93; The tracker resource retrieving the device position.
 #'
@@ -427,23 +427,23 @@ locationservice_batch_update_device_position <- function(TrackerName, Updates) {
 #' 
 #' Requirements:
 #' 
-#' -   Contain only alphanumeric characters (A–Z, a–z, 0-9), hyphens (-),
+#'   - Contain only alphanumeric characters (A–Z, a–z, 0-9), hyphens (-),
 #'     and underscores (_).
 #' 
-#' -   Must be a unique geofence collection name.
+#'   - Must be a unique geofence collection name.
 #' 
-#' -   No spaces allowed. For example, `ExampleGeofenceCollection`.
+#'   - No spaces allowed. For example, `ExampleGeofenceCollection`.
 #' @param Description An optional description for the geofence collection.
 #' @param PricingPlan &#91;required&#93; Specifies the pricing plan for your geofence collection. There's three
 #' pricing plan options:
 #' 
-#' -   `RequestBasedUsage` — Selects the "Request-Based Usage" pricing
+#'   - `RequestBasedUsage` — Selects the "Request-Based Usage" pricing
 #'     plan.
 #' 
-#' -   `MobileAssetTracking` — Selects the "Mobile Asset Tracking" pricing
+#'   - `MobileAssetTracking` — Selects the "Mobile Asset Tracking" pricing
 #'     plan.
 #' 
-#' -   `MobileAssetManagement` — Selects the "Mobile Asset Management"
+#'   - `MobileAssetManagement` — Selects the "Mobile Asset Management"
 #'     pricing plan.
 #' 
 #' For additional details and restrictions on each pricing plan option, see
@@ -514,22 +514,22 @@ locationservice_create_geofence_collection <- function(CollectionName, Descripti
 #' 
 #' Requirements:
 #' 
-#' -   Must contain only alphanumeric characters (A–Z, a–z, 0–9), hyphens
+#'   - Must contain only alphanumeric characters (A–Z, a–z, 0–9), hyphens
 #'     (-), and underscores (_).
 #' 
-#' -   Must be a unique map resource name.
+#'   - Must be a unique map resource name.
 #' 
-#' -   No spaces allowed. For example, `ExampleMap`.
+#'   - No spaces allowed. For example, `ExampleMap`.
 #' @param PricingPlan &#91;required&#93; Specifies the pricing plan for your map resource. There's three pricing
 #' plan options:
 #' 
-#' -   `RequestBasedUsage` — Selects the "Request-Based Usage" pricing
+#'   - `RequestBasedUsage` — Selects the "Request-Based Usage" pricing
 #'     plan.
 #' 
-#' -   `MobileAssetTracking` — Selects the "Mobile Asset Tracking" pricing
+#'   - `MobileAssetTracking` — Selects the "Mobile Asset Tracking" pricing
 #'     plan.
 #' 
-#' -   `MobileAssetManagement` — Selects the "Mobile Asset Management"
+#'   - `MobileAssetManagement` — Selects the "Mobile Asset Management"
 #'     pricing plan.
 #' 
 #' For additional details and restrictions on each pricing plan option, see
@@ -609,22 +609,22 @@ locationservice_create_map <- function(Configuration, Description = NULL, MapNam
 #' 
 #' Requirements:
 #' 
-#' -   Contain only alphanumeric characters (A-Z, a-z, 0-9) , hyphens (-)
+#'   - Contain only alphanumeric characters (A-Z, a-z, 0-9) , hyphens (-)
 #'     and underscores (_) ).
 #' 
-#' -   Must be a unique Place index resource name.
+#'   - Must be a unique Place index resource name.
 #' 
-#' -   No spaces allowed. For example, `ExamplePlaceIndex`.
+#'   - No spaces allowed. For example, `ExamplePlaceIndex`.
 #' @param PricingPlan &#91;required&#93; Specifies the pricing plan for your Place index resource. There's three
 #' pricing plan options:
 #' 
-#' -   `RequestBasedUsage` — Selects the "Request-Based Usage" pricing
+#'   - `RequestBasedUsage` — Selects the "Request-Based Usage" pricing
 #'     plan.
 #' 
-#' -   `MobileAssetTracking` — Selects the "Mobile Asset Tracking" pricing
+#'   - `MobileAssetTracking` — Selects the "Mobile Asset Tracking" pricing
 #'     plan.
 #' 
-#' -   `MobileAssetManagement` — Selects the "Mobile Asset Management"
+#'   - `MobileAssetManagement` — Selects the "Mobile Asset Management"
 #'     pricing plan.
 #' 
 #' For additional details and restrictions on each pricing plan option, see
@@ -690,13 +690,13 @@ locationservice_create_place_index <- function(DataSource, DataSourceConfigurati
 #' @param PricingPlan &#91;required&#93; Specifies the pricing plan for your tracker resource. There's three
 #' pricing plan options:
 #' 
-#' -   `RequestBasedUsage` — Selects the "Request-Based Usage" pricing
+#'   - `RequestBasedUsage` — Selects the "Request-Based Usage" pricing
 #'     plan.
 #' 
-#' -   `MobileAssetTracking` — Selects the "Mobile Asset Tracking" pricing
+#'   - `MobileAssetTracking` — Selects the "Mobile Asset Tracking" pricing
 #'     plan.
 #' 
-#' -   `MobileAssetManagement` — Selects the "Mobile Asset Management"
+#'   - `MobileAssetManagement` — Selects the "Mobile Asset Management"
 #'     pricing plan.
 #' 
 #' For additional details and restrictions on each pricing plan option, see
@@ -706,12 +706,12 @@ locationservice_create_place_index <- function(DataSource, DataSourceConfigurati
 #' 
 #' Requirements:
 #' 
-#' -   Contain only alphanumeric characters (A-Z, a-z, 0-9) , hyphens (-)
+#'   - Contain only alphanumeric characters (A-Z, a-z, 0-9) , hyphens (-)
 #'     and underscores (_).
 #' 
-#' -   Must be a unique tracker resource name.
+#'   - Must be a unique tracker resource name.
 #' 
-#' -   No spaces allowed. For example, `ExampleTracker`.
+#'   - No spaces allowed. For example, `ExampleTracker`.
 #'
 #' @return
 #' A list with the following syntax:
@@ -1168,7 +1168,7 @@ locationservice_describe_tracker <- function(TrackerName) {
 #' disassociated from the tracker resource. Used when you need to specify a
 #' resource across all AWS.
 #' 
-#' -   Format example:
+#'   - Format example:
 #'     `arn:partition:service:region:account-id:resource-type:resource-id`
 #' @param TrackerName &#91;required&#93; The name of the tracker resource to be dissociated from the consumer.
 #'
@@ -1275,21 +1275,21 @@ locationservice_get_device_position <- function(DeviceId, TrackerName) {
 #'   NextToken, StartTimeInclusive, TrackerName)
 #'
 #' @param DeviceId &#91;required&#93; The device whose position history you want to retrieve.
-#' @param EndTimeExclusive Specify the end time for the position history in [ISO
-#' 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format:
-#' `YYYY-MM-DDThh:mm:ss.sssZ`.
+#' @param EndTimeExclusive Specify the end time for the position history in
+#' [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html)
+#' format: `YYYY-MM-DDThh:mm:ss.sssZ`.
 #' 
-#' -   The given time for `EndTimeExclusive` must be after the time for
+#'   - The given time for `EndTimeExclusive` must be after the time for
 #'     `StartTimeInclusive`.
 #' @param NextToken The pagination token specifying which page of results to return in the
 #' response. If no token is provided, the default page is the first page.
 #' 
 #' Default value: `null`
-#' @param StartTimeInclusive Specify the start time for the position history in [ISO
-#' 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format:
-#' `YYYY-MM-DDThh:mm:ss.sssZ`.
+#' @param StartTimeInclusive Specify the start time for the position history in
+#' [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html)
+#' format: `YYYY-MM-DDThh:mm:ss.sssZ`.
 #' 
-#' -   The given time for `EndTimeExclusive` must be after the time for
+#'   - The given time for `EndTimeExclusive` must be after the time for
 #'     `StartTimeInclusive`.
 #' @param TrackerName &#91;required&#93; The tracker resource receiving the request for the device position
 #' history.
@@ -1480,16 +1480,16 @@ locationservice_get_map_glyphs <- function(FontStack, FontUnicodeRange, MapName)
 #' @param FileName &#91;required&#93; The name of the sprite ﬁle. Use the following ﬁle names for the sprite
 #' sheet:
 #' 
-#' -   `sprites.png`
+#'   - `sprites.png`
 #' 
-#' -   `sprites@@2x.png` for high pixel density displays
+#'   - `sprites@@2x.png` for high pixel density displays
 #' 
 #' For the JSON document contain image offsets. Use the following ﬁle
 #' names:
 #' 
-#' -   `sprites.json`
+#'   - `sprites.json`
 #' 
-#' -   `sprites@@2x.json` for high pixel density displays
+#'   - `sprites@@2x.json` for high pixel density displays
 #' @param MapName &#91;required&#93; The map resource associated with the sprite ﬁle.
 #'
 #' @return
@@ -2124,9 +2124,9 @@ locationservice_put_geofence <- function(CollectionName, GeofenceId, Geometry) {
 #' @param Position &#91;required&#93; Specifies a coordinate for the query defined by a longitude, and
 #' latitude.
 #' 
-#' -   The first position is the X coordinate, or longitude.
+#'   - The first position is the X coordinate, or longitude.
 #' 
-#' -   The second position is the Y coordinate, or latitude.
+#'   - The second position is the Y coordinate, or latitude.
 #' 
 #' For example, `position=xLongitude&position=yLatitude` .
 #'
@@ -2227,9 +2227,9 @@ locationservice_search_place_index_for_position <- function(IndexName, MaxResult
 #' @param BiasPosition Searches for results closest to the given position. An optional
 #' parameter defined by longitude, and latitude.
 #' 
-#' -   The first `bias` position is the X coordinate, or longitude.
+#'   - The first `bias` position is the X coordinate, or longitude.
 #' 
-#' -   The second `bias` position is the Y coordinate, or latitude.
+#'   - The second `bias` position is the Y coordinate, or latitude.
 #' 
 #' For example, `bias=xLongitude&bias=yLatitude`.
 #' @param FilterBBox Filters the results by returning only Places within the provided
@@ -2237,27 +2237,27 @@ locationservice_search_place_index_for_position <- function(IndexName, MaxResult
 #' 
 #' The first 2 `bbox` parameters describe the lower southwest corner:
 #' 
-#' -   The first `bbox` position is the X coordinate or longitude of the
+#'   - The first `bbox` position is the X coordinate or longitude of the
 #'     lower southwest corner.
 #' 
-#' -   The second `bbox` position is the Y coordinate or latitude of the
+#'   - The second `bbox` position is the Y coordinate or latitude of the
 #'     lower southwest corner.
 #' 
 #' For example, `bbox=xLongitudeSW&bbox=yLatitudeSW`.
 #' 
 #' The next `bbox` parameters describe the upper northeast corner:
 #' 
-#' -   The third `bbox` position is the X coordinate, or longitude of the
+#'   - The third `bbox` position is the X coordinate, or longitude of the
 #'     upper northeast corner.
 #' 
-#' -   The fourth `bbox` position is the Y coordinate, or longitude of the
+#'   - The fourth `bbox` position is the Y coordinate, or longitude of the
 #'     upper northeast corner.
 #' 
 #' For example, `bbox=xLongitudeNE&bbox=yLatitudeNE`
 #' @param FilterCountries Limits the search to the given a list of countries/regions. An optional
 #' parameter.
 #' 
-#' -   Use the [ISO 3166](https://www.iso.org/iso-3166-country-codes.html)
+#'   - Use the [ISO 3166](https://www.iso.org/iso-3166-country-codes.html)
 #'     3-digit country code. For example, Australia uses three upper-case
 #'     characters: `AUS`.
 #' @param IndexName &#91;required&#93; The name of the Place index resource you want to use for the search.

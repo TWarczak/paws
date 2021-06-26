@@ -17,8 +17,8 @@ Possible routing types include the following:
 type when routing to active fleets.
 \item \strong{TERMINAL} -- The alias does not resolve to a fleet but instead
 can be used to display a message to the user. A terminal alias
-throws a TerminalRoutingStrategyException with the RoutingStrategy
-message embedded.
+throws a TerminalRoutingStrategyException with the
+<span>RoutingStrategy</span> message embedded.
 }}
 
 \item{Name}{A descriptive label that is associated with an alias. Alias names do not

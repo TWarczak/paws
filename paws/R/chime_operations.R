@@ -361,7 +361,7 @@ chime_batch_create_room_membership <- function(AccountId, RoomId, MembershipItem
 }
 .chime$operations$batch_create_room_membership <- chime_batch_create_room_membership
 
-#' Moves phone numbers into the Deletion queue
+#' Moves phone numbers into the DELETION QUEUE
 #'
 #' @description
 #' Moves phone numbers into the **Deletion queue**. Phone numbers must be
@@ -631,9 +631,9 @@ chime_batch_update_phone_number <- function(UpdatePhoneNumberRequestItems) {
 #' 20 users for the specified Amazon Chime account
 #'
 #' @description
-#' Updates user details within the UpdateUserRequestItem object for up to
-#' 20 users for the specified Amazon Chime account. Currently, only
-#' `LicenseType` updates are supported for this action.
+#' Updates user details within the <span>UpdateUserRequestItem</span>
+#' object for up to 20 users for the specified Amazon Chime account.
+#' Currently, only `LicenseType` updates are supported for this action.
 #'
 #' @usage
 #' chime_batch_update_user(AccountId, UpdateUserRequestItems)
@@ -818,9 +818,9 @@ chime_create_app_instance <- function(Name, Metadata = NULL, ClientRequestToken)
 #' Promotes an `AppInstanceUser` to an `AppInstanceAdmin`. The promoted
 #' user can perform the following actions.
 #' 
-#' -   `ChannelModerator` actions across all channels in the app instance.
+#'   - `ChannelModerator` actions across all channels in the app instance.
 #' 
-#' -   [`delete_channel_message`][chime_delete_channel_message] actions.
+#'   - [`delete_channel_message`][chime_delete_channel_message] actions.
 #' 
 #' Only an `AppInstanceUser` can be promoted to an `AppInstanceAdmin` role.
 #'
@@ -1186,22 +1186,22 @@ chime_create_channel_ban <- function(ChannelArn, MemberArn) {
 #' Adds a user to a channel. The `InvitedBy` response field is derived from
 #' the request header. A channel member can:
 #' 
-#' -   List messages
+#'   - List messages
 #' 
-#' -   Send messages
+#'   - Send messages
 #' 
-#' -   Receive messages
+#'   - Receive messages
 #' 
-#' -   Edit their own messages
+#'   - Edit their own messages
 #' 
-#' -   Leave the channel
+#'   - Leave the channel
 #' 
 #' Privacy settings impact this action as follows:
 #' 
-#' -   Public Channels: You do not need to be a member to list messages,
+#'   - Public Channels: You do not need to be a member to list messages,
 #'     but you must be a member to send messages.
 #' 
-#' -   Private Channels: You must be a member to list or send messages.
+#'   - Private Channels: You must be a member to list or send messages.
 #'
 #' @usage
 #' chime_create_channel_membership(ChannelArn, MemberArn, Type)
@@ -1262,15 +1262,15 @@ chime_create_channel_membership <- function(ChannelArn, MemberArn, Type) {
 #' @description
 #' Creates a new `ChannelModerator`. A channel moderator can:
 #' 
-#' -   Add and remove other members of the channel.
+#'   - Add and remove other members of the channel.
 #' 
-#' -   Add and remove other moderators of the channel.
+#'   - Add and remove other moderators of the channel.
 #' 
-#' -   Add and remove user bans for the channel.
+#'   - Add and remove user bans for the channel.
 #' 
-#' -   Redact messages in the channel.
+#'   - Redact messages in the channel.
 #' 
-#' -   List messages in the channel.
+#'   - List messages in the channel.
 #'
 #' @usage
 #' chime_create_channel_moderator(ChannelArn, ChannelModeratorArn)
@@ -1441,8 +1441,8 @@ chime_create_meeting <- function(ClientRequestToken, ExternalMeetingId = NULL, M
 #' @param FromPhoneNumber &#91;required&#93; Phone number used as the caller ID when the remote party receives a
 #' call.
 #' @param ToPhoneNumber &#91;required&#93; Phone number called when inviting someone to a meeting.
-#' @param JoinToken &#91;required&#93; Token used by the Amazon Chime SDK attendee. Call the CreateAttendee API
-#' to get a join token.
+#' @param JoinToken &#91;required&#93; Token used by the Amazon Chime SDK attendee. Call the
+#' <span>CreateAttendee API</span> to get a join token.
 #'
 #' @return
 #' A list with the following syntax:
@@ -2197,10 +2197,10 @@ chime_create_user <- function(AccountId, Username = NULL, Email = NULL, UserType
 #' account. You can choose to create an Amazon Chime Voice Connector in a
 #' specific AWS Region.
 #' 
-#' Enabling CreateVoiceConnectorRequest$RequireEncryption configures your
-#' Amazon Chime Voice Connector to use TLS transport for SIP signaling and
-#' Secure RTP (SRTP) for media. Inbound calls use TLS transport, and
-#' unencrypted outbound calls are blocked.
+#' Enabling <span>CreateVoiceConnectorRequest$RequireEncryption</span>
+#' configures your Amazon Chime Voice Connector to use TLS transport for
+#' SIP signaling and Secure RTP (SRTP) for media. Inbound calls use TLS
+#' transport, and unencrypted outbound calls are blocked.
 #'
 #' @usage
 #' chime_create_voice_connector(Name, AwsRegion, RequireEncryption)
@@ -2900,7 +2900,7 @@ chime_delete_meeting <- function(MeetingId) {
 }
 .chime$operations$delete_meeting <- chime_delete_meeting
 
-#' Moves the specified phone number into the Deletion queue
+#' Moves the specified phone number into the DELETION QUEUE
 #'
 #' @description
 #' Moves the specified phone number into the **Deletion queue**. A phone
@@ -6911,10 +6911,10 @@ chime_list_channel_moderators <- function(ChannelArn, MaxResults = NULL, NextTok
 #' 
 #' **Functionality & restrictions**
 #' 
-#' -   Use privacy = `PUBLIC` to retrieve all public channels in the
+#'   - Use privacy = `PUBLIC` to retrieve all public channels in the
 #'     account
 #' 
-#' -   Only an `AppInstanceAdmin` can set privacy = `PRIVATE` to list the
+#'   - Only an `AppInstanceAdmin` can set privacy = `PRIVATE` to list the
 #'     private channels in an account.
 #'
 #' @usage
@@ -8161,7 +8161,7 @@ chime_put_app_instance_streaming_configurations <- function(AppInstanceArn, AppI
 #' @description
 #' Creates an events configuration that allows a bot to receive outgoing
 #' events sent by Amazon Chime. Choose either an HTTPS endpoint or a Lambda
-#' function ARN. For more information, see Bot.
+#' function ARN. For more information, see <span>Bot</span>.
 #'
 #' @usage
 #' chime_put_events_configuration(AccountId, BotId,
@@ -9003,8 +9003,8 @@ chime_regenerate_security_token <- function(AccountId, BotId) {
 #'
 #' @description
 #' Resets the personal meeting PIN for the specified user on an Amazon
-#' Chime account. Returns the User object with the updated personal meeting
-#' PIN.
+#' Chime account. Returns the <span>User</span> object with the updated
+#' personal meeting PIN.
 #'
 #' @usage
 #' chime_reset_personal_pin(AccountId, UserId)
@@ -9069,8 +9069,8 @@ chime_reset_personal_pin <- function(AccountId, UserId) {
 }
 .chime$operations$reset_personal_pin <- chime_reset_personal_pin
 
-#' Moves a phone number from the Deletion queue back into the phone number
-#' Inventory
+#' Moves a phone number from the DELETION QUEUE back into the phone number
+#' INVENTORY
 #'
 #' @description
 #' Moves a phone number from the **Deletion queue** back into the phone

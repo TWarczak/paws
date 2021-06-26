@@ -7,7 +7,7 @@
 apigateway_get_api_key(apiKey, includeValue)
 }
 \arguments{
-\item{apiKey}{[required] [Required] The identifier of the ApiKey resource.}
+\item{apiKey}{[required] [Required] The identifier of the <span>ApiKey</span> resource.}
 
 \item{includeValue}{A boolean flag to specify whether (\code{true}) or not (\code{false}) the result
 contains the key value.}
@@ -36,7 +36,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Gets information about the current ApiKey resource.
+Gets information about the current <span>ApiKey</span> resource.
 }
 \section{Request syntax}{
 \preformatted{svc$get_api_key(

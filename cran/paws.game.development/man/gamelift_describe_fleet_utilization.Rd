@@ -47,8 +47,8 @@ see \code{\link[=gamelift_describe_fleet_capacity]{describe_fleet_capacity}}.
 You can request utilization data for all fleets, or specify a list of
 one or more fleet IDs. When requesting multiple fleets, use the
 pagination parameters to retrieve results as a set of sequential pages.
-If successful, a FleetUtilization object is returned for each requested
-fleet ID, unless the fleet identifier is not found.
+If successful, a <span>FleetUtilization</span> object is returned for
+each requested fleet ID, unless the fleet identifier is not found.
 
 Some API operations may limit the number of fleet IDs allowed in one
 request. If a request exceeds this limit, the request fails and the

@@ -25,22 +25,20 @@ snapshot was created.
 Constraint:
 \itemize{
 \item Define this parameter only when copying an automatic snapshot as a
-manual snapshot. For more information, see the Lightsail Dev Guide.
+manual snapshot. For more information, see the <span>Lightsail Dev
+Guide</span>.
 }}
 
-\item{restoreDate}{The date of the source automatic snapshot to copy. Use the
-\verb{get auto snapshots} operation to identify the dates of the available
-automatic snapshots.
+\item{restoreDate}{The date of the source automatic snapshot to copy. Use the \verb{get auto snapshots} operation to identify the dates of the available automatic
+snapshots.
 
 Constraints:
 \itemize{
 \item Must be specified in \code{YYYY-MM-DD} format.
-\item This parameter cannot be defined together with the
-\verb{use latest restorable auto snapshot} parameter. The \verb{restore date}
-and \verb{use latest restorable auto snapshot} parameters are mutually
-exclusive.
+\item This parameter cannot be defined together with the \verb{use latest restorable auto snapshot} parameter. The \verb{restore date} and \verb{use latest restorable auto snapshot} parameters are mutually exclusive.
 \item Define this parameter only when copying an automatic snapshot as a
-manual snapshot. For more information, see the Lightsail Dev Guide.
+manual snapshot. For more information, see the <span>Lightsail Dev
+Guide</span>.
 }}
 
 \item{useLatestRestorableAutoSnapshot}{A Boolean value to indicate whether to use the latest available
@@ -49,10 +47,10 @@ automatic snapshot of the specified source instance or disk.
 Constraints:
 \itemize{
 \item This parameter cannot be defined together with the \verb{restore date}
-parameter. The \verb{use latest restorable auto snapshot} and
-\verb{restore date} parameters are mutually exclusive.
+parameter. The \verb{use latest restorable auto snapshot} and \verb{restore date} parameters are mutually exclusive.
 \item Define this parameter only when copying an automatic snapshot as a
-manual snapshot. For more information, see the Lightsail Dev Guide.
+manual snapshot. For more information, see the <span>Lightsail Dev
+Guide</span>.
 }}
 
 \item{targetSnapshotName}{[required] The name of the new manual snapshot to be created as a copy.}
@@ -97,10 +95,8 @@ another in Amazon Lightsail.
 When copying a \emph{manual snapshot}, be sure to define the \verb{source region},
 \verb{source snapshot name}, and \verb{target snapshot name} parameters.
 
-When copying an \emph{automatic snapshot}, be sure to define the
-\verb{source region}, \verb{source resource name}, \verb{target snapshot name}, and
-either the \verb{restore date} or the \verb{use latest restorable auto snapshot}
-parameters.
+When copying an \emph{automatic snapshot}, be sure to define the \verb{source region}, \verb{source resource name}, \verb{target snapshot name}, and either the
+\verb{restore date} or the \verb{use latest restorable auto snapshot} parameters.
 }
 \section{Request syntax}{
 \preformatted{svc$copy_snapshot(

@@ -44,11 +44,12 @@ restart an instance, use the \verb{reboot instance} operation.
 When you start a stopped instance, Lightsail assigns a new public IP
 address to the instance. To use the same IP address after stopping and
 starting an instance, create a static IP address and attach it to the
-instance. For more information, see the Lightsail Dev Guide.
+instance. For more information, see the <span>Lightsail Dev
+Guide</span>.
 
 The \verb{start instance} operation supports tag-based access control via
 resource tags applied to the resource identified by \verb{instance name}. For
-more information, see the Lightsail Dev Guide.
+more information, see the <span>Lightsail Dev Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$start_instance(

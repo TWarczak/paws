@@ -176,7 +176,7 @@ lightsail_attach_certificate_to_distribution <- function(distributionName, certi
 #' 
 #' The `attach disk` operation supports tag-based access control via
 #' resource tags applied to the resource identified by `disk name`. For
-#' more information, see the Lightsail Dev Guide.
+#' more information, see the <span>Lightsail Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_attach_disk(diskName, instanceName, diskPath)
@@ -255,7 +255,8 @@ lightsail_attach_disk <- function(diskName, instanceName, diskPath) {
 #' 
 #' The `attach instances to load balancer` operation supports tag-based
 #' access control via resource tags applied to the resource identified by
-#' `load balancer name`. For more information, see the Lightsail Dev Guide.
+#' `load balancer name`. For more information, see the <span>Lightsail Dev
+#' Guide</span>.
 #'
 #' @usage
 #' lightsail_attach_instances_to_load_balancer(loadBalancerName,
@@ -351,7 +352,7 @@ lightsail_attach_instances_to_load_balancer <- function(loadBalancerName, instan
 #' [`attach_load_balancer_tls_certificate`][lightsail_attach_load_balancer_tls_certificate]
 #' operation supports tag-based access control via resource tags applied to
 #' the resource identified by `load balancer name`. For more information,
-#' see the Lightsail Dev Guide.
+#' see the <span>Lightsail Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_attach_load_balancer_tls_certificate(loadBalancerName,
@@ -497,7 +498,7 @@ lightsail_attach_static_ip <- function(staticIpName, instanceName) {
 #' [`close_instance_public_ports`][lightsail_close_instance_public_ports]
 #' action supports tag-based access control via resource tags applied to
 #' the resource identified by `instanceName`. For more information, see the
-#' Lightsail Dev Guide.
+#' <span>Lightsail Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_close_instance_public_ports(portInfo, instanceName)
@@ -585,10 +586,9 @@ lightsail_close_instance_public_ports <- function(portInfo, instanceName) {
 #' When copying a *manual snapshot*, be sure to define the `source region`,
 #' `source snapshot name`, and `target snapshot name` parameters.
 #' 
-#' When copying an *automatic snapshot*, be sure to define the
-#' `source region`, `source resource name`, `target snapshot name`, and
-#' either the `restore date` or the `use latest restorable auto snapshot`
-#' parameters.
+#' When copying an *automatic snapshot*, be sure to define the `source
+#' region`, `source resource name`, `target snapshot name`, and either the
+#' `restore date` or the `use latest restorable auto snapshot` parameters.
 #'
 #' @usage
 #' lightsail_copy_snapshot(sourceSnapshotName, sourceResourceName,
@@ -599,41 +599,43 @@ lightsail_close_instance_public_ports <- function(portInfo, instanceName) {
 #' 
 #' Constraint:
 #' 
-#' -   Define this parameter only when copying a manual snapshot as another
+#'   - Define this parameter only when copying a manual snapshot as another
 #'     manual snapshot.
 #' @param sourceResourceName The name of the source instance or disk from which the source automatic
 #' snapshot was created.
 #' 
 #' Constraint:
 #' 
-#' -   Define this parameter only when copying an automatic snapshot as a
-#'     manual snapshot. For more information, see the Lightsail Dev Guide.
-#' @param restoreDate The date of the source automatic snapshot to copy. Use the
-#' `get auto snapshots` operation to identify the dates of the available
-#' automatic snapshots.
+#'   - Define this parameter only when copying an automatic snapshot as a
+#'     manual snapshot. For more information, see the <span>Lightsail Dev
+#'     Guide</span>.
+#' @param restoreDate The date of the source automatic snapshot to copy. Use the `get auto
+#' snapshots` operation to identify the dates of the available automatic
+#' snapshots.
 #' 
 #' Constraints:
 #' 
-#' -   Must be specified in `YYYY-MM-DD` format.
+#'   - Must be specified in `YYYY-MM-DD` format.
 #' 
-#' -   This parameter cannot be defined together with the
-#'     `use latest restorable auto snapshot` parameter. The `restore date`
-#'     and `use latest restorable auto snapshot` parameters are mutually
-#'     exclusive.
+#'   - This parameter cannot be defined together with the `use latest
+#'     restorable auto snapshot` parameter. The `restore date` and `use
+#'     latest restorable auto snapshot` parameters are mutually exclusive.
 #' 
-#' -   Define this parameter only when copying an automatic snapshot as a
-#'     manual snapshot. For more information, see the Lightsail Dev Guide.
+#'   - Define this parameter only when copying an automatic snapshot as a
+#'     manual snapshot. For more information, see the <span>Lightsail Dev
+#'     Guide</span>.
 #' @param useLatestRestorableAutoSnapshot A Boolean value to indicate whether to use the latest available
 #' automatic snapshot of the specified source instance or disk.
 #' 
 #' Constraints:
 #' 
-#' -   This parameter cannot be defined together with the `restore date`
-#'     parameter. The `use latest restorable auto snapshot` and
-#'     `restore date` parameters are mutually exclusive.
+#'   - This parameter cannot be defined together with the `restore date`
+#'     parameter. The `use latest restorable auto snapshot` and `restore
+#'     date` parameters are mutually exclusive.
 #' 
-#' -   Define this parameter only when copying an automatic snapshot as a
-#'     manual snapshot. For more information, see the Lightsail Dev Guide.
+#'   - Define this parameter only when copying an automatic snapshot as a
+#'     manual snapshot. For more information, see the <span>Lightsail Dev
+#'     Guide</span>.
 #' @param targetSnapshotName &#91;required&#93; The name of the new manual snapshot to be created as a copy.
 #' @param sourceRegion &#91;required&#93; The AWS Region where the source manual or automatic snapshot is located.
 #'
@@ -886,9 +888,8 @@ lightsail_create_certificate <- function(certificateName, domainName, subjectAlt
 #' Creates an AWS CloudFormation stack, which creates a new Amazon EC2
 #' instance from an exported Amazon Lightsail snapshot. This operation
 #' results in a CloudFormation stack record that can be used to track the
-#' AWS CloudFormation stack created. Use the
-#' `get cloud formation stack records` operation to get a list of the
-#' CloudFormation stacks created.
+#' AWS CloudFormation stack created. Use the `get cloud formation stack
+#' records` operation to get a list of the CloudFormation stacks created.
 #' 
 #' Wait until after your new Amazon EC2 instance is created before running
 #' the `create cloud formation stack` operation again with the same export
@@ -976,8 +977,8 @@ lightsail_create_cloud_formation_stack <- function(instances) {
 #' Lightsail resources. You can add one email address and one mobile phone
 #' number contact method in each AWS Region. However, SMS text messaging is
 #' not supported in some AWS Regions, and SMS text messages cannot be sent
-#' to some countries/regions. For more information, see Notifications in
-#' Amazon Lightsail.
+#' to some countries/regions. For more information, see <span>Notifications
+#' in Amazon Lightsail</span>.
 #'
 #' @usage
 #' lightsail_create_contact_method(protocol, contactEndpoint)
@@ -987,17 +988,17 @@ lightsail_create_cloud_formation_stack <- function(instances) {
 #' 
 #' The `SMS` protocol is supported only in the following AWS Regions.
 #' 
-#' -   US East (N. Virginia) (`us-east-1`)
+#'   - US East (N. Virginia) (`us-east-1`)
 #' 
-#' -   US West (Oregon) (`us-west-2`)
+#'   - US West (Oregon) (`us-west-2`)
 #' 
-#' -   Europe (Ireland) (`eu-west-1`)
+#'   - Europe (Ireland) (`eu-west-1`)
 #' 
-#' -   Asia Pacific (Tokyo) (`ap-northeast-1`)
+#'   - Asia Pacific (Tokyo) (`ap-northeast-1`)
 #' 
-#' -   Asia Pacific (Singapore) (`ap-southeast-1`)
+#'   - Asia Pacific (Singapore) (`ap-southeast-1`)
 #' 
-#' -   Asia Pacific (Sydney) (`ap-southeast-2`)
+#'   - Asia Pacific (Sydney) (`ap-southeast-2`)
 #' 
 #' For a list of countries/regions where SMS text messages can be sent, and
 #' the latest AWS Regions where SMS text messaging is supported, see
@@ -1006,7 +1007,7 @@ lightsail_create_cloud_formation_stack <- function(instances) {
 #' in the *Amazon SNS Developer Guide*.
 #' 
 #' For more information about notifications in Amazon Lightsail, see
-#' Notifications in Amazon Lightsail.
+#' <span>Notifications in Amazon Lightsail</span>.
 #' @param contactEndpoint &#91;required&#93; The destination of the contact method, such as an email address or a
 #' mobile phone number.
 #' 
@@ -1082,8 +1083,8 @@ lightsail_create_contact_method <- function(protocol, contactEndpoint) {
 #' Creates an Amazon Lightsail container service.
 #' 
 #' A Lightsail container service is a compute resource to which you can
-#' deploy containers. For more information, see Container services in
-#' Amazon Lightsail in the *Lightsail Dev Guide*.
+#' deploy containers. For more information, see <span>Container services in
+#' Amazon Lightsail</span> in the *Lightsail Dev Guide*.
 #'
 #' @usage
 #' lightsail_create_container_service(serviceName, power, scale, tags,
@@ -1102,13 +1103,13 @@ lightsail_create_contact_method <- function(protocol, contactEndpoint) {
 #' 
 #' The following are the requirements for container service names:
 #' 
-#' -   Must be unique within each AWS Region in your Lightsail account.
+#'   - Must be unique within each AWS Region in your Lightsail account.
 #' 
-#' -   Must contain 1 to 63 characters.
+#'   - Must contain 1 to 63 characters.
 #' 
-#' -   Must contain only alphanumeric characters and hyphens.
+#'   - Must contain only alphanumeric characters and hyphens.
 #' 
-#' -   A hyphen (-) can separate words but cannot be at the start or end of
+#'   - A hyphen (-) can separate words but cannot be at the start or end of
 #'     the name.
 #' @param power &#91;required&#93; The power specification for the container service.
 #' 
@@ -1131,8 +1132,8 @@ lightsail_create_contact_method <- function(protocol, contactEndpoint) {
 #' number of nodes) of the service.
 #' @param tags The tag keys and optional values for the container service.
 #' 
-#' For more information about tags in Lightsail, see the Lightsail Dev
-#' Guide.
+#' For more information about tags in Lightsail, see the <span>Lightsail
+#' Dev Guide</span>.
 #' @param publicDomainNames The public domain names to use with the container service, such as
 #' `example.com` and `www.example.com`.
 #' 
@@ -1347,8 +1348,9 @@ lightsail_create_container_service <- function(serviceName, power, scale, tags =
 #' 
 #' You can deploy containers to your container service using container
 #' images from a public registry like Docker Hub, or from your local
-#' machine. For more information, see Creating container images for your
-#' Amazon Lightsail container services in the *Lightsail Dev Guide*.
+#' machine. For more information, see <span>Creating container images for
+#' your Amazon Lightsail container services</span> in the *Lightsail Dev
+#' Guide*.
 #'
 #' @usage
 #' lightsail_create_container_service_deployment(serviceName, containers,
@@ -1541,9 +1543,9 @@ lightsail_create_container_service_deployment <- function(serviceName, container
 #' 
 #' This action is not required if you install and use the Lightsail Control
 #' (lightsailctl) plugin to push container images to your Lightsail
-#' container service. For more information, see Pushing and managing
-#' container images on your Amazon Lightsail container services in the
-#' *Lightsail Dev Guide*.
+#' container service. For more information, see <span>Pushing and managing
+#' container images on your Amazon Lightsail container services</span> in
+#' the *Lightsail Dev Guide*.
 #'
 #' @usage
 #' lightsail_create_container_service_registry_login()
@@ -1596,7 +1598,8 @@ lightsail_create_container_service_registry_login <- function() {
 #' instance in the same Availability Zone (e.g., `us-east-2a`).
 #' 
 #' The `create disk` operation supports tag-based access control via
-#' request tags. For more information, see the Lightsail Dev Guide.
+#' request tags. For more information, see the <span>Lightsail Dev
+#' Guide</span>.
 #'
 #' @usage
 #' lightsail_create_disk(diskName, availabilityZone, sizeInGb, tags,
@@ -1701,7 +1704,7 @@ lightsail_create_disk <- function(diskName, availabilityZone, sizeInGb, tags = N
 #' The `create disk from snapshot` operation supports tag-based access
 #' control via request tags and resource tags applied to the resource
 #' identified by `disk snapshot name`. For more information, see the
-#' Lightsail Dev Guide.
+#' <span>Lightsail Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_create_disk_from_snapshot(diskName, diskSnapshotName,
@@ -1714,9 +1717,9 @@ lightsail_create_disk <- function(diskName, availabilityZone, sizeInGb, tags = N
 #' 
 #' Constraint:
 #' 
-#' -   This parameter cannot be defined together with the
-#'     `source disk name` parameter. The `disk snapshot name` and
-#'     `source disk name` parameters are mutually exclusive.
+#'   - This parameter cannot be defined together with the `source disk
+#'     name` parameter. The `disk snapshot name` and `source disk name`
+#'     parameters are mutually exclusive.
 #' @param availabilityZone &#91;required&#93; The Availability Zone where you want to create the disk (e.g.,
 #' `us-east-2a`). Choose the same Availability Zone as the Lightsail
 #' instance where you want to create the disk.
@@ -1735,41 +1738,40 @@ lightsail_create_disk <- function(diskName, availabilityZone, sizeInGb, tags = N
 #' 
 #' Constraints:
 #' 
-#' -   This parameter cannot be defined together with the
-#'     `disk snapshot name` parameter. The `source disk name` and
-#'     `disk snapshot name` parameters are mutually exclusive.
+#'   - This parameter cannot be defined together with the `disk snapshot
+#'     name` parameter. The `source disk name` and `disk snapshot name`
+#'     parameters are mutually exclusive.
 #' 
-#' -   Define this parameter only when creating a new disk from an
-#'     automatic snapshot. For more information, see the Lightsail Dev
-#'     Guide.
-#' @param restoreDate The date of the automatic snapshot to use for the new disk. Use the
-#' `get auto snapshots` operation to identify the dates of the available
+#'   - Define this parameter only when creating a new disk from an
+#'     automatic snapshot. For more information, see the <span>Lightsail
+#'     Dev Guide</span>.
+#' @param restoreDate The date of the automatic snapshot to use for the new disk. Use the `get
+#' auto snapshots` operation to identify the dates of the available
 #' automatic snapshots.
 #' 
 #' Constraints:
 #' 
-#' -   Must be specified in `YYYY-MM-DD` format.
+#'   - Must be specified in `YYYY-MM-DD` format.
 #' 
-#' -   This parameter cannot be defined together with the
-#'     `use latest restorable auto snapshot` parameter. The `restore date`
-#'     and `use latest restorable auto snapshot` parameters are mutually
-#'     exclusive.
+#'   - This parameter cannot be defined together with the `use latest
+#'     restorable auto snapshot` parameter. The `restore date` and `use
+#'     latest restorable auto snapshot` parameters are mutually exclusive.
 #' 
-#' -   Define this parameter only when creating a new disk from an
-#'     automatic snapshot. For more information, see the Lightsail Dev
-#'     Guide.
+#'   - Define this parameter only when creating a new disk from an
+#'     automatic snapshot. For more information, see the <span>Lightsail
+#'     Dev Guide</span>.
 #' @param useLatestRestorableAutoSnapshot A Boolean value to indicate whether to use the latest available
 #' automatic snapshot.
 #' 
 #' Constraints:
 #' 
-#' -   This parameter cannot be defined together with the `restore date`
-#'     parameter. The `use latest restorable auto snapshot` and
-#'     `restore date` parameters are mutually exclusive.
+#'   - This parameter cannot be defined together with the `restore date`
+#'     parameter. The `use latest restorable auto snapshot` and `restore
+#'     date` parameters are mutually exclusive.
 #' 
-#' -   Define this parameter only when creating a new disk from an
-#'     automatic snapshot. For more information, see the Lightsail Dev
-#'     Guide.
+#'   - Define this parameter only when creating a new disk from an
+#'     automatic snapshot. For more information, see the <span>Lightsail
+#'     Dev Guide</span>.
 #'
 #' @return
 #' A list with the following syntax:
@@ -1877,7 +1879,8 @@ lightsail_create_disk_from_snapshot <- function(diskName, diskSnapshotName = NUL
 #' attach it to a running instance to access the data on the disk.
 #' 
 #' The `create disk snapshot` operation supports tag-based access control
-#' via request tags. For more information, see the Lightsail Dev Guide.
+#' via request tags. For more information, see the <span>Lightsail Dev
+#' Guide</span>.
 #'
 #' @usage
 #' lightsail_create_disk_snapshot(diskName, diskSnapshotName, instanceName,
@@ -1974,8 +1977,8 @@ lightsail_create_disk_snapshot <- function(diskName = NULL, diskSnapshotName, in
 #' 
 #' A distribution is a globally distributed network of caching servers that
 #' improve the performance of your website or web application hosted on a
-#' Lightsail instance. For more information, see Content delivery networks
-#' in Amazon Lightsail.
+#' Lightsail instance. For more information, see <span>Content delivery
+#' networks in Amazon Lightsail</span>.
 #'
 #' @usage
 #' lightsail_create_distribution(distributionName, origin,
@@ -2182,7 +2185,8 @@ lightsail_create_distribution <- function(distributionName, origin, defaultCache
 #' Creates a domain resource for the specified domain (e.g., example.com).
 #' 
 #' The `create domain` operation supports tag-based access control via
-#' request tags. For more information, see the Lightsail Dev Guide.
+#' request tags. For more information, see the <span>Lightsail Dev
+#' Guide</span>.
 #'
 #' @usage
 #' lightsail_create_domain(domainName, tags)
@@ -2272,7 +2276,7 @@ lightsail_create_domain <- function(domainName, tags = NULL) {
 #' 
 #' The `create domain entry` operation supports tag-based access control
 #' via resource tags applied to the resource identified by `domain name`.
-#' For more information, see the Lightsail Dev Guide.
+#' For more information, see the <span>Lightsail Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_create_domain_entry(domainName, domainEntry)
@@ -2347,7 +2351,7 @@ lightsail_create_domain_entry <- function(domainName, domainEntry) {
 }
 .lightsail$operations$create_domain_entry <- lightsail_create_domain_entry
 
-#' Creates a snapshot of a specific virtual private server, or instance
+#' Creates a snapshot of a specific virtual private server, or _instance_
 #'
 #' @description
 #' Creates a snapshot of a specific virtual private server, or *instance*.
@@ -2355,8 +2359,8 @@ lightsail_create_domain_entry <- function(domainName, domainEntry) {
 #' snapshot.
 #' 
 #' The `create instance snapshot` operation supports tag-based access
-#' control via request tags. For more information, see the Lightsail Dev
-#' Guide.
+#' control via request tags. For more information, see the <span>Lightsail
+#' Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_create_instance_snapshot(instanceSnapshotName, instanceName,
@@ -2439,7 +2443,8 @@ lightsail_create_instance_snapshot <- function(instanceSnapshotName, instanceNam
 #' Creates one or more Amazon Lightsail instances.
 #' 
 #' The `create instances` operation supports tag-based access control via
-#' request tags. For more information, see the Lightsail Dev Guide.
+#' request tags. For more information, see the <span>Lightsail Dev
+#' Guide</span>.
 #'
 #' @usage
 #' lightsail_create_instances(instanceNames, availabilityZone,
@@ -2476,7 +2481,7 @@ lightsail_create_instance_snapshot <- function(instanceSnapshotName, instanceNam
 #' Depending on the machine image you choose, the command to get software
 #' on your instance varies. Amazon Linux and CentOS use `yum`, Debian and
 #' Ubuntu use `apt-get`, and FreeBSD uses `pkg`. For a complete list, see
-#' the Dev Guide.
+#' the <span>Dev Guide</span>.
 #' @param keyPairName The name of your key pair.
 #' @param tags The tag keys and optional values to add to the resource during create.
 #' 
@@ -2574,7 +2579,7 @@ lightsail_create_instances <- function(instanceNames, availabilityZone, customIm
 #' The `create instances from snapshot` operation supports tag-based access
 #' control via request tags and resource tags applied to the resource
 #' identified by `instance snapshot name`. For more information, see the
-#' Lightsail Dev Guide.
+#' <span>Lightsail Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_create_instances_from_snapshot(instanceNames,
@@ -2596,9 +2601,9 @@ lightsail_create_instances <- function(instanceNames, availabilityZone, customIm
 #' 
 #' Constraint:
 #' 
-#' -   This parameter cannot be defined together with the
-#'     `source instance name` parameter. The `instance snapshot name` and
-#'     `source instance name` parameters are mutually exclusive.
+#'   - This parameter cannot be defined together with the `source instance
+#'     name` parameter. The `instance snapshot name` and `source instance
+#'     name` parameters are mutually exclusive.
 #' @param bundleId &#91;required&#93; The bundle of specification information for your virtual private server
 #' (or *instance*), including the pricing plan (e.g., `micro_1_0`).
 #' @param userData You can create a launch script that configures a server with additional
@@ -2607,7 +2612,7 @@ lightsail_create_instances <- function(instanceNames, availabilityZone, customIm
 #' Depending on the machine image you choose, the command to get software
 #' on your instance varies. Amazon Linux and CentOS use `yum`, Debian and
 #' Ubuntu use `apt-get`, and FreeBSD uses `pkg`. For a complete list, see
-#' the Dev Guide.
+#' the <span>Dev Guide</span>.
 #' @param keyPairName The name for your key pair.
 #' @param tags The tag keys and optional values to add to the resource during create.
 #' 
@@ -2620,41 +2625,40 @@ lightsail_create_instances <- function(instanceNames, availabilityZone, customIm
 #' 
 #' Constraints:
 #' 
-#' -   This parameter cannot be defined together with the
-#'     `instance snapshot name` parameter. The `source instance name` and
-#'     `instance snapshot name` parameters are mutually exclusive.
+#'   - This parameter cannot be defined together with the `instance
+#'     snapshot name` parameter. The `source instance name` and `instance
+#'     snapshot name` parameters are mutually exclusive.
 #' 
-#' -   Define this parameter only when creating a new instance from an
-#'     automatic snapshot. For more information, see the Lightsail Dev
-#'     Guide.
+#'   - Define this parameter only when creating a new instance from an
+#'     automatic snapshot. For more information, see the <span>Lightsail
+#'     Dev Guide</span>.
 #' @param restoreDate The date of the automatic snapshot to use for the new instance. Use the
 #' `get auto snapshots` operation to identify the dates of the available
 #' automatic snapshots.
 #' 
 #' Constraints:
 #' 
-#' -   Must be specified in `YYYY-MM-DD` format.
+#'   - Must be specified in `YYYY-MM-DD` format.
 #' 
-#' -   This parameter cannot be defined together with the
-#'     `use latest restorable auto snapshot` parameter. The `restore date`
-#'     and `use latest restorable auto snapshot` parameters are mutually
-#'     exclusive.
+#'   - This parameter cannot be defined together with the `use latest
+#'     restorable auto snapshot` parameter. The `restore date` and `use
+#'     latest restorable auto snapshot` parameters are mutually exclusive.
 #' 
-#' -   Define this parameter only when creating a new instance from an
-#'     automatic snapshot. For more information, see the Lightsail Dev
-#'     Guide.
+#'   - Define this parameter only when creating a new instance from an
+#'     automatic snapshot. For more information, see the <span>Lightsail
+#'     Dev Guide</span>.
 #' @param useLatestRestorableAutoSnapshot A Boolean value to indicate whether to use the latest available
 #' automatic snapshot.
 #' 
 #' Constraints:
 #' 
-#' -   This parameter cannot be defined together with the `restore date`
-#'     parameter. The `use latest restorable auto snapshot` and
-#'     `restore date` parameters are mutually exclusive.
+#'   - This parameter cannot be defined together with the `restore date`
+#'     parameter. The `use latest restorable auto snapshot` and `restore
+#'     date` parameters are mutually exclusive.
 #' 
-#' -   Define this parameter only when creating a new instance from an
-#'     automatic snapshot. For more information, see the Lightsail Dev
-#'     Guide.
+#'   - Define this parameter only when creating a new instance from an
+#'     automatic snapshot. For more information, see the <span>Lightsail
+#'     Dev Guide</span>.
 #'
 #' @return
 #' A list with the following syntax:
@@ -2751,7 +2755,8 @@ lightsail_create_instances_from_snapshot <- function(instanceNames, attachedDisk
 #' Creates an SSH key pair.
 #' 
 #' The `create key pair` operation supports tag-based access control via
-#' request tags. For more information, see the Lightsail Dev Guide.
+#' request tags. For more information, see the <span>Lightsail Dev
+#' Guide</span>.
 #'
 #' @usage
 #' lightsail_create_key_pair(keyPairName, tags)
@@ -2849,9 +2854,9 @@ lightsail_create_key_pair <- function(keyPairName, tags = NULL) {
 #'
 #' @description
 #' Creates a Lightsail load balancer. To learn more about deciding whether
-#' to load balance your application, see Configure your Lightsail instances
-#' for load balancing. You can create up to 5 load balancers per AWS Region
-#' in your account.
+#' to load balance your application, see <span>Configure your Lightsail
+#' instances for load balancing</span>. You can create up to 5 load
+#' balancers per AWS Region in your account.
 #' 
 #' When you create a load balancer, you can specify a unique name and port
 #' settings. To change additional load balancer settings, use the
@@ -2859,7 +2864,8 @@ lightsail_create_key_pair <- function(keyPairName, tags = NULL) {
 #' operation.
 #' 
 #' The `create load balancer` operation supports tag-based access control
-#' via request tags. For more information, see the Lightsail Dev Guide.
+#' via request tags. For more information, see the <span>Lightsail Dev
+#' Guide</span>.
 #'
 #' @usage
 #' lightsail_create_load_balancer(loadBalancerName, instancePort,
@@ -2974,7 +2980,7 @@ lightsail_create_load_balancer <- function(loadBalancerName, instancePort, healt
 #' [`create_load_balancer_tls_certificate`][lightsail_create_load_balancer_tls_certificate]
 #' operation supports tag-based access control via resource tags applied to
 #' the resource identified by `load balancer name`. For more information,
-#' see the Lightsail Dev Guide.
+#' see the <span>Lightsail Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_create_load_balancer_tls_certificate(loadBalancerName,
@@ -3074,8 +3080,8 @@ lightsail_create_load_balancer_tls_certificate <- function(loadBalancerName, cer
 #' Creates a new database in Amazon Lightsail.
 #' 
 #' The `create relational database` operation supports tag-based access
-#' control via request tags. For more information, see the Lightsail Dev
-#' Guide.
+#' control via request tags. For more information, see the <span>Lightsail
+#' Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_create_relational_database(relationalDatabaseName,
@@ -3088,49 +3094,49 @@ lightsail_create_load_balancer_tls_certificate <- function(loadBalancerName, cer
 #' 
 #' Constraints:
 #' 
-#' -   Must contain from 2 to 255 alphanumeric characters, or hyphens.
+#'   - Must contain from 2 to 255 alphanumeric characters, or hyphens.
 #' 
-#' -   The first and last character must be a letter or number.
+#'   - The first and last character must be a letter or number.
 #' @param availabilityZone The Availability Zone in which to create your new database. Use the
 #' `us-east-2a` case-sensitive format.
 #' 
 #' You can get a list of Availability Zones by using the `get regions`
-#' operation. Be sure to add the
-#' `include relational database Availability Zones` parameter to your
-#' request.
+#' operation. Be sure to add the `include relational database Availability
+#' Zones` parameter to your request.
 #' @param relationalDatabaseBlueprintId &#91;required&#93; The blueprint ID for your new database. A blueprint describes the major
 #' engine version of a database.
 #' 
-#' You can get a list of database blueprints IDs by using the
-#' `get relational database blueprints` operation.
+#' You can get a list of database blueprints IDs by using the `get
+#' relational database blueprints` operation.
 #' @param relationalDatabaseBundleId &#91;required&#93; The bundle ID for your new database. A bundle describes the performance
 #' specifications for your database.
 #' 
-#' You can get a list of database bundle IDs by using the
-#' `get relational database bundles` operation.
+#' You can get a list of database bundle IDs by using the `get relational
+#' database bundles` operation.
 #' @param masterDatabaseName &#91;required&#93; The name of the master database created when the Lightsail database
 #' resource is created.
 #' 
 #' Constraints:
 #' 
-#' -   Must contain from 1 to 64 alphanumeric characters.
+#'   - Must contain from 1 to 64 alphanumeric characters.
 #' 
-#' -   Cannot be a word reserved by the specified database engine
+#'   - Cannot be a word reserved by the specified database engine
 #' @param masterUsername &#91;required&#93; The master user name for your new database.
 #' 
 #' Constraints:
 #' 
-#' -   Master user name is required.
+#'   - Master user name is required.
 #' 
-#' -   Must contain from 1 to 16 alphanumeric characters.
+#'   - Must contain from 1 to 16 alphanumeric characters.
 #' 
-#' -   The first character must be a letter.
+#'   - The first character must be a letter.
 #' 
-#' -   Cannot be a reserved word for the database engine you choose.
-#' 
+#'   - Cannot be a reserved word for the database engine you choose.
+#'     
 #'     For more information about reserved words in MySQL 5.6 or 5.7, see
-#'     the Keywords and Reserved Words articles for [MySQL
-#'     5.6](https://dev.mysql.com/doc/refman/5.6/en/keywords.html) or
+#'     the Keywords and Reserved Words articles for
+#'     [MySQL 5.6](https://dev.mysql.com/doc/refman/5.6/en/keywords.html)
+#'     or
 #'     [MySQL 5.7](https://dev.mysql.com/doc/refman/5.7/en/keywords.html)
 #'     respectively.
 #' @param masterUserPassword The password for the master user of your new database. The password can
@@ -3150,15 +3156,15 @@ lightsail_create_load_balancer_tls_certificate <- function(loadBalancerName, cer
 #' 
 #' Constraints:
 #' 
-#' -   Must be in the `hh24:mi-hh24:mi` format.
-#' 
+#'   - Must be in the `hh24:mi-hh24:mi` format.
+#'     
 #'     Example: `16:00-16:30`
 #' 
-#' -   Specified in Coordinated Universal Time (UTC).
+#'   - Specified in Coordinated Universal Time (UTC).
 #' 
-#' -   Must not conflict with the preferred maintenance window.
+#'   - Must not conflict with the preferred maintenance window.
 #' 
-#' -   Must be at least 30 minutes.
+#'   - Must be at least 30 minutes.
 #' @param preferredMaintenanceWindow The weekly time range during which system maintenance can occur on your
 #' new database.
 #' 
@@ -3168,15 +3174,15 @@ lightsail_create_load_balancer_tls_certificate <- function(loadBalancerName, cer
 #' 
 #' Constraints:
 #' 
-#' -   Must be in the `ddd:hh24:mi-ddd:hh24:mi` format.
+#'   - Must be in the `ddd:hh24:mi-ddd:hh24:mi` format.
 #' 
-#' -   Valid days: Mon, Tue, Wed, Thu, Fri, Sat, Sun.
+#'   - Valid days: Mon, Tue, Wed, Thu, Fri, Sat, Sun.
 #' 
-#' -   Must be at least 30 minutes.
+#'   - Must be at least 30 minutes.
 #' 
-#' -   Specified in Coordinated Universal Time (UTC).
+#'   - Specified in Coordinated Universal Time (UTC).
 #' 
-#' -   Example: `Tue:17:00-Tue:17:30`
+#'   - Example: `Tue:17:00-Tue:17:30`
 #' @param publiclyAccessible Specifies the accessibility options for your new database. A value of
 #' `true` specifies a database that is available to resources outside of
 #' your Lightsail account. A value of `false` specifies a database that is
@@ -3273,7 +3279,7 @@ lightsail_create_relational_database <- function(relationalDatabaseName, availab
 #' The `create relational database from snapshot` operation supports
 #' tag-based access control via request tags and resource tags applied to
 #' the resource identified by relationalDatabaseSnapshotName. For more
-#' information, see the Lightsail Dev Guide.
+#' information, see the <span>Lightsail Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_create_relational_database_from_snapshot(
@@ -3286,16 +3292,15 @@ lightsail_create_relational_database <- function(relationalDatabaseName, availab
 #' 
 #' Constraints:
 #' 
-#' -   Must contain from 2 to 255 alphanumeric characters, or hyphens.
+#'   - Must contain from 2 to 255 alphanumeric characters, or hyphens.
 #' 
-#' -   The first and last character must be a letter or number.
+#'   - The first and last character must be a letter or number.
 #' @param availabilityZone The Availability Zone in which to create your new database. Use the
 #' `us-east-2a` case-sensitive format.
 #' 
 #' You can get a list of Availability Zones by using the `get regions`
-#' operation. Be sure to add the
-#' `include relational database Availability Zones` parameter to your
-#' request.
+#' operation. Be sure to add the `include relational database Availability
+#' Zones` parameter to your request.
 #' @param publiclyAccessible Specifies the accessibility options for your new database. A value of
 #' `true` specifies a database that is available to resources outside of
 #' your Lightsail account. A value of `false` specifies a database that is
@@ -3306,8 +3311,8 @@ lightsail_create_relational_database <- function(relationalDatabaseName, availab
 #' @param relationalDatabaseBundleId The bundle ID for your new database. A bundle describes the performance
 #' specifications for your database.
 #' 
-#' You can get a list of database bundle IDs by using the
-#' `get relational database bundles` operation.
+#' You can get a list of database bundle IDs by using the `get relational
+#' database bundles` operation.
 #' 
 #' When creating a new database from a snapshot, you cannot choose a bundle
 #' that is smaller than the bundle of the source database.
@@ -3316,15 +3321,15 @@ lightsail_create_relational_database <- function(relationalDatabaseName, availab
 #' 
 #' Constraints:
 #' 
-#' -   Must be before the latest restorable time for the database.
+#'   - Must be before the latest restorable time for the database.
 #' 
-#' -   Cannot be specified if the `use latest restorable time` parameter is
+#'   - Cannot be specified if the `use latest restorable time` parameter is
 #'     `true`.
 #' 
-#' -   Specified in Coordinated Universal Time (UTC).
+#'   - Specified in Coordinated Universal Time (UTC).
 #' 
-#' -   Specified in the Unix time format.
-#' 
+#'   - Specified in the Unix time format.
+#'     
 #'     For example, if you wish to use a restore time of October 1, 2018,
 #'     at 8 PM UTC, then you input `1538424000` as the restore time.
 #' @param useLatestRestorableTime Specifies whether your database is restored from the latest backup time.
@@ -3419,8 +3424,8 @@ lightsail_create_relational_database_from_snapshot <- function(relationalDatabas
 #' before deleting a database.
 #' 
 #' The `create relational database snapshot` operation supports tag-based
-#' access control via request tags. For more information, see the Lightsail
-#' Dev Guide.
+#' access control via request tags. For more information, see the
+#' <span>Lightsail Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_create_relational_database_snapshot(relationalDatabaseName,
@@ -3431,9 +3436,9 @@ lightsail_create_relational_database_from_snapshot <- function(relationalDatabas
 #' 
 #' Constraints:
 #' 
-#' -   Must contain from 2 to 255 alphanumeric characters, or hyphens.
+#'   - Must contain from 2 to 255 alphanumeric characters, or hyphens.
 #' 
-#' -   The first and last character must be a letter or number.
+#'   - The first and last character must be a letter or number.
 #' @param tags The tag keys and optional values to add to the resource during create.
 #' 
 #' Use the [`tag_resource`][lightsail_tag_resource] action to tag a
@@ -3511,7 +3516,7 @@ lightsail_create_relational_database_snapshot <- function(relationalDatabaseName
 #' An alarm is used to monitor a single metric for one of your resources.
 #' When a metric condition is met, the alarm can notify you by email, SMS
 #' text message, and a banner displayed on the Amazon Lightsail console.
-#' For more information, see Alarms in Amazon Lightsail.
+#' For more information, see <span>Alarms in Amazon Lightsail</span>.
 #'
 #' @usage
 #' lightsail_delete_alarm(alarmName)
@@ -3579,7 +3584,7 @@ lightsail_delete_alarm <- function(alarmName) {
 #'
 #' @description
 #' Deletes an automatic snapshot of an instance or disk. For more
-#' information, see the Lightsail Dev Guide.
+#' information, see the <span>Lightsail Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_delete_auto_snapshot(resourceName, date)
@@ -3734,8 +3739,8 @@ lightsail_delete_certificate <- function(certificateName) {
 #' Lightsail resources. You can add one email address and one mobile phone
 #' number contact method in each AWS Region. However, SMS text messaging is
 #' not supported in some AWS Regions, and SMS text messages cannot be sent
-#' to some countries/regions. For more information, see Notifications in
-#' Amazon Lightsail.
+#' to some countries/regions. For more information, see <span>Notifications
+#' in Amazon Lightsail</span>.
 #'
 #' @usage
 #' lightsail_delete_contact_method(protocol)
@@ -3910,7 +3915,7 @@ lightsail_delete_container_service <- function(serviceName) {
 #' 
 #' The `delete disk` operation supports tag-based access control via
 #' resource tags applied to the resource identified by `disk name`. For
-#' more information, see the Lightsail Dev Guide.
+#' more information, see the <span>Lightsail Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_delete_disk(diskName, forceDeleteAddOns)
@@ -3991,8 +3996,8 @@ lightsail_delete_disk <- function(diskName, forceDeleteAddOns = NULL) {
 #' disk.
 #' 
 #' The `delete disk snapshot` operation supports tag-based access control
-#' via resource tags applied to the resource identified by
-#' `disk snapshot name`. For more information, see the Lightsail Dev Guide.
+#' via resource tags applied to the resource identified by `disk snapshot
+#' name`. For more information, see the <span>Lightsail Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_delete_disk_snapshot(diskSnapshotName)
@@ -4134,7 +4139,7 @@ lightsail_delete_distribution <- function(distributionName = NULL) {
 #' 
 #' The `delete domain` operation supports tag-based access control via
 #' resource tags applied to the resource identified by `domain name`. For
-#' more information, see the Lightsail Dev Guide.
+#' more information, see the <span>Lightsail Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_delete_domain(domainName)
@@ -4203,7 +4208,7 @@ lightsail_delete_domain <- function(domainName) {
 #' 
 #' The `delete domain entry` operation supports tag-based access control
 #' via resource tags applied to the resource identified by `domain name`.
-#' For more information, see the Lightsail Dev Guide.
+#' For more information, see the <span>Lightsail Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_delete_domain_entry(domainName, domainEntry)
@@ -4284,7 +4289,7 @@ lightsail_delete_domain_entry <- function(domainName, domainEntry) {
 #' 
 #' The `delete instance` operation supports tag-based access control via
 #' resource tags applied to the resource identified by `instance name`. For
-#' more information, see the Lightsail Dev Guide.
+#' more information, see the <span>Lightsail Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_delete_instance(instanceName, forceDeleteAddOns)
@@ -4351,15 +4356,15 @@ lightsail_delete_instance <- function(instanceName, forceDeleteAddOns = NULL) {
 }
 .lightsail$operations$delete_instance <- lightsail_delete_instance
 
-#' Deletes a specific snapshot of a virtual private server (or instance)
+#' Deletes a specific snapshot of a virtual private server (or _instance_)
 #'
 #' @description
 #' Deletes a specific snapshot of a virtual private server (or *instance*).
 #' 
 #' The `delete instance snapshot` operation supports tag-based access
 #' control via resource tags applied to the resource identified by
-#' `instance snapshot name`. For more information, see the Lightsail Dev
-#' Guide.
+#' `instance snapshot name`. For more information, see the <span>Lightsail
+#' Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_delete_instance_snapshot(instanceSnapshotName)
@@ -4430,7 +4435,7 @@ lightsail_delete_instance_snapshot <- function(instanceSnapshotName) {
 #' 
 #' The `delete key pair` operation supports tag-based access control via
 #' resource tags applied to the resource identified by `key pair name`. For
-#' more information, see the Lightsail Dev Guide.
+#' more information, see the <span>Lightsail Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_delete_key_pair(keyPairName)
@@ -4503,9 +4508,9 @@ lightsail_delete_key_pair <- function(keyPairName) {
 #' 
 #' Perform this operation only if you were expecting the host key or
 #' certificate mismatch or if you are familiar with the new host key or
-#' certificate on the instance. For more information, see Troubleshooting
-#' connection issues when using the Amazon Lightsail browser-based SSH or
-#' RDP client.
+#' certificate on the instance. For more information, see
+#' <span>Troubleshooting connection issues when using the Amazon Lightsail
+#' browser-based SSH or RDP client</span>.
 #'
 #' @usage
 #' lightsail_delete_known_host_keys(instanceName)
@@ -4580,8 +4585,8 @@ lightsail_delete_known_host_keys <- function(instanceName) {
 #' ownership again.
 #' 
 #' The `delete load balancer` operation supports tag-based access control
-#' via resource tags applied to the resource identified by
-#' `load balancer name`. For more information, see the Lightsail Dev Guide.
+#' via resource tags applied to the resource identified by `load balancer
+#' name`. For more information, see the <span>Lightsail Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_delete_load_balancer(loadBalancerName)
@@ -4655,7 +4660,7 @@ lightsail_delete_load_balancer <- function(loadBalancerName) {
 #' [`delete_load_balancer_tls_certificate`][lightsail_delete_load_balancer_tls_certificate]
 #' operation supports tag-based access control via resource tags applied to
 #' the resource identified by `load balancer name`. For more information,
-#' see the Lightsail Dev Guide.
+#' see the <span>Lightsail Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_delete_load_balancer_tls_certificate(loadBalancerName,
@@ -4736,8 +4741,8 @@ lightsail_delete_load_balancer_tls_certificate <- function(loadBalancerName, cer
 #' 
 #' The `delete relational database` operation supports tag-based access
 #' control via resource tags applied to the resource identified by
-#' relationalDatabaseName. For more information, see the Lightsail Dev
-#' Guide.
+#' relationalDatabaseName. For more information, see the <span>Lightsail
+#' Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_delete_relational_database(relationalDatabaseName,
@@ -4761,9 +4766,9 @@ lightsail_delete_load_balancer_tls_certificate <- function(loadBalancerName, cer
 #' 
 #' Constraints:
 #' 
-#' -   Must contain from 2 to 255 alphanumeric characters, or hyphens.
+#'   - Must contain from 2 to 255 alphanumeric characters, or hyphens.
 #' 
-#' -   The first and last character must be a letter or number.
+#'   - The first and last character must be a letter or number.
 #'
 #' @return
 #' A list with the following syntax:
@@ -4831,8 +4836,8 @@ lightsail_delete_relational_database <- function(relationalDatabaseName, skipFin
 #' 
 #' The `delete relational database snapshot` operation supports tag-based
 #' access control via resource tags applied to the resource identified by
-#' relationalDatabaseName. For more information, see the Lightsail Dev
-#' Guide.
+#' relationalDatabaseName. For more information, see the <span>Lightsail
+#' Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_delete_relational_database_snapshot(
@@ -4979,7 +4984,7 @@ lightsail_detach_certificate_from_distribution <- function(distributionName) {
 #' 
 #' The `detach disk` operation supports tag-based access control via
 #' resource tags applied to the resource identified by `disk name`. For
-#' more information, see the Lightsail Dev Guide.
+#' more information, see the <span>Lightsail Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_detach_disk(diskName)
@@ -5054,7 +5059,8 @@ lightsail_detach_disk <- function(diskName) {
 #' 
 #' The `detach instances from load balancer` operation supports tag-based
 #' access control via resource tags applied to the resource identified by
-#' `load balancer name`. For more information, see the Lightsail Dev Guide.
+#' `load balancer name`. For more information, see the <span>Lightsail Dev
+#' Guide</span>.
 #'
 #' @usage
 #' lightsail_detach_instances_from_load_balancer(loadBalancerName,
@@ -5197,7 +5203,7 @@ lightsail_detach_static_ip <- function(staticIpName) {
 #'
 #' @description
 #' Disables an add-on for an Amazon Lightsail resource. For more
-#' information, see the Lightsail Dev Guide.
+#' information, see the <span>Lightsail Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_disable_add_on(addOnType, resourceName)
@@ -5309,7 +5315,7 @@ lightsail_download_default_key_pair <- function() {
 #'
 #' @description
 #' Enables or modifies an add-on for an Amazon Lightsail resource. For more
-#' information, see the Lightsail Dev Guide.
+#' information, see the <span>Lightsail Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_enable_add_on(resourceName, addOnRequest)
@@ -5387,9 +5393,8 @@ lightsail_enable_add_on <- function(resourceName, addOnRequest) {
 #' @description
 #' Exports an Amazon Lightsail instance or block storage disk snapshot to
 #' Amazon Elastic Compute Cloud (Amazon EC2). This operation results in an
-#' export snapshot record that can be used with the
-#' `create cloud formation stack` operation to create new Amazon EC2
-#' instances.
+#' export snapshot record that can be used with the `create cloud formation
+#' stack` operation to create new Amazon EC2 instances.
 #' 
 #' Exported instance snapshots appear in Amazon EC2 as Amazon Machine
 #' Images (AMIs), and the instance system disk appears as an Amazon Elastic
@@ -5399,9 +5404,8 @@ lightsail_enable_add_on <- function(resourceName, addOnRequest) {
 #' snapshot.
 #' 
 #' The `export snapshot` operation supports tag-based access control via
-#' resource tags applied to the resource identified by
-#' `source snapshot name`. For more information, see the Lightsail Dev
-#' Guide.
+#' resource tags applied to the resource identified by `source snapshot
+#' name`. For more information, see the <span>Lightsail Dev Guide</span>.
 #' 
 #' Use the `get instance snapshots` or `get disk snapshots` operations to
 #' get a list of snapshots that you can export to Amazon EC2.
@@ -5532,7 +5536,7 @@ lightsail_get_active_names <- function(pageToken = NULL) {
 #' An alarm is used to monitor a single metric for one of your resources.
 #' When a metric condition is met, the alarm can notify you by email, SMS
 #' text message, and a banner displayed on the Amazon Lightsail console.
-#' For more information, see Alarms in Amazon Lightsail.
+#' For more information, see <span>Alarms in Amazon Lightsail</span>.
 #'
 #' @usage
 #' lightsail_get_alarms(alarmName, pageToken, monitoredResourceName)
@@ -5629,7 +5633,7 @@ lightsail_get_alarms <- function(alarmName = NULL, pageToken = NULL, monitoredRe
 #'
 #' @description
 #' Returns the available automatic snapshots for an instance or disk. For
-#' more information, see the Lightsail Dev Guide.
+#' more information, see the <span>Lightsail Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_get_auto_snapshots(resourceName)
@@ -5688,7 +5692,7 @@ lightsail_get_auto_snapshots <- function(resourceName) {
 }
 .lightsail$operations$get_auto_snapshots <- lightsail_get_auto_snapshots
 
-#' Returns the list of available instance images, or blueprints
+#' Returns the list of available instance images, or _blueprints_
 #'
 #' @description
 #' Returns the list of available instance images, or *blueprints*. You can
@@ -6078,8 +6082,8 @@ lightsail_get_cloud_formation_stack_records <- function(pageToken = NULL) {
 #' Lightsail resources. You can add one email address and one mobile phone
 #' number contact method in each AWS Region. However, SMS text messaging is
 #' not supported in some AWS Regions, and SMS text messages cannot be sent
-#' to some countries/regions. For more information, see Notifications in
-#' Amazon Lightsail.
+#' to some countries/regions. For more information, see <span>Notifications
+#' in Amazon Lightsail</span>.
 #'
 #' @usage
 #' lightsail_get_contact_methods(protocols)
@@ -6279,10 +6283,10 @@ lightsail_get_container_images <- function(serviceName) {
 #' 
 #' Constraints:
 #' 
-#' -   Specified in Coordinated Universal Time (UTC).
+#'   - Specified in Coordinated Universal Time (UTC).
 #' 
-#' -   Specified in the Unix time format.
-#' 
+#'   - Specified in the Unix time format.
+#'     
 #'     For example, if you wish to use a start time of October 1, 2018, at
 #'     8 PM UTC, specify `1538424000` as the start time.
 #' 
@@ -6292,10 +6296,10 @@ lightsail_get_container_images <- function(serviceName) {
 #' 
 #' Constraints:
 #' 
-#' -   Specified in Coordinated Universal Time (UTC).
+#'   - Specified in Coordinated Universal Time (UTC).
 #' 
-#' -   Specified in the Unix time format.
-#' 
+#'   - Specified in the Unix time format.
+#'     
 #'     For example, if you wish to use an end time of October 1, 2018, at 9
 #'     PM UTC, specify `1538427600` as the end time.
 #' 
@@ -6306,18 +6310,18 @@ lightsail_get_container_images <- function(serviceName) {
 #' The following are a few examples of filter patterns that you can
 #' specify:
 #' 
-#' -   To return all log events, specify a filter pattern of `""`.
+#'   - To return all log events, specify a filter pattern of `""`.
 #' 
-#' -   To exclude log events that contain the `ERROR` term, and return all
+#'   - To exclude log events that contain the `ERROR` term, and return all
 #'     other log events, specify a filter pattern of `"-ERROR"`.
 #' 
-#' -   To return log events that contain the `ERROR` term, specify a filter
+#'   - To return log events that contain the `ERROR` term, specify a filter
 #'     pattern of `"ERROR"`.
 #' 
-#' -   To return log events that contain both the `ERROR` and `Exception`
+#'   - To return log events that contain both the `ERROR` and `Exception`
 #'     terms, specify a filter pattern of `"ERROR Exception"`.
 #' 
-#' -   To return log events that contain the `ERROR` *or* the `Exception`
+#'   - To return log events that contain the `ERROR` *or* the `Exception`
 #'     term, specify a filter pattern of `"?ERROR ?Exception"`.
 #' @param pageToken The token to advance to the next page of results from your request.
 #' 
@@ -6491,22 +6495,22 @@ lightsail_get_container_service_deployments <- function(serviceName) {
 #' most useful statistics to include in your request, and the published
 #' unit value.
 #' 
-#' -   `CPUUtilization` - The average percentage of compute units that are
+#'   - `CPUUtilization` - The average percentage of compute units that are
 #'     currently in use across all nodes of the container service. This
 #'     metric identifies the processing power required to run containers on
 #'     each node of the container service.
-#' 
+#'     
 #'     Statistics: The most useful statistics are `Maximum` and `Average`.
-#' 
+#'     
 #'     Unit: The published unit is `Percent`.
 #' 
-#' -   `MemoryUtilization` - The average percentage of available memory
+#'   - `MemoryUtilization` - The average percentage of available memory
 #'     that is currently in use across all nodes of the container service.
 #'     This metric identifies the memory required to run containers on each
 #'     node of the container service.
-#' 
+#'     
 #'     Statistics: The most useful statistics are `Maximum` and `Average`.
-#' 
+#'     
 #'     Unit: The published unit is `Percent`.
 #' @param startTime &#91;required&#93; The start time of the time period.
 #' @param endTime &#91;required&#93; The end time of the time period.
@@ -6518,26 +6522,26 @@ lightsail_get_container_service_deployments <- function(serviceName) {
 #' 
 #' The following statistics are available:
 #' 
-#' -   `Minimum` - The lowest value observed during the specified period.
+#'   - `Minimum` - The lowest value observed during the specified period.
 #'     Use this value to determine low volumes of activity for your
 #'     application.
 #' 
-#' -   `Maximum` - The highest value observed during the specified period.
+#'   - `Maximum` - The highest value observed during the specified period.
 #'     Use this value to determine high volumes of activity for your
 #'     application.
 #' 
-#' -   `Sum` - All values submitted for the matching metric added together.
+#'   - `Sum` - All values submitted for the matching metric added together.
 #'     You can use this statistic to determine the total volume of a
 #'     metric.
 #' 
-#' -   `Average` - The value of `Sum` / `SampleCount` during the specified
+#'   - `Average` - The value of `Sum` / `SampleCount` during the specified
 #'     period. By comparing this statistic with the `Minimum` and `Maximum`
 #'     values, you can determine the full scope of a metric and how close
 #'     the average use is to the `Minimum` and `Maximum` values. This
 #'     comparison helps you to know when to increase or decrease your
 #'     resources.
 #' 
-#' -   `SampleCount` - The count, or number, of data points used for the
+#'   - `SampleCount` - The count, or number, of data points used for the
 #'     statistical calculation.
 #'
 #' @return
@@ -7260,62 +7264,62 @@ lightsail_get_distribution_latest_cache_reset <- function(distributionName = NUL
 #' useful `statistics` to include in your request, and the published `unit`
 #' value.
 #' 
-#' -   **`Requests`** - The total number of viewer requests received by
+#'   - **`Requests`** - The total number of viewer requests received by
 #'     your Lightsail distribution, for all HTTP methods, and for both HTTP
 #'     and HTTPS requests.
-#' 
+#'     
 #'     `Statistics`: The most useful statistic is `Sum`.
-#' 
+#'     
 #'     `Unit`: The published unit is `None`.
 #' 
-#' -   **`BytesDownloaded`** - The number of bytes downloaded by viewers
+#'   - **`BytesDownloaded`** - The number of bytes downloaded by viewers
 #'     for GET, HEAD, and OPTIONS requests.
-#' 
+#'     
 #'     `Statistics`: The most useful statistic is `Sum`.
-#' 
+#'     
 #'     `Unit`: The published unit is `None`.
 #' 
-#' -   **`BytesUploaded `** - The number of bytes uploaded to your origin
+#'   - **` BytesUploaded  `** - The number of bytes uploaded to your origin
 #'     by your Lightsail distribution, using POST and PUT requests.
-#' 
+#'     
 #'     `Statistics`: The most useful statistic is `Sum`.
-#' 
+#'     
 #'     `Unit`: The published unit is `None`.
 #' 
-#' -   **`TotalErrorRate`** - The percentage of all viewer requests for
+#'   - **`TotalErrorRate`** - The percentage of all viewer requests for
 #'     which the response's HTTP status code was 4xx or 5xx.
-#' 
+#'     
 #'     `Statistics`: The most useful statistic is `Average`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Percent`.
 #' 
-#' -   **`4xxErrorRate`** - The percentage of all viewer requests for which
+#'   - **`4xxErrorRate`** - The percentage of all viewer requests for which
 #'     the response's HTTP status cod was 4xx. In these cases, the client
 #'     or client viewer may have made an error. For example, a status code
 #'     of 404 (Not Found) means that the client requested an object that
 #'     could not be found.
-#' 
+#'     
 #'     `Statistics`: The most useful statistic is `Average`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Percent`.
 #' 
-#' -   **`5xxErrorRate`** - The percentage of all viewer requests for which
+#'   - **`5xxErrorRate`** - The percentage of all viewer requests for which
 #'     the response's HTTP status code was 5xx. In these cases, the origin
 #'     server did not satisfy the requests. For example, a status code of
 #'     503 (Service Unavailable) means that the origin server is currently
 #'     unavailable.
-#' 
+#'     
 #'     `Statistics`: The most useful statistic is `Average`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Percent`.
 #' @param startTime &#91;required&#93; The start of the time interval for which to get metric data.
 #' 
 #' Constraints:
 #' 
-#' -   Specified in Coordinated Universal Time (UTC).
+#'   - Specified in Coordinated Universal Time (UTC).
 #' 
-#' -   Specified in the Unix time format.
-#' 
+#'   - Specified in the Unix time format.
+#'     
 #'     For example, if you wish to use a start time of October 1, 2018, at
 #'     8 PM UTC, specify `1538424000` as the start time.
 #' 
@@ -7325,10 +7329,10 @@ lightsail_get_distribution_latest_cache_reset <- function(distributionName = NUL
 #' 
 #' Constraints:
 #' 
-#' -   Specified in Coordinated Universal Time (UTC).
+#'   - Specified in Coordinated Universal Time (UTC).
 #' 
-#' -   Specified in the Unix time format.
-#' 
+#'   - Specified in the Unix time format.
+#'     
 #'     For example, if you wish to use an end time of October 1, 2018, at 9
 #'     PM UTC, specify `1538427600` as the end time.
 #' 
@@ -7344,26 +7348,26 @@ lightsail_get_distribution_latest_cache_reset <- function(distributionName = NUL
 #' 
 #' The following statistics are available:
 #' 
-#' -   `Minimum` - The lowest value observed during the specified period.
+#'   - `Minimum` - The lowest value observed during the specified period.
 #'     Use this value to determine low volumes of activity for your
 #'     application.
 #' 
-#' -   `Maximum` - The highest value observed during the specified period.
+#'   - `Maximum` - The highest value observed during the specified period.
 #'     Use this value to determine high volumes of activity for your
 #'     application.
 #' 
-#' -   `Sum` - All values submitted for the matching metric added together.
+#'   - `Sum` - All values submitted for the matching metric added together.
 #'     You can use this statistic to determine the total volume of a
 #'     metric.
 #' 
-#' -   `Average` - The value of Sum / SampleCount during the specified
+#'   - `Average` - The value of Sum / SampleCount during the specified
 #'     period. By comparing this statistic with the Minimum and Maximum
 #'     values, you can determine the full scope of a metric and how close
 #'     the average use is to the Minimum and Maximum values. This
 #'     comparison helps you to know when to increase or decrease your
 #'     resources.
 #' 
-#' -   `SampleCount` - The count, or number, of data points used for the
+#'   - `SampleCount` - The count, or number, of data points used for the
 #'     statistical calculation.
 #'
 #' @return
@@ -7719,12 +7723,12 @@ lightsail_get_domains <- function(pageToken = NULL) {
 #' snapshot operation
 #'
 #' @description
-#' Returns the export snapshot record created as a result of the
-#' `export snapshot` operation.
+#' Returns the export snapshot record created as a result of the `export
+#' snapshot` operation.
 #' 
 #' An export snapshot record can be used to create a new Amazon EC2
-#' instance and its related resources with the
-#' `create cloud formation stack` operation.
+#' instance and its related resources with the `create cloud formation
+#' stack` operation.
 #'
 #' @usage
 #' lightsail_get_export_snapshot_records(pageToken)
@@ -7967,7 +7971,7 @@ lightsail_get_instance <- function(instanceName) {
 .lightsail$operations$get_instance <- lightsail_get_instance
 
 #' Returns temporary SSH keys you can use to connect to a specific virtual
-#' private server, or instance
+#' private server, or _instance_
 #'
 #' @description
 #' Returns temporary SSH keys you can use to connect to a specific virtual
@@ -7975,7 +7979,8 @@ lightsail_get_instance <- function(instanceName) {
 #' 
 #' The `get instance access details` operation supports tag-based access
 #' control via resource tags applied to the resource identified by
-#' `instance name`. For more information, see the Lightsail Dev Guide.
+#' `instance name`. For more information, see the <span>Lightsail Dev
+#' Guide</span>.
 #'
 #' @usage
 #' lightsail_get_instance_access_details(instanceName, protocol)
@@ -8072,96 +8077,96 @@ lightsail_get_instance_access_details <- function(instanceName, protocol = NULL)
 #' Valid instance metric names are listed below, along with the most useful
 #' `statistics` to include in your request, and the published `unit` value.
 #' 
-#' -   **`BurstCapacityPercentage`** - The percentage of CPU performance
+#'   - **`BurstCapacityPercentage`** - The percentage of CPU performance
 #'     available for your instance to burst above its baseline. Your
 #'     instance continuously accrues and consumes burst capacity. Burst
 #'     capacity stops accruing when your instance's
 #'     `BurstCapacityPercentage` reaches 100%. For more information, see
-#'     Viewing instance burst capacity in Amazon Lightsail.
-#' 
+#'     <span>Viewing instance burst capacity in Amazon Lightsail</span>.
+#'     
 #'     `Statistics`: The most useful statistics are `Maximum` and
 #'     `Average`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Percent`.
 #' 
-#' -   **`BurstCapacityTime`** - The available amount of time for your
+#'   - **`BurstCapacityTime`** - The available amount of time for your
 #'     instance to burst at 100% CPU utilization. Your instance
 #'     continuously accrues and consumes burst capacity. Burst capacity
 #'     time stops accruing when your instance's `BurstCapacityPercentage`
 #'     metric reaches 100%.
-#' 
+#'     
 #'     Burst capacity time is consumed at the full rate only when your
 #'     instance operates at 100% CPU utilization. For example, if your
 #'     instance operates at 50% CPU utilization in the burstable zone for a
 #'     5-minute period, then it consumes CPU burst capacity minutes at a
 #'     50% rate in that period. Your instance consumed 2 minutes and 30
 #'     seconds of CPU burst capacity minutes in the 5-minute period. For
-#'     more information, see Viewing instance burst capacity in Amazon
-#'     Lightsail.
-#' 
+#'     more information, see <span>Viewing instance burst capacity in
+#'     Amazon Lightsail</span>.
+#'     
 #'     `Statistics`: The most useful statistics are `Maximum` and
 #'     `Average`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Seconds`.
 #' 
-#' -   **`CPUUtilization`** - The percentage of allocated compute units
+#'   - **`CPUUtilization`** - The percentage of allocated compute units
 #'     that are currently in use on the instance. This metric identifies
 #'     the processing power to run the applications on the instance. Tools
 #'     in your operating system can show a lower percentage than Lightsail
 #'     when the instance is not allocated a full processor core.
-#' 
+#'     
 #'     `Statistics`: The most useful statistics are `Maximum` and
 #'     `Average`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Percent`.
 #' 
-#' -   **`NetworkIn`** - The number of bytes received on all network
+#'   - **`NetworkIn`** - The number of bytes received on all network
 #'     interfaces by the instance. This metric identifies the volume of
 #'     incoming network traffic to the instance. The number reported is the
 #'     number of bytes received during the period. Because this metric is
 #'     reported in 5-minute intervals, divide the reported number by 300 to
 #'     find Bytes/second.
-#' 
+#'     
 #'     `Statistics`: The most useful statistic is `Sum`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Bytes`.
 #' 
-#' -   **`NetworkOut`** - The number of bytes sent out on all network
+#'   - **`NetworkOut`** - The number of bytes sent out on all network
 #'     interfaces by the instance. This metric identifies the volume of
 #'     outgoing network traffic from the instance. The number reported is
 #'     the number of bytes sent during the period. Because this metric is
 #'     reported in 5-minute intervals, divide the reported number by 300 to
 #'     find Bytes/second.
-#' 
+#'     
 #'     `Statistics`: The most useful statistic is `Sum`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Bytes`.
 #' 
-#' -   **`StatusCheckFailed`** - Reports whether the instance passed or
+#'   - **`StatusCheckFailed`** - Reports whether the instance passed or
 #'     failed both the instance status check and the system status check.
 #'     This metric can be either 0 (passed) or 1 (failed). This metric data
 #'     is available in 1-minute (60 seconds) granularity.
-#' 
+#'     
 #'     `Statistics`: The most useful statistic is `Sum`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Count`.
 #' 
-#' -   **`StatusCheckFailed_Instance`** - Reports whether the instance
+#'   - **`StatusCheckFailed_Instance`** - Reports whether the instance
 #'     passed or failed the instance status check. This metric can be
 #'     either 0 (passed) or 1 (failed). This metric data is available in
 #'     1-minute (60 seconds) granularity.
-#' 
+#'     
 #'     `Statistics`: The most useful statistic is `Sum`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Count`.
 #' 
-#' -   **`StatusCheckFailed_System`** - Reports whether the instance passed
+#'   - **`StatusCheckFailed_System`** - Reports whether the instance passed
 #'     or failed the system status check. This metric can be either 0
 #'     (passed) or 1 (failed). This metric data is available in 1-minute
 #'     (60 seconds) granularity.
-#' 
+#'     
 #'     `Statistics`: The most useful statistic is `Sum`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Count`.
 #' @param period &#91;required&#93; The granularity, in seconds, of the returned data points.
 #' 
@@ -8178,26 +8183,26 @@ lightsail_get_instance_access_details <- function(instanceName, protocol = NULL)
 #' 
 #' The following statistics are available:
 #' 
-#' -   `Minimum` - The lowest value observed during the specified period.
+#'   - `Minimum` - The lowest value observed during the specified period.
 #'     Use this value to determine low volumes of activity for your
 #'     application.
 #' 
-#' -   `Maximum` - The highest value observed during the specified period.
+#'   - `Maximum` - The highest value observed during the specified period.
 #'     Use this value to determine high volumes of activity for your
 #'     application.
 #' 
-#' -   `Sum` - All values submitted for the matching metric added together.
+#'   - `Sum` - All values submitted for the matching metric added together.
 #'     You can use this statistic to determine the total volume of a
 #'     metric.
 #' 
-#' -   `Average` - The value of Sum / SampleCount during the specified
+#'   - `Average` - The value of Sum / SampleCount during the specified
 #'     period. By comparing this statistic with the Minimum and Maximum
 #'     values, you can determine the full scope of a metric and how close
 #'     the average use is to the Minimum and Maximum values. This
 #'     comparison helps you to know when to increase or decrease your
 #'     resources.
 #' 
-#' -   `SampleCount` - The count, or number, of data points used for the
+#'   - `SampleCount` - The count, or number, of data points used for the
 #'     statistical calculation.
 #'
 #' @return
@@ -8598,7 +8603,7 @@ lightsail_get_instance_state <- function(instanceName) {
 .lightsail$operations$get_instance_state <- lightsail_get_instance_state
 
 #' Returns information about all Amazon Lightsail virtual private servers,
-#' or instances
+#' or _instances_
 #'
 #' @description
 #' Returns information about all Amazon Lightsail virtual private servers,
@@ -9000,113 +9005,113 @@ lightsail_get_load_balancer <- function(loadBalancerName) {
 #' useful `statistics` to include in your request, and the published `unit`
 #' value.
 #' 
-#' -   **`ClientTLSNegotiationErrorCount`** - The number of TLS connections
+#'   - **`ClientTLSNegotiationErrorCount`** - The number of TLS connections
 #'     initiated by the client that did not establish a session with the
 #'     load balancer due to a TLS error generated by the load balancer.
 #'     Possible causes include a mismatch of ciphers or protocols.
-#' 
+#'     
 #'     `Statistics`: The most useful statistic is `Sum`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Count`.
 #' 
-#' -   **`HealthyHostCount`** - The number of target instances that are
+#'   - **`HealthyHostCount`** - The number of target instances that are
 #'     considered healthy.
-#' 
+#'     
 #'     `Statistics`: The most useful statistic are `Average`, `Minimum`,
 #'     and `Maximum`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Count`.
 #' 
-#' -   **`HTTPCode_Instance_2XX_Count`** - The number of HTTP 2XX response
+#'   - **`HTTPCode_Instance_2XX_Count`** - The number of HTTP 2XX response
 #'     codes generated by the target instances. This does not include any
 #'     response codes generated by the load balancer.
-#' 
+#'     
 #'     `Statistics`: The most useful statistic is `Sum`. Note that
 #'     `Minimum`, `Maximum`, and `Average` all return `1`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Count`.
 #' 
-#' -   **`HTTPCode_Instance_3XX_Count`** - The number of HTTP 3XX response
+#'   - **`HTTPCode_Instance_3XX_Count`** - The number of HTTP 3XX response
 #'     codes generated by the target instances. This does not include any
 #'     response codes generated by the load balancer.
-#' 
+#'     
 #'     `Statistics`: The most useful statistic is `Sum`. Note that
 #'     `Minimum`, `Maximum`, and `Average` all return `1`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Count`.
 #' 
-#' -   **`HTTPCode_Instance_4XX_Count`** - The number of HTTP 4XX response
+#'   - **`HTTPCode_Instance_4XX_Count`** - The number of HTTP 4XX response
 #'     codes generated by the target instances. This does not include any
 #'     response codes generated by the load balancer.
-#' 
+#'     
 #'     `Statistics`: The most useful statistic is `Sum`. Note that
 #'     `Minimum`, `Maximum`, and `Average` all return `1`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Count`.
 #' 
-#' -   **`HTTPCode_Instance_5XX_Count`** - The number of HTTP 5XX response
+#'   - **`HTTPCode_Instance_5XX_Count`** - The number of HTTP 5XX response
 #'     codes generated by the target instances. This does not include any
 #'     response codes generated by the load balancer.
-#' 
+#'     
 #'     `Statistics`: The most useful statistic is `Sum`. Note that
 #'     `Minimum`, `Maximum`, and `Average` all return `1`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Count`.
 #' 
-#' -   **`HTTPCode_LB_4XX_Count`** - The number of HTTP 4XX client error
+#'   - **`HTTPCode_LB_4XX_Count`** - The number of HTTP 4XX client error
 #'     codes that originated from the load balancer. Client errors are
 #'     generated when requests are malformed or incomplete. These requests
 #'     were not received by the target instance. This count does not
 #'     include response codes generated by the target instances.
-#' 
+#'     
 #'     `Statistics`: The most useful statistic is `Sum`. Note that
 #'     `Minimum`, `Maximum`, and `Average` all return `1`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Count`.
 #' 
-#' -   **`HTTPCode_LB_5XX_Count`** - The number of HTTP 5XX server error
+#'   - **`HTTPCode_LB_5XX_Count`** - The number of HTTP 5XX server error
 #'     codes that originated from the load balancer. This does not include
 #'     any response codes generated by the target instance. This metric is
 #'     reported if there are no healthy instances attached to the load
 #'     balancer, or if the request rate exceeds the capacity of the
 #'     instances (spillover) or the load balancer.
-#' 
+#'     
 #'     `Statistics`: The most useful statistic is `Sum`. Note that
 #'     `Minimum`, `Maximum`, and `Average` all return `1`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Count`.
 #' 
-#' -   **`InstanceResponseTime`** - The time elapsed, in seconds, after the
+#'   - **`InstanceResponseTime`** - The time elapsed, in seconds, after the
 #'     request leaves the load balancer until a response from the target
 #'     instance is received.
-#' 
+#'     
 #'     `Statistics`: The most useful statistic is `Average`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Seconds`.
 #' 
-#' -   **`RejectedConnectionCount`** - The number of connections that were
+#'   - **`RejectedConnectionCount`** - The number of connections that were
 #'     rejected because the load balancer had reached its maximum number of
 #'     connections.
-#' 
+#'     
 #'     `Statistics`: The most useful statistic is `Sum`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Count`.
 #' 
-#' -   **`RequestCount`** - The number of requests processed over IPv4.
+#'   - **`RequestCount`** - The number of requests processed over IPv4.
 #'     This count includes only the requests with a response generated by a
 #'     target instance of the load balancer.
-#' 
+#'     
 #'     `Statistics`: The most useful statistic is `Sum`. Note that
 #'     `Minimum`, `Maximum`, and `Average` all return `1`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Count`.
 #' 
-#' -   **`UnhealthyHostCount`** - The number of target instances that are
+#'   - **`UnhealthyHostCount`** - The number of target instances that are
 #'     considered unhealthy.
-#' 
+#'     
 #'     `Statistics`: The most useful statistic are `Average`, `Minimum`,
 #'     and `Maximum`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Count`.
 #' @param period &#91;required&#93; The granularity, in seconds, of the returned data points.
 #' @param startTime &#91;required&#93; The start time of the period.
@@ -9118,26 +9123,26 @@ lightsail_get_load_balancer <- function(loadBalancerName) {
 #' 
 #' The following statistics are available:
 #' 
-#' -   `Minimum` - The lowest value observed during the specified period.
+#'   - `Minimum` - The lowest value observed during the specified period.
 #'     Use this value to determine low volumes of activity for your
 #'     application.
 #' 
-#' -   `Maximum` - The highest value observed during the specified period.
+#'   - `Maximum` - The highest value observed during the specified period.
 #'     Use this value to determine high volumes of activity for your
 #'     application.
 #' 
-#' -   `Sum` - All values submitted for the matching metric added together.
+#'   - `Sum` - All values submitted for the matching metric added together.
 #'     You can use this statistic to determine the total volume of a
 #'     metric.
 #' 
-#' -   `Average` - The value of Sum / SampleCount during the specified
+#'   - `Average` - The value of Sum / SampleCount during the specified
 #'     period. By comparing this statistic with the Minimum and Maximum
 #'     values, you can determine the full scope of a metric and how close
 #'     the average use is to the Minimum and Maximum values. This
 #'     comparison helps you to know when to increase or decrease your
 #'     resources.
 #' 
-#' -   `SampleCount` - The count, or number, of data points used for the
+#'   - `SampleCount` - The count, or number, of data points used for the
 #'     statistical calculation.
 #'
 #' @return
@@ -10036,20 +10041,20 @@ lightsail_get_relational_database_events <- function(relationalDatabaseName, dur
 #' 
 #' Constraints:
 #' 
-#' -   Specified in Coordinated Universal Time (UTC).
+#'   - Specified in Coordinated Universal Time (UTC).
 #' 
-#' -   Specified in the Unix time format.
-#' 
+#'   - Specified in the Unix time format.
+#'     
 #'     For example, if you wish to use a start time of October 1, 2018, at
 #'     8 PM UTC, then you input `1538424000` as the start time.
 #' @param endTime The end of the time interval from which to get log events.
 #' 
 #' Constraints:
 #' 
-#' -   Specified in Coordinated Universal Time (UTC).
+#'   - Specified in Coordinated Universal Time (UTC).
 #' 
-#' -   Specified in the Unix time format.
-#' 
+#'   - Specified in the Unix time format.
+#'     
 #'     For example, if you wish to use an end time of October 1, 2018, at 8
 #'     PM UTC, then you input `1538424000` as the end time.
 #' @param startFromHead Parameter to specify if the log should start from head or tail. If
@@ -10258,48 +10263,48 @@ lightsail_get_relational_database_master_user_password <- function(relationalDat
 #' `unit` value. All relational database metric data is available in
 #' 1-minute (60 seconds) granularity.
 #' 
-#' -   **`CPUUtilization`** - The percentage of CPU utilization currently
+#'   - **`CPUUtilization`** - The percentage of CPU utilization currently
 #'     in use on the database.
-#' 
+#'     
 #'     `Statistics`: The most useful statistics are `Maximum` and
 #'     `Average`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Percent`.
 #' 
-#' -   **`DatabaseConnections`** - The number of database connections in
+#'   - **`DatabaseConnections`** - The number of database connections in
 #'     use.
-#' 
+#'     
 #'     `Statistics`: The most useful statistics are `Maximum` and `Sum`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Count`.
 #' 
-#' -   **`DiskQueueDepth`** - The number of outstanding IOs (read/write
+#'   - **`DiskQueueDepth`** - The number of outstanding IOs (read/write
 #'     requests) that are waiting to access the disk.
-#' 
+#'     
 #'     `Statistics`: The most useful statistic is `Sum`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Count`.
 #' 
-#' -   **`FreeStorageSpace`** - The amount of available storage space.
-#' 
+#'   - **`FreeStorageSpace`** - The amount of available storage space.
+#'     
 #'     `Statistics`: The most useful statistic is `Sum`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Bytes`.
 #' 
-#' -   **`NetworkReceiveThroughput`** - The incoming (Receive) network
+#'   - **`NetworkReceiveThroughput`** - The incoming (Receive) network
 #'     traffic on the database, including both customer database traffic
 #'     and AWS traffic used for monitoring and replication.
-#' 
+#'     
 #'     `Statistics`: The most useful statistic is `Average`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Bytes/Second`.
 #' 
-#' -   **`NetworkTransmitThroughput`** - The outgoing (Transmit) network
+#'   - **`NetworkTransmitThroughput`** - The outgoing (Transmit) network
 #'     traffic on the database, including both customer database traffic
 #'     and AWS traffic used for monitoring and replication.
-#' 
+#'     
 #'     `Statistics`: The most useful statistic is `Average`.
-#' 
+#'     
 #'     `Unit`: The published unit is `Bytes/Second`.
 #' @param period &#91;required&#93; The granularity, in seconds, of the returned data points.
 #' 
@@ -10309,20 +10314,20 @@ lightsail_get_relational_database_master_user_password <- function(relationalDat
 #' 
 #' Constraints:
 #' 
-#' -   Specified in Coordinated Universal Time (UTC).
+#'   - Specified in Coordinated Universal Time (UTC).
 #' 
-#' -   Specified in the Unix time format.
-#' 
+#'   - Specified in the Unix time format.
+#'     
 #'     For example, if you wish to use a start time of October 1, 2018, at
 #'     8 PM UTC, then you input `1538424000` as the start time.
 #' @param endTime &#91;required&#93; The end of the time interval from which to get metric data.
 #' 
 #' Constraints:
 #' 
-#' -   Specified in Coordinated Universal Time (UTC).
+#'   - Specified in Coordinated Universal Time (UTC).
 #' 
-#' -   Specified in the Unix time format.
-#' 
+#'   - Specified in the Unix time format.
+#'     
 #'     For example, if you wish to use an end time of October 1, 2018, at 8
 #'     PM UTC, then you input `1538424000` as the end time.
 #' @param unit &#91;required&#93; The unit for the metric data request. Valid units depend on the metric
@@ -10332,26 +10337,26 @@ lightsail_get_relational_database_master_user_password <- function(relationalDat
 #' 
 #' The following statistics are available:
 #' 
-#' -   `Minimum` - The lowest value observed during the specified period.
+#'   - `Minimum` - The lowest value observed during the specified period.
 #'     Use this value to determine low volumes of activity for your
 #'     application.
 #' 
-#' -   `Maximum` - The highest value observed during the specified period.
+#'   - `Maximum` - The highest value observed during the specified period.
 #'     Use this value to determine high volumes of activity for your
 #'     application.
 #' 
-#' -   `Sum` - All values submitted for the matching metric added together.
+#'   - `Sum` - All values submitted for the matching metric added together.
 #'     You can use this statistic to determine the total volume of a
 #'     metric.
 #' 
-#' -   `Average` - The value of Sum / SampleCount during the specified
+#'   - `Average` - The value of Sum / SampleCount during the specified
 #'     period. By comparing this statistic with the Minimum and Maximum
 #'     values, you can determine the full scope of a metric and how close
 #'     the average use is to the Minimum and Maximum values. This
 #'     comparison helps you to know when to increase or decrease your
 #'     resources.
 #' 
-#' -   `SampleCount` - The count, or number, of data points used for the
+#'   - `SampleCount` - The count, or number, of data points used for the
 #'     statistical calculation.
 #'
 #' @return
@@ -11003,7 +11008,7 @@ lightsail_is_vpc_peered <- function() {
 #' The [`open_instance_public_ports`][lightsail_open_instance_public_ports]
 #' action supports tag-based access control via resource tags applied to
 #' the resource identified by `instanceName`. For more information, see the
-#' Lightsail Dev Guide.
+#' <span>Lightsail Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_open_instance_public_ports(portInfo, instanceName)
@@ -11147,7 +11152,7 @@ lightsail_peer_vpc <- function() {
 #' An alarm is used to monitor a single metric for one of your resources.
 #' When a metric condition is met, the alarm can notify you by email, SMS
 #' text message, and a banner displayed on the Amazon Lightsail console.
-#' For more information, see Alarms in Amazon Lightsail.
+#' For more information, see <span>Alarms in Amazon Lightsail</span>.
 #' 
 #' When this action creates an alarm, the alarm state is immediately set to
 #' `INSUFFICIENT_DATA`. The alarm is then evaluated and its state is set
@@ -11172,23 +11177,23 @@ lightsail_peer_vpc <- function() {
 #' 
 #' The following metrics are available for each resource type:
 #' 
-#' -   **Instances**: `BurstCapacityPercentage`, `BurstCapacityTime`,
+#'   - **Instances**: `BurstCapacityPercentage`, `BurstCapacityTime`,
 #'     `CPUUtilization`, `NetworkIn`, `NetworkOut`, `StatusCheckFailed`,
 #'     `StatusCheckFailed_Instance`, and `StatusCheckFailed_System`.
 #' 
-#' -   **Load balancers**: `ClientTLSNegotiationErrorCount`,
+#'   - **Load balancers**: `ClientTLSNegotiationErrorCount`,
 #'     `HealthyHostCount`, `UnhealthyHostCount`, `HTTPCode_LB_4XX_Count`,
 #'     `HTTPCode_LB_5XX_Count`, `HTTPCode_Instance_2XX_Count`,
 #'     `HTTPCode_Instance_3XX_Count`, `HTTPCode_Instance_4XX_Count`,
 #'     `HTTPCode_Instance_5XX_Count`, `InstanceResponseTime`,
 #'     `RejectedConnectionCount`, and `RequestCount`.
 #' 
-#' -   **Relational databases**: `CPUUtilization`, `DatabaseConnections`,
+#'   - **Relational databases**: `CPUUtilization`, `DatabaseConnections`,
 #'     `DiskQueueDepth`, `FreeStorageSpace`, `NetworkReceiveThroughput`,
 #'     and `NetworkTransmitThroughput`.
 #' 
-#' For more information about these metrics, see Metrics available in
-#' Lightsail.
+#' For more information about these metrics, see <span>Metrics available in
+#' Lightsail</span>.
 #' @param monitoredResourceName &#91;required&#93; The name of the Lightsail resource that will be monitored.
 #' 
 #' Instances, load balancers, and relational databases are the only
@@ -11218,18 +11223,18 @@ lightsail_peer_vpc <- function() {
 #' 
 #' An alarm can treat missing data in the following ways:
 #' 
-#' -   `breaching` - Assume the missing data is not within the threshold.
+#'   - `breaching` - Assume the missing data is not within the threshold.
 #'     Missing data counts towards the number of times the metric is not
 #'     within the threshold.
 #' 
-#' -   `notBreaching` - Assume the missing data is within the threshold.
+#'   - `notBreaching` - Assume the missing data is within the threshold.
 #'     Missing data does not count towards the number of times the metric
 #'     is not within the threshold.
 #' 
-#' -   `ignore` - Ignore the missing data. Maintains the current alarm
+#'   - `ignore` - Ignore the missing data. Maintains the current alarm
 #'     state.
 #' 
-#' -   `missing` - Missing data is treated as missing.
+#'   - `missing` - Missing data is treated as missing.
 #' 
 #' If `treatMissingData` is not specified, the default behavior of
 #' `missing` is used.
@@ -11251,24 +11256,24 @@ lightsail_peer_vpc <- function() {
 #' 
 #' An alarm has the following possible states:
 #' 
-#' -   `ALARM` - The metric is outside of the defined threshold.
+#'   - `ALARM` - The metric is outside of the defined threshold.
 #' 
-#' -   `INSUFFICIENT_DATA` - The alarm has just started, the metric is not
+#'   - `INSUFFICIENT_DATA` - The alarm has just started, the metric is not
 #'     available, or not enough data is available for the metric to
 #'     determine the alarm state.
 #' 
-#' -   `OK` - The metric is within the defined threshold.
+#'   - `OK` - The metric is within the defined threshold.
 #' 
 #' When you specify a notification trigger, the `ALARM` state must be
 #' specified. The `INSUFFICIENT_DATA` and `OK` states can be specified in
 #' addition to the `ALARM` state.
 #' 
-#' -   If you specify `OK` as an alarm trigger, a notification is sent when
+#'   - If you specify `OK` as an alarm trigger, a notification is sent when
 #'     the alarm switches from an `ALARM` or `INSUFFICIENT_DATA` alarm
 #'     state to an `OK` state. This can be thought of as an *all clear*
 #'     alarm notification.
 #' 
-#' -   If you specify `INSUFFICIENT_DATA` as the alarm trigger, a
+#'   - If you specify `INSUFFICIENT_DATA` as the alarm trigger, a
 #'     notification is sent when the alarm switches from an `OK` or `ALARM`
 #'     alarm state to an `INSUFFICIENT_DATA` state.
 #' 
@@ -11368,7 +11373,7 @@ lightsail_put_alarm <- function(alarmName, metricName, monitoredResourceName, co
 #' The [`put_instance_public_ports`][lightsail_put_instance_public_ports]
 #' action supports tag-based access control via resource tags applied to
 #' the resource identified by `instanceName`. For more information, see the
-#' Lightsail Dev Guide.
+#' <span>Lightsail Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_put_instance_public_ports(portInfos, instanceName)
@@ -11452,7 +11457,7 @@ lightsail_put_instance_public_ports <- function(portInfos, instanceName) {
 #' 
 #' The `reboot instance` operation supports tag-based access control via
 #' resource tags applied to the resource identified by `instance name`. For
-#' more information, see the Lightsail Dev Guide.
+#' more information, see the <span>Lightsail Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_reboot_instance(instanceName)
@@ -11523,8 +11528,8 @@ lightsail_reboot_instance <- function(instanceName) {
 #' 
 #' The `reboot relational database` operation supports tag-based access
 #' control via resource tags applied to the resource identified by
-#' relationalDatabaseName. For more information, see the Lightsail Dev
-#' Guide.
+#' relationalDatabaseName. For more information, see the <span>Lightsail
+#' Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_reboot_relational_database(relationalDatabaseName)
@@ -11595,9 +11600,9 @@ lightsail_reboot_relational_database <- function(relationalDatabaseName) {
 #' 
 #' This action is not required if you install and use the Lightsail Control
 #' (lightsailctl) plugin to push container images to your Lightsail
-#' container service. For more information, see Pushing and managing
-#' container images on your Amazon Lightsail container services in the
-#' *Lightsail Dev Guide*.
+#' container service. For more information, see <span>Pushing and managing
+#' container images on your Amazon Lightsail container services</span> in
+#' the *Lightsail Dev Guide*.
 #'
 #' @usage
 #' lightsail_register_container_image(serviceName, label, digest)
@@ -11615,7 +11620,7 @@ lightsail_reboot_relational_database <- function(relationalDatabaseName) {
 #' service. The label is the `<imagelabel>` portion of the following image
 #' name example:
 #' 
-#' -   `:container-service-1.<imagelabel>.1`
+#'   - `:container-service-1.<imagelabel>.1`
 #' 
 #' If the name of your container service is `mycontainerservice`, and the
 #' label that you specify is `mystaticwebsite`, then the name of the
@@ -11828,8 +11833,8 @@ lightsail_reset_distribution_cache <- function(distributionName = NULL) {
 #' Lightsail resources. You can add one email address and one mobile phone
 #' number contact method in each AWS Region. However, SMS text messaging is
 #' not supported in some AWS Regions, and SMS text messages cannot be sent
-#' to some countries/regions. For more information, see Notifications in
-#' Amazon Lightsail.
+#' to some countries/regions. For more information, see <span>Notifications
+#' in Amazon Lightsail</span>.
 #' 
 #' A verification request is sent to the contact method when you initially
 #' create it. Use this action to send another verification request if a
@@ -11909,11 +11914,12 @@ lightsail_send_contact_method_verification <- function(protocol) {
 #' When you start a stopped instance, Lightsail assigns a new public IP
 #' address to the instance. To use the same IP address after stopping and
 #' starting an instance, create a static IP address and attach it to the
-#' instance. For more information, see the Lightsail Dev Guide.
+#' instance. For more information, see the <span>Lightsail Dev
+#' Guide</span>.
 #' 
 #' The `start instance` operation supports tag-based access control via
 #' resource tags applied to the resource identified by `instance name`. For
-#' more information, see the Lightsail Dev Guide.
+#' more information, see the <span>Lightsail Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_start_instance(instanceName)
@@ -11985,8 +11991,8 @@ lightsail_start_instance <- function(instanceName) {
 #' 
 #' The `start relational database` operation supports tag-based access
 #' control via resource tags applied to the resource identified by
-#' relationalDatabaseName. For more information, see the Lightsail Dev
-#' Guide.
+#' relationalDatabaseName. For more information, see the <span>Lightsail
+#' Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_start_relational_database(relationalDatabaseName)
@@ -12058,11 +12064,12 @@ lightsail_start_relational_database <- function(relationalDatabaseName) {
 #' When you start a stopped instance, Lightsail assigns a new public IP
 #' address to the instance. To use the same IP address after stopping and
 #' starting an instance, create a static IP address and attach it to the
-#' instance. For more information, see the Lightsail Dev Guide.
+#' instance. For more information, see the <span>Lightsail Dev
+#' Guide</span>.
 #' 
 #' The `stop instance` operation supports tag-based access control via
 #' resource tags applied to the resource identified by `instance name`. For
-#' more information, see the Lightsail Dev Guide.
+#' more information, see the <span>Lightsail Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_stop_instance(instanceName, force)
@@ -12140,8 +12147,8 @@ lightsail_stop_instance <- function(instanceName, force = NULL) {
 #' 
 #' The `stop relational database` operation supports tag-based access
 #' control via resource tags applied to the resource identified by
-#' relationalDatabaseName. For more information, see the Lightsail Dev
-#' Guide.
+#' relationalDatabaseName. For more information, see the <span>Lightsail
+#' Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_stop_relational_database(relationalDatabaseName,
@@ -12215,11 +12222,12 @@ lightsail_stop_relational_database <- function(relationalDatabaseName, relationa
 #' Adds one or more tags to the specified Amazon Lightsail resource. Each
 #' resource can have a maximum of 50 tags. Each tag consists of a key and
 #' an optional value. Tag keys must be unique per resource. For more
-#' information about tags, see the Lightsail Dev Guide.
+#' information about tags, see the <span>Lightsail Dev Guide</span>.
 #' 
 #' The `tag resource` operation supports tag-based access control via
 #' request tags and resource tags applied to the resource identified by
-#' `resource name`. For more information, see the Lightsail Dev Guide.
+#' `resource name`. For more information, see the <span>Lightsail Dev
+#' Guide</span>.
 #'
 #' @usage
 #' lightsail_tag_resource(resourceName, resourceArn, tags)
@@ -12304,7 +12312,7 @@ lightsail_tag_resource <- function(resourceName, resourceArn = NULL, tags) {
 #' An alarm is used to monitor a single metric for one of your resources.
 #' When a metric condition is met, the alarm can notify you by email, SMS
 #' text message, and a banner displayed on the Amazon Lightsail console.
-#' For more information, see Alarms in Amazon Lightsail.
+#' For more information, see <span>Alarms in Amazon Lightsail</span>.
 #'
 #' @usage
 #' lightsail_test_alarm(alarmName, state)
@@ -12314,13 +12322,13 @@ lightsail_tag_resource <- function(resourceName, resourceArn = NULL, tags) {
 #' 
 #' An alarm has the following possible states that can be tested:
 #' 
-#' -   `ALARM` - The metric is outside of the defined threshold.
+#'   - `ALARM` - The metric is outside of the defined threshold.
 #' 
-#' -   `INSUFFICIENT_DATA` - The alarm has just started, the metric is not
+#'   - `INSUFFICIENT_DATA` - The alarm has just started, the metric is not
 #'     available, or not enough data is available for the metric to
 #'     determine the alarm state.
 #' 
-#' -   `OK` - The metric is within the defined threshold.
+#'   - `OK` - The metric is within the defined threshold.
 #'
 #' @return
 #' A list with the following syntax:
@@ -12450,7 +12458,8 @@ lightsail_unpeer_vpc <- function() {
 #' 
 #' The `untag resource` operation supports tag-based access control via
 #' request tags and resource tags applied to the resource identified by
-#' `resource name`. For more information, see the Lightsail Dev Guide.
+#' `resource name`. For more information, see the <span>Lightsail Dev
+#' Guide</span>.
 #'
 #' @usage
 #' lightsail_untag_resource(resourceName, resourceArn, tagKeys)
@@ -12935,7 +12944,7 @@ lightsail_update_distribution_bundle <- function(distributionName = NULL, bundle
 #' 
 #' The `update domain entry` operation supports tag-based access control
 #' via resource tags applied to the resource identified by `domain name`.
-#' For more information, see the Lightsail Dev Guide.
+#' For more information, see the <span>Lightsail Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_update_domain_entry(domainName, domainEntry)
@@ -13018,8 +13027,9 @@ lightsail_update_domain_entry <- function(domainName, domainEntry) {
 #' one attribute at a time.
 #' 
 #' The `update load balancer attribute` operation supports tag-based access
-#' control via resource tags applied to the resource identified by
-#' `load balancer name`. For more information, see the Lightsail Dev Guide.
+#' control via resource tags applied to the resource identified by `load
+#' balancer name`. For more information, see the <span>Lightsail Dev
+#' Guide</span>.
 #'
 #' @usage
 #' lightsail_update_load_balancer_attribute(loadBalancerName,
@@ -13102,8 +13112,8 @@ lightsail_update_load_balancer_attribute <- function(loadBalancerName, attribute
 #' 
 #' The `update relational database` operation supports tag-based access
 #' control via resource tags applied to the resource identified by
-#' relationalDatabaseName. For more information, see the Lightsail Dev
-#' Guide.
+#' relationalDatabaseName. For more information, see the <span>Lightsail
+#' Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_update_relational_database(relationalDatabaseName,
@@ -13127,15 +13137,15 @@ lightsail_update_load_balancer_attribute <- function(loadBalancerName, attribute
 #' 
 #' Constraints:
 #' 
-#' -   Must be in the `hh24:mi-hh24:mi` format.
-#' 
+#'   - Must be in the `hh24:mi-hh24:mi` format.
+#'     
 #'     Example: `16:00-16:30`
 #' 
-#' -   Specified in Coordinated Universal Time (UTC).
+#'   - Specified in Coordinated Universal Time (UTC).
 #' 
-#' -   Must not conflict with the preferred maintenance window.
+#'   - Must not conflict with the preferred maintenance window.
 #' 
-#' -   Must be at least 30 minutes.
+#'   - Must be at least 30 minutes.
 #' @param preferredMaintenanceWindow The weekly time range during which system maintenance can occur on your
 #' database.
 #' 
@@ -13145,15 +13155,15 @@ lightsail_update_load_balancer_attribute <- function(loadBalancerName, attribute
 #' 
 #' Constraints:
 #' 
-#' -   Must be in the `ddd:hh24:mi-ddd:hh24:mi` format.
+#'   - Must be in the `ddd:hh24:mi-ddd:hh24:mi` format.
 #' 
-#' -   Valid days: Mon, Tue, Wed, Thu, Fri, Sat, Sun.
+#'   - Valid days: Mon, Tue, Wed, Thu, Fri, Sat, Sun.
 #' 
-#' -   Must be at least 30 minutes.
+#'   - Must be at least 30 minutes.
 #' 
-#' -   Specified in Coordinated Universal Time (UTC).
+#'   - Specified in Coordinated Universal Time (UTC).
 #' 
-#' -   Example: `Tue:17:00-Tue:17:30`
+#'   - Example: `Tue:17:00-Tue:17:30`
 #' @param enableBackupRetention When `true`, enables automated backup retention for your database.
 #' 
 #' Updates are applied during the next maintenance window because this can
@@ -13256,13 +13266,13 @@ lightsail_update_relational_database <- function(relationalDatabaseName, masterU
 #' ways in which parameter updates are applied: `dynamic` or
 #' `pending-reboot`. Parameters marked with a `dynamic` apply type are
 #' applied immediately. Parameters marked with a `pending-reboot` apply
-#' type are applied only after the database is rebooted using the
-#' `reboot relational database` operation.
+#' type are applied only after the database is rebooted using the `reboot
+#' relational database` operation.
 #' 
 #' The `update relational database parameters` operation supports tag-based
 #' access control via resource tags applied to the resource identified by
-#' relationalDatabaseName. For more information, see the Lightsail Dev
-#' Guide.
+#' relationalDatabaseName. For more information, see the <span>Lightsail
+#' Dev Guide</span>.
 #'
 #' @usage
 #' lightsail_update_relational_database_parameters(relationalDatabaseName,

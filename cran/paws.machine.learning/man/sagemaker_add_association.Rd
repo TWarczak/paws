@@ -2,7 +2,7 @@
 % Please edit documentation in R/sagemaker_operations.R
 \name{sagemaker_add_association}
 \alias{sagemaker_add_association}
-\title{Creates an association between the source and the destination}
+\title{Creates an \emph{association} between the source and the destination}
 \usage{
 sagemaker_add_association(SourceArn, DestinationArn, AssociationType)
 }

@@ -10,9 +10,7 @@ health_describe_affected_accounts_for_organization(eventArn, nextToken,
 }
 \arguments{
 \item{eventArn}{[required] The unique identifier for the event. Format:
-\code{arn:aws:health:event-region::event/SERVICE/EVENT_TYPE_CODE/EVENT_TYPE_PLUS_ID }.
-Example:
-\verb{Example: arn:aws:health:us-east-1::event/EC2/EC2_INSTANCE_RETIREMENT_SCHEDULED/EC2_INSTANCE_RETIREMENT_SCHEDULED_ABC123-DEF456}}
+\code{arn:aws:health:event-region::event/SERVICE/EVENT_TYPE_CODE/EVENT_TYPE_PLUS_ID}. Example: \verb{Example: arn:aws:health:us-east-1::event/EC2/EC2_INSTANCE_RETIREMENT_SCHEDULED/EC2_INSTANCE_RETIREMENT_SCHEDULED_ABC123-DEF456}}
 
 \item{nextToken}{If the results of a search are large, only a portion of the results are
 returned, and a \code{nextToken} pagination token is returned in the

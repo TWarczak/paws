@@ -12,14 +12,17 @@ NULL
 #' 
 #' On a Chef server: This command is an alternative to `knife bootstrap`.
 #' 
-#' Example (Chef):
-#' `aws opsworks-cm associate-node --server-name MyServer --node-name MyManagedNode --engine-attributes "Name=CHEF_ORGANIZATION,Value=default" "Name=CHEF_NODE_PUBLIC_KEY,Value=public-key-pem"`
+#' Example (Chef): `aws opsworks-cm associate-node --server-name MyServer
+#' --node-name MyManagedNode --engine-attributes
+#' "Name=CHEF_ORGANIZATION,Value=default"
+#' "Name=CHEF_NODE_PUBLIC_KEY,Value=public-key-pem"`
 #' 
-#' On a Puppet server, this command is an alternative to the
-#' `puppet cert sign` command that signs a Puppet node CSR.
+#' On a Puppet server, this command is an alternative to the `puppet cert
+#' sign` command that signs a Puppet node CSR.
 #' 
-#' Example (Puppet):
-#' `aws opsworks-cm associate-node --server-name MyServer --node-name MyManagedNode --engine-attributes "Name=PUPPET_NODE_CSR,Value=csr-pem"`
+#' Example (Puppet): `aws opsworks-cm associate-node --server-name MyServer
+#' --node-name MyManagedNode --engine-attributes
+#' "Name=PUPPET_NODE_CSR,Value=csr-pem"`
 #' 
 #' A node can can only be associated with servers that are in a `HEALTHY`
 #' state. Otherwise, an `InvalidStateException` is thrown. A
@@ -38,16 +41,16 @@ NULL
 #' 
 #' **Attributes accepted in a AssociateNode request for Chef**
 #' 
-#' -   `CHEF_ORGANIZATION`: The Chef organization with which the node is
+#'   - `CHEF_ORGANIZATION`: The Chef organization with which the node is
 #'     associated. By default only one organization named `default` can
 #'     exist.
 #' 
-#' -   `CHEF_NODE_PUBLIC_KEY`: A PEM-formatted public key. This key is
+#'   - `CHEF_NODE_PUBLIC_KEY`: A PEM-formatted public key. This key is
 #'     required for the `chef-client` agent to access the Chef API.
 #' 
 #' **Attributes accepted in a AssociateNode request for Puppet**
 #' 
-#' -   `PUPPET_NODE_CSR`: A PEM-formatted certificate-signing request (CSR)
+#'   - `PUPPET_NODE_CSR`: A PEM-formatted certificate-signing request (CSR)
 #'     that is created by the node.
 #'
 #' @return
@@ -120,20 +123,20 @@ opsworkscm_associate_node <- function(ServerName, NodeName, EngineAttributes) {
 #' @param Tags A map that contains tag keys and tag values to attach to an AWS
 #' OpsWorks-CM server backup.
 #' 
-#' -   The key cannot be empty.
+#'   - The key cannot be empty.
 #' 
-#' -   The key can be a maximum of 127 characters, and can contain only
+#'   - The key can be a maximum of 127 characters, and can contain only
 #'     Unicode letters, numbers, or separators, or the following special
 #'     characters: `+ - = . _ : /`
 #' 
-#' -   The value can be a maximum 255 characters, and contain only Unicode
+#'   - The value can be a maximum 255 characters, and contain only Unicode
 #'     letters, numbers, or separators, or the following special
 #'     characters: `+ - = . _ : /`
 #' 
-#' -   Leading and trailing white spaces are trimmed from both the key and
+#'   - Leading and trailing white spaces are trimmed from both the key and
 #'     value.
 #' 
-#' -   A maximum of 50 user-applied tags is allowed for tag-supported AWS
+#'   - A maximum of 50 user-applied tags is allowed for tag-supported AWS
 #'     OpsWorks-CM resources.
 #'
 #' @return
@@ -270,21 +273,21 @@ opsworkscm_create_backup <- function(ServerName, Description = NULL, Tags = NULL
 #' `CustomPrivateKey`. The following are requirements for the
 #' `CustomCertificate` value:
 #' 
-#' -   You can provide either a self-signed, custom certificate, or the
+#'   - You can provide either a self-signed, custom certificate, or the
 #'     full certificate chain.
 #' 
-#' -   The certificate must be a valid X509 certificate, or a certificate
+#'   - The certificate must be a valid X509 certificate, or a certificate
 #'     chain in PEM format.
 #' 
-#' -   The certificate must be valid at the time of upload. A certificate
+#'   - The certificate must be valid at the time of upload. A certificate
 #'     can't be used before its validity period begins (the certificate's
 #'     `NotBefore` date), or after it expires (the certificate's `NotAfter`
 #'     date).
 #' 
-#' -   The certificate’s common name or subject alternative names (SANs),
+#'   - The certificate’s common name or subject alternative names (SANs),
 #'     if present, must match the value of `CustomDomain`.
 #' 
-#' -   The certificate must match the value of `CustomPrivateKey`.
+#'   - The certificate must match the value of `CustomPrivateKey`.
 #' @param CustomPrivateKey A private key in PEM format for connecting to the server by using HTTPS.
 #' The private key must not be encrypted; it cannot be protected by a
 #' password or passphrase. If you specify a custom private key, you must
@@ -302,31 +305,31 @@ opsworkscm_create_backup <- function(ServerName, Description = NULL, Tags = NULL
 #' 
 #' **Attributes accepted in a Chef createServer request:**
 #' 
-#' -   `CHEF_AUTOMATE_PIVOTAL_KEY`: A base64-encoded RSA public key. The
+#'   - `CHEF_AUTOMATE_PIVOTAL_KEY`: A base64-encoded RSA public key. The
 #'     corresponding private key is required to access the Chef API. When
 #'     no CHEF_AUTOMATE_PIVOTAL_KEY is set, a private key is generated
 #'     and returned in the response.
 #' 
-#' -   `CHEF_AUTOMATE_ADMIN_PASSWORD`: The password for the administrative
+#'   - `CHEF_AUTOMATE_ADMIN_PASSWORD`: The password for the administrative
 #'     user in the Chef Automate web-based dashboard. The password length
 #'     is a minimum of eight characters, and a maximum of 32. The password
 #'     can contain letters, numbers, and special characters
-#'     (!/@@\#$%^&+=_). The password must contain at least one lower case
+#'     (\!/@@\#$%^&+=_). The password must contain at least one lower case
 #'     letter, one upper case letter, one number, and one special
 #'     character. When no CHEF_AUTOMATE_ADMIN_PASSWORD is set, one is
 #'     generated and returned in the response.
 #' 
 #' **Attributes accepted in a Puppet createServer request:**
 #' 
-#' -   `PUPPET_ADMIN_PASSWORD`: To work with the Puppet Enterprise console,
+#'   - `PUPPET_ADMIN_PASSWORD`: To work with the Puppet Enterprise console,
 #'     a password must use ASCII characters.
 #' 
-#' -   `PUPPET_R10K_REMOTE`: The r10k remote is the URL of your control
+#'   - `PUPPET_R10K_REMOTE`: The r10k remote is the URL of your control
 #'     repository (for example,
 #'     ssh://git@@your.git-repo.com:user/control-repo.git). Specifying an
 #'     r10k remote opens TCP port 8170.
 #' 
-#' -   `PUPPET_R10K_PRIVATE_KEY`: If you are using a private Git
+#'   - `PUPPET_R10K_PRIVATE_KEY`: If you are using a private Git
 #'     repository, add PUPPET_R10K_PRIVATE_KEY to specify a PEM-encoded
 #'     private SSH key.
 #' @param BackupRetentionCount The number of automated backups that you want to keep. Whenever a new
@@ -360,9 +363,9 @@ opsworkscm_create_backup <- function(ServerName, Description = NULL, Tags = NULL
 #' up application-level data on your server if automated backups are
 #' enabled. Valid values must be specified in one of the following formats:
 #' 
-#' -   `HH:MM` for daily backups
+#'   - `HH:MM` for daily backups
 #' 
-#' -   `DDD:HH:MM` for weekly backups
+#'   - `DDD:HH:MM` for weekly backups
 #' 
 #' `MM` must be specified as `00`. The specified time is in coordinated
 #' universal time (UTC). The default value is a random, daily start time.
@@ -402,20 +405,20 @@ opsworkscm_create_backup <- function(ServerName, Description = NULL, Tags = NULL
 #' @param Tags A map that contains tag keys and tag values to attach to an AWS OpsWorks
 #' for Chef Automate or AWS OpsWorks for Puppet Enterprise server.
 #' 
-#' -   The key cannot be empty.
+#'   - The key cannot be empty.
 #' 
-#' -   The key can be a maximum of 127 characters, and can contain only
+#'   - The key can be a maximum of 127 characters, and can contain only
 #'     Unicode letters, numbers, or separators, or the following special
 #'     characters: `+ - = . _ : / @@`
 #' 
-#' -   The value can be a maximum 255 characters, and contain only Unicode
+#'   - The value can be a maximum 255 characters, and contain only Unicode
 #'     letters, numbers, or separators, or the following special
 #'     characters: `+ - = . _ : / @@`
 #' 
-#' -   Leading and trailing white spaces are trimmed from both the key and
+#'   - Leading and trailing white spaces are trimmed from both the key and
 #'     value.
 #' 
-#' -   A maximum of 50 user-applied tags is allowed for any AWS OpsWorks-CM
+#'   - A maximum of 50 user-applied tags is allowed for any AWS OpsWorks-CM
 #'     server.
 #' @param BackupId If you specify this field, AWS OpsWorks CM creates the server by using
 #' the backup represented by BackupId.
@@ -1034,7 +1037,7 @@ opsworkscm_describe_servers <- function(ServerName = NULL, NextToken = NULL, Max
 #' 
 #' **Attributes required in a DisassociateNode request for Chef**
 #' 
-#' -   `CHEF_ORGANIZATION`: The Chef organization with which the node was
+#'   - `CHEF_ORGANIZATION`: The Chef organization with which the node was
 #'     associated. By default only one organization named `default` can
 #'     exist.
 #'
@@ -1107,18 +1110,18 @@ opsworkscm_disassociate_node <- function(ServerName, NodeName, EngineAttributes 
 #' and its value. For the `Userdata` ExportAttributeName, the following are
 #' supported engine attribute names.
 #' 
-#' -   **RunList** In Chef, a list of roles or recipes that are run in the
+#'   - **RunList** In Chef, a list of roles or recipes that are run in the
 #'     specified order. In Puppet, this parameter is ignored.
 #' 
-#' -   **OrganizationName** In Chef, an organization name. AWS OpsWorks for
+#'   - **OrganizationName** In Chef, an organization name. AWS OpsWorks for
 #'     Chef Automate always creates the organization `default`. In Puppet,
 #'     this parameter is ignored.
 #' 
-#' -   **NodeEnvironment** In Chef, a node environment (for example,
+#'   - **NodeEnvironment** In Chef, a node environment (for example,
 #'     development, staging, or one-box). In Puppet, this parameter is
 #'     ignored.
 #' 
-#' -   **NodeClientVersion** In Chef, the version of the Chef engine (three
+#'   - **NodeClientVersion** In Chef, the version of the Chef engine (three
 #'     numbers separated by dots, such as 13.8.5). If this attribute is
 #'     empty, OpsWorks for Chef Automate uses the most current version. In
 #'     Puppet, this parameter is ignored.
@@ -1337,13 +1340,13 @@ opsworkscm_restore_server <- function(BackupId, ServerName, InstanceType = NULL,
 #' 
 #' **Attributes accepted in a StartMaintenance request for Chef**
 #' 
-#' -   `CHEF_MAJOR_UPGRADE`: If a Chef Automate server is eligible for
+#'   - `CHEF_MAJOR_UPGRADE`: If a Chef Automate server is eligible for
 #'     upgrade to Chef Automate 2, add this engine attribute to a
 #'     [`start_maintenance`][opsworkscm_start_maintenance] request and set
 #'     the value to `true` to upgrade the server to Chef Automate 2. For
 #'     more information, see [Upgrade an AWS OpsWorks for Chef Automate
-#'     Server to Chef Automate
-#'     2](https://docs.aws.amazon.com/opsworks/latest/userguide/opscm-a2upgrade.html).
+#'     Server to Chef
+#'     Automate 2](https://docs.aws.amazon.com/opsworks/latest/userguide/opscm-a2upgrade.html).
 #'
 #' @return
 #' A list with the following syntax:
@@ -1438,20 +1441,20 @@ opsworkscm_start_maintenance <- function(ServerName, EngineAttributes = NULL) {
 #' @param Tags &#91;required&#93; A map that contains tag keys and tag values to attach to AWS OpsWorks-CM
 #' servers or backups.
 #' 
-#' -   The key cannot be empty.
+#'   - The key cannot be empty.
 #' 
-#' -   The key can be a maximum of 127 characters, and can contain only
+#'   - The key can be a maximum of 127 characters, and can contain only
 #'     Unicode letters, numbers, or separators, or the following special
 #'     characters: `+ - = . _ : /`
 #' 
-#' -   The value can be a maximum 255 characters, and contain only Unicode
+#'   - The value can be a maximum 255 characters, and contain only Unicode
 #'     letters, numbers, or separators, or the following special
 #'     characters: `+ - = . _ : /`
 #' 
-#' -   Leading and trailing white spaces are trimmed from both the key and
+#'   - Leading and trailing white spaces are trimmed from both the key and
 #'     value.
 #' 
-#' -   A maximum of 50 user-applied tags is allowed for any AWS OpsWorks-CM
+#'   - A maximum of 50 user-applied tags is allowed for any AWS OpsWorks-CM
 #'     server or backup.
 #'
 #' @return

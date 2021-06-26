@@ -7,8 +7,8 @@
 resourcegroups_list_groups(Filters, MaxResults, NextToken)
 }
 \arguments{
-\item{Filters}{Filters, formatted as GroupFilter objects, that you want to apply to a
-\code{\link[=resourcegroups_list_groups]{list_groups}} operation.
+\item{Filters}{Filters, formatted as <span>GroupFilter</span> objects, that you want to
+apply to a \code{\link[=resourcegroups_list_groups]{list_groups}} operation.
 \itemize{
 \item \code{resource-type} - Filter the results to include only those of the
 specified resource types. Specify up to five resource types in the

@@ -10,8 +10,8 @@ acm_list_certificates(CertificateStatuses, Includes, NextToken,
 \arguments{
 \item{CertificateStatuses}{Filter the certificate list by status value.}
 
-\item{Includes}{Filter the certificate list. For more information, see the Filters
-structure.}
+\item{Includes}{Filter the certificate list. For more information, see the
+<span>Filters</span> structure.}
 
 \item{NextToken}{Use this parameter only when paginating results and only in a subsequent
 request after you receive a response with truncated results. Set it to
@@ -39,7 +39,8 @@ A list with the following syntax:\preformatted{list(
 Retrieves a list of certificate ARNs and domain names. You can request
 that only certificates that match a specific status be listed. You can
 also filter by specific attributes of the certificate. Default filtering
-returns only \code{RSA_2048} certificates. For more information, see Filters.
+returns only \code{RSA_2048} certificates. For more information, see
+<span>Filters</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$list_certificates(

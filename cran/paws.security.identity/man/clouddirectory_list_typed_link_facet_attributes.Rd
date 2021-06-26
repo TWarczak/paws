@@ -10,7 +10,7 @@ clouddirectory_list_typed_link_facet_attributes(SchemaArn, Name,
 }
 \arguments{
 \item{SchemaArn}{[required] The Amazon Resource Name (ARN) that is associated with the schema. For
-more information, see arns.}
+more information, see <span>arns</span>.}
 
 \item{Name}{[required] The unique name of the typed link facet.}
 
@@ -51,7 +51,7 @@ A list with the following syntax:\preformatted{list(
 }
 \description{
 Returns a paginated list of all attribute definitions for a particular
-TypedLinkFacet. For more information, see \href{https://docs.aws.amazon.com/clouddirectory/latest/developerguide/directory_objects_links.html#directory_objects_links_typedlink}{Typed Links}.
+<span>TypedLinkFacet</span>. For more information, see \href{https://docs.aws.amazon.com/clouddirectory/latest/developerguide/directory_objects_links.html#directory_objects_links_typedlink}{Typed Links}.
 }
 \section{Request syntax}{
 \preformatted{svc$list_typed_link_facet_attributes(

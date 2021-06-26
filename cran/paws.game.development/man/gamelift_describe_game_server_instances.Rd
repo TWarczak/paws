@@ -2,15 +2,15 @@
 % Please edit documentation in R/gamelift_operations.R
 \name{gamelift_describe_game_server_instances}
 \alias{gamelift_describe_game_server_instances}
-\title{This operation is used with the Amazon GameLift FleetIQ solution and
-game server groups}
+\title{THIS OPERATION IS USED WITH THE AMAZON GAMELIFT FLEETIQ SOLUTION AND
+GAME SERVER GROUPS}
 \usage{
 gamelift_describe_game_server_instances(GameServerGroupName,
   InstanceIds, Limit, NextToken)
 }
 \arguments{
 \item{GameServerGroupName}{[required] A unique identifier for the game server group. Use either the
-GameServerGroup name or ARN value.}
+<span>GameServerGroup</span> name or ARN value.}
 
 \item{InstanceIds}{The EC2 instance IDs that you want to retrieve status on. EC2 instance
 IDs use a 17-character format, for example: \verb{i-1234567890abcdef0}. To

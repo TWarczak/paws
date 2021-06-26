@@ -10,30 +10,32 @@ apigateway_create_stage(restApiId, stageName, deploymentId, description,
   canarySettings, tracingEnabled, tags)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
-\item{stageName}{[required] [Required] The name for the Stage resource. Stage names can only
-contain alphanumeric characters, hyphens, and underscores. Maximum
-length is 128 characters.}
+\item{stageName}{[required] [Required] The name for the <span>Stage</span> resource. Stage names
+can only contain alphanumeric characters, hyphens, and underscores.
+Maximum length is 128 characters.}
 
-\item{deploymentId}{[required] [Required] The identifier of the Deployment resource for the Stage
-resource.}
+\item{deploymentId}{[required] [Required] The identifier of the <span>Deployment</span> resource for
+the <span>Stage</span> resource.}
 
-\item{description}{The description of the Stage resource.}
+\item{description}{The description of the <span>Stage</span> resource.}
 
 \item{cacheClusterEnabled}{Whether cache clustering is enabled for the stage.}
 
 \item{cacheClusterSize}{The stage's cache cluster size.}
 
-\item{variables}{A map that defines the stage variables for the new Stage resource.
-Variable names can have alphanumeric and underscore characters, and the
-values must match \verb{[A-Za-z0-9-._~:/?#&=,]+}.}
+\item{variables}{A map that defines the stage variables for the new <span>Stage</span>
+resource. Variable names can have alphanumeric and underscore
+characters, and the values must match \verb{[A-Za-z0-9-._~:/?#&=,]+}.}
 
 \item{documentationVersion}{The version of the associated API documentation.}
 
 \item{canarySettings}{The canary deployment settings of this stage.}
 
-\item{tracingEnabled}{Specifies whether active tracing with X-ray is enabled for the Stage.}
+\item{tracingEnabled}{Specifies whether active tracing with X-ray is enabled for the
+<span>Stage</span>.}
 
 \item{tags}{The key-value map of strings. The valid character set is
 [a-zA-Z+-=._:/]. The tag key can be up to 128 characters and must not
@@ -93,8 +95,8 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Creates a new Stage resource that references a pre-existing Deployment
-for the API.
+Creates a new <span>Stage</span> resource that references a pre-existing
+<span>Deployment</span> for the API.
 }
 \section{Request syntax}{
 \preformatted{svc$create_stage(

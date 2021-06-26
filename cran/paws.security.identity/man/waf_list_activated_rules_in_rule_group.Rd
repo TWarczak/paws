@@ -2,13 +2,13 @@
 % Please edit documentation in R/waf_operations.R
 \name{waf_list_activated_rules_in_rule_group}
 \alias{waf_list_activated_rules_in_rule_group}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 waf_list_activated_rules_in_rule_group(RuleGroupId, NextMarker, Limit)
 }
 \arguments{
-\item{RuleGroupId}{The \code{RuleGroupId} of the RuleGroup for which you want to get a list of
-ActivatedRule objects.}
+\item{RuleGroupId}{The \code{RuleGroupId} of the <span>RuleGroup</span> for which you want to
+get a list of <span>ActivatedRule</span> objects.}
 
 \item{NextMarker}{If you specify a value for \code{Limit} and you have more \code{ActivatedRules}
 than the value of \code{Limit}, AWS WAF returns a \code{NextMarker} value in the
@@ -57,7 +57,7 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Returns an array of ActivatedRule objects.
+Returns an array of <span>ActivatedRule</span> objects.
 }
 \section{Request syntax}{
 \preformatted{svc$list_activated_rules_in_rule_group(

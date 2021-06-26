@@ -2,13 +2,13 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_create_sql_injection_match_set}
 \alias{wafregional_create_sql_injection_match_set}
-\title{This is AWS WAF Classic documentation}
+\title{This is AWS WAF CLASSIC documentation}
 \usage{
 wafregional_create_sql_injection_match_set(Name, ChangeToken)
 }
 \arguments{
-\item{Name}{[required] A friendly name or description for the SqlInjectionMatchSet that you're
-creating. You can't change \code{Name} after you create the
+\item{Name}{[required] A friendly name or description for the <span>SqlInjectionMatchSet</span>
+that you're creating. You can't change \code{Name} after you create the
 \code{SqlInjectionMatchSet}.}
 
 \item{ChangeToken}{[required] The value returned by the most recent call to
@@ -43,10 +43,10 @@ in the developer guide.
 With the latest version, AWS WAF has a single set of endpoints for
 regional and global use.
 
-Creates a SqlInjectionMatchSet, which you use to allow, block, or count
-requests that contain snippets of SQL code in a specified part of web
-requests. AWS WAF searches for character sequences that are likely to be
-malicious strings.
+Creates a <span>SqlInjectionMatchSet</span>, which you use to allow,
+block, or count requests that contain snippets of SQL code in a
+specified part of web requests. AWS WAF searches for character sequences
+that are likely to be malicious strings.
 
 To create and configure a \code{SqlInjectionMatchSet}, perform the following
 steps:

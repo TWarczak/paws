@@ -103,8 +103,8 @@ kinesisvideo_create_signaling_channel <- function(ChannelName, ChannelType = NUL
 #' types, see [Media
 #' Types](http://www.iana.org/assignments/media-types/media-types.xhtml).
 #' If you choose to specify the `MediaType`, see [Naming
-#' Requirements](https://tools.ietf.org/html/rfc6838#section-4.2) for
-#' guidelines.
+#' Requirements](https://datatracker.ietf.org/doc/html/rfc6838#section-4.2)
+#' for guidelines.
 #' 
 #' Example valid values include "video/h264" and "video/h264,audio/aac".
 #' 
@@ -1037,12 +1037,12 @@ kinesisvideo_untag_stream <- function(StreamARN = NULL, StreamName = NULL, TagKe
 #' Changing the data retention period affects the data in the stream as
 #' follows:
 #' 
-#' -   If the data retention period is increased, existing data is retained
+#'   - If the data retention period is increased, existing data is retained
 #'     for the new retention period. For example, if the data retention
 #'     period is increased from one hour to seven hours, all existing data
 #'     is retained for seven hours.
 #' 
-#' -   If the data retention period is decreased, existing data is retained
+#'   - If the data retention period is decreased, existing data is retained
 #'     for the new retention period. For example, if the data retention
 #'     period is decreased from seven hours to one hour, all existing data
 #'     is retained for one hour, and any data older than one hour is
@@ -1189,7 +1189,7 @@ kinesisvideo_update_signaling_channel <- function(ChannelARN, CurrentVersion, Si
 #' information about media types, see [Media
 #' Types](http://www.iana.org/assignments/media-types/media-types.xhtml).
 #' If you choose to specify the `MediaType`, see [Naming
-#' Requirements](https://tools.ietf.org/html/rfc6838#section-4.2).
+#' Requirements](https://datatracker.ietf.org/doc/html/rfc6838#section-4.2).
 #' 
 #' To play video on the console, you must specify the correct video type.
 #' For example, if the video in the stream is H.264, specify `video/h264`

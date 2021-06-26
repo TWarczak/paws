@@ -22,8 +22,8 @@ NULL
 #' 
 #' Calls to [`invoke_endpoint`][sagemakerruntime_invoke_endpoint] are
 #' authenticated by using AWS Signature Version 4. For information, see
-#' [Authenticating Requests (AWS Signature Version
-#' 4)](https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html)
+#' [Authenticating Requests (AWS Signature
+#' Version 4)](https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html)
 #' in the *Amazon S3 API Reference*.
 #' 
 #' A customer's model containers must respond to requests within 60
@@ -59,8 +59,8 @@ NULL
 #' request or to provide other metadata that a service endpoint was
 #' programmed to process. The value must consist of no more than 1024
 #' visible US-ASCII characters as specified in [Section 3.3.6. Field Value
-#' Components](https://tools.ietf.org/html/rfc7230#section-3.2.6) of the
-#' Hypertext Transfer Protocol (HTTP/1.1).
+#' Components](https://datatracker.ietf.org/doc/html/rfc7230#section-3.2.6)
+#' of the Hypertext Transfer Protocol (HTTP/1.1).
 #' 
 #' The code in your model is responsible for setting or updating any custom
 #' attributes in the response. If your code does not set this value in the

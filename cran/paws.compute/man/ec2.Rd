@@ -9,6 +9,12 @@ ec2(config = list())
 \arguments{
 \item{config}{Optional configuration of credentials, endpoint, and/or region.}
 }
+\value{
+A client for the service. You can call the service's operations using
+syntax like \code{svc$operation(...)}, where \code{svc} is the name you've assigned
+to the client. The available operations are listed in the
+Operations section.
+}
 \description{
 Amazon Elastic Compute Cloud (Amazon EC2) provides secure and resizable
 computing capacity in the AWS cloud. Using Amazon EC2 eliminates the
@@ -23,8 +29,8 @@ To learn more, see the following resources:
 \href{https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html}{Amazon EBS documentation}
 \item Amazon VPC: \href{https://aws.amazon.com/vpc/}{Amazon VPC product page},
 \href{https://docs.aws.amazon.com/vpc/index.html}{Amazon VPC documentation}
-\item AWS VPN: \href{https://aws.amazon.com/vpn/}{AWS VPN product page}, AWS
-VPN documentation
+\item AWS VPN: \href{https://aws.amazon.com/vpn/}{AWS VPN product page},
+<span>AWS VPN documentation</span>
 }
 }
 \section{Service syntax}{
@@ -472,7 +478,7 @@ VPN documentation
 \link[=ec2_search_local_gateway_routes]{search_local_gateway_routes} \tab Searches for routes in the specified local gateway route table\cr
 \link[=ec2_search_transit_gateway_multicast_groups]{search_transit_gateway_multicast_groups} \tab Searches one or more transit gateway multicast groups and returns the group membership information\cr
 \link[=ec2_search_transit_gateway_routes]{search_transit_gateway_routes} \tab Searches for routes in the specified transit gateway route table\cr
-\link[=ec2_send_diagnostic_interrupt]{send_diagnostic_interrupt} \tab Sends a diagnostic interrupt to the specified Amazon EC2 instance to trigger a kernel panic (on Linux instances), or a blue screen/stop error (on Windows instances)\cr
+\link[=ec2_send_diagnostic_interrupt]{send_diagnostic_interrupt} \tab Sends a diagnostic interrupt to the specified Amazon EC2 instance to trigger a \emph{kernel panic} (on Linux instances), or a \emph{blue screen}/\emph{stop error} (on Windows instances)\cr
 \link[=ec2_start_instances]{start_instances} \tab Starts an Amazon EBS-backed instance that you've previously stopped\cr
 \link[=ec2_start_network_insights_analysis]{start_network_insights_analysis} \tab Starts analyzing the specified path\cr
 \link[=ec2_start_vpc_endpoint_service_private_dns_verification]{start_vpc_endpoint_service_private_dns_verification} \tab Initiates the verification process to prove that the service provider owns the private DNS name domain for the endpoint service\cr

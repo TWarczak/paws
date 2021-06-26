@@ -26,10 +26,10 @@ NULL
 #' The following limits apply when using the
 #' [`get_media`][kinesisvideomedia_get_media] API:
 #' 
-#' -   A client can call [`get_media`][kinesisvideomedia_get_media] up to
+#'   - A client can call [`get_media`][kinesisvideomedia_get_media] up to
 #'     five times per second per stream.
 #' 
-#' -   Kinesis Video Streams sends media data at a rate of up to 25
+#'   - Kinesis Video Streams sends media data at a rate of up to 25
 #'     megabytes per second (or 200 megabits per second) during a
 #'     [`get_media`][kinesisvideomedia_get_media] session.
 #' 
@@ -37,10 +37,10 @@ NULL
 #' in addition to the HTTP status code and the response body, it includes
 #' the following pieces of information:
 #' 
-#' -   `x-amz-ErrorType` HTTP header – contains a more specific error type
+#'   - `x-amz-ErrorType` HTTP header – contains a more specific error type
 #'     in addition to what the HTTP status code provides.
 #' 
-#' -   `x-amz-RequestId` HTTP header – if you want to report an issue to
+#'   - `x-amz-RequestId` HTTP header – if you want to report an issue to
 #'     AWS, the support team can better diagnose the problem if given the
 #'     Request Id.
 #' 

@@ -32,7 +32,7 @@ A list with the following syntax:\preformatted{list(
 }
 }
 \description{
-Returns a list of the actions taken in a TestGridSession.
+Returns a list of the actions taken in a <span>TestGridSession</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$list_test_grid_session_actions(

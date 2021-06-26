@@ -58,7 +58,8 @@ A list with the following syntax:\preformatted{list(
 \description{
 Retrieves properties and current status of a game session placement
 request. To get game session placement details, specify the placement
-ID. If successful, a GameSessionPlacement object is returned.
+ID. If successful, a <span>GameSessionPlacement</span> object is
+returned.
 \itemize{
 \item \code{\link[=gamelift_create_game_session]{create_game_session}}
 \item \code{\link[=gamelift_describe_game_sessions]{describe_game_sessions}}

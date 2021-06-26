@@ -1787,7 +1787,7 @@ cloudsearch_describe_suggesters <- function(DomainName, SuggesterNames = NULL, D
 #' @description
 #' Tells the search domain to start indexing its documents using the latest
 #' indexing options. This operation must be invoked to activate options
-#' whose OptionStatus is `RequiresIndexDocuments`.
+#' whose <span>OptionStatus</span> is `RequiresIndexDocuments`.
 #'
 #' @usage
 #' cloudsearch_index_documents(DomainName)

@@ -15,19 +15,19 @@ NULL
 #' You can use the AWS Auto Scaling service API to accomplish the following
 #' tasks:
 #' 
-#' -   Create and manage scaling plans
+#'   - Create and manage scaling plans
 #' 
-#' -   Define target tracking scaling policies to dynamically scale your
+#'   - Define target tracking scaling policies to dynamically scale your
 #'     resources based on utilization
 #' 
-#' -   Scale Amazon EC2 Auto Scaling groups using predictive scaling and
+#'   - Scale Amazon EC2 Auto Scaling groups using predictive scaling and
 #'     dynamic scaling to scale your Amazon EC2 capacity faster
 #' 
-#' -   Set minimum and maximum capacity limits
+#'   - Set minimum and maximum capacity limits
 #' 
-#' -   Retrieve information on existing scaling plans
+#'   - Retrieve information on existing scaling plans
 #' 
-#' -   Access current forecast data and historical forecast data for up to
+#'   - Access current forecast data and historical forecast data for up to
 #'     56 days previous
 #' 
 #' To learn more about AWS Auto Scaling, including information about
@@ -74,6 +74,12 @@ NULL
 #'  \link[=autoscalingplans_get_scaling_plan_resource_forecast_data]{get_scaling_plan_resource_forecast_data} \tab Retrieves the forecast data for a scalable resource\cr
 #'  \link[=autoscalingplans_update_scaling_plan]{update_scaling_plan} \tab Updates the specified scaling plan
 #' }
+#'
+#' @return
+#' A client for the service. You can call the service's operations using
+#' syntax like `svc$operation(...)`, where `svc` is the name you've assigned
+#' to the client. The available operations are listed in the
+#' Operations section.
 #'
 #' @rdname autoscalingplans
 #' @export

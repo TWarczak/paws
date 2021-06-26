@@ -55,9 +55,9 @@ Registers a container image to your Amazon Lightsail container service.
 
 This action is not required if you install and use the Lightsail Control
 (lightsailctl) plugin to push container images to your Lightsail
-container service. For more information, see Pushing and managing
-container images on your Amazon Lightsail container services in the
-\emph{Lightsail Dev Guide}.
+container service. For more information, see <span>Pushing and managing
+container images on your Amazon Lightsail container services</span> in
+the \emph{Lightsail Dev Guide}.
 }
 \section{Request syntax}{
 \preformatted{svc$register_container_image(

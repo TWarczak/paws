@@ -2,7 +2,7 @@
 % Please edit documentation in R/wafregional_operations.R
 \name{wafregional_get_web_acl_for_resource}
 \alias{wafregional_get_web_acl_for_resource}
-\title{This is AWS WAF Classic Regional documentation}
+\title{This is AWS WAF CLASSIC REGIONAL documentation}
 \usage{
 wafregional_get_web_acl_for_resource(ResourceArn)
 }
@@ -13,7 +13,7 @@ ACL, either an application load balancer or Amazon API Gateway stage.
 The ARN should be in one of the following formats:
 \itemize{
 \item For an Application Load Balancer:
-\code{arn:aws:elasticloadbalancing:region:account-id:loadbalancer/app/load-balancer-name/load-balancer-id }
+\code{arn:aws:elasticloadbalancing:region:account-id:loadbalancer/app/load-balancer-name/load-balancer-id}
 \item For an Amazon API Gateway stage:
 \verb{arn:aws:apigateway:region::/restapis/api-id/stages/stage-name }
 }}

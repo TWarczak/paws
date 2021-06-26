@@ -18,18 +18,21 @@ this job. To create a role ARN, use the
 \href{https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html}{CreateRole}AWS
 Identity and Access Management (IAM) API action.}
 
-\item{Notification}{The new or updated Notification object.}
+\item{Notification}{The new or updated <span>Notification</span> object.}
 
-\item{Resources}{The updated \code{JobResource} object, or the updated JobResource object.}
+\item{Resources}{The updated \code{JobResource} object, or the updated
+<span>JobResource</span> object.}
 
-\item{AddressId}{The ID of the updated Address object.}
+\item{AddressId}{The ID of the updated <span>Address</span> object.}
 
-\item{ShippingOption}{The updated shipping option value of this job's ShippingDetails object.}
+\item{ShippingOption}{The updated shipping option value of this job's
+<span>ShippingDetails</span> object.}
 
-\item{Description}{The updated description of this job's JobMetadata object.}
+\item{Description}{The updated description of this job's <span>JobMetadata</span> object.}
 
-\item{SnowballCapacityPreference}{The updated \code{SnowballCapacityPreference} of this job's JobMetadata
-object. The 50 TB Snowballs are only available in the US regions.}
+\item{SnowballCapacityPreference}{The updated \code{SnowballCapacityPreference} of this job's
+<span>JobMetadata</span> object. The 50 TB Snowballs are only available
+in the US regions.}
 
 \item{ForwardingAddressId}{The updated ID for the forwarding address for a job. This field is not
 supported in most regions.}

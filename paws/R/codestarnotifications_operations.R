@@ -17,7 +17,7 @@ NULL
 #' @param Name &#91;required&#93; The name for the notification rule. Notifictaion rule names must be
 #' unique in your AWS account.
 #' @param EventTypeIds &#91;required&#93; A list of event types associated with this notification rule. For a list
-#' of allowed events, see EventTypeSummary.
+#' of allowed events, see <span>EventTypeSummary</span>.
 #' @param Resource &#91;required&#93; The Amazon Resource Name (ARN) of the resource to associate with the
 #' notification rule. Supported resources include pipelines in AWS
 #' CodePipeline, repositories in AWS CodeCommit, and build projects in AWS
@@ -336,7 +336,7 @@ codestarnotifications_list_event_types <- function(Filters = NULL, NextToken = N
 #'   MaxResults)
 #'
 #' @param Filters The filters to use to return information by service or resource type.
-#' For valid values, see ListNotificationRulesFilter.
+#' For valid values, see <span>ListNotificationRulesFilter</span>.
 #' 
 #' A filter with the same name can appear more than once when used with OR
 #' statements. Filters with different names should be applied with AND

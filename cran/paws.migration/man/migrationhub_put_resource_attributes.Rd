@@ -19,9 +19,8 @@ used to map the task to a resource in the Application Discovery Service
 repository.
 
 Takes the object array of \code{ResourceAttribute} where the \code{Type} field is
-reserved for the following values:
-\code{IPV4_ADDRESS | IPV6_ADDRESS | MAC_ADDRESS | FQDN | VM_MANAGER_ID | VM_MANAGED_OBJECT_REFERENCE | VM_NAME | VM_PATH | BIOS_ID | MOTHERBOARD_SERIAL_NUMBER}
-where the identifying value can be a string up to 256 characters.
+reserved for the following values: \code{IPV4_ADDRESS | IPV6_ADDRESS | MAC_ADDRESS | FQDN | VM_MANAGER_ID | VM_MANAGED_OBJECT_REFERENCE | VM_NAME | VM_PATH | BIOS_ID | MOTHERBOARD_SERIAL_NUMBER} where the
+identifying value can be a string up to 256 characters.
 \itemize{
 \item If any "VM" related value is set for a \code{ResourceAttribute} object,
 it is required that \code{VM_MANAGER_ID}, as a minimum, is always set. If

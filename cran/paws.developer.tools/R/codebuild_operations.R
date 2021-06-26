@@ -1008,21 +1008,21 @@ codebuild_batch_get_reports <- function(reportArns) {
 #' @param sourceVersion A version of the build input to be built for this project. If not
 #' specified, the latest version is used. If specified, it must be one of:
 #' 
-#' -   For AWS CodeCommit: the commit ID, branch, or Git tag to use.
+#'   - For AWS CodeCommit: the commit ID, branch, or Git tag to use.
 #' 
-#' -   For GitHub: the commit ID, pull request ID, branch name, or tag name
+#'   - For GitHub: the commit ID, pull request ID, branch name, or tag name
 #'     that corresponds to the version of the source code you want to
 #'     build. If a pull request ID is specified, it must use the format
 #'     `pr/pull-request-ID` (for example `pr/25`). If a branch name is
 #'     specified, the branch's HEAD commit ID is used. If not specified,
 #'     the default branch's HEAD commit ID is used.
 #' 
-#' -   For Bitbucket: the commit ID, branch name, or tag name that
+#'   - For Bitbucket: the commit ID, branch name, or tag name that
 #'     corresponds to the version of the source code you want to build. If
 #'     a branch name is specified, the branch's HEAD commit ID is used. If
 #'     not specified, the default branch's HEAD commit ID is used.
 #' 
-#' -   For Amazon Simple Storage Service (Amazon S3): the version ID of the
+#'   - For Amazon Simple Storage Service (Amazon S3): the version ID of the
 #'     object that represents the build input ZIP file to use.
 #' 
 #' If `sourceVersion` is specified at the build level, then that version
@@ -1068,8 +1068,8 @@ codebuild_batch_get_reports <- function(reportArns) {
 #' project. A `ProjectFileSystemLocation` object specifies the
 #' `identifier`, `location`, `mountOptions`, `mountPoint`, and `type` of a
 #' file system created using Amazon Elastic File System.
-#' @param buildBatchConfig A ProjectBuildBatchConfig object that defines the batch build options
-#' for the project.
+#' @param buildBatchConfig A <span>ProjectBuildBatchConfig</span> object that defines the batch
+#' build options for the project.
 #'
 #' @return
 #' A list with the following syntax:
@@ -2345,10 +2345,10 @@ codebuild_invalidate_project_cache <- function(projectName) {
 #' @param maxResults The maximum number of results to return.
 #' @param sortOrder Specifies the sort order of the returned items. Valid values include:
 #' 
-#' -   `ASCENDING`: List the batch build identifiers in ascending order by
+#'   - `ASCENDING`: List the batch build identifiers in ascending order by
 #'     identifier.
 #' 
-#' -   `DESCENDING`: List the batch build identifiers in descending order
+#'   - `DESCENDING`: List the batch build identifiers in descending order
 #'     by identifier.
 #' @param nextToken The `nextToken` value returned from a previous call to
 #' [`list_build_batches`][codebuild_list_build_batches]. This specifies the
@@ -2412,10 +2412,10 @@ codebuild_list_build_batches <- function(filter = NULL, maxResults = NULL, sortO
 #' @param maxResults The maximum number of results to return.
 #' @param sortOrder Specifies the sort order of the returned items. Valid values include:
 #' 
-#' -   `ASCENDING`: List the batch build identifiers in ascending order by
+#'   - `ASCENDING`: List the batch build identifiers in ascending order by
 #'     identifier.
 #' 
-#' -   `DESCENDING`: List the batch build identifiers in descending order
+#'   - `DESCENDING`: List the batch build identifiers in descending order
 #'     by identifier.
 #' @param nextToken The `nextToken` value returned from a previous call to
 #' [`list_build_batches_for_project`][codebuild_list_build_batches_for_project].
@@ -2477,9 +2477,9 @@ codebuild_list_build_batches_for_project <- function(projectName = NULL, filter 
 #'
 #' @param sortOrder The order to list build IDs. Valid values include:
 #' 
-#' -   `ASCENDING`: List the build IDs in ascending order by build ID.
+#'   - `ASCENDING`: List the build IDs in ascending order by build ID.
 #' 
-#' -   `DESCENDING`: List the build IDs in descending order by build ID.
+#'   - `DESCENDING`: List the build IDs in descending order by build ID.
 #' @param nextToken During a previous call, if there are more than 100 items in the list,
 #' only the first 100 items are returned, along with a unique string called
 #' a *nextToken*. To get the next batch of items in the list, call this
@@ -2539,9 +2539,9 @@ codebuild_list_builds <- function(sortOrder = NULL, nextToken = NULL) {
 #' @param projectName &#91;required&#93; The name of the AWS CodeBuild project.
 #' @param sortOrder The order to list build IDs. Valid values include:
 #' 
-#' -   `ASCENDING`: List the build IDs in ascending order by build ID.
+#'   - `ASCENDING`: List the build IDs in ascending order by build ID.
 #' 
-#' -   `DESCENDING`: List the build IDs in descending order by build ID.
+#'   - `DESCENDING`: List the build IDs in descending order by build ID.
 #' @param nextToken During a previous call, if there are more than 100 items in the list,
 #' only the first 100 items are returned, along with a unique string called
 #' a *nextToken*. To get the next batch of items in the list, call this
@@ -2661,20 +2661,20 @@ codebuild_list_curated_environment_images <- function() {
 #' @param sortBy The criterion to be used to list build project names. Valid values
 #' include:
 #' 
-#' -   `CREATED_TIME`: List based on when each build project was created.
+#'   - `CREATED_TIME`: List based on when each build project was created.
 #' 
-#' -   `LAST_MODIFIED_TIME`: List based on when information about each
+#'   - `LAST_MODIFIED_TIME`: List based on when information about each
 #'     build project was last changed.
 #' 
-#' -   `NAME`: List based on each build project's name.
+#'   - `NAME`: List based on each build project's name.
 #' 
 #' Use `sortOrder` to specify in what order to list the build project names
 #' based on the preceding criteria.
 #' @param sortOrder The order in which to list build projects. Valid values include:
 #' 
-#' -   `ASCENDING`: List in ascending order.
+#'   - `ASCENDING`: List in ascending order.
 #' 
-#' -   `DESCENDING`: List in descending order.
+#'   - `DESCENDING`: List in descending order.
 #' 
 #' Use `sortBy` to specify the criterion to be used to list build project
 #' names.
@@ -2738,12 +2738,12 @@ codebuild_list_projects <- function(sortBy = NULL, sortOrder = NULL, nextToken =
 #' @param sortBy The criterion to be used to list build report groups. Valid values
 #' include:
 #' 
-#' -   `CREATED_TIME`: List based on when each report group was created.
+#'   - `CREATED_TIME`: List based on when each report group was created.
 #' 
-#' -   `LAST_MODIFIED_TIME`: List based on when each report group was last
+#'   - `LAST_MODIFIED_TIME`: List based on when each report group was last
 #'     changed.
 #' 
-#' -   `NAME`: List based on each report group's name.
+#'   - `NAME`: List based on each report group's name.
 #' @param nextToken During a previous call, the maximum number of items that can be returned
 #' is the value specified in `maxResults`. If there more items in the list,
 #' then a unique string called a *nextToken* is returned. To get the next
@@ -2807,10 +2807,10 @@ codebuild_list_report_groups <- function(sortOrder = NULL, sortBy = NULL, nextTo
 #' @param sortOrder Specifies the sort order for the list of returned reports. Valid values
 #' are:
 #' 
-#' -   `ASCENDING`: return reports in chronological order based on their
+#'   - `ASCENDING`: return reports in chronological order based on their
 #'     creation date.
 #' 
-#' -   `DESCENDING`: return reports in the reverse chronological order
+#'   - `DESCENDING`: return reports in the reverse chronological order
 #'     based on their creation date.
 #' @param nextToken During a previous call, the maximum number of items that can be returned
 #' is the value specified in `maxResults`. If there more items in the list,
@@ -2947,15 +2947,15 @@ codebuild_list_reports_for_report_group <- function(reportGroupArn, nextToken = 
 #' @param sortBy The criterion to be used to list build projects shared with the current
 #' AWS account or user. Valid values include:
 #' 
-#' -   `ARN`: List based on the ARN.
+#'   - `ARN`: List based on the ARN.
 #' 
-#' -   `MODIFIED_TIME`: List based on when information about the shared
+#'   - `MODIFIED_TIME`: List based on when information about the shared
 #'     project was last changed.
 #' @param sortOrder The order in which to list shared build projects. Valid values include:
 #' 
-#' -   `ASCENDING`: List in ascending order.
+#'   - `ASCENDING`: List in ascending order.
 #' 
-#' -   `DESCENDING`: List in descending order.
+#'   - `DESCENDING`: List in descending order.
 #' @param maxResults The maximum number of paginated shared build projects returned per
 #' response. Use `nextToken` to iterate pages in the list of returned
 #' `Project` objects. The default value is 100.
@@ -3021,15 +3021,15 @@ codebuild_list_shared_projects <- function(sortBy = NULL, sortOrder = NULL, maxR
 #'
 #' @param sortOrder The order in which to list shared report groups. Valid values include:
 #' 
-#' -   `ASCENDING`: List in ascending order.
+#'   - `ASCENDING`: List in ascending order.
 #' 
-#' -   `DESCENDING`: List in descending order.
+#'   - `DESCENDING`: List in descending order.
 #' @param sortBy The criterion to be used to list report groups shared with the current
 #' AWS account or user. Valid values include:
 #' 
-#' -   `ARN`: List based on the ARN.
+#'   - `ARN`: List based on the ARN.
 #' 
-#' -   `MODIFIED_TIME`: List based on when information about the shared
+#'   - `MODIFIED_TIME`: List based on when information about the shared
 #'     report group was last changed.
 #' @param nextToken During a previous call, the maximum number of items that can be returned
 #' is the value specified in `maxResults`. If there more items in the list,
@@ -5242,21 +5242,21 @@ codebuild_stop_build_batch <- function(id) {
 #' @param sourceVersion A version of the build input to be built for this project. If not
 #' specified, the latest version is used. If specified, it must be one of:
 #' 
-#' -   For AWS CodeCommit: the commit ID, branch, or Git tag to use.
+#'   - For AWS CodeCommit: the commit ID, branch, or Git tag to use.
 #' 
-#' -   For GitHub: the commit ID, pull request ID, branch name, or tag name
+#'   - For GitHub: the commit ID, pull request ID, branch name, or tag name
 #'     that corresponds to the version of the source code you want to
 #'     build. If a pull request ID is specified, it must use the format
 #'     `pr/pull-request-ID` (for example `pr/25`). If a branch name is
 #'     specified, the branch's HEAD commit ID is used. If not specified,
 #'     the default branch's HEAD commit ID is used.
 #' 
-#' -   For Bitbucket: the commit ID, branch name, or tag name that
+#'   - For Bitbucket: the commit ID, branch name, or tag name that
 #'     corresponds to the version of the source code you want to build. If
 #'     a branch name is specified, the branch's HEAD commit ID is used. If
 #'     not specified, the default branch's HEAD commit ID is used.
 #' 
-#' -   For Amazon Simple Storage Service (Amazon S3): the version ID of the
+#'   - For Amazon Simple Storage Service (Amazon S3): the version ID of the
 #'     object that represents the build input ZIP file to use.
 #' 
 #' If `sourceVersion` is specified at the build level, then that version
@@ -5688,9 +5688,9 @@ codebuild_update_project <- function(name, description = NULL, source = NULL, se
 #' @param arn &#91;required&#93; The ARN of the report group to update.
 #' @param exportConfig Used to specify an updated export type. Valid values are:
 #' 
-#' -   `S3`: The report results are exported to an S3 bucket.
+#'   - `S3`: The report results are exported to an S3 bucket.
 #' 
-#' -   `NO_EXPORT`: The report results are not exported.
+#'   - `NO_EXPORT`: The report results are not exported.
 #' @param tags An updated list of tag key and value pairs associated with this report
 #' group.
 #' 

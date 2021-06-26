@@ -10,7 +10,7 @@ acmpca_get_certificate_authority_certificate(CertificateAuthorityArn)
 \arguments{
 \item{CertificateAuthorityArn}{[required] The Amazon Resource Name (ARN) of your private CA. This is of the form:
 
-\code{arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012 }.}
+\code{arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012}.}
 }
 \value{
 A list with the following syntax:\preformatted{list(

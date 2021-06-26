@@ -33,7 +33,7 @@ An empty list.
 This documentation is for version 1 of the Amazon Kinesis Data Analytics
 API, which only supports SQL applications. Version 2 of the API supports
 SQL and Java applications. For more information about version 2, see
-Amazon Kinesis Data Analytics API V2 Documentation.
+<span>Amazon Kinesis Data Analytics API V2 Documentation</span>.
 
 Adds a reference data source to an existing application.
 

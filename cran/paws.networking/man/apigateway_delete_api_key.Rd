@@ -7,13 +7,14 @@
 apigateway_delete_api_key(apiKey)
 }
 \arguments{
-\item{apiKey}{[required] [Required] The identifier of the ApiKey resource to be deleted.}
+\item{apiKey}{[required] [Required] The identifier of the <span>ApiKey</span> resource to be
+deleted.}
 }
 \value{
 An empty list.
 }
 \description{
-Deletes the ApiKey resource.
+Deletes the <span>ApiKey</span> resource.
 }
 \section{Request syntax}{
 \preformatted{svc$delete_api_key(

@@ -10,7 +10,7 @@ apigateway_create_domain_name(domainName, certificateName,
   endpointConfiguration, tags, securityPolicy, mutualTlsAuthentication)
 }
 \arguments{
-\item{domainName}{[required] [Required] The name of the DomainName resource.}
+\item{domainName}{[required] [Required] The name of the <span>DomainName</span> resource.}
 
 \item{certificateName}{The user-friendly name of the certificate that will be used by
 edge-optimized endpoint for this domain name.}
@@ -41,15 +41,15 @@ endpoint for this domain name.}
 regional endpoint for this domain name. AWS Certificate Manager is the
 only supported source.}
 
-\item{endpointConfiguration}{The endpoint configuration of this DomainName showing the endpoint types
-of the domain name.}
+\item{endpointConfiguration}{The endpoint configuration of this <span>DomainName</span> showing the
+endpoint types of the domain name.}
 
 \item{tags}{The key-value map of strings. The valid character set is
 [a-zA-Z+-=._:/]. The tag key can be up to 128 characters and must not
 start with \verb{aws:}. The tag value can be up to 256 characters.}
 
 \item{securityPolicy}{The Transport Layer Security (TLS) version + cipher suite for this
-DomainName. The valid values are \code{TLS_1_0} and \code{TLS_1_2}.}
+<span>DomainName</span>. The valid values are \code{TLS_1_0} and \code{TLS_1_2}.}
 
 \item{mutualTlsAuthentication}{}
 }

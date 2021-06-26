@@ -31,8 +31,7 @@ current configuration and the \code{Etag} header for the distribution.
 configuration for your distribution. In the request body, include
 the XML document that you updated in Step 3. Then set the value of
 the HTTP \code{If-Match} header to the value of the \code{ETag} header that
-CloudFront returned when you submitted the
-\verb{GET Streaming Distribution Config} request in Step 2.
+CloudFront returned when you submitted the \verb{GET Streaming Distribution Config} request in Step 2.
 \item Review the response to the \verb{PUT Streaming Distribution Config}
 request to confirm that the distribution was successfully disabled.
 \item Submit a \verb{GET Streaming Distribution Config} request to confirm that
@@ -40,8 +39,7 @@ your changes have propagated. When propagation is complete, the
 value of \code{Status} is \code{Deployed}.
 \item Submit a \verb{DELETE Streaming Distribution} request. Set the value of
 the HTTP \code{If-Match} header to the value of the \code{ETag} header that
-CloudFront returned when you submitted the
-\verb{GET Streaming Distribution Config} request in Step 2.
+CloudFront returned when you submitted the \verb{GET Streaming Distribution Config} request in Step 2.
 \item Review the response to your \verb{DELETE Streaming Distribution} request
 to confirm that the distribution was successfully deleted.
 }

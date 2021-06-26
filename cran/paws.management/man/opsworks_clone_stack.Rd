@@ -69,18 +69,13 @@ IAM ARNs, see \href{https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_i
 \item{DefaultOs}{The stack's operating system, which must be set to one of the following.
 \itemize{
 \item A supported Linux operating system: An Amazon Linux version, such as
-\verb{Amazon Linux 2018.03}, \verb{Amazon Linux 2017.09},
-\verb{Amazon Linux 2017.03}, \verb{Amazon Linux 2016.09},
-\verb{Amazon Linux 2016.03}, \verb{Amazon Linux 2015.09}, or
-\verb{Amazon Linux 2015.03}.
+\verb{Amazon Linux 2018.03}, \verb{Amazon Linux 2017.09}, \verb{Amazon Linux 2017.03}, \verb{Amazon Linux 2016.09}, \verb{Amazon Linux 2016.03},
+\verb{Amazon Linux 2015.09}, or \verb{Amazon Linux 2015.03}.
 \item A supported Ubuntu operating system, such as \verb{Ubuntu 16.04 LTS},
 \verb{Ubuntu 14.04 LTS}, or \verb{Ubuntu 12.04 LTS}.
 \item \verb{CentOS Linux 7}
 \item \verb{Red Hat Enterprise Linux 7}
-\item \verb{Microsoft Windows Server 2012 R2 Base},
-\verb{Microsoft Windows Server 2012 R2 with SQL Server Express},
-\verb{Microsoft Windows Server 2012 R2 with SQL Server Standard}, or
-\verb{Microsoft Windows Server 2012 R2 with SQL Server Web}.
+\item \verb{Microsoft Windows Server 2012 R2 Base}, \verb{Microsoft Windows Server 2012 R2 with SQL Server Express}, \verb{Microsoft Windows Server 2012 R2 with SQL Server Standard}, or \verb{Microsoft Windows Server 2012 R2 with SQL Server Web}.
 \item A custom AMI: \code{Custom}. You specify the custom AMI you want to use
 when you create instances. For more information about how to use
 custom AMIs with OpsWorks, see \href{https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-custom-ami.html}{Using Custom AMIs}.

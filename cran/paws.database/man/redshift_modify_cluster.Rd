@@ -28,7 +28,7 @@ while the old cluster is deleted and your connection is switched to the
 new cluster. You can use \code{\link[=redshift_describe_resize]{describe_resize}}
 to track the progress of the resize request.
 
-Valid Values: \code{multi-node | single-node}}
+Valid Values: \code{ multi-node | single-node }}
 
 \item{NodeType}{The new node type of the cluster. If you specify a new node type, you
 must also specify the number of nodes parameter.

@@ -206,11 +206,11 @@ cloudwatchlogs_create_export_task <- function(taskName = NULL, logGroupName, log
 #' 
 #' You must use the following guidelines when naming a log group:
 #' 
-#' -   Log group names must be unique within a region for an AWS account.
+#'   - Log group names must be unique within a region for an AWS account.
 #' 
-#' -   Log group names can be between 1 and 512 characters long.
+#'   - Log group names can be between 1 and 512 characters long.
 #' 
-#' -   Log group names consist of the following characters: a-z, A-Z, 0-9,
+#'   - Log group names consist of the following characters: a-z, A-Z, 0-9,
 #'     '_' (underscore), '-' (hyphen), '/' (forward slash), '.' (period),
 #'     and '\#' (number sign)
 #' 
@@ -292,11 +292,11 @@ cloudwatchlogs_create_log_group <- function(logGroupName, kmsKeyId = NULL, tags 
 #' 
 #' You must use the following guidelines when naming a log stream:
 #' 
-#' -   Log stream names must be unique within the log group.
+#'   - Log stream names must be unique within the log group.
 #' 
-#' -   Log stream names can be between 1 and 512 characters long.
+#'   - Log stream names can be between 1 and 512 characters long.
 #' 
-#' -   The ':' (colon) and '*' (asterisk) characters are not allowed.
+#'   - The ':' (colon) and '*' (asterisk) characters are not allowed.
 #'
 #' @usage
 #' cloudwatchlogs_create_log_stream(logGroupName, logStreamName)
@@ -1968,29 +1968,29 @@ cloudwatchlogs_put_destination_policy <- function(destinationName, accessPolicy)
 #' 
 #' The batch of events must satisfy the following constraints:
 #' 
-#' -   The maximum batch size is 1,048,576 bytes. This size is calculated
+#'   - The maximum batch size is 1,048,576 bytes. This size is calculated
 #'     as the sum of all event messages in UTF-8, plus 26 bytes for each
 #'     log event.
 #' 
-#' -   None of the log events in the batch can be more than 2 hours in the
+#'   - None of the log events in the batch can be more than 2 hours in the
 #'     future.
 #' 
-#' -   None of the log events in the batch can be older than 14 days or
+#'   - None of the log events in the batch can be older than 14 days or
 #'     older than the retention period of the log group.
 #' 
-#' -   The log events in the batch must be in chronological order by their
+#'   - The log events in the batch must be in chronological order by their
 #'     timestamp. The timestamp is the time the event occurred, expressed
 #'     as the number of milliseconds after Jan 1, 1970 00:00:00 UTC. (In
 #'     AWS Tools for PowerShell and the AWS SDK for .NET, the timestamp is
 #'     specified in .NET format: yyyy-mm-ddThh:mm:ss. For example,
 #'     2017-09-15T13:45:30.)
 #' 
-#' -   A batch of log events in a single request cannot span more than 24
+#'   - A batch of log events in a single request cannot span more than 24
 #'     hours. Otherwise, the operation fails.
 #' 
-#' -   The maximum number of log events in a batch is 10,000.
+#'   - The maximum number of log events in a batch is 10,000.
 #' 
-#' -   There is a quota of 5 requests per second per log stream. Additional
+#'   - There is a quota of 5 requests per second per log stream. Additional
 #'     requests are throttled. This quota can't be changed.
 #' 
 #' If a call to [`put_log_events`][cloudwatchlogs_put_log_events] returns
@@ -2227,7 +2227,10 @@ cloudwatchlogs_put_query_definition <- function(name, queryDefinitionId = NULL, 
 #' `"logArn"` with the ARN of your CloudWatch Logs resource, such as a log
 #' group or log stream.
 #' 
-#' `{ "Version": "2012-10-17", "Statement": [ { "Sid": "Route53LogsToCloudWatchLogs", "Effect": "Allow", "Principal": { "Service": [ "route53.amazonaws.com" ] }, "Action":"logs:PutLogEvents", "Resource": "logArn" } ] } `
+#' ` { "Version": "2012-10-17", "Statement": [ { "Sid":
+#' "Route53LogsToCloudWatchLogs", "Effect": "Allow", "Principal": {
+#' "Service": [ "route53.amazonaws.com" ] }, "Action":"logs:PutLogEvents",
+#' "Resource": "logArn" } ] }  `
 #'
 #' @return
 #' A list with the following syntax:
@@ -2327,16 +2330,16 @@ cloudwatchlogs_put_retention_policy <- function(logGroupName, retentionInDays) {
 #' 
 #' The following destinations are supported for subscription filters:
 #' 
-#' -   An Amazon Kinesis stream belonging to the same account as the
+#'   - An Amazon Kinesis stream belonging to the same account as the
 #'     subscription filter, for same-account delivery.
 #' 
-#' -   A logical destination that belongs to a different account, for
+#'   - A logical destination that belongs to a different account, for
 #'     cross-account delivery.
 #' 
-#' -   An Amazon Kinesis Firehose delivery stream that belongs to the same
+#'   - An Amazon Kinesis Firehose delivery stream that belongs to the same
 #'     account as the subscription filter, for same-account delivery.
 #' 
-#' -   An AWS Lambda function that belongs to the same account as the
+#'   - An AWS Lambda function that belongs to the same account as the
 #'     subscription filter, for same-account delivery.
 #' 
 #' There can only be one subscription filter associated with a log group.
@@ -2363,16 +2366,16 @@ cloudwatchlogs_put_retention_policy <- function(logGroupName, retentionInDays) {
 #' @param destinationArn &#91;required&#93; The ARN of the destination to deliver matching log events to. Currently,
 #' the supported destinations are:
 #' 
-#' -   An Amazon Kinesis stream belonging to the same account as the
+#'   - An Amazon Kinesis stream belonging to the same account as the
 #'     subscription filter, for same-account delivery.
 #' 
-#' -   A logical destination (specified using an ARN) belonging to a
+#'   - A logical destination (specified using an ARN) belonging to a
 #'     different account, for cross-account delivery.
 #' 
-#' -   An Amazon Kinesis Firehose delivery stream belonging to the same
+#'   - An Amazon Kinesis Firehose delivery stream belonging to the same
 #'     account as the subscription filter, for same-account delivery.
 #' 
-#' -   An AWS Lambda function belonging to the same account as the
+#'   - An AWS Lambda function belonging to the same account as the
 #'     subscription filter, for same-account delivery.
 #' @param roleArn The ARN of an IAM role that grants CloudWatch Logs permissions to
 #' deliver ingested log events to the destination stream. You don't need to

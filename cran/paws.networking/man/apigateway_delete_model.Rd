@@ -7,7 +7,8 @@
 apigateway_delete_model(restApiId, modelName)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
 \item{modelName}{[required] [Required] The name of the model to delete.}
 }

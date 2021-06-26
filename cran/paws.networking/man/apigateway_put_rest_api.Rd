@@ -9,7 +9,8 @@ apigateway_put_rest_api(restApiId, mode, failOnWarnings, parameters,
   body)
 }
 \arguments{
-\item{restApiId}{[required] [Required] The string identifier of the associated RestApi.}
+\item{restApiId}{[required] [Required] The string identifier of the associated
+<span>RestApi</span>.}
 
 \item{mode}{The \code{mode} query parameter to specify the update mode. Valid values are
 "merge" and "overwrite". By default, the update mode is "merge".}
@@ -19,9 +20,9 @@ apigateway_put_rest_api(restApiId, mode, failOnWarnings, parameters,
 value is \code{false}.}
 
 \item{parameters}{Custom header parameters as part of the request. For example, to exclude
-DocumentationParts from an imported API, set \code{ignore=documentation} as a
-\code{parameters} value, as in the AWS CLI command of
-\verb{aws apigateway import-rest-api --parameters ignore=documentation --body 'file:///path/to/imported-api-body.json'}.}
+<span>DocumentationParts</span> from an imported API, set
+\code{ignore=documentation} as a \code{parameters} value, as in the AWS CLI
+command of \verb{aws apigateway import-rest-api --parameters ignore=documentation --body 'file:///path/to/imported-api-body.json'}.}
 
 \item{body}{[required] [Required] The PUT request body containing external API definitions.
 Currently, only OpenAPI definition JSON/YAML files are supported. The

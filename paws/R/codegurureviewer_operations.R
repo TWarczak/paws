@@ -22,8 +22,8 @@ NULL
 #' 
 #' Bitbucket and GitHub Enterprise Server repositories are managed by AWS
 #' CodeStar Connections to connect to CodeGuru Reviewer. For more
-#' information, see Connect to a repository source provider in the *Amazon
-#' CodeGuru Reviewer User Guide.*
+#' information, see <span>Connect to a repository source provider</span> in
+#' the *Amazon CodeGuru Reviewer User Guide.*
 #' 
 #' You cannot use the CodeGuru Reviewer SDK or the AWS CLI to associate a
 #' GitHub repository with Amazon CodeGuru Reviewer. To associate a GitHub
@@ -43,10 +43,10 @@ NULL
 #' @param Tags An array of key-value pairs used to tag an associated repository. A tag
 #' is a custom attribute label with two parts:
 #' 
-#' -   A *tag key* (for example, `CostCenter`, `Environment`, `Project`, or
+#'   - A *tag key* (for example, `CostCenter`, `Environment`, `Project`, or
 #'     `Secret`). Tag keys are case sensitive.
 #' 
-#' -   An optional field known as a *tag value* (for example,
+#'   - An optional field known as a *tag value* (for example,
 #'     `111122223333`, `Production`, or a team name). Omitting the tag
 #'     value is the same as using an empty string. Like tag keys, tag
 #'     values are case sensitive.
@@ -538,13 +538,13 @@ codegurureviewer_disassociate_repository <- function(AssociationArn) {
 #' 
 #' The valid code review states are:
 #' 
-#' -   `Completed`: The code review is complete.
+#'   - `Completed`: The code review is complete.
 #' 
-#' -   `Pending`: The code review started and has not completed or failed.
+#'   - `Pending`: The code review started and has not completed or failed.
 #' 
-#' -   `Failed`: The code review failed.
+#'   - `Failed`: The code review failed.
 #' 
-#' -   `Deleting`: The code review is being deleted.
+#'   - `Deleting`: The code review is being deleted.
 #' @param RepositoryNames List of repository names for filtering that needs to be applied before
 #' displaying the result.
 #' @param Type &#91;required&#93; The type of code reviews to list in the response.
@@ -795,28 +795,28 @@ codegurureviewer_list_recommendations <- function(NextToken = NULL, MaxResults =
 #' 
 #' The valid repository association states are:
 #' 
-#' -   **Associated**: The repository association is complete.
+#'   - **Associated**: The repository association is complete.
 #' 
-#' -   **Associating**: CodeGuru Reviewer is:
-#' 
-#'     -   Setting up pull request notifications. This is required for pull
+#'   - **Associating**: CodeGuru Reviewer is:
+#'     
+#'       - Setting up pull request notifications. This is required for pull
 #'         requests to trigger a CodeGuru Reviewer review.
-#' 
-#'         If your repository `ProviderType` is `GitHub`,
-#'         `GitHub Enterprise Server`, or `Bitbucket`, CodeGuru Reviewer
-#'         creates webhooks in your repository to trigger CodeGuru Reviewer
+#'         
+#'         If your repository `ProviderType` is `GitHub`, `GitHub
+#'         Enterprise Server`, or `Bitbucket`, CodeGuru Reviewer creates
+#'         webhooks in your repository to trigger CodeGuru Reviewer
 #'         reviews. If you delete these webhooks, reviews of code in your
 #'         repository cannot be triggered.
-#' 
-#'     -   Setting up source code access. This is required for CodeGuru
+#'     
+#'       - Setting up source code access. This is required for CodeGuru
 #'         Reviewer to securely clone code in your repository.
 #' 
-#' -   **Failed**: The repository failed to associate or disassociate.
+#'   - **Failed**: The repository failed to associate or disassociate.
 #' 
-#' -   **Disassociating**: CodeGuru Reviewer is removing the repository's
+#'   - **Disassociating**: CodeGuru Reviewer is removing the repository's
 #'     pull request notifications and source code access.
 #' 
-#' -   **Disassociated**: CodeGuru Reviewer successfully disassociated the
+#'   - **Disassociated**: CodeGuru Reviewer successfully disassociated the
 #'     repository. You can create a new association with this repository if
 #'     you want to review source code in it later. You can control access
 #'     to code reviews created in an associated repository with tags after
@@ -1035,10 +1035,10 @@ codegurureviewer_put_recommendation_feedback <- function(CodeReviewArn, Recommen
 #' @param Tags &#91;required&#93; An array of key-value pairs used to tag an associated repository. A tag
 #' is a custom attribute label with two parts:
 #' 
-#' -   A *tag key* (for example, `CostCenter`, `Environment`, `Project`, or
+#'   - A *tag key* (for example, `CostCenter`, `Environment`, `Project`, or
 #'     `Secret`). Tag keys are case sensitive.
 #' 
-#' -   An optional field known as a *tag value* (for example,
+#'   - An optional field known as a *tag value* (for example,
 #'     `111122223333`, `Production`, or a team name). Omitting the tag
 #'     value is the same as using an empty string. Like tag keys, tag
 #'     values are case sensitive.

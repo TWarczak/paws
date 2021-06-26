@@ -27,9 +27,7 @@ information about your existing snapshots.
 
 Constraint:
 \itemize{
-\item This parameter cannot be defined together with the
-\verb{source instance name} parameter. The \verb{instance snapshot name} and
-\verb{source instance name} parameters are mutually exclusive.
+\item This parameter cannot be defined together with the \verb{source instance name} parameter. The \verb{instance snapshot name} and \verb{source instance name} parameters are mutually exclusive.
 }}
 
 \item{bundleId}{[required] The bundle of specification information for your virtual private server
@@ -41,7 +39,7 @@ user data. For example, \verb{apt-get -y update}.
 Depending on the machine image you choose, the command to get software
 on your instance varies. Amazon Linux and CentOS use \code{yum}, Debian and
 Ubuntu use \code{apt-get}, and FreeBSD uses \code{pkg}. For a complete list, see
-the Dev Guide.}
+the <span>Dev Guide</span>.}
 
 \item{keyPairName}{The name for your key pair.}
 
@@ -58,12 +56,10 @@ was created.
 
 Constraints:
 \itemize{
-\item This parameter cannot be defined together with the
-\verb{instance snapshot name} parameter. The \verb{source instance name} and
-\verb{instance snapshot name} parameters are mutually exclusive.
+\item This parameter cannot be defined together with the \verb{instance snapshot name} parameter. The \verb{source instance name} and \verb{instance snapshot name} parameters are mutually exclusive.
 \item Define this parameter only when creating a new instance from an
-automatic snapshot. For more information, see the Lightsail Dev
-Guide.
+automatic snapshot. For more information, see the <span>Lightsail
+Dev Guide</span>.
 }}
 
 \item{restoreDate}{The date of the automatic snapshot to use for the new instance. Use the
@@ -73,13 +69,10 @@ automatic snapshots.
 Constraints:
 \itemize{
 \item Must be specified in \code{YYYY-MM-DD} format.
-\item This parameter cannot be defined together with the
-\verb{use latest restorable auto snapshot} parameter. The \verb{restore date}
-and \verb{use latest restorable auto snapshot} parameters are mutually
-exclusive.
+\item This parameter cannot be defined together with the \verb{use latest restorable auto snapshot} parameter. The \verb{restore date} and \verb{use latest restorable auto snapshot} parameters are mutually exclusive.
 \item Define this parameter only when creating a new instance from an
-automatic snapshot. For more information, see the Lightsail Dev
-Guide.
+automatic snapshot. For more information, see the <span>Lightsail
+Dev Guide</span>.
 }}
 
 \item{useLatestRestorableAutoSnapshot}{A Boolean value to indicate whether to use the latest available
@@ -88,11 +81,10 @@ automatic snapshot.
 Constraints:
 \itemize{
 \item This parameter cannot be defined together with the \verb{restore date}
-parameter. The \verb{use latest restorable auto snapshot} and
-\verb{restore date} parameters are mutually exclusive.
+parameter. The \verb{use latest restorable auto snapshot} and \verb{restore date} parameters are mutually exclusive.
 \item Define this parameter only when creating a new instance from an
-automatic snapshot. For more information, see the Lightsail Dev
-Guide.
+automatic snapshot. For more information, see the <span>Lightsail
+Dev Guide</span>.
 }}
 }
 \value{
@@ -130,7 +122,7 @@ an instance.
 The \verb{create instances from snapshot} operation supports tag-based access
 control via request tags and resource tags applied to the resource
 identified by \verb{instance snapshot name}. For more information, see the
-Lightsail Dev Guide.
+<span>Lightsail Dev Guide</span>.
 }
 \section{Request syntax}{
 \preformatted{svc$create_instances_from_snapshot(

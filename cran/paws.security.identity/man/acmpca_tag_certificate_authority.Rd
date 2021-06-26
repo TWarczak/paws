@@ -11,7 +11,7 @@ acmpca_tag_certificate_authority(CertificateAuthorityArn, Tags)
 \code{\link[=acmpca_create_certificate_authority]{create_certificate_authority}}.
 This must be of the form:
 
-\code{arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012 }}
+\code{arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012}}
 
 \item{Tags}{[required] List of tags to be associated with the CA.}
 }

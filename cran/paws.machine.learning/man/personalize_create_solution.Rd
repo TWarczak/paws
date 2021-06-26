@@ -75,9 +75,8 @@ USER_PERSONALIZATION recipe for you.
 
 A solution can be in one of the following states:
 \itemize{
-\item CREATE PENDING > CREATE IN_PROGRESS > ACTIVE -or- CREATE
-FAILED
-\item DELETE PENDING > DELETE IN_PROGRESS
+\item CREATE PENDING \> CREATE IN_PROGRESS \> ACTIVE -or- CREATE FAILED
+\item DELETE PENDING \> DELETE IN_PROGRESS
 }
 
 To get the status of the solution, call
@@ -91,6 +90,9 @@ status shows as ACTIVE before calling
 \item \code{\link[=personalize_create_solution_version]{create_solution_version}}
 \item \code{\link[=personalize_describe_solution]{describe_solution}}
 \item \code{\link[=personalize_delete_solution]{delete_solution}}
+}<!-- end list -->
+
+\itemize{
 \item \code{\link[=personalize_list_solution_versions]{list_solution_versions}}
 \item \code{\link[=personalize_describe_solution_version]{describe_solution_version}}
 }

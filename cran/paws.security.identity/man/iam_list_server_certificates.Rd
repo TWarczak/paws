@@ -17,9 +17,9 @@ slash (/), listing all server certificates. This parameter allows
 (through its \href{https://en.wikipedia.org/wiki/Regex}{regex pattern}) a
 string of characters consisting of either a forward slash (/) by itself
 or a string that must begin and end with forward slashes. In addition,
-it can contain any ASCII character from the ! (\verb{\\u0021}) through the DEL
-character (\verb{\\u007F}), including most punctuation characters, digits, and
-upper and lowercased letters.}
+it can contain any ASCII character from the \! (\verb{\\u0021}) through the
+DEL character (\verb{\\u007F}), including most punctuation characters, digits,
+and upper and lowercased letters.}
 
 \item{Marker}{Use this parameter only when paginating results and only after you
 receive a response indicating that the results are truncated. Set it to
