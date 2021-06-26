@@ -9,7 +9,12 @@ NULL
 #' write the downloaded object to the file location specified.
 #'
 #' @usage
-#' s3_download_file(Bucket, Key, Filename, IfMatch, IfModifiedSince, IfNoneMatch, IfUnmodifiedSince, Range, ResponseCacheControl, ResponseContentDisposition, ResponseContentEncoding, ResponseContentLanguage, ResponseContentType, ResponseExpires, VersionId, SSECustomerAlgorithm, SSECustomerKey, SSECustomerKeyMD5, RequestPayerL, PartNumber, ExpectedBucketOwner)
+#' s3_download_file(Bucket, Key, Filename, IfMatch, IfModifiedSince,
+#' IfNoneMatch, IfUnmodifiedSince, Range, ResponseCacheControl,
+#' ResponseContentDisposition, ResponseContentEncoding, ResponseContentLanguage,
+#' ResponseContentType, ResponseExpires, VersionId, SSECustomerAlgorithm,
+#' SSECustomerKey, SSECustomerKeyMD5, RequestPayer, PartNumber,
+#' ExpectedBucketOwner)
 #'
 #' @param Bucket &#91;required&#93; The bucket name containing the object.
 #'
@@ -106,7 +111,7 @@ NULL
 #' @keywords internal
 #'
 #' @rdname s3_download_file
-s3_download_file <- function(Bucket, Filename, IfMatch = NULL, IfModifiedSince = NULL, IfNoneMatch = NULL, IfUnmodifiedSince = NULL, Key, Range = NULL, ResponseCacheControl = NULL, ResponseContentDisposition = NULL, ResponseContentEncoding = NULL, ResponseContentLanguage = NULL, ResponseContentType = NULL, ResponseExpires = NULL, VersionId = NULL, SSECustomerAlgorithm = NULL, SSECustomerKey = NULL, SSECustomerKeyMD5 = NULL, RequestPayer = NULL, PartNumber = NULL, ExpectedBucketOwner = NULL) {
+s3_download_file <- function(Bucket, Key, Filename, IfMatch = NULL, IfModifiedSince = NULL, IfNoneMatch = NULL, IfUnmodifiedSince = NULL, Range = NULL, ResponseCacheControl = NULL, ResponseContentDisposition = NULL, ResponseContentEncoding = NULL, ResponseContentLanguage = NULL, ResponseContentType = NULL, ResponseExpires = NULL, VersionId = NULL, SSECustomerAlgorithm = NULL, SSECustomerKey = NULL, SSECustomerKeyMD5 = NULL, RequestPayer = NULL, PartNumber = NULL, ExpectedBucketOwner = NULL) {
   download_object <- s3_get_object(Bucket = Bucket, IfMatch = IfMatch, IfModifiedSince = IfModifiedSince, IfNoneMatch = IfNoneMatch, IfUnmodifiedSince = IfUnmodifiedSince, Key = Key, Range = Range, ResponseCacheControl = ResponseCacheControl, ResponseContentDisposition = ResponseContentDisposition, ResponseContentEncoding = ResponseContentEncoding, ResponseContentLanguage = ResponseContentLanguage, ResponseContentType = ResponseContentType, ResponseExpires = ResponseExpires, VersionId = VersionId, SSECustomerAlgorithm =SSECustomerAlgorithm, SSECustomerKey = SSECustomerKey, SSECustomerKeyMD5 = SSECustomerKeyMD5, RequestPayer = RequestPayer, PartNumber = PartNumber, ExpectedBucketOwner = ExpectedBucketOwner)
   download_body <- download_object$Body
   writeBin(download_body, con = Filename)
