@@ -4,7 +4,12 @@
 \alias{s3_download_file}
 \title{Download a file from S3 and store it at a specified file location}
 \usage{
-s3_download_file(Bucket, Key, Filename, IfMatch, IfModifiedSince, IfNoneMatch, IfUnmodifiedSince, Range, ResponseCacheControl, ResponseContentDisposition, ResponseContentEncoding, ResponseContentLanguage, ResponseContentType, ResponseExpires, VersionId, SSECustomerAlgorithm, SSECustomerKey, SSECustomerKeyMD5, RequestPayerL, PartNumber, ExpectedBucketOwner)
+s3_download_file(Bucket, Key, Filename, IfMatch, IfModifiedSince,
+IfNoneMatch, IfUnmodifiedSince, Range, ResponseCacheControl,
+ResponseContentDisposition, ResponseContentEncoding, ResponseContentLanguage,
+ResponseContentType, ResponseExpires, VersionId, SSECustomerAlgorithm,
+SSECustomerKey, SSECustomerKeyMD5, RequestPayer, PartNumber,
+ExpectedBucketOwner)
 }
 \arguments{
 \item{Bucket}{[required] The bucket name containing the object.
@@ -26,6 +31,8 @@ provide the Outposts bucket ARN in place of the bucket name. For more
 information about S3 on Outposts ARNs, see \href{https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html}{Using S3 on Outposts}
 in the \emph{Amazon Simple Storage Service Developer Guide}.}
 
+\item{Key}{[required] Key of the object to get.}
+
 \item{Filename}{[required] A local file location where the downloaded
 object will be saved.}
 
@@ -40,8 +47,6 @@ one specified, otherwise return a 304 (not modified).}
 
 \item{IfUnmodifiedSince}{Return the object only if it has not been modified since the specified
 time, otherwise return a 412 (precondition failed).}
-
-\item{Key}{[required] Key of the object to get.}
 
 \item{Range}{Downloads the specified range bytes of an object. For more information
 about the HTTP Range header, see
