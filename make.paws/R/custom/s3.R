@@ -9,7 +9,7 @@ NULL
 #' write the downloaded object to the file location specified.
 #'
 #' @usage
-#' s3_download_file(Bucket, Key, Filename)
+#' s3_download_file(Bucket, Key, Filename, IfMatch, IfModifiedSince, IfNoneMatch, IfUnmodifiedSince, Range, ResponseCacheControl, ResponseContentDisposition, ResponseContentEncoding, ResponseContentLanguage, ResponseContentType, ResponseExpires, VersionId, SSECustomerAlgorithm, SSECustomerKey, SSECustomerKeyMD5, RequestPayerL, PartNumber, ExpectedBucketOwner)
 #'
 #' @param Bucket &#91;required&#93; The bucket name containing the object.
 #'
@@ -31,6 +31,7 @@ NULL
 #' information about S3 on Outposts ARNs, see [Using S3 on
 #' Outposts](https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html)
 #' in the *Amazon Simple Storage Service Developer Guide*.
+#' @param Key &#91;required&#93; Key of the object to get.
 #' @param Filename &#91;required&#93; A local file location where the downloaded
 #' object will be saved.
 #' @param IfMatch Return the object only if its entity tag (ETag) is the same as the one
@@ -41,7 +42,6 @@ NULL
 #' one specified, otherwise return a 304 (not modified).
 #' @param IfUnmodifiedSince Return the object only if it has not been modified since the specified
 #' time, otherwise return a 412 (precondition failed).
-#' @param Key &#91;required&#93; Key of the object to get.
 #' @param Range Downloads the specified range bytes of an object. For more information
 #' about the HTTP Range header, see
 #' <https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.35>.
